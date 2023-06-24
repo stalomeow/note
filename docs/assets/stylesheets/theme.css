@@ -1,0 +1,120 @@
+/* Theme */
+
+:root {
+    --md-text-font: 'HarmonyOS Sans', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+    --md-code-font: 'JetBrains Mono', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+    color-scheme: light dark; /* default value */
+}
+
+[data-md-color-scheme=default] {
+    --md-footer-fg-color: #000000de;
+    --md-footer-fg-color--light: #000000b6;
+    --md-footer-fg-color--lighter: #0000006d;
+    --md-footer-bg-color: #eeeeee;
+    --md-footer-bg-color--dark: #eeeeee;
+}
+
+[data-md-color-scheme=slate] {
+    --md-default-bg-color: #1e1e1e;
+    --md-default-fg-color: #dcdcdc;
+    --md-default-fg-color--light: #9c9c9c;
+    --md-code-bg-color: #2e2d2c;
+    --md-footer-bg-color: #252424;
+    --md-footer-bg-color--dark: #252424;
+}
+
+[data-md-color-primary=black] .md-header,
+[data-md-color-primary=black] .md-tabs {
+    background-color: #363535;
+}
+
+/* Table */
+
+.md-typeset__table {
+    display: block !important;
+    width: 100% !important;
+}
+
+.md-typeset__table table {
+    display: table !important;
+    width: 100% !important;
+    overflow: hidden !important;
+}
+
+[data-md-color-scheme=slate] .md-typeset table:not([class]) tbody tr:hover {
+    background-color: #232323;
+}
+
+/* Heading  */
+
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+    font-weight: bold;
+}
+
+.md-typeset h2::before {
+    content: '#';
+    font-size: 60%;
+    padding-right: 0.5em;
+    opacity: 0.6;
+}
+
+.md-typeset h3::before {
+    content: '##';
+    font-size: 60%;
+    padding-right: 0.5em;
+    opacity: 0.6;
+}
+
+.md-typeset h4::before {
+    content: '###';
+    font-size: 60%;
+    padding-right: 0.5em;
+    opacity: 0.6;
+}
+
+.md-typeset h5::before {
+    content: '####';
+    font-size: 60%;
+    padding-right: 0.5em;
+    opacity: 0.6;
+}
+
+.md-typeset h6::before {
+    content: '#####';
+    font-size: 60%;
+    padding-right: 0.5em;
+    opacity: 0.6;
+}
+
+/* Admonition  */
+
+/* .md-typeset .admonition,
+.md-typeset details {
+    border-width: 0;
+    border-left-width: 4px;
+} */
+
+/* Video Container */
+
+.responsive-video-container {
+    position: relative;
+    margin-bottom: 1em;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.responsive-video-container iframe,
+.responsive-video-container object,
+.responsive-video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

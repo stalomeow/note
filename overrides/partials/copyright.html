@@ -1,0 +1,23 @@
+<div class="md-copyright">
+  {% if config.copyright %}
+    <div class="md-copyright__highlight">
+      {{ config.copyright }}
+    </div>
+  {% endif %}
+
+  {% if not config.extra.generator == false %}
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+    &nbsp;|&nbsp;
+    Fonts
+    <a href="https://developer.harmonyos.com/cn/docs/design/font-0000001157868583" target="_blank" rel="noopener">
+      HarmonyOS Sans
+    </a>
+    &amp;
+    <a href="https://www.jetbrains.com/lp/mono/" target="_blank" rel="noopener">
+      JetBrains Mono
+    </a>
+  {% endif %}
+</div>

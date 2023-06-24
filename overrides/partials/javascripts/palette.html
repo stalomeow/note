@@ -1,0 +1,86 @@
+<script>
+// 自定义浅色/暗色模式切换
+!function () {
+    const colorSchemeMediaQuery = '(prefers-color-scheme: dark)';
+    const colorSchemeAttrName = 'data-md-color-scheme';
+    const colorAttrPrefix = 'data-md-color-';
+    const colorSchemeMap = {
+        'default': 'light',
+        'slate': 'dark'
+    };
+    const colorSchemeMapReverse = {
+        'light': {
+            'scheme': 'default',
+            'primary': 'white',
+            'accent': ''
+        },
+        'dark': {
+            'scheme': 'slate',
+            'primary': 'black',
+            'accent': ''
+        }
+    };
+
+    let paletteIndex = -1;
+
+    function setCSSColorScheme(scheme=undefined) {
+        if (typeof scheme === 'undefined') {
+            scheme = colorSchemeMap[document.body.getAttribute(colorSchemeAttrName)];
+        }
+
+        // 让浏览器的滚动条适配颜色模式
+        document.documentElement.style.setProperty('color-scheme', scheme);
+    }
+
+    function updatePaletteIndex() {
+        const palette = __md_get('__palette');
+
+        if (palette && typeof palette.color === 'object') {
+            paletteIndex = palette.index;
+        } else {
+            paletteIndex = -1;
+        }
+    }
+
+    function setColorScheme(matchesDark) {
+        const prevPaletteIndex = paletteIndex;
+        updatePaletteIndex();
+
+        if (prevPaletteIndex === paletteIndex) {
+            return;
+        }
+
+        if (paletteIndex === 0) {
+            // Auto Mode
+            const scheme = matchesDark ? 'dark' : 'light';
+            Object.entries(colorSchemeMapReverse[scheme]).forEach(entry => {
+                document.body.setAttribute(colorAttrPrefix + entry[0], entry[1]);
+            });
+            setCSSColorScheme(scheme);
+        } else {
+            // 只根据 body 上的 attr 更新 css 的 color scheme
+            setCSSColorScheme();
+        }
+    }
+
+    const query = window.matchMedia(colorSchemeMediaQuery);
+
+    // 立即同步一下颜色，避免自动模式下闪屏
+    setColorScheme(query.matches);
+
+    // material 主题的颜色管理器此时还没初始化，这里重置一下 index，保证之后能正常同步颜色
+    paletteIndex = -1;
+
+    // 监听事件
+    query.addEventListener('change', e => setColorScheme(e.matches));
+    new MutationObserver(() => setColorScheme(query.matches)).observe(document.body, {
+        attributes: true,
+        attributeFilter: [colorSchemeAttrName],
+        attributeOldValue: false,
+
+        characterData: false,
+        childList: false,
+        subtree: false
+    });
+}();
+</script>

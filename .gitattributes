@@ -1,0 +1,2 @@
+* text=auto eol=lf
+*.md linguist-documentation=false linguist-detectable=true linguist-language=Markdown

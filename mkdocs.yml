@@ -1,0 +1,251 @@
+site_name: Stalo's Note
+repo_name: stalomeow/note
+repo_url: https://github.com/stalomeow/note
+copyright: >
+  Copyright &copy; 2022-2023 Stalo. <br>
+  Articles are licensed under the <u><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC-BY-NC-SA 4.0</a></u> license.
+
+
+theme:
+  name: material
+  language: zh
+  custom_dir: overrides
+
+  font:
+    text: HarmonyOS Sans
+    code: JetBrains Mono
+
+  icon:
+    repo: fontawesome/brands/git-alt
+    logo: fontawesome/solid/book
+
+  palette:
+    # Palette toggle for auto mode
+    - scheme: default
+      primary: white
+      toggle:
+        icon: material/theme-light-dark
+        name: Auto Mode
+
+    # Palette toggle for light mode
+    - scheme: default
+      primary: white
+      toggle:
+        icon: material/weather-sunny
+        name: Light Mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: black
+      toggle:
+        icon: material/weather-night
+        name: Dark Mode
+
+  features:
+    - content.tooltips
+    - content.code.copy
+    - navigation.instant
+    - navigation.tabs
+    - navigation.top
+    - navigation.indexes
+    - navigation.tracking
+    - navigation.footer
+    - toc.follow
+    # - toc.integrate
+
+
+  social:
+    - name: GitHub
+      icon: fontawesome/brands/github
+      link: https://github.com/stalomeow
+    - name: Mail
+      icon: fontawesome/solid/envelope
+      link: mailto:me@stalo.cc
+
+
+extra_css:
+  - assets/stylesheets/fonts.css
+  - assets/stylesheets/theme.css
+
+
+extra_javascript:
+  - assets/javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js # 别加 mml！它会导致表格横向溢出！
+
+
+markdown_extensions:
+  - abbr
+  - tables
+  - attr_list
+  # - md_in_html
+  - footnotes
+  - admonition
+  - pymdownx.details
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.snippets
+  - pymdownx.highlight:
+      # auto_title: true
+      linenums: true
+      anchor_linenums: true
+      use_pygments: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      type: datetime
+      timezone: Asia/Shanghai
+      locale: zh
+      enable_creation_date: true
+      exclude:
+        - index.md
+        - tools.md
+        - comments.md
+        - "**/index.md"
+
+
+nav:
+  - 首页:
+    - index.md
+    - 工具收集: tools.md
+    - 留言区: comments.md
+  - 读书笔记:
+    - book/index.md
+  - 课程笔记:
+    - course/index.md
+    - 高等数学:
+      - course/advanced-math/index.md
+      - 积分公式: course/advanced-math/integral-formula.md
+      - 微分方程: course/advanced-math/differential-equation.md
+    - 线性代数:
+      - course/linear-algebra/index.md
+      - 矩阵: course/linear-algebra/matrix.md
+      - 行列式: course/linear-algebra/determinant.md
+      - 四元数: course/linear-algebra/quaternion.md
+    - 离散数学:
+      - course/discrete-math/index.md
+    - 大学物理:
+      - course/physics/index.md
+    - 现代计算机图形学入门 (GAMES 101):
+      - course/games-101/index.md
+      - Transformation Cont.: course/games-101/lecture-04.md
+      - Rasterization 1 (Triangles): course/games-101/lecture-05.md
+    - 现代游戏引擎 (GAMES 104):
+      - course/games-104/index.md
+      - From Getting Started To Practice: course/games-104/lecture-01.md
+      - Layered Architecture of Game Engine: course/games-104/lecture-02.md
+      - How to Build a Game World: course/games-104/lecture-03.md
+      - Rendering:
+        - Rendering on Game Engine: course/games-104/lecture-04.md
+        - Lighting, Materials and Shaders: course/games-104/lecture-05.md
+        - The Challenges and Fun of Rendering the Beautiful Mother Nature: course/games-104/lecture-06.md
+        - Render Pipeline, Post-processing and Everything: course/games-104/lecture-07.md
+      - Animation System:
+        - Basics of Animation Technology: course/games-104/lecture-08.md
+        - Advanced Animation Technology: course/games-104/lecture-09.md
+      - Physics System:
+        - Basic Concepts: course/games-104/lecture-10.md
+        - Applications: course/games-104/lecture-11.md
+      - Effects: course/games-104/lecture-12.md
+      - Tool Chains:
+        - Basics: course/games-104/lecture-13.md
+        - Applications & Advanced Topic: course/games-104/lecture-14.md
+      - Gameplay Systems:
+        - Complexity and Building Blocks: course/games-104/lecture-15.md
+        - Basic Artificial Intelligence: course/games-104/lecture-16.md
+        - Advanced Artificial Intelligence: course/games-104/lecture-17.md
+      - Online Gaming Architecture:
+        - Fundamentals: course/games-104/lecture-18.md
+        - Advanced Topic: course/games-104/lecture-19.md
+      - Data-Oriented Programming and Job System: course/games-104/lecture-20.md
+      - Dynamic Global Illumination and Lumen: course/games-104/lecture-21.md
+      - GPU Driven Geometry Pipeline - Nanite: course/games-104/lecture-22.md
+  - 编程语言:
+    - pl/index.md
+    - C#:
+      - pl/csharp/index.md
+      - 元编程:
+        - Source Generator: pl/csharp/meta-programming/source-generator.md
+        - Mono.Cecil & Unity: pl/csharp/meta-programming/mono-cecil-with-unity.md
+        - Metalama: pl/csharp/meta-programming/metalama.md
+      - 弱引用: pl/csharp/weak-references.md
+      - 模式匹配: pl/csharp/pattern-matching.md
+      - GC.KeepAlive: pl/csharp/gc-keep-alive.md
+    - TypeScript:
+      - pl/typescript/index.md
+    - Python:
+      - pl/python/index.md
+      - Python 基础: pl/python/basic.md
+      - 执行一个模块: pl/python/run-a-module.md
+      - 多版本和虚拟环境: pl/python/multi-versions-and-venv.md
+      - 卸载 Python: pl/python/uninstall.md
+    - Prolog:
+      - pl/prolog/index.md
+  - 数据结构与算法:
+    - algorithm/index.md
+    - 数据结构:
+      - algorithm/data-structure/index.md
+      - 并查集: algorithm/data-structure/disjoint-set.md
+    - 搜索:
+      - algorithm/search/index.md
+      - DFS: algorithm/search/dfs.md
+      - BFS: algorithm/search/bfs.md
+      - A*: algorithm/search/a-star.md
+    - 字符串:
+      - algorithm/string/index.md
+      - KMP: algorithm/string/kmp.md
+    - 洛谷题解:
+      - algorithm/luogu/index.md
+      - P5507 机关: algorithm/luogu/P5507.md
+  - 计算机科学:
+    - cs/index.md
+    - 命令行工具:
+      - cs/cmd-tools/index.md
+      - Git: cs/cmd-tools/git.md
+  - 计算机图形学:
+    - cg/index.md
+    - Half Lambert 勘误: cg/half-lambert-corrigenda.md
+    - 法线贴图压缩: cg/normal-map-compression.md
+    - Non-photorealistic rendering (NPR):
+      - 卡通角色渲染: cg/npr/character.md
+    - 逆向:
+      - 提取 WebGL Shaders: cg/reverse/dump-webgl-shaders.md
+      - 反编译 DXBC: cg/reverse/decompile-dxbc.md
+  - Unity 开发:
+    - unity/index.md
+    - 编辑器扩展:
+      - unity/editor-ext/index.md
+    - Shader:
+      - unity/shader/index.md
+      - Material Property Drawer: unity/shader/material-property-drawer.md
+    - 源码分析:
+      - unity/src-analysis/index.md
+      - Unity UI:
+        - TODO: unity/src-analysis/ugui/placeholder.md
+      - Universal RP:
+        - TODO: unity/src-analysis/urp/placeholder.md
+    - 解决方案:
+      - unity/troubleshooting/index.md
+      - GetComponentInParent on PrefabAsset returns null: unity/troubleshooting/get-component-in-parent-on-prefab-asset-returns-null.md
+  - Unreal 开发:
+    - unreal/index.md
+  - 杂项:
+    - misc/index.md
+    - 面试相关: misc/interview.md
+    - 网页中嵌入 b 站视频: misc/bilibili-iframe.md

@@ -1,0 +1,5 @@
+# TypeScript
+
+!!! abstract
+
+    TODO
