@@ -131,6 +131,7 @@ nav:
     - course/index.md
     - 高等数学:
       - course/advanced-math/index.md
+      - 三角恒等式: course/advanced-math/trigonometric-function-identity.md
       - 积分公式: course/advanced-math/integral-formula.md
       - 微分方程: course/advanced-math/differential-equation.md
     - 线性代数:

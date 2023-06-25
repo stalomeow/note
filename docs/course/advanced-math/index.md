@@ -6,5 +6,6 @@
 
 ## Table of Contents
 
+- [三角恒等式](trigonometric-function-identity)
 - [积分公式](integral-formula)
 - [微分方程](differential-equation)
