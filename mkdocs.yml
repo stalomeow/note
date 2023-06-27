@@ -139,7 +139,6 @@ nav:
   - 首页:
     - index.md
     - 工具收集: tools.md
-    - 留言区: comments.md
   - 读书笔记:
     - book/index.md
   - 课程笔记:
