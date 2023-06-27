@@ -42,11 +42,11 @@
         }
     }
 
-    function setColorScheme(matchesDark) {
+    function setColorScheme(matchesDark, force=false) {
         const prevPaletteIndex = paletteIndex;
         updatePaletteIndex();
 
-        if (prevPaletteIndex === paletteIndex) {
+        if (!force && (prevPaletteIndex === paletteIndex)) {
             return;
         }
 
@@ -72,7 +72,7 @@
     paletteIndex = -1;
 
     // 监听事件
-    query.addEventListener('change', e => setColorScheme(e.matches));
+    query.addEventListener('change', e => setColorScheme(e.matches, true));
     new MutationObserver(() => setColorScheme(query.matches)).observe(document.body, {
         attributes: true,
         attributeFilter: [colorSchemeAttrName],
