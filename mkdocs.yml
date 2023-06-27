@@ -4,7 +4,7 @@ repo_url: https://github.com/stalomeow/note
 edit_uri: blob/main/docs/ # do not use "edit/main/docs/"
 copyright: >
   Copyright &copy; 2022-2023 Stalo. All rights reserved.<br>
-  Articles are licensed under the <u><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC-BY-NC-SA 4.0</a></u> license.
+  Contents are licensed under the <u><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC-BY-NC-SA 4.0</a></u> license, except when otherwise noted.
 
 
 theme:
