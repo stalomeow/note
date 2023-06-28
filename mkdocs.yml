@@ -246,6 +246,7 @@ nav:
     - unity/index.md
     - 编辑器扩展:
       - unity/editor-ext/index.md
+      - 自动平滑模型法线: unity/editor-ext/auto-smooth-model-normals.md
     - Shader:
       - unity/shader/index.md
       - Material Property Drawer: unity/shader/material-property-drawer.md
