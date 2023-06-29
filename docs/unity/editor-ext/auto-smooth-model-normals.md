@@ -8,11 +8,7 @@
 
 我写了一个简单的资源后处理器，在模型导入到 Unity 后，自动计算平滑法线，保存到切线中。
 
-考虑到部分模型的法线是自定义的，法线需要自己计算，然后根据角度加权平均，得到平滑法线。
-
-!!! danger "注意"
-
-    Unity 中的叉积使用左手定则。
+原始的法线数据需要自己计算，不能用模型自带的（因为有些模型里的法线是自定义的），然后根据角度加权平均，得到平滑法线。
 
 ## 代码
 
@@ -23,58 +19,34 @@ using UnityEngine;
 
 public static class NormalUtility
 {
-    public enum StoreLocation
+    public enum StoreMode
     {
-        Tangent = 0,
-        Normal = 1,
-        UV7 = 2
+        ObjectSpaceTangent = 0,
+        ObjectSpaceNormal = 1,
+        ObjectSpaceUV7 = 2,
+        TangentSpaceUV7 = 3
     }
 
-    private class WeightedNormal
-    {
-        private Vector3 m_Normals = Vector3.zero;
-        private float m_Weights = 0;
-
-        public Vector3 Value
-        {
-            get
-            {
-                if (Mathf.Approximately(m_Weights, 0.0f))
-                {
-                    return Vector3.zero;
-                }
-
-                return m_Normals / m_Weights;
-            }
-        }
-
-        public void UpdateWith(Vector3 normal, float weight)
-        {
-            m_Normals += normal * weight;
-            m_Weights += weight;
-        }
-    }
-
-    public static void SmoothAndStore(GameObject go, StoreLocation storeLocation, bool upload)
+    public static void SmoothAndStore(GameObject go, StoreMode storeMode, bool upload, List<GameObject> outModifiedObjs = null)
     {
         foreach (var renderer in go.GetComponentsInChildren<SkinnedMeshRenderer>(false))
         {
-            SmoothAndStore(renderer.sharedMesh, storeLocation, upload);
-            Debug.Log($"Smooth normals of {renderer.gameObject.name}.", renderer);
+            SmoothAndStore(renderer.sharedMesh, storeMode, upload);
+            outModifiedObjs?.Add(renderer.gameObject);
         }
 
         foreach (var filter in go.GetComponentsInChildren<MeshFilter>(false))
         {
-            SmoothAndStore(filter.sharedMesh, storeLocation, upload);
-            Debug.Log($"Smooth normals of {filter.gameObject.name}.", filter);
+            SmoothAndStore(filter.sharedMesh, storeMode, upload);
+            outModifiedObjs?.Add(filter.gameObject);
         }
     }
 
-    public static void SmoothAndStore(Mesh mesh, StoreLocation storeLocation, bool upload)
+    public static void SmoothAndStore(Mesh mesh, StoreMode storeMode, bool upload)
     {
         CheckMeshTopology(mesh, MeshTopology.Triangles);
 
-        Dictionary<Vector3, WeightedNormal> smoothNormals = new();
+        Dictionary<Vector3, Vector3> weightedNormals = new();
         Vector3[] vertices = mesh.vertices;
         int[] triangles = mesh.triangles;
 
@@ -98,12 +70,15 @@ public static class NormalUtility
 
                 Vector3 normal = Vector3.Cross(vec1, vec2).normalized;
                 float angle = Mathf.Acos(Vector3.Dot(vec1, vec2));
-                smoothNormals.GetOrAdd(vertex).UpdateWith(normal, angle);
+
+                weightedNormals.TryAdd(vertex, Vector3.zero);
+                weightedNormals[vertex] += normal * angle;
             }
         }
 
-        Vector3[] normals = Array.ConvertAll(vertices, v => smoothNormals[v].Value);
-        StoreNormals(normals, mesh, storeLocation, upload);
+        // 没必要除以所有权重之和，它不会改变方向。直接归一化就行
+        Vector3[] newNormals = Array.ConvertAll(vertices, v => weightedNormals[v].normalized);
+        StoreNormals(newNormals, mesh, storeMode, upload);
     }
 
     private static void CheckMeshTopology(Mesh mesh, MeshTopology topology)
@@ -117,21 +92,40 @@ public static class NormalUtility
         }
     }
 
-    private static void StoreNormals(Vector3[] normals, Mesh mesh, StoreLocation location, bool upload)
+    private static void StoreNormals(Vector3[] newNormals, Mesh mesh, StoreMode mode, bool upload)
     {
-        switch (location)
+        switch (mode)
         {
-            case StoreLocation.Tangent:
-                mesh.SetTangents(Array.ConvertAll(normals, n => (Vector4)n));
+            case StoreMode.ObjectSpaceTangent:
+                mesh.SetTangents(Array.ConvertAll(newNormals, n => (Vector4)n));
                 break;
 
-            case StoreLocation.Normal:
-                mesh.SetNormals(normals);
+            case StoreMode.ObjectSpaceNormal:
+                mesh.SetNormals(newNormals);
                 break;
 
-            case StoreLocation.UV7:
-                mesh.SetUVs(6, normals);
+            case StoreMode.ObjectSpaceUV7:
+                mesh.SetUVs(6, newNormals);
                 break;
+
+            case StoreMode.TangentSpaceUV7:
+            {
+                Vector4[] tangents = mesh.tangents;
+                Vector3[] normals = mesh.normals;
+
+                for (int i = 0; i < newNormals.Length; i++)
+                {
+                    Vector3 normal = normals[i];
+                    Vector3 tangent = tangents[i];
+                    Vector3 binormal = (Vector3.Cross(normal, tangent) * tangents[i].w).normalized;
+
+                    // tbn 是正交矩阵
+                    Matrix4x4 tbn = new(tangent, binormal, normal, Vector4.zero);
+                    newNormals[i] = tbn.transpose.MultiplyVector(newNormals[i]);
+                }
+
+                goto case StoreMode.ObjectSpaceUV7;
+            }
 
             default:
                 throw new NotImplementedException();
@@ -142,29 +136,23 @@ public static class NormalUtility
             mesh.UploadMeshData(false);
         }
     }
-
-    private static TValue GetOrAdd<TKey, TValue>(this Dictionary<TKey, TValue> self, TKey key)
-        where TValue : class, new()
-    {
-        if (!self.TryGetValue(key, out TValue value))
-        {
-            value = new TValue();
-            self.Add(key, value);
-        }
-
-        return value;
-    }
 }
 ```
 
 ``` c# title="AvatarModelPostprocessor.cs"
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
 
 public class AvatarModelPostprocessor : AssetPostprocessor
 {
+    public static readonly ModelImporterTangents ImportTangents = ModelImporterTangents.None;
+    public static readonly NormalUtility.StoreMode NormalStoreMode = NormalUtility.StoreMode.ObjectSpaceTangent;
+    public static readonly uint Version = 5u;
+
     private bool IsAvatarModel
     {
         get
@@ -182,7 +170,7 @@ public class AvatarModelPostprocessor : AssetPostprocessor
         }
 
         ModelImporter importer = (ModelImporter)assetImporter;
-        importer.importTangents = ModelImporterTangents.None;
+        importer.importTangents = ImportTangents;
     }
 
     private void OnPostprocessModel(GameObject go)
@@ -192,13 +180,15 @@ public class AvatarModelPostprocessor : AssetPostprocessor
             return;
         }
 
-        NormalUtility.SmoothAndStore(go, NormalUtility.StoreLocation.Tangent, false);
-        Debug.Log("<b>[Smooth Normal]</b> " + assetPath);
+        List<GameObject> modifiedObjs = new();
+        NormalUtility.SmoothAndStore(go, NormalStoreMode, false, modifiedObjs);
+        string subObjList = string.Join('\n', modifiedObjs.Select(o => o.name));
+        Debug.Log($"<b>[Smooth Normal]</b> {assetPath}\n" + subObjList);
     }
 
     public override uint GetVersion()
     {
-        return 2;
+        return Version;
     }
 }
 ```
