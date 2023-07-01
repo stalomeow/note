@@ -11,6 +11,7 @@ theme:
   name: material
   language: zh
   custom_dir: overrides
+  favicon: assets/images/favicon.ico
 
   font:
     text: HarmonyOS Sans
@@ -18,7 +19,7 @@ theme:
 
   icon:
     repo: fontawesome/brands/git-alt
-    logo: fontawesome/solid/book
+    logo: octicons/stack-24
     edit: material/pencil
 
   palette:
