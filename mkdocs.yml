@@ -1,4 +1,6 @@
 site_name: Stalo's Note
+site_url: https://note.stalomeow.com/
+site_description: Stalo's online notebook.
 repo_name: stalomeow/note
 repo_url: https://github.com/stalomeow/note
 edit_uri: blob/main/docs/ # do not use "edit/main/docs/"
@@ -77,6 +79,9 @@ extra:
     - name: Mail
       icon: fontawesome/solid/envelope
       link: mailto:me@stalomeow.com
+    - name: RSS
+      icon: fontawesome/solid/square-rss
+      link: /feed_rss_updated.xml
 
 
 extra_css:
@@ -132,8 +137,12 @@ plugins:
       exclude:
         - index.md
         - tools.md
-        - comments.md
         - "**/index.md"
+  - rss:
+      comments_path: "#__comments"
+      match_path: '^(?!.*(\/|\\)index\.md$)(?!index\.md$).*$' # 去除 **/index.md
+      date_from_meta:
+          default_timezone: Asia/Shanghai
 
 
 nav:
