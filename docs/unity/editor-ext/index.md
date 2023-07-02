@@ -1,3 +1,7 @@
+---
+comments: false
+---
+
 # 编辑器扩展
 
 !!! abstract

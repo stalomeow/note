@@ -1,3 +1,7 @@
+---
+comments: false
+---
+
 # 计算机科学
 
 !!! abstract

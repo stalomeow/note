@@ -1,3 +1,7 @@
+---
+comments: false
+---
+
 # 编程语言
 
 !!! abstract

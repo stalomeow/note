@@ -1,3 +1,7 @@
+---
+comments: false
+---
+
 # 现代计算机图形学入门 (GAMES 101)
 
 !!! info "课程官方介绍"

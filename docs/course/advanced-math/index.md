@@ -1,3 +1,7 @@
+---
+comments: false
+---
+
 # 高等数学
 
 !!! abstract

@@ -1,3 +1,7 @@
+---
+comments: false
+---
+
 # 线性代数
 
 !!! abstract

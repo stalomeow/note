@@ -1,3 +1,7 @@
+---
+comments: false
+---
+
 # 解决方案
 
 !!! abstract
