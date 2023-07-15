@@ -6,7 +6,9 @@
 
 ## 简介
 
-你好 ο(=•ω＜=)ρ⌒☆，我目前就读于 XDU，大一。博客玩腻了，现在改用 MkDocs 搭建了这个笔记本。
+嗨~ 欢迎访问我的笔记本 ο(=•ω＜=)ρ⌒☆。我就读于 XDU，开学大二，CS 专业。
+
+***我的博客已经下线！！！现在改用这个笔记本了！！！***
 
 ## 联系
 
@@ -30,5 +32,5 @@
 
     <figure markdown>
         ![sponsor](assets/images/sponsor.jpg){ width="300px" }
-        <figcaption>如果本站对你有所帮助的话... :pleading_face:</figcaption>
+        <figcaption>如果本站对你有所帮助的话... 也不是不可以... :pleading_face:</figcaption>
     </figure>
