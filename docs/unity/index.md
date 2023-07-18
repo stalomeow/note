@@ -14,3 +14,5 @@ comments: false
 - [Shader](shader)
 - [源码分析](src-analysis)
 - [解决方案](troubleshooting)
+- 黑魔法
+    - [强制让 SRP Batch 支持 Multipass Shader](trick/srp-batch-multipass-shader)
