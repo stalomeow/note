@@ -252,7 +252,7 @@ nav:
     - 逆向:
       - 提取 WebGL Shaders: cg/reverse/dump-webgl-shaders.md
       - 反编译 DXBC: cg/reverse/decompile-dxbc.md
-      - RenderDoc 和模拟器抓帧安卓手游: cg/reverse/renderdoc-capture-frame-in-emulator.md
+      - 用 RenderDoc 和模拟器抓帧安卓手游: cg/reverse/renderdoc-capture-frame-in-emulator.md
   - Unity 开发:
     - unity/index.md
     - 编辑器扩展:

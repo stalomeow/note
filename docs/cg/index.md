@@ -17,4 +17,4 @@ comments: false
 - 逆向
     - [反编译 DXBC](reverse/decompile-dxbc.md)
     - [提取 WebGL Shaders](reverse/dump-webgl-shaders.md)
-    - [RenderDoc 和模拟器抓帧安卓手游](reverse/renderdoc-capture-frame-in-emulator.md)
+    - [用 RenderDoc 和模拟器抓帧安卓手游](reverse/renderdoc-capture-frame-in-emulator.md)
