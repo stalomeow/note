@@ -128,7 +128,11 @@ markdown_extensions:
 
 
 plugins:
-  - search
+  - search:
+      lang:
+        - zh
+        - en
+      # jieba_dict: jieba-dict.txt
   - git-revision-date-localized:
       type: datetime
       timezone: Asia/Shanghai
