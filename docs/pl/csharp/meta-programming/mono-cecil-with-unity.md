@@ -1,3 +1,0 @@
-# Mono.Cecil & Unity
-
-TODO

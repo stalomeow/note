@@ -10,13 +10,6 @@
 
 ***我的博客已经下线！！！现在改用这个笔记本了！！！***
 
-## 联系
-
-可以通过下面几种途径联系我！
-
-- [:fontawesome-brands-telegram: Telegram](https://t.me/StaloMeow)
-- [:fontawesome-solid-envelope: Mail](mailto:me@stalomeow.com)
-
 ## 勘误
 
 如果发现错误，你可以 <small>（二选一）</small>
