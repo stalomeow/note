@@ -4,6 +4,7 @@ from mkdocs.plugins import PluginCollection
 import logging
 
 PLUGIN_BLACKLIST = [
+    'material/search',
     'git-revision-date-localized',
     'rss',
 ]

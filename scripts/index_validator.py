@@ -7,6 +7,13 @@ from typing import Union
 import logging
 import re
 
+isServeMode = False
+log = logging.getLogger('mkdocs.plugins')
+
+def on_startup(command: str, dirty: bool):
+    global isServeMode
+    isServeMode = (command == 'serve')
+
 def get_url(element: Union[Section, Page, Link]):
     if not isinstance(element, Section):
         return element.abs_url
@@ -39,21 +46,25 @@ def get_markdowns(element: Union[Section, Page, Link], indentCount: int):
 
 def generate_toc(page: Page):
     markdowns = ['\n## Table of Contents\n']
-    iterStack = [iter(page.parent.children)]
 
-    while len(iterStack) > 0:
-        try:
-            child = next(iterStack[-1])
+    if isServeMode:
+        markdowns.append('- TOC is disabled in serve mode in order to improve performance.\n')
+    else:
+        iterStack = [iter(page.parent.children)]
 
-            if getattr(child, 'is_index', False):
-                continue
+        while len(iterStack) > 0:
+            try:
+                child = next(iterStack[-1])
 
-            markdowns.extend(get_markdowns(child, len(iterStack) - 1))
+                if getattr(child, 'is_index', False):
+                    continue
 
-            if child.children is not None:
-                iterStack.append(iter(child.children))
-        except StopIteration:
-            iterStack.pop()
+                markdowns.extend(get_markdowns(child, len(iterStack) - 1))
+
+                if child.children is not None:
+                    iterStack.append(iter(child.children))
+            except StopIteration:
+                iterStack.pop()
 
     return ''.join(markdowns)
 
@@ -61,8 +72,6 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Fil
     # 只处理不是首页的 index
     if (not page.is_index) or (page.abs_url == '/'):
         return markdown
-
-    log = logging.getLogger('mkdocs.plugins')
 
     if page.meta.get('comments', True):
         log.warning('[index-validator] \'%s\' should have comments disabled.', page.file.abs_src_path)
