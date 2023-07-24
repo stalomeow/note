@@ -20,11 +20,19 @@ def get_markdowns(element: Section | Page | Link, indentCount: int):
     indent = '    ' * indentCount
     content = ''
 
-    match get_url(element):
-        case str() as url:
-            content = f'- [{element.title}]({url})\n'
-        case _:
-            content = f'- {element.title}\n'
+    # Vercel 还不支持 match-case
+    # match get_url(element):
+    #     case str() as url:
+    #         content = f'- [{element.title}]({url})\n'
+    #     case _:
+    #         content = f'- {element.title}\n'
+
+    url = get_url(element)
+
+    if isinstance(url, str):
+        content = f'- [{element.title}]({url})\n'
+    else:
+        content = f'- {element.title}\n'
 
     return (indent, content)
 
