@@ -156,7 +156,6 @@ hooks:
 
 
 nav:
-  - index.md
   - 首页:
     - index.md
     - 网站收集:

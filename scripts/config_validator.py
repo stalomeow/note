@@ -25,7 +25,7 @@ def pop_plugin(plugins: PluginCollection, name: str):
             plugins.events[attrName[3:]].remove(method)
 
 isServeMode = False
-log = logging.getLogger('mkdocs')
+log = logging.getLogger('mkdocs.plugins')
 
 def on_startup(command: str, dirty: bool):
     global isServeMode

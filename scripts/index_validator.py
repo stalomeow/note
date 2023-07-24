@@ -2,11 +2,12 @@ from mkdocs.structure.pages import Page
 from mkdocs.structure.nav import Section, Link
 from mkdocs.structure.files import Files
 from mkdocs.config.defaults import MkDocsConfig
+from typing import Union
 
 import logging
 import re
 
-def get_url(element: Section | Page | Link):
+def get_url(element: Union[Section, Page, Link]):
     if not isinstance(element, Section):
         return element.abs_url
 
@@ -16,7 +17,7 @@ def get_url(element: Section | Page | Link):
 
     return None
 
-def get_markdowns(element: Section | Page | Link, indentCount: int):
+def get_markdowns(element: Union[Section, Page, Link], indentCount: int):
     indent = '    ' * indentCount
     content = ''
 
@@ -61,12 +62,12 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Fil
     if (not page.is_index) or (page.abs_url == '/'):
         return markdown
 
-    log = logging.getLogger('mkdocs')
+    log = logging.getLogger('mkdocs.plugins')
 
     if page.meta.get('comments', True):
         log.warning('[index-validator] \'%s\' should have comments disabled.', page.file.abs_src_path)
 
-    if re.search(r'^ *#{2,6} +Table of Contents *$', markdown, flags=re.MULTILINE):
+    if re.search(r'^ *#{2,6} +Table of Contents *$', markdown, flags=re.M | re.I):
         log.warning('[index-validator] \'%s\' may have duplicated TOC.', page.file.abs_src_path)
 
     return markdown + generate_toc(page)
