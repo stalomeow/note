@@ -220,8 +220,28 @@ nav:
     - GAMES 课程: # GAMES: Graphics And Mixed Environment Symposium
       - 现代计算机图形学入门 (101):
         - cg/games-course/101/index.md
+        - Overview of Computer Graphics: cg/games-course/101/lecture-01.md
+        - Review of Linear Algebra: cg/games-course/101/lecture-02.md
+        - Transformation: cg/games-course/101/lecture-03.md
         - Transformation Cont.: cg/games-course/101/lecture-04.md
         - Rasterization 1 (Triangles): cg/games-course/101/lecture-05.md
+        - Rasterization 2 (Antialiasing and Z-Buffering): cg/games-course/101/lecture-06.md
+        - Shading 1 (Illumination, Shading and Graphics Pipeline): cg/games-course/101/lecture-07.md
+        - Shading 2 (Shading, Pipeline and Texture Mapping): cg/games-course/101/lecture-08.md
+        - Shading 3 (Texture Mapping Cont.): cg/games-course/101/lecture-09.md
+        - Geometry 1 (Introduction): cg/games-course/101/lecture-10.md
+        - Geometry 2 (Curves and Surfaces): cg/games-course/101/lecture-11.md
+        - Geometry 3: cg/games-course/101/lecture-12.md
+        - Ray Tracing 1: cg/games-course/101/lecture-13.md
+        - Ray Tracing 2: cg/games-course/101/lecture-14.md
+        - Ray Tracing 3: cg/games-course/101/lecture-15.md
+        - Ray Tracing 4: cg/games-course/101/lecture-16.md
+        - Materials and Appearances: cg/games-course/101/lecture-17.md
+        - Advanced Topics in Rendering: cg/games-course/101/lecture-18.md
+        - Cameras, Lenses and Light Fields: cg/games-course/101/lecture-19.md
+        - Color and Perception: cg/games-course/101/lecture-20.md
+        - Animation: cg/games-course/101/lecture-21.md
+        - Animation Cont.: cg/games-course/101/lecture-22.md
       - 现代游戏引擎 (104):
         - cg/games-course/104/index.md
         - From Getting Started To Practice: cg/games-course/104/lecture-01.md
