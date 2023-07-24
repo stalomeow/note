@@ -194,19 +194,15 @@ nav:
     - algorithm/index.md
     - 理论知识:
       - 数据结构:
-        - algorithm/data-structure/index.md
         - 并查集: algorithm/data-structure/disjoint-set.md
       - 搜索:
-        - algorithm/search/index.md
         - DFS: algorithm/search/dfs.md
         - BFS: algorithm/search/bfs.md
         - A*: algorithm/search/a-star.md
       - 字符串:
-        - algorithm/string/index.md
         - KMP: algorithm/string/kmp.md
     - 题解:
       - 洛谷:
-        - algorithm/luogu/index.md
         - P5507 机关: algorithm/luogu/P5507.md
       # - LeetCode:
       #   - 
@@ -259,15 +255,11 @@ nav:
   - 游戏开发:
     - gamedev/index.md
     - Unity 开发:
-      - gamedev/unity/index.md
       - 编辑器扩展:
-        - gamedev/unity/editor-ext/index.md
         - 自动平滑模型法线: gamedev/unity/editor-ext/auto-smooth-model-normals.md
       - Shader:
-        - gamedev/unity/shader/index.md
         - Material Property Drawer: gamedev/unity/shader/material-property-drawer.md
       - 源码分析:
-        - gamedev/unity/src-analysis/index.md
         - Unity UI:
           - TODO: gamedev/unity/src-analysis/ugui/placeholder.md
         - Universal RP:
