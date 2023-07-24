@@ -45,7 +45,7 @@ def get_markdowns(element: Union[Section, Page, Link], indentCount: int):
     return (indent, content)
 
 def generate_toc(page: Page):
-    markdowns = ['\n## Table of Contents\n']
+    markdowns = ['\n## Table of Contents { data-search-exclude }\n']
 
     if isServeMode:
         markdowns.append('- TOC is disabled in serve mode in order to improve performance.\n')
