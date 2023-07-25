@@ -1,0 +1,222 @@
+# 指数函数与其反函数的交点个数
+
+!!! abstract
+
+    深入讨论指数函数和其反函数的交点个数与底数的关系。思路参考一篇相关的论文。[^1]
+
+    <hr>
+
+    <small><i>高中博客的遗产。</i></small>
+
+??? tip "指数函数和它的反函数可以有 3 个交点"
+
+    ![三个交点](/assets/images/2023-07-26/0.png)
+
+讨论 $y=a^x$ 和 $y=\log_ax$ 的交点个数等价于讨论 $a^x = \log_ax$ 的解的个数。
+
+设 $a^x = \log_ax = u$ ，我们不妨分两种情况来讨论。
+
+## 情况一
+
+当 $u = x$ 时，原式等价于
+
+$$
+a = x^\frac{1}{x} \ (x \gt 0)
+$$
+
+接着考察 $f(x) = x^\frac{1}{x} \ (x \gt 0)$ 的单调性和值域。
+
+$$
+\begin{align}
+f(x)  &= x^\frac{1}{x} = e^{\frac{1}{x} \ln x} \\\\
+f'(x) &= e^{\frac{1}{x}\ln x} \ (-\frac{\ln x}{x^2} + \frac{1}{x^2}) \\\\
+      &= x^{\frac{1}{x}-2} \ (1-\ln x)
+\end{align}
+$$
+
+由于 $x^{\frac{1}{x}-2} > 0$ 恒成立，所以易得
+
+- $x \in (0,\ e)$ 时， $f'(x) > 0$。
+- $x = e$ 时， $f'(x) = 0$。
+- $x \in (e,\ +\infty)$ 时， $f'(x) < 0$。
+
+求 $f(x)$ 两边的极限
+
+$$
+\begin{align}
+\lim_{x \to 0^+}f(x) &= \lim_{x \to 0^+}e^{\frac{1}{x} \ln x} = 0 \\\\
+\lim_{x \to +\infty}f(x) &= \lim_{x \to +\infty}e^{\frac{1}{x} \ln x} = 1
+\end{align}
+$$
+
+我们得知 $f(x)$
+
+1. 在区间 $(0,\ e)$ 上由 $0$ 单调递增至 $e^{e^{-1}}$。
+2. 在 $x = e$ 处取得极大值 $e^{e^{-1}}$。
+3. 在区间 $(e,\ +\infty)$ 上由 $e^{e^{-1}}$ 单调递减至 $1$。
+4. 值域为 $(0,\ e^{e^{-1}}]$。
+
+![草图](/assets/images/2023-07-26/1.png)
+
+画张草图，数形结合，很容易知道
+
+1. $a \in (0,\ 1) \cup \lbrace e^{e^{-1}} \rbrace$ 时，原方程有唯一的实数解。
+2. $a \in (1,\ e^{e^{-1}})$ 时，原方程有两个实数解。
+3. $a \in (e^{e^{-1}},\ +\infty)$ 时，原方程无实数解。
+
+<hr>
+
+特别地，当 $a = e^{e^{-1}}$ 时
+
+$$
+\begin{align}
+a &= e^{e^{-1}} = x^{\frac{1}{x}} \\\\
+\Rightarrow x &= e
+\end{align}
+$$
+
+令
+
+$$
+\begin{align}
+g(x) &= a^x = (e^{e^{-1}})^x \\\\
+h(x) &= \log_ax = \log_{e^{e^{-1}}}x = e \ln x
+\end{align}
+$$
+
+求导
+
+$$
+\begin{align}
+g'(x) &= (e^{e^{-1}})^x \ \frac{1}{e} = e^{\frac{x}{e} - 1}\\\\
+h'(x) &= \frac{e}{x}
+\end{align}
+$$
+
+发现 $g'(e) = h'(e) = 1$ ，所以 $g (x),\ h(x)$ 相切 $y = x$ 于一点 $(e,\ e)$ 。
+
+## 情况二
+
+当 $u \neq x$ 时，原式等价于
+
+$$
+a = x^{\frac{1}{u}} = u^{\frac{1}{x}} \ (x,u \gt 0)
+$$
+
+由 $y=a^x$ 和 $y=\log_ax$ 的对称性，这里不妨假设 $u \gt x \gt 0$ 。
+
+> 注：这里只计算直线 $y = x$ 上方的那个交点 $(x,\ u)$ 。如果这个交点存在，那么由对称性就能知道另一个交点。
+
+发现 $u = x^{\frac{x}{u}}$ ，于是构造 $u = x^{1-\frac{1}{\gamma}} \ (\gamma \neq 0)$ ，得
+
+$$
+\begin{align}
+x &= (1 - \frac{1}{\gamma})^\gamma \\\\
+u &= (1 - \frac{1}{\gamma})^{\gamma - 1} \\\\
+u &= \frac{\gamma}{\gamma - 1} x
+\end{align}
+$$
+
+> 注：这就相当于直接构造 $\dfrac{x}{u} = 1-\dfrac{1}{\gamma}$ 。这样构造使我们很容易求出 $x,\ u$ 的表达式，并且表达式里的指数也是很简单的整式。
+
+由 $u \gt x \gt 0$ 可以得到 $\gamma \gt 1$ 。
+
+此时
+
+$$
+a = x^{\frac{1}{u}} = (1 - \frac{1}{\gamma})^{\gamma (1 - \frac{1}{\gamma})^{1 - \gamma}}
+$$
+
+记
+
+$$
+f(\gamma) = a = (1 - \frac{1}{\gamma})^{\gamma (1 - \frac{1}{\gamma})^{1 - \gamma}} \ (\gamma \gt 1)
+$$
+
+对 $f(\gamma)$ 求导（不难，但很麻烦，所以省略中间重复使用链式法则的过程）
+
+$$
+\begin{align}
+f'(\gamma) &= f(\gamma) \ \ \dot \ \ \left [\gamma (1 - \frac{1}{\gamma})^{1 - \gamma} \ln(1 - \frac{1}{\gamma}) \right ]' \\\\
+      &= \ ...... \\\\
+      &= f(\gamma) \ (1 - \frac{1}{\gamma})^{1 - \gamma} \ \left [\frac{1}{\gamma - 1} - \gamma \ln^2(1 - \frac{1}{\gamma}) \right ] \\\\
+      &= \frac{f(\gamma)}{\gamma u} \ \left [\frac{1}{\gamma (\gamma - 1)} - \ln^2(1 - \frac{1}{\gamma}) \right ] \\\\
+      &= \frac{f(\gamma)}{\gamma u} \ \left [\frac{1}{\sqrt{\gamma (\gamma - 1)}} - \ln(1 - \frac{1}{\gamma}) \right ] \ \left [\frac{1}{\sqrt{\gamma (\gamma - 1)}} + \ln(1 - \frac{1}{\gamma}) \right ]
+\end{align}
+$$
+
+因为 $f(\gamma) \gt 0,\ u \gt 0,\ \gamma \gt 1$ 所以
+
+$$
+\begin{align}
+\frac{f(\gamma)}{\gamma u} &\gt 0 \\\\
+\frac{1}{\sqrt{\gamma (\gamma - 1)}} &- \ln(1 - \frac{1}{\gamma}) \gt 0
+\end{align}
+$$
+
+记
+
+$$
+g(\gamma) = \frac{1}{\sqrt{\gamma (\gamma - 1)}} + \ln(1 - \frac{1}{\gamma})
+$$
+
+可知 $f'(\gamma)$ 与 $g(\gamma)$ 同号。对 $g(\gamma)$ 求导
+
+$$
+\begin{align}
+g'(\gamma) &= \frac{1}{\gamma (\gamma - 1)} \ \left [1 - \frac{2\gamma - 1}{2\sqrt{\gamma (\gamma - 1)}} \right ] \\\\
+      &= \frac{1}{\gamma (\gamma - 1)} \ \left [1 - \frac{1}{2}\sqrt{4 + \frac{1}{\gamma (\gamma - 1)}} \ \right ] \lt 0
+\end{align}
+$$
+
+得知 $g(\gamma)$ 在 $(1,\ +\infty)$ 单调递减，又由
+
+$$
+\lim_{\gamma \to +\infty} g(\gamma) = \lim_{\gamma \to +\infty} \left ( \frac{1}{\sqrt{\gamma (\gamma - 1)}} + \ln(1 - \frac{1}{\gamma}) \right ) = 0
+$$
+
+知 $g(\gamma) \gt 0$ ，所以 $f'(\gamma) \gt 0$ 。
+
+求 $f(\gamma)$ 两端极限（因为不好求，所以先求 $x$ 和 $u$ 的极限）
+
+$$
+\begin{align}
+&\lim_{\gamma \to 1^+} x = \lim_{\gamma \to 1^+} (1 - \frac{1}{\gamma})^\gamma = 0 \\\\
+&\lim_{\gamma \to 1^+} u = \lim_{\gamma \to 1^+} (1 - \frac{1}{\gamma})^{\gamma - 1} = 1 \\\\
+&\lim_{\gamma \to 1^+} f(\gamma) = \lim_{\gamma \to 1^+} x^{\frac{1}{u}} = 0 \\\\
+\\
+&\lim_{\gamma \to +\infty} x = \lim_{\gamma \to +\infty} (1 - \frac{1}{\gamma})^\gamma = e^{-1} \\\\
+&\lim_{\gamma \to +\infty} u = \lim_{\gamma \to +\infty} (1 - \frac{1}{\gamma})^{\gamma - 1} = e^{-1} \\\\
+&\lim_{\gamma \to +\infty} f(\gamma) = \lim_{\gamma \to +\infty} x^{\frac{1}{u}} = e^{-e}
+\end{align}
+$$
+
+所以，$f(\gamma)$ 在 $(1,\ +\infty)$ 上单调递增，值域为 $(0,\ e^{-e})$ 。
+
+![草图](/assets/images/2023-07-26/2.png)
+
+画张草图，数形结合，可以知道，当且仅当 $a \in (0,\ e^{-e})$ 时， $\gamma$ 可由 $a$ 唯一确定。
+
+那么我们可以确定，当 $a \in (0,\ e^{-e})$ 时， $y=a^x$ 和 $y=\log_ax$ 在直线 $y = x$ 上方有唯一的一个交点 $(x,\ u)$ 。根据对称性又能推出，在直线 $y = x$ 下方，两个函数也一定有一个交点。
+
+所以
+
+1. $a \in (0,\ e^{-e})$ 时，原方程有两个实数解。
+2. $a \in (e^{-e},\ 1) \cup (1,\ +\infty)$ 时，原方程无实数解。
+
+<hr>
+
+特别地，根据上面的计算可以知道 $(x,\ u)$ 随着 $\gamma$ 增大会靠近直线 $y = x$ 且 $a \rightarrow e^{-e}$ 。之前的分析告诉我们，$a = e^{-e}$ 时，$y=a^x$ 和 $y=\log_ax$ 只有一个交点 $(e^{-1},\ e^{-1})$。那么就可以推出原本的三个交点在 $a = e^{-e}$ 时聚在了一起，所以此时这两个函数一定相切，切点就是 $(e^{-1},\ e^{-1})$ 。
+
+## 总结
+
+|$a$ 的取值范围|$y=a^x$ 和 $y=\log_ax$ 的交点个数|
+|:-|:-|
+|$(0,\ e^{-e})$|3 个交点，1 个在直线 $y = x$ 上，其余 2 个关于直线 $y = x$ 对称|
+|$\lbrace e^{-e} \rbrace$|1 个交点 $(e^{-1},\ e^{-1})$ ，且两个函数相切于这个点|
+|$(e^{-e},\ 1)$|1 个交点，在直线 $y = x$ 上|
+|$(1,\ e^{e^{-1}})$|2 个交点，在直线 $y = x$ 上|
+|$\lbrace e^{e^{-1}} \rbrace$|1 个交点 $(e,\ e)$ ，且两个函数相切直线 $y = x$ 于这个点|
+|$(e^{e^{-1}},\ +\infty)$|没有交点|
+
+[^1]: 黄俊明. 关于指数函数与对数函数图像的交点个数问题[J]. 凯里学院学报, 2007, 25(006):7-8.

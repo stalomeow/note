@@ -167,6 +167,7 @@ nav:
     - 数学:
       - 高中数学:
         - 三角恒等式: basic/high-school-math/trigonometric-function-identity.md
+        - 指数函数与其反函数的交点个数: basic/high-school-math/intersection-point-of-exp-and-its-inv.md
       - 高等数学:
         - 积分公式: basic/advanced-math/integral-formula.md
         - 微分方程: basic/advanced-math/differential-equation.md
@@ -174,9 +175,13 @@ nav:
         - 矩阵: basic/linear-algebra/matrix.md
         - 行列式: basic/linear-algebra/determinant.md
         - 四元数: basic/linear-algebra/quaternion.md
+    - 英语:
+      - 高中英语作文框架: basic/english/high-school-composition-framework.md
   - 计算机科学 (Partial):
     - cs/index.md
     - 编程语言:
+      - C/C++:
+        - 函数调用约定: cs/pl/c-cpp/calling-convention.md
       - C#:
         - 弱引用: cs/pl/csharp/weak-references.md
         - 模式匹配: cs/pl/csharp/pattern-matching.md
@@ -188,6 +193,8 @@ nav:
         - 执行一个模块: cs/pl/python/run-a-module.md
         - 多版本和虚拟环境: cs/pl/python/multi-versions-and-venv.md
         - 卸载 Python: cs/pl/python/uninstall.md
+      - JS/TS:
+        - 写一个简易 jQuery: cs/pl/js-ts/write-a-mini-jquery.md
     - 命令行工具:
       - Git: cs/cmd-tool/git.md
   - 数据结构与算法:
