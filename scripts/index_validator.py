@@ -1,11 +1,11 @@
+import logging
+import re
+
 from mkdocs.structure.pages import Page
 from mkdocs.structure.nav import Section, Link
 from mkdocs.structure.files import Files
 from mkdocs.config.defaults import MkDocsConfig
 from typing import Union
-
-import logging
-import re
 
 isServeMode = False
 log = logging.getLogger('mkdocs.plugins')

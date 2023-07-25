@@ -1,7 +1,7 @@
+import logging
+
 from mkdocs.config.defaults import MkDocsConfig
 from mkdocs.plugins import PluginCollection
-
-import logging
 
 PLUGIN_BLACKLIST = [
     'material/search',
