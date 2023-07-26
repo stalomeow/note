@@ -57,5 +57,3 @@ git add file.psd
 git commit -m "Add design file"
 git push origin main
 ```
-
-Check out our wiki, discussion forum, and documentation for help with any questions you might have!

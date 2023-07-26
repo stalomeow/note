@@ -22,4 +22,4 @@
 
 ## G
 
-- [模之屋](https://www.aplaybox.com/){ target="_blank" }
+- [模之屋（随便分的类）](https://www.aplaybox.com/){ target="_blank" }
