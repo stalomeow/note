@@ -4,14 +4,19 @@
 
     都是非常基础的东西。持续更新。
 
+## 字符和 Unicode 码相互转换
+
+- 字符转 Unicode：`#!python ord('a')`。
+- Unicode 转字符：`#!python chr(97)`。
+
 ## 对象拷贝
 
 用内置模块 `copy`。
 
-- 浅拷贝：`y = copy.copy(x)`。
-- 深拷贝：`y = copy.deepcopy(x)`。
+- 浅拷贝：`#!python y = copy.copy(x)`。
+- 深拷贝：`#!python y = copy.deepcopy(x)`。
 
-列表浅拷贝也可以用切片：`y = x[::]`。
+列表浅拷贝也可以用切片：`#!python y = x[::]`。
 
 ## 遍历文件夹
 

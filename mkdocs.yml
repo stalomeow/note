@@ -177,11 +177,13 @@ nav:
         - 四元数: basic/linear-algebra/quaternion.md
     - 英语:
       - 高中英语作文框架: basic/english/high-school-composition-framework.md
-  - 计算机科学 (Partial):
+  - 计算机科学:
     - cs/index.md
     - 编程语言:
       - C/C++:
         - 函数调用约定: cs/pl/c-cpp/calling-convention.md
+        - STL 相关: cs/pl/c-cpp/stl.md
+        - C++ 11 相关: cs/pl/c-cpp/cpp-11.md
       - C#:
         - 弱引用: cs/pl/csharp/weak-references.md
         - 模式匹配: cs/pl/csharp/pattern-matching.md
@@ -196,11 +198,16 @@ nav:
       - JS/TS:
         - 写一个简易 jQuery: cs/pl/js-ts/write-a-mini-jquery.md
     - 命令行工具:
+      - Aria2: cs/cmd-tool/aria2.md
       - Git: cs/cmd-tool/git.md
+    - 其他:
+      - Unicode: cs/misc/unicode.md
   - 数据结构与算法:
     - algorithm/index.md
     - 理论知识:
       - 数据结构:
+        - 数组相关: algorithm/data-structure/array.md
+        - 链表相关: algorithm/data-structure/linked-list.md
         - 并查集: algorithm/data-structure/disjoint-set.md
       - 搜索:
         - DFS: algorithm/search/dfs.md
@@ -217,6 +224,7 @@ nav:
     - cg/index.md
     - Half Lambert 勘误: cg/half-lambert-corrigenda.md
     - 法线贴图压缩: cg/normal-map-compression.md
+    - 颜色空间: cg/color-space.md
     - NPR: # Non-photorealistic rendering
       - 卡通角色渲染: cg/npr/character.md
       - 仿星穹铁道的角色渲染: cg/npr/hsr-character.md
@@ -301,3 +309,4 @@ nav:
     - 面试相关: misc/interview.md
     - 网页中嵌入 b 站视频: misc/bilibili-iframe.md
     - Win11 微软输入法快捷键冲突: misc/win11-ms-input-shortcuts-conflict.md
+    - 下载微信视频号的视频: misc/download-wechat-video.md
