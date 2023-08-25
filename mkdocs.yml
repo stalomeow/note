@@ -213,8 +213,8 @@ nav:
         - DFS: algorithm/search/dfs.md
         - BFS: algorithm/search/bfs.md
         - A*: algorithm/search/a-star.md
-      # - 字符串:
-      #   - KMP: algorithm/string/kmp.md
+      - 字符串:
+        - KMP: algorithm/string/kmp.md
     - 题解:
       - 洛谷:
         - P5507 机关: algorithm/luogu/P5507.md
