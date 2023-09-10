@@ -18,31 +18,26 @@ def get_url(element: Union[Section, Page, Link]):
     if not isinstance(element, Section):
         return element.abs_url
 
+    # Section 对应这种情况：
+    # - 游戏开发:
+    #   - gamedev/index.md
     for child in element.children:
         if isinstance(child, Page) and child.is_index:
             return child.abs_url
 
     return None
 
-def get_markdowns(element: Union[Section, Page, Link], indentCount: int):
+def get_url_and_markdown(element: Union[Section, Page, Link], indentCount: int):
+    url = get_url(element)
     indent = '    ' * indentCount
     content = ''
-
-    # Vercel 还不支持 match-case
-    # match get_url(element):
-    #     case str() as url:
-    #         content = f'- [{element.title}]({url})\n'
-    #     case _:
-    #         content = f'- {element.title}\n'
-
-    url = get_url(element)
 
     if isinstance(url, str):
         content = f'- [{element.title}]({url})\n'
     else:
         content = f'- {element.title}\n'
 
-    return (indent, content)
+    return (url, indent + content)
 
 def generate_toc(page: Page):
     markdowns = ['\n## Table of Contents { data-search-exclude }\n']
@@ -56,13 +51,18 @@ def generate_toc(page: Page):
             try:
                 child = next(iterStack[-1])
 
+                # 跳过这种：
+                # - gamedev/index.md
                 if getattr(child, 'is_index', False):
                     continue
 
-                markdowns.extend(get_markdowns(child, len(iterStack) - 1))
+                url, md = get_url_and_markdown(child, len(iterStack) - 1)
+                markdowns.append(md)
 
                 if child.children is not None:
-                    iterStack.append(iter(child.children))
+                    # 如果这个 Section 有自己的 index，那就不往下遍历了
+                    if not (isinstance(child, Section) and isinstance(url, str)):
+                        iterStack.append(iter(child.children))
             except StopIteration:
                 iterStack.pop()
 

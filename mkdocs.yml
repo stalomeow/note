@@ -290,8 +290,9 @@ nav:
   - 游戏开发:
     - gamedev/index.md
     - Unity 开发:
-      - 编辑器扩展:
-        - 自动平滑模型法线: gamedev/unity/editor-ext/auto-smooth-model-normals.md
+      - Editor:
+        - IL Post-Process: gamedev/unity/editor/il-post-process.md
+        - 自动平滑模型法线: gamedev/unity/editor/auto-smooth-model-normals.md
       - Shader:
         - Material Property Drawer: gamedev/unity/shader/material-property-drawer.md
       - 源码分析:
