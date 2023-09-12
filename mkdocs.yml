@@ -287,24 +287,27 @@ nav:
         - Data-Oriented Programming and Job System: cg/games-course/104/lecture-20.md
         - Dynamic Global Illumination and Lumen: cg/games-course/104/lecture-21.md
         - GPU Driven Geometry Pipeline - Nanite: cg/games-course/104/lecture-22.md
-  - 游戏开发:
-    - gamedev/index.md
-    - Unity 开发:
-      - Editor:
-        - IL Post-Process: gamedev/unity/editor/il-post-process.md
-        - 自动平滑模型法线: gamedev/unity/editor/auto-smooth-model-normals.md
-      - Shader:
-        - Material Property Drawer: gamedev/unity/shader/material-property-drawer.md
-      - 源码分析:
-        - Unity UI:
-          - TODO: gamedev/unity/src-analysis/ugui/placeholder.md
-        - Universal RP:
-          - TODO: gamedev/unity/src-analysis/urp/placeholder.md
-      - 解决方案:
-        - gamedev/unity/troubleshooting/index.md
-        - GetComponentInParent on PrefabAsset returns null: gamedev/unity/troubleshooting/get-component-in-parent-on-prefab-asset-returns-null.md
-      - 黑魔法:
-        - 强制让 SRP Batch 支持 Multipass Shader: gamedev/unity/trick/srp-batch-multipass-shader.md
+  - Unity 开发:
+    - unity/index.md
+    - 编辑器开发:
+      - IL Post-Process: unity/editor/il-post-process.md
+      - 类似 Animation Window 的 Record 和 Preview 功能: unity/editor/animation-window-record-preview-impl.md
+    - 图形开发:
+      - 平滑模型法线: unity/graphics/smooth-model-normals.md
+      - 强制让 SRP Batch 支持 Multipass Shader: unity/graphics/srp-batch-multipass-shader.md
+      - Shader 相关:
+        - Material Property Drawer: unity/graphics/shader/material-property-drawer.md
+    - 源码分析:
+      - Unity UI:
+        - TODO: unity/src-analysis/ugui/placeholder.md
+      - Universal RP:
+        - TODO: unity/src-analysis/urp/placeholder.md
+    - 解决方案:
+      - unity/troubleshooting/index.md
+      - GetComponentInParent on PrefabAsset returns null: unity/troubleshooting/get-component-in-parent-on-prefab-asset-returns-null.md
+  - UE 开发:
+    - unreal/index.md
+    - 编译 UE4: unreal/compile-ue4-source-code.md
   - 杂项:
     - misc/index.md
     - 面试相关: misc/interview.md
