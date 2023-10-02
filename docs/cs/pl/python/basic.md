@@ -139,7 +139,7 @@ named_expression:
     | expression !':='
 
 # 装饰器
-decorators: ('@' named_expression NEWLINE )+ 
+decorators: ('@' named_expression NEWLINE )+
 ```
 
 从语法上看，`@` 后面几乎能跟各种表达式。表达式的结果最后会被调用。
