@@ -2,7 +2,7 @@
 comments: false
 ---
 
-# 基础
+# 基础知识
 
 !!! abstract
 

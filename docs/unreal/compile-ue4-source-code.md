@@ -1,23 +1,23 @@
-# 编译 UE4
+# 编译 UE4 源码
 
 !!! abstract
 
-    记录一下编译 UE4 的流程和遇到的坑。
+    记录一下编译 UE4 源码的流程和遇到的坑。
 
     - UE 源码版本：4.27.2。
     - IDE：Visual Studio 2022。
     - 操作系统：Windows 11。
 
-## IDE 和必要组件
+## IDE 和必要负载
 
 只装一个 VS2022 会有一些问题：
 
 - UE4 源码中 GitDependencies、MemoryProfiler2 项目用了 .NET Framework 4.5。这个太老了，从 VS2022 开始就不支持了，会弹警告。
 - 在编译 UE4 源码的时候，如果用了比 VS2019 高的版本，Output 窗口会打印警告。
 
-最好是额外安装一个 VS2019，勾选上 .NET Framework 4.5 和其他必要的组件。然后可以用 VS2019 也可以用 VS2022。VS2022 这时候也支持 .NET Framework 4.5 了，而且编译 UE4 的时候会自动使用 VS2019 的工具链。
+最好是额外安装一个 VS2019，勾选上 .NET Framework 4.5 和其他必要的负载。然后可以用 VS2019 也可以用 VS2022。VS2022 这时候也支持 .NET Framework 4.5 了，而且编译 UE4 的时候会自动使用 VS2019 的工具链。
 
-需要的组件：
+需要的负载：
 
 - .NET Framework 4.5（VS2022 没有）和 4.6.2。UE4 里大部分 C# 项目用的是 4.6.2，少数几个用的 4.5。
 - Windows 10 SDK (10.0.18362.0)。高版本可能会报错！[^1]
@@ -34,6 +34,8 @@
 ``` bash title="Git 命令"
 git clone -b 4.27 https://github.com/stalomeow/UnrealEngine.git "文件夹名称"
 ```
+
+至少要预留 150G 的磁盘空间，后面还要编译。
 
 ## 编译构建
 

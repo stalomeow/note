@@ -59,7 +59,7 @@ theme:
     - navigation.indexes
     - navigation.tracking
     - navigation.footer
-    - navigation.sections
+    # - navigation.sections
 
     - toc.follow
     # - toc.integrate
@@ -162,21 +162,19 @@ nav:
       - ACG 资源: website/acg.md
       - 学习资料（正经）: website/learning.md
       - 在线工具: website/online-tools.md
-  - 基础:
+  - 基础知识:
     - basic/index.md
-    - 数学:
-      - 高中数学:
-        - 三角恒等式: basic/high-school-math/trigonometric-function-identity.md
-        - 指数函数与其反函数的交点个数: basic/high-school-math/intersection-point-of-exp-and-its-inv.md
-      - 高等数学:
-        - 积分公式: basic/advanced-math/integral-formula.md
-        - 微分方程: basic/advanced-math/differential-equation.md
-      - 线性代数:
-        - 矩阵: basic/linear-algebra/matrix.md
-        - 行列式: basic/linear-algebra/determinant.md
-        - 四元数: basic/linear-algebra/quaternion.md
-    - 英语:
-      - 高中英语作文框架: basic/english/high-school-composition-framework.md
+    - 高中数学:
+      - 三角恒等式: basic/high-school-math/trigonometric-function-identity.md
+      - 指数函数与其反函数的交点个数: basic/high-school-math/intersection-point-of-exp-and-its-inv.md
+    - 高等数学:
+      - 积分公式: basic/advanced-math/integral-formula.md
+      - 微分方程: basic/advanced-math/differential-equation.md
+    - 线性代数:
+      - 矩阵: basic/linear-algebra/matrix.md
+      - 行列式: basic/linear-algebra/determinant.md
+      - 四元数: basic/linear-algebra/quaternion.md
+    - 高中英语作文框架: basic/english/high-school-composition-framework.md
   - 计算机科学:
     - cs/index.md
     - 编程语言:
@@ -197,106 +195,100 @@ nav:
         - 卸载 Python: cs/pl/python/uninstall.md
       - JS/TS:
         - 写一个简易 jQuery: cs/pl/js-ts/write-a-mini-jquery.md
+    - 数据结构与算法:
+      - cs/algorithm/index.md
+      - 数据结构:
+        - 数组相关: cs/algorithm/data-structure/array.md
+        - 链表相关: cs/algorithm/data-structure/linked-list.md
+        - 并查集: cs/algorithm/data-structure/disjoint-set.md
+      - 搜索:
+        - DFS: cs/algorithm/search/dfs.md
+        - BFS: cs/algorithm/search/bfs.md
+        - A*: cs/algorithm/search/a-star.md
+      - 字符串:
+        - KMP: cs/algorithm/string/kmp.md
+    - 计算机图形学:
+      - cs/cg/index.md
+      - Half Lambert 勘误: cs/cg/half-lambert-corrigenda.md
+      - 法线贴图压缩: cs/cg/normal-map-compression.md
+      - 颜色空间: cs/cg/color-space.md
+      - NPR: # Non-photorealistic rendering
+        - 卡通角色渲染: cs/cg/npr/character.md
+        - 仿星穹铁道的角色渲染: cs/cg/npr/hsr-character.md
+      - 逆向:
+        - 提取 WebGL Shaders: cs/cg/reverse/dump-webgl-shaders.md
+        - 反编译 DXBC: cs/cg/reverse/decompile-dxbc.md
+        - 用 RenderDoc 和模拟器抓帧安卓手游: cs/cg/reverse/renderdoc-capture-frame-in-emulator.md
+    - GAMES 课程: # GAMES: Graphics And Mixed Environment Symposium
+      - 101. 现代计算机图形学入门:
+        - cs/games-course/101/index.md
+        - Overview of Computer Graphics: cs/games-course/101/lecture-01.md
+        - Review of Linear Algebra: cs/games-course/101/lecture-02.md
+        - Transformation: cs/games-course/101/lecture-03.md
+        - Transformation Cont.: cs/games-course/101/lecture-04.md
+        - Rasterization 1 (Triangles): cs/games-course/101/lecture-05.md
+        - Rasterization 2 (Antialiasing and Z-Buffering): cs/games-course/101/lecture-06.md
+        - Shading 1 (Illumination, Shading and Graphics Pipeline): cs/games-course/101/lecture-07.md
+        - Shading 2 (Shading, Pipeline and Texture Mapping): cs/games-course/101/lecture-08.md
+        - Shading 3 (Texture Mapping Cont.): cs/games-course/101/lecture-09.md
+        - Geometry 1 (Introduction): cs/games-course/101/lecture-10.md
+        - Geometry 2 (Curves and Surfaces): cs/games-course/101/lecture-11.md
+        - Geometry 3: cs/games-course/101/lecture-12.md
+        - Ray Tracing 1: cs/games-course/101/lecture-13.md
+        - Ray Tracing 2: cs/games-course/101/lecture-14.md
+        - Ray Tracing 3: cs/games-course/101/lecture-15.md
+        - Ray Tracing 4: cs/games-course/101/lecture-16.md
+        - Materials and Appearances: cs/games-course/101/lecture-17.md
+        - Advanced Topics in Rendering: cs/games-course/101/lecture-18.md
+        - Cameras, Lenses and Light Fields: cs/games-course/101/lecture-19.md
+        - Color and Perception: cs/games-course/101/lecture-20.md
+        - Animation: cs/games-course/101/lecture-21.md
+        - Animation Cont.: cs/games-course/101/lecture-22.md
+      - 104. 现代游戏引擎:
+        - cs/games-course/104/index.md
+        - From Getting Started To Practice: cs/games-course/104/lecture-01.md
+        - Layered Architecture of Game Engine: cs/games-course/104/lecture-02.md
+        - How to Build a Game World: cs/games-course/104/lecture-03.md
+        - Rendering:
+          - Rendering on Game Engine: cs/games-course/104/lecture-04.md
+          - Lighting, Materials and Shaders: cs/games-course/104/lecture-05.md
+          - The Challenges and Fun of Rendering the Beautiful Mother Nature: cs/games-course/104/lecture-06.md
+          - Render Pipeline, Post-processing and Everything: cs/games-course/104/lecture-07.md
+        - Animation System:
+          - Basics of Animation Technology: cs/games-course/104/lecture-08.md
+          - Advanced Animation Technology: cs/games-course/104/lecture-09.md
+        - Physics System:
+          - Basic Concepts: cs/games-course/104/lecture-10.md
+          - Applications: cs/games-course/104/lecture-11.md
+        - Effects: cs/games-course/104/lecture-12.md
+        - Tool Chains:
+          - Basics: cs/games-course/104/lecture-13.md
+          - Applications & Advanced Topic: cs/games-course/104/lecture-14.md
+        - Gameplay Systems:
+          - Complexity and Building Blocks: cs/games-course/104/lecture-15.md
+          - Basic Artificial Intelligence: cs/games-course/104/lecture-16.md
+          - Advanced Artificial Intelligence: cs/games-course/104/lecture-17.md
+        - Online Gaming Architecture:
+          - Fundamentals: cs/games-course/104/lecture-18.md
+          - Advanced Topic: cs/games-course/104/lecture-19.md
+        - Data-Oriented Programming and Job System: cs/games-course/104/lecture-20.md
+        - Dynamic Global Illumination and Lumen: cs/games-course/104/lecture-21.md
+        - GPU Driven Geometry Pipeline - Nanite: cs/games-course/104/lecture-22.md
     - 命令行工具:
       - Aria2: cs/cmd-tool/aria2.md
       - Git: cs/cmd-tool/git.md
-    - 其他:
+    - Misc:
       - Unicode: cs/misc/unicode.md
-  - 数据结构与算法:
-    - algorithm/index.md
-    - 理论知识:
-      - 数据结构:
-        - 数组相关: algorithm/data-structure/array.md
-        - 链表相关: algorithm/data-structure/linked-list.md
-        - 并查集: algorithm/data-structure/disjoint-set.md
-      - 搜索:
-        - DFS: algorithm/search/dfs.md
-        - BFS: algorithm/search/bfs.md
-        - A*: algorithm/search/a-star.md
-      - 字符串:
-        - KMP: algorithm/string/kmp.md
-    - 题解:
-      - 洛谷:
-        - P5507 机关: algorithm/luogu/P5507.md
-      # - LeetCode:
-      #   - 
-  - 计算机图形学:
-    - cg/index.md
-    - Half Lambert 勘误: cg/half-lambert-corrigenda.md
-    - 法线贴图压缩: cg/normal-map-compression.md
-    - 颜色空间: cg/color-space.md
-    - NPR: # Non-photorealistic rendering
-      - 卡通角色渲染: cg/npr/character.md
-      - 仿星穹铁道的角色渲染: cg/npr/hsr-character.md
-    - 逆向:
-      - 提取 WebGL Shaders: cg/reverse/dump-webgl-shaders.md
-      - 反编译 DXBC: cg/reverse/decompile-dxbc.md
-      - 用 RenderDoc 和模拟器抓帧安卓手游: cg/reverse/renderdoc-capture-frame-in-emulator.md
-    - GAMES 课程: # GAMES: Graphics And Mixed Environment Symposium
-      - 现代计算机图形学入门 (101):
-        - cg/games-course/101/index.md
-        - Overview of Computer Graphics: cg/games-course/101/lecture-01.md
-        - Review of Linear Algebra: cg/games-course/101/lecture-02.md
-        - Transformation: cg/games-course/101/lecture-03.md
-        - Transformation Cont.: cg/games-course/101/lecture-04.md
-        - Rasterization 1 (Triangles): cg/games-course/101/lecture-05.md
-        - Rasterization 2 (Antialiasing and Z-Buffering): cg/games-course/101/lecture-06.md
-        - Shading 1 (Illumination, Shading and Graphics Pipeline): cg/games-course/101/lecture-07.md
-        - Shading 2 (Shading, Pipeline and Texture Mapping): cg/games-course/101/lecture-08.md
-        - Shading 3 (Texture Mapping Cont.): cg/games-course/101/lecture-09.md
-        - Geometry 1 (Introduction): cg/games-course/101/lecture-10.md
-        - Geometry 2 (Curves and Surfaces): cg/games-course/101/lecture-11.md
-        - Geometry 3: cg/games-course/101/lecture-12.md
-        - Ray Tracing 1: cg/games-course/101/lecture-13.md
-        - Ray Tracing 2: cg/games-course/101/lecture-14.md
-        - Ray Tracing 3: cg/games-course/101/lecture-15.md
-        - Ray Tracing 4: cg/games-course/101/lecture-16.md
-        - Materials and Appearances: cg/games-course/101/lecture-17.md
-        - Advanced Topics in Rendering: cg/games-course/101/lecture-18.md
-        - Cameras, Lenses and Light Fields: cg/games-course/101/lecture-19.md
-        - Color and Perception: cg/games-course/101/lecture-20.md
-        - Animation: cg/games-course/101/lecture-21.md
-        - Animation Cont.: cg/games-course/101/lecture-22.md
-      - 现代游戏引擎 (104):
-        - cg/games-course/104/index.md
-        - From Getting Started To Practice: cg/games-course/104/lecture-01.md
-        - Layered Architecture of Game Engine: cg/games-course/104/lecture-02.md
-        - How to Build a Game World: cg/games-course/104/lecture-03.md
-        - Rendering:
-          - Rendering on Game Engine: cg/games-course/104/lecture-04.md
-          - Lighting, Materials and Shaders: cg/games-course/104/lecture-05.md
-          - The Challenges and Fun of Rendering the Beautiful Mother Nature: cg/games-course/104/lecture-06.md
-          - Render Pipeline, Post-processing and Everything: cg/games-course/104/lecture-07.md
-        - Animation System:
-          - Basics of Animation Technology: cg/games-course/104/lecture-08.md
-          - Advanced Animation Technology: cg/games-course/104/lecture-09.md
-        - Physics System:
-          - Basic Concepts: cg/games-course/104/lecture-10.md
-          - Applications: cg/games-course/104/lecture-11.md
-        - Effects: cg/games-course/104/lecture-12.md
-        - Tool Chains:
-          - Basics: cg/games-course/104/lecture-13.md
-          - Applications & Advanced Topic: cg/games-course/104/lecture-14.md
-        - Gameplay Systems:
-          - Complexity and Building Blocks: cg/games-course/104/lecture-15.md
-          - Basic Artificial Intelligence: cg/games-course/104/lecture-16.md
-          - Advanced Artificial Intelligence: cg/games-course/104/lecture-17.md
-        - Online Gaming Architecture:
-          - Fundamentals: cg/games-course/104/lecture-18.md
-          - Advanced Topic: cg/games-course/104/lecture-19.md
-        - Data-Oriented Programming and Job System: cg/games-course/104/lecture-20.md
-        - Dynamic Global Illumination and Lumen: cg/games-course/104/lecture-21.md
-        - GPU Driven Geometry Pipeline - Nanite: cg/games-course/104/lecture-22.md
   - Unity 开发:
     - unity/index.md
-    - 编辑器开发:
-      - IL Post-Process: unity/editor/il-post-process.md
-      - 类似 Animation Window 的 Record 和 Preview 功能: unity/editor/animation-window-record-preview-impl.md
     - 图形开发:
       - 平滑模型法线: unity/graphics/smooth-model-normals.md
       - 强制让 SRP Batch 支持 Multipass Shader: unity/graphics/srp-batch-multipass-shader.md
       - Shader 相关:
         - Material Property Drawer: unity/graphics/shader/material-property-drawer.md
+    - 编辑器开发:
+      - IL Post-Process: unity/editor/il-post-process.md
+      - 类似 Animation Window 的 Record 和 Preview 功能: unity/editor/animation-window-record-preview-impl.md
     - 源码分析:
       - Unity UI:
         - TODO: unity/src-analysis/ugui/placeholder.md
@@ -305,10 +297,10 @@ nav:
     - 解决方案:
       - unity/troubleshooting/index.md
       - GetComponentInParent on PrefabAsset returns null: unity/troubleshooting/get-component-in-parent-on-prefab-asset-returns-null.md
-  - UE 开发:
+  - Unreal 开发:
     - unreal/index.md
-    - 编译 UE4: unreal/compile-ue4-source-code.md
-  - 杂项:
+    - 编译 UE4 源码: unreal/compile-ue4-source-code.md
+  - Misc:
     - misc/index.md
     - 面试相关: misc/interview.md
     - 网页中嵌入 b 站视频: misc/bilibili-iframe.md

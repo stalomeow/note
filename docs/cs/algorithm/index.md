@@ -6,5 +6,5 @@ comments: false
 
 !!! abstract
 
-    数据结构 + 算法，还有一些题解。
+    数据结构 + 算法。
 

@@ -2,7 +2,7 @@
 comments: false
 ---
 
-# 现代游戏引擎 (GAMES 104)
+# GAMES 104 现代游戏引擎
 
 !!! info "课程官方介绍"
 

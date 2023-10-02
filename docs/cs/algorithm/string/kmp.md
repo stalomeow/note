@@ -44,22 +44,24 @@ KMP 的核心是一个叫部分匹配表（Partial Match Table）的数组。以
 |Index|0|1|2|3|4|5|
 |Value|0|0|1|2|0|1|
 
-`#!python PMT[i]` 表示 `#!python p[:i+1]` 的最长相同前后缀的长度。`#!python PMT[0]` 一定是 `#!python 0`。
+`#!python PMT[i]` 表示 `#!python p[:i+1]` 的最长相同前后缀的长度。由前后缀的定义，容易知道 `#!python PMT[0]` 是 `#!python 0`。
 
-!!! note "字符串的前缀和后缀"
+??? note "字符串的前缀和后缀"
 
-    假设 `A`、`B`、`S` 均为字符串，且 `S` 非空。
+    假设 `A`、`B`、`S` 均为字符串，且 `A`、`S` 非空。
 
     - 若 `A = BS`，则 `B` 是 `A` 的前缀。
     - 若 `A = SB`，则 `B` 是 `A` 的后缀。
     - `A` 既不是自己的前缀，也不是自己的后缀。
 
-    最长相同前后缀：前缀集合和后缀集合的交集中，长度最长的元素。
+    最长相同前后缀：
 
-    以字符串 `#!python "abab"` 为例。
+    - 前缀集合和后缀集合的交集中，长度最长的元素。
 
-    - 前缀集合 `#!python { "a", "ab", "aba" }`。
-    - 后缀集合 `#!python { "bab", "ab", "b" }`。
+    以字符串 `#!python "abab"` 为例：
+
+    - 前缀集合 `#!python { "", "a", "ab", "aba" }`。
+    - 后缀集合 `#!python { "bab", "ab", "b", "" }`。
     - 最长相同前后缀 `#!python "ab"`。
 
 KMP 算法用了双指针。假设是在字符串 `s` 中匹配字符串 `p`，
@@ -75,9 +77,11 @@ KMP 算法用了双指针。假设是在字符串 `s` 中匹配字符串 `p`，
 |:-|:-|:-|:-|:-|:-|:-|
 |Index|0|1|2|3|4|5|
 |Value|0|0|1|2|0|1|
-|Next|-1|0|0|1|2|0|
+|Next|#|0|0|1|2|0|
 
 然后 `#!python j = PMT[j-1]` 改成 `#!python j = next[j]`。
+
+> `#!python next[0]` 是永远不会用到的，所以不需要管它的值。可以认为 `next` 的下标从 `#!python 1` 开始。
 
 ### 基础实现
 
@@ -117,9 +121,10 @@ int kmp(string& s, string& p)
 ``` cpp
 vector<int> getNext(string& p)
 {
-    // 保证 next[1] 是 0，next[0] 随便
-    // next 长度比 p 大 1
+    // * next 长度比 p 大 1
+    // * 保证 next[1] 是 0，next[0] 随便
     vector<int> next(p.size() + 1, 0);
+
     int j = 0;
 
     // i 从 1 开始
@@ -144,9 +149,10 @@ vector<int> getNext(string& p)
 ``` cpp
 vector<int> getNext(string& p)
 {
-    // 保证 next[1] 是 0，next[0] 随便
-    // next 长度比 p 大 1
+    // * next 长度比 p 大 1
+    // * 保证 next[1] 是 0，next[0] 随便
     vector<int> next(p.size() + 1, 0);
+
     int j = 0;
 
     // i 从 1 开始

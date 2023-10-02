@@ -1,29 +1,36 @@
 # Hello, World!
 
-!!! info "233"
+!!! abstract ""
 
-    <del>我从短暂的学习生涯当中学到一件事，学的东西越多，就越会发现人类的记忆能力是有极限的，除非超越人类。</del>
+    <p style="font-size:1.2rem;text-align:center;font-weight:bold;">
+    TECH OTAKUS<br>
+    SAVE<br>
+    THE WORLD
+    </p>
 
 ## 简介
 
-嗨~ 欢迎访问我的笔记本 ο(=•ω＜=)ρ⌒☆。
+嗨~♪ 欢迎来看我的笔记 ο(=•ω＜=)ρ⌒☆。
 
-我就读于 XDU，开学大二，CS 专业。
+---
+
+我目前就读于 XDU，大二，CS 专业，做游戏开发。计算机专业需要学习的东西比较多，有些时间久了容易忘记，所以我搭建了这个网站用来记笔记。网站使用 MkDocs 框架 + Material 主题制作，部署在 Vercel 上。按照我的习惯，对 Material 主题进行了一些定制。
 
 ## 勘误
 
-如果发现错误，你可以 <small>（二选一）</small>
+如果发现错误，可以 <small>（二选一）</small>
 
 - 直接在评论区中指出。
-- 点击笔记标题旁的铅笔图标，fork GitHub 仓库后修改源文件，最后提交 PR。
+- 点击笔记标题旁的铅笔图标，Fork GitHub 仓库后修改源文件，最后提交 PR。
 
 谢谢大佬 :kissing_heart:
 
 ## 投喂
 
-!!! abstract ""
+写笔记和维护网站需要消耗不少的时间和精力，所以如果本站对你有帮助的话... :pleading_face:
+
+??? abstract "赞赏码"
 
     <figure markdown>
         ![sponsor](assets/images/sponsor.jpg){ width="300px" }
-        <figcaption>如果本站对你有所帮助的话... 也不是不可以... :pleading_face:</figcaption>
     </figure>
