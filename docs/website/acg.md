@@ -15,4 +15,4 @@
 - [AGE 动漫](https://www.agemys.org/){ target="_blank" }
     - [网址发布页](https://github.com/agefanscom/website){ target="_blank" }
 - [禁漫天堂](https://18comic.vip/){ target="_blank" }
-- [模之屋（随便分的类）](https://www.aplaybox.com/){ target="_blank" }
+- [模之屋](https://www.aplaybox.com/){ target="_blank" }
