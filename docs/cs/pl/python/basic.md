@@ -194,4 +194,34 @@ decorators: ('@' named_expression NEWLINE )+
         func4 = (A()+B())(func4)
         ```
 
+??? tip "使用 functools.wraps()"
+
+    使用 `functools.wraps()` 可以保留被装饰函数的信息。
+
+    ``` python
+    from functools import wraps
+
+    def my_decorator(f):
+        @wraps(f)
+        def wrapper(*args, **kwargs):
+            print('Calling decorated function')
+            return f(*args, **kwargs)
+        return wrapper
+
+    @my_decorator
+    def example():
+        """Docstring"""
+        print('Called example function')
+    ```
+
+    - `#!python example.__name__`: `#!python 'example'`。
+    - `#!python example.__doc__`: `#!python 'Docstring'`。
+
+    不用 `functools.wraps()` 的话，
+
+    - `#!python example.__name__`: `#!python 'wrapper'`。
+    - `#!python example.__doc__`: `#!python ''`。
+
+    这篇文章深入地介绍了原理：[Python functools.wraps 深入理解 - 知乎](https://zhuanlan.zhihu.com/p/45535784)。
+
 [^1]: [threading --- 基于线程的并行 — Python 3.11.5 文档](https://docs.python.org/zh-cn/3/library/threading.html#thread-objects)
