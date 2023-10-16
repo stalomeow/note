@@ -192,9 +192,12 @@ nav:
         - Python 基础: cs/pl/python/basic.md
         - 执行一个模块: cs/pl/python/run-a-module.md
         - 多版本和虚拟环境: cs/pl/python/multi-versions-and-venv.md
+        - 生成 requirements.txt: cs/pl/python/generate-requirements.md
         - 卸载 Python: cs/pl/python/uninstall.md
       - JS/TS:
         - 写一个简易 jQuery: cs/pl/js-ts/write-a-mini-jquery.md
+      - Go:
+        - Go 基础: cs/pl/go/basic.md
     - 数据结构与算法:
       - cs/algorithm/index.md
       - 数据结构:

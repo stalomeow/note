@@ -43,7 +43,7 @@ def generate_toc(page: Page):
     markdowns = ['\n## Table of Contents { data-search-exclude }\n']
 
     if isServeMode:
-        markdowns.append('- TOC is disabled in serve mode in order to improve performance.\n')
+        markdowns.append('- 本地模式不生成 TOC\n')
     else:
         iterStack = [iter(page.parent.children)]
 

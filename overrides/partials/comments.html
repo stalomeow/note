@@ -9,7 +9,7 @@
 
       function getTheme() {
         const scheme = observedElement.style.getPropertyValue('color-scheme');
-        return (scheme === 'dark') ? 'noborder_dark' : 'light';
+        return (scheme === 'dark') ? 'transparent_dark' : 'light';
       }
 
       function updateTheme() {
@@ -29,8 +29,8 @@
       }
 
       if (__md_scope.hostname === '127.0.0.1') {
-        console.warn('Comments are disabled in developing mode.');
-        comments.insertAdjacentHTML('afterend', '<p align="center" style="color:red;">Comments are disabled in developing mode.</p>');
+        console.warn('本地模式下不加载评论');
+        comments.insertAdjacentHTML('afterend', '<p align="center" style="color:red;">本地模式下不加载评论</p>');
       } else {
         // Set palette on initial load
         comments.insertAdjacentElement('afterend', createElement('script', {
