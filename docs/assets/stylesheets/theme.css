@@ -1,8 +1,8 @@
 /* Theme */
 
 :root {
-    --md-text-font: 'HarmonyOS Sans', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
-    --md-code-font: 'JetBrains Mono', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+    --md-text-font: 'LXGW WenKai Screen', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+    --md-code-font: 'JetBrains Mono', 'LXGW WenKai Screen', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
     color-scheme: light dark; /* default value */
 }
 

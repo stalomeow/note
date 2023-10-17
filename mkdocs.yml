@@ -16,7 +16,7 @@ theme:
   favicon: assets/images/favicon.ico
 
   font:
-    text: HarmonyOS Sans
+    text: LXGW WenKai Screen
     code: JetBrains Mono
 
   icon:
@@ -86,7 +86,8 @@ extra:
 
 
 extra_css:
-  - assets/stylesheets/fonts.css
+  - assets/webfonts/JetBrains Mono/font.css
+  - assets/webfonts/LXGW WenKai Screen/font.css
   - assets/stylesheets/theme.css
 
 

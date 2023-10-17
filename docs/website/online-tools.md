@@ -34,6 +34,7 @@
 - [Can I use...?（用于判断 HTML、CSS 的兼容性）](https://caniuse.com/){ target="_blank" }
 - [三阶贝塞尔预览](https://cubic-bezier.com/){ target="_blank" }
 - [缓动函数速查表](https://easings.net/zh-cn){ target="_blank" }
+- [中文网页字体分片工具](https://font.daidr.me/){ target="_blank" }
 
 ## 逆向
 
