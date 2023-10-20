@@ -127,6 +127,11 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 
 plugins:
@@ -175,6 +180,8 @@ nav:
       - 矩阵: basic/linear-algebra/matrix.md
       - 行列式: basic/linear-algebra/determinant.md
       - 四元数: basic/linear-algebra/quaternion.md
+    - 概率论与数理统计:
+      - 随机变量及其概率分布: basic/probability-statistics/random-var-and-prob-distribution.md
     - 高中英语作文框架: basic/english/high-school-composition-framework.md
   - 计算机科学:
     - cs/index.md
@@ -201,10 +208,12 @@ nav:
         - Go 基础: cs/pl/go/basic.md
     - 数据结构与算法:
       - cs/algorithm/index.md
+      - 注意事项: cs/algorithm/notice.md
       - 数据结构:
         - 数组相关: cs/algorithm/data-structure/array.md
         - 链表相关: cs/algorithm/data-structure/linked-list.md
         - 并查集: cs/algorithm/data-structure/disjoint-set.md
+        - 二叉树: cs/algorithm/data-structure/binary-tree.md
       - 搜索:
         - DFS: cs/algorithm/search/dfs.md
         - BFS: cs/algorithm/search/bfs.md
