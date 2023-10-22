@@ -194,6 +194,7 @@ nav:
         - 弱引用: cs/pl/csharp/weak-references.md
         - 模式匹配: cs/pl/csharp/pattern-matching.md
         - GC.KeepAlive: cs/pl/csharp/gc-keep-alive.md
+        - Delegate Marshalling: cs/pl/csharp/delegate-marshalling.md
         # do not forget Metalama
         - Source Generator: cs/pl/csharp/source-generator.md
       - Python:
@@ -307,6 +308,8 @@ nav:
         - TODO: unity/src-analysis/ugui/placeholder.md
       - Universal RP:
         - TODO: unity/src-analysis/urp/placeholder.md
+    - 技术分析:
+      - Full Generic Sharing: unity/tech-analysis/full-generic-sharing.md
     - 解决方案:
       - unity/troubleshooting/index.md
       - GetComponentInParent on PrefabAsset returns null: unity/troubleshooting/get-component-in-parent-on-prefab-asset-returns-null.md
