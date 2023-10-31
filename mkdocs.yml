@@ -195,8 +195,6 @@ nav:
         - 模式匹配: cs/pl/csharp/pattern-matching.md
         - GC.KeepAlive: cs/pl/csharp/gc-keep-alive.md
         - Delegate Marshalling: cs/pl/csharp/delegate-marshalling.md
-        # do not forget Metalama
-        - Source Generator: cs/pl/csharp/source-generator.md
       - Python:
         - Python 基础: cs/pl/python/basic.md
         - 执行一个模块: cs/pl/python/run-a-module.md

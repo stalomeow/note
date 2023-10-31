@@ -14,15 +14,15 @@
 
 TODO
 
-## UnmanagedCallersOnly
+## Unmanaged Callers Only
 
 使这个静态方法只能被非托管代码调用。取地址以后直接拿到一个非托管函数指针。
 
-## UnmanagedFunctionPointer
+## Unmanaged Function Pointer
 
 - Unity AOT 下，会为被标记的委托类型生成专门的 delegatePInvokeWrapperFunction（一个托管方法，在里面调用被包装的非托管函数指针），用于 Marshal.GetDelegateForFunctionPointer。
 
-## MonoPInvokeCallback
+## Mono PInvoke Callback
 
 - AOT 模式下使用。
 - 只能静态方法。
@@ -32,11 +32,11 @@ TODO
 - 生成的桥接函数的代码不依赖 MonoPInvokeCallback 参数里的委托。
 - 生成的函数以 ReversePInvokeWrapper 开头。
 
-## GetFunctionPointerForDelegate
+## Get Function Pointer For Delegate
 
 - JIT 下，生成的桥接函数的代码依赖于参数里的委托，静态方法和实例方法都支持。之后需要保证该委托不被 GC 回收。使用 `GCHandle.Alloc(object)` 创建一个该委托的 Normal GCHandle 就能防止它被 GC。
 - Unity AOT 下，依赖 MonoPInvokeCallback 生成的代码。只能用于静态方法。不依赖参数里的委托。委托被 GC 了也没关系。
 
-## GetDelegateForFunctionPointer
+## Get Delegate For Function Pointer
 
 - Unity AOT 下，委托类型上需要有 UnmanagedFunctionPointer。这样才会提前生成 delegatePInvokeWrapperFunction。
