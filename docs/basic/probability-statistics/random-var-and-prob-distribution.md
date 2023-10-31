@@ -18,7 +18,7 @@ $$
 F \left(x \right) = P \left(X \le x \right),\ x \in \mathbb{R}
 $$
 
-为随机变量 $X$ 的分布函数。
+为随机变量 $X$ 的分布函数 (distribution function)。
 
 - $0 \le F \left(x \right) \le 1 \ (x \in \mathbb{R})$，且 $F \left(-\infty \right) = 0$，$F \left(+\infty \right) = 1$。
 
@@ -36,7 +36,7 @@ $$
 
 ## 离散型随机变量
 
-设 $X$ 是随机变量，如果其可能的取值为有限个或可列无限多个，则称 $X$ 为离散型随机变量。
+设 $X$ 是随机变量，如果其可能的取值为有限个或可列无限多个，则称 $X$ 为离散型随机变量 (discrete random variable)。
 
 ### 分布律
 
@@ -46,7 +46,7 @@ $$
 P \left(X=x_i \right) = p_i \ , \  i=1,2, \cdots
 $$
 
-为 $X$ 的分布律，或表示为
+为 $X$ 的分布律 (probability mass function)，或表示为
 
 |$X$|$x_1$|$x_2$|$\cdots$|$x_i$|$\cdots$|
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -112,7 +112,7 @@ $$
 P \left(X=k \right) = C_{n}^{k} p^k \left(1-p \right)^{n-k} \ , \ k=0,1,2, \cdots, n
 $$
 
-则称 $X$ 服从参数为 $n$、$p$ 的二项分布，记为 $X \sim B \left(n, p \right)$。
+则称 $X$ 服从参数为 $n$、$p$ 的二项分布 (binomial distribution)，记为 $X \sim B \left(n, p \right)$。
 
 #### Poisson 定理
 
@@ -132,7 +132,7 @@ $$
 P\left(X=k \right)=\frac{\lambda^k}{k!} e^{-\lambda} \ , \ \lambda>0 \ , \ k=0,1,2,\cdots
 $$
 
-则称 $X$ 服从参数为 $\lambda$ 的 Poisson 分布，记为 $X \sim P \left(\lambda \right)$。
+则称 $X$ 服从参数为 $\lambda$ 的泊松分布 (Poisson distribution)，记为 $X \sim P \left(\lambda \right)$。
 
 ### 几何分布
 
@@ -142,7 +142,7 @@ $$
 P\left(X=k \right)=\left(1-p \right)^{k-1}p \ , \ k=0,1,2,\cdots \ , \ 0<p<1
 $$
 
-则称 $X$ 服从参数为 $p$ 的几何分布。
+则称 $X$ 服从参数为 $p$ 的几何分布 (geometric distribution)。
 
 !!! example
 
@@ -156,7 +156,7 @@ $$
 P\left(X=k \right)=\frac{C_M^k C_{N-M}^{n-k}}{C_N^n} \ , \ k=0,1,2,\cdots, \min\{M, n\}
 $$
 
-称 $X$ 服从参数为 $N$、$M$、$n$ 的超几何分布。
+称 $X$ 服从参数为 $N$、$M$、$n$ 的超几何分布 (hypergeometric distribution)。
 
 ---
 
@@ -178,7 +178,7 @@ $$
 F\left(x \right)=\int_{-\infty}^{x} f\left(t \right) \mathrm{d}t \ , \ -\infty<x<+\infty
 $$
 
-则称 $X$ 为连续型随机变量，称 $f\left(x \right)$ 为 $X$ 的概率密度函数，简称概率密度。
+则称 $X$ 为连续型随机变量 (continuous random variable)，称 $f\left(x \right)$ 为 $X$ 的概率密度函数 (probability density function)，简称概率密度。
 
 - $f\left(x \right) \ge 0 \ \left(-\infty<x<+\infty \right)$。
 
@@ -221,7 +221,7 @@ f\left(x \right)=\begin{cases}
 \end{cases}
 $$
 
-则称 $X$ 在区间 $\left(a,b \right)$ 上服从均匀分布，记为 $X \sim U \left(a,b \right)$。
+则称 $X$ 在区间 $\left(a,b \right)$ 上服从均匀分布 (uniform distribution)，记为 $X \sim U \left(a,b \right)$。
 
 分布函数为
 
@@ -245,7 +245,7 @@ $$
 f\left(x \right)=\frac{1}{\sqrt{2\pi}\sigma} e^{-\tfrac{\left(x-\mu \right)^2}{2\sigma^2}} \ , \ -\infty<x<+\infty
 $$
 
-其中 $\mu$、$\sigma \ \left(\sigma > 0 \right)$ 为常数，则称 $X$ 服从参数为 $\mu$、$\sigma^2$ 的正态分布或 Gauss 分布，记为 $X \sim N(\mu, \sigma^2)$。
+其中 $\mu$、$\sigma \ \left(\sigma > 0 \right)$ 为常数，则称 $X$ 服从参数为 $\mu$、$\sigma^2$ 的正态分布 (normal distribution) 或 Gauss 分布 (Gauss distribution)，记为 $X \sim N(\mu, \sigma^2)$。
 
 - $f\left(x \right)$ 关于 $x=\mu$ 对称，在  $x=\mu$ 处取得最大值 $f\left(\mu \right)=\dfrac{1}{\sqrt{2\pi}\sigma}$。
 - $\mu$ 为位置参数。改变 $\mu$，函数图像将沿 $x$ 轴平移。
@@ -262,7 +262,7 @@ $$
 
 #### 标准正态分布
 
-设 $X \sim N(\mu, \sigma^2)$，若 $\mu=0$，$\sigma^2=1$，则称 $X$ 服从标准正态分布，记为 $X \sim N(0, 1)$。
+设 $X \sim N(\mu, \sigma^2)$，若 $\mu=0$，$\sigma^2=1$，则称 $X$ 服从标准正态分布 (standard normal distribution)，记为 $X \sim N(0, 1)$。
 
 概率密度为
 
@@ -285,6 +285,8 @@ $$
 设 $X \sim N(\mu, \sigma^2)$，
 
 - $Z=\dfrac{X-\mu}{\sigma} \sim N(0,1)$。$Z$ 为 $X$ 的标准化。
+
+- $Y=aX+b \sim N(a\mu+b, (a\sigma)^2) \ \left(a \ne 0\right)$。线性变换后正态性不变。
 
 - $F\left(x \right) = \Phi\left(\dfrac{x-\mu}{\sigma} \right)$。
 
@@ -355,8 +357,10 @@ $$
 $Y=g\left(X \right)$ 的分布函数为
 
 $$
-F_Y \left(y \right) = P \left(Y \le y \right) = P \left(g \left(X \right) \le y \right)=\int_{g\left(x \right) \le y} f_X \left(x \right) \mathrm{d}x
+F_Y \left(y \right) = P \left(Y \le y \right) = P \left(g \left(X \right) \le y \right)=\int_{g\left(x \right) \le y} f_X \left(t \right) \mathrm{d}t
 $$
+
+> 上式表示，在使得 $g\left(x \right) \le y$ 的 $x$ 的区间上积分。
 
 从而 $Y$ 的概率密度为
 
