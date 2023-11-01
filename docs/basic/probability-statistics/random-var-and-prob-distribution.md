@@ -80,7 +80,8 @@ $$
 
 $$
 \begin{align}
-p_i = P \left(X=x_i \right) &= F \left(x_i + 0 \right) - F \left(x_i - 0 \right) \\\\
+p_i &= P \left(X=x_i \right) \\\\
+&= F \left(x_i + 0 \right) - F \left(x_i - 0 \right) \\\\
 &= F \left(x_i \right) - F \left(x_i - 0 \right)
 \end{align}
 $$
@@ -93,13 +94,17 @@ $$
 P \left(X=k \right) = p^k \left(1-p \right)^{1-k} \ , \ 0<p<1 \ , \ k=0,1
 $$
 
-则称 $X$ 服从参数为 $p$ 的 $0-1$ 分布或两点分布，记为 $X \sim B \left(1, p \right)$。
+则称 $X$ 服从参数为 $p$ 的 $0-1$ 分布、两点分布 (two-point distribution) 或伯努利分布 (Bernoulli distribution)，记为 $X \sim Bernoulli \left(p \right)$ 或 $X \sim B \left(1, p \right)$。
 
 分布律也可以写成
 
 |$X$|$0$|$1$|
 |:-:|:-:|:-:|
 |$P$|$1-p$|$p$|
+
+!!! question "国内外的说法似乎不统一"
+
+    英文维基百科上说，这种分布叫伯努利分布，是两点分布的特例。两点分布不要求 $X$ 只取 $0$ 和 $1$ 两个值。
 
 ### 二项分布
 
@@ -134,6 +139,12 @@ $$
 
 则称 $X$ 服从参数为 $\lambda$ 的泊松分布 (Poisson distribution)，记为 $X \sim P \left(\lambda \right)$。
 
+!!! example
+
+    适合描述一定时间内随机事件发生的次数 $X$。
+
+    如某一服务设施在一定时间内受到的服务请求的次数。
+
 ### 几何分布
 
 若离散型随机变量 $X$ 的分布律为
@@ -146,7 +157,9 @@ $$
 
 !!! example
 
-    某射手对一目标连续进行独立射击，命中率为 $p$，射击直到命中目标为止。射击次数 $X$ 就服从参数为 $p$ 的几何分布。
+    Bernoulli 试验中，得到一次成功所需要的试验次数 $X$。
+
+    如某射手对一目标连续进行独立射击，命中率为 $p$，射击直到命中目标为止。射击次数 $X$ 就服从参数为 $p$ 的几何分布。
 
 ### 超几何分布
 
@@ -166,7 +179,7 @@ $$
 \lim_{N \to \infty} P\left(X=k \right) = C_{n}^{k} p^k \left(1-p \right)^{n-k}
 $$
 
-- 当 $n$ 相对 $N$ 较小，如 $\dfrac{n}{N}$ 不超过 $5%$ 时，超几何分布可用二项分布近似计算。
+- 当 $n$ 相对 $N$ 较小，如 $\dfrac{n}{N}$ 不超过 $5\%$ 时，超几何分布可用二项分布近似计算。
 
 - 超几何分布的背景是不放回抽样。二项分布的背景是放回抽样。当 $N$ 很大时，不放回抽样近似于放回抽样。
 
@@ -221,7 +234,7 @@ f\left(x \right)=\begin{cases}
 \end{cases}
 $$
 
-则称 $X$ 在区间 $\left(a,b \right)$ 上服从均匀分布 (uniform distribution)，记为 $X \sim U \left(a,b \right)$。
+则称 $X$ 在区间 $\left(a,b \right)$ 上服从均匀分布 (continuous uniform distribution)，记为 $X \sim U \left(a,b \right)$。
 
 分布函数为
 
@@ -245,7 +258,7 @@ $$
 f\left(x \right)=\frac{1}{\sqrt{2\pi}\sigma} e^{-\tfrac{\left(x-\mu \right)^2}{2\sigma^2}} \ , \ -\infty<x<+\infty
 $$
 
-其中 $\mu$、$\sigma \ \left(\sigma > 0 \right)$ 为常数，则称 $X$ 服从参数为 $\mu$、$\sigma^2$ 的正态分布 (normal distribution) 或 Gauss 分布 (Gauss distribution)，记为 $X \sim N(\mu, \sigma^2)$。
+其中 $\mu$、$\sigma \ \left(\sigma > 0 \right)$ 为常数，则称 $X$ 服从参数为 $\mu$、$\sigma^2$ 的正态分布 (normal distribution) 或高斯分布 (Gaussian distribution)，记为 $X \sim N(\mu, \sigma^2)$。
 
 - $f\left(x \right)$ 关于 $x=\mu$ 对称，在  $x=\mu$ 处取得最大值 $f\left(\mu \right)=\dfrac{1}{\sqrt{2\pi}\sigma}$。
 - $\mu$ 为位置参数。改变 $\mu$，函数图像将沿 $x$ 轴平移。
@@ -286,7 +299,7 @@ $$
 
 - $Z=\dfrac{X-\mu}{\sigma} \sim N(0,1)$。$Z$ 为 $X$ 的标准化。
 
-- $Y=aX+b \sim N(a\mu+b, (a\sigma)^2) \ \left(a \ne 0\right)$。线性变换后正态性不变。
+- $Y=aX+b \sim N(a\mu+b, (a\sigma)^2)$，$\left(a \ne 0\right)$。线性变换后正态性不变。
 
 - $F\left(x \right) = \Phi\left(\dfrac{x-\mu}{\sigma} \right)$。
 
@@ -302,6 +315,14 @@ P\left(x_1 < X \le x_2 \right) = \Phi\left(\dfrac{x_2-\mu}{\sigma} \right) - \Ph
 
 ### 卡方分布
 
+若 $k$ 个随机变量 $Z_1,\cdots,Z_k$ 相互独立且服从标准正态分布，则
+
+$$
+X = \sum_{i=1}^k Z_i^2
+$$
+
+服从自由度为 $k$ 的卡方分布 (chi-squared distribution)，记为 $X \sim \chi^2(k)$。
+
 ### 指数分布
 
 若连续型随机变量 $X$ 的概率密度为
@@ -313,7 +334,7 @@ f\left(x \right)=\begin{cases}
 \end{cases}
 $$
 
-其中 $\lambda>0$ 为常数，则称 $X$ 服从参数为 $\lambda$ 的指数分布 (exponential distribution)，记为 $X∼E(\lambda)$。
+其中 $\lambda>0$ 为常数，则称 $X$ 服从参数为 $\lambda$ 的指数分布 (exponential distribution)，记为 $X \sim E(\lambda)$。
 
 分布函数为
 
@@ -329,6 +350,12 @@ $$
 $$
 P\left(X>s+t \mid X>s \right)=P(X>t)
 $$
+
+!!! example
+
+    可以用来表示独立随机事件发生的时间间隔 $X$。
+
+    如旅客进入机场的时间间隔。
 
 ## 随机变量函数
 
