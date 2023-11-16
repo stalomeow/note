@@ -23,13 +23,11 @@
 - 直接在评论区中指出。
 - 点击笔记标题旁的铅笔图标，Fork GitHub 仓库后修改源文件，最后提交 PR。
 
-谢谢大佬 :kissing_heart:
+## 打赏
 
-## 投喂
+:sparkling_heart: 如果本站对你有帮助的话...
 
-写笔记和维护网站需要消耗不少的时间和精力，所以如果本站对你有帮助的话... :pleading_face:
-
-??? abstract "赞赏码"
+??? tip "Sponsor Me"
 
     <figure markdown>
         ![sponsor](assets/images/sponsor.jpg){ width="300px" }
