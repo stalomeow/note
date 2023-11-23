@@ -193,6 +193,8 @@ int kmp(string& s, string& p)
 }
 ```
 
+## 优化 next 数组
+
 ## 找重复子字符串
 
 ??? question

@@ -155,6 +155,8 @@ plugins:
       match_path: '^(?!.*(\/|\\)index\.md$)(?!index\.md$).*$' # 去除 **/index.md
       date_from_meta:
           default_timezone: Asia/Shanghai
+  - glightbox:
+      auto_caption: true
 
 
 hooks:
@@ -184,6 +186,7 @@ nav:
       - 四元数: basic/linear-algebra/quaternion.md
     - 概率论与数理统计:
       - 随机变量及其概率分布: basic/probability-statistics/random-var-and-prob-distribution.md
+      - 随机变量的数字特征: basic/probability-statistics/numerical-characteristics-of-random-var.md
     - 高中英语作文框架: basic/english/high-school-composition-framework.md
   - 计算机科学:
     - cs/index.md
@@ -208,19 +211,23 @@ nav:
       - Go:
         - Go 基础: cs/pl/go/basic.md
     - 数据结构与算法:
-      - cs/algorithm/index.md
-      - 注意事项: cs/algorithm/notice.md
-      - 数据结构:
-        - 数组相关: cs/algorithm/data-structure/array.md
-        - 链表相关: cs/algorithm/data-structure/linked-list.md
-        - 并查集: cs/algorithm/data-structure/disjoint-set.md
-        - 二叉树: cs/algorithm/data-structure/binary-tree.md
+      - cs/ds-and-algorithm/index.md
+      - 数组: cs/ds-and-algorithm/array.md
+      - 链表: cs/ds-and-algorithm/linked-list.md
+      - 树:
+        - 树相关概念: cs/ds-and-algorithm/tree/tree-concept.md
+        - 二叉树遍历: cs/ds-and-algorithm/tree/binary-tree-traversal.md
+        - 完全二叉树: cs/ds-and-algorithm/tree/complete-binary-tree.md
+        - 从遍历序列构建二叉树: cs/ds-and-algorithm/tree/construct-binary-tree-from-traversal.md
+        - 二叉搜索树: cs/ds-and-algorithm/tree/binary-search-tree.md
+        - 并查集: cs/ds-and-algorithm/tree/disjoint-set.md
       - 搜索:
-        - DFS: cs/algorithm/search/dfs.md
-        - BFS: cs/algorithm/search/bfs.md
-        - A*: cs/algorithm/search/a-star.md
+        - DFS: cs/ds-and-algorithm/search/dfs.md
+        - BFS: cs/ds-and-algorithm/search/bfs.md
+        - A*: cs/ds-and-algorithm/search/a-star.md
       - 字符串:
-        - KMP: cs/algorithm/string/kmp.md
+        - KMP: cs/ds-and-algorithm/string/kmp.md
+      - 杂项: cs/ds-and-algorithm/misc.md
     - 计算机图形学:
       - cs/cg/index.md
       - Half Lambert 勘误: cs/cg/half-lambert-corrigenda.md

@@ -45,4 +45,4 @@
 ## 其他
 
 - [Emoji 大全](https://www.emojiall.com/zh-hans){ target="_blank" }
-- [百度网盘在线加速下载](https://api.94speed.com/web/){ target="_blank" }
+- [Wayback Machine（网站时光机）](http://web.archive.org/){ target="_blank" }

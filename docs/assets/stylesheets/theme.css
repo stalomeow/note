@@ -137,3 +137,10 @@ html,
 body {
     scroll-behavior: smooth;
 }
+
+/* Lightbox */
+
+.glightbox {
+    display: flex;
+    justify-content: center;
+}

@@ -25,7 +25,7 @@
 
 ## 打赏
 
-:sparkling_heart: 如果本站对你有帮助的话...
+如果本站对你有帮助的话...
 
 ??? tip "Sponsor Me"
 
