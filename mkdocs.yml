@@ -224,6 +224,7 @@ nav:
       - 搜索:
         - DFS: cs/ds-and-algorithm/search/dfs.md
         - BFS: cs/ds-and-algorithm/search/bfs.md
+        - 回溯法: cs/ds-and-algorithm/search/backtracking.md
         - A*: cs/ds-and-algorithm/search/a-star.md
       - 字符串:
         - KMP: cs/ds-and-algorithm/string/kmp.md
