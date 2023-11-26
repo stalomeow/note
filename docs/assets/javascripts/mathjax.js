@@ -1,6 +1,6 @@
 window.MathJax = {
     loader: {
-        load: ['[tex]/boldsymbol']
+        load: ['[tex]/boldsymbol', 'ui/lazy']
     },
     tex: {
         inlineMath: [['\\(', '\\)']],
