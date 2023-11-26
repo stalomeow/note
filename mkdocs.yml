@@ -57,7 +57,7 @@ theme:
     - navigation.tabs
     - navigation.top
     - navigation.indexes
-    - navigation.tracking
+    # - navigation.tracking
     - navigation.footer
     # - navigation.sections
 
