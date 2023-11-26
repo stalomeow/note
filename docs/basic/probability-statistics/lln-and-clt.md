@@ -18,6 +18,11 @@ $$
 P \left ( \left | X-EX \right | < \varepsilon \right ) \ge 1 - \frac{DX}{\varepsilon^2}
 $$
 
+!!! warning
+
+    - 如果 $X$ 是离散型随机变量，注意 $P$ 括号里的不等号，必须是 $\ge$ 或 $<$。
+    - 这个估计比较粗糙。在估计一些值的上下界时，尽量用下面的中心极限定理。
+
 ## Law of large numbers（LLN、大数定律）
 
 随机变量的前若干项的算术平均值，在某种条件下，收敛到这些项的均值的算术平均值。
