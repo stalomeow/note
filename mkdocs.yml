@@ -300,6 +300,8 @@ nav:
     - 命令行工具:
       - Aria2: cs/cmd-tool/aria2.md
       - Git: cs/cmd-tool/git.md
+    - 腾讯游戏客户端公开课:
+      - 简历制作 & 面试辅导: cs/tencent-game-client-course/interview-resume.md
     - Misc:
       - Unicode: cs/misc/unicode.md
   - Unity 开发:
