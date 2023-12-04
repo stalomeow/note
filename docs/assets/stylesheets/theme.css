@@ -41,8 +41,19 @@
     overflow: hidden !important;
 }
 
-[data-md-color-scheme=slate] .md-typeset table:not([class]) tbody tr:hover {
+.md-typeset table:not([class]) tbody tr:hover {
+    background-color: inherit !important;
+    box-shadow: none !important;
+}
+
+.md-typeset table:not([class]) tbody tr td:hover {
+    background-color: var(--md-typeset-table-color--light);
+    box-shadow: 0 .05rem 0 var(--md-default-bg-color) inset;
+}
+
+[data-md-color-scheme=slate] .md-typeset table:not([class]) tbody tr td:hover {
     background-color: #232323;
+    box-shadow: 0 .05rem 0 var(--md-default-bg-color) inset;
 }
 
 /* Heading  */
