@@ -222,6 +222,7 @@ nav:
         - 从遍历序列构建二叉树: cs/ds-and-algorithm/tree/construct-binary-tree-from-traversal.md
         - 二叉搜索树: cs/ds-and-algorithm/tree/binary-search-tree.md
         - 并查集: cs/ds-and-algorithm/tree/disjoint-set.md
+        - Huffman 树: cs/ds-and-algorithm/tree/huffman-tree.md
       - 搜索:
         - DFS: cs/ds-and-algorithm/search/dfs.md
         - BFS: cs/ds-and-algorithm/search/bfs.md
