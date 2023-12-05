@@ -9,6 +9,4 @@ search:
 
     笔记中所有的标签。
 
-<div no-header-counter markdown>
 [TAGS]
-</div>

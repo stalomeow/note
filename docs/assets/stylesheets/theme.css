@@ -58,55 +58,55 @@
 
 /* Heading  */
 
-.md-typeset :not([no-header-counter]) h1:not(#__comments) {
+.md-typeset h1:not(#__comments) {
     counter-reset: h2;
 }
 
-.md-typeset :not([no-header-counter]) h2:not(#__comments) {
+.md-typeset h2:not(#__comments) {
     counter-reset: h3;
 }
 
-.md-typeset :not([no-header-counter]) h3:not(#__comments) {
+.md-typeset h3:not(#__comments) {
     counter-reset: h4;
 }
 
-.md-typeset :not([no-header-counter]) h4:not(#__comments) {
+.md-typeset h4:not(#__comments) {
     counter-reset: h5;
 }
 
-.md-typeset :not([no-header-counter]) h5:not(#__comments) {
+.md-typeset h5:not(#__comments) {
     counter-reset: h6;
 }
 
-.md-typeset :not([no-header-counter]) h2:not(#__comments)::before {
+.md-typeset h2:not(#__comments)::before {
     counter-increment: h2;
     content: counter(h2) ')';
     padding-right: 0.5em;
     opacity: 0.6;
 }
 
-.md-typeset :not([no-header-counter]) h3:not(#__comments)::before {
+.md-typeset h3:not(#__comments)::before {
     counter-increment: h3;
     content: counter(h2) '-' counter(h3) ')';
     padding-right: 0.5em;
     opacity: 0.6;
 }
 
-.md-typeset :not([no-header-counter]) h4:not(#__comments)::before {
+.md-typeset h4:not(#__comments)::before {
     counter-increment: h4;
     content: counter(h2) '-' counter(h3) '-' counter(h4) ')';
     padding-right: 0.5em;
     opacity: 0.6;
 }
 
-.md-typeset :not([no-header-counter]) h5:not(#__comments)::before {
+.md-typeset h5:not(#__comments)::before {
     counter-increment: h5;
     content: counter(h2) '-' counter(h3) '-' counter(h4) '-' counter(h5) ')';
     padding-right: 0.5em;
     opacity: 0.6;
 }
 
-.md-typeset :not([no-header-counter]) h6:not(#__comments)::before {
+.md-typeset h6:not(#__comments)::before {
     counter-increment: h6;
     content: counter(h2) '-' counter(h3) '-' counter(h4) '-' counter(h5) '-' counter(h6) ')';
     padding-right: 0.5em;
