@@ -23,6 +23,8 @@ theme:
     repo: fontawesome/brands/github
     logo: octicons/stack-24
     edit: material/pencil
+    tag:
+      default: fontawesome/solid/hashtag
 
   palette:
     # Palette toggle for auto mode
@@ -83,6 +85,7 @@ extra:
     - name: RSS
       icon: fontawesome/solid/square-rss
       link: /feed_rss_updated.xml
+  tags: { "": default } # https://github.com/squidfunk/mkdocs-material/blob/0b38323a310d9ab9ac7fd60ad0bdae5871e42d73/src/plugins/tags/plugin.py#L146
 
 
 extra_css:
@@ -157,6 +160,8 @@ plugins:
           default_timezone: Asia/Shanghai
   - glightbox:
       auto_caption: true
+  - tags:
+      tags_file: tags.md
 
 
 hooks:
@@ -167,6 +172,7 @@ hooks:
 nav:
   - 首页:
     - index.md
+    - 标签: tags.md
     - 网站收集:
       - ACG 资源: website/acg.md
       - 学习资料（正经）: website/learning.md
