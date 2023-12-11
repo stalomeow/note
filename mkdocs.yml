@@ -28,22 +28,25 @@ theme:
 
   palette:
     # Palette toggle for automatic mode
-    - toggle:
-        icon: material/brightness-auto
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/lightbulb-auto
         name: Auto Mode
 
     # Palette toggle for light mode
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: white
       toggle:
-        icon: material/brightness-7
+        icon: material/lightbulb
         name: Light Mode
 
     # Palette toggle for dark mode
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: black
       toggle:
-        icon: material/brightness-4
+        icon: material/lightbulb-off
         name: Dark Mode
 
   features:

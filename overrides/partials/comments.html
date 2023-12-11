@@ -1,68 +1,58 @@
-{% if page.meta.comments != false %}
+{% if page.meta.comments != false and config.site_url != "http://127.0.0.1:8000/" %}
   <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
+
+  <!-- Insert generated snippet here -->
+  <script 
+    src="https://giscus.app/client.js"
+    data-repo="stalomeow/note"
+    data-repo-id="R_kgDOIiy-JQ"
+    data-category="General"
+    data-category-id="DIC_kwDOIiy-Jc4CS79e"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="zh-CN"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async="">
+  </script>
 
   <!-- Synchronize Giscus theme with palette -->
   <script>
-    !function () {
-      const observedElement = document.documentElement;
-      const comments = document.querySelector('#__comments');
+    var giscus = document.querySelector("script[src*=giscus]")
 
-      function getTheme() {
-        const scheme = observedElement.style.getPropertyValue('color-scheme');
-        return (scheme === 'dark') ? 'transparent_dark' : 'light';
-      }
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
 
-      function updateTheme() {
-        const frame = document.querySelector('.giscus-frame');
-        frame.contentWindow.postMessage(
-          { giscus: { setConfig: { theme: getTheme() } } },
-          'https://giscus.app'
-        );
-      }
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
 
-      function createElement(tag, attributes) {
-        const e = document.createElement(tag);
-        Object.entries(attributes).forEach(([key, value]) => {
-          e.setAttribute(key, value);
-        });
-        return e;
-      }
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
 
-      if (__md_scope.hostname === '127.0.0.1') {
-        console.warn('本地模式下不加载评论');
-        comments.insertAdjacentHTML('afterend', '<p align="center" style="color:red;">本地模式下不加载评论</p>');
-      } else {
-        // Set palette on initial load
-        comments.insertAdjacentElement('afterend', createElement('script', {
-          // Insert generated snippet here
-          'src': 'https://giscus.app/client.js',
-          'data-repo': 'stalomeow/note',
-          'data-repo-id': 'R_kgDOIiy-JQ',
-          'data-category': 'General',
-          'data-category-id': 'DIC_kwDOIiy-Jc4CS79e',
-          'data-mapping': 'pathname',
-          'data-strict': '0',
-          'data-reactions-enabled': '1',
-          'data-emit-metadata': '0',
-          'data-input-position': 'top',
-          'data-theme': getTheme(),
-          'data-lang': 'zh-CN',
-          'data-loading': 'lazy',
-          'crossorigin': 'anonymous',
-          'async': ''
-        }));
-
-        // Instruct Giscus to change theme
-        new MutationObserver(() => updateTheme()).observe(observedElement, {
-          attributes: true,
-          attributeFilter: ['style'],
-          attributeOldValue: false,
-
-          characterData: false,
-          childList: false,
-          subtree: false
-        });
-      }
-    }();
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
   </script>
 {% endif %}
