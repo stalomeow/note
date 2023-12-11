@@ -143,11 +143,11 @@
 }
 
 /* Smooth Scroll */
-
-html,
+/* TODO 开了以后，有时候滚动有 bug */
+/* html,
 body {
     scroll-behavior: smooth;
-}
+} */
 
 /* Lightbox */
 
