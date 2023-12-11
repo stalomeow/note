@@ -43,16 +43,34 @@ $$
 
 设总体 $X$ 的分布形式 $p(x;\theta)$（分布律/概率密度）为已知，其中 $\theta \in \Theta$ 为未知参数。$X_1,X_2,\cdots,X_n$ 为来自总体 $X$ 的一个样本，$x_1,x_2,\cdots,x_n$ 是样本的一组样本值，
 
-- 称 $L(\theta)=\displaystyle\prod\limits_{i=1}^{n}p(x_i;\theta)$ 为参数 $\theta$ 的**似然函数**。
+- 称 $L(\theta)=\displaystyle\prod\limits_{i=1}^{n}p({\color{Red} x_i};\theta)$ 为参数 $\theta$ 的**似然函数 (Likelihood function)**。
 
     若总体是离散型随机变量，它的意义是随机点 $(X_1,X_2,\cdots,X_n)$ 落在**样本点** $(x_1,x_2,\cdots,x_n)$ 的概率。若总体是连续型随机变量，则是落在该点**附近**的概率。
 
-- 称能使 $L(\theta)$ 取得最大值的 $\hat{\theta}(x_1,x_2,\cdots,x_n)$ 为 $\theta$ 的最大似然估计。
+- 称能使 $L(\theta)$ 取得最大值的 $\hat{\theta}(x_1,x_2,\cdots,x_n)$ 为参数 $\theta$ 的**最大似然估计 (Maximum likelihood estimation、MLE)**。
     - 称 $\hat{\theta}(X_1,X_2,\cdots,X_n)$ 为 $\theta$ 的**最大似然估计量**。
     - 称 $\hat{\theta}(x_1,x_2,\cdots,x_n)$ 为 $\theta$ 的**最大似然估计值**。
 
-最大似然估计法的思想是，固定 $x_1,x_2,\cdots,x_n$，然后找到一个 $\hat{\theta}$ 使得 $L(\theta)$ 取得最大值。求解步骤：
+> 思想：固定 $x_1,x_2,\cdots,x_n$，然后找到一个 $\hat{\theta} \in \Theta$ 使得 $L(\theta)$ 取得最大值。换句话说就是使随机点 $(X_1,X_2,\cdots,X_n)$ 落在**样本点** $(x_1,x_2,\cdots,x_n)$（附近）的概率最大。
+
+求解步骤：
 
 1. 写出似然函数：$L(\theta)=\displaystyle\prod\limits_{i=1}^{n} p(x_i;\theta)$。
 2. 取自然对数，方便求导：$\ln L(\theta)=\displaystyle\sum\limits_{i=1}^{n} \ln p(x_i;\theta)$。
 3. 令 $\dfrac{\partial \ln L(\theta)}{\partial \theta_i}=0$ ($i=1,2,\cdots,k$)，解得 $\hat{\theta}_i=\hat{\theta}_i(x_1,x_2,\cdots,x_n)$ ($i=1,2,\cdots,k$)。
+
+!!! note "最大似然估计的不变性"
+
+    设 $\theta$ 的函数 $u=u(\theta)$ ($\theta \in \Theta$) 具有单值反函数 $\theta=\theta(u)$ ($u \in U$)，$\hat{\theta}$ 是总体 $X$ 的概率分布中参数 $\theta$ 的最大似然估计，则 $\hat{u}=u(\hat{\theta})$ 是 $u(\theta)$ 的最大似然估计。
+
+## 区间估计
+
+### 置信区间
+
+### 单侧置信区间
+
+## 估计量的评选标准
+
+- 无偏性
+- 有效性
+- 一致性（相合性）

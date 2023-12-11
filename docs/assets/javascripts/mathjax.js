@@ -26,6 +26,7 @@ window.MathJax = {
     }
 };
 
-document$.subscribe(() => {
-    MathJax.typesetPromise();
-});
+// TODO 目前会报错
+// document$.subscribe(() => {
+//     MathJax.typesetPromise();
+// });

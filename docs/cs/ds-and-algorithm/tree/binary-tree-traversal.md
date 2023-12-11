@@ -529,8 +529,8 @@ public:
 
 大体和中序差不多。但是访问完左子树后，从下往上处理左子树右边界的节点。
 
-![Morris 后序遍历](/assets/images/morris-post-order-dark.svg#only-dark)
-![Morris 后序遍历](/assets/images/morris-post-order-light.svg#only-light)
+![Morris 后序遍历](../../../assets/images/morris-post-order-dark.svg#only-dark)
+![Morris 后序遍历](../../../assets/images/morris-post-order-light.svg#only-light)
 
 **最后，还要手动从下往上处理整棵树右边界的节点（图中第 3 个左子树右边界）。**
 

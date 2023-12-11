@@ -27,10 +27,8 @@ theme:
       default: fontawesome/solid/hashtag
 
   palette:
-    # Palette toggle for auto mode
-    - scheme: default
-      primary: white
-      toggle:
+    # Palette toggle for automatic mode
+    - toggle:
         icon: material/brightness-auto
         name: Auto Mode
 
@@ -55,7 +53,9 @@ theme:
     - content.code.copy
     - content.action.edit
 
-    - navigation.instant
+    # TODO instant 和 MathJax 一起用目前有 bug，进下一个页面后公式排版会乱
+    # - navigation.instant
+    # - navigation.instant.progress
     - navigation.tabs
     - navigation.top
     - navigation.indexes
@@ -129,8 +129,8 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -140,20 +140,25 @@ markdown_extensions:
 
 plugins:
   - search:
+      # TODO 禁用以后，运行时代码会报错，然后颜色模式切换会炸掉
+      # 临时在 config_validator.py 里禁用
+      # enabled: !ENV [CI, false]
       lang:
         - zh
         - en
-      # jieba_dict: jieba-dict.txt
+      jieba_dict: docs/assets/jieba-dict.txt
   - git-revision-date-localized:
-      type: datetime
+      enabled: !ENV [CI, false]
+      type: timeago
       timezone: Asia/Shanghai
       locale: zh
       enable_creation_date: true
-      exclude:
-        - index.md
-        - tools.md
-        - "**/index.md"
+  - git-committers:
+      enabled: !ENV [CI, false]
+      repository: stalomeow/note
+      branch: main
   - rss:
+      enabled: !ENV [CI, false]
       comments_path: "#__comments"
       match_path: '^(?!.*(\/|\\)index\.md$)(?!index\.md$).*$' # 去除 **/index.md
       date_from_meta:

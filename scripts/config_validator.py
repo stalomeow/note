@@ -5,8 +5,6 @@ from mkdocs.plugins import PluginCollection
 
 PLUGIN_BLACKLIST = [
     'material/search',
-    'git-revision-date-localized',
-    'rss',
 ]
 
 def pop_plugin(plugins: PluginCollection, name: str):

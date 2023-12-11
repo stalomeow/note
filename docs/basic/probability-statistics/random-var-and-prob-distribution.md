@@ -318,16 +318,6 @@ P\left(x_1 < X \le x_2 \right) = \Phi\left(\dfrac{x_2-\mu}{\sigma} \right) - \Ph
     - 当 $x > 4$ 时，$\Phi\left(x \right) \approx 1$。
     - 当 $x < -4$ 时，$\Phi\left(x \right) \approx 0$。
 
-### 卡方分布
-
-若 $k$ 个随机变量 $Z_1,\cdots,Z_k$ 相互独立且服从标准正态分布，则
-
-$$
-X = \sum_{i=1}^k Z_i^2
-$$
-
-服从自由度为 $k$ 的卡方分布 (chi-squared distribution)，记为 $X \sim \chi^2(k)$。
-
 ### 指数分布
 
 若连续型随机变量 $X$ 的概率密度为
