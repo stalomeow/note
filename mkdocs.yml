@@ -167,6 +167,19 @@ plugins:
       auto_caption: true
   - tags:
       tags_file: tags.md
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+      cache_safe: true
+      js_files:
+        - assets/javascripts/mathjax.js
+      css_files:
+        - assets/webfonts/JetBrains Mono/font.css
+        - assets/webfonts/LXGW WenKai Screen/font.css
+        - assets/stylesheets/theme.css
 
 
 hooks:
@@ -243,6 +256,7 @@ nav:
         - Dancing Links: cs/ds-and-algorithm/search/dancing-links.md
       - 字符串:
         - KMP: cs/ds-and-algorithm/string/kmp.md
+        - Rabin-Karp: cs/ds-and-algorithm/string/rabin-karp.md
       - 杂项: cs/ds-and-algorithm/misc.md
     - 计算机图形学:
       - cs/cg/index.md

@@ -5,6 +5,7 @@ from mkdocs.plugins import PluginCollection
 
 PLUGIN_BLACKLIST = [
     'material/search',
+    'minify',
 ]
 
 def pop_plugin(plugins: PluginCollection, name: str):
