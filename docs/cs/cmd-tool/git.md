@@ -10,13 +10,102 @@
 - `git config --global user.email "[email address]"`：设置 Commit 时的邮箱。
 - `git config --global color.ui auto`：启用有帮助的彩色命令行输出。
 
-## Branch
+## 分支
+
+> [Branch from a previous commit using Git - Stack Overflow](https://stackoverflow.com/questions/2816715/branch-from-a-previous-commit-using-git)
+
+用 commit hash 创建分支：
+
+```
+git branch branch_name <commit-hash>
+```
+
+用符号引用（symbolic reference）创建分支：
+
+```
+git branch branch_name HEAD~3
+```
+
+创建分支并切换：
+
+```
+git checkout -b branch_name <commit-hash or HEAD~3>
+```
+
+将分支推送到远程：
+
+```
+git push origin branch_name:branch_name
+```
+
+本地关联远程分支（这样 push 或 pull 时不需要再指定分支）：
+
+```
+git branch --set-upstream-to=origin/branch_name branch_name
+```
+
+## HEAD 引用
+
+HEAD 文件通常是一个符号引用（symbolic reference），指向目前所在的分支。 所谓符号引用，表示它是一个指向其他引用的指针。
+
+> [git HEAD / HEAD^ / HEAD~ 的含义 - 个人文章 - SegmentFault 思否](https://segmentfault.com/a/1190000022506884)
+
+- HEAD 指向当前所在分支提交至仓库的最新一次的 commit。
+
+- `~` 是用来在当前提交路径上回溯的修饰符。
+
+    HEAD~{n} 表示当前所在的提交路径上的前 n 个提交（n >= 0）：
+
+    - `HEAD = HEAD~0`
+    - `HEAD~ = HEAD~1`
+    - `HEAD~~ = HEAD~2`
+
+
+- `^` 是用来切换**父级**提交路径的修饰符。
+
+    当我们始终在一个分支比如 dev 开发/提交代码时，每个 commit 都只会有一个父级提交，就是上一次提交，但当并行多个分支开发，feat1, feat2, feat3，完成后 merge feat1 feat2 feat3 回 dev 分支后，此次的 merge commit 就会有多个父级提交。
+
+``` python
+# 当前提交
+HEAD = HEAD~0 = HEAD^0
+
+# 主线回溯
+HEAD~1 = HEAD^   # 主线的上一次提交
+HEAD~2 = HEAD^^  # 主线的上二次提交
+HEAD~3 = HEAD^^^ # 主线的上三次提交
+
+# 如果某个节点有其他分支并入
+HEAD^1   # 主线提交（第一个父提交）
+HEAD^2   # 切换到了第2个并入的分支并得到最近一次的提交
+HEAD^2~3 # 切换到了第2个并入的分支并得到最近第 4 次的提交
+HEAD^3~2 # 切换到了第3个并入的分支并得到最近第 3 次的提交
+
+# ^{n} 和 ^ 重复 n 次的区别 
+HEAD~1 = HEAD^
+HEAD~2 = HEAD^^
+HEAD~3 = HEAD^^^
+
+# 切换父级
+HEAD^1~3 = HEAD~4 
+HEAD^2~3 = HEAD^2^^^
+HEAD^3~3 = HEAD^3^^^
+```
 
 ## Merge
 
 ## Rebase
 
+## 撤销
+
+<div class="responsive-video-container">
+    <iframe src="//player.bilibili.com/player.html?aid=559048463&bvid=BV1ne4y1S7S9&cid=861329934&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
 ## 常用工作流
+
+<div class="responsive-video-container">
+    <iframe src="//player.bilibili.com/player.html?aid=561005338&bvid=BV19e4y1q7JJ&cid=846391446&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 ## LFS
 
