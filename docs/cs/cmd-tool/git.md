@@ -6,9 +6,23 @@
 
 ## 配置
 
-- `git config --global user.name "[name]"`：设置 Commit 时的用户名。
-- `git config --global user.email "[email address]"`：设置 Commit 时的邮箱。
-- `git config --global color.ui auto`：启用有帮助的彩色命令行输出。
+设置 Commit 时的用户名：
+
+```
+git config --global user.name "[name]"
+```
+
+设置 Commit 时的邮箱：
+
+```
+git config --global user.email "[email address]"
+```
+
+启用有帮助的彩色命令行输出：
+
+```
+git config --global color.ui auto
+```
 
 ## 分支
 
@@ -35,13 +49,19 @@ git checkout -b branch_name <commit-hash or HEAD~3>
 将分支推送到远程：
 
 ```
-git push origin branch_name:branch_name
+git push origin local_branch_name:remote_branch_name
 ```
 
 本地关联远程分支（这样 push 或 pull 时不需要再指定分支）：
 
 ```
-git branch --set-upstream-to=origin/branch_name branch_name
+git branch --set-upstream-to=origin/remote_branch_name local_branch_name
+```
+
+将本地分支推送到远程，同时本地关联远程分支（本地和远程的分支都叫 branch_name）：
+
+```
+git push -u origin branch_name
 ```
 
 ## HEAD 引用
@@ -65,31 +85,37 @@ HEAD 文件通常是一个符号引用（symbolic reference），指向目前所
 
     当我们始终在一个分支比如 dev 开发/提交代码时，每个 commit 都只会有一个父级提交，就是上一次提交，但当并行多个分支开发，feat1, feat2, feat3，完成后 merge feat1 feat2 feat3 回 dev 分支后，此次的 merge commit 就会有多个父级提交。
 
-``` python
-# 当前提交
-HEAD = HEAD~0 = HEAD^0
+    ``` python
+    # 当前提交
+    HEAD = HEAD~0 = HEAD^0
 
-# 主线回溯
-HEAD~1 = HEAD^   # 主线的上一次提交
-HEAD~2 = HEAD^^  # 主线的上二次提交
-HEAD~3 = HEAD^^^ # 主线的上三次提交
+    # 主线回溯
+    HEAD~1 = HEAD^   # 主线的上一次提交
+    HEAD~2 = HEAD^^  # 主线的上二次提交
+    HEAD~3 = HEAD^^^ # 主线的上三次提交
 
-# 如果某个节点有其他分支并入
-HEAD^1   # 主线提交（第一个父提交）
-HEAD^2   # 切换到了第2个并入的分支并得到最近一次的提交
-HEAD^2~3 # 切换到了第2个并入的分支并得到最近第 4 次的提交
-HEAD^3~2 # 切换到了第3个并入的分支并得到最近第 3 次的提交
+    # 如果某个节点有其他分支并入
+    HEAD^1   # 主线提交（第一个父提交）
+    HEAD^2   # 切换到了第2个并入的分支并得到最近一次的提交
+    HEAD^2~3 # 切换到了第2个并入的分支并得到最近第 4 次的提交
+    HEAD^3~2 # 切换到了第3个并入的分支并得到最近第 3 次的提交
 
-# ^{n} 和 ^ 重复 n 次的区别 
-HEAD~1 = HEAD^
-HEAD~2 = HEAD^^
-HEAD~3 = HEAD^^^
+    # ^{n} 和 ^ 重复 n 次的区别 
+    HEAD~1 = HEAD^
+    HEAD~2 = HEAD^^
+    HEAD~3 = HEAD^^^
 
-# 切换父级
-HEAD^1~3 = HEAD~4 
-HEAD^2~3 = HEAD^2^^^
-HEAD^3~3 = HEAD^3^^^
-```
+    # 切换父级
+    HEAD^1~3 = HEAD~4 
+    HEAD^2~3 = HEAD^2^^^
+    HEAD^3~3 = HEAD^3^^^
+    ```
+
+!!! tips
+
+    在 Windows 命令行中，`^` 是转义符。输入单个 `^` 的话，命令行就会在下一行问 `More?` 让你继续输入需要转义的内容。`^^` 才会被识别为 `^`。
+
+    要想让 git 正确识别 `HEAD^`，需要输入 `HEAD^^` 或者用双引号包裹 `"HEAD^"`。换 powershell、git bash 也行。
 
 ## Merge
 

@@ -23,7 +23,7 @@ $$
 F \left(x \right) = P \left(X \le x \right),\ x \in \mathbb{R}
 $$
 
-为随机变量 $X$ 的分布函数 (distribution function)。
+为随机变量 $X$ 的分布函数 (distribution function) 或者累积分布函数 (cumulative distribution function、CDF)。
 
 - $0 \le F \left(x \right) \le 1 \ (x \in \mathbb{R})$，且 $F \left(-\infty \right) = 0$，$F \left(+\infty \right) = 1$。
 
