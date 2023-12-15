@@ -26,6 +26,8 @@ git config --global color.ui auto
 
 ## 分支
 
+### 创建
+
 > [Branch from a previous commit using Git - Stack Overflow](https://stackoverflow.com/questions/2816715/branch-from-a-previous-commit-using-git)
 
 用 commit hash 创建分支：
@@ -46,6 +48,8 @@ git branch branch_name HEAD~3
 git checkout -b branch_name <commit-hash or HEAD~3>
 ```
 
+### 推送
+
 将分支推送到远程：
 
 ```
@@ -62,6 +66,47 @@ git branch --set-upstream-to=origin/remote_branch_name local_branch_name
 
 ```
 git push -u origin branch_name
+```
+
+### 删除
+
+> 删除本地分支前，先切到其他分支。
+
+删除本地分支，如果分支没被合并则不允许删除：
+
+```
+git branch -d branch_name
+```
+
+强制删除本地分支，不管是否被合并：
+
+```
+git branch -D branch_name
+```
+
+删除远程分支：
+
+```
+git push origin -d branch_name
+```
+推送空分支到远程，也能删除远程分支：
+
+```
+git push origin :branch_name
+```
+
+删除远程分支后，更新本地分支列表（`-p` 即 `--prune`）：
+
+```
+git fetch -p
+```
+
+### 重命名
+
+重命名本地分支：
+
+```
+git branch -m old_name new_name
 ```
 
 ## HEAD 引用
@@ -117,9 +162,65 @@ HEAD 文件通常是一个符号引用（symbolic reference），指向目前所
 
     要想让 git 正确识别 `HEAD^`，需要输入 `HEAD^^` 或者用双引号包裹 `"HEAD^"`。换 powershell、git bash 也行。
 
-## Merge
+## Sync Fork
 
-## Rebase
+> [How to sync your fork with the original repository](https://ljvmiranda921.github.io/notebook/2021/11/12/sync-your-fork/)
+
+直接在 GitHub 上点 `Sync Fork` 有可能产生一个新的 Commit，污染提交记录。下面用 Rebase 来同步，保证干净的提交记录。
+
+1. 添加原来的远程库，可以起名为 `fork`：
+
+    ```
+    git remote add fork https://github.com/com/original/original.git
+    ```
+
+2. 拉取原来的远程库的信息：
+
+    ```
+    git fetch fork
+    ```
+
+3. 切到需要同步的本地分支，然后 rebase：
+
+    ```
+    git checkout branch_name
+    git rebase fork/main
+    ```
+
+4. 强制推送至云端：
+
+    ```
+    git push origin +branch_name
+    ```
+
+    `+` 是强制推送的意思，也可以用下面的方法：
+
+    ```
+    git push -f origin branch_name
+    ```
+
+## Squash Merge
+
+将多个提交合并成一个，然后 Merge，需要自己再写一个 Commit：
+
+```
+git merge --squash another_branch
+git commit -m "message here"
+```
+
+## 删除中间几个 Commit
+
+使用交互式 Rebase 来删除中间的 Commit：
+
+```
+git rebase -i <commit-hash>
+```
+
+这行命令会先在编辑器中打开一个文件，在文件中可以给不想要的 Commit 标记上 drop，然后保存关闭文件。之后 git 会执行 Rebase，删掉标记了 drop 的 Commit。
+
+## Pull
+
+`git pull` 是 `git fetch` + `git merge`。
 
 ## 撤销
 
