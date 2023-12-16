@@ -207,6 +207,7 @@ nav:
       - 积分公式: basic/advanced-math/integral-formula.md
       - 微分方程: basic/advanced-math/differential-equation.md
       - 梯度、散度、旋度: basic/advanced-math/grad-div-curl.md
+      - 傅里叶级数实现本轮画图: basic/advanced-math/fourier-epicycles.md
     - 线性代数:
       - 矩阵: basic/linear-algebra/matrix.md
       - 行列式: basic/linear-algebra/determinant.md
