@@ -244,14 +244,6 @@ nav:
       - cs/ds-and-algorithm/index.md
       - 数组: cs/ds-and-algorithm/array.md
       - 链表: cs/ds-and-algorithm/linked-list.md
-      - 树:
-        - 树相关概念: cs/ds-and-algorithm/tree/tree-concept.md
-        - 二叉树遍历: cs/ds-and-algorithm/tree/binary-tree-traversal.md
-        - 完全二叉树: cs/ds-and-algorithm/tree/complete-binary-tree.md
-        - 从遍历序列构建二叉树: cs/ds-and-algorithm/tree/construct-binary-tree-from-traversal.md
-        - 二叉搜索树: cs/ds-and-algorithm/tree/binary-search-tree.md
-        - 并查集: cs/ds-and-algorithm/tree/disjoint-set.md
-        - Huffman 树: cs/ds-and-algorithm/tree/huffman-tree.md
       - 搜索:
         - DFS: cs/ds-and-algorithm/search/dfs.md
         - BFS: cs/ds-and-algorithm/search/bfs.md
@@ -261,6 +253,16 @@ nav:
       - 字符串:
         - KMP: cs/ds-and-algorithm/string/kmp.md
         - Rabin-Karp: cs/ds-and-algorithm/string/rabin-karp.md
+      - 图论:
+        - 树:
+          - 树相关概念: cs/ds-and-algorithm/graph/tree/tree-concept.md
+          - 二叉树遍历: cs/ds-and-algorithm/graph/tree/binary-tree-traversal.md
+          - 完全二叉树: cs/ds-and-algorithm/graph/tree/complete-binary-tree.md
+          - 从遍历序列构建二叉树: cs/ds-and-algorithm/graph/tree/construct-binary-tree-from-traversal.md
+          - 二叉搜索树: cs/ds-and-algorithm/graph/tree/binary-search-tree.md
+          - 并查集: cs/ds-and-algorithm/graph/tree/disjoint-set.md
+          - Huffman 树: cs/ds-and-algorithm/graph/tree/huffman-tree.md
+        - 最小生成树: cs/ds-and-algorithm/graph/minimum-spanning-tree.md
       - 杂项: cs/ds-and-algorithm/misc.md
     - 计算机图形学:
       - cs/cg/index.md
