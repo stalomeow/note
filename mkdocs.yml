@@ -194,10 +194,8 @@ nav:
   - 首页:
     - index.md
     - 标签: tags.md
-    - 网站收集:
-      - ACG 资源: website/acg.md
-      - 学习资料（正经）: website/learning.md
-      - 在线工具: website/online-tools.md
+    - 网站资源: website-res.md
+    - 在线工具: online-tools.md
   - 基础知识:
     - basic/index.md
     - 高中数学:
