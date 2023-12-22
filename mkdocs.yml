@@ -236,6 +236,8 @@ nav:
         - 卸载 Python: cs/pl/python/uninstall.md
       - JS/TS:
         - 写一个简易 jQuery: cs/pl/js-ts/write-a-mini-jquery.md
+        - 将内存中数据下载为文件: cs/pl/js-ts/download-data-in-memory-as-file.md
+        - Patch package: cs/pl/js-ts/patch-package.md
       - Go:
         - Go 基础: cs/pl/go/basic.md
     - 数据结构与算法:
@@ -329,9 +331,9 @@ nav:
         - Data-Oriented Programming and Job System: cs/games-course/104/lecture-20.md
         - Dynamic Global Illumination and Lumen: cs/games-course/104/lecture-21.md
         - GPU Driven Geometry Pipeline - Nanite: cs/games-course/104/lecture-22.md
-    - 命令行工具:
-      - Aria2: cs/cmd-tool/aria2.md
-      - Git: cs/cmd-tool/git.md
+    - 命令行:
+      - Aria2: cs/cmd/aria2.md
+      - Git: cs/cmd/git.md
     - 腾讯游戏客户端公开课:
       - 简历制作 & 面试辅导: cs/tencent-game-client-course/interview-resume.md
     - Misc:
