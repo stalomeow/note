@@ -156,10 +156,14 @@ plugins:
       timezone: Asia/Shanghai
       locale: zh
       enable_creation_date: true
+      exclude:
+        - blog/** # 不要处理 Blog
   - git-committers:
       enabled: !ENV [CI, false]
       repository: stalomeow/note
       branch: main
+      exclude:
+        - blog/** # 不要处理 Blog
   - rss:
       enabled: !ENV [CI, false]
       comments_path: "#__comments"
