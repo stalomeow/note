@@ -55,57 +55,57 @@
     box-shadow: 0 .05rem 0 var(--md-default-bg-color) inset;
 }
 
-/* Heading  */
+/* Heading (Ignore the index page of blog) */
 
-.md-typeset h1:not(#__comments) {
+.md-typeset:not(.md-post__content) h1:not(#__comments) {
     counter-reset: h2;
 }
 
-.md-typeset h2:not(#__comments) {
+.md-typeset:not(.md-post__content) h2:not(#__comments) {
     counter-reset: h3;
 }
 
-.md-typeset h3:not(#__comments) {
+.md-typeset:not(.md-post__content) h3:not(#__comments) {
     counter-reset: h4;
 }
 
-.md-typeset h4:not(#__comments) {
+.md-typeset:not(.md-post__content) h4:not(#__comments) {
     counter-reset: h5;
 }
 
-.md-typeset h5:not(#__comments) {
+.md-typeset:not(.md-post__content) h5:not(#__comments) {
     counter-reset: h6;
 }
 
-.md-typeset h2:not(#__comments)::before {
+.md-typeset:not(.md-post__content) h2:not(#__comments)::before {
     counter-increment: h2;
     content: counter(h2) ')';
     padding-right: 0.5em;
     opacity: 0.6;
 }
 
-.md-typeset h3:not(#__comments)::before {
+.md-typeset:not(.md-post__content) h3:not(#__comments)::before {
     counter-increment: h3;
     content: counter(h2) '-' counter(h3) ')';
     padding-right: 0.5em;
     opacity: 0.6;
 }
 
-.md-typeset h4:not(#__comments)::before {
+.md-typeset:not(.md-post__content) h4:not(#__comments)::before {
     counter-increment: h4;
     content: counter(h2) '-' counter(h3) '-' counter(h4) ')';
     padding-right: 0.5em;
     opacity: 0.6;
 }
 
-.md-typeset h5:not(#__comments)::before {
+.md-typeset:not(.md-post__content) h5:not(#__comments)::before {
     counter-increment: h5;
     content: counter(h2) '-' counter(h3) '-' counter(h4) '-' counter(h5) ')';
     padding-right: 0.5em;
     opacity: 0.6;
 }
 
-.md-typeset h6:not(#__comments)::before {
+.md-typeset:not(.md-post__content) h6:not(#__comments)::before {
     counter-increment: h6;
     content: counter(h2) '-' counter(h3) '-' counter(h4) '-' counter(h5) '-' counter(h6) ')';
     padding-right: 0.5em;
@@ -153,4 +153,13 @@ body {
 .glightbox {
     display: flex;
     justify-content: center;
+}
+
+/* Blog */
+
+.md-post {
+    border-top: .05rem solid var(--md-default-fg-color--lightest);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem !important;
 }

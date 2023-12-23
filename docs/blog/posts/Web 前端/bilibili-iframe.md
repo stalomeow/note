@@ -1,8 +1,16 @@
+---
+date: 2023-03-03
+authors:
+  - stalomeow
+categories:
+  - Web 前端
+---
+
 # 网页中嵌入 b 站视频
 
-!!! abstract
+网页中嵌入 b 站视频的一些高级玩法。
 
-    网页中嵌入 b 站视频的一些高级玩法。
+<!-- more -->
 
 ## 播放器适应页面宽度
 

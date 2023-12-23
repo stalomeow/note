@@ -73,6 +73,10 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Fil
     if (not page.is_index) or (page.abs_url == '/'):
         return markdown
 
+    # 忽略博客
+    if page.abs_url.startswith('/blog/'):
+        return markdown
+
     if page.meta.get('comments', True):
         log.warning('[index-validator] \'%s\' should have comments disabled.', page.file.abs_src_path)
 

@@ -1,12 +1,16 @@
+---
+date: 2022-04-18
+authors:
+  - stalomeow
+categories:
+  - Web 前端
+---
+
 # 写一个简易 jQuery
 
-!!! abstract
+用 TypeScript 实现一个简易版的 jQuery。<small><i>（高中博客的遗产）</i></small>
 
-    用 TypeScript 实现一个简易版的 jQuery。
-
-    <hr>
-
-    <small><i>高中博客的遗产。</i></small>
+<!-- more -->
 
 ## 动机
 

@@ -1,13 +1,16 @@
 ---
-tags:
+date: 2023-12-17
+authors:
+  - stalomeow
+categories:
   - Manim
 ---
 
 # 傅里叶级数实现本轮画图
 
-!!! abstract
+将一张 SVG 图转化为关于时间的周期函数 $f: \mathbb{R} \to \mathbb{C}$，再展开成复数形式的傅里叶级数。级数的每一项都是一个本轮（Epicycle），让它们随时间运动，绘制出的轨迹和原 SVG 图一样。
 
-    将一张 SVG 图转化为关于时间的周期函数 $f: \mathbb{R} \to \mathbb{C}$，再展开成复数形式的傅里叶级数。级数的每一项都是一个本轮（Epicycle），让它们随时间运动，绘制出的轨迹和原 SVG 图一样。
+<!-- more -->
 
 ## 将 SVG 转化为函数
 

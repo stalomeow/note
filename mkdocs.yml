@@ -183,6 +183,27 @@ plugins:
         - assets/webfonts/JetBrains Mono/font.css
         - assets/webfonts/LXGW WenKai Screen/font.css
         - assets/stylesheets/theme.css
+  - blog:
+      enabled: true
+      blog_toc: true
+      archive: true
+      archive_toc: true
+      archive_date_format: yyyy 年 MM 月
+      archive_url_date_format: yyyy/MM
+      categories: true
+      categories_toc: true
+      authors: true
+      post_date_format: yyyy-MM-dd
+      post_readtime: true
+      post_url_format: "posts/{file}-{date}"
+      post_url_date_format: yyyy-MM-dd
+      post_excerpt: required
+      post_excerpt_max_authors: 0
+      pagination: true
+      pagination_per_page: 5
+      pagination_format: "$link_first $link_previous ~2~ $link_next $link_last"
+      pagination_if_single_page: true
+      pagination_keep_content: true
 
 
 hooks:
@@ -196,6 +217,8 @@ nav:
     - 标签: tags.md
     - 网站资源: website-res.md
     - 在线工具: online-tools.md
+  - 博客:
+    - blog/index.md
   - 基础知识:
     - basic/index.md
     - 高中数学:
@@ -205,7 +228,6 @@ nav:
       - 积分公式: basic/advanced-math/integral-formula.md
       - 微分方程: basic/advanced-math/differential-equation.md
       - 梯度、散度、旋度: basic/advanced-math/grad-div-curl.md
-      - 傅里叶级数实现本轮画图: basic/advanced-math/fourier-epicycles.md
     - 线性代数:
       - 矩阵: basic/linear-algebra/matrix.md
       - 行列式: basic/linear-algebra/determinant.md
@@ -235,7 +257,6 @@ nav:
         - 生成 requirements.txt: cs/pl/python/generate-requirements.md
         - 卸载 Python: cs/pl/python/uninstall.md
       - JS/TS:
-        - 写一个简易 jQuery: cs/pl/js-ts/write-a-mini-jquery.md
         - 将内存中数据下载为文件: cs/pl/js-ts/download-data-in-memory-as-file.md
         - Patch package: cs/pl/js-ts/patch-package.md
       - Go:
@@ -362,9 +383,3 @@ nav:
   - Unreal 开发:
     - unreal/index.md
     - 编译 UE4 源码: unreal/compile-ue4-source-code.md
-  - Misc:
-    - misc/index.md
-    - 面试相关: misc/interview.md
-    - 网页中嵌入 b 站视频: misc/bilibili-iframe.md
-    - Win11 微软输入法快捷键冲突: misc/win11-ms-input-shortcuts-conflict.md
-    - 下载微信视频号的视频: misc/download-wechat-video.md
