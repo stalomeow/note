@@ -1,8 +1,17 @@
+---
+date: 2023-07-20
+draft: false
+authors:
+  - stalomeow
+categories:
+  - Graphics 逆向
+---
+
 # 用 RenderDoc 和模拟器抓帧安卓手游
 
-!!! abstract
+Windows 下，用 RenderDoc + 模拟器抓帧安卓手游。我使用的是 MuMu 模拟器安卓 12（版本：3.5.0）。
 
-    Windows 下，用 RenderDoc + 模拟器抓帧安卓手游。我使用的是 MuMu 模拟器安卓 12（版本：3.5.0）。
+<!-- more -->
 
 ## Global Process Hook
 

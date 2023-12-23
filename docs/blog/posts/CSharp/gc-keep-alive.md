@@ -1,12 +1,17 @@
+---
+date: 2023-06-24
+draft: true
+authors:
+  - stalomeow
+categories:
+  - 'C\#'
+---
+
 # GC.KeepAlive
 
-!!! abstract
+这个方法容易望文生义，然后用错。它实际上**什么都不做**，就是单纯持有一个对象的引用，保证**在此之前**该对象不满足 GC 回收的条件。
 
-    这个方法容易望文生义，然后用错。~~（可能是我太菜了QAQ~~ 这里记录一下正确用法。
-
-    TODO
-
-这个方法实际上**什么都不做**，就是单纯持有一个对象的引用，保证**在此之前**该对象不满足 GC 回收的条件。
+<!-- more -->
 
 ``` c# title="方法实现"
 [MethodImpl(MethodImplOptions.NoInlining)] // disable optimizations

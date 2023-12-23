@@ -1,8 +1,17 @@
+---
+date: 2023-12-23
+draft: false
+authors:
+  - stalomeow
+categories:
+  - Web 前端
+---
+
 # 将内存中数据下载为文件
 
-!!! abstract
+原生 js 实现：将内存中数据下载为文件。
 
-    原生 js 实现：将内存中数据下载为文件。
+<!-- more -->
 
 ## 实现
 

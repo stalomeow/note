@@ -1,12 +1,19 @@
+---
+date: 2023-10-07
+draft: true
+authors:
+  - stalomeow
+categories:
+  - Unity Editor
+---
+
 # IL Post-Process
 
-!!! abstract
+有时候需要在程序集编译完成后修改里面的 IL 代码。这里主要记录一下把这个步骤插入到 Unity 编译管线中的方法。
 
-    有时候需要在程序集编译完成后修改里面的 IL 代码。这里主要记录一下把这个步骤插入到 Unity 编译管线中的方法。
+修改 IL 使用 Mono.Cecil。Package Manager 里安装 `com.unity.nuget.mono-cecil`。
 
-    ---
-
-    <small>修改 IL 使用 Mono.Cecil。Package Manager 里安装 `com.unity.nuget.mono-cecil`。</small>
+<!-- more -->
 
 ## 法一：CompilationPipeline API
 

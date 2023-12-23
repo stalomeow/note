@@ -1,10 +1,19 @@
+---
+date: 2023-12-23
+draft: false
+authors:
+  - stalomeow
+categories:
+  - Web 前端
+---
+
 # Patch package
 
-!!! abstract
+`patch-package` 是一个 npm 包，用来快速修复其他包中的 bug， 不需要等原作者更新。
 
-    `patch-package` 是一个 npm 包，用来快速修复其他包中的 bug， 不需要等原作者更新。
+- GitHub: [https://github.com/ds300/patch-package](https://github.com/ds300/patch-package){ target="_blank" }。
 
-    - GitHub: [https://github.com/ds300/patch-package](https://github.com/ds300/patch-package){ target="_blank" }。
+<!-- more -->
 
 ## 用法
 

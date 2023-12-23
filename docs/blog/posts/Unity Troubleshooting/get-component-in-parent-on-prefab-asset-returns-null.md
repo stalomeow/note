@@ -1,12 +1,21 @@
-# GetComponentInParent on PrefabAsset returns null
+---
+date: 2023-05-26
+draft: false
+authors:
+  - stalomeow
+categories:
+  - Unity Troubleshooting
+---
 
-!!! abstract
+# 解决 GetComponentInParent on PrefabAsset returns null
 
-    如果一个 `GameObject` 是 **PrefabAsset**
+如果一个 `GameObject` 是 **PrefabAsset**
 
-    - 直接对它调用 `GetComponentInParent<T>()` 永远会返回 `null`，必须要用 `GetComponentInParent<T>(true)`。
-    - 其他有 `includeInactive` 参数的 `GetComponentXXX` 方法同上。
-    - 没有 `includeInactive` 参数的方法，比如 `GetComponent<T>()`，可以直接使用。
+- 直接对它调用 `GetComponentInParent<T>()` 永远会返回 `null`，必须要用 `GetComponentInParent<T>(true)`。
+- 其他有 `includeInactive` 参数的 `GetComponentXXX` 方法同上。
+- 没有 `includeInactive` 参数的方法，比如 `GetComponent<T>()`，可以直接使用。
+
+<!-- more -->
 
 ## 问题原因
 

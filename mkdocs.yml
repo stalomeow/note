@@ -223,157 +223,144 @@ nav:
     - 在线工具: online-tools.md
   - 博客:
     - blog/index.md
-  - 基础知识:
-    - basic/index.md
+  - 课程笔记:
+    - course/index.md
     - 高中数学:
-      - 三角恒等式: basic/high-school-math/trigonometric-function-identity.md
-      - 指数函数与其反函数的交点个数: basic/high-school-math/intersection-point-of-exp-and-its-inv.md
+      - 三角恒等式: course/high-school-math/trigonometric-function-identity.md
+      - 指数函数与其反函数的交点个数: course/high-school-math/intersection-point-of-exp-and-its-inv.md
     - 高等数学:
-      - 积分公式: basic/advanced-math/integral-formula.md
-      - 微分方程: basic/advanced-math/differential-equation.md
-      - 梯度、散度、旋度: basic/advanced-math/grad-div-curl.md
+      - 积分公式: course/advanced-math/integral-formula.md
+      - 微分方程: course/advanced-math/differential-equation.md
+      - 梯度、散度、旋度: course/advanced-math/grad-div-curl.md
     - 线性代数:
-      - 矩阵: basic/linear-algebra/matrix.md
-      - 行列式: basic/linear-algebra/determinant.md
-      - 四元数: basic/linear-algebra/quaternion.md
+      - 矩阵: course/linear-algebra/matrix.md
+      - 行列式: course/linear-algebra/determinant.md
+      - 四元数: course/linear-algebra/quaternion.md
     - 概率论与数理统计:
-      - 随机变量及其概率分布: basic/probability-statistics/random-var-and-prob-distribution.md
-      - 随机变量的数字特征: basic/probability-statistics/numerical-characteristics-of-random-var.md
-      - 大数定律和中心极限定理: basic/probability-statistics/lln-and-clt.md
-      - 参数估计: basic/probability-statistics/parameter-estimation.md
-    - 高中英语作文框架: basic/english/high-school-composition-framework.md
-  - 计算机科学:
-    - cs/index.md
+      - 随机变量及其概率分布: course/probability-statistics/random-var-and-prob-distribution.md
+      - 随机变量的数字特征: course/probability-statistics/numerical-characteristics-of-random-var.md
+      - 大数定律和中心极限定理: course/probability-statistics/lln-and-clt.md
+      - 参数估计: course/probability-statistics/parameter-estimation.md
+    - Graphics And Mixed Environment Symposium:
+      - 101. 现代计算机图形学入门:
+        - course/games/101/index.md
+        - Overview of Computer Graphics: course/games/101/lecture-01.md
+        - Review of Linear Algebra: course/games/101/lecture-02.md
+        - Transformation: course/games/101/lecture-03.md
+        - Transformation Cont.: course/games/101/lecture-04.md
+        - Rasterization 1 (Triangles): course/games/101/lecture-05.md
+        - Rasterization 2 (Antialiasing and Z-Buffering): course/games/101/lecture-06.md
+        - Shading 1 (Illumination, Shading and Graphics Pipeline): course/games/101/lecture-07.md
+        - Shading 2 (Shading, Pipeline and Texture Mapping): course/games/101/lecture-08.md
+        - Shading 3 (Texture Mapping Cont.): course/games/101/lecture-09.md
+        - Geometry 1 (Introduction): course/games/101/lecture-10.md
+        - Geometry 2 (Curves and Surfaces): course/games/101/lecture-11.md
+        - Geometry 3: course/games/101/lecture-12.md
+        - Ray Tracing 1: course/games/101/lecture-13.md
+        - Ray Tracing 2: course/games/101/lecture-14.md
+        - Ray Tracing 3: course/games/101/lecture-15.md
+        - Ray Tracing 4: course/games/101/lecture-16.md
+        - Materials and Appearances: course/games/101/lecture-17.md
+        - Advanced Topics in Rendering: course/games/101/lecture-18.md
+        - Cameras, Lenses and Light Fields: course/games/101/lecture-19.md
+        - Color and Perception: course/games/101/lecture-20.md
+        - Animation: course/games/101/lecture-21.md
+        - Animation Cont.: course/games/101/lecture-22.md
+      - 104. 现代游戏引擎:
+        - course/games/104/index.md
+        - From Getting Started To Practice: course/games/104/lecture-01.md
+        - Layered Architecture of Game Engine: course/games/104/lecture-02.md
+        - How to Build a Game World: course/games/104/lecture-03.md
+        - Rendering:
+          - Rendering on Game Engine: course/games/104/lecture-04.md
+          - Lighting, Materials and Shaders: course/games/104/lecture-05.md
+          - The Challenges and Fun of Rendering the Beautiful Mother Nature: course/games/104/lecture-06.md
+          - Render Pipeline, Post-processing and Everything: course/games/104/lecture-07.md
+        - Animation System:
+          - Basics of Animation Technology: course/games/104/lecture-08.md
+          - Advanced Animation Technology: course/games/104/lecture-09.md
+        - Physics System:
+          - Basic Concepts: course/games/104/lecture-10.md
+          - Applications: course/games/104/lecture-11.md
+        - Effects: course/games/104/lecture-12.md
+        - Tool Chains:
+          - Basics: course/games/104/lecture-13.md
+          - Applications & Advanced Topic: course/games/104/lecture-14.md
+        - Gameplay Systems:
+          - Complexity and Building Blocks: course/games/104/lecture-15.md
+          - Basic Artificial Intelligence: course/games/104/lecture-16.md
+          - Advanced Artificial Intelligence: course/games/104/lecture-17.md
+        - Online Gaming Architecture:
+          - Fundamentals: course/games/104/lecture-18.md
+          - Advanced Topic: course/games/104/lecture-19.md
+        - Data-Oriented Programming and Job System: course/games/104/lecture-20.md
+        - Dynamic Global Illumination and Lumen: course/games/104/lecture-21.md
+        - GPU Driven Geometry Pipeline - Nanite: course/games/104/lecture-22.md
+    - 腾讯游戏客户端公开课:
+      - 简历制作 & 面试辅导: course/tencent-game-client-course/interview-resume.md
+    - 高中英语作文框架: course/english/high-school-composition-framework.md
+  - 数据结构与算法:
+    - algorithm/index.md
+    - 数组: algorithm/array.md
+    - 链表: algorithm/linked-list.md
+    - 搜索:
+      - DFS: algorithm/search/dfs.md
+      - BFS: algorithm/search/bfs.md
+      - A*: algorithm/search/a-star.md
+      - 回溯法: algorithm/search/backtracking.md
+      - Dancing Links: algorithm/search/dancing-links.md
+    - 字符串:
+      - KMP: algorithm/string/kmp.md
+      - Rabin-Karp: algorithm/string/rabin-karp.md
+    - 图论:
+      - 树:
+        - 树相关概念: algorithm/graph/tree/tree-concept.md
+        - 二叉树遍历: algorithm/graph/tree/binary-tree-traversal.md
+        - 完全二叉树: algorithm/graph/tree/complete-binary-tree.md
+        - 从遍历序列构建二叉树: algorithm/graph/tree/construct-binary-tree-from-traversal.md
+        - 二叉搜索树: algorithm/graph/tree/binary-search-tree.md
+        - 并查集: algorithm/graph/tree/disjoint-set.md
+        - Huffman 树: algorithm/graph/tree/huffman-tree.md
+      - 最小生成树: algorithm/graph/minimum-spanning-tree.md
+    - 杂项: algorithm/misc.md
+  - 技术积累:
+    - accum/index.md
     - 编程语言:
       - C/C++:
-        - 函数调用约定: cs/pl/c-cpp/calling-convention.md
-        - STL 相关: cs/pl/c-cpp/stl.md
-        - C++ 11 相关: cs/pl/c-cpp/cpp-11.md
+        - 函数调用约定: accum/pl/c-cpp/calling-convention.md
+        - STL 相关: accum/pl/c-cpp/stl.md
+        - C++ 11 相关: accum/pl/c-cpp/cpp-11.md
       - C#:
-        - 弱引用: cs/pl/csharp/weak-references.md
-        - 模式匹配: cs/pl/csharp/pattern-matching.md
-        - GC.KeepAlive: cs/pl/csharp/gc-keep-alive.md
-        - Delegate Marshalling: cs/pl/csharp/delegate-marshalling.md
+        - 弱引用: accum/pl/csharp/weak-references.md
+        - 模式匹配: accum/pl/csharp/pattern-matching.md
+        - Delegate Marshalling: accum/pl/csharp/delegate-marshalling.md
       - Python:
-        - Python 基础: cs/pl/python/basic.md
-        - 执行一个模块: cs/pl/python/run-a-module.md
-        - 多版本和虚拟环境: cs/pl/python/multi-versions-and-venv.md
-        - 生成 requirements.txt: cs/pl/python/generate-requirements.md
-        - 卸载 Python: cs/pl/python/uninstall.md
-      - JS/TS:
-        - 将内存中数据下载为文件: cs/pl/js-ts/download-data-in-memory-as-file.md
-        - Patch package: cs/pl/js-ts/patch-package.md
+        - Python 基础: accum/pl/python/basic.md
+        - 执行一个模块: accum/pl/python/run-a-module.md
+        - 多版本和虚拟环境: accum/pl/python/multi-versions-and-venv.md
+        - 生成 requirements.txt: accum/pl/python/generate-requirements.md
+        - 卸载 Python: accum/pl/python/uninstall.md
       - Go:
-        - Go 基础: cs/pl/go/basic.md
-    - 数据结构与算法:
-      - cs/ds-and-algorithm/index.md
-      - 数组: cs/ds-and-algorithm/array.md
-      - 链表: cs/ds-and-algorithm/linked-list.md
-      - 搜索:
-        - DFS: cs/ds-and-algorithm/search/dfs.md
-        - BFS: cs/ds-and-algorithm/search/bfs.md
-        - A*: cs/ds-and-algorithm/search/a-star.md
-        - 回溯法: cs/ds-and-algorithm/search/backtracking.md
-        - Dancing Links: cs/ds-and-algorithm/search/dancing-links.md
-      - 字符串:
-        - KMP: cs/ds-and-algorithm/string/kmp.md
-        - Rabin-Karp: cs/ds-and-algorithm/string/rabin-karp.md
-      - 图论:
-        - 树:
-          - 树相关概念: cs/ds-and-algorithm/graph/tree/tree-concept.md
-          - 二叉树遍历: cs/ds-and-algorithm/graph/tree/binary-tree-traversal.md
-          - 完全二叉树: cs/ds-and-algorithm/graph/tree/complete-binary-tree.md
-          - 从遍历序列构建二叉树: cs/ds-and-algorithm/graph/tree/construct-binary-tree-from-traversal.md
-          - 二叉搜索树: cs/ds-and-algorithm/graph/tree/binary-search-tree.md
-          - 并查集: cs/ds-and-algorithm/graph/tree/disjoint-set.md
-          - Huffman 树: cs/ds-and-algorithm/graph/tree/huffman-tree.md
-        - 最小生成树: cs/ds-and-algorithm/graph/minimum-spanning-tree.md
-      - 杂项: cs/ds-and-algorithm/misc.md
+        - Go 基础: accum/pl/go/basic.md
     - 计算机图形学:
-      - cs/cg/index.md
-      - Half Lambert 勘误: cs/cg/half-lambert-corrigenda.md
-      - 法线贴图压缩: cs/cg/normal-map-compression.md
-      - 颜色空间: cs/cg/color-space.md
+      - accum/cg/index.md
+      - Half Lambert 勘误: accum/cg/half-lambert-corrigenda.md
+      - 法线贴图压缩: accum/cg/normal-map-compression.md
+      - 颜色空间: accum/cg/color-space.md
       - NPR: # Non-photorealistic rendering
-        - 卡通角色渲染: cs/cg/npr/character.md
-        - 仿星穹铁道的角色渲染: cs/cg/npr/hsr-character.md
-      - 逆向:
-        - 提取 WebGL Shaders: cs/cg/reverse/dump-webgl-shaders.md
-        - 反编译 DXBC: cs/cg/reverse/decompile-dxbc.md
-        - 用 RenderDoc 和模拟器抓帧安卓手游: cs/cg/reverse/renderdoc-capture-frame-in-emulator.md
-    - GAMES 课程: # GAMES: Graphics And Mixed Environment Symposium
-      - 101. 现代计算机图形学入门:
-        - cs/games-course/101/index.md
-        - Overview of Computer Graphics: cs/games-course/101/lecture-01.md
-        - Review of Linear Algebra: cs/games-course/101/lecture-02.md
-        - Transformation: cs/games-course/101/lecture-03.md
-        - Transformation Cont.: cs/games-course/101/lecture-04.md
-        - Rasterization 1 (Triangles): cs/games-course/101/lecture-05.md
-        - Rasterization 2 (Antialiasing and Z-Buffering): cs/games-course/101/lecture-06.md
-        - Shading 1 (Illumination, Shading and Graphics Pipeline): cs/games-course/101/lecture-07.md
-        - Shading 2 (Shading, Pipeline and Texture Mapping): cs/games-course/101/lecture-08.md
-        - Shading 3 (Texture Mapping Cont.): cs/games-course/101/lecture-09.md
-        - Geometry 1 (Introduction): cs/games-course/101/lecture-10.md
-        - Geometry 2 (Curves and Surfaces): cs/games-course/101/lecture-11.md
-        - Geometry 3: cs/games-course/101/lecture-12.md
-        - Ray Tracing 1: cs/games-course/101/lecture-13.md
-        - Ray Tracing 2: cs/games-course/101/lecture-14.md
-        - Ray Tracing 3: cs/games-course/101/lecture-15.md
-        - Ray Tracing 4: cs/games-course/101/lecture-16.md
-        - Materials and Appearances: cs/games-course/101/lecture-17.md
-        - Advanced Topics in Rendering: cs/games-course/101/lecture-18.md
-        - Cameras, Lenses and Light Fields: cs/games-course/101/lecture-19.md
-        - Color and Perception: cs/games-course/101/lecture-20.md
-        - Animation: cs/games-course/101/lecture-21.md
-        - Animation Cont.: cs/games-course/101/lecture-22.md
-      - 104. 现代游戏引擎:
-        - cs/games-course/104/index.md
-        - From Getting Started To Practice: cs/games-course/104/lecture-01.md
-        - Layered Architecture of Game Engine: cs/games-course/104/lecture-02.md
-        - How to Build a Game World: cs/games-course/104/lecture-03.md
-        - Rendering:
-          - Rendering on Game Engine: cs/games-course/104/lecture-04.md
-          - Lighting, Materials and Shaders: cs/games-course/104/lecture-05.md
-          - The Challenges and Fun of Rendering the Beautiful Mother Nature: cs/games-course/104/lecture-06.md
-          - Render Pipeline, Post-processing and Everything: cs/games-course/104/lecture-07.md
-        - Animation System:
-          - Basics of Animation Technology: cs/games-course/104/lecture-08.md
-          - Advanced Animation Technology: cs/games-course/104/lecture-09.md
-        - Physics System:
-          - Basic Concepts: cs/games-course/104/lecture-10.md
-          - Applications: cs/games-course/104/lecture-11.md
-        - Effects: cs/games-course/104/lecture-12.md
-        - Tool Chains:
-          - Basics: cs/games-course/104/lecture-13.md
-          - Applications & Advanced Topic: cs/games-course/104/lecture-14.md
-        - Gameplay Systems:
-          - Complexity and Building Blocks: cs/games-course/104/lecture-15.md
-          - Basic Artificial Intelligence: cs/games-course/104/lecture-16.md
-          - Advanced Artificial Intelligence: cs/games-course/104/lecture-17.md
-        - Online Gaming Architecture:
-          - Fundamentals: cs/games-course/104/lecture-18.md
-          - Advanced Topic: cs/games-course/104/lecture-19.md
-        - Data-Oriented Programming and Job System: cs/games-course/104/lecture-20.md
-        - Dynamic Global Illumination and Lumen: cs/games-course/104/lecture-21.md
-        - GPU Driven Geometry Pipeline - Nanite: cs/games-course/104/lecture-22.md
+        - 卡通角色渲染: accum/cg/npr/character.md
+        - 仿星穹铁道的角色渲染: accum/cg/npr/hsr-character.md
     - 命令行:
-      - Aria2: cs/cmd/aria2.md
-      - Git: cs/cmd/git.md
-    - 腾讯游戏客户端公开课:
-      - 简历制作 & 面试辅导: cs/tencent-game-client-course/interview-resume.md
+      - Aria2: accum/cmd/aria2.md
+      - Git: accum/cmd/git.md
     - Misc:
-      - Unicode: cs/misc/unicode.md
-      - 解决 CAS 时的 ABA 问题: cs/misc/solve-cas-aba-problem.md
+      - Unicode: accum/misc/unicode.md
+      - 解决 CAS 时的 ABA 问题: accum/misc/solve-cas-aba-problem.md
   - Unity 开发:
     - unity/index.md
     - 图形开发:
-      - 平滑模型法线: unity/graphics/smooth-model-normals.md
-      - 强制让 SRP Batch 支持 Multipass Shader: unity/graphics/srp-batch-multipass-shader.md
       - Shader 相关:
         - Material Property Drawer: unity/graphics/shader/material-property-drawer.md
-    - 编辑器开发:
-      - IL Post-Process: unity/editor/il-post-process.md
-      - 类似 Animation Window 的 Record 和 Preview 功能: unity/editor/animation-window-record-preview-impl.md
     - 源码分析:
       - Unity UI:
         - TODO: unity/src-analysis/ugui/placeholder.md
@@ -381,9 +368,3 @@ nav:
         - TODO: unity/src-analysis/urp/placeholder.md
     - 技术分析:
       - Full Generic Sharing: unity/tech-analysis/full-generic-sharing.md
-    - 解决方案:
-      - unity/troubleshooting/index.md
-      - GetComponentInParent on PrefabAsset returns null: unity/troubleshooting/get-component-in-parent-on-prefab-asset-returns-null.md
-  - Unreal 开发:
-    - unreal/index.md
-    - 编译 UE4 源码: unreal/compile-ue4-source-code.md

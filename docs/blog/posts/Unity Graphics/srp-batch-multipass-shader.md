@@ -1,6 +1,17 @@
-# 强制让 SRP Batch 支持 Multipass Shader
+---
+date: 2023-07-09
+draft: false
+authors:
+  - stalomeow
+categories:
+  - Unity Graphics
+---
 
-慎用！不一定适用于所有情况。
+# 让 SRP Batch 支持 Multipass Shader
+
+强行让 SRP Batch 支持 Multipass Shader，但不一定适用于所有情况。
+
+<!-- more -->
 
 ``` c#
 private void DrawBatchedPasses(ScriptableRenderContext context, ref RenderingData renderingData, CommandBuffer cmd)

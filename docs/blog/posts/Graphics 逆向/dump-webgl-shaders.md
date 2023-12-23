@@ -1,8 +1,17 @@
+---
+date: 2023-06-18
+draft: false
+authors:
+  - stalomeow
+categories:
+  - Graphics 逆向
+---
+
 # 提取 WebGL Shaders
 
-!!! abstract
+一键提取 WebGL Shaders 的代码。
 
-    一键提取 WebGL Shaders 的代码。
+<!-- more -->
 
 控制台里执行下面的代码。[^1]
 
