@@ -27,8 +27,6 @@
 
 如果本站对你有帮助的话...
 
-??? tip "Sponsor Me"
-
-    <figure markdown>
-        ![sponsor](assets/images/sponsor.jpg){ width="300px" }
-    </figure>
+<figure markdown>
+![sponsor](assets/images/sponsor.png){ width="200px" }
+</figure>

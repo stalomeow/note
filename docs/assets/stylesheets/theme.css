@@ -157,7 +157,7 @@ body {
 
 /* Blog */
 
-.md-post {
+.md-post--excerpt {
     border-top: .05rem solid var(--md-default-fg-color--lightest);
     padding-top: 1.5rem;
     margin-top: 1.5rem;

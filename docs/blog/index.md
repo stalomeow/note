@@ -1,11 +1,9 @@
 # 博客
 
-这里是我的博客。我会把偏实践向的文章，还有杂七杂八的东西放在这里。
+!!! abstract
 
-> 笔记和博客放一起的好处是搜索内容方便。 ~~绝对不是因为我懒。~~
+    这里的文章侧重于解决某个具体问题。
 
-<div class="grid cards" markdown>
+笔记和博客放一起的好处是搜索内容方便。 ~~绝对不是因为我懒。~~
 
-- [:fontawesome-solid-square-rss: RSS](/feed_rss_created.xml){ target="_blank" }
-
-</div>
+- <a href="/feed_rss_created.xml" target="_blank" markdown>:fontawesome-solid-square-rss: RSS 订阅</a>

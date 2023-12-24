@@ -18,8 +18,4 @@ $$
 
 网上大部分的文章里都**漏掉了平方**。《Unity Shader 入门精要》也是。
 
-??? info "小声 bb"
-
-    我个人感觉纠结这个没多大意义。图形学，最后的效果对就行了。
-
 [^1]: [Half Lambert - Valve Developer Community](https://developer.valvesoftware.com/wiki/Half_Lambert)

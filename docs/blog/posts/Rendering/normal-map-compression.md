@@ -1,0 +1,39 @@
+---
+date: 2023-06-24
+draft: true
+authors:
+  - stalomeow
+categories:
+  - Rendering
+---
+
+# 法线贴图压缩
+
+记录压缩法线贴图的几种方式。
+
+<!-- more -->
+
+## 双通道保存
+
+Normal Map 保存的是 TBN 空间下的归一化法线，z 分量是大于 0 的（接近 1），所以可以只保存 x 和 y 分量。[^1]
+
+z 分量用下面的公式就能算出：
+
+$$
+z = \sqrt{1 - x^2 - y^2}
+$$
+
+``` hlsl title="HLSL 代码"
+// x、y 分别存在 r、g 通道
+float3 normalTBN = float3(normalMap.rg, 0);
+normalTBN.z = sqrt(1 - dot(normalTBN.xy, normalTBN.xy));
+```
+
+## 球极投影
+
+双通道保存是以精度为代价的。主要是 gpu 插值的原因。
+
+TODO
+
+
+[^1]: [如何通过贴图的RG通道算出B通道？- 知乎](https://www.zhihu.com/question/291354871)
