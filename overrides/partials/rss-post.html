@@ -1,0 +1,70 @@
+<!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+
+    <!-- Post metadata -->
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+
+        <!-- Post Source -->
+        {% if post.src %}
+          <li class="md-meta__item">
+            <a
+              href="{{ post.src.url }}"
+              class="md-meta__link"
+              title="{{ post.src.description }}"
+            >
+              {{- post.src.title -}}
+            </a>
+            {#- Collapse whitespace -#}
+          </li>
+        {% endif %}
+
+        <!-- Post date -->
+        <li class="md-meta__item">
+          <time datetime="{{ post.publish }}">
+            {{- post.publish -}}
+          </time>
+          {#- Collapse whitespace -#}
+        </li>
+
+        <!-- Post author -->
+        {% if post.author %}
+          <li class="md-meta__item">
+            <span>{{- post.author -}}</span>
+            {#- Collapse whitespace -#}
+          </li>
+        {% endif %}
+
+        <!-- Post categories -->
+        {% if post.categories %}
+          <li class="md-meta__item">
+            {{ lang.t("blog.categories.in") }}
+            {% for category in post.categories %}
+              <a
+                href="{{ category.url | url }}"
+                class="md-meta__link"
+              >
+                {{- category.title -}}
+              </a>
+              {%- if loop.revindex > 1 %}, {% endif -%}
+            {% endfor -%}
+          </li>
+        {% endif %}
+
+      </ul>
+    </div>
+  </header>
+
+  <!-- Post content -->
+  <div class="md-post__content md-typeset">
+    {{ post.content }}
+
+    <!-- Continue reading link -->
+    <nav class="md-post__action">
+      <a href="{{ post.url | url }}" target="_blank">
+        {{ lang.t("blog.continue") }}
+      </a>
+    </nav>
+  </div>
+</article>

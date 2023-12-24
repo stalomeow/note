@@ -155,12 +155,14 @@ plugins:
       enable_creation_date: true
       exclude:
         - blog/** # 不要处理 Blog
+        - news/** # 不要处理 News
   - git-committers:
       enabled: !ENV [CI, false]
       repository: stalomeow/note
       branch: main
       exclude:
         - blog/** # 不要处理 Blog
+        - news/** # 不要处理 News
   - rss:
       enabled: !ENV [CI, false]
       match_path: 'blog/posts/.*'
@@ -214,6 +216,7 @@ plugins:
 hooks:
   - scripts/config_validator.py
   - scripts/index_validator.py
+  - scripts/news_fetcher.py
 
 
 nav:
@@ -222,6 +225,8 @@ nav:
     - 标签: tags.md
     - 网站资源: website-res.md
     - 在线工具: online-tools.md
+  - 资讯:
+    - news/index.md
   - 博客:
     - blog/index.md
   - 课程笔记:
