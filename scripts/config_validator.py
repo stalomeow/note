@@ -42,6 +42,6 @@ def on_config(config: MkDocsConfig):
 
     # watch additional directories
     config.watch.append('overrides')
-    config.watch.append('scripts')
+    # config.watch.append('scripts')
 
     return config

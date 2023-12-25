@@ -1,0 +1,49 @@
+user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0'
+
+pagination_per_page: 10
+
+categories:
+
+  blogs:
+    title: 博客
+    rss:
+      unity-technology-blog:
+        url: https://blog.unity.com/feed
+
+      unreal-blog:
+        url: https://www.unrealengine.com/zh-CN/rss
+
+      codingnow:
+        url: https://blog.codingnow.com/atom.xml
+
+      xuanyusong:
+        url: https://www.xuanyusong.com/feed
+
+      jendrikillner:
+        url: https://www.jendrikillner.com/index.xml
+
+      blogread:
+        url: https://rsshub.app/blogread/newest
+        posts_show_in_home: false
+
+  anime:
+    title: 动画
+    rss:
+      005tv:
+        url: https://rsshub.app/005tv/zx/latest
+        posts_show_in_home: false
+
+      bangumi:
+        url: https://rsshub.app/bangumi/tv/calendar/today
+        posts_show_in_home: false
+
+      dmzj:
+        url: https://rsshub.app/dmzj/news/donghuaqingbao
+        posts_show_in_home: false
+
+  pics:
+    title: 图片
+    rss:
+      pixiv:
+        url: https://rsshub.app/pixiv/ranking/week
+        posts_show_in_home: false

@@ -6,15 +6,15 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
 
-        <!-- Post Source -->
-        {% if post.src %}
+        <!-- Post Source RSS -->
+        {% if post.srcRSS %}
           <li class="md-meta__item">
             <a
-              href="{{ post.src.url }}"
+              href="{{ post.srcRSS.firstPageCanonicalUrl }}"
               class="md-meta__link"
-              title="{{ post.src.description }}"
+              title="{{ post.srcRSS.description }}"
             >
-              {{- post.src.title -}}
+              {{- post.srcRSS.title -}}
             </a>
             {#- Collapse whitespace -#}
           </li>
@@ -28,25 +28,12 @@
           {#- Collapse whitespace -#}
         </li>
 
-        <!-- Post author -->
-        {% if post.author %}
-          <li class="md-meta__item">
-            <span>{{- post.author -}}</span>
-            {#- Collapse whitespace -#}
-          </li>
-        {% endif %}
-
-        <!-- Post categories -->
-        {% if post.categories %}
+        <!-- Post tags -->
+        {% if post.tags %}
           <li class="md-meta__item">
             {{ lang.t("blog.categories.in") }}
-            {% for category in post.categories %}
-              <a
-                href="{{ category.url | url }}"
-                class="md-meta__link"
-              >
-                {{- category.title -}}
-              </a>
+            {% for tag in post.tags %}
+              {{- tag -}}
               {%- if loop.revindex > 1 %}, {% endif -%}
             {% endfor -%}
           </li>
@@ -62,7 +49,7 @@
 
     <!-- Continue reading link -->
     <nav class="md-post__action">
-      <a href="{{ post.url | url }}" target="_blank">
+      <a href="{{ post.url }}" target="_blank">
         {{ lang.t("blog.continue") }}
       </a>
     </nav>
