@@ -11,6 +11,7 @@ from tempfile import mkdtemp
 from shutil import rmtree
 from datetime import datetime
 from paginate import Page as Pagination
+from typing import Union
 
 from mkdocs.config import Config
 from mkdocs.config.config_options import DictOfItems, Optional, SubConfig, Type
@@ -156,7 +157,7 @@ class PostInfo(object):
             self.content += entry.summary_detail.value
 
 class CategoryInfo(MultiPagePostsInfo):
-    def __init__(self, slug: str, title: str, description: str | None, rssList: list[RSSInfo]) -> None:
+    def __init__(self, slug: str, title: str, description: Union[str, None], rssList: list[RSSInfo]) -> None:
         posts = itertools.chain(*map(lambda r: r.posts, rssList))
         super().__init__(slug, sorted(posts, key=lambda p: p.publish, reverse=True))
 
