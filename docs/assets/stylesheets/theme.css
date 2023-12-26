@@ -168,3 +168,10 @@ body {
 .md-content {
     overflow-x: hidden;
 }
+
+/* 避免博客文章没有内容时，整个布局出错 */
+@media screen and (min-width: 76.25em) {
+    .md-sidebar {
+        height: auto;
+    }
+}

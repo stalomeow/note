@@ -48,6 +48,10 @@ def main():
         args.postCategories[0] if len(args.postCategories) > 0 else '',
         args.postSlug + '.md'
     ))
+    if os.path.exists(postFilePath):
+        print(f'创建失败\n文件 "{postFilePath}" 已存在')
+        return
+
     postFileDir = os.path.dirname(postFilePath)
 
     if not os.path.exists(postFileDir):
@@ -71,7 +75,7 @@ def main():
         fp.write(f'\n')
         fp.write(f'<!-- more -->\n')
 
-    os.system(postFilePath)
+    os.system(f'"{postFilePath}"')
 
 if __name__ == '__main__':
     main()
