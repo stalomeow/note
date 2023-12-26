@@ -225,8 +225,6 @@ nav:
     - 标签: tags.md
     - 网站资源: website-res.md
     - 在线工具: online-tools.md
-  - 资讯:
-    - news/index.md
   - 博客:
     - blog/index.md
   - 课程笔记:
@@ -369,3 +367,5 @@ nav:
         - Full Generic Sharing: accum/unity/tech-analysis/full-generic-sharing.md
     - Misc:
       - Unicode: accum/misc/unicode.md
+  - 订阅资讯:
+    - news/index.md

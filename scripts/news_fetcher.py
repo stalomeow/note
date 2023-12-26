@@ -1,29 +1,29 @@
-import logging
 import feedparser
-import time
-import os
-import itertools
-import yaml
 import functools
+import itertools
+import logging
+import os
+import time
+import yaml
 
-from tempfile import mkdtemp
-from shutil import rmtree
-from datetime import datetime
+from datetime import datetime, timedelta
 from paginate import Page as Pagination
-from typing import Union
+from shutil import rmtree
+from tempfile import mkdtemp
+from typing import Iterable, Union
 
 from mkdocs.config import Config
 from mkdocs.config.config_options import DictOfItems, Optional, SubConfig, Type
-from mkdocs.structure.pages import Page
-from mkdocs.structure.nav import Section
-from mkdocs.structure.files import File, Files, InclusionLevel
-from mkdocs.structure.nav import Navigation
 from mkdocs.config.defaults import MkDocsConfig
+from mkdocs.exceptions import PluginError
+from mkdocs.structure.files import InclusionLevel, File, Files
+from mkdocs.structure.nav import Section
+from mkdocs.structure.nav import Navigation
+from mkdocs.structure.pages import Page
 from mkdocs.utils.templates import TemplateContext
 
-# ------------------------------------------------
-# Configs
-# ------------------------------------------------
+
+# region Configs
 
 class RSSConfig(Config):
     url = Type(str)
@@ -42,41 +42,65 @@ class NewsConfig(Config):
     pagination_per_page = Type(int, default=10)
     categories = DictOfItems(SubConfig(CategoryConfig), default={})
 
-# ------------------------------------------------
-# Structs
-# ------------------------------------------------
+# endregion
+
+
+# region Structs
 
 class MultiPagePostsInfo(object):
-    def __init__(self, slug: str, posts: list["PostInfo"]) -> None:
-        self.slug = slug
-        self.posts = posts
+    GENERATED_FILE_TAG = 'stalomeow/news'
+
+    def __init__(self, slug: str) -> None:
+        self.slug: str = slug
+        self.posts: list[PostInfo] = []
         self.files: list[File] = []
+
+    def __del__(self):
+        for file in self.files:
+            if getattr(file, 'generated_by', None) != self.GENERATED_FILE_TAG:
+                continue
+            # 只删除自动生成的文件
+            os.remove(file.abs_src_path)
+        self.files.clear()
 
     @property
     def firstPageCanonicalUrl(self):
+        if len(self.files) < 1:
+            return None
         return self.files[0].page.canonical_url
 
-    def _getFileDir(self):
+    def _getFileDir(self, pageNum: int):
+        """ 文件的相对目录 """
         pass
 
-    def _getFileContent(self):
+    def _getFileContent(self, pageNum: int):
+        """ 文件的内容 """
         pass
 
-    def _getPageFilePath(self, pageNum):
+    def _getPageFilePath(self, pageNum: int):
+        """ 分页文件的路径 """
         if pageNum == 1:
-            return os.path.join(self._getFileDir(), self.slug + '.md')
-        return os.path.join(self._getFileDir(), self.slug, 'page', f'{pageNum}.md')
+            return os.path.join(self._getFileDir(pageNum), self.slug + '.md')
+        return os.path.join(self._getFileDir(pageNum), self.slug, 'page', f'{pageNum}.md')
 
-    def generateFiles(self, srcDir: str, files: Files, config: MkDocsConfig):
+    def generateFiles(self, srcDir: str, files: Files, config: MkDocsConfig, *, sortPosts=False):
+        """ 在 `srcDir` 里生成文件 """
+
+        # 按时间倒序排序
+        if sortPosts:
+            self.posts.sort(key=lambda p: p.publish, reverse=True)
+
         i = 0
-
         while i < len(self.posts):
             lowInclusive = i
             highExclusive = min(lowInclusive + newsConfig.pagination_per_page, len(self.posts))
             i = highExclusive
 
-            path = self._getPageFilePath(lowInclusive // newsConfig.pagination_per_page + 1)
+            pageNum = lowInclusive // newsConfig.pagination_per_page + 1 # 页码，从 1 开始
+            path = self._getPageFilePath(pageNum)
             file = files.get_file_from_path(path)
+
+            # 不存在则生成文件
             if not file:
                 file = File(
                     path,
@@ -91,11 +115,11 @@ class MultiPagePostsInfo(object):
                 # of the file system. This is more or less a new quasi-standard that
                 # still needs to be adopted by MkDocs, and was introduced by the
                 # git-revision-date-localized-plugin - see https://bit.ly/3ZUmdBx
-                file.generated_by = 'stalomeow/news'
+                file.generated_by = self.GENERATED_FILE_TAG
 
                 # Create file in temporary directory and temporarily remove
                 # from navigation, as we'll add it at a specific location
-                self._saveFile(file.abs_src_path, self._getFileContent())
+                self._saveFile(file.abs_src_path, self._getFileContent(pageNum))
 
             self.files.append(file)
             file.parent_info__ = self
@@ -107,16 +131,9 @@ class MultiPagePostsInfo(object):
         with open(path, "w", encoding = "utf-8") as f:
             f.write(content)
 
-    def deleteFiles(self, srcDir: str):
-        for file in self.files:
-            if srcDir not in file.abs_src_path:
-                continue
-            os.remove(file.abs_src_path)
-        self.files.clear()
-
 class RSSInfo(MultiPagePostsInfo):
     def __init__(self, feed, slug, config: RSSConfig) -> None:
-        super().__init__(slug, [])
+        super().__init__(slug)
 
         self.url = feed.link
         self.title = feed.title
@@ -127,10 +144,10 @@ class RSSInfo(MultiPagePostsInfo):
         if config.description is not None:
             self.description = config.description
 
-    def _getFileDir(self):
+    def _getFileDir(self, pageNum: int):
         return 'news/rss'
 
-    def _getFileContent(self):
+    def _getFileContent(self, pageNum: int):
         return f'# {self.title}\n\n- 简介：{self.description}\n- 链接：[{self.url}]({self.url}){{ target="_blank" }}'
 
 class PostInfo(object):
@@ -158,46 +175,49 @@ class PostInfo(object):
                 self.content += entry.summary_detail.value
 
 class CategoryInfo(MultiPagePostsInfo):
-    def __init__(self, slug: str, title: str, description: Union[str, None], rssList: list[RSSInfo]) -> None:
-        posts = itertools.chain(*map(lambda r: r.posts, rssList))
-        super().__init__(slug, sorted(posts, key=lambda p: p.publish, reverse=True))
+    def __init__(self, slug: str, title: str, description: Union[str, None]) -> None:
+        super().__init__(slug)
 
         self.title = title
         self.description = description
-        self.rssList = rssList
+        self.rssList: list[RSSInfo] = []
 
-    def _getFileDir(self):
+    def _getFileDir(self, pageNum: int):
         return 'news/cats'
 
-    def _getFileContent(self):
+    def _getFileContent(self, pageNum: int):
         content = f'# {self.title}'
         if self.description is not None:
             content += f'\n\n{self.description}'
         return content
 
+    def generateFiles(self, srcDir: str, files: Files, config: MkDocsConfig, *, sortPosts=False):
+        self.posts.clear()
+        self.posts.extend(itertools.chain(*map(lambda r: r.posts, self.rssList)))
+        return super().generateFiles(srcDir, files, config, sortPosts=sortPosts)
+
 class HomeInfo(MultiPagePostsInfo):
     def __init__(self) -> None:
-        super().__init__('index', [])
+        super().__init__('index')
 
-    def _getFileDir(self):
+    def _getFileDir(self, pageNum: int):
         return 'news'
 
-    def _getFileContent(self):
+    def _getFileContent(self, pageNum: int):
         return ''
 
-    def _getPageFilePath(self, pageNum):
+    def _getPageFilePath(self, pageNum: int):
         if pageNum == 1:
             return super()._getPageFilePath(pageNum)
-        return os.path.join(self._getFileDir(), 'page', f'{pageNum}.md')
+        return os.path.join(self._getFileDir(pageNum), 'page', f'{pageNum}.md')
 
-# ------------------------------------------------
-# Logics
-# ------------------------------------------------
+# endregion
 
-temp_dir = None
+
+temp_dir: str = None
 newsConfig: NewsConfig = None
 categoryList: list[CategoryInfo] = []
-homeInfo = HomeInfo()
+homeInfo: HomeInfo = None
 isServeMode = False
 log = logging.getLogger('mkdocs.plugins')
 
@@ -234,63 +254,60 @@ def loadNewsConfig(config: MkDocsConfig):
 
     errors, warnings = newsConfig.validate()
     for _, w in warnings:
-        print(w)
+        log.warning(w)
+
     for _, e in errors:
-        # raise PluginError(
-        #     f"Error reading authors file '{path}' in '{docs}':\n"
-        #     f"{e}"
-        # )
-        print(e)
+        raise PluginError(
+            f"Error reading '{configPath}':\n"
+            f"{e}"
+        )
 
 @build_only
 def on_files(files: Files, config: MkDocsConfig):
-    for cat in categoryList:
-        cat.deleteFiles(temp_dir)
-        for rss in cat.rssList:
-            rss.deleteFiles(temp_dir)
+    global homeInfo
+    homeInfo = HomeInfo()
     categoryList.clear()
-    homeInfo.posts.clear()
-    homeInfo.deleteFiles(temp_dir)
 
     loadNewsConfig(config)
 
     for catSlug, catConfig in newsConfig.categories.items():
-        rssList = []
+        catInfo = CategoryInfo(catSlug, catConfig.title, catConfig.description)
+        categoryList.append(catInfo)
+
         for rssSlug, rssConfig in catConfig.rss.items():
             data = feedparser.parse(rssConfig.url, agent=newsConfig.user_agent)
 
             try:
                 rssInfo = RSSInfo(data.feed, rssSlug, rssConfig)
-                rssList.append(rssInfo)
+                catInfo.rssList.append(rssInfo)
             except Exception as e:
                 log.warning(f'Failed to parse {rssConfig.url}; {e}')
                 continue
 
+            # 添加 RSS 中的文章
             for entry in data.entries:
                 post = PostInfo(entry, rssInfo, tags=rssConfig.posts_tags)
                 rssInfo.posts.append(post)
+            rssInfo.generateFiles(temp_dir, files, config, sortPosts=True)
 
-            rssInfo.posts.sort(key=lambda p: p.publish, reverse=True)
-            rssInfo.generateFiles(temp_dir, files, config)
-
+            # 添加 RSS 中的文章到首页
             if rssConfig.posts_show_in_home:
                 newPostCount = 0
                 for post in rssInfo.posts:
+                    # 只添加两天内的文章
                     if (post.publish - datetime.today().date()).days < -2:
                         break
                     newPostCount += 1
                     homeInfo.posts.append(post)
 
+                # 如果没有新文章，则添加最新的一篇
                 if newPostCount == 0 and len(rssInfo.posts) > 0:
                     homeInfo.posts.append(rssInfo.posts[0])
 
-        catInfo = CategoryInfo(catSlug, catConfig.title, catConfig.description, rssList)
-        catInfo.generateFiles(temp_dir, files, config)
-        categoryList.append(catInfo)
+        catInfo.generateFiles(temp_dir, files, config, sortPosts=True)
 
     categoryList.sort(key=lambda c: c.title)
-    homeInfo.posts.sort(key=lambda p: p.publish, reverse=True)
-    homeInfo.generateFiles(temp_dir, files, config)
+    homeInfo.generateFiles(temp_dir, files, config, sortPosts=True)
 
 @build_only
 def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
@@ -302,62 +319,42 @@ def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
         if page.abs_url == '/news/':
             entry = page
 
-    last = genCatPages(entry, entry, nav, config, files)
-    genRSSPages(entry, last, nav, config, files)
+    last = genPaginationFirstPages(entry, entry, nav, config, '分类', categoryList)
+    genPaginationFirstPages(entry, last, nav, config, '来源', sorted(
+        itertools.chain(*map(lambda c: c.rssList, categoryList)), key=lambda r: r.title)
+    )
 
-    genRSSPaginationPages(entry, entry, nav, config, files)
-    genCatPaginationPages(entry, entry, nav, config, files)
-    genHomePaginationPages(entry, entry, nav, config, files)
-
-def genRSSPages(entry: Page, prev: Page, nav: Navigation, config: MkDocsConfig, files: Files):
-    section = Section('来源', [])
-    section.parent = entry.parent
-    entry.parent.children.append(section)
-
-    end = prev.next_page
-
-    for rssInfo in sorted(itertools.chain(*map(lambda c: c.rssList, categoryList)), key=lambda r: r.title):
-        p = Page(rssInfo.title, rssInfo.files[0], config)
-        nav.pages.append(p)
-
-        p.parent = section
-        section.children.append(p)
-
-        p.previous_page = prev
-        prev.next_page = p
-        prev = p
-
-        p.next_page = end
-
-    if end is not None:
-        end.previous_page = prev
-    return prev
-
-def genRSSPaginationPages(entry: Page, prev: Page, nav: Navigation, config: MkDocsConfig, files: Files):
     for rssInfo in itertools.chain(*map(lambda c: c.rssList, categoryList)):
-        for file in rssInfo.files[1:]:
-            p = rssInfo.files[0].page
-            subPage = Page(rssInfo.title, file, config)
-            subPage.previous_page = p.previous_page
-            subPage.next_page = p.next_page
-            subPage.parent = p.parent
+        genPaginationRestPages(rssInfo, nav, config)
+    for catInfo in categoryList:
+        genPaginationRestPages(catInfo, nav, config)
+    genPaginationRestPages(homeInfo, nav, config)
 
-            nav.pages.append(subPage)
-
-def genCatPages(entry: Page, prev: Page, nav: Navigation, config: MkDocsConfig, files: Files):
-    section = Section('分类', [])
+def genPaginationFirstPages(
+        entry: Page,
+        prev: Page,
+        nav: Navigation,
+        config: MkDocsConfig,
+        sectionName: str,
+        postsInfoList: Union[Iterable[RSSInfo], Iterable[CategoryInfo]]
+    ):
+    section = Section(sectionName, [])
     section.parent = entry.parent
     entry.parent.children.append(section)
 
     end = prev.next_page
 
-    for cat in categoryList:
-        p = Page(cat.title, cat.files[0], config)
+    for postsInfo in postsInfoList:
+        if len(postsInfo.files) < 1:
+            continue
+
+        p = Page(postsInfo.title, postsInfo.files[0], config)
         nav.pages.append(p)
 
         p.parent = section
         section.children.append(p)
 
+        # 把页面串起来
         p.previous_page = prev
         prev.next_page = p
         prev = p
@@ -368,20 +365,13 @@ def genCatPages(entry: Page, prev: Page, nav: Navigation, config: MkDocsConfig, 
         end.previous_page = prev
     return prev
 
-def genCatPaginationPages(entry: Page, prev: Page, nav: Navigation, config: MkDocsConfig, files: Files):
-    for cat in categoryList:
-        for file in cat.files[1:]:
-            p = cat.files[0].page
-            subPage = Page(cat.title, file, config)
-            subPage.previous_page = p.previous_page
-            subPage.next_page = p.next_page
-            subPage.parent = p.parent
+def genPaginationRestPages(postsInfo: MultiPagePostsInfo, nav: Navigation, config: MkDocsConfig):
+    if len(postsInfo.files) < 2:
+        return
 
-            nav.pages.append(subPage)
-
-def genHomePaginationPages(entry: Page, prev: Page, nav: Navigation, config: MkDocsConfig, files: Files):
-    for file in homeInfo.files[1:]:
-        p = homeInfo.files[0].page
+    p = postsInfo.files[0].page
+    # 把生成的分页文件的 previous_page、next_page、parent 设置成和第一页一样
+    for file in postsInfo.files[1:]:
         subPage = Page(p.title, file, config)
         subPage.previous_page = p.previous_page
         subPage.next_page = p.next_page
@@ -398,7 +388,13 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Fil
 
     if isinstance(page.file.parent_info__, HomeInfo):
         firstPage = page.file.parent_info__.files[0].page
-        return firstPage.markdown
+        content = firstPage.markdown
+
+        # 在第一页加上更新时间
+        if page is firstPage:
+            now = (datetime.utcnow() + timedelta(hours=+8))
+            content += f'\n\n> 上次更新时间：{now.strftime("%Y-%m-%d %H:%M:%S")} (UTC+8)。'
+        return content
 
 @build_only
 def on_page_context(context: TemplateContext, page: Page, config: MkDocsConfig, nav: Navigation):
