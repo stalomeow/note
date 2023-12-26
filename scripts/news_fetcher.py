@@ -1,11 +1,10 @@
 import logging
 import feedparser
-import copy
 import time
-import posixpath
 import os
 import itertools
 import yaml
+import functools
 
 from tempfile import mkdtemp
 from shutil import rmtree
@@ -151,10 +150,12 @@ class PostInfo(object):
             self.tags = None
 
         self.content = f'<h2 id="_1"><a class="toclink" href="{entry.link}" target="_blank">{entry.title}</a></h2>'
-        if entry.summary_detail.type == 'text/plain':
-            self.content += f'<p>{entry.summary_detail.value}</p>'
-        else:
-            self.content += entry.summary_detail.value
+
+        if hasattr(entry, 'summary_detail'):
+            if entry.summary_detail.type == 'text/plain':
+                self.content += f'<p>{entry.summary_detail.value}</p>'
+            else:
+                self.content += entry.summary_detail.value
 
 class CategoryInfo(MultiPagePostsInfo):
     def __init__(self, slug: str, title: str, description: Union[str, None], rssList: list[RSSInfo]) -> None:
@@ -193,11 +194,31 @@ class HomeInfo(MultiPagePostsInfo):
 # Logics
 # ------------------------------------------------
 
-temp_dir = mkdtemp()
+temp_dir = None
 newsConfig: NewsConfig = None
 categoryList: list[CategoryInfo] = []
 homeInfo = HomeInfo()
+isServeMode = False
+log = logging.getLogger('mkdocs.plugins')
 
+def build_only(func):
+    @functools.wraps(func)
+    def f(*args, **kwargs):
+        if not isServeMode:
+            return func(*args, **kwargs)
+    return f
+
+def on_startup(command: str, dirty: bool):
+    global isServeMode
+    isServeMode = (command == 'serve')
+    _on_startup_impl(command, dirty)
+
+@build_only
+def _on_startup_impl(command: str, dirty: bool):
+    global temp_dir
+    temp_dir = mkdtemp()
+
+@build_only
 def on_shutdown():
     rmtree(temp_dir)
 
@@ -221,6 +242,7 @@ def loadNewsConfig(config: MkDocsConfig):
         # )
         print(e)
 
+@build_only
 def on_files(files: Files, config: MkDocsConfig):
     for cat in categoryList:
         cat.deleteFiles(temp_dir)
@@ -237,18 +259,30 @@ def on_files(files: Files, config: MkDocsConfig):
         for rssSlug, rssConfig in catConfig.rss.items():
             data = feedparser.parse(rssConfig.url, agent=newsConfig.user_agent)
 
-            rssInfo = RSSInfo(data.feed, rssSlug, rssConfig)
-            rssList.append(rssInfo)
+            try:
+                rssInfo = RSSInfo(data.feed, rssSlug, rssConfig)
+                rssList.append(rssInfo)
+            except Exception as e:
+                log.warning(f'Failed to parse {rssConfig.url}; {e}')
+                continue
 
             for entry in data.entries:
                 post = PostInfo(entry, rssInfo, tags=rssConfig.posts_tags)
                 rssInfo.posts.append(post)
 
-                if rssConfig.posts_show_in_home:
-                    homeInfo.posts.append(post)
-
             rssInfo.posts.sort(key=lambda p: p.publish, reverse=True)
             rssInfo.generateFiles(temp_dir, files, config)
+
+            if rssConfig.posts_show_in_home:
+                newPostCount = 0
+                for post in rssInfo.posts:
+                    if (post.publish - datetime.today().date()).days < -2:
+                        break
+                    newPostCount += 1
+                    homeInfo.posts.append(post)
+
+                if newPostCount == 0 and len(rssInfo.posts) > 0:
+                    homeInfo.posts.append(rssInfo.posts[0])
 
         catInfo = CategoryInfo(catSlug, catConfig.title, catConfig.description, rssList)
         catInfo.generateFiles(temp_dir, files, config)
@@ -258,6 +292,7 @@ def on_files(files: Files, config: MkDocsConfig):
     homeInfo.posts.sort(key=lambda p: p.publish, reverse=True)
     homeInfo.generateFiles(temp_dir, files, config)
 
+@build_only
 def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
     if len(newsConfig) == 0:
         return
@@ -354,6 +389,7 @@ def genHomePaginationPages(entry: Page, prev: Page, nav: Navigation, config: MkD
 
         nav.pages.append(subPage)
 
+@build_only
 def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Files):
     if not hasattr(page.file, 'parent_info__'):
         return
@@ -364,6 +400,7 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Fil
         firstPage = page.file.parent_info__.files[0].page
         return firstPage.markdown
 
+@build_only
 def on_page_context(context: TemplateContext, page: Page, config: MkDocsConfig, nav: Navigation):
     if not hasattr(page.file, 'parent_info__'):
         return

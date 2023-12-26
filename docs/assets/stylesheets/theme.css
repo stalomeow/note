@@ -163,3 +163,8 @@ body {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem !important;
 }
+
+/* 禁止 Markdown 内容横向溢出 */
+.md-content {
+    overflow-x: hidden;
+}
