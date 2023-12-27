@@ -391,6 +391,8 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Fil
         return
 
     page.meta.setdefault('template', 'rss-news.html')
+    page.meta.setdefault('search', { 'exclude': True })
+    page.meta.setdefault('comments', False)
 
     if isinstance(page.file.parent_info__, HomeInfo):
         firstPage = page.file.parent_info__.files[0].page

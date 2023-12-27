@@ -1,4 +1,6 @@
 ---
+search:
+  exclude: true
 comments: false
 ---
 

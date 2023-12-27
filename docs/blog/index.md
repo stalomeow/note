@@ -1,3 +1,9 @@
+---
+search:
+  exclude: true
+comments: false
+---
+
 # 博客
 
 !!! abstract
