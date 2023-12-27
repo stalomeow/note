@@ -7,11 +7,21 @@ categories:
   - Unity Editor
 ---
 
-# 将 GIF 直接导入为 Animation Clip
+# 将 GIF 直接导入为 AnimationClip
+
+写一个 `ScriptedImporter`，让 Unity 把 GIF 动图直接导入为 `AnimationClip`。这个 `AnimationClip` 通过控制 `SpriteRenderer.m_Sprite` 来实现帧动画。
 
 <!-- more -->
 
-``` cs
+## 导出 GIF 的关键帧图片
+
+## 获取每个关键帧的起始时间
+
+## C# 创建 AnimationClip
+
+## 完整代码
+
+``` cs title="GIFImporter.cs"
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -105,7 +115,7 @@ public class GIFImporter : ScriptedImporter
 }
 ```
 
-``` cs
+``` cs title="GIFImporterEditor.cs"
 using UnityEditor;
 using UnityEditor.AssetImporters;
 
