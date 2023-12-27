@@ -1,4 +1,9 @@
-# Hello, World!
+---
+search:
+  exclude: true
+---
+
+# 欢迎~♪
 
 !!! abstract ""
 
@@ -10,11 +15,14 @@
 
 ## 简介
 
-嗨~♪ 欢迎来看我的笔记 ο(=•ω＜=)ρ⌒☆。
+我目前就读于 XDU，大二，CS 专业。本站兼有 ==笔记、博客、RSS 阅读器== 三个功能。笔记和博客放一起的好处是搜索内容方便。<del>绝对不是因为我懒。</del>
 
 ---
 
-我目前就读于 XDU，大二，CS 专业，做游戏开发。计算机专业需要学习的东西比较多，有些时间久了容易忘记，所以我搭建了这个网站用来记笔记。网站使用 MkDocs 框架 + Material 主题制作，部署在 Vercel 上。按照我的习惯，对 Material 主题进行了一些定制。
+一些技术细节：
+
+- 网站使用 [MkDocs 框架](https://www.mkdocs.org/){ target="_blank" } + [Material 主题](https://squidfunk.github.io/mkdocs-material/){ target="_blank" } 制作，部署在 [Vercel](https://vercel.com/){ target="_blank" } 上。按照我的习惯，对 Material 主题做了一些定制。
+- RSS 阅读器是自己编写 [MkDocs Hooks](https://www.mkdocs.org/user-guide/configuration/#hooks){ target="_blank" } 实现的。利用 [GitHub Actions](https://docs.github.com/en/actions){ target="_blank" } 定时自动更新。
 
 ## 勘误
 
@@ -28,5 +36,5 @@
 如果本站对你有帮助的话...
 
 <figure markdown>
-![sponsor](assets/images/sponsor.png){ width="200px" }
+![Sponsor Me!](assets/images/sponsor.png){ width="200px" }
 </figure>

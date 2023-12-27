@@ -1,12 +1,12 @@
+import calendar
 import feedparser
 import functools
 import itertools
 import logging
 import os
-import time
 import yaml
 
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from paginate import Page as Pagination
 from shutil import rmtree
 from tempfile import mkdtemp
@@ -21,6 +21,9 @@ from mkdocs.structure.nav import Section
 from mkdocs.structure.nav import Navigation
 from mkdocs.structure.pages import Page
 from mkdocs.utils.templates import TemplateContext
+
+
+TIME_ZONE = timezone(timedelta(hours=+8))
 
 
 # region Configs
@@ -156,10 +159,12 @@ class PostInfo(object):
         self.url = getattr(entry, 'link', srcRSS.url)
 
         if hasattr(entry, 'published_parsed'):
-            timestamp = time.mktime(entry.published_parsed)
-            self.publish = datetime.fromtimestamp(timestamp).date()
+            # 从 GMT 时间计算 timestamp
+            timestamp = calendar.timegm(entry.published_parsed)
+            # 转换到指定的时区
+            self.publish = datetime.fromtimestamp(timestamp, timezone.utc).astimezone(TIME_ZONE).date()
         else:
-            self.publish = datetime.today().date()
+            self.publish = datetime.now(TIME_ZONE).date()
 
         if tags and hasattr(entry, 'tags'):
             self.tags = [tag.term for tag in entry.tags]
@@ -295,7 +300,7 @@ def on_files(files: Files, config: MkDocsConfig):
                 newPostCount = 0
                 for post in rssInfo.posts:
                     # 只添加两天内的文章
-                    if (post.publish - datetime.today().date()).days < -2:
+                    if (post.publish - datetime.now(TIME_ZONE).date()).days < -2:
                         break
                     newPostCount += 1
                     homeInfo.posts.append(post)
@@ -321,8 +326,9 @@ def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
 
     last = genPaginationFirstPages(entry, entry, nav, config, '分类', categoryList)
     genPaginationFirstPages(entry, last, nav, config, '来源', sorted(
-        itertools.chain(*map(lambda c: c.rssList, categoryList)), key=lambda r: r.title)
-    )
+        itertools.chain(*map(lambda c: c.rssList, categoryList)),
+        key=lambda r: r.title
+    ))
 
     for rssInfo in itertools.chain(*map(lambda c: c.rssList, categoryList)):
         genPaginationRestPages(rssInfo, nav, config)
@@ -388,13 +394,14 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Fil
 
     if isinstance(page.file.parent_info__, HomeInfo):
         firstPage = page.file.parent_info__.files[0].page
-        content = firstPage.markdown
 
         # 在第一页加上更新时间
         if page is firstPage:
-            now = (datetime.utcnow() + timedelta(hours=+8))
-            content += f'\n\n> 上次更新时间：{now.strftime("%Y-%m-%d %H:%M:%S")} (UTC+8)。'
-        return content
+            now = datetime.now(TIME_ZONE).strftime("%Y-%m-%d %H:%M:%S")
+            return markdown + f'\n\n> 上次更新时间：{now} ({TIME_ZONE})。'
+
+        # 后面几页直接用第一页的内容
+        return firstPage.markdown
 
 @build_only
 def on_page_context(context: TemplateContext, page: Page, config: MkDocsConfig, nav: Navigation):
