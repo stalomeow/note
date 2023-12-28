@@ -1,6 +1,6 @@
 ---
 date: 2023-11-19
-draft: true
+draft: false
 authors:
   - stalomeow
 categories:
@@ -15,11 +15,31 @@ categories:
 
 ## 导出 GIF 的关键帧图片
 
-## 获取每个关键帧的起始时间
+读取 GIF 用 `System.Drawing.Image` 实现。
+
+- 获取 GIF 的帧数：`Image.GetFrameCount(FrameDimension.Time)`。
+
+- 导出第 $i$ 帧的图片：
+
+    1. `Image.SelectActiveFrame(FrameDimension.Time, i)` 激活第 $i$ 帧。
+    2. `Image.Save(ms, ImageFormat.Png)` 保存到名为 `ms` 的 `Stream` 中。
+    3. 创建 `Texture2D` 和 `Sprite`。
+
+## 获取每个关键帧的持续时间
+
+根据微软的文档，`Image.PropertyItems` 中 `Id==0x5100` 的属性保存的是 `FrameDelay`。[^1] 类型是 `uint[]` [^2]，长度为 GIF 的帧数。`FrameDelay[i]` 表示第 $i$ 帧图片停留的时间，单位是 $10^{-2}$ 秒。
+
+然而，实际上 `PropertyItem.Value` 的类型是 `byte[]`，我们需要自己把 4 个 `byte` 转成 1 个 `uint`。这就涉及到字节序的问题，可是文档上没提到字节序相关的问题。我猜是和当前系统架构有关，所以就直接用 `BitConverter` 做转换了。
 
 ## C# 创建 AnimationClip
 
+因为要操作的是 `SpriteRenderer.m_Sprite`，所以需要创建 `PPtrCurve` (object reference curve)。
+
+然后用 `AnimationUtility.SetObjectReferenceCurve` 把一组 `ObjectReferenceKeyframe` 关键帧和 `PPtrCurve` 关联，加进 `AnimationClip` 中。
+
 ## 完整代码
+
+因为 Unity 默认支持 `.gif` 扩展名（但图片不能动），所以需要在 Inspector 上手动切换到自己的 Importer，有点麻烦。为了方便，可以把扩展名改成 `.ugif`。
 
 ``` cs title="GIFImporter.cs"
 using System;
@@ -28,11 +48,10 @@ using UnityEngine;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
-using System.Linq;
 using UnityEditor;
 using UnityEditor.AssetImporters;
 
-[ScriptedImporter(version: 2, exts: new[] { "ugif" }, overrideExts: new[] { "gif" })]
+[ScriptedImporter(version: 4, exts: new[] { "ugif" }, overrideExts: new[] { "gif" })]
 public class GIFImporter : ScriptedImporter
 {
     [SerializeField] private bool m_Loop = true;
@@ -43,7 +62,7 @@ public class GIFImporter : ScriptedImporter
         using Image gif = Image.FromFile(ctx.assetPath);
 
         string gifName = Path.GetFileNameWithoutExtension(ctx.assetPath);
-        PropertyItem frameDelayProp = GetFrameDelayProperty(gif);
+        PropertyItem frameDelayProp = gif.GetPropertyItem(0x5100);
         int frameCount = gif.GetFrameCount(FrameDimension.Time);
 
         using MemoryStream ms = new();
@@ -91,26 +110,11 @@ public class GIFImporter : ScriptedImporter
         ctx.SetMainObject(clip);
     }
 
-    private static PropertyItem GetFrameDelayProperty(Image gif)
-    {
-        // PropertyTagFrameDelay
-        return gif.PropertyItems.First(prop => prop.Id == 0x5100);
-    }
-
     private static float GetFrameDelay(PropertyItem frameDelayProp, int frameIndex)
     {
         Span<byte> bytes = frameDelayProp.Value.AsSpan(frameIndex * 4, 4);
-        int delay = ParseInt32(bytes); // 延迟时间，以 1/100 秒为单位
+        uint delay = BitConverter.ToUInt32(bytes); // 延迟时间，以 1/100 秒为单位
         return delay / 100.0f;
-    }
-
-    private static int ParseInt32(Span<byte> span)
-    {
-        byte b0 = span[0];
-        byte b1 = span[1];
-        byte b2 = span[2];
-        byte b3 = span[3];
-        return ((b3 << 24) | (b2 << 16) | (b1 << 8) | b0);
     }
 }
 ```
@@ -155,3 +159,6 @@ public class GIFImporterEditor : ScriptedImporterEditor
     }
 }
 ```
+
+[^1]: [Property item descriptions - Win32 apps](https://learn.microsoft.com/en-us/windows/win32/gdiplus/-gdiplus-constant-property-item-descriptions#propertytagframedelay)
+[^2]: [Image property tag type constants (Gdiplusimaging.h) - Win32 apps](https://learn.microsoft.com/en-us/windows/win32/gdiplus/-gdiplus-constant-image-property-tag-type-constants)
