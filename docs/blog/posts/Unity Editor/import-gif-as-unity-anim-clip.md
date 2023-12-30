@@ -33,9 +33,7 @@ categories:
 
 ## C# 创建 AnimationClip
 
-因为要操作的是 `SpriteRenderer.m_Sprite`，所以需要创建 `PPtrCurve` (object reference curve)。
-
-然后用 `AnimationUtility.SetObjectReferenceCurve` 把一组 `ObjectReferenceKeyframe` 关键帧和 `PPtrCurve` 关联，加进 `AnimationClip` 中。
+因为要操作的是 `SpriteRenderer.m_Sprite`，所以需要创建 `PPtrCurve` (object reference curve)。然后用 `AnimationUtility.SetObjectReferenceCurve` 把一组 `ObjectReferenceKeyframe` 关键帧和 `PPtrCurve` 关联，加进 `AnimationClip` 中。
 
 ## 完整代码
 
