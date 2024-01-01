@@ -1,21 +1,12 @@
----
-date: 2024-01-01T01:47:56
-draft: false
-authors:
-  - stalomeow
-categories:
-  - Unity Optimization
----
+# 优化迭代和协程的 GC 
 
-# Unity 中针对迭代和协程的 GC 优化
+!!! abstract
 
-主要涉及 foreach、yield、Coroutine 的 GC 优化。不对 Unity 2022 LTS 以下的版本负责。
-
-<!-- more -->
+    主要涉及 foreach、yield、Coroutine 的 GC 优化。不对 Unity 2022 LTS 以下的版本负责。
 
 ## for 和 foreach
 
-对数组来说，foreach 会被编译器转成 for，两者什么区别。对于其他集合，foreach 的本质就是 `GetEnumerator()` 获取迭代器，然后不断 `MoveNext()` 并获取 `Current`。
+对数组来说，foreach 会被编译器转成 for，两者没什么区别。对于其他集合，foreach 的本质就是 `GetEnumerator()` 获取迭代器，然后不断 `MoveNext()` 并获取 `Current`。
 
 用 foreach 前，先检查一下 `GetEnumerator()` 的返回值类型。如果迭代器本身不是值类型，或者返回时会装箱的话，每次用 foreach 都会创建一个新的迭代器对象，产生 GC Alloc。这种情况尽量用 for。
 

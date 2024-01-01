@@ -1,18 +1,13 @@
 ---
-date: 2023-03-03
-authors:
-  - stalomeow
-categories:
-  - Job
 tags:
   - 面试
 ---
 
 # 面试相关
 
-面试相关的内容都记在这里！
+!!! abstract
 
-<!-- more -->
+    面试相关的内容都记在这里！
 
 ## miHoYo 面试官的分享
 

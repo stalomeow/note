@@ -1,0 +1,79 @@
+# 堆排序
+
+## 原理
+
+## 分析
+
+## 模板
+
+=== "小顶堆"
+
+    从大到小排序。数组下标从 1 开始。
+
+    ``` cpp
+    #define MAX_N 1000000
+
+    int N;
+    int nums[MAX_N];
+
+    void siftDown(int parent, int end)
+    {
+        for (int child = parent * 2; child <= end; child *= 2)
+        {
+            if (child < end && nums[child + 1] < nums[child]) ++child;
+            if (nums[parent] <= nums[child]) break;
+
+            std::swap(nums[parent], nums[child]);
+            parent = child;
+        }
+    }
+
+    void heapSort()
+    {
+        // heapify
+        for (int i = N / 2; i >= 1; i--)
+            siftDown(i, N);
+
+        for (int i = N; i > 1; i--)
+        {
+            std::swap(nums[1], nums[i]);
+            siftDown(1, i - 1);
+        }
+    }
+    ```
+
+=== "大顶堆"
+
+    从小到大排序。数组下标从 1 开始。
+
+    ``` cpp
+    #define MAX_N 1000000
+
+    int N;
+    int nums[MAX_N];
+
+    void siftDown(int parent, int end)
+    {
+        for (int child = parent * 2; child <= end; child *= 2)
+        {
+            if (child < end && nums[child + 1] > nums[child]) ++child;
+            if (nums[parent] >= nums[child]) break;
+
+            std::swap(nums[parent], nums[child]);
+            parent = child;
+        }
+    }
+
+    void heapSort()
+    {
+        // heapify
+        for (int i = N / 2; i >= 1; i--)
+            siftDown(i, N);
+
+        for (int i = N; i > 1; i--)
+        {
+            std::swap(nums[1], nums[i]);
+            siftDown(1, i - 1);
+        }
+    }
+    ```

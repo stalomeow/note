@@ -1,0 +1,54 @@
+# 快速排序
+
+!!! abstract
+
+    快速排序。
+
+## 原理
+
+快速排序是对冒泡排序的改进，用了分治的思想。流程：
+
+1. 从序列中选择一个元素作为枢轴（pivot）。选法没有规定，随机选也可以。
+2. 将小于 pivot 的数移到左边，大于 pivot 的数移到右边。该过程称为一趟快速排序（或一次划分）。用双指针实现。
+3. 对 pivot 左右两个子序列分别执行上述过程。
+
+## 分析
+
+- 平均时间复杂度：$O(n \log n)$。常数较小，通常被认为是同数量级中最好的方法。
+- 空间复杂度：$O(\log n)$。
+- 不稳定的排序算法。
+
+## 模板
+
+这里始终选择第一个元素作为枢轴。如果想选择其他元素，只要选好后把它交换到第一个元素位置就行。
+
+``` cpp
+#define MAX_N 1000000
+
+int N;
+int nums[MAX_N];
+
+int partition(int low, int high)
+{
+    int pivot = nums[low];
+    while (low < high)
+    {
+        while (low < high && nums[high] >= pivot) high--;
+        nums[low] = nums[high];
+        while (low < high && nums[low] <= pivot) low++;
+        nums[high] = nums[low];
+    }
+    nums[low] = pivot;
+    return low;
+}
+
+void qsort(int low, int high)
+{
+    if (low < high)
+    {
+        int mid = partition(low, high);
+        qsort(low, mid - 1);
+        qsort(mid + 1, high);
+    }
+}
+```

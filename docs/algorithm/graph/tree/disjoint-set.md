@@ -153,7 +153,3 @@ void unionSet(int i, int j)
 
 1. [洛谷 P1551 亲戚](https://www.luogu.com.cn/problem/P1551)
 2. [洛谷 P3958 [NOIP2017 提高组] 奶酪](https://www.luogu.com.cn/problem/P3958)
-
-## 带权并查集
-
-## 可撤销并查集

@@ -1,0 +1,66 @@
+# 希尔排序
+
+!!! abstract
+
+    希尔排序。也叫缩小增量排序 (Diminishing Increment Sort)。
+
+## 原理
+
+希尔排序的出发点：
+
+- 直接插入排序的算法简单，在 $n$ 很小时效率也比较高。
+- 待排序的序列越趋近于正序，直接插入排序的效率就越高。最好的情况下，时间复杂度是 $O(n)$。
+
+思想：将序列按增量 $gap$ 分为若干个子序列 `#!python nums[i::gap]` ($i=0,1,\cdots,gap-1$) 分别做直接插入排序，重复几次，使原序列「基本有序」，即满足
+
+$$
+nums[i] < \max_{0 \le j<i} \{ nums[j] \}
+$$
+
+的元素较少。然后，对原序列再做一次直接插入排序。
+
+子序列的增量 $gap$ 每次都是不一样的，有很多种选法，目前还没有人找到最好的选法。但是要求：
+
+- 所有的增量值之间最好不要有除了 $1$ 以外的公因子。
+- 最后一个增量值必须为 $1$。这样才能在最后对整个序列做一次直接插入排序。
+
+## 分析
+
+- 时间复杂度和增量的选取有关。有人做了大量实验，得出 $n$ 在某个特定范围时，大约是 $O(n^{1.3})$；$n \to \infty$ 时，可减少到 $O(n \log^2 n)$。
+- 空间复杂度：$O(1)$。
+- 不稳定的排序算法。
+
+## 模板
+
+这里选择的增量为 $gap_1=\left \lfloor \dfrac{n}{2} \right \rfloor$，$gap_n=\left \lfloor \dfrac{gap_{n-1}}{2} \right \rfloor$。
+
+``` cpp
+#define MAX_N 1000000
+
+int N;
+int nums[MAX_N];
+
+void shellInsert(int gap)
+{
+    for (int i = gap;i < N;i++)
+    {
+        int temp = nums[i];
+        int j = i - gap;
+        while (j >= 0 && nums[j] > temp)
+        {
+            nums[j + gap] = nums[j];
+            j -= gap;
+        }
+        nums[j + gap] = temp;
+    }
+}
+
+void shellSort()
+{
+    // 选择增量
+    for (int i = N / 2;i >= 1;i /= 2)
+    {
+        shellInsert(i);
+    }
+}
+```

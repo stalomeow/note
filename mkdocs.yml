@@ -274,6 +274,16 @@ nav:
         - 并查集: algorithm/graph/tree/disjoint-set.md
         - Huffman 树: algorithm/graph/tree/huffman-tree.md
       - 最小生成树: algorithm/graph/minimum-spanning-tree.md
+    - 排序:
+      - 各种排序对比: algorithm/sort/compare.md
+      - 插入:
+        - 直接插入排序: algorithm/sort/insert/straight-insertion-sort.md
+        - 希尔排序: algorithm/sort/insert/shell-sort.md
+      - 交换:
+        - 冒泡排序: algorithm/sort/swap/bubble-sort.md
+        - 快速排序: algorithm/sort/swap/quick-sort.md
+      - 选择:
+        - 堆排序: algorithm/sort/select/heap-sort.md
     - 杂项: algorithm/misc.md
   - GAMES:
     - games/index.md
@@ -368,7 +378,10 @@ nav:
           - TODO: accum/unity/src-analysis/urp/placeholder.md
       - 技术分析:
         - Full Generic Sharing: accum/unity/tech-analysis/full-generic-sharing.md
+      - 优化:
+        - 优化迭代和协程的 GC: accum/unity/optimization/iteration-coroutine-gc.md
     - Misc:
+      - 面试相关: accum/misc/interview.md
       - Unicode: accum/misc/unicode.md
   - 订阅资讯:
     - news/index.md

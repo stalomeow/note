@@ -164,9 +164,9 @@ body {
     margin-bottom: 1.5rem !important;
 }
 
-/* 禁止 Markdown 内容横向溢出 */
+/* 禁止 Markdown 内容溢出 */
 .md-content {
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 /* 避免博客文章没有内容时，整个布局出错 */
