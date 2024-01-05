@@ -4,8 +4,6 @@ search:
 comments: false
 ---
 
-# 订阅资讯
+# 最新资讯
 
-!!! abstract
-
-    RSS 订阅资讯，每天自动更新。
+RSS 订阅资讯，每天自动更新。

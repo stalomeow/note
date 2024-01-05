@@ -59,9 +59,9 @@ theme:
     # TODO instant 和 MathJax 一起用目前有 bug，进下一个页面后公式排版会乱
     # - navigation.instant
     # - navigation.instant.progress
-    - navigation.tabs
+    # - navigation.tabs
     - navigation.top
-    - navigation.indexes
+    # - navigation.indexes
     # - navigation.tracking
     - navigation.footer
     # - navigation.sections
@@ -149,7 +149,8 @@ plugins:
       lang:
         - zh
         - en
-      jieba_dict: docs/assets/jieba-dict.txt
+      # TODO 分词后 highlight 有问题
+      # jieba_dict: docs/assets/jieba-dict.txt
   - git-revision-date-localized:
       enabled: !ENV [CI, false]
       type: timeago
@@ -178,8 +179,6 @@ plugins:
       image: *site-icon
   - glightbox:
       auto_caption: true
-  - tags:
-      tags_file: tags.md
   - minify:
       minify_html: true
       minify_js: true
@@ -218,101 +217,131 @@ plugins:
 
 hooks:
   - scripts/config_validator.py
-  - scripts/index_validator.py
   - scripts/news_fetcher.py
 
 
 nav:
-  - 首页:
-    - index.md
-    - 标签: tags.md
-    - 网站资源: website-res.md
-    - 在线工具: online-tools.md
+  - index.md
+  - 网站资源: website-res.md
   - 博客:
     - blog/index.md
-  - 课程笔记:
-    - course/index.md
+  - RSS 阅读:
+    - news/index.md
+  - 基础学科:
     - 概率论与数理统计:
-      - 随机变量及其概率分布: course/probability-statistics/random-var-and-prob-distribution.md
-      - 随机变量的数字特征: course/probability-statistics/numerical-characteristics-of-random-var.md
-      - 大数定律和中心极限定理: course/probability-statistics/lln-and-clt.md
-      - 参数估计: course/probability-statistics/parameter-estimation.md
+      - 随机变量及其概率分布: basic/probability-statistics/random-var-and-prob-distribution.md
+      - 随机变量的数字特征: basic/probability-statistics/numerical-characteristics-of-random-var.md
+      - 大数定律和中心极限定理: basic/probability-statistics/lln-and-clt.md
+      - 参数估计: basic/probability-statistics/parameter-estimation.md
     - 线性代数:
-      - 矩阵: course/linear-algebra/matrix.md
-      - 行列式: course/linear-algebra/determinant.md
-      - 四元数: course/linear-algebra/quaternion.md
+      - 矩阵: basic/linear-algebra/matrix.md
+      - 行列式: basic/linear-algebra/determinant.md
+      - 四元数: basic/linear-algebra/quaternion.md
     - 高等数学:
-      - 积分公式: course/advanced-math/integral-formula.md
-      - 微分方程: course/advanced-math/differential-equation.md
-      - 梯度、散度、旋度: course/advanced-math/grad-div-curl.md
-    - 腾讯游戏客户端公开课:
-      - 简历制作 & 面试辅导: course/tencent-game-client-course/interview-resume.md
+      - 积分公式: basic/advanced-math/integral-formula.md
+      - 微分方程: basic/advanced-math/differential-equation.md
+      - 梯度、散度、旋度: basic/advanced-math/grad-div-curl.md
     - 高中数学:
-      - 三角恒等式: course/high-school-math/trigonometric-function-identity.md
-      - 指数函数与其反函数的交点个数: course/high-school-math/intersection-point-of-exp-and-its-inv.md
-    - 高中英语作文框架: course/english/high-school-composition-framework.md
-  - 数据结构与算法:
-    - algorithm/index.md
-    - 数组: algorithm/array.md
-    - 链表: algorithm/linked-list.md
-    - 搜索:
-      - DFS: algorithm/search/dfs.md
-      - BFS: algorithm/search/bfs.md
-      - A*: algorithm/search/a-star.md
-      - 回溯法: algorithm/search/backtracking.md
-      - Dancing Links: algorithm/search/dancing-links.md
-    - 字符串:
-      - KMP: algorithm/string/kmp.md
-      - Rabin-Karp: algorithm/string/rabin-karp.md
-    - 图论:
-      - 树:
-        - 树相关概念: algorithm/graph/tree/tree-concept.md
-        - 二叉树遍历: algorithm/graph/tree/binary-tree-traversal.md
-        - 完全二叉树: algorithm/graph/tree/complete-binary-tree.md
-        - 从遍历序列构建二叉树: algorithm/graph/tree/construct-binary-tree-from-traversal.md
-        - 二叉搜索树: algorithm/graph/tree/binary-search-tree.md
-        - 并查集: algorithm/graph/tree/disjoint-set.md
-        - Huffman 树: algorithm/graph/tree/huffman-tree.md
-      - 最小生成树: algorithm/graph/minimum-spanning-tree.md
-    - 排序:
-      - 各种排序对比: algorithm/sort/compare.md
-      - 插入:
-        - 直接插入排序: algorithm/sort/insert/straight-insertion-sort.md
-        - 希尔排序: algorithm/sort/insert/shell-sort.md
-      - 交换:
-        - 冒泡排序: algorithm/sort/swap/bubble-sort.md
-        - 快速排序: algorithm/sort/swap/quick-sort.md
-      - 选择:
-        - 堆排序: algorithm/sort/select/heap-sort.md
-    - 杂项: algorithm/misc.md
-  - GAMES:
-    - games/index.md
+      - 三角恒等式: basic/high-school-math/trigonometric-function-identity.md
+      - 指数函数与其反函数的交点个数: basic/high-school-math/intersection-point-of-exp-and-its-inv.md
+    - 高中英语作文框架: basic/english/high-school-composition-framework.md
+  - 计算机:
+    - 编程语言:
+      - C/C++:
+        - 函数调用约定: cs/lang/c-cpp/calling-convention.md
+        - STL 相关: cs/lang/c-cpp/stl.md
+        - C++ 11 相关: cs/lang/c-cpp/cpp-11.md
+      - C#:
+        - 弱引用: cs/lang/csharp/weak-references.md
+        - 模式匹配: cs/lang/csharp/pattern-matching.md
+        - GC.KeepAlive: cs/lang/csharp/gc-keep-alive.md
+        - Delegate Marshalling: cs/lang/csharp/delegate-marshalling.md
+      - Python:
+        - Python 基础: cs/lang/python/basic.md
+        - 执行一个模块: cs/lang/python/run-a-module.md
+        - 多版本和虚拟环境: cs/lang/python/multi-versions-and-venv.md
+      - Go:
+        - Go 基础: cs/lang/go/basic.md
+    - 数据结构与算法:
+      - 学习资料: cs/algorithm/res.md
+      - 数组: cs/algorithm/array.md
+      - 链表: cs/algorithm/linked-list.md
+      - 搜索:
+        - DFS: cs/algorithm/search/dfs.md
+        - BFS: cs/algorithm/search/bfs.md
+        - A*: cs/algorithm/search/a-star.md
+        - 回溯法: cs/algorithm/search/backtracking.md
+        - Dancing Links: cs/algorithm/search/dancing-links.md
+      - 字符串:
+        - KMP: cs/algorithm/string/kmp.md
+        - Rabin-Karp: cs/algorithm/string/rabin-karp.md
+      - 图论:
+        - 树:
+          - 树相关概念: cs/algorithm/graph/tree/tree-concept.md
+          - 二叉树遍历: cs/algorithm/graph/tree/binary-tree-traversal.md
+          - 完全二叉树: cs/algorithm/graph/tree/complete-binary-tree.md
+          - 从遍历序列构建二叉树: cs/algorithm/graph/tree/construct-binary-tree-from-traversal.md
+          - 二叉搜索树: cs/algorithm/graph/tree/binary-search-tree.md
+          - 并查集: cs/algorithm/graph/tree/disjoint-set.md
+          - Huffman 树: cs/algorithm/graph/tree/huffman-tree.md
+        - 最小生成树: cs/algorithm/graph/minimum-spanning-tree.md
+      - 排序:
+        - 各种排序对比: cs/algorithm/sort/compare.md
+        - 插入:
+          - 直接插入排序: cs/algorithm/sort/insert/straight-insertion-sort.md
+          - 希尔排序: cs/algorithm/sort/insert/shell-sort.md
+        - 交换:
+          - 冒泡排序: cs/algorithm/sort/swap/bubble-sort.md
+          - 快速排序: cs/algorithm/sort/swap/quick-sort.md
+        - 选择:
+          - 堆排序: cs/algorithm/sort/select/heap-sort.md
+      - 杂项: cs/algorithm/misc.md
+    - 图形学:
+      - Half Lambert 勘误: cs/cg/half-lambert-corrigenda.md
+      - 颜色空间: cs/cg/color-space.md
+      - NPR: # Non-photorealistic rendering
+        - 卡通角色渲染: cs/cg/npr/character.md
+    - 命令行:
+      - Aria2: cs/cmd/aria2.md
+      - Git: cs/cmd/git.md
+    - Unicode: cs/unicode.md
+    - 简历 & 面试: cs/resume-and-interview.md
+  - Unity:
+    - Shader 相关:
+      - Material Property Drawer: unity/shader/material-property-drawer.md
+    - 源码分析:
+      - Unity UI:
+        - TODO: unity/src-analysis/ugui/placeholder.md
+      - Universal RP:
+        - TODO: unity/src-analysis/urp/placeholder.md
+    - 技术分析:
+      - Full Generic Sharing: unity/tech-analysis/full-generic-sharing.md
+    - 优化:
+      - 优化迭代和协程的 GC: unity/optimization/iteration-coroutine-gc.md
+  - GAMES 笔记:
     - 101. 现代计算机图形学入门:
-      - games/101/index.md
+      - 课程介绍: games/101/intro.md
       - Overview of Computer Graphics: games/101/lecture-01.md
       - Review of Linear Algebra: games/101/lecture-02.md
-      - Transformation: games/101/lecture-03.md
-      - Transformation Cont.: games/101/lecture-04.md
-      - Rasterization 1 (Triangles): games/101/lecture-05.md
-      - Rasterization 2 (Antialiasing and Z-Buffering): games/101/lecture-06.md
-      - Shading 1 (Illumination, Shading and Graphics Pipeline): games/101/lecture-07.md
-      - Shading 2 (Shading, Pipeline and Texture Mapping): games/101/lecture-08.md
-      - Shading 3 (Texture Mapping Cont.): games/101/lecture-09.md
-      - Geometry 1 (Introduction): games/101/lecture-10.md
-      - Geometry 2 (Curves and Surfaces): games/101/lecture-11.md
-      - Geometry 3: games/101/lecture-12.md
-      - Ray Tracing 1: games/101/lecture-13.md
-      - Ray Tracing 2: games/101/lecture-14.md
-      - Ray Tracing 3: games/101/lecture-15.md
-      - Ray Tracing 4: games/101/lecture-16.md
+      - Transformation: games/101/lecture-03-04.md
+      - Rasterization:
+        - Triangles: games/101/lecture-05.md
+        - Antialiasing and Z-Buffering: games/101/lecture-06.md
+      - Shading:
+        - Illumination, Shading and Graphics Pipeline: games/101/lecture-07.md
+        - Shading, Pipeline and Texture Mapping: games/101/lecture-08-09.md
+      - Geometry:
+        - Introduction: games/101/lecture-10.md
+        - Curves and Surfaces: games/101/lecture-11.md
+        - Mesh Operations and Shadow Mapping: games/101/lecture-12.md
+      - Ray Tracing: games/101/lecture-13-14-15-16.md
       - Materials and Appearances: games/101/lecture-17.md
       - Advanced Topics in Rendering: games/101/lecture-18.md
       - Cameras, Lenses and Light Fields: games/101/lecture-19.md
       - Color and Perception: games/101/lecture-20.md
-      - Animation: games/101/lecture-21.md
-      - Animation Cont.: games/101/lecture-22.md
+      - Animation: games/101/lecture-21-22.md
     - 104. 现代游戏引擎:
-      - games/104/index.md
+      - 课程介绍: games/104/intro.md
       - From Getting Started To Practice: games/104/lecture-01.md
       - Layered Architecture of Game Engine: games/104/lecture-02.md
       - How to Build a Game World: games/104/lecture-03.md
@@ -341,47 +370,3 @@ nav:
       - Data-Oriented Programming and Job System: games/104/lecture-20.md
       - Dynamic Global Illumination and Lumen: games/104/lecture-21.md
       - GPU Driven Geometry Pipeline - Nanite: games/104/lecture-22.md
-  - 技术积累:
-    - accum/index.md
-    - 编程语言:
-      - C/C++:
-        - 函数调用约定: accum/pl/c-cpp/calling-convention.md
-        - STL 相关: accum/pl/c-cpp/stl.md
-        - C++ 11 相关: accum/pl/c-cpp/cpp-11.md
-      - C#:
-        - 弱引用: accum/pl/csharp/weak-references.md
-        - 模式匹配: accum/pl/csharp/pattern-matching.md
-        - GC.KeepAlive: accum/pl/csharp/gc-keep-alive.md
-        - Delegate Marshalling: accum/pl/csharp/delegate-marshalling.md
-      - Python:
-        - Python 基础: accum/pl/python/basic.md
-        - 执行一个模块: accum/pl/python/run-a-module.md
-        - 多版本和虚拟环境: accum/pl/python/multi-versions-and-venv.md
-      - Go:
-        - Go 基础: accum/pl/go/basic.md
-    - 计算机图形学:
-      - accum/cg/index.md
-      - Half Lambert 勘误: accum/cg/half-lambert-corrigenda.md
-      - 颜色空间: accum/cg/color-space.md
-      - NPR: # Non-photorealistic rendering
-        - 卡通角色渲染: accum/cg/npr/character.md
-    - 命令行:
-      - Aria2: accum/cmd/aria2.md
-      - Git: accum/cmd/git.md
-    - Unity:
-      - Shader 相关:
-        - Material Property Drawer: accum/unity/shader/material-property-drawer.md
-      - 源码分析:
-        - Unity UI:
-          - TODO: accum/unity/src-analysis/ugui/placeholder.md
-        - Universal RP:
-          - TODO: accum/unity/src-analysis/urp/placeholder.md
-      - 技术分析:
-        - Full Generic Sharing: accum/unity/tech-analysis/full-generic-sharing.md
-      - 优化:
-        - 优化迭代和协程的 GC: accum/unity/optimization/iteration-coroutine-gc.md
-    - Misc:
-      - 面试相关: accum/misc/interview.md
-      - Unicode: accum/misc/unicode.md
-  - 订阅资讯:
-    - news/index.md
