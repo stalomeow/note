@@ -1,0 +1,16 @@
+/**
+ * 临时修复样式
+ */
+
+
+/* 禁止 Markdown 内容溢出 */
+/* TODO 目前会导致左侧边栏无法跟随窗口移动 */
+/* .md-content {
+    overflow: hidden;
+} */
+
+
+/* 让博客文章部分撑满剩余空间，避免内容较少时中间区域变窄 */
+.md-content.md-content--post>article.md-content__inner.md-typeset {
+    flex-grow: 1;
+}

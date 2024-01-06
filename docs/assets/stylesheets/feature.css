@@ -1,0 +1,161 @@
+/**
+ * 额外的功能
+ */
+
+
+/* #region 表格相关 */
+
+.md-typeset__table {
+    display: block !important;
+    width: 100% !important;
+}
+
+.md-typeset__table table {
+    display: table !important;
+    width: 100% !important;
+    overflow: hidden !important;
+}
+
+.md-typeset table:not([class]) tbody tr:hover {
+    background-color: inherit !important;
+    box-shadow: none !important;
+}
+
+.md-typeset table:not([class]) tbody tr td:hover {
+    background-color: var(--md-typeset-table-color--light);
+    box-shadow: 0 .05rem 0 var(--md-default-bg-color) inset;
+}
+
+[data-md-color-scheme=slate] .md-typeset table:not([class]) tbody tr td:hover {
+    background-color: #232323;
+    box-shadow: 0 .05rem 0 var(--md-default-bg-color) inset;
+}
+
+/* #endregion */
+
+/* #region 标题序号 */
+
+.md-typeset:not(.md-post__content) h1:not(#__comments) {
+    counter-reset: h2;
+}
+
+.md-typeset:not(.md-post__content) h2:not(#__comments) {
+    counter-reset: h3;
+}
+
+.md-typeset:not(.md-post__content) h3:not(#__comments) {
+    counter-reset: h4;
+}
+
+.md-typeset:not(.md-post__content) h4:not(#__comments) {
+    counter-reset: h5;
+}
+
+.md-typeset:not(.md-post__content) h5:not(#__comments) {
+    counter-reset: h6;
+}
+
+.md-typeset:not(.md-post__content) h2:not(#__comments)::before {
+    counter-increment: h2;
+    content: counter(h2) ')';
+    padding-right: 0.5em;
+    opacity: 0.6;
+}
+
+.md-typeset:not(.md-post__content) h3:not(#__comments)::before {
+    counter-increment: h3;
+    content: counter(h2) '-' counter(h3) ')';
+    padding-right: 0.5em;
+    opacity: 0.6;
+}
+
+.md-typeset:not(.md-post__content) h4:not(#__comments)::before {
+    counter-increment: h4;
+    content: counter(h2) '-' counter(h3) '-' counter(h4) ')';
+    padding-right: 0.5em;
+    opacity: 0.6;
+}
+
+.md-typeset:not(.md-post__content) h5:not(#__comments)::before {
+    counter-increment: h5;
+    content: counter(h2) '-' counter(h3) '-' counter(h4) '-' counter(h5) ')';
+    padding-right: 0.5em;
+    opacity: 0.6;
+}
+
+.md-typeset:not(.md-post__content) h6:not(#__comments)::before {
+    counter-increment: h6;
+    content: counter(h2) '-' counter(h3) '-' counter(h4) '-' counter(h5) '-' counter(h6) ')';
+    padding-right: 0.5em;
+    opacity: 0.6;
+}
+
+/* #endregion */
+
+/* #region 自适应视频播放器 */
+
+.responsive-video-container {
+    position: relative;
+    margin-bottom: 1em;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.responsive-video-container iframe,
+.responsive-video-container object,
+.responsive-video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* #endregion */
+
+/* #region 平滑滚动 */
+
+/* TODO 开了以后，有时候滚动有 bug */
+/* html, body {
+    scroll-behavior: smooth;
+} */
+
+/* #endregion */
+
+/* #region glightbox */
+
+.glightbox {
+    display: flex;
+    justify-content: center;
+}
+
+/* #endregion */
+
+/* #region 博客首页文章分割线 */
+
+.md-post--excerpt {
+    border-top: .05rem solid var(--md-default-fg-color--lightest);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem !important;
+}
+
+/* #endregion */
+
+/* #region PC 端导航栏和 TOC 的对齐线 */
+
+@media screen and (min-width: 76.25em) {
+    .md-sidebar[data-md-type="navigation"]:not(.md-sidebar--post) nav.md-nav:not([data-md-level="0"]) {
+        border-left: 1px solid color-mix(in srgb, var(--md-default-fg-color) 20%, var(--md-default-bg-color));
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .md-sidebar[data-md-type="toc"]:not(.md-sidebar--post) ul.md-nav__list nav.md-nav {
+        border-left: 1px solid color-mix(in srgb, var(--md-default-fg-color) 20%, var(--md-default-bg-color));
+    }
+}
+
+/* #endregion */

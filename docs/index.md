@@ -26,7 +26,7 @@ search:
 
 ---
 
-推荐开 Dark Mode 浏览。
+推荐使用阳间浏览器 + Dark Mode 浏览。
 
 ## 勘误
 

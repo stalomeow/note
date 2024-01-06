@@ -95,6 +95,8 @@ extra_css:
   - assets/webfonts/JetBrains Mono/font.css
   - assets/webfonts/LXGW WenKai Screen/font.css
   - assets/stylesheets/theme.css
+  - assets/stylesheets/feature.css
+  - assets/stylesheets/temp-patch.css
 
 
 extra_javascript:
@@ -150,7 +152,7 @@ plugins:
         - zh
         - en
       # TODO 分词后 highlight 有问题
-      # jieba_dict: docs/assets/jieba-dict.txt
+      jieba_dict: docs/assets/jieba-dict.txt
   - git-revision-date-localized:
       enabled: !ENV [CI, false]
       type: timeago
@@ -192,6 +194,8 @@ plugins:
         - assets/webfonts/JetBrains Mono/font.css
         - assets/webfonts/LXGW WenKai Screen/font.css
         - assets/stylesheets/theme.css
+        - assets/stylesheets/feature.css
+        - assets/stylesheets/temp-patch.css
   - blog:
       enabled: true
       blog_toc: false # TODO 中文 toc 有问题，很多 id 都是 #_1
