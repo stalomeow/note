@@ -279,16 +279,22 @@ nav:
       - 字符串:
         - KMP: cs/algorithm/string/kmp.md
         - Rabin-Karp: cs/algorithm/string/rabin-karp.md
-      - 图论:
-        - 树:
-          - 树相关概念: cs/algorithm/graph/tree/tree-concept.md
-          - 二叉树遍历: cs/algorithm/graph/tree/binary-tree-traversal.md
-          - 完全二叉树: cs/algorithm/graph/tree/complete-binary-tree.md
-          - 从遍历序列构建二叉树: cs/algorithm/graph/tree/construct-binary-tree-from-traversal.md
-          - 二叉搜索树: cs/algorithm/graph/tree/binary-search-tree.md
-          - 并查集: cs/algorithm/graph/tree/disjoint-set.md
-          - Huffman 树: cs/algorithm/graph/tree/huffman-tree.md
+      - 树:
+        - 基本概念: cs/algorithm/tree/basic-concept.md
+        - 二叉树遍历: cs/algorithm/tree/binary-tree-traversal.md
+        - 完全二叉树: cs/algorithm/tree/complete-binary-tree.md
+        - 从遍历序列构建二叉树: cs/algorithm/tree/construct-binary-tree-from-traversal.md
+        - 二叉搜索树: cs/algorithm/tree/binary-search-tree.md
+        - 并查集: cs/algorithm/tree/disjoint-set.md
+        - Huffman 树: cs/algorithm/tree/huffman-tree.md
+      - 图:
+        - 基本概念: cs/algorithm/graph/basic-concept.md
+        - 连通分量个数: cs/algorithm/graph/number-of-connected-components.md
         - 最小生成树: cs/algorithm/graph/minimum-spanning-tree.md
+        - 拓扑排序: cs/algorithm/graph/topological-sort.md
+        - 关键路径: cs/algorithm/graph/critical-path.md
+        - 判断是否有环: cs/algorithm/graph/detect-cycles.md
+        - 最短路: cs/algorithm/graph/shortest-path.md
       - 排序:
         - 各种排序对比: cs/algorithm/sort/compare.md
         - 插入:

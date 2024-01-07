@@ -50,11 +50,11 @@
 
 ### 遍历
 
-时间复杂度 $O(n)$，空间复杂度 $O(log\ n)$。
+时间复杂度 $O(n)$，空间复杂度 $O(\log\ n)$。
 
 ### 递归
 
-时间复杂度 $O(log^2\ n)$，空间复杂度 $O(log\ n)$。
+时间复杂度 $O(\log^2\ n)$，空间复杂度 $O(\log\ n)$。
 
 ``` cpp
 int countNodes(TreeNode* root) {
@@ -88,7 +88,7 @@ int getDepth(TreeNode* root, int right) {
 
 ### 二分查找
 
-时间复杂度 $O(log^2\ n)$，空间复杂度 $O(1)$。
+时间复杂度 $O(\log^2\ n)$，空间复杂度 $O(1)$。
 
 ``` cpp
 int countNodes(TreeNode* root) {

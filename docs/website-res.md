@@ -23,7 +23,7 @@
 - [:material-link-variant: OI Wiki](https://oiwiki.com/){ target="_blank" }
 - [:material-link-variant: CTF Wiki](https://ctf-wiki.org/){ target="_blank" }
 - [:material-link-variant: CS 自学指南](https://csdiy.wiki/){ target="_blank" }
-- [:material-link-variant: Unity C# and Shader Tutorials](https://catlikecoding.com/unity/tutorials/){ target="_blank" }
+- [:material-link-variant: Catlike Coding (Unity C# and Shader Tutorials)](https://catlikecoding.com/unity/tutorials/){ target="_blank" }
 - [:material-link-variant: Shadertoy](https://www.shadertoy.com/){ target="_blank" }
 - [:material-link-variant: Project Euler 数学挑战](https://projecteuler.net/){ target="_blank" }
 
@@ -33,9 +33,11 @@
 
 <div class="grid cards" markdown>
 
-- [:material-link-variant: 矢量图](https://app.diagrams.net/){ target="_blank" }
+- [:material-link-variant: 矢量图 (draw.io)](https://app.diagrams.net/){ target="_blank" }
 - [:material-link-variant: 图论](https://csacademy.com/app/graph_editor/){ target="_blank" }
 - [:material-link-variant: 有限状态机](https://madebyevan.com/fsm/){ target="_blank" }
+- [:material-link-variant: 虚拟白板 (Excalidraw)](https://excalidraw.com/){ target="_blank" }
+- [:material-link-variant: Mermaid 编辑器](https://mermaid.live/){ target="_blank" }
 
 </div>
 
@@ -63,7 +65,7 @@
 
 <div class="grid cards" markdown>
 
-- [:material-link-variant: .NET Code Playground](https://sharplab.io/){ target="_blank" }
+- [:material-link-variant: .NET Code Playground (SharpLab)](https://sharplab.io/){ target="_blank" }
 - [:material-link-variant: .NET Framework 类库源码](https://referencesource.microsoft.com/){ target="_blank" }
 - [:material-link-variant: .NET Core 类库源码](https://source.dot.net/){ target="_blank" }
 - [:material-link-variant: C 类型声明 :octicons-arrow-switch-16: 英文](https://cdecl.org/){ target="_blank" }
@@ -84,6 +86,6 @@
 - [:material-link-variant: 缓动函数速查表](https://easings.net/zh-cn){ target="_blank" }
 - [:material-link-variant: Emoji 大全](https://www.emojiall.com/zh-hans){ target="_blank" }
 - [:material-link-variant: Wayback Machine](http://web.archive.org){ target="_blank" }
-- [:material-link-variant: 阿里巴巴矢量图标库](https://www.iconfont.cn/){ target="_blank" }
+- [:material-link-variant: 阿里巴巴矢量图标库 (iconfont)](https://www.iconfont.cn/){ target="_blank" }
 
 </div>
