@@ -66,7 +66,7 @@ $$
 - $X_i$ 相互独立，具有相同的数学期望（$EX_i=\mu$）
 - 存在常数 $C > 0$，使得 $DX_i \le C$
 
-则 $\forall \varepsilon > 0$，有
+则
 
 $$
 \frac{1}{n} \sum_{i=1}^{n} X_i \overset{P}{\longrightarrow} \mu, \  n \to \infty
@@ -78,7 +78,7 @@ $$
 
 - $\lim\limits_{n \to \infty} D \left [ \dfrac{1}{n} \displaystyle\sum\limits_{i=1}^{n} X_i \right ] = 0$
 
-则 $\forall \varepsilon > 0$，有
+则
 
 $$
 \frac{1}{n} \sum_{i=1}^{n} X_i \overset{P}{\longrightarrow} \frac{1}{n} \sum_{i=1}^{n} EX_i, \  n \to \infty
@@ -90,7 +90,7 @@ $$
 
 - $X_i$ 相互独立，同分布，具有有限的数学期望（$EX_i=\mu$）
 
-则 $\forall \varepsilon > 0$，有
+则
 
 $$
 \frac{1}{n} \sum_{i=1}^{n} X_i \overset{P}{\longrightarrow} \mu, \  n \to \infty
@@ -103,7 +103,7 @@ $$
 - $n_A$ 表示 $n$ 重 Bernoulli 试验中事件 $A$ 发生的次数
 - $P(A)=p$
 
-则 $\forall \varepsilon > 0$，有
+则
 
 $$
 \frac{n_A}{n} \overset{P}{\longrightarrow} p, \  n \to \infty
