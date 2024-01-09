@@ -122,65 +122,27 @@ $$
 
 设总体 $X \sim N(\mu,\sigma^2)$，$X_1,X_2,\cdots,X_n$ 为来自总体 $X$ 的一个样本，样本均值为 $\overline{X}$，样本方差为 $S^2$。
 
-- 求 $\mu$ 的置信水平为 $1-\alpha$ 的置信区间：
+---
 
-    - 若 $\sigma^2$ 已知，则由 $\dfrac{\overline{X} -\mu}{\sigma/\sqrt{n}} \sim N(0,1)$，求得
+求 $\mu$ 的置信水平为 $1-\alpha$ 的置信区间：
 
-        $$
-        \left ( \overline{X} - \dfrac{\sigma}{\sqrt{n}} z_{\frac{\alpha}{2}},\ \overline{X} + \dfrac{\sigma}{\sqrt{n}} z_{\frac{\alpha}{2}} \right )
-        $$
+|条件|$\sigma^2$ 已知|$\sigma^2$ 未知|
+|:-|:-|:-|
+|枢轴量|$\dfrac{\overline{X} -\mu}{\sigma/\sqrt{n}} \sim N(0,1)$|$\dfrac{\overline{X} -\mu}{S/\sqrt{n}} \sim t(n-1)$|
+|双侧|$\left ( \overline{X} - \dfrac{\sigma}{\sqrt{n}} z_{\alpha/2},\ \overline{X} + \dfrac{\sigma}{\sqrt{n}} z_{\alpha/2} \right )$|$\left ( \overline{X} - \dfrac{S}{\sqrt{n}} t_{\alpha/2}(n-1),\ \overline{X} + \dfrac{S}{\sqrt{n}} t_{\alpha/2}(n-1) \right )$|
+|单侧 1|$\left ( \overline{X} - \dfrac{\sigma}{\sqrt{n}} z_{\alpha},\ +\infty \right )$|$\left ( \overline{X} - \dfrac{S}{\sqrt{n}} t_{\alpha}(n-1),\ +\infty \right )$|
+|单侧 2|$\left (-\infty ,\ \overline{X} + \dfrac{\sigma}{\sqrt{n}} z_{\alpha} \right )$|$\left (-\infty ,\ \overline{X} + \dfrac{S}{\sqrt{n}} t_{\alpha}(n-1) \right )$|
 
-        $$
-        \left ( \overline{X} - \dfrac{\sigma}{\sqrt{n}} z_{\alpha},\ +\infty \right )
-        $$
+---
 
-        $$
-        \left (-\infty ,\ \overline{X} + \dfrac{\sigma}{\sqrt{n}} z_{\alpha} \right )
-        $$
+求 $\sigma^2$ 的置信水平为 $1-\alpha$ 的置信区间：
 
-    - 若 $\sigma^2$ 未知，则由 $\dfrac{\overline{X} -\mu}{S/\sqrt{n}} \sim t(n-1)$，求得
-
-        $$
-        \left ( \overline{X} - \dfrac{S}{\sqrt{n}} t_{\frac{\alpha}{2}}(n-1),\ \overline{X} + \dfrac{S}{\sqrt{n}} t_{\frac{\alpha}{2}}(n-1) \right )
-        $$
-
-        $$
-        \left ( \overline{X} - \dfrac{S}{\sqrt{n}} t_{\alpha}(n-1),\ +\infty \right )
-        $$
-
-        $$
-        \left (-\infty ,\ \overline{X} + \dfrac{S}{\sqrt{n}} t_{\alpha}(n-1) \right )
-        $$
-
-- 求 $\sigma^2$ 的置信水平为 $1-\alpha$ 的置信区间：
-
-    - 若 $\mu$ 已知，则由 $\dfrac{\displaystyle\sum\limits_{i=1}^n (X_i -\mu)^2}{\sigma^2} \sim \chi^2(n)$，求得
-
-        $$
-        \left ( \dfrac{\displaystyle\sum\limits_{i=1}^n (X_i -\mu)^2}{\chi^2_{\frac{\alpha}{2}}(n)},\ \dfrac{\displaystyle\sum\limits_{i=1}^n (X_i -\mu)^2}{\chi^2_{1-\frac{\alpha}{2}}(n)} \right )
-        $$
-
-        $$
-        \left ( \dfrac{\displaystyle\sum\limits_{i=1}^n (X_i -\mu)^2}{\chi^2_{\alpha}(n)},\ +\infty \right )
-        $$
-
-        $$
-        \left (0 ,\ \dfrac{\displaystyle\sum\limits_{i=1}^n (X_i -\mu)^2}{\chi^2_{1-\alpha}(n)} \right )
-        $$
-
-    - 若 $\mu$ 未知，则由 $\dfrac{(n-1)S^2}{\sigma^2} \sim \chi^2(n-1)$，求得
-
-        $$
-        \left ( \dfrac{(n-1)S^2}{\chi^2_{\frac{\alpha}{2}}(n-1)},\ \dfrac{(n-1)S^2}{\chi^2_{1-\frac{\alpha}{2}}(n-1)} \right )
-        $$
-
-        $$
-        \left ( \dfrac{(n-1)S^2}{\chi^2_{\alpha}(n-1)},\ +\infty \right )
-        $$
-
-        $$
-        \left (0 ,\ \dfrac{(n-1)S^2}{\chi^2_{1-\alpha}(n-1)} \right )
-        $$
+|条件|$\mu$ 已知|$\mu$ 未知|
+|:-|:-|:-|
+|枢轴量|$\dfrac{\displaystyle\sum\limits_{i=1}^n (X_i -\mu)^2}{\sigma^2} \sim \chi^2(n)$|$\dfrac{(n-1)S^2}{\sigma^2} \sim \chi^2(n-1)$|
+|双侧|$\left ( \dfrac{\displaystyle\sum\limits_{i=1}^n (X_i -\mu)^2}{\chi^2_{\alpha/2}(n)},\ \dfrac{\displaystyle\sum\limits_{i=1}^n (X_i -\mu)^2}{\chi^2_{1-\alpha/2}(n)} \right )$|$\left ( \dfrac{(n-1)S^2}{\chi^2_{\alpha/2}(n-1)},\ \dfrac{(n-1)S^2}{\chi^2_{1-\alpha/2}(n-1)} \right )$|
+|单侧 1|$\left ( \dfrac{\displaystyle\sum\limits_{i=1}^n (X_i -\mu)^2}{\chi^2_{\alpha}(n)},\ +\infty \right )$|$\left ( \dfrac{(n-1)S^2}{\chi^2_{\alpha}(n-1)},\ +\infty \right )$|
+|单侧 2|$\left (0 ,\ \dfrac{\displaystyle\sum\limits_{i=1}^n (X_i -\mu)^2}{\chi^2_{1-\alpha}(n)} \right )$|$\left (0 ,\ \dfrac{(n-1)S^2}{\chi^2_{1-\alpha}(n-1)} \right )$|
 
 ### 双正态总体参数
 
@@ -190,71 +152,27 @@ $$
 
 两个样本构成的合样本 $X_1,X_2,\cdots,X_{n_1}, Y_1,Y_2,\cdots,Y_{n_2}$ 相互独立。
 
-- 求 $\mu_1-\mu_2$ 的置信水平为 $1-\alpha$ 的置信区间：
+---
 
-    - 若 $\sigma_1^2,\sigma_2^2$ 已知，则由 $\dfrac{\overline{X}-\overline{Y} - (\mu_1-\mu_2)}{\sqrt{\dfrac{\sigma_1^2}{n_1}+\dfrac{\sigma_2^2}{n_2}}} \sim N(0,1)$，求得
+求 $\mu_1-\mu_2$ 的置信水平为 $1-\alpha$ 的置信区间：
 
-        $$
-        \left ( \overline{X}-\overline{Y} - \sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}} z_{\frac{\alpha}{2}},\ \overline{X}-\overline{Y} + \sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}} z_{\frac{\alpha}{2}} \right )
-        $$
+|条件|$\sigma_1^2,\sigma_2^2$ 已知|$\sigma_1^2=\sigma_2^2$ 但未知|
+|:-|:-|:-|
+|枢轴量|$\dfrac{\overline{X}-\overline{Y} - (\mu_1-\mu_2)}{\sqrt{\dfrac{\sigma_1^2}{n_1}+\dfrac{\sigma_2^2}{n_2}}} \sim N(0,1)$|$\dfrac{\overline{X}-\overline{Y} - (\mu_1-\mu_2)}{S_\omega\sqrt{\dfrac{1}{n_1}+\dfrac{1}{n_2}}} \sim t(n_1 + n_2 - 2) \ \left (\text{其中 } S_\omega=\sqrt{\dfrac{(n_1-1)S_1^2+(n_2-1)S_2^2}{n_1 + n_2 - 2}} \right )$|
+|双侧|$\left ( \overline{X}-\overline{Y} - \sqrt{\dfrac{\sigma_1^2}{n_1}+\dfrac{\sigma_2^2}{n_2}} z_{\alpha/2},\ \overline{X}-\overline{Y} + \sqrt{\dfrac{\sigma_1^2}{n_1}+\dfrac{\sigma_2^2}{n_2}} z_{\alpha/2} \right )$|$\left ( \overline{X}-\overline{Y} - S_\omega\sqrt{\dfrac{1}{n_1}+\dfrac{1}{n_2}} t_{\alpha/2}(n_1 + n_2 - 2),\ \overline{X}-\overline{Y} + S_\omega\sqrt{\dfrac{1}{n_1}+\dfrac{1}{n_2}} t_{\alpha/2}(n_1 + n_2 - 2) \right )$|
+|单侧 1|$\left ( \overline{X}-\overline{Y} - \sqrt{\dfrac{\sigma_1^2}{n_1}+\dfrac{\sigma_2^2}{n_2}} z_{\alpha},\ +\infty \right )$|$\left ( \overline{X}-\overline{Y} - S_\omega\sqrt{\dfrac{1}{n_1}+\dfrac{1}{n_2}} t_{\alpha}(n_1 + n_2 - 2),\ +\infty \right )$|
+|单侧 2|$\left (-\infty ,\ \overline{X}-\overline{Y} + \sqrt{\dfrac{\sigma_1^2}{n_1}+\dfrac{\sigma_2^2}{n_2}} z_{\alpha} \right )$|$\left (-\infty ,\ \overline{X}-\overline{Y} + S_\omega\sqrt{\dfrac{1}{n_1}+\dfrac{1}{n_2}} t_{\alpha}(n_1 + n_2 - 2) \right )$|
 
-        $$
-        \left ( \overline{X}-\overline{Y} - \sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}} z_{\alpha},\ +\infty \right )
-        $$
+---
 
-        $$
-        \left (-\infty ,\ \overline{X}-\overline{Y} + \sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}} z_{\alpha} \right )
-        $$
+求 $\dfrac{\sigma_1^2}{\sigma_2^2}$ 的置信水平为 $1-\alpha$ 的置信区间：
 
-    - 若 $\sigma_1^2=\sigma_2^2$ 但未知，则由 $\dfrac{\overline{X}-\overline{Y} - (\mu_1-\mu_2)}{S_\omega\sqrt{\dfrac{1}{n_1}+\dfrac{1}{n_2}}} \sim t(n_1 + n_2 - 2)$，其中
-
-        $$
-        S_\omega=\sqrt{\dfrac{(n_1-1)S_1^2+(n_2-1)S_2^2}{n_1 + n_2 - 2}}
-        $$
-
-        求得
-
-        $$
-        \left ( \overline{X}-\overline{Y} - S_\omega\sqrt{\dfrac{1}{n_1}+\dfrac{1}{n_2}} t_{\frac{\alpha}{2}}(n_1 + n_2 - 2),\ \overline{X}-\overline{Y} + S_\omega\sqrt{\dfrac{1}{n_1}+\dfrac{1}{n_2}} t_{\frac{\alpha}{2}}(n_1 + n_2 - 2) \right )
-        $$
-
-        $$
-        \left ( \overline{X}-\overline{Y} - S_\omega\sqrt{\dfrac{1}{n_1}+\dfrac{1}{n_2}} t_{\alpha}(n_1 + n_2 - 2),\ +\infty \right )
-        $$
-
-        $$
-        \left (-\infty ,\ \overline{X}-\overline{Y} + S_\omega\sqrt{\dfrac{1}{n_1}+\dfrac{1}{n_2}} t_{\alpha}(n_1 + n_2 - 2) \right )
-        $$
-
-- 求 $\dfrac{\sigma_1^2}{\sigma_2^2}$ 的置信水平为 $1-\alpha$ 的置信区间：
-
-    - 若 $\mu_1,\mu_2$ 已知，则由 $\dfrac{n_2\sigma_2^2\displaystyle\sum\limits_{i=1}^{n_1} (X_i -\mu_1)^2}{n_1\sigma_1^2\displaystyle\sum\limits_{i=1}^{n_2} (Y_i -\mu_2)^2} \sim F(n_1,n_2)$，求得
-
-        $$
-        \left ( \frac{n_2\displaystyle\sum\limits_{i=1}^{n_1} (X_i -\mu_1)^2}{n_1\displaystyle\sum\limits_{i=1}^{n_2} (Y_i -\mu_2)^2} \frac{1}{F_{\frac{\alpha}{2}}(n_1,n_2)},\ \frac{n_2\displaystyle\sum\limits_{i=1}^{n_1} (X_i -\mu_1)^2}{n_1\displaystyle\sum\limits_{i=1}^{n_2} (Y_i -\mu_2)^2} F_{\frac{\alpha}{2}}(n_2,n_1) \right )
-        $$
-
-        $$
-        \left ( \frac{n_2\displaystyle\sum\limits_{i=1}^{n_1} (X_i -\mu_1)^2}{n_1\displaystyle\sum\limits_{i=1}^{n_2} (Y_i -\mu_2)^2} \frac{1}{F_{\alpha}(n_1,n_2)},\ +\infty \right )
-        $$
-
-        $$
-        \left (0 ,\ \frac{n_2\displaystyle\sum\limits_{i=1}^{n_1} (X_i -\mu_1)^2}{n_1\displaystyle\sum\limits_{i=1}^{n_2} (Y_i -\mu_2)^2} F_{\alpha}(n_2,n_1) \right )
-        $$
-
-    - 若 $\mu_1,\mu_2$ 未知，则由 $\dfrac{\sigma_2^2 S_1^2}{\sigma_1^2 S_2^2} \sim F(n_1-1,n_2-1)$，求得
-
-        $$
-        \left ( \frac{S_1^2}{S_2^2} \frac{1}{F_{\frac{\alpha}{2}}(n_1-1,n_2-1)},\ \frac{S_1^2}{S_2^2} F_{\frac{\alpha}{2}}(n_2-1,n_1-1) \right )
-        $$
-
-        $$
-        \left ( \frac{S_1^2}{S_2^2} \frac{1}{F_{\alpha}(n_1-1,n_2-1)},\ +\infty \right )
-        $$
-
-        $$
-        \left (0 ,\ \frac{S_1^2}{S_2^2} F_{\alpha}(n_2-1,n_1-1) \right )
-        $$
+|条件|$\mu_1,\mu_2$ 已知|$\mu_1,\mu_2$ 未知|
+|:-|:-|:-|
+|枢轴量|$\dfrac{n_2\sigma_2^2\displaystyle\sum\limits_{i=1}^{n_1} (X_i -\mu_1)^2}{n_1\sigma_1^2\displaystyle\sum\limits_{i=1}^{n_2} (Y_i -\mu_2)^2} \sim F(n_1,n_2)$|$\dfrac{\sigma_2^2 S_1^2}{\sigma_1^2 S_2^2} \sim F(n_1-1,n_2-1)$|
+|双侧|$\left ( \dfrac{n_2\displaystyle\sum\limits_{i=1}^{n_1} (X_i -\mu_1)^2}{n_1\displaystyle\sum\limits_{i=1}^{n_2} (Y_i -\mu_2)^2} \dfrac{1}{F_{\alpha/2}(n_1,n_2)},\ \dfrac{n_2\displaystyle\sum\limits_{i=1}^{n_1} (X_i -\mu_1)^2}{n_1\displaystyle\sum\limits_{i=1}^{n_2} (Y_i -\mu_2)^2} F_{\alpha/2}(n_2,n_1) \right )$|$\left ( \dfrac{S_1^2}{S_2^2} \dfrac{1}{F_{\alpha/2}(n_1-1,n_2-1)},\ \dfrac{S_1^2}{S_2^2} F_{\alpha/2}(n_2-1,n_1-1) \right )$|
+|单侧 1|$\left ( \dfrac{n_2\displaystyle\sum\limits_{i=1}^{n_1} (X_i -\mu_1)^2}{n_1\displaystyle\sum\limits_{i=1}^{n_2} (Y_i -\mu_2)^2} \dfrac{1}{F_{\alpha}(n_1,n_2)},\ +\infty \right )$|$\left ( \dfrac{S_1^2}{S_2^2} \dfrac{1}{F_{\alpha}(n_1-1,n_2-1)},\ +\infty \right )$|
+|单侧 2|$\left (0 ,\ \dfrac{n_2\displaystyle\sum\limits_{i=1}^{n_1} (X_i -\mu_1)^2}{n_1\displaystyle\sum\limits_{i=1}^{n_2} (Y_i -\mu_2)^2} F_{\alpha}(n_2,n_1) \right )$|$\left (0 ,\ \dfrac{S_1^2}{S_2^2} F_{\alpha}(n_2-1,n_1-1) \right )$|
 
 ### 0-1 分布总体参数
 
@@ -272,7 +190,7 @@ $$
 \left ( \frac{1}{2a} \left (-b-\sqrt{b^2-4ac} \right ),\ \frac{1}{2a} \left (-b+\sqrt{b^2-4ac} \right ) \right )
 $$
 
-其中 $a=n+z_{\frac{\alpha}{2}}^2$，$b=-(2n\overline{X}+z_{\frac{\alpha}{2}}^2)$，$c=n\overline{X}^2$。
+其中 $a=n+z_{\alpha/2}^2$，$b=-(2n\overline{X}+z_{\alpha/2}^2)$，$c=n\overline{X}^2$。
 
 ## 估计量的评选标准
 
