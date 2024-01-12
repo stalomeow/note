@@ -12,7 +12,31 @@ $$
 P \left(X=x_i \right) = p_i \ , \  i=1,2, \cdots
 $$
 
-如果级数 $\displaystyle\sum\limits_{i} x_ip_i$ 绝对收敛
+如果级数 $\displaystyle\sum\limits_{i} x_ip_i$ 绝对收敛，则称其为 $X$ 的数学期望、均值，记为 $EX$ 或 $E(X)$。
+
+## 方差
+
+$$
+DX = EX^2 - (EX)^2
+$$
+
+## 协方差
+
+$$
+\mathrm{cov}(X,Y)=E(XY)-EX \cdot EY
+$$
+
+## 相关系数
+
+$$
+\rho_{XY}=\frac{\mathrm{cov}(X,Y)}{\sqrt{DX}\sqrt{DY}}
+$$
+
+相关系数表示两个随机变量间的**线性关系**的程度。
+
+- 相互独立 $\Leftrightarrow$ 没有任何关系 $\Rightarrow$ 不相关。
+- 相关 $\Rightarrow$ 存在线性关系 $\Rightarrow$ 不独立。
+- 不相关 $\Rightarrow$ 没有线性关系，但可能有其他关系 $\Rightarrow$ 不一定独立。
 
 ## 常见分布的期望和方差
 
