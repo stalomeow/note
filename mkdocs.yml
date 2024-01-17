@@ -306,7 +306,9 @@ nav:
         - 选择:
           - 堆排序: cs/algorithm/sort/select/heap-sort.md
       - 杂项: cs/algorithm/misc.md
-    - 图形学:
+    - 数字电路与逻辑设计:
+      - 数制与编码: cs/digital-electronics/number-system-and-coding.md
+    - 计算机图形学:
       - Half Lambert 勘误: cs/cg/half-lambert-corrigenda.md
       - 颜色空间: cs/cg/color-space.md
       - NPR: # Non-photorealistic rendering

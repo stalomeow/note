@@ -4,7 +4,7 @@ draft: false
 authors:
   - stalomeow
 categories:
-  - Multisim
+  - Circuit Simulation
 ---
 
 # Multisim 仿真「方向之星」控制器
