@@ -4,7 +4,7 @@ draft: false
 authors:
   - stalomeow
 categories:
-  - Unity Rendering
+  - Unity
 ---
 
 # 让 SRP Batch 支持 Multipass Shader

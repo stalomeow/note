@@ -4,7 +4,7 @@ draft: false
 authors:
   - stalomeow
 categories:
-  - Unity Editor
+  - Unity
 ---
 
 # 将 GIF 直接导入为 AnimationClip

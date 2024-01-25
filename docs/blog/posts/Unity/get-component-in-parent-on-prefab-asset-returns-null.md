@@ -4,7 +4,7 @@ draft: false
 authors:
   - stalomeow
 categories:
-  - Unity Troubleshooting
+  - Unity
 ---
 
 # 解决 GetComponentInParent on PrefabAsset returns null

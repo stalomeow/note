@@ -4,7 +4,7 @@ draft: false
 authors:
   - stalomeow
 categories:
-  - Unity Rendering
+  - Unity
 ---
 
 # 平滑模型法线

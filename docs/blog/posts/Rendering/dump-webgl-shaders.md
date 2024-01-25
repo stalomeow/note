@@ -4,7 +4,7 @@ draft: false
 authors:
   - stalomeow
 categories:
-  - Rendering Reverse
+  - Rendering
 ---
 
 # 提取 WebGL Shaders

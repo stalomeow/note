@@ -4,7 +4,7 @@ draft: true
 authors:
   - stalomeow
 categories:
-  - Unity Scripting
+  - Unity
 ---
 
 # 在 Unity Humanoid Avatar 上播放 VMD 动画

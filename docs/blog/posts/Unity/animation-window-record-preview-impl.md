@@ -4,7 +4,7 @@ draft: true
 authors:
   - stalomeow
 categories:
-  - Unity Editor
+  - Unity
 ---
 
 # 类似 Animation Window 的 Record 和 Preview 功能

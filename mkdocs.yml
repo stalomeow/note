@@ -61,6 +61,7 @@ theme:
     # - navigation.instant.progress
     # - navigation.tabs
     - navigation.top
+    - navigation.path
     # - navigation.indexes
     # - navigation.tracking
     - navigation.footer

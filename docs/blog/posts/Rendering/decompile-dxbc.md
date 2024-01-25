@@ -4,7 +4,7 @@ draft: true
 authors:
   - stalomeow
 categories:
-  - Rendering Reverse
+  - Rendering
 ---
 
 # 反编译 DXBC

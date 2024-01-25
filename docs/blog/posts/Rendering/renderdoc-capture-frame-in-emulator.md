@@ -4,7 +4,7 @@ draft: false
 authors:
   - stalomeow
 categories:
-  - Rendering Reverse
+  - Rendering
 ---
 
 # 用 RenderDoc 和模拟器抓帧安卓手游
