@@ -87,5 +87,6 @@
 - [:material-link-variant: Emoji 大全](https://www.emojiall.com/zh-hans){ target="_blank" }
 - [:material-link-variant: Wayback Machine](http://web.archive.org){ target="_blank" }
 - [:material-link-variant: 阿里巴巴矢量图标库 (iconfont)](https://www.iconfont.cn/){ target="_blank" }
+- [:material-link-variant: YouTube 短片视频下载](https://ytshorts.savetube.me/zh/10){ target="_blank" }
 
 </div>

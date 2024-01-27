@@ -159,3 +159,11 @@
 }
 
 /* #endregion */
+
+/* #region Mermaid 居中 */
+
+.mermaid {
+    text-align: center;
+}
+
+/* #endregion */
