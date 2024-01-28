@@ -209,6 +209,7 @@ plugins:
       authors: true
       post_date_format: yyyy-MM-dd
       post_readtime: true
+      post_readtime_words_per_minute: 180
       post_url_format: "posts/{file}-{date}"
       post_url_date_format: yyyy-MM-dd
       post_excerpt: required
