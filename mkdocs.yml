@@ -54,6 +54,7 @@ theme:
 
     - content.tooltips
     - content.code.copy
+    - content.code.annotate
     - content.action.edit
 
     # TODO instant 和 MathJax 一起用目前有 bug，进下一个页面后公式排版会乱
