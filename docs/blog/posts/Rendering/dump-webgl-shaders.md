@@ -9,11 +9,9 @@ categories:
 
 # 提取 WebGL Shaders
 
-一键提取 WebGL Shaders 的代码。
+一键提取 WebGL Shaders 的代码。[^1]
 
 <!-- more -->
-
-控制台里执行下面的代码。[^1]
 
 ``` js
 (function(global) {
@@ -40,6 +38,6 @@ categories:
 }(this));
 ```
 
-当有 Shader 被编译时，就会在控制台输出 Shader 的源代码。
+在控制台里执行这个代码。当有 Shader 被编译时，就会在控制台输出 Shader 的源代码。
 
 [^1]: [https://github.com/greggman/dump-all-the-shaders/tree/master](https://github.com/greggman/dump-all-the-shaders/tree/master)
