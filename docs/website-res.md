@@ -88,5 +88,6 @@
 - [:material-link-variant: Wayback Machine](http://web.archive.org){ target="_blank" }
 - [:material-link-variant: 阿里巴巴矢量图标库 (iconfont)](https://www.iconfont.cn/){ target="_blank" }
 - [:material-link-variant: YouTube 短片视频下载](https://ytshorts.savetube.me/zh/10){ target="_blank" }
+- [:material-link-variant: CMD5 (md5 解密加密)](https://www.cmd5.com/){ target="_blank" }
 
 </div>
