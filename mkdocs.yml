@@ -259,6 +259,7 @@ nav:
         - STL 相关: cs/lang/c-cpp/stl.md
         - C++ 11 相关: cs/lang/c-cpp/cpp-11.md
       - C#:
+        - 命名规范: cs/lang/csharp/naming-convention.md
         - 弱引用: cs/lang/csharp/weak-references.md
         - 模式匹配: cs/lang/csharp/pattern-matching.md
         - GC.KeepAlive: cs/lang/csharp/gc-keep-alive.md
@@ -323,7 +324,9 @@ nav:
     - 简历 & 面试: cs/resume-and-interview.md
   - Unity:
     - Shader 相关:
+      - 平台差异: unity/shader/platform-differences.md
       - Material Property Drawer: unity/shader/material-property-drawer.md
+      - 常用 Render State 属性 UI: unity/shader/common-render-state-props-ui.md
     - 源码分析:
       - Unity UI:
         - TODO: unity/src-analysis/ugui/placeholder.md

@@ -1,1 +1,23 @@
 # 矩阵
+
+## 伴随矩阵
+
+二阶方阵求伴随矩阵的口诀：<mark>主对调，副取反</mark>。若原矩阵为
+
+$$
+\mathbf{A}=\begin{bmatrix}
+  a&b \\
+  c&d
+\end{bmatrix}
+$$
+
+其伴随矩阵是
+
+$$
+\mathbf{A}^\ast=\begin{bmatrix}
+  d&-b \\
+  -c&a
+\end{bmatrix}
+$$
+
+高阶的按定义求，或者先算逆矩阵再乘行列式。
