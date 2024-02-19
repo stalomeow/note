@@ -36,7 +36,8 @@ GitHub: [https://github.com/stalomeow/DreamTicker](https://github.com/stalomeow/
     - 镜子内的：模板测试 `Equal 1`
     - 镜子外的：模板测试 `NotEqual 1`
 
-3. 绘制半透明的镜子
+3. 绘制角色（深度测试 `Always`，避免被方块挡住）
+4. 绘制半透明的镜子
 
 ## 建图
 
