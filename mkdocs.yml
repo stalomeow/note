@@ -259,7 +259,7 @@ nav:
         - STL 相关: cs/lang/c-cpp/stl.md
         - C++ 11 相关: cs/lang/c-cpp/cpp-11.md
       - C#:
-        - 命名规范: cs/lang/csharp/naming-convention.md
+        - 代码规范: cs/lang/csharp/coding-convention.md
         - 弱引用: cs/lang/csharp/weak-references.md
         - 模式匹配: cs/lang/csharp/pattern-matching.md
         - GC.KeepAlive: cs/lang/csharp/gc-keep-alive.md
