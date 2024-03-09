@@ -51,7 +51,8 @@ flowchart TD
     Mip4Blur -- 合并 --> BloomTexture
     Mip5Blur -- 合并 --> BloomTexture
 
-    BloomTexture -- 叠加 --> Original
+    BloomTexture -- 叠加 --> Result[结果]
+    Original -- 叠加 --> Result
 ```
 
 ## 注意 HDR
