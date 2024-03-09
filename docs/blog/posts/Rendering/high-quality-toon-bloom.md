@@ -115,7 +115,7 @@ $$
 h(x,y)=\displaystyle\sum\limits_{i=-r}^{r}\displaystyle\sum\limits_{j=-r}^{r}f(x+i,y+j)G(i,j)
 $$
 
-假设图像的长和宽分别为 $m,n$，这个采样数是 $mnr^2$，有点多。
+假设图像的长和宽分别为 $m,n$，这个采样数是 $O(mnr^2)$，有点多。
 
 ### 减少采样数
 
@@ -155,7 +155,7 @@ $$
 h(x,y)=\displaystyle\sum\limits_{i=-r}^{r} h_1(x+i,y) G(i)
 $$
 
-这样采样数就变成了 $2mnr$，需要 2 个 pass。
+这样采样数就变成了 $O(mnr)$，需要 2 个 pass。
 
 ### 快速计算卷积核
 
