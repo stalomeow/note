@@ -320,6 +320,7 @@ nav:
     - 命令行:
       - Aria2: cs/cmd/aria2.md
       - Git: cs/cmd/git.md
+      - FFmpeg: cs/cmd/ffmpeg.md
     - Unicode: cs/unicode.md
     - 简历 & 面试: cs/resume-and-interview.md
   - Unity:

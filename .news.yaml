@@ -13,6 +13,9 @@ categories:
       unreal-blog:
         url: https://www.unrealengine.com/zh-CN/rss
 
+      jetbrains-dotnet:
+        url: https://blog.jetbrains.com/dotnet/feed/
+
       codingnow:
         url: https://blog.codingnow.com/atom.xml
 

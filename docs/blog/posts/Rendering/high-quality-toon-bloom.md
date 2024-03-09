@@ -29,6 +29,31 @@ categories:
 2. 发光物中心足够亮（甚至超过 1.0 而被 clamp 成白色）。
 3. 该亮的地方（灯芯、火把）要亮，不该亮的地方（白色墙壁、皮肤）不亮。
 
+## 大致流程图
+
+``` mermaid
+flowchart TD
+    Original[原图] -- 预处理 --> Mip0
+    
+    Mip0 -- 降采样 --> Mip1
+    Mip1 -- 降采样 --> Mip2
+    Mip2 -- 降采样 --> Mip3
+    Mip3 -- 降采样 --> Mip4
+    Mip4 -- 降采样 --> Mip5
+
+    Mip2 -- 高斯模糊 --> Mip2Blur
+    Mip3 -- 高斯模糊 --> Mip3Blur
+    Mip4 -- 高斯模糊 --> Mip4Blur
+    Mip5 -- 高斯模糊 --> Mip5Blur
+
+    Mip2Blur -- 合并 --> BloomTexture
+    Mip3Blur -- 合并 --> BloomTexture
+    Mip4Blur -- 合并 --> BloomTexture
+    Mip5Blur -- 合并 --> BloomTexture
+
+    BloomTexture -- 叠加 --> Original
+```
+
 ## 注意 HDR
 
 参考 URP Bloom 的 `EncodeHDR` 和 `DecodeHDR`。Bloom 可能导致像素值超过 1，部分不支持 B10G11R11 RT 的设备要用 R8G8B8A8 RT 和 RGBM 编码。
@@ -228,7 +253,7 @@ mip 的分辨率越小，模糊的范围（卷积核的长度）就应该越大�
 
 然后再拿这张图做横向模糊，绘制到另一张图集上。
 
-## 叠加
+## 合并
 
 需要 C# 代码传入的值：
 
