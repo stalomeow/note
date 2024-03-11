@@ -9,4 +9,6 @@ categories:
 
 # 实现 Per-Object Shadow
 
+游戏开发中常用的阴影方案是级联阴影
+
 <!-- more -->
