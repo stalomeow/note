@@ -13,9 +13,11 @@ categories:
       unreal-blog:
         feed: https://www.unrealengine.com/zh-CN/rss
         url: https://www.unrealengine.com/zh-CN
+        title: Unreal Engine Blog
 
       jetbrains-dotnet:
         feed: https://blog.jetbrains.com/dotnet/feed/
+        title: JetBrains Blog (.NET Tools)
 
       codingnow:
         feed: https://blog.codingnow.com/atom.xml
@@ -25,6 +27,7 @@ categories:
 
       jendrikillner:
         feed: https://www.jendrikillner.com/index.xml
+        title: Jendrik Illner
 
       gamedeveloper:
         feed: https://www.gamedeveloper.com/rss.xml
@@ -58,6 +61,7 @@ categories:
       killer-aery:
         feed: https://feed.cnblogs.com/blog/u/434729/rss/
         url: https://www.cnblogs.com/KillerAery/
+        title: KillerAery
 
   games:
     title: 游戏
