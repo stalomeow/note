@@ -49,6 +49,12 @@ categories:
       realtimerendering:
         url: https://www.realtimerendering.com/blog/feed/
 
+      jaihk662:
+        url: https://rss.csdn.net/Jaihk662/rss/map
+
+      killer_aery:
+        url: https://feed.cnblogs.com/blog/u/434729/rss/
+
       blogread:
         url: https://rsshub.app/blogread/newest
         posts_show_in_home: false
