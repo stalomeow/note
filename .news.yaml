@@ -8,60 +8,60 @@ categories:
     title: 技术博客
     rss:
       unity-technology-blog:
-        url: https://blog.unity.com/feed
+        feed: https://blog.unity.com/feed
 
       unreal-blog:
-        url: https://www.unrealengine.com/zh-CN/rss
+        feed: https://www.unrealengine.com/zh-CN/rss
+        url: https://www.unrealengine.com/zh-CN
 
       jetbrains-dotnet:
-        url: https://blog.jetbrains.com/dotnet/feed/
+        feed: https://blog.jetbrains.com/dotnet/feed/
 
       codingnow:
-        url: https://blog.codingnow.com/atom.xml
+        feed: https://blog.codingnow.com/atom.xml
 
       xuanyusong:
-        url: https://www.xuanyusong.com/feed
+        feed: https://www.xuanyusong.com/feed
 
       jendrikillner:
-        url: https://www.jendrikillner.com/index.xml
+        feed: https://www.jendrikillner.com/index.xml
 
       gamedeveloper:
-        url: https://www.gamedeveloper.com/rss.xml
+        feed: https://www.gamedeveloper.com/rss.xml
 
       red-blob-games:
-        url: https://simblob.blogspot.com/feeds/posts/default
+        feed: https://simblob.blogspot.com/feeds/posts/default
 
       perfare:
-        url: https://www.perfare.net/feed
+        feed: https://www.perfare.net/feed
 
       skywind:
-        url: https://www.skywind.me/blog/feed
+        feed: https://www.skywind.me/blog/feed
 
       xoofx:
-        url: https://xoofx.com/feed.xml
+        feed: https://xoofx.com/feed.xml
 
       siggraph:
-        url: https://blog.siggraph.org/feed/
+        feed: https://blog.siggraph.org/feed/
 
       lelefeng:
-        url: http://candycat1992.github.io/feed.xml
+        feed: https://candycat1992.github.io/feed.xml
+        url: https://candycat1992.github.io/
 
       realtimerendering:
-        url: https://www.realtimerendering.com/blog/feed/
+        feed: https://www.realtimerendering.com/blog/feed/
 
       jaihk662:
-        url: https://rss.csdn.net/Jaihk662/rss/map
+        feed: https://rss.csdn.net/Jaihk662/rss/map
+        title: Jaihk662
 
-      killer_aery:
-        url: https://feed.cnblogs.com/blog/u/434729/rss/
-
-      blogread:
-        url: https://rsshub.app/blogread/newest
-        posts_show_in_home: false
+      killer-aery:
+        feed: https://feed.cnblogs.com/blog/u/434729/rss/
+        url: https://www.cnblogs.com/KillerAery/
 
   games:
     title: 游戏
     rss:
       itch-games:
-        url: https://rsshub.app/itch/games/new-and-popular/featured
+        feed: https://rsshub.app/itch/games/new-and-popular/featured
         posts_show_in_home: false

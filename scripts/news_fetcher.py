@@ -29,7 +29,8 @@ TIME_ZONE = timezone(timedelta(hours=+8))
 # region Configs
 
 class RSSConfig(Config):
-    url = Type(str)
+    feed = Type(str)
+    url = Optional(Type(str))
     title = Optional(Type(str))
     description = Optional(Type(str))
     posts_tags = Type(bool, default=True)
@@ -138,14 +139,9 @@ class RSSInfo(MultiPagePostsInfo):
     def __init__(self, feed, slug, config: RSSConfig) -> None:
         super().__init__(slug)
 
-        self.url = feed.link
-        self.title = feed.title
-        self.description = feed.description
-
-        if config.title is not None:
-            self.title = config.title
-        if config.description is not None:
-            self.description = config.description
+        self.url = getattr(feed, 'link', '&lt;nil&gt;') if config.url is None else config.url
+        self.title = getattr(feed, 'title', '&lt;nil&gt;') if config.title is None else config.title
+        self.description = getattr(feed, 'description', '&lt;nil&gt;') if config.description is None else config.description
 
     def _getFileDir(self, pageNum: int):
         return 'news/rss'
@@ -280,13 +276,13 @@ def on_files(files: Files, config: MkDocsConfig):
         categoryList.append(catInfo)
 
         for rssSlug, rssConfig in catConfig.rss.items():
-            data = feedparser.parse(rssConfig.url, agent=newsConfig.user_agent)
+            data = feedparser.parse(rssConfig.feed, agent=newsConfig.user_agent)
 
             try:
                 rssInfo = RSSInfo(data.feed, rssSlug, rssConfig)
                 catInfo.rssList.append(rssInfo)
             except Exception as e:
-                log.warning(f'Failed to parse {rssConfig.url}; {e}')
+                log.warning(f'Failed to parse {rssConfig.feed}; {e}')
                 continue
 
             # 添加 RSS 中的文章
