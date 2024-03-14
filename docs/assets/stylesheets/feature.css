@@ -167,3 +167,14 @@
 }
 
 /* #endregion */
+
+/* #region 图片 caption 样式 */
+
+.md-typeset figcaption {
+    opacity: 0.6;
+    font-size: 0.7rem;
+    margin: 0.5em auto !important;
+    font-style: normal !important;
+}
+
+/* #endregion */

@@ -153,6 +153,7 @@ class PostInfo(object):
     def __init__(self, entry, srcRSS: RSSInfo, *, tags=True):
         self.srcRSS = srcRSS
         self.url = getattr(entry, 'link', srcRSS.url)
+        self.meta = {} # 支持 mkdocs-glightbox
 
         if hasattr(entry, 'published_parsed'):
             # 从 GMT 时间计算 timestamp
