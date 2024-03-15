@@ -15,7 +15,7 @@ Per-Object Shadow 就是给物体单独生成一张 Shadow Map，解决物体在
 
 <!-- more -->
 
-代码大体上按照 URP 的 [`MainLightShadowCasterPass`](https://github.com/Unity-Technologies/Graphics/blob/master/Packages/com.unity.render-pipelines.universal/Runtime/Passes/MainLightShadowCasterPass.cs) 写即可。这篇文章主要记录一些有差异地方。
+代码大体上按照 URP 的 [`MainLightShadowCasterPass`](https://github.com/Unity-Technologies/Graphics/blob/master/Packages/com.unity.render-pipelines.universal/Runtime/Passes/MainLightShadowCasterPass.cs) 写即可。这篇文章主要记录一些有差异的地方。
 
 参考文章：
 
@@ -269,7 +269,7 @@ projectionMatrix = float4x4.OrthoOffCenter(left, right, bottom, top, zNear, zFar
 
 ## 绘制阴影图集
 
-一个场景里不可能就一个角色。这里用老方法，把角色阴影都画到一张图集上，最多画 16 个，每一块分辨率用 512x512。
+一个场景里通常有多个角色。这里用老方法，把角色阴影都画到一张图集上，最多画 16 个，每一块分辨率用 512x512。
 
 ``` csharp
 private const int MaxShadowCount = 16;
@@ -288,7 +288,7 @@ ConfigureTarget(m_ShadowMap);
 ConfigureClear(ClearFlag.All, Color.black);
 ```
 
-绘制的时候，先算当前 tile 的位置
+绘制的时候，先算当前 tile 的位置。
 
 ``` csharp
 for (int i = 0; i < m_ShadowCasterList.Count; i++)
@@ -326,7 +326,7 @@ Shadow Caster 的 Shader 直接拿 URP 的，改个 LightMode 就行。
 
 ## Shadow Matrix
 
-Shadow Matrix 的作用是把 World Space Position 变换成 xyzw。xy 是 Shadow Map 的 uv。z 是在光源空间的深度，用来和 Shadow Map 上的值比较。主光源用的是正交投影。
+Shadow Matrix 的作用是把 World Space Position 变换成 xyzw（正交投影）。xy 是 Shadow Map 的 uv。z 是在光源空间的深度，用来和 Shadow Map 上的值比较。
 
 ``` csharp
 private Matrix4x4 GetShadowMatrix(Vector2Int tilePos, in ShadowCasterData casterData)
@@ -399,6 +399,6 @@ for (int i = 0; i < _PerObjShadowCount; i++)
 
 目前，我还没想到合适的方法来支持 SRP Batcher。
 
-想走 SRP Batch 的话，要用 [`ScriptableRenderContext.DrawRenderers`](https://docs.unity3d.com/ScriptReference/Rendering.ScriptableRenderContext.DrawRenderers.html)，但它只能绘制相机里可见的物体。有些物体会投射阴影，但是它不在相机里。
+想支持 SRP Batcher 的话，要用 [`ScriptableRenderContext.DrawRenderers`](https://docs.unity3d.com/ScriptReference/Rendering.ScriptableRenderContext.DrawRenderers.html)，但它只能绘制相机里可见的物体。有些物体会投射阴影，但是它不在相机里。
 
 [^1]: [Unity - Scripting API: Matrix4x4.Ortho](https://docs.unity3d.com/ScriptReference/Matrix4x4.Ortho.html)
