@@ -181,8 +181,6 @@ plugins:
       categories:
         - categories
       image: *site-icon
-  - glightbox:
-      auto_caption: true
   - minify:
       minify_html: true
       minify_js: true
@@ -225,6 +223,7 @@ plugins:
 hooks:
   - scripts/config_validator.py
   - scripts/news_fetcher.py
+  - scripts/fancybox.py
 
 
 nav:

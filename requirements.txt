@@ -19,7 +19,6 @@ mergedeep==1.3.4
 mkdocs==1.5.3
 mkdocs-git-committers-plugin-2==2.2.2
 mkdocs-git-revision-date-localized-plugin==1.1.0
-mkdocs-glightbox @ git+https://github.com/stalomeow/mkdocs-glightbox.git@d303a72eadba7d6331b056316247695aee2828a8
 mkdocs-material==9.5.5
 mkdocs-material-extensions==1.3.1
 mkdocs-minify-plugin==0.7.1

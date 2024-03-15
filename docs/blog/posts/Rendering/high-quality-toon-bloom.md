@@ -9,9 +9,9 @@ categories:
 
 # 高质量卡通渲染 Bloom
 
-我个人认为卡通渲染里 Bloom 还是挺重要的，它能对画面起到润色作用，比简单地后期调高饱和度要好看很多。效果图：
+我个人认为卡通渲染里 Bloom 还是挺重要的，它能对画面起到润色作用，比简单地后期调高饱和度要好看很多。
 
-![Bloom 效果](../../../assets/images/bloom-toon.png)
+![Bloom 效果图](../../../assets/images/bloom-toon.png)
 
 <!-- more -->
 
@@ -244,15 +244,11 @@ mip 的分辨率越小，模糊的范围（卷积核的长度）就应该越大�
 
 ### 图集优化
 
-因为要对多级 mip 做模糊，会出现很多 RT switch，对性能有影响。
-
-可以把纵向模糊的结果都绘制到一张图集上，如下图：
+因为要对多级 mip 做模糊，会出现很多 RT switch，对性能有影响。可以把纵向模糊的结果都绘制到一张图集上。用 [`CommandBuffer.SetViewport`](https://docs.unity3d.com/ScriptReference/Rendering.CommandBuffer.SetViewport.html) 来限制绘制的区域。
 
 ![图集](../../../assets/images/bloom-atlas.png)
 
-用 [`CommandBuffer.SetViewport`](https://docs.unity3d.com/ScriptReference/Rendering.CommandBuffer.SetViewport.html) 来限制绘制的区域。
-
-然后再拿这张图做横向模糊，绘制到另一张图集上。
+然后再做横向模糊，绘制到另一张图集上。
 
 ## 合并
 
@@ -274,9 +270,9 @@ UNITY_UNROLL for (int i = 0; i < MAX_MIP_DOWN_BLUR_COUNT; i++)
 return EncodeHDR(color);
 ```
 
-![叠加好的图](../../../assets/images/bloom-final.png)
+![叠加好的图，分辨率和图集里最大的那张一样](../../../assets/images/bloom-final.png)
 
-分辨率和图集里最大的那张一样。之后把它拿给 UberPost，加到屏幕上即可。
+之后把它拿给 UberPost，加到屏幕上即可。
 
 ### 防漏光
 
