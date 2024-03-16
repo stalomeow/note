@@ -14,3 +14,8 @@
 .md-content.md-content--post>article.md-content__inner.md-typeset {
     flex-grow: 1;
 }
+
+/* 解决代码块横向溢出后，行高亮长度不够的问题 */
+.md-typeset .highlight code {
+    display: grid;
+}
