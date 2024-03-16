@@ -39,6 +39,4 @@ search:
 
 如果本站对你有帮助的话...
 
-<figure markdown>
 ![Sponsor Me!](assets/images/sponsor.png){ width="200px" }
-</figure>
