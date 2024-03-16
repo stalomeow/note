@@ -27,12 +27,50 @@ public interface IJobParallelForAppend<TValue> where TValue : unmanaged
 
 <!-- more -->
 
-- `index` 是当前 for 循环的索引。
+- `index` 是 for 循环当前的索引。
 - `buf` 是一个临时缓冲区。
 
 如果 `Execute` 返回 `true`，`buf` 的值会被 Append 到结果里。
 
-## 代码
+## 样例
+
+``` csharp
+[BurstCompile]
+public struct TestJob : IJobParallelForAppend<int>
+{
+    public bool Execute(int index, ref int buf)
+    {
+        if (index % 2 == 0)
+        {
+            buf = index * 2;
+            return true;
+        }
+
+        return false;
+    }
+}
+
+public class JobTest : MonoBehaviour
+{
+    private void Start()
+    {
+        using var buffer = new NativeList<int>(Allocator.TempJob);
+        TestJob job = new TestJob();
+        job.Schedule(buffer, 12, 2).Complete();
+
+        for (int i = 0; i < buffer.Length; i++)
+        {
+            print(buffer[i]);
+        }
+    }
+}
+```
+
+输出是 0，4，8，12，16，20，但顺序不固定。
+
+## 核心代码
+
+`ParallelForAppendProducer<TJob, TValue>.Execute` 是核心的方法。在 Schedule 前分配好 `NativeList<TValue>` 的空间，每次有数据要 Append 时，用 `Interlocked.Increment` 增加 List 的元素数量，把值存进去就好。
 
 ``` csharp
 public static class IJobParallelForAppendExtensions
@@ -179,4 +217,52 @@ public static class IJobParallelForAppendExtensions
 }
 ```
 
+## 避坑指南
+
+写泛型 Job 接口有不少坑。
+
+### JobProducer 类型参数顺序
+
+泛型 Job 接口，对应的 JobProducer 的类型参数顺序必须是
+
+1. `TJob`：具体的 Job 类型。
+2. `...T`：`TJob` 实现的 Job 接口的类型参数。
+
+否则不兼容 Burst Compiler。这个在 Burst 源码 `Runtime/Editor/BurstReflection.cs` 里的 `ScanJobType` 方法里写死了。
+
+比如 `IJobParallelForAppend<TValue>` 对应 `ParallelForAppendProducer<TJob, TValue>`。
+
+### EarlyJobInit 类型参数数量
+
+这个太坑了。
+
+> When the Collections package is included in the project, Unity generates code to call EarlyJobInit at startup. This allows Burst compiled code to schedule jobs because the reflection part of initialization, which is not compatible with burst compiler constraints, has already happened in EarlyJobInit. [^2]
+
+``` csharp title="生成的代码" hl_lines="8"
+[Unity.Jobs.DOTSCompilerGenerated]
+internal class __JobReflectionRegistrationOutput__2275960884
+{
+    public static void CreateJobReflectionData()
+    {
+        try
+        {
+            IJobParallelForAppendExtensions.EarlyJobInit<TestJob>();
+        }
+        catch (Exception ex)
+        {
+            EarlyInitHelpers.JobReflectionDataCreationFailed(ex);
+        }
+    }
+
+    [InitializeOnLoadMethod]
+    public static void EarlyInit()
+    {
+        CreateJobReflectionData();
+    }
+}
+```
+
+它调用 `EarlyJobInit` 时只给了一个 `TJob` 类型参数。如果我们声明的是 `EarlyJobInit<TJob, TValue>` 就会报错。这个在 Collections 源码 `Unity.Collections.CodeGen/JobReflectionDataPostProcessor.cs` 的 `GenerateCalls` 方法里写死了。。。
+
 [^1]: [https://docs.unity3d.com/Packages/com.unity.collections@2.4/changelog/CHANGELOG.html#changed-10](https://docs.unity3d.com/Packages/com.unity.collections@2.4/changelog/CHANGELOG.html#changed-10)
+[^2]: [https://docs.unity3d.com/Packages/com.unity.collections@2.4/api/Unity.Jobs.IJobFilterExtensions.html](https://docs.unity3d.com/Packages/com.unity.collections@2.4/api/Unity.Jobs.IJobFilterExtensions.html)
