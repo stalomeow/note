@@ -237,6 +237,7 @@ nav:
   - 基础学科:
     - 信号与线性系统分析:
       - 信号与系统: basic/analysis-of-signals-and-linear-systems/signals-and-systems.md
+    - 广义函数和泛函: basic/generalized-functions-and-functionals.md
     - 概率论与数理统计:
       - 随机变量及其概率分布: basic/probability-statistics/random-var-and-prob-distribution.md
       - 随机变量的数字特征: basic/probability-statistics/numerical-characteristics-of-random-var.md
