@@ -34,7 +34,7 @@ $$
 
 ## 广义函数相等
 
-$\forall \varphi(t) \in \varPhi$，如果两个广义函数 $f(t),g(t)$ 满足
+如果两个广义函数 $f(t),g(t)$ 满足 $\forall \varphi(t) \in \varPhi$ 都有
 
 $$
 \int_{-\infty}^{+\infty} f(t)\varphi(t)\mathrm{d}t=\int_{-\infty}^{+\infty} g(t)\varphi(t)\mathrm{d}t

@@ -21,6 +21,11 @@ $$
 \int_{-\infty}^{t}\varepsilon(\tau)\mathrm{d}\tau=t\varepsilon(t)
 $$
 
+
+$$
+\int_{-\infty}^{t}\varepsilon(\tau)\varphi(\tau)\mathrm{d}\tau=\varepsilon(t)\int_{0}^{t}\varphi(\tau)\mathrm{d}\tau
+$$
+
 ### 广义函数
 
 $$
@@ -44,7 +49,7 @@ $$
 
 ### 性质
 
-- 积分面积为 1
+- 积分面积（强度）为 1
 
     $$
     \int_{-\infty }^{+\infty }\delta(t)\mathrm{d}t=1
