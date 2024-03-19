@@ -115,24 +115,6 @@
 
 /* #endregion */
 
-/* #region 平滑滚动 */
-
-/* TODO 开了以后，有时候滚动有 bug */
-/* html, body {
-    scroll-behavior: smooth;
-} */
-
-/* #endregion */
-
-/* #region glightbox */
-
-.glightbox {
-    display: flex;
-    justify-content: center;
-}
-
-/* #endregion */
-
 /* #region 博客首页文章分割线 */
 
 .md-post--excerpt {
@@ -147,7 +129,7 @@
 /* #region PC 端导航栏和 TOC 的对齐线 */
 
 @media screen and (min-width: 76.25em) {
-    .md-sidebar[data-md-type="navigation"]:not(.md-sidebar--post) nav.md-nav:not([data-md-level="0"]) {
+    .md-sidebar[data-md-type="navigation"]:not(.md-sidebar--post) nav.md-nav:not([data-md-level="0"]):not([data-md-level="1"]) {
         border-left: 1px solid color-mix(in srgb, var(--md-default-fg-color) 20%, var(--md-default-bg-color));
     }
 }
@@ -175,6 +157,25 @@
     font-size: 0.7rem;
     margin: 0.5em auto !important;
     font-style: normal !important;
+}
+
+/* #endregion */
+
+/* #region nav section title 样式 */
+
+@media screen and (min-width: 76.25em) {
+    .md-nav__item--section>.md-nav__link[for] {
+        color: var(--md-default-fg-color);
+    }
+
+    .md-nav__item--section>.md-nav__link[for]>span:first-child {
+        box-shadow: inset 0 -0.3rem var(--md-nav-link-underline-color);
+        transition: box-shadow 0.2s ease-in-out;
+    }
+
+    .md-nav__item--section:hover>.md-nav__link[for]>span:first-child {
+        box-shadow: inset 0 -1rem var(--md-nav-link-underline-color);
+    }
 }
 
 /* #endregion */
