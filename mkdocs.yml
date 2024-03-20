@@ -16,8 +16,8 @@ theme:
   favicon: &site-icon assets/images/favicon.ico
 
   font:
-    text: LXGW WenKai Screen
-    code: JetBrains Mono
+    text: "'LXGW WenKai Screen', 'Noto Sans SC', 'Microsoft YaHei', sans-serif"
+    code: "'JetBrains Mono', 'LXGW WenKai Screen', 'Noto Sans SC', 'Microsoft YaHei', sans-serif"
 
   icon:
     repo: fontawesome/brands/github
@@ -276,6 +276,7 @@ nav:
       - 学习资料: cs/algorithm/res.md
       - 数组: cs/algorithm/array.md
       - 链表: cs/algorithm/linked-list.md
+      - 单调栈: cs/algorithm/monotonic-stack.md
       - 搜索:
         - DFS: cs/algorithm/search/dfs.md
         - BFS: cs/algorithm/search/bfs.md

@@ -24,10 +24,6 @@ search:
 - 网站使用 [MkDocs 框架](https://www.mkdocs.org/){ target="_blank" } + [Material 主题](https://squidfunk.github.io/mkdocs-material/){ target="_blank" } 制作，部署在 [Vercel](https://vercel.com/){ target="_blank" } 上。按照我的习惯，对 Material 主题做了一些定制。
 - RSS 阅读器是自己编写 [MkDocs Hooks](https://www.mkdocs.org/user-guide/configuration/#hooks){ target="_blank" } 实现的。利用 [GitHub Actions](https://docs.github.com/en/actions){ target="_blank" } 定时自动更新。
 
----
-
-推荐使用阳间浏览器 + Dark Mode 浏览。
-
 ## 勘误
 
 如果发现错误，可以 <small>（二选一）</small>

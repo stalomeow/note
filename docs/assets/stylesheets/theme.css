@@ -2,12 +2,6 @@
  * 主题样式
  */
 
-
-:root {
-    --md-text-font: 'LXGW WenKai Screen', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
-    --md-code-font: 'JetBrains Mono', 'LXGW WenKai Screen', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
-}
-
 [data-md-color-scheme=default] {
     --md-footer-fg-color: #000000de;
     --md-footer-fg-color--light: #000000b6;
@@ -45,4 +39,8 @@
     [data-md-color-primary=black] .md-nav__source {
         background-color: #1f1f1f;
     }
+}
+
+[data-md-color-primary=black] [data-md-component=announce] .md-banner {
+    background-color: #121212;
 }
