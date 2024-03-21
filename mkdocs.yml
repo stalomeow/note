@@ -64,7 +64,7 @@ theme:
     - navigation.path
     # - navigation.indexes
     # - navigation.tracking
-    - navigation.footer
+    # - navigation.footer
     - navigation.sections
 
     - toc.follow

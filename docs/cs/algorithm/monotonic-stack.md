@@ -2,7 +2,7 @@
 
 始终满足单调性的栈。新元素入栈时，先把比它大（小）的元素都出栈，自己再入栈，以维持单调性。
 
-典型的应用场景：在一维数组中，寻找每个元素左（右）边第一个满足某条件的元素。
+典型的应用场景：在一维数组中，寻找每个元素左（右）边第一个满足某条件的元素，栈中存的是还没找到的元素的下标。
 
 ## 每日温度
 
@@ -15,9 +15,11 @@
 > *   <code>1 <= temperatures.length <= 10<sup>5</sup></code>
 > *   <code>30 <= temperatures[i] <= 100</code>
 
+算是模板题了。
+
 ??? success "解析"
 
-    算是模板题了。单调栈中存的是当前还没处理的元素下标。
+    单调栈中存的是当前还没处理的元素下标。
 
     ``` cpp
     class Solution {
@@ -334,6 +336,10 @@
     };
     ```
 
+    时间复杂度：$O(n)$。
+
+    空间复杂度：$O(n)$。
+
 ## 柱状图中最大的矩形
 
 > [84. 柱状图中最大的矩形](https://leetcode.cn/problems/largest-rectangle-in-histogram/description/){ target="_blank" }
@@ -346,3 +352,48 @@
 
 > *   <code>1 <= heights.length <=10<sup>5</sup></code>
 > *   <code>0 <= heights[i] <= 10<sup>4</sup></code>
+
+??? success "解析"
+
+    对于第 `i` 列的柱子，将它向左右扩展到最远，得到一个可能的矩形。遍历所有这样的矩形，取最大值。
+
+    向左右扩展到最远，换种角度想，即找到左边和右边第一个比自己矮的柱子。典型的单调栈应用。
+
+    维护一个从栈底到栈顶递增的单调栈，对于栈中的某个柱子，它下面的那个元素就是它左边第一个比自己矮的柱子。
+
+    ``` cpp
+    class Solution {
+    public:
+        int largestRectangleArea(vector<int>& heights) {
+            int ans = 0;
+            stack<int> s;
+
+            // 在前后插入哨兵，保证单调栈中所有柱子都能被处理
+            heights.insert(heights.begin(), 0);
+            heights.push_back(0);
+
+            for (int i = 0;i < heights.size();i++)
+            {
+                while (s.size() && heights[i] < heights[s.top()])
+                {
+                    int mid = s.top();
+                    s.pop();
+
+                    if (s.size())
+                    {
+                        int w = i - s.top() - 1;
+                        int h = heights[mid];
+                        ans = max(ans, w * h);
+                    }
+                }
+                s.push(i);
+            }
+
+            return ans;
+        }
+    };
+    ```
+
+    时间复杂度：$O(n)$。
+
+    空间复杂度：$O(n)$。
