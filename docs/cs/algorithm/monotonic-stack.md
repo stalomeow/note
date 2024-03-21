@@ -169,10 +169,10 @@
 
     用 `leftMax[i]` 表示 `max(height[:i+1])`，`rightMax[i]` 表示 `max(height[i:])`。有
     
-    - `leftMax[0]=height[0]`
-    - `leftMax[i]=max(leftMax[i-1], height[i])`
-    - `rightMax[n-1]=height[n-1]`
-    - `rightMax[i]=max(rightMax[i+1], height[i])`
+    - `leftMax[0] = height[0]`
+    - `leftMax[i] = max(leftMax[i-1], height[i])`
+    - `rightMax[n-1] = height[n-1]`
+    - `rightMax[i] = max(rightMax[i+1], height[i])`
 
     ``` cpp
     class Solution {
@@ -212,6 +212,56 @@
 
     双指针。
 
+    动态规划中，`leftMax[i]` 只和前一项以及 `height[i]` 有关，`rightMax[i]` 只和后一项以及 `height[i]` 有关，所以可以想办法把数组优化掉。
+
+    改成双指针后，令
+
+    - `#!python leftMax = max(height[:left+1])`
+    - `#!python rightMax = max(height[right:])`
+
+    同时，让 `left` 或 `right` 始终停留在最高的柱子处，即满足
+
+    ``` python
+    max(height[left], height[right]) == max(leftMax, rightMax)
+    ```
+
+    这样的话，可得几条推论：
+
+    - `#!python leftMaxInDP[i] >= height[j]`，对任意 `j <= i` 都成立
+    - `#!python rightMaxInDP[i] >= height[j]`，对任意 `j >= i` 都成立
+    - `#!python leftMax == leftMaxInDP[left]`
+    - `#!python rightMax == rightMaxInDP[right]`
+    - `#!python leftMax <= max(height[left], height[right])`
+    - `#!python rightMax <= max(height[left], height[right])`
+
+    ---
+
+    如果 `#!python height[left] < height[right]`，则必有
+
+    ``` python
+    leftMaxInDP[left] == leftMax <= height[right] <= rightMaxInDP[left]
+    ```
+
+    根据动态规划中，第 `i` 列能接的雨水数量公式
+
+    ``` python
+    min(leftMaxInDP[i], rightMaxInDP[i]) - height[i]
+    ```
+
+    可得，第 `left` 列能接的雨水数量为 `leftMax - height[left]`。然后，因为 `left` 列比 `right` 列矮，所以向右移动 `left`。
+
+    ---
+
+    如果 `#!python height[left] >= height[right]`，同样的，有
+
+    ``` python
+    rightMaxInDP[right] == rightMax <= height[left] <= leftMaxInDP[right]
+    ```
+
+    可得，第 `right` 列能接的雨水数量为 `rightMax - height[right]`。然后，因为 `right` 列比 `left` 列矮，所以向左移动 `right`。
+
+    ---
+
     ``` cpp
     class Solution {
     public:
@@ -222,8 +272,8 @@
             int right = height.size() - 1;
             int ans = 0;
 
+            // 最后 left 和 right 一定会聚在最高处，这地方肯定接不了雨水
             // 这里条件中等号可以加也可以不加
-            // 最后 left 和 right 一定会聚在最高处
             while (left < right)
             {
                 leftMax = max(leftMax, height[left]);
@@ -252,7 +302,37 @@
 
 ??? success "解析 3"
 
-    单调栈。动态规划是竖着数雨水，而单调栈是横着数雨水。
+    单调栈。前两种方法是竖着数雨水，而单调栈是横着数雨水。
+
+    ``` cpp
+    class Solution {
+    public:
+        int trap(vector<int>& height) {
+            int ans = 0;
+            stack<int> s;
+
+            for (int i = 0;i < height.size();i++)
+            {
+                while (s.size() && height[i] > height[s.top()])
+                {
+                    int mid = s.top();
+                    s.pop();
+
+                    if (s.size())
+                    {
+                        int left = s.top();
+                        int w = i - left - 1;
+                        int h = min(height[left], height[i]) - height[mid];
+                        ans += w * h;
+                    }
+                }
+                s.push(i);
+            }
+
+            return ans;
+        }
+    };
+    ```
 
 ## 柱状图中最大的矩形
 
