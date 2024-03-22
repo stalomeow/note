@@ -9,9 +9,8 @@ help h:
 	&& @echo   upgrade      # Upgrade mkdocs-material
 .PHONY: help h
 
-# Only re-build files that have changed.
 serve s:
-	.\env\Scripts\activate && mkdocs --color serve --dirty
+	.\env\Scripts\activate && mkdocs --color serve
 .PHONY: serve s
 
 edit e:

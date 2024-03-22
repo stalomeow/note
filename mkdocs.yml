@@ -1,4 +1,4 @@
-INHERIT: &base-yml configs/nav.yml
+INHERIT: configs/nav.yml
 
 site_name: Stalo's Note
 site_url: https://note.stalomeow.com/
@@ -104,6 +104,7 @@ extra_css:
 
 extra_javascript:
   - assets/javascripts/mathjax.js
+  - assets/javascripts/sponsor.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   # - https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js # 别加 mml！它会导致表格横向溢出！
   - https://cdn.jsdelivr.net/npm/mathjax@4.0.0-beta.4/tex-chtml.js
@@ -192,6 +193,7 @@ plugins:
       cache_safe: true
       js_files:
         - assets/javascripts/mathjax.js
+        - assets/javascripts/sponsor.js
       css_files:
         - assets/webfonts/JetBrains Mono/font.css
         - assets/webfonts/LXGW WenKai Screen/font.css
@@ -208,6 +210,7 @@ plugins:
       categories: true
       categories_toc: false # TODO 中文 toc 有问题，很多 id 都是 #_1
       authors: true
+      authors_file: ../configs/authors.yml # The provided path is resolved from the docs directory.
       post_date_format: yyyy-MM-dd
       post_readtime: true
       post_readtime_words_per_minute: 180
@@ -229,5 +232,5 @@ hooks:
 
 
 watch:
-  - *base-yml
+  - configs
   - overrides
