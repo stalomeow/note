@@ -21,10 +21,10 @@ blog b:
 	.\env\Scripts\activate && python .\scripts\new_blog.py
 .PHONY: blog b
 
-MSG := "Update"
+MSG := Update
 
 deploy d:
-	git add . && git commit -m $(MSG) && git push
+	git add . && git commit -m "$(MSG)" && git push
 .PHONY: deploy d
 
 # https://github.com/urllib3/urllib3/issues/2168
