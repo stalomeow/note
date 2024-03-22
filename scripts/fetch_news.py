@@ -246,7 +246,7 @@ def on_shutdown():
 
 def loadNewsConfig(config: MkDocsConfig):
     configDir = os.path.dirname(config.config_file_path)
-    configPath = os.path.join(configDir, '.news.yaml')
+    configPath = os.path.join(configDir, 'configs/news.yml')
 
     global newsConfig
     newsConfig = NewsConfig(configPath)

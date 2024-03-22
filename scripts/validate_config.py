@@ -38,10 +38,6 @@ def on_config(config: MkDocsConfig):
     # 禁用一些插件，提高页面生成速度
     for pluginName in PLUGIN_BLACKLIST:
         pop_plugin(config.plugins, pluginName)
-        log.info('[config-validator] Disable plugin \'%s\' in serve mode.', pluginName)
-
-    # watch additional directories
-    config.watch.append('overrides')
-    # config.watch.append('scripts')
+        log.warning('Disable plugin \'%s\' in serve mode.', pluginName)
 
     return config
