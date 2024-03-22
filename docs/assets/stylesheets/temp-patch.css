@@ -19,3 +19,8 @@
 .md-typeset .highlight code {
     display: grid;
 }
+
+/* 解决评论区奇怪的黑色背景 */
+.md-typeset iframe.giscus-frame {
+    color-scheme: light dark !important;
+}
