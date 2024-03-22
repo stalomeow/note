@@ -1,12 +1,12 @@
 help h:
 	@echo.                                              \
 	&& @echo Usage:                                     \
-	&& @echo   help     h   # Show help information     \
-	&& @echo   serve    s   # Start local server        \
-	&& @echo   edit     e   # Open VSCode               \
-	&& @echo   blog     b   # New blog post             \
-	&& @echo   deploy   d   # Push to remote repository \
-	&& @echo   upgrade      # Upgrade mkdocs-material
+	&& @echo   help     h     Show help information     \
+	&& @echo   serve    s     Start local server        \
+	&& @echo   edit     e     Open VSCode               \
+	&& @echo   blog     b     New blog post             \
+	&& @echo   deploy   d     Push to remote repository \
+	&& @echo   upgrade        Upgrade mkdocs-material
 .PHONY: help h
 
 serve s:

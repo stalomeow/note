@@ -30,9 +30,3 @@ search:
 
 - 直接在评论区中指出。
 - 点击笔记标题旁的铅笔图标，Fork GitHub 仓库后修改源文件，最后提交 PR。
-
-## 赞助
-
-如果本站对你有帮助的话...
-
-![Sponsor Me!](assets/images/sponsor.png){ width="200px" }
