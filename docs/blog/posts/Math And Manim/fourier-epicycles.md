@@ -4,7 +4,7 @@ draft: false
 authors:
   - stalomeow
 categories:
-  - Manim
+  - Math And Manim
 ---
 
 # 傅里叶级数实现本轮画图

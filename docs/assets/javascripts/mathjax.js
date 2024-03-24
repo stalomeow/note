@@ -9,6 +9,12 @@ window.MathJax = {
         processEnvironments: true,
         packages: {
             '[+]': ['boldsymbol']
+        },
+        macros: {
+            abs: [String.raw`\left | #1 \right |`, 1],
+            coloneq: String.raw`\mathrel{\vcenter{:}}=`,
+            ddx: [String.raw`\frac{\mathrm{d}#2}{\mathrm{d}#1}`, 2, 'x'],
+            dddx: [String.raw`\dfrac{\mathrm{d}#2}{\mathrm{d}#1}`, 2, 'x']
         }
     },
     options: {

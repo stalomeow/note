@@ -179,3 +179,13 @@
 }
 
 /* #endregion */
+
+/* #region mathjax thin-scrollbar */
+
+.md-typeset div.arithmatex {
+    scrollbar-gutter: auto;
+    scrollbar-color: var(--md-default-fg-color--lighter) #0000;
+    scrollbar-width: thin;
+}
+
+/* #endregion */

@@ -5,7 +5,7 @@
 用函数序列极限来定义
 
 $$
-\varepsilon(t) \stackrel{\text{def}}{=} \lim_{n \to \infty} \gamma_n(t) = \left\{\begin{matrix}
+\varepsilon(t) \coloneq \lim_{n \to \infty} \gamma_n(t) = \left\{\begin{matrix}
  0, &t<0 \\
  1, &t>0
 \end{matrix}\right.
@@ -37,7 +37,7 @@ $$
 用函数序列极限来定义
 
 $$
-\delta(t) \stackrel{\text{def}}{=} \lim_{n \to \infty} p_n(t) = \left\{\begin{matrix}
+\delta(t) \coloneq \lim_{n \to \infty} p_n(t) = \left\{\begin{matrix}
  +\infty , &t=0 \\
  0, &t\neq0
 \end{matrix}\right.
@@ -128,7 +128,7 @@ $$
 ## 单位阶跃序列
 
 $$
-\varepsilon(k) \stackrel{\text{def}}{=} \left\{\begin{matrix}
+\varepsilon(k) \coloneq \left\{\begin{matrix}
  0, &k<0 \\
  1, &k\ge0
 \end{matrix}\right.
@@ -137,7 +137,7 @@ $$
 ## 单位样值序列
 
 $$
-\delta(k) \stackrel{\text{def}}{=} \left\{\begin{matrix}
+\delta(k) \coloneq \left\{\begin{matrix}
  1, &k=0 \\
  0, &k\neq0
 \end{matrix}\right.

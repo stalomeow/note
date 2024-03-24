@@ -11,6 +11,7 @@ nav:
       - basic/sig-and-sys/signals-and-systems.md
       - 连续系统的时域分析:
         - basic/sig-and-sys/impulse-and-step-response.md
+        - basic/sig-and-sys/convolution.md
     - basic/generalized-functions-and-functionals.md
     - 概率论与数理统计:
       - basic/probability-statistics/random-var-and-prob-distribution.md
