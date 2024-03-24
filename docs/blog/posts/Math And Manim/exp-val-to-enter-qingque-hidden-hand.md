@@ -27,6 +27,8 @@ categories:
     <iframe src="//player.bilibili.com/player.html?aid=996148265&bvid=BV16s4y1B7jm&cid=1129947597&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
+这下真看 V 看的了。
+
 ## 青雀的抽牌机制
 
 > *天赋* 帝垣琼玉
@@ -49,16 +51,16 @@ categories:
 
 ``` mermaid
 flowchart LR
-    AABC([AABC]) -- <math><mfrac><mrow><mn>6</mn></mrow><mrow><mn>9</mn></mrow></mfrac></math> --> AAAB
-    AABC -- <math><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></math> --> AABB
-    AABC -- <math><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></math> --> AAAA
+    AABC([AABC]) -- 6/9 --> AAAB
+    AABC -- 2/9 --> AABB
+    AABC -- 1/9 --> AAAA
 
-    AABB([AABB]) -- <math><mfrac><mrow><mn>6</mn></mrow><mrow><mn>9</mn></mrow></mfrac></math> --> AAAB
-    AABB -- <math><mfrac><mrow><mn>1</mn></mrow><mrow><mn>9</mn></mrow></mfrac></math> --> AABB
-    AABB -- <math><mfrac><mrow><mn>2</mn></mrow><mrow><mn>9</mn></mrow></mfrac></math> --> AAAA
+    AABB([AABB]) -- 6/9 --> AAAB
+    AABB --1/9 --> AABB
+    AABB -- 2/9 --> AAAA
 
-    AAAB([AAAB]) -- <math><mfrac><mrow><mn>4</mn></mrow><mrow><mn>9</mn></mrow></mfrac></math> --> AAAB
-    AAAB -- <math><mfrac><mrow><mn>5</mn></mrow><mrow><mn>9</mn></mrow></mfrac></math> --> AAAA
+    AAAB([AAAB]) -- 4/9 --> AAAB
+    AAAB -- 5/9 --> AAAA
 
     AAAA([AAAA]) -- 1 --> AAAA
 ```
