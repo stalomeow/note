@@ -1,14 +1,30 @@
 import os
 import time
 
+POSTS_PATH = r'./docs/blog/posts'
+
+def getCategories():
+    # 获取已有的分类，只遍历顶层目录
+    existingCats = [d for d in next(os.walk(POSTS_PATH))[1]]
+
+    print('categories:')
+    for i in range(len(existingCats)):
+        print(f'  {i}.{existingCats[i]}')
+    newCats = input('select/new: ').split(',')
+
+    for i in range(len(newCats)):
+        if newCats[i].isdigit():
+            newCats[i] = existingCats[int(newCats[i])]
+    return newCats
+
 def main():
     title = input('title: ')
     slug = input('slug: ')
-    categories = input('categories: ').split(' ')
+    categories = getCategories()
     draft = input('draft? (y/n): ').lower() == 'y'
 
     postFilePath = os.path.abspath(os.path.join(
-        './docs/blog/posts',
+        POSTS_PATH,
         categories[0] if len(categories) > 0 else '',
         slug + '.md'
     ))
