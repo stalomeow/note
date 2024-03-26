@@ -8,7 +8,6 @@
     --md-footer-fg-color--lighter: #0000006d;
     --md-footer-bg-color: #eeeeee;
     --md-footer-bg-color--dark: #eeeeee;
-    --md-nav-link-underline-color: #ffeb3b;
 }
 
 [data-md-color-scheme=slate] {
@@ -21,7 +20,6 @@
     --md-code-hl-comment-color: #727272;
     --md-footer-bg-color: #1f1f1f;
     --md-footer-bg-color--dark: #1f1f1f;
-    --md-nav-link-underline-color: rgba(58, 142, 230, 0.6);
 }
 
 [data-md-color-primary=black] .md-header,

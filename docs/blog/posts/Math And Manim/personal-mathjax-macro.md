@@ -7,6 +7,7 @@ categories:
   - Math And Manim
 ---
 
-# 个人常用 MathJax Macro
+# 个人常用的 MathJax Macro
+
 
 <!-- more -->

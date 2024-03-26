@@ -61,13 +61,13 @@ theme:
 
     - navigation.instant
     - navigation.instant.progress
-    # - navigation.tabs
+    - navigation.tabs
     - navigation.top
     - navigation.path
     # - navigation.indexes
     # - navigation.tracking
     # - navigation.footer
-    - navigation.sections
+    # - navigation.sections
 
     - toc.follow
     # - toc.integrate

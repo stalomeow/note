@@ -1,166 +1,169 @@
 nav:
-  - index.md
-  - sponsor.md
-  - website-res.md
+  - 笔记:
+    - index.md
+    - website-res.md
+    - 基础知识:
+      - 信号与线性系统分析:
+        - basic/sig-and-sys/signals-and-systems.md
+        - 连续系统的时域分析:
+          - basic/sig-and-sys/impulse-and-step-response.md
+          - basic/sig-and-sys/convolution.md
+          - basic/sig-and-sys/correlation-func.md
+      - basic/generalized-functions-and-functionals.md
+      - 概率论与数理统计:
+        - basic/probability-statistics/random-var-and-prob-distribution.md
+        - basic/probability-statistics/numerical-characteristics-of-random-var.md
+        - basic/probability-statistics/lln-and-clt.md
+        - basic/probability-statistics/parameter-estimation.md
+      - 线性代数:
+        - basic/linear-algebra/matrix.md
+        - basic/linear-algebra/determinant.md
+        - basic/linear-algebra/quaternion.md
+      - 高等数学:
+        - basic/advanced-math/integral-formula.md
+        - basic/advanced-math/differential-equation.md
+        - basic/advanced-math/grad-div-curl.md
+      - 高中数学:
+        - basic/high-school-math/trigonometric-function-identity.md
+        - basic/high-school-math/intersection-point-of-exp-and-its-inv.md
+      - basic/english/high-school-composition-framework.md
+    - 计算机:
+      - 编程语言:
+        - C/C++:
+          - cs/lang/c-cpp/calling-convention.md
+          - cs/lang/c-cpp/stl.md
+          - cs/lang/c-cpp/cpp-11.md
+        - C#:
+          - cs/lang/csharp/coding-convention.md
+          - cs/lang/csharp/weak-references.md
+          - cs/lang/csharp/pattern-matching.md
+          - cs/lang/csharp/gc-keep-alive.md
+          - cs/lang/csharp/delegate-marshalling.md
+        - Python:
+          - cs/lang/python/basic.md
+          - cs/lang/python/run-a-module.md
+          - cs/lang/python/multi-versions-and-venv.md
+        - Go:
+          - cs/lang/go/basic.md
+      - 数据结构与算法:
+        - cs/algorithm/res.md
+        - cs/algorithm/array.md
+        - cs/algorithm/linked-list.md
+        - cs/algorithm/monotonic-stack.md
+        - 搜索:
+          - cs/algorithm/search/dfs.md
+          - cs/algorithm/search/bfs.md
+          - cs/algorithm/search/a-star.md
+          - cs/algorithm/search/backtracking.md
+          - cs/algorithm/search/dancing-links.md
+        - 字符串:
+          - cs/algorithm/string/kmp.md
+          - cs/algorithm/string/rabin-karp.md
+        - 树:
+          - cs/algorithm/tree/basic-concept.md
+          - cs/algorithm/tree/binary-tree-traversal.md
+          - cs/algorithm/tree/complete-binary-tree.md
+          - cs/algorithm/tree/construct-binary-tree-from-traversal.md
+          - cs/algorithm/tree/binary-search-tree.md
+          - cs/algorithm/tree/disjoint-set.md
+          - cs/algorithm/tree/huffman-tree.md
+        - 图:
+          - cs/algorithm/graph/basic-concept.md
+          - cs/algorithm/graph/number-of-connected-components.md
+          - cs/algorithm/graph/minimum-spanning-tree.md
+          - cs/algorithm/graph/topological-sort.md
+          - cs/algorithm/graph/critical-path.md
+          - cs/algorithm/graph/detect-cycles.md
+          - cs/algorithm/graph/shortest-path.md
+        - 排序:
+          - cs/algorithm/sort/compare.md
+          - 插入:
+            - cs/algorithm/sort/insert/straight-insertion-sort.md
+            - cs/algorithm/sort/insert/shell-sort.md
+          - 交换:
+            - cs/algorithm/sort/swap/bubble-sort.md
+            - cs/algorithm/sort/swap/quick-sort.md
+          - 选择:
+            - cs/algorithm/sort/select/heap-sort.md
+        - cs/algorithm/misc.md
+      - 计算机组成与系统结构:
+          - cs/computer-composition/data-representation.md
+      - 数字电路与逻辑设计:
+        - cs/digital-electronics/number-system-and-coding.md
+      - 计算机图形学:
+        - cs/cg/half-lambert-corrigenda.md
+        - cs/cg/color-space.md
+        - NPR: # Non-photorealistic rendering
+          - cs/cg/npr/character.md
+      - 命令行:
+        - cs/cmd/aria2.md
+        - cs/cmd/git.md
+        - cs/cmd/ffmpeg.md
+      - cs/unicode.md
+      - cs/resume-and-interview.md
+    - Unity:
+      - Shader 相关:
+        - unity/shader/platform-differences.md
+        - unity/shader/material-property-drawer.md
+        - unity/shader/common-render-state-props-ui.md
+      - 技术分析:
+        - unity/tech-analysis/full-generic-sharing.md
+      - 优化:
+        - unity/optimization/iteration-coroutine-gc.md
+    - GAMES 笔记:
+      - 101. 现代计算机图形学入门:
+        - 课程介绍: games/101/intro.md
+        - Overview of Computer Graphics: games/101/lecture-01.md
+        - Review of Linear Algebra: games/101/lecture-02.md
+        - Transformation: games/101/lecture-03-04.md
+        - Rasterization:
+          - Triangles: games/101/lecture-05.md
+          - Antialiasing and Z-Buffering: games/101/lecture-06.md
+        - Shading:
+          - Illumination, Shading and Graphics Pipeline: games/101/lecture-07.md
+          - Shading, Pipeline and Texture Mapping: games/101/lecture-08-09.md
+        - Geometry:
+          - Introduction: games/101/lecture-10.md
+          - Curves and Surfaces: games/101/lecture-11.md
+          - Mesh Operations and Shadow Mapping: games/101/lecture-12.md
+        - Ray Tracing: games/101/lecture-13-14-15-16.md
+        - Materials and Appearances: games/101/lecture-17.md
+        - Advanced Topics in Rendering: games/101/lecture-18.md
+        - Cameras, Lenses and Light Fields: games/101/lecture-19.md
+        - Color and Perception: games/101/lecture-20.md
+        - Animation: games/101/lecture-21-22.md
+      - 104. 现代游戏引擎:
+        - 课程介绍: games/104/intro.md
+        - From Getting Started To Practice: games/104/lecture-01.md
+        - Layered Architecture of Game Engine: games/104/lecture-02.md
+        - How to Build a Game World: games/104/lecture-03.md
+        - Rendering:
+          - Rendering on Game Engine: games/104/lecture-04.md
+          - Lighting, Materials and Shaders: games/104/lecture-05.md
+          - The Challenges and Fun of Rendering the Beautiful Mother Nature: games/104/lecture-06.md
+          - Render Pipeline, Post-processing and Everything: games/104/lecture-07.md
+        - Animation System:
+          - Basics of Animation Technology: games/104/lecture-08.md
+          - Advanced Animation Technology: games/104/lecture-09.md
+        - Physics System:
+          - Basic Concepts: games/104/lecture-10.md
+          - Applications: games/104/lecture-11.md
+        - Effects: games/104/lecture-12.md
+        - Tool Chains:
+          - Basics: games/104/lecture-13.md
+          - Applications & Advanced Topic: games/104/lecture-14.md
+        - Gameplay Systems:
+          - Complexity and Building Blocks: games/104/lecture-15.md
+          - Basic Artificial Intelligence: games/104/lecture-16.md
+          - Advanced Artificial Intelligence: games/104/lecture-17.md
+        - Online Gaming Architecture:
+          - Fundamentals: games/104/lecture-18.md
+          - Advanced Topic: games/104/lecture-19.md
+        - Data-Oriented Programming and Job System: games/104/lecture-20.md
+        - Dynamic Global Illumination and Lumen: games/104/lecture-21.md
+        - GPU Driven Geometry Pipeline - Nanite: games/104/lecture-22.md
   - 博客:
     - blog/index.md
   - RSS 阅读:
     - news/index.md
-  - 基础学科:
-    - 信号与线性系统分析:
-      - basic/sig-and-sys/signals-and-systems.md
-      - 连续系统的时域分析:
-        - basic/sig-and-sys/impulse-and-step-response.md
-        - basic/sig-and-sys/convolution.md
-        - basic/sig-and-sys/correlation-func.md
-    - basic/generalized-functions-and-functionals.md
-    - 概率论与数理统计:
-      - basic/probability-statistics/random-var-and-prob-distribution.md
-      - basic/probability-statistics/numerical-characteristics-of-random-var.md
-      - basic/probability-statistics/lln-and-clt.md
-      - basic/probability-statistics/parameter-estimation.md
-    - 线性代数:
-      - basic/linear-algebra/matrix.md
-      - basic/linear-algebra/determinant.md
-      - basic/linear-algebra/quaternion.md
-    - 高等数学:
-      - basic/advanced-math/integral-formula.md
-      - basic/advanced-math/differential-equation.md
-      - basic/advanced-math/grad-div-curl.md
-    - 高中数学:
-      - basic/high-school-math/trigonometric-function-identity.md
-      - basic/high-school-math/intersection-point-of-exp-and-its-inv.md
-    - basic/english/high-school-composition-framework.md
-  - 计算机:
-    - 编程语言:
-      - C/C++:
-        - cs/lang/c-cpp/calling-convention.md
-        - cs/lang/c-cpp/stl.md
-        - cs/lang/c-cpp/cpp-11.md
-      - C#:
-        - cs/lang/csharp/coding-convention.md
-        - cs/lang/csharp/weak-references.md
-        - cs/lang/csharp/pattern-matching.md
-        - cs/lang/csharp/gc-keep-alive.md
-        - cs/lang/csharp/delegate-marshalling.md
-      - Python:
-        - cs/lang/python/basic.md
-        - cs/lang/python/run-a-module.md
-        - cs/lang/python/multi-versions-and-venv.md
-      - Go:
-        - cs/lang/go/basic.md
-    - 数据结构与算法:
-      - cs/algorithm/res.md
-      - cs/algorithm/array.md
-      - cs/algorithm/linked-list.md
-      - cs/algorithm/monotonic-stack.md
-      - 搜索:
-        - cs/algorithm/search/dfs.md
-        - cs/algorithm/search/bfs.md
-        - cs/algorithm/search/a-star.md
-        - cs/algorithm/search/backtracking.md
-        - cs/algorithm/search/dancing-links.md
-      - 字符串:
-        - cs/algorithm/string/kmp.md
-        - cs/algorithm/string/rabin-karp.md
-      - 树:
-        - cs/algorithm/tree/basic-concept.md
-        - cs/algorithm/tree/binary-tree-traversal.md
-        - cs/algorithm/tree/complete-binary-tree.md
-        - cs/algorithm/tree/construct-binary-tree-from-traversal.md
-        - cs/algorithm/tree/binary-search-tree.md
-        - cs/algorithm/tree/disjoint-set.md
-        - cs/algorithm/tree/huffman-tree.md
-      - 图:
-        - cs/algorithm/graph/basic-concept.md
-        - cs/algorithm/graph/number-of-connected-components.md
-        - cs/algorithm/graph/minimum-spanning-tree.md
-        - cs/algorithm/graph/topological-sort.md
-        - cs/algorithm/graph/critical-path.md
-        - cs/algorithm/graph/detect-cycles.md
-        - cs/algorithm/graph/shortest-path.md
-      - 排序:
-        - cs/algorithm/sort/compare.md
-        - 插入:
-          - cs/algorithm/sort/insert/straight-insertion-sort.md
-          - cs/algorithm/sort/insert/shell-sort.md
-        - 交换:
-          - cs/algorithm/sort/swap/bubble-sort.md
-          - cs/algorithm/sort/swap/quick-sort.md
-        - 选择:
-          - cs/algorithm/sort/select/heap-sort.md
-      - cs/algorithm/misc.md
-    - 数字电路与逻辑设计:
-      - cs/digital-electronics/number-system-and-coding.md
-    - 计算机图形学:
-      - cs/cg/half-lambert-corrigenda.md
-      - cs/cg/color-space.md
-      - NPR: # Non-photorealistic rendering
-        - cs/cg/npr/character.md
-    - 命令行:
-      - cs/cmd/aria2.md
-      - cs/cmd/git.md
-      - cs/cmd/ffmpeg.md
-    - cs/unicode.md
-    - cs/resume-and-interview.md
-  - Unity:
-    - Shader 相关:
-      - unity/shader/platform-differences.md
-      - unity/shader/material-property-drawer.md
-      - unity/shader/common-render-state-props-ui.md
-    - 技术分析:
-      - unity/tech-analysis/full-generic-sharing.md
-    - 优化:
-      - unity/optimization/iteration-coroutine-gc.md
-  - GAMES 笔记:
-    - 101. 现代计算机图形学入门:
-      - 课程介绍: games/101/intro.md
-      - Overview of Computer Graphics: games/101/lecture-01.md
-      - Review of Linear Algebra: games/101/lecture-02.md
-      - Transformation: games/101/lecture-03-04.md
-      - Rasterization:
-        - Triangles: games/101/lecture-05.md
-        - Antialiasing and Z-Buffering: games/101/lecture-06.md
-      - Shading:
-        - Illumination, Shading and Graphics Pipeline: games/101/lecture-07.md
-        - Shading, Pipeline and Texture Mapping: games/101/lecture-08-09.md
-      - Geometry:
-        - Introduction: games/101/lecture-10.md
-        - Curves and Surfaces: games/101/lecture-11.md
-        - Mesh Operations and Shadow Mapping: games/101/lecture-12.md
-      - Ray Tracing: games/101/lecture-13-14-15-16.md
-      - Materials and Appearances: games/101/lecture-17.md
-      - Advanced Topics in Rendering: games/101/lecture-18.md
-      - Cameras, Lenses and Light Fields: games/101/lecture-19.md
-      - Color and Perception: games/101/lecture-20.md
-      - Animation: games/101/lecture-21-22.md
-    - 104. 现代游戏引擎:
-      - 课程介绍: games/104/intro.md
-      - From Getting Started To Practice: games/104/lecture-01.md
-      - Layered Architecture of Game Engine: games/104/lecture-02.md
-      - How to Build a Game World: games/104/lecture-03.md
-      - Rendering:
-        - Rendering on Game Engine: games/104/lecture-04.md
-        - Lighting, Materials and Shaders: games/104/lecture-05.md
-        - The Challenges and Fun of Rendering the Beautiful Mother Nature: games/104/lecture-06.md
-        - Render Pipeline, Post-processing and Everything: games/104/lecture-07.md
-      - Animation System:
-        - Basics of Animation Technology: games/104/lecture-08.md
-        - Advanced Animation Technology: games/104/lecture-09.md
-      - Physics System:
-        - Basic Concepts: games/104/lecture-10.md
-        - Applications: games/104/lecture-11.md
-      - Effects: games/104/lecture-12.md
-      - Tool Chains:
-        - Basics: games/104/lecture-13.md
-        - Applications & Advanced Topic: games/104/lecture-14.md
-      - Gameplay Systems:
-        - Complexity and Building Blocks: games/104/lecture-15.md
-        - Basic Artificial Intelligence: games/104/lecture-16.md
-        - Advanced Artificial Intelligence: games/104/lecture-17.md
-      - Online Gaming Architecture:
-        - Fundamentals: games/104/lecture-18.md
-        - Advanced Topic: games/104/lecture-19.md
-      - Data-Oriented Programming and Job System: games/104/lecture-20.md
-      - Dynamic Global Illumination and Lumen: games/104/lecture-21.md
-      - GPU Driven Geometry Pipeline - Nanite: games/104/lecture-22.md
+  - sponsor.md
