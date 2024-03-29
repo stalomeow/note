@@ -88,6 +88,8 @@ nav:
         - cs/algorithm/misc.md
       - 计算机组成与系统结构:
           - cs/computer-composition/data-representation.md
+      - 操作系统:
+        - cs/os/process.md
       - 数字电路与逻辑设计:
         - cs/digital-electronics/number-system-and-coding.md
       - 计算机图形学:
