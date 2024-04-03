@@ -93,3 +93,12 @@
 - [:material-link-variant: Mixamo (3D 角色 & 动画资源)](https://www.mixamo.com/){ target="_blank" }
 
 </div>
+
+## GitHub 工具
+
+<div class="grid cards" markdown>
+
+- [:material-link-variant: GitHub Star History](https://star-history.com/){ target="_blank" }
+- [:material-link-variant: Shields.io](https://shields.io/){ target="_blank" }
+
+</div>
