@@ -1,7 +1,7 @@
 document$.subscribe(() => {
-    const html = `<br><p style="text-align: center;"><a class="md-button" href="/sponsor/">赞助</a></p>`;
+    const html = `<br><p style="text-align: center;"><a class="md-button" href="https://stalomeow.com/#coffee" target="_blank">赞助</a></p>`;
 
-    if (window.location.hostname === "127.0.0.1" || window.location.pathname === '/sponsor/' || window.location.pathname === '/sponsor') {
+    if (window.location.hostname === "127.0.0.1") {
         return;
     }
 
