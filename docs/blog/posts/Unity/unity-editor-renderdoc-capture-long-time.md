@@ -5,6 +5,8 @@ authors:
   - stalomeow
 categories:
   - Unity
+  - Rendering
+  - Reverse
 ---
 
 # 用 RenderDoc 持续截帧 Unity Editor Game View

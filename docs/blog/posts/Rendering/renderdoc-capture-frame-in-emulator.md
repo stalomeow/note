@@ -5,6 +5,7 @@ authors:
   - stalomeow
 categories:
   - Rendering
+  - Reverse
 ---
 
 # 用 RenderDoc 和模拟器抓帧安卓手游

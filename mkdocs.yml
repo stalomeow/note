@@ -79,6 +79,9 @@ theme:
 
 extra:
   social:
+    - name: Home
+      icon: fontawesome/solid/house
+      link: https://stalomeow.com
     - name: GitHub
       icon: fontawesome/brands/github
       link: https://github.com/stalomeow

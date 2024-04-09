@@ -13,6 +13,7 @@ def getCategories():
     newCats = input('select/new: ').split(',')
 
     for i in range(len(newCats)):
+        newCats[i] = newCats[i].strip()
         if newCats[i].isdigit():
             newCats[i] = existingCats[int(newCats[i])]
     return newCats

@@ -4,7 +4,8 @@ draft: false
 authors:
   - stalomeow
 categories:
-  - Math And Manim
+  - Math
+  - Web Front-end
 ---
 
 # 个人常用的 MathJax Macro

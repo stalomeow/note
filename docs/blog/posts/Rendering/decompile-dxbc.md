@@ -5,6 +5,7 @@ authors:
   - stalomeow
 categories:
   - Rendering
+  - Reverse
 ---
 
 # 反编译 DXBC

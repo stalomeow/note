@@ -5,6 +5,7 @@ authors:
   - stalomeow
 categories:
   - Rendering
+  - Reverse
 ---
 
 # 提取 WebGL Shaders

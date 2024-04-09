@@ -5,6 +5,7 @@ authors:
   - stalomeow
 categories:
   - Unity
+  - Rendering
 ---
 
 # Allocate RT 时记得指定 `filterMode` 和 `wrapMode`

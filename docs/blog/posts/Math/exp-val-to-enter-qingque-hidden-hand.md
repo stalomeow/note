@@ -4,7 +4,7 @@ draft: false
 authors:
   - stalomeow
 categories:
-  - Math And Manim
+  - Math
 ---
 
 # 算一算青雀进暗杠的抽牌数期望
