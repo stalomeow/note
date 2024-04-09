@@ -139,4 +139,4 @@ export default defineNuxtConfig({
 
 ### AppConfig 的限制
 
-`useAppConfig()` 返回的是配置对象的 Reactive Proxy，所以和 Vue 的 reactive 有一样的限制。具体可以参考 Vue 的文档 [`reactive()` 的局限性](https://cn.vuejs.org/guide/essentials/reactivity-fundamentals.html#limitations-of-reactive)。
+`useAppConfig()` 返回的是配置对象的 Reactive Proxy，所以和 Vue 的 `reactive()` 有一样的限制。具体可以参考 Vue 的文档 [`reactive()` 的局限性](https://cn.vuejs.org/guide/essentials/reactivity-fundamentals.html#limitations-of-reactive)。
