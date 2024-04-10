@@ -99,6 +99,7 @@
 <div class="grid cards" markdown>
 
 - [:material-link-variant: GitHub Star History](https://star-history.com/){ target="_blank" }
+- [:material-link-variant: Star Charts](https://starchart.cc/){ target="_blank" }
 - [:material-link-variant: Shields.io](https://shields.io/){ target="_blank" }
 
 </div>
