@@ -1,6 +1,8 @@
+SHELL := cmd
+PYTHON_ENV := .\env\Scripts\activate
+
 help h:
-	@echo.                                              \
-	&& @echo Usage:                                     \
+	@echo Usage:                                        \
 	&& @echo   help     h     Show help information     \
 	&& @echo   serve    s     Start local server        \
 	&& @echo   edit     e     Open VSCode               \
@@ -10,7 +12,7 @@ help h:
 .PHONY: help h
 
 serve s:
-	.\env\Scripts\activate && mkdocs --color serve
+	$(PYTHON_ENV) && mkdocs --color serve
 .PHONY: serve s
 
 edit e:
@@ -18,7 +20,7 @@ edit e:
 .PHONY: edit e
 
 blog b:
-	.\env\Scripts\activate && python .\scripts\new_blog.py
+	$(PYTHON_ENV) && python .\scripts\new_blog.py
 .PHONY: blog b
 
 MSG := Update
@@ -29,7 +31,7 @@ deploy d:
 
 # https://github.com/urllib3/urllib3/issues/2168
 upgrade:
-	.\env\Scripts\activate                                     \
+	$(PYTHON_ENV)                                              \
 	&& python -m pip install --upgrade pip                     \
 	&& pip install --upgrade --force-reinstall mkdocs-material \
 	&& pip install urllib3==1.26.18                            \
