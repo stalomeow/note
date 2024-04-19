@@ -140,3 +140,23 @@ export default defineNuxtConfig({
 ### AppConfig 的限制
 
 `useAppConfig()` 返回的是配置对象的 Reactive Proxy，所以和 Vue 的 `reactive()` 有一样的限制。具体可以参考 Vue 的文档 [`reactive()` 的局限性](https://cn.vuejs.org/guide/essentials/reactivity-fundamentals.html#limitations-of-reactive)。
+
+## 纯静态部署到 Vercel
+
+把 Nuxt 3 项目部署到 Vercel 时，默认是部署了一个叫 `__nitro` 的 Serverless Function。用户访问时，`__nitro` 就会被调用，然后返回对应的页面。
+
+实际用了几天后，我发现每隔一段时间访问网站时，请求的耗时会显著增加。背后的原因，大概是每过一段时间 `__nitro` 就会把 cache 给失效掉，然后重新渲染整个页面，所以耗时比较长。对于我的没什么功能的小网站来说，这些步骤完全是多余的，还给用户带来了负面的体验，所以我决定直接静态化部署网站。
+
+[Vercel 的文档](https://vercel.com/docs/frameworks/nuxt#static-rendering) 中提到了用 `nuxt generate` 和 `nuxt build`（默认）部署时的不同做法，但是后面一种我自己试的时候失败了，所以就用了前一种。流程很简单：
+
+1. 修改 `nuxt.config.ts`
+
+    ``` ts
+    export default defineNuxtConfig({
+      nitro: {
+        static: true,
+      },
+    });
+    ```
+
+2. 在 Vercel 上去项目 Settings 面板重写 `Build Command` 为 `npm run generate`（或 `nuxt generate`）
