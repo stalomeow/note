@@ -1,0 +1,17 @@
+{
+  "strictLineBreaks": true,
+  "showLineNumber": false,
+  "livePreview": true,
+  "showInlineTitle": false,
+  "readableLineLength": true,
+  "useTab": false,
+  "newFileLocation": "root",
+  "newFileFolderPath": "",
+  "userIgnoreFilters": [
+    "_templates/",
+    "_attachments/"
+  ],
+  "newLinkFormat": "relative",
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "_attachments"
+}

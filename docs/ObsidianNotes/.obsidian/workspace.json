@@ -1,0 +1,180 @@
+{
+  "main": {
+    "id": "5d4175e1b548842d",
+    "type": "split",
+    "children": [
+      {
+        "id": "eeae401c9c5b2bc8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "72ebc8c1bfead47a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "计算机/图形学/渲染/high-quality-toon-bloom.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3ecdb1037720b61d",
+    "type": "split",
+    "children": [
+      {
+        "id": "b7bcee6a0d1b513d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e675d2bee4ff9cc5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "60e996957d864869",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 297.5
+  },
+  "right": {
+    "id": "029f8289abc95648",
+    "type": "split",
+    "children": [
+      {
+        "id": "ea7207339e4a6038",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dd902de61c686e30",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "计算机/图形学/渲染/high-quality-toon-bloom.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9716f47fa6ade86b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "计算机/图形学/渲染/high-quality-toon-bloom.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "607d846bf698b61f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "计算机/图形学/渲染/high-quality-toon-bloom.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 261.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "hide-folders:Show hidden folders": false,
+      "command-palette:打开命令面板": false,
+      "graph:查看关系图谱": false,
+      "switcher:打开快速切换": false,
+      "canvas:新建白板": false
+    }
+  },
+  "active": "72ebc8c1bfead47a",
+  "lastOpenFiles": [
+    "网站资源.md",
+    "计算机/图形学/渲染/high-quality-toon-bloom.md",
+    "数学/概率论与数理统计/中心极限定理（Central limit theorem）.md",
+    "计算机/图形学/渲染/decompile-dxbc.md",
+    "计算机/图形学/color-space.md",
+    "数学/高中数学/intersection-point-of-exp-and-its-inv.md",
+    "游戏开发",
+    "数学/线性代数/matrix.md",
+    "数学/线性代数/quaternion.md",
+    "数学/线性代数/determinant.md",
+    "数学/算一算青雀进暗杠的抽牌数期望.md",
+    "数学/generalized-functions-and-functionals.md",
+    "数学/personal-mathjax-macro.md",
+    "计算机/编程语言",
+    "数学/fourier-epicycles.md",
+    "未命名.canvas",
+    "_templates/note.md",
+    "_templates",
+    "_attachments/analysis-of-signals-and-linear-systems/step-function.png",
+    "_attachments/analysis-of-signals-and-linear-systems/dirac-delta-function.png",
+    "_attachments/2023-07-26/2.png",
+    "_attachments/2023-07-26/1.png",
+    "_attachments/2023-07-26/0.png",
+    "_attachments/unity_hsr_dream_ticker_explain6.png",
+    "_attachments/unity_hsr_dream_ticker_explain5.png",
+    "_attachments/unity_hsr_dream_ticker_explain4.png",
+    "_attachments/unity_hsr_dream_ticker_explain3.png",
+    "_attachments/unity_hsr_dream_ticker_explain2.png",
+    "_attachments/DirectionStar.ms14",
+    "_attachments/analysis-of-signals-and-linear-systems",
+    "_attachments/2023-07-26",
+    "_attachments",
+    "_assets/templates/note.md",
+    "templates/note.md",
+    "templates",
+    "attachments/DirectionStar.ms14",
+    "attachments/analysis-of-signals-and-linear-systems",
+    "_assets/_templates/blog.md",
+    "数学/概率论与数理统计/大数定律（Law of large numbers）.md",
+    "计算机/图形学/渲染/renderdoc-capture-frame-in-emulator.md",
+    "计算机/图形学/渲染/normal-map-compression.md",
+    "计算机/图形学/渲染/main-light-per-object-shadow.md",
+    "计算机/图形学/渲染/hsr-character-rendering.md",
+    "计算机/图形学/渲染/dump-webgl-shaders.md",
+    "计算机/编程语言/Python/basic.md",
+    "计算机/编程语言/Python/run-a-module.md",
+    "计算机/编程语言/Python/multi-versions-and-venv.md"
+  ]
+}

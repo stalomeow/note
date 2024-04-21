@@ -1,0 +1,9 @@
+.mermaid {
+    text-align: center;
+}
+
+/* 避免 mermaid 生成的 svg 太宽 */
+.mermaid svg {
+    max-width: 100% !important;
+    height: auto !important;
+}

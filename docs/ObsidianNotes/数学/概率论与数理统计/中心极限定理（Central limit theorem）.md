@@ -1,0 +1,49 @@
+---
+slug: "20240421212958"
+date: "2024-04-21"
+---
+
+# 中心极限定理（Central limit theorem）
+
+很多实际问题中，有些随机变量是由大量相互独立的随机因素的综合影响而形成的，但其中每个个别因素在总的影响中起的作用是微小的，这种随机变量往往近似服从正态分布。
+
+设 $\{ X_n \}$ 是随机变量序列。
+
+## Lindeberg-Lévy（林德伯格 - 勒维）中心极限定理
+
+> 独立同分布中心极限定理。
+
+若
+
+- $X_i$ 相互独立，同分布，$EX_i=\mu$，$DX_i=\sigma^2$
+
+则 $\forall x \in \mathbb{R}$，随机变量
+
+$$
+Y_n = \frac{\displaystyle\sum\limits_{i=1}^{n} X_i - E \left [ \displaystyle\sum\limits_{i=1}^{n} X_i \right ]}{\sqrt{D \left [ \displaystyle\sum\limits_{i=1}^{n} X_i \right ]}} = \frac{\displaystyle\sum\limits_{i=1}^{n} X_i - n\mu}{\sqrt{n}\sigma}
+$$
+
+的分布函数 $F_n(x)$ 满足
+
+$$
+\lim_{n \to \infty} F_n(x) = \lim_{n \to \infty} P \left ( \frac{\displaystyle\sum\limits_{i=1}^{n} X_i - n\mu}{\sqrt{n}\sigma} \le x \right ) = \int_{-\infty }^{x} \frac{1}{\sqrt{2\pi}} e^{-\frac{t^2}{2}} \mathrm{d}t = \Phi(x)
+$$
+
+所以，当 $n$ 充分大时，可以近似认为 $\displaystyle\sum\limits_{i=1}^{n} X_i \sim N(n\mu, n\sigma^2)$。
+
+## De Moivre-Laplace（棣莫弗 - 拉普拉斯）中心极限定理
+
+由 Lindeberg-Lévy CLT 可以推出：若 $X \sim B(n,p)$，当 $n$ 充分大时，可以近似认为 $X \sim N(np, np(1-p))$。
+
+## Lyapunov（李雅普诺夫）中心极限定理
+
+若
+
+- $X_i$ 相互独立，$EX_i=\mu_i$，$DX_i=\sigma_i^2$
+- 设 $B_n^2 = \displaystyle\sum\limits_{i=1}^{n} \sigma_i^2$。$\exists \delta > 0$，有
+
+    $$
+    \lim_{n \to \infty} \frac{1}{B_n^{2+\delta}} \sum_{i=1}^{n} E \left [ \left | X_i - \mu_i \right |^{2+\delta} \right ] = 0
+    $$
+
+则当 $n$ 充分大时，可以近似认为 $\displaystyle\sum\limits_{i=1}^{n} X_i \sim N \left ( \displaystyle\sum\limits_{i=1}^{n} \mu_i, \displaystyle\sum\limits_{i=1}^{n} \sigma_i^2 \right )$。

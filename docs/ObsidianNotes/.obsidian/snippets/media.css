@@ -1,0 +1,24 @@
+/* 图片居中显示 */
+.media-embed {
+    display: flex !important;
+    justify-content: center  !important;
+}
+
+.responsive-video-container {
+    position: relative;
+    margin-bottom: 1em;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.responsive-video-container iframe,
+.responsive-video-container object,
+.responsive-video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
