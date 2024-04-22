@@ -8,6 +8,7 @@ from mkdocs.structure.pages import Page
 from mkdocs.utils import meta
 from string import ascii_letters, digits
 
+DST_URI_DIR_NAME = 'obsidian-vault'
 SRC_URI_BLACKLIST = (
     'obsidian-vault/.obsidian',
     'obsidian-vault/templates',
@@ -45,9 +46,9 @@ def on_files(files: Files, config: MkDocsConfig):
             slug = transform_slug(str(frontmatter["slug"]))
 
             if not config.use_directory_urls:
-                f.dest_uri = slug + '.html'
+                f.dest_uri = posixpath.join(DST_URI_DIR_NAME, slug + '.html')
             else:
-                f.dest_uri = posixpath.join(slug, 'index.html')
+                f.dest_uri = posixpath.join(DST_URI_DIR_NAME, slug, 'index.html')
 
             f.url = f._get_url(config.use_directory_urls)
             f.abs_dest_path = os.path.normpath(os.path.join(config.site_dir, f.dest_uri))

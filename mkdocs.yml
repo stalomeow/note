@@ -194,7 +194,7 @@ plugins:
 hooks:
   - scripts/validate_config.py
   - scripts/validate_url.py
-  # - scripts/fetch_news.py
+  - scripts/fetch_news.py
   - scripts/fancybox.py
 
 

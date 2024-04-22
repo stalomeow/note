@@ -320,6 +320,9 @@ def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
     for page in nav.pages:
         if page.abs_url == '/news/':
             entry = page
+    # 先把下面多余的东西删掉
+    entry.parent.children.clear()
+    entry.parent.children.append(entry)
 
     last = genPaginationFirstPages(entry, entry, nav, config, '分类', categoryList)
     genPaginationFirstPages(entry, last, nav, config, '来源', sorted(
