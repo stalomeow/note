@@ -1,7 +1,6 @@
 ---
 search:
   exclude: true
-comments: false
 ---
 
 # 最新资讯

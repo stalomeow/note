@@ -1,6 +1,7 @@
 ---
 search:
   exclude: true
+comments: true
 ---
 
 # 欢迎~♪
