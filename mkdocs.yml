@@ -203,5 +203,4 @@ watch:
   - news.yml
 
 validation:
-  not_found: warn
   unrecognized_links: warn
