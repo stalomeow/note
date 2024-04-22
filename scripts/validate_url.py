@@ -1,4 +1,3 @@
-import locale
 import os
 import posixpath
 import re
@@ -71,17 +70,18 @@ def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
     if obsidian_root is None:
         return
 
-    locale.setlocale(locale.LC_ALL, locale='zh-CN')
+    # TODO: vercel 那边不支持 zh-CN locale，没法做本地化排序
+    # locale.setlocale(locale.LC_ALL, locale='zh-CN')
 
     def get_entry_key(entry):
         # obsidian 目录下面只有 Page 和 Section
         if isinstance(entry, Page):
             # Page 对应 markdown 文件
             # 此时 markdown 还没解析，title 是 None，使用文件名代替
-            return locale.strxfrm(entry.file.name)
+            return entry.file.name
         else:
             # Section 对应文件夹，直接用 title 即可
-            return locale.strxfrm(entry.title)
+            return entry.title
 
     def dfs(entry):
         children = getattr(entry, 'children', None)
