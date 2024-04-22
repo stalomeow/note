@@ -7,7 +7,7 @@ from mkdocs.structure.files import File, Files
 from mkdocs.structure.nav import Navigation
 from mkdocs.structure.nav import Section
 from mkdocs.structure.pages import Page
-from mkdocs.utils import meta
+from mkdocs.utils import meta, get_relative_url
 from string import ascii_letters, digits
 
 DST_URI_DIR_NAME = 'obsidian-vault'
@@ -122,20 +122,23 @@ def transform_wiki_links(markdown: str, page: Page) -> str:
 
         if title.count('/') == 0 and title.count('\\') == 0 and title in wiki_name_map:
             # title 是一个文件名（无扩展名）
-            link = wiki_name_map[title].url_relative_to(page.file)
+            md_link = wiki_name_map[title].src_uri
         else:
             # title 是一个文件路径（无扩展名），先展开为绝对路径
             abs_path = posixpath.normpath(posixpath.join(posixpath.dirname(page.file.src_uri), title))
             title = posixpath.basename(abs_path) # 改成文件名
 
             if abs_path in wiki_path_map:
-                link = wiki_path_map[abs_path].url_relative_to(page.file)
+                md_link = wiki_path_map[abs_path].src_uri
             else:
-                link = abs_path
+                md_link = abs_path
+
+        # 改成 .md 文件的相对路径，这样要是链接找不到了 MkDocs 会在控制台警告
+        md_link = get_relative_url(md_link, page.file.src_uri)
 
         if heading:
-            # TODO: Mkdocs 生成的锚点名字没有中文，是 _1、_2 这种形式，需要转换
-            link += f'#{heading}'
+            # TODO: MkDocs 生成的锚点名字没有中文，是 _1、_2 这种形式，需要转换
+            md_link += f'#{heading}'
 
         if alias:
             display_name = alias
@@ -144,7 +147,7 @@ def transform_wiki_links(markdown: str, page: Page) -> str:
         else:
             display_name = title
 
-        return f'[{display_name}]({link})'
+        return f'[{display_name}]({md_link})'
 
     # [[]] 和 ![[]] 可以统一处理
     # 把 [[]] 转换成 []()，那么 ![[]] 自然就变成了 ![]()

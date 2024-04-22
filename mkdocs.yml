@@ -193,8 +193,8 @@ plugins:
 
 hooks:
   - scripts/validate_config.py
-  - scripts/validate_url.py
   - scripts/fetch_news.py
+  - scripts/obsidian.py
   - scripts/fancybox.py
 
 
@@ -204,4 +204,4 @@ watch:
 
 validation:
   not_found: warn
-  unrecognized_links: ignore
+  unrecognized_links: warn
