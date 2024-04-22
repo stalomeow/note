@@ -8,10 +8,10 @@
   "newFileLocation": "root",
   "newFileFolderPath": "",
   "userIgnoreFilters": [
-    "_templates/",
-    "_attachments/"
+    "attachments/",
+    "templates/"
   ],
-  "newLinkFormat": "relative",
+  "newLinkFormat": "shortest",
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "_attachments"
+  "attachmentFolderPath": "attachments"
 }

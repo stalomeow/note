@@ -115,6 +115,7 @@ markdown_extensions:
   - md_in_html
   - footnotes
   - admonition
+  - callouts
   - pymdownx.details
   - pymdownx.critic
   - pymdownx.caret
@@ -193,10 +194,10 @@ plugins:
 hooks:
   - scripts/validate_config.py
   - scripts/validate_url.py
-  - scripts/fetch_news.py
+  # - scripts/fetch_news.py
   - scripts/fancybox.py
 
 
 watch:
-  - configs
   - overrides
+  - news.yml

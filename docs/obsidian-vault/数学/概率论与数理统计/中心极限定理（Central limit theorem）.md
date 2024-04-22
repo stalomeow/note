@@ -9,7 +9,7 @@ date: "2024-04-21"
 
 设 $\{ X_n \}$ 是随机变量序列。
 
-## Lindeberg-Lévy（林德伯格 - 勒维）中心极限定理
+## Lindeberg-Lévy CLT
 
 > 独立同分布中心极限定理。
 
@@ -31,11 +31,11 @@ $$
 
 所以，当 $n$ 充分大时，可以近似认为 $\displaystyle\sum\limits_{i=1}^{n} X_i \sim N(n\mu, n\sigma^2)$。
 
-## De Moivre-Laplace（棣莫弗 - 拉普拉斯）中心极限定理
+## De Moivre-Laplace CLT
 
 由 Lindeberg-Lévy CLT 可以推出：若 $X \sim B(n,p)$，当 $n$ 充分大时，可以近似认为 $X \sim N(np, np(1-p))$。
 
-## Lyapunov（李雅普诺夫）中心极限定理
+## Lyapunov CLT
 
 若
 

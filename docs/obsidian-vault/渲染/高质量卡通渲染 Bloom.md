@@ -1,20 +1,13 @@
 ---
-date: 2024-03-05T18:19:01
-draft: false
-authors:
-  - stalomeow
-categories:
-  - Unity
-  - Rendering
+slug: "240422143601"
+date: 2024-04-22
 ---
 
 # 高质量卡通渲染 Bloom
 
 我个人认为卡通渲染里 Bloom 还是挺重要的，它能对画面起到润色作用，比简单地后期调高饱和度要好看很多。
 
-![Bloom 效果图](../../../_attachments/bloom-toon.png)
-
-<!-- more -->
+![Bloom 效果图](../attachments/bloom-toon.png)
 
 参考了几篇文章：
 
@@ -160,9 +153,9 @@ $$
 
 ### 快速计算卷积核
 
-根据 [[../../../数学/概率论与数理统计/中心极限定理（Central limit theorem）#De Moivre-Laplace（棣莫弗 - 拉普拉斯）中心极限定理|De Moivre-Laplace CLT]]：若 $X \sim B(n,p)$，当 $n$ 充分大时，可以近似认为 $X \sim N(np, np(1-p))$。我们需要的是一个对称的卷积核，所以取 $p=\dfrac{1}{2}$。这个其实就是一些文章中提到用杨辉三角近似的原理。
+根据 [[中心极限定理（Central limit theorem）#De Moivre-Laplace CLT]]：若 $X \sim B(n,p)$，当 $n$ 充分大时，可以近似认为 $X \sim N(np, np(1-p))$。我们需要的是一个对称的卷积核，所以取 $p=\dfrac{1}{2}$。这个其实就是一些文章中提到用杨辉三角近似的原理。
 
-![杨辉三角](../../../_attachments/pascal-triangle.png)
+![杨辉三角](../attachments/pascal-triangle.png)
 
 对于第 $n$ 行的一组数，它们除以 $2^n$ 后近似服从 $N(\dfrac{n}{2},\dfrac{n}{4})$。
 
@@ -247,7 +240,7 @@ mip 的分辨率越小，模糊的范围（卷积核的长度）就应该越大�
 
 因为要对多级 mip 做模糊，会出现很多 RT switch，对性能有影响。可以把纵向模糊的结果都绘制到一张图集上。用 [`CommandBuffer.SetViewport`](https://docs.unity3d.com/ScriptReference/Rendering.CommandBuffer.SetViewport.html) 来限制绘制的区域。
 
-![图集](../../../_attachments/bloom-atlas.png)
+![图集](../attachments/bloom-atlas.png)
 
 然后再做横向模糊，绘制到另一张图集上。
 
@@ -271,7 +264,7 @@ UNITY_UNROLL for (int i = 0; i < MAX_MIP_DOWN_BLUR_COUNT; i++)
 return EncodeHDR(color);
 ```
 
-![叠加好的图，分辨率和图集里最大的那张一样](../../../_attachments/bloom-final.png)
+![叠加好的图，分辨率和图集里最大的那张一样](../attachments/bloom-final.png)
 
 之后把它拿给 UberPost，加到屏幕上即可。
 

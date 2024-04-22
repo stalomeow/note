@@ -2,7 +2,7 @@
   "areFoldersHidden": true,
   "matchCaseInsensitive": true,
   "attachmentFolderNames": [
-    "_attachments",
-    "_templates"
+    "attachments",
+    "templates"
   ]
 }

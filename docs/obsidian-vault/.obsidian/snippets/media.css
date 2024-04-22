@@ -4,6 +4,16 @@
     justify-content: center  !important;
 }
 
+.image-captions-figure,
+.image-captions-caption {
+    background: none !important;
+}
+
+.image-captions-caption {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
 .responsive-video-container {
     position: relative;
     margin-bottom: 1em;
