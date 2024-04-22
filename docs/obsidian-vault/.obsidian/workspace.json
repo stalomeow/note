@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "120cb5f3ae730965",
+        "id": "6952212df775f9a7",
         "type": "tabs",
         "children": [
           {
-            "id": "56e10522b56d901a",
+            "id": "c270aa23488c1da3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "渲染/高质量卡通渲染 Bloom.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -78,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "渲染/高质量卡通渲染 Bloom.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +89,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "渲染/高质量卡通渲染 Bloom.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -106,9 +99,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "渲染/高质量卡通渲染 Bloom.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -116,7 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 261.5
+    "width": 271.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -128,35 +119,36 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "56e10522b56d901a",
+  "active": "c270aa23488c1da3",
   "lastOpenFiles": [
-    "数学/概率论与数理统计/中心极限定理（Central limit theorem）.md",
-    "渲染/高质量卡通渲染 Bloom.md",
-    "渲染/npr/character.md",
-    "计算机基础/操作系统/process.md",
-    "Unity/shader/common-render-state-props-ui.md",
-    "Unity/unity-editor-renderdoc-capture-long-time.md",
-    "Unity/shader/platform-differences.md",
-    "Unity/specify-filter-and-wrap-mode-when-allocating-rt.md",
-    "Unity/smooth-model-normals.md",
-    "Unity/get-component-in-parent-on-prefab-asset-returns-null.md",
-    "Unity/kcp-in-unity.md",
-    "计算机基础/solve-cas-aba-problem.md",
-    "计算机基础/unicode.md",
-    "数学/算一算青雀进暗杠的抽牌数期望.md",
-    "算法/树/binary-search-tree.md",
-    "编程语言/C 和 C++/calling-convention.md",
-    "数学/傅里叶级数实现本轮画图.md",
-    "templates/File Header.md",
-    "templates/Video Container.md",
-    "网站资源.md",
-    "简历 & 面试.md",
-    "数学/信号与系统/difference-equation.md",
+    "图形/Terrain Rendering.md",
+    "图形/renderdoc-capture-frame-in-emulator.md",
+    "图形/normal-map-compression.md",
+    "图形/main-light-per-object-shadow.md",
+    "图形/dump-webgl-shaders.md",
+    "图形/Fog.md",
+    "图形/decompile-dxbc.md",
+    "图形/color-space.md",
+    "图形/Anti-aliasing.md",
+    "图形/Ambient Occlusion.md",
+    "图形/渲染方程.md",
+    "图形/图形学黑话.md",
+    "图形/高质量卡通渲染 Bloom.md",
+    "GAMES 公开课/104/lecture-07.md",
+    "GAMES 公开课/104/lecture-06.md",
+    "GAMES 公开课/104/lecture-05.md",
+    "杂项/comfortable-windows-dev-env.md",
+    "GAMES 公开课/104/lecture-09.md",
+    "GAMES 公开课/104/lecture-10.md",
+    "GAMES 公开课/104/lecture-11.md",
+    "GAMES 公开课/104/lecture-12.md",
+    "GAMES 公开课/104/lecture-13.md",
+    "GAMES 公开课/104/lecture-14.md",
+    "GAMES 公开课/104/lecture-15.md",
+    "GAMES 公开课/104/lecture-16.md",
+    "GAMES 公开课/104/lecture-17.md",
+    "attachments/pascal-triangle.png",
     "未命名.canvas",
-    "数学/信号与系统/correlation-func.md",
-    "数学/信号与系统/convolution.md",
-    "渲染/decompile-dxbc.md",
-    "渲染/color-space.md",
     "游戏开发",
     "编程语言",
     "templates",
@@ -169,7 +161,6 @@
     "attachments/unity_hsr_dream_ticker_explain5.png",
     "attachments/unity_hsr_dream_ticker_explain4.png",
     "attachments/unity_hsr_dream_ticker_explain3.png",
-    "attachments/unity_hsr_dream_ticker_explain2.png",
     "attachments/DirectionStar.ms14",
     "attachments/analysis-of-signals-and-linear-systems",
     "attachments/2023-07-26",

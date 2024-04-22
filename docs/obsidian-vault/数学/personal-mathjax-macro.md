@@ -12,7 +12,7 @@ categories:
 
 简化 TeX 的编写，长期更新。
 
-<!-- more -->
+
 
 参考文档：[Defining TeX macros — MathJax 3.2 documentation](https://docs.mathjax.org/en/latest/input/tex/macros.html#defining-tex-macros)。
 

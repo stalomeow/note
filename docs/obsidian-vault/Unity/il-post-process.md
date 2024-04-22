@@ -13,7 +13,7 @@ categories:
 
 修改 IL 使用 Mono.Cecil。Package Manager 里安装 `com.unity.nuget.mono-cecil`。
 
-<!-- more -->
+
 
 ## 法一：CompilationPipeline API
 

@@ -24,7 +24,7 @@ float3 color = SAMPLE_TEXTURE2D_X(_BlitTexture, sampler_LinearClamp, uv).rgb;
 
 打包测试发现 OpenGL ES 上效果不对。
 
-<!-- more -->
+
 
 ## 原因
 

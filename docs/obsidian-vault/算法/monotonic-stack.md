@@ -6,7 +6,7 @@
 
 ## 每日温度
 
-> [739. 每日温度](https://leetcode.cn/problems/daily-temperatures/description/){ target="_blank" }
+> [739. 每日温度](https://leetcode.cn/problems/daily-temperatures/description/)
 
 > 给定一个整数数组 <code>temperatures</code> ，表示每天的温度，返回一个数组 <code>answer</code> ，其中 <code>answer[i]</code> 是指对于第 <code>i</code> 天，下一个更高温度出现在几天后。如果气温在这之后都不会升高，请在该位置用 <code>0</code> 来代替。
 
@@ -49,7 +49,7 @@
 
 ## 下一个更大元素 I
 
-> [496. 下一个更大元素 I](https://leetcode.cn/problems/next-greater-element-i/description/){ target="_blank" }
+> [496. 下一个更大元素 I](https://leetcode.cn/problems/next-greater-element-i/description/)
 
 > <code>nums1</code> 中数字 <code>x</code> 的 **下一个更大元素** 是指 <code>x</code> 在 <code>nums2</code> 中对应位置 **右侧** 的 **第一个** 比 <code>x</code> 大的元素。
 
@@ -107,7 +107,7 @@
 
 ## 下一个更大元素 II
 
-> [503. 下一个更大元素 II](https://leetcode.cn/problems/next-greater-element-ii/description/){ target="_blank" }
+> [503. 下一个更大元素 II](https://leetcode.cn/problems/next-greater-element-ii/description/)
 
 > 给定一个循环数组 <code>nums</code> （ <code>nums[nums.length - 1]</code> 的下一个元素是 <code>nums[0]</code> ），返回 _<code>nums</code> 中每个元素的 **下一个更大元素**_ 。
 
@@ -151,7 +151,7 @@
 
 ## 接雨水
 
-> [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water/description/){ target="_blank" }
+> [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water/description/)
 
 > 给定 <code>n</code> 个非负整数表示每个宽度为 <code>1</code> 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。
 
@@ -342,7 +342,7 @@
 
 ## 柱状图中最大的矩形
 
-> [84. 柱状图中最大的矩形](https://leetcode.cn/problems/largest-rectangle-in-histogram/description/){ target="_blank" }
+> [84. 柱状图中最大的矩形](https://leetcode.cn/problems/largest-rectangle-in-histogram/description/)
 
 > 给定 _n_ 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1 。
 

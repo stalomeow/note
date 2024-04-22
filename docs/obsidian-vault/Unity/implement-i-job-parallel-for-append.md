@@ -25,7 +25,7 @@ public interface IJobParallelForAppend<TValue> where TValue : unmanaged
 
 它可以并行 Append 任意的 unmanaged 数据，不再局限于 `index`。有点像 Compute Shader 那套东西。
 
-<!-- more -->
+
 
 - `index` 是 for 循环当前的索引。
 - `buf` 是一个临时缓冲区。

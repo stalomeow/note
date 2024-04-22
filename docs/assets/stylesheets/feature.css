@@ -129,7 +129,7 @@
 /* #region PC 端导航栏和 TOC 的对齐线 */
 
 @media screen and (min-width: 76.25em) {
-    .md-sidebar[data-md-type="navigation"]:not(.md-sidebar--post) nav.md-nav:not([data-md-level="0"]):not([data-md-level="1"]) {
+    .md-sidebar[data-md-type="navigation"]:not(.md-sidebar--post) nav.md-nav:not([data-md-level="0"]) {
         border-left: 1px solid color-mix(in srgb, var(--md-default-fg-color) 20%, var(--md-default-bg-color));
     }
 }

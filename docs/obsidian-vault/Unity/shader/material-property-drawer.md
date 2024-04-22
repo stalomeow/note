@@ -6,12 +6,12 @@
 
     参考：
 
-    - [Unity - Scripting API: MaterialPropertyDrawer](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyDrawer.html){ target="_blank" }
-    - [Shader笔记——自定义Material面板 - 简书](https://www.jianshu.com/p/a1f5ecb7706d){ target="_blank" }
+    - [Unity - Scripting API: MaterialPropertyDrawer](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyDrawer.html)
+    - [Shader笔记——自定义Material面板 - 简书](https://www.jianshu.com/p/a1f5ecb7706d)
 
 ## 内置 Drawer & Decorator
 
-都声明在 [Editor/Mono/Inspector/MaterialPropertyDrawer.cs](https://github.com/Unity-Technologies/UnityCsReference/blob/master/Editor/Mono/Inspector/MaterialPropertyDrawer.cs){ target="_blank" } 文件中。
+都声明在 [Editor/Mono/Inspector/MaterialPropertyDrawer.cs](https://github.com/Unity-Technologies/UnityCsReference/blob/master/Editor/Mono/Inspector/MaterialPropertyDrawer.cs) 文件中。
 
 ### Toggle
 

@@ -11,7 +11,7 @@ categories:
 
 在 Windows 和 Android 平台用 P/Invoke 调用 KCP。
 
-<!-- more -->
+
 
 ## 编译 KCP
 

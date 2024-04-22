@@ -15,7 +15,7 @@ categories:
 
 GitHub: [https://github.com/stalomeow/DreamTicker](https://github.com/stalomeow/DreamTicker)。
 
-<!-- more -->
+
 
 ## 渲染
 

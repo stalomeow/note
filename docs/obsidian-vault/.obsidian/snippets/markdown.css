@@ -1,3 +1,7 @@
+body {
+    --link-decoration: none !important;
+}
+
 /* 去掉 "文章属性" 标题 */
 .metadata-properties-heading {
     display: none;

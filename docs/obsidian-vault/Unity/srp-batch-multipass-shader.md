@@ -11,7 +11,7 @@ categories:
 
 强行让 SRP Batch 支持 Multipass Shader，但不一定适用于所有情况。
 
-<!-- more -->
+
 
 ``` csharp
 private void DrawBatchedPasses(ScriptableRenderContext context, ref RenderingData renderingData, CommandBuffer cmd)

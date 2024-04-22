@@ -11,7 +11,7 @@ categories:
 
 记录下 Python 生成 requirements.txt 的几种方法。
 
-<!-- more -->
+
 
 ## pip freeze
 

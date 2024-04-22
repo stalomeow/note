@@ -12,7 +12,7 @@ categories:
 
 开发个人主页时用了 Nuxt 3。虽然有些坑，但它还是很好用的。
 
-<!-- more -->
+
 
 文档：[https://nuxt.com/docs/getting-started/introduction](https://nuxt.com/docs/getting-started/introduction)。
 

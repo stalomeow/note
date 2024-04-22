@@ -13,7 +13,7 @@ categories:
 
 ![演示](../../../assets/images/track_indicator_demo.png)
 
-<!-- more -->
+
 
 ## 配置椭圆
 
@@ -41,7 +41,7 @@ private void GetEllipseParam(RectTransform panelRect, out float a, out float b)
 
 ![辅助线](../../../assets/images/track_indicator_gizmo.png)
 
-Unity 没有提供绘制椭圆的方法。只能在椭圆上多采一些离散的点，然后用 [`Gizmos.DrawLineStrip(points, true)`](https://docs.unity3d.com/ScriptReference/Gizmos.DrawLineStrip.html){ target="_blank" } 绘制，第二个参数为 `true` 表示绘制为首尾闭合的多边形。
+Unity 没有提供绘制椭圆的方法。只能在椭圆上多采一些离散的点，然后用 [`Gizmos.DrawLineStrip(points, true)`](https://docs.unity3d.com/ScriptReference/Gizmos.DrawLineStrip.html) 绘制，第二个参数为 `true` 表示绘制为首尾闭合的多边形。
 
 ``` csharp
 private void OnDrawGizmosSelected()
@@ -122,6 +122,6 @@ private Vector2 GetLocalPos(Transform target, RectTransform panelRect, Camera ma
 }
 ```
 
-1. [`MultiplyPoint`](https://docs.unity3d.com/ScriptReference/Matrix4x4.MultiplyPoint.html){ target="_blank" } 相比 [`MultiplyPoint3x4`](https://docs.unity3d.com/ScriptReference/Matrix4x4.MultiplyPoint3x4.html){ target="_blank" } 多了透视除法，所以乘出来直接是 NDC 坐标。具体可以看 `MultiplyPoint` 的源码。
+1. [`MultiplyPoint`](https://docs.unity3d.com/ScriptReference/Matrix4x4.MultiplyPoint.html) 相比 [`MultiplyPoint3x4`](https://docs.unity3d.com/ScriptReference/Matrix4x4.MultiplyPoint3x4.html) 多了透视除法，所以乘出来直接是 NDC 坐标。具体可以看 `MultiplyPoint` 的源码。
 
 把结果赋值给 Panel 里一个图标的 `localPosition` 即可。箭头方向、距离之类的功能比较简单，不写了。

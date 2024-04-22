@@ -14,7 +14,7 @@ categories:
 1. 卸载所有 pip 安装的 Package。
 2. Windows 下卸载 Python 本体。
 
-<!-- more -->
+
 
 ## 卸载所有 Package
 

@@ -11,7 +11,7 @@ categories:
 
 VMD (Vocaloid Motion Data) 是 MMD (MikuMikuDance) 使用的动画文件。
 
-<!-- more -->
+
 
 ## VMD 格式
 

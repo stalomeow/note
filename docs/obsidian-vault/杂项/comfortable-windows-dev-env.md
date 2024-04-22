@@ -9,7 +9,7 @@ categories:
 
 # 搭建更舒适的 Windows 开发环境
 
-<!-- more -->
+
 
 ## scoop 和 winget
 

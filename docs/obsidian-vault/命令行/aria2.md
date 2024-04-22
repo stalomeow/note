@@ -4,12 +4,12 @@
 
     Aria2 是一个轻量级、多源、跨平台、命令行界面的下载器。支持的下载协议有 HTTP/HTTPS、FTP、SFTP、BitTorrent 和 Metalink。
 
-    - GitHub 仓库：[https://github.com/aria2/aria2](https://github.com/aria2/aria2){ target="_blank" }
-    - 文档：[https://aria2.github.io/manual/en/html/index.html](https://aria2.github.io/manual/en/html/index.html){ target="_blank" }
+    - GitHub 仓库：[https://github.com/aria2/aria2](https://github.com/aria2/aria2)
+    - 文档：[https://aria2.github.io/manual/en/html/index.html](https://aria2.github.io/manual/en/html/index.html)
 
     ---
 
-    我这里就简单记一下 Aria2 相关的东西。内存不吃紧的话，还是用 [Motrix](https://github.com/agalwood/Motrix){ target="_blank" } 吧。Motrix 是基于 Aria2、Electron 和 Vue 开发的，用起来方便一点。
+    我这里就简单记一下 Aria2 相关的东西。内存不吃紧的话，还是用 [Motrix](https://github.com/agalwood/Motrix) 吧。Motrix 是基于 Aria2、Electron 和 Vue 开发的，用起来方便一点。
 
     下面有些内容对 Motrix 或者其他下载器也是适用的。
 
@@ -167,7 +167,7 @@ aria2c -i uris.txt
 
 ## Web 控制台
 
-Aria2 有一个网页控制台，网址是 [http://aria2c.com/](http://aria2c.com/){ target="_blank" }。用控制台之前需要先启动本地 Aria2 的 RPC。
+Aria2 有一个网页控制台，网址是 [http://aria2c.com/](http://aria2c.com/)。用控制台之前需要先启动本地 Aria2 的 RPC。
 
 ``` bash
 aria2c --enable-rpc=true --rpc-allow-origin-all=true --rpc-listen-all=true
@@ -189,8 +189,8 @@ aria2c --enable-rpc=true --rpc-allow-origin-all=true --rpc-listen-all=true
 
 每天自动更新的 Tracker 列表：
 
-- [https://github.com/ngosang/trackerslist](https://github.com/ngosang/trackerslist){ target="_blank" }
-- [https://github.com/XIU2/TrackersListCollection](https://github.com/XIU2/TrackersListCollection){ target="_blank" }
+- [https://github.com/ngosang/trackerslist](https://github.com/ngosang/trackerslist)
+- [https://github.com/XIU2/TrackersListCollection](https://github.com/XIU2/TrackersListCollection)
 
 复制以后，用 `--bt-tracker` 参数告诉 Aria2 就行，多个 tracker 之间用 1 个 `,` 分开。如果是写在配置文件里的话，记得要每天同步更新一下。
 
@@ -202,15 +202,15 @@ DHT 网络是一种去中心化的网络。每一个 BT 客户端连入网络以
 
 一些讲 DHT 网络的文章：
 
-- [入门DHT协议理论篇 | 生活的自留地](https://l1905.github.io/p2p/dht/2021/04/23/dht01/){ target="_blank" }
-- [BT网络中DHT和UPnp的解释（转） - EasonJim - 博客园](https://www.cnblogs.com/EasonJim/p/6607869.html){ target="_blank" }
-- [聊聊分布式散列表（DHT）的原理 — — 以 Kademlia（Kad） 和 Chord 为例 | by 编程随想 | Medium](https://program-think.medium.com/%E8%81%8A%E8%81%8A%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%A3%E5%88%97%E8%A1%A8-dht-%E7%9A%84%E5%8E%9F%E7%90%86-%E4%BB%A5-kademlia-kad-%E5%92%8C-chord-%E4%B8%BA%E4%BE%8B-8e648d853288){ target="_blank" }
+- [入门DHT协议理论篇 | 生活的自留地](https://l1905.github.io/p2p/dht/2021/04/23/dht01/)
+- [BT网络中DHT和UPnp的解释（转） - EasonJim - 博客园](https://www.cnblogs.com/EasonJim/p/6607869.html)
+- [聊聊分布式散列表（DHT）的原理 — — 以 Kademlia（Kad） 和 Chord 为例 | by 编程随想 | Medium](https://program-think.medium.com/%E8%81%8A%E8%81%8A%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%A3%E5%88%97%E8%A1%A8-dht-%E7%9A%84%E5%8E%9F%E7%90%86-%E4%BB%A5-kademlia-kad-%E5%92%8C-chord-%E4%B8%BA%E4%BE%8B-8e648d853288)
 
 BT 客户端只要知道 DHT 网络中的任意一个结点就可以加入到这个网络中。Aria2 用 `dht.dat` 来记录之前遇到过的结点。加上参数 `--enable-dht=true` 就能打开。IPv6 的话，用的文件是 `dht6.dat`，参数是 `--enable-dht6=true`。[^2] [^3]
 
 ## 百度网盘直链下载
 
-安装 [油猴脚本](https://github.com/syhyz1990/baiduyun){ target="_blank" } 或者 [这里也可以装](https://www.youxiaohou.com/zh-cn/){ target="_blank" }。油猴也叫篡改猴 Tampermonkey，是一个浏览器插件。目前最好用红色的油猴，也就是 Beta 版。
+安装 [油猴脚本](https://github.com/syhyz1990/baiduyun) 或者 [这里也可以装](https://www.youxiaohou.com/zh-cn/)。油猴也叫篡改猴 Tampermonkey，是一个浏览器插件。目前最好用红色的油猴，也就是 Beta 版。
 
 推荐用 Motrix + RPC 下载。记得要修改 RPC 参数！默认是下载以后保存到 D 盘根目录，如果没有 D 盘就会一直报错。
 

@@ -201,3 +201,7 @@ hooks:
 watch:
   - overrides
   - news.yml
+
+validation:
+  not_found: warn
+  unrecognized_links: ignore

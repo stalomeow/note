@@ -1,9 +1,12 @@
+import locale
 import os
 import posixpath
 import re
 
 from mkdocs.config.defaults import MkDocsConfig
 from mkdocs.structure.files import File, Files
+from mkdocs.structure.nav import Navigation
+from mkdocs.structure.nav import Section
 from mkdocs.structure.pages import Page
 from mkdocs.utils import meta
 from string import ascii_letters, digits
@@ -60,14 +63,62 @@ def on_files(files: Files, config: MkDocsConfig):
         files.remove(f)
     return files
 
+def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
+    obsidian_root = None
+    for it in nav.items:
+        if isinstance(it, Section) and it.title.lower().count('obsidian') > 0:
+            obsidian_root = it
+    if obsidian_root is None:
+        return
+
+    locale.setlocale(locale.LC_ALL, locale='zh-CN')
+
+    def get_entry_key(entry):
+        # obsidian 目录下面只有 Page 和 Section
+        if isinstance(entry, Page):
+            # Page 对应 markdown 文件
+            # 此时 markdown 还没解析，title 是 None，使用文件名代替
+            return locale.strxfrm(entry.file.name)
+        else:
+            # Section 对应文件夹，直接用 title 即可
+            return locale.strxfrm(entry.title)
+
+    def dfs(entry):
+        children = getattr(entry, 'children', None)
+        if children is None:
+            return
+
+        files = []
+        folders = []
+
+        for child in entry.children:
+            dfs(child)
+
+            if isinstance(child, Page):
+                files.append(child)
+            else:
+                folders.append(child)
+
+        files.sort(key=get_entry_key)
+        folders.sort(key=get_entry_key)
+        entry.children = folders + files # 文件夹放在文件前面
+
+    # 重新排序
+    dfs(obsidian_root)
+    return nav
+
 def transform_wiki_links(markdown: str, page: Page) -> str:
     def repl(m: re.Match[str]):
         # [[title#heading|alias]]
-        parts = [*re.split(r'#|\|', m.group(1), flags=re.U), None, None]
-        for i in range(len(parts)):
-            if parts[i] is not None:
-                parts[i] = parts[i].strip()
-        title, heading, alias, *_ = parts
+        m2 = re.match(r'^(.+?)(#(.*?))?(\|(.*))?$', m.group(1), flags=re.U)
+        title = m2.group(1).strip()
+        heading = m2.group(3)
+        alias = m2.group(5)
+
+        if heading:
+            heading = heading.strip()
+        if alias:
+            alias = alias.strip()
 
         if title.count('/') == 0 and title.count('\\') == 0 and title in wiki_name_map:
             # title 是一个文件名（无扩展名）
@@ -83,6 +134,7 @@ def transform_wiki_links(markdown: str, page: Page) -> str:
                 link = abs_path
 
         if heading:
+            # TODO: Mkdocs 生成的锚点名字没有中文，是 _1、_2 这种形式，需要转换
             link += f'#{heading}'
 
         if alias:
@@ -96,7 +148,8 @@ def transform_wiki_links(markdown: str, page: Page) -> str:
 
     # [[]] 和 ![[]] 可以统一处理
     # 把 [[]] 转换成 []()，那么 ![[]] 自然就变成了 ![]()
-    return re.sub(r'\[\[(.*)\]\]', repl, markdown, flags=re.M | re.U)
+    # 匹配链接内容时必须用惰性匹配，否则会把多个链接内容合并在一起
+    return re.sub(r'\[\[(.*?)\]\]', repl, markdown, flags=re.M | re.U)
 
 def transform_callouts(markdown: str, page: Page) -> str:
     # 把 Obsidian 的 Callouts 转换为 Python Markdown Callouts 拓展的格式
@@ -113,7 +166,7 @@ def transform_callouts(markdown: str, page: Page) -> str:
             ans += f' **{title}**'
         return ans
 
-    return re.sub(r'>\s*\[!(.+)\]([+-])?(.*)', repl, markdown, flags=re.M | re.U)
+    return re.sub(r'^>\s*\[!(.+?)\]([+-])?(.*)$', repl, markdown, flags=re.M | re.U)
 
 def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Files):
     markdown = transform_wiki_links(markdown, page)

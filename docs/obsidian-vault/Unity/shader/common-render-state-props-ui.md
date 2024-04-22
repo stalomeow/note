@@ -4,7 +4,7 @@
 
     有时候想把 `ZTest`、`Cull` 等属性暴露到面板中配置，避免重复写相似的 Shader。这里直接把常用的都整理出来。
 
-    参考：[Shader面板上常用的一些内置枚举UI - 知乎](https://zhuanlan.zhihu.com/p/93194054){ target="_blank" }。
+    参考：[Shader面板上常用的一些内置枚举UI - 知乎](https://zhuanlan.zhihu.com/p/93194054)。
 
 ## Properties
 
@@ -34,7 +34,7 @@
 
 ## Commands
 
-相关文档：[ShaderLab: commands](https://docs.unity3d.com/Manual/shader-shaderlab-commands.html){ target="_blank" }。
+相关文档：[ShaderLab: commands](https://docs.unity3d.com/Manual/shader-shaderlab-commands.html)。
 
 ``` shaderlab
 Cull [_CullMode]
@@ -59,7 +59,7 @@ Stencil
 
 ## Enum 表
 
-相关的枚举都声明在 [Runtime/Export/Graphics/GraphicsEnums.cs](https://github.com/Unity-Technologies/UnityCsReference/blob/master/Runtime/Export/Graphics/GraphicsEnums.cs){ target="_blank" } 里。
+相关的枚举都声明在 [Runtime/Export/Graphics/GraphicsEnums.cs](https://github.com/Unity-Technologies/UnityCsReference/blob/master/Runtime/Export/Graphics/GraphicsEnums.cs) 里。
 
 下面的表基于 Unity 2023.3.0b5 的代码。
 

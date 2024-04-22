@@ -11,7 +11,7 @@ categories:
 
 为什么官方不能像洛谷一样支持这个功能？现在只能临时搞个油猴脚本支持一下。
 
-<!-- more -->
+
 
 代码改自 [https://github.com/tonngw/leetcode-helper](https://github.com/tonngw/leetcode-helper)，适配了最新的 UI，并且删掉了没用的功能，主打一个能用就行。
 
@@ -108,7 +108,7 @@ categories:
             if (l.length > 0) markdown += '> ' + l;
         }
         var problemTitle = document.getElementsByClassName('no-underline hover:text-blue-s dark:hover:text-dark-blue-s truncate cursor-text whitespace-normal hover:!text-[inherit]')[0].textContent;
-        return `> [${problemTitle}](${window.location.href}){ target="_blank" }\n\n` + markdown
+        return `> [${problemTitle}](${window.location.href})\n\n` + markdown
     }
 })();
 ```

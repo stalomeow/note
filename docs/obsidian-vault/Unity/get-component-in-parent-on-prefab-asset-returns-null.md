@@ -15,7 +15,7 @@ categories:
 - 其他有 `includeInactive` 参数的 `GetComponentXXX` 方法同上。
 - 没有 `includeInactive` 参数的方法，比如 `GetComponent<T>()`，可以直接使用。
 
-<!-- more -->
+
 
 ## 问题原因
 
