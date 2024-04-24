@@ -153,7 +153,7 @@ $$
 
 ### 快速计算卷积核
 
-根据 [[中心极限定理（Central limit theorem）#De Moivre-Laplace CLT]]：若 $X \sim B(n,p)$，当 $n$ 充分大时，可以近似认为 $X \sim N(np, np(1-p))$。我们需要的是一个对称的卷积核，所以取 $p=\dfrac{1}{2}$。这个其实就是一些文章中提到用杨辉三角近似的原理。
+根据 [[中心极限定理#De Moivre-Laplace CLT]]：若 $X \sim B(n,p)$，当 $n$ 充分大时，可以近似认为 $X \sim N(np, np(1-p))$。我们需要的是一个对称的卷积核，所以取 $p=\dfrac{1}{2}$。这个其实就是一些文章中提到用杨辉三角近似的原理。
 
 ![杨辉三角](../attachments/pascal-triangle.png)
 

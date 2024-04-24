@@ -11,7 +11,7 @@ $$
 \Delta = \nabla^2 = \nabla \cdot \nabla = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2}
 $$
 
-可用 Laplace 算子对 [[梯度（Gradient）]] 求 [[散度（Divergence）]]
+可用 Laplace 算子对 [[梯度]] 求 [[散度]]
 
 $$
 \nabla \cdot (\nabla f) = \Delta f

@@ -6,6 +6,14 @@ comments: true
 
 # 欢迎~♪
 
+!!! abstract ""
+
+    <p style="font-size:1.2rem;text-align:center;font-weight:bold;">
+    TECH OTAKUS<br>
+    SAVE<br>
+    THE WORLD
+    </p>
+
 我是西电 2022 级本科生，计科专业。本站内容分为下面几个部分：
 
 - News：我用 RSS 订阅的博客的最新文章。
