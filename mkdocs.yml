@@ -150,29 +150,13 @@ markdown_extensions:
 plugins:
   - search:
       # TODO 禁用以后，运行时代码会报错，然后颜色模式切换会炸掉
-      # 临时在 config_validator.py 里禁用
+      # 临时在 validate_config.py 里禁用
       # enabled: !ENV [CI, false]
       lang:
         - zh
         - en
       # TODO 分词后 highlight 有问题
       jieba_dict: docs/assets/jieba-dict.txt
-  - git-revision-date-localized:
-      enabled: !ENV [CI, false]
-      type: timeago
-      timezone: Asia/Shanghai
-      locale: zh
-      enable_creation_date: true
-      exclude:
-        - blog/** # 不要处理 Blog
-        - news/** # 不要处理 News
-  - git-committers:
-      enabled: !ENV [CI, false]
-      repository: stalomeow/note
-      branch: main
-      exclude:
-        - blog/** # 不要处理 Blog
-        - news/** # 不要处理 News
   - minify:
       minify_html: true
       minify_js: true
@@ -201,6 +185,7 @@ hooks:
 watch:
   - overrides
   - news.yml
+
 
 validation:
   unrecognized_links: warn
