@@ -169,7 +169,8 @@ def transform_callouts(markdown: str, page: Page) -> str:
             ans += f' **{title}**'
         return ans
 
-    return re.sub(r'^>\s*\[!(.+?)\]([+-])?(.*)$', repl, markdown, flags=re.M | re.U)
+    # \s 会匹配换行符，所以改用 [^\S\r\n]
+    return re.sub(r'^[^\S\r\n]*>[^\S\r\n]*\[!(.+?)\]([+-])?(.*)$', repl, markdown, flags=re.M | re.U)
 
 def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Files):
     markdown = transform_wiki_links(markdown, page)

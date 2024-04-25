@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "图形/用 RenderDoc 和模拟器抓帧安卓手游.md",
-                "mode": "preview",
+                "file": "数学/概率论与数理统计/离散分布/两点分布.md",
+                "mode": "source",
                 "backlinks": true,
                 "source": false
               }
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "图形/用 RenderDoc 和模拟器抓帧安卓手游.md",
+                "file": "数学/概率论与数理统计/离散分布/两点分布.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "图形/用 RenderDoc 和模拟器抓帧安卓手游.md",
+                "file": "数学/概率论与数理统计/离散分布/两点分布.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -107,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "图形/用 RenderDoc 和模拟器抓帧安卓手游.md"
+                "file": "数学/概率论与数理统计/离散分布/两点分布.md"
               }
             }
           }
@@ -130,12 +130,13 @@
   },
   "active": "1a3aee8eb124c4c7",
   "lastOpenFiles": [
+    "数学/概率论与数理统计/离散分布/二项分布.md",
+    "图形/用 RenderDoc 和模拟器抓帧安卓手游.md",
     "图形/Ambient Occlusion.md",
     "图形/Terrain Rendering.md",
     "图形/Half Lambert 勘误.md",
     "图形/Fog.md",
     "图形/Anti-aliasing.md",
-    "图形/用 RenderDoc 和模拟器抓帧安卓手游.md",
     "图形/渲染方程.md",
     "图形/图形学黑话.md",
     "图形/实现 Main Light Per-Object Shadow.md",
@@ -155,7 +156,6 @@
     "数学/概率论与数理统计/Poisson 定理.md",
     "数学/概率论与数理统计/中心极限定理.md",
     "数学/概率论与数理统计/依概率收敛.md",
-    "数学/概率论与数理统计/随机变量函数.md",
     "数学/概率论与数理统计/连续分布",
     "数学/概率论与数理统计/离散分布",
     "数学/概率论与数理统计/数字特征",
