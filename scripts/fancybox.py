@@ -51,7 +51,7 @@ def add_fancybox_js(output, config, head_regex: re.Pattern, body_regex: re.Patte
     js_code = f"Fancybox.bind('[data-fancybox]',Object.assign({{l10n:Fancybox.l10n.zh_CN}},JSON.parse('{json.dumps(CONFIG, separators=(',', ':'))}')));"
 
     # support compatible with mkdocs-material Instant loading feature
-    if "navigation.instant" in config["theme"]._vars.get("features", []):
+    if "navigation.instant" in config["theme"].get("features", []):
         js_code = f'document$.subscribe(() => {{ {js_code} }})'
 
     output = body_regex.sub(f"<body\\1<script>{js_code}</script></body>", output)

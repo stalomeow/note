@@ -1,18 +1,12 @@
 ---
-date: 2024-04-09T15:44:55
-draft: false
-authors:
-  - stalomeow
-categories:
-  - Web Front-end
-  - Nuxt
+slug: "240425201035"
+date: 2024-04-25
 ---
 
 # Nuxt 3 开发避坑
 
+
 开发个人主页时用了 Nuxt 3。虽然有些坑，但它还是很好用的。
-
-
 
 文档：[https://nuxt.com/docs/getting-started/introduction](https://nuxt.com/docs/getting-started/introduction)。
 
@@ -97,7 +91,7 @@ export default defineNuxtConfig({
 })
 ```
 
-上面一半代码是写在 `plugins/fontawesome.js` 里的。下面 `#!js export default defineNuxtConfig({...})` 里的代码是加在 `nuxt.config.ts` 里的。
+上面一半代码是写在 `plugins/fontawesome.js` 里的。下面 `export default defineNuxtConfig({...})` 里的代码是加在 `nuxt.config.ts` 里的。
 
 另外不建议像上面一样，直接把一个 `IconPack` 加进 `library` 里。最好是只加需要用到的 `IconDefinition`，这样能显著减小 build 以后的 js 文件大小。
 

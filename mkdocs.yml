@@ -102,7 +102,6 @@ extra_css:
 
 extra_javascript:
   - assets/javascripts/mathjax.js
-  - assets/javascripts/sponsor.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   # - https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js # 别加 mml！它会导致表格横向溢出！
   - https://cdn.jsdelivr.net/npm/mathjax@4.0.0-beta.4/tex-chtml.js
@@ -166,7 +165,6 @@ plugins:
       cache_safe: true
       js_files:
         - assets/javascripts/mathjax.js
-        - assets/javascripts/sponsor.js
       css_files:
         - assets/webfonts/JetBrains Mono/font.css
         - assets/webfonts/LXGW WenKai Screen/font.css
@@ -187,5 +185,8 @@ watch:
   - news.yml
 
 
+# https://www.mkdocs.org/user-guide/configuration/#validation
 validation:
-  unrecognized_links: warn
+  links:
+    anchors: ignore
+    unrecognized_links: warn

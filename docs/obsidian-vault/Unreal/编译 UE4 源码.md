@@ -1,21 +1,16 @@
 ---
-date: 2023-10-02
-draft: false
-authors:
-  - stalomeow
-categories:
-  - Unreal
+slug: "240425195135"
+date: 2024-04-25
 ---
 
 # 编译 UE4 源码
+
 
 记录一下编译 UE4 源码的流程和遇到的坑。
 
 - UE 源码版本：4.27.2。
 - IDE：Visual Studio 2022。
 - 操作系统：Windows 11。
-
-
 
 ## IDE 和必要负载
 

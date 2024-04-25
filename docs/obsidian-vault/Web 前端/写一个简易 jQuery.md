@@ -1,32 +1,28 @@
 ---
-date: 2022-04-18
-authors:
-  - stalomeow
-categories:
-  - Web Front-end
+slug: "240425200801"
+date: 2024-04-25
 ---
 
 # 写一个简易 jQuery
 
-用 TypeScript 实现一个简易版的 jQuery。<small><i>（高中博客的遗产）</i></small>
 
-
+用 TypeScript 实现一个简易版的 jQuery。
 
 ## 动机
 
 - 现在浏览器提供的 API 已经足够取代 jQuery 了，没必要再导入它（占用带宽、延长响应时间）。GitHub 也已经把 jQuery 移除了。
 - jQuery 的设计我个人感觉有点不合理。比如 `$('.abc')` 匹配的元素数量可能是 0 个或任意多个。代码的意图不明确，有时候容易出 bug。
-- 浏览器的 API 写起来太麻烦了。
+- 浏览器的 API 用起来有点麻烦。
 
 ## 代码实现
-
-缝就完事了。jQuery 的语法、浏览器的 API、TypeScript 的类型系统全都要。
 
 ### 扩展浏览器 API
 
 封装几个简单实用的方法。
 
-``` ts title="Declaration"
+声明：
+
+``` ts
 declare interface Element {
   addClass(...classNames: string[]): this;
   removeClass(...classNames: string[]): this;
@@ -53,7 +49,9 @@ declare interface Array<T> {
 }
 ```
 
-``` ts title="Implementation"
+实现：
+
+``` ts
 Object.assign(Element.prototype, {
   attr: function (qualifiedName: string, value?: string | null): string | null | Element {
     const e = this as unknown as Element;
@@ -164,6 +162,7 @@ Object.assign(Array.prototype, {
 ```
 
 ### 美元符号
+
 不同于 jQuery，我规定 `$()` 只能用来选择元素并且**只选择一个**，如果元素不存在那么会返回 `null`。
 
 ``` ts title="$()"

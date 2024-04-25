@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "bdc977b056fdc6ff",
+        "id": "884b8e520e643c50",
         "type": "tabs",
         "children": [
           {
-            "id": "1a3aee8eb124c4c7",
+            "id": "41d375ded43cff20",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "数学/概率论与数理统计/离散分布/两点分布.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -78,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "数学/概率论与数理统计/离散分布/两点分布.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +89,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "数学/概率论与数理统计/离散分布/两点分布.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -106,9 +99,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "数学/概率论与数理统计/离散分布/两点分布.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -128,34 +119,35 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "1a3aee8eb124c4c7",
+  "active": "41d375ded43cff20",
   "lastOpenFiles": [
-    "数学/概率论与数理统计/离散分布/二项分布.md",
-    "图形/用 RenderDoc 和模拟器抓帧安卓手游.md",
-    "图形/Ambient Occlusion.md",
-    "图形/Terrain Rendering.md",
+    "Web 前端/Nuxt 3 开发避坑.md",
+    "杂项/leetcode-problem-desc-to-markdown.md",
+    "杂项/win11-ms-input-shortcuts-conflict.md",
+    "Unity/unity-target-tracking-ui.md",
+    "Unity/用 RenderDoc 持续截帧 Unity Editor Game View.md",
+    "Unity/复刻星穹铁道 2.0 梦境迷钟.md",
+    "编程语言/Python/multi-versions-and-venv.md",
+    "网站资源.md",
+    "Web 前端/写一个简易 jQuery.md",
+    "Web 前端/网页中嵌入 b 站视频.md",
+    "Web 前端/解决 patch-package 不生效的问题.md",
+    "Web 前端/将内存中数据下载为文件.md",
+    "求职/简历.md",
+    "求职/面试.md",
+    "求职",
+    "Unreal/编译 UE4 源码.md",
+    "游戏后端/游戏注册、登录和鉴权.md",
+    "英语/高中英语作文框架.md",
     "图形/Half Lambert 勘误.md",
-    "图形/Fog.md",
-    "图形/Anti-aliasing.md",
-    "图形/渲染方程.md",
     "图形/图形学黑话.md",
+    "图形/提取 WebGL Shaders.md",
     "图形/实现 Main Light Per-Object Shadow.md",
     "图形/高质量卡通渲染 Bloom.md",
     "图形/法线贴图压缩.md",
-    "图形/提取 WebGL Shaders.md",
-    "英语/高中英语作文框架.md",
-    "命令行/aria2.md",
-    "数学/函数空间.md",
-    "数学/算一算青雀进暗杠的抽牌数期望.md",
-    "数学/广义函数.md",
-    "数学/个人常用的 MathJax Macro.md",
-    "数学/傅里叶级数实现本轮画图.md",
-    "数学/泛函.md",
-    "数学/高等数学/特殊的场.md",
-    "数学/高等数学/伯努利方程.md",
-    "数学/概率论与数理统计/Poisson 定理.md",
-    "数学/概率论与数理统计/中心极限定理.md",
-    "数学/概率论与数理统计/依概率收敛.md",
+    "数学/青雀进暗杠的抽牌数期望.md",
+    "图形/Ambient Occlusion.md",
+    "图形/用 RenderDoc 和模拟器抓帧安卓手游.md",
     "数学/概率论与数理统计/连续分布",
     "数学/概率论与数理统计/离散分布",
     "数学/概率论与数理统计/数字特征",
@@ -175,7 +167,6 @@
     "attachments/unity_hsr_dream_ticker_explain4.png",
     "attachments/unity_hsr_dream_ticker_explain3.png",
     "attachments/DirectionStar.ms14",
-    "attachments/analysis-of-signals-and-linear-systems",
-    "attachments/2023-07-26"
+    "attachments/analysis-of-signals-and-linear-systems"
   ]
 }

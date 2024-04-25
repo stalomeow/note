@@ -19,6 +19,14 @@ comments: true
 - News：我用 RSS 订阅的博客的最新文章。
 - Obsidian vault：我用 [Obsidian](https://obsidian.md/) 记录的所有笔记。
 
+如果本站对你有帮助的话... [赞助我](https://stalomeow.com/#coffee)！
+
+## 留言方式
+
+本站的评论区只在首页开启。有问题可以去 [GitHub Discussions](https://github.com/stalomeow/note/discussions) 留言。
+
+笔记经常会被移动、整理，导致它的 url 发生变化（甚至消失），这给维护评论区带来很高的成本。另一方面，我这个网站几乎没人访问，大多数人看了也不留评论，没什么必要开那么多评论区。
+
 ## 技术细节
 
 网站使用 [MkDocs 框架](https://www.mkdocs.org/) + [Material 主题](https://squidfunk.github.io/mkdocs-material/) 制作，部署在 [Vercel](https://vercel.com/) 上。
@@ -41,20 +49,3 @@ comments: true
 - `make upgrade`：更新 `mkdocs-material` 的版本。
 
 相关的代码可以在这个项目的 repo 里找到。
-
-## 用 Obsidian 的原因
-
-## 关于评论区
-
-评论区大概只会在首页开启。
-
-笔记经常会被移动、整理，导致它的 url 发生变化（甚至消失），这给维护评论区带来很高的成本。另一方面，我这个网站几乎没人访问，大多数人看了也不留评论，没什么必要开那么多评论区。
-
-我更推荐直接去 [GitHub Discussions](https://github.com/stalomeow/note/discussions) 里留言。
-
-## 勘误
-
-如果发现错误，可以 <small>（二选一）</small>
-
-- 去 [GitHub Discussions](https://github.com/stalomeow/note/discussions) 里留言。
-- 点击笔记标题旁的铅笔图标，Fork GitHub 仓库后修改源文件，最后提交 PR。

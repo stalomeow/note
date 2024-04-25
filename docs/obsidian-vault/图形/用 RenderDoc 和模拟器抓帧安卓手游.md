@@ -10,12 +10,16 @@ Windows 下，用 RenderDoc + 模拟器抓帧安卓手游。我使用的是 MuMu
 
 ## Global Process Hook
 
-RenderDoc 的 Global Process Hook 依赖 AppInit_DLLs 机制。[^1] [^2] 从 Windows 8 开始，当 SecureBoot 开启的时候，这个机制是被禁用的。[^3]
+### 关闭 SecureBoot
 
-++win+r++，输入 msinfo 32，查看 ^^安全启动状态^^ 的值。如果是 ^^启用^^ 的话，需要重启电脑，在 BIOS 里关闭 SecureBoot。
+RenderDoc 的 Global Process Hook 依赖 `AppInit_DLLs` 机制。[^1] [^2] 从 Windows 8 开始，当 SecureBoot 开启的时候，这个机制是被禁用的。[^3]
 
-1. 在 RenderDoc 顶部菜单栏点击 Tools/Settings，在 General 部分中找到 ^^Allow global process hooking - be careful!^^ 并勾选。
-2. 在 RenderDoc 的 Launch Application 页面中，将模拟器可执行文件的路径填入 ^^Executable Path^^ 中，然后点击下面 Global Process Hook 部分的 ^^Enable Global Hook^^ 按钮（需要管理员权限）。
+Win+R，输入 `msinfo32`，查看安全启动状态。如果是启用的话，需要重启电脑，在 BIOS 里关闭 SecureBoot。
+
+### 流程
+
+1. 在 RenderDoc 顶部菜单栏点击 Tools/Settings，在 General 部分中找到 Allow global process hooking - be careful! 并勾选。
+2. 在 RenderDoc 的 Launch Application 页面中，将模拟器可执行文件的路径填入 Executable Path 中，然后点击下面 Global Process Hook 部分的 Enable Global Hook 按钮（需要管理员权限）。
 3. 如果之前打开了模拟器的话，退出模拟器。然后，用任务管理器检查，确保所有相关的进程都被关闭。
 
 ## Connect To App

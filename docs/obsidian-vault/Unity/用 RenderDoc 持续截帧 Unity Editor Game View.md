@@ -1,26 +1,19 @@
 ---
-date: 2024-04-04T00:48:47
-draft: false
-authors:
-  - stalomeow
-categories:
-  - Unity
-  - Rendering
-  - Reverse
+slug: "240425201513"
+date: 2024-04-25
 ---
 
 # 用 RenderDoc 持续截帧 Unity Editor Game View
 
+
 某些渲染 bug 只会持续很短的时间，手动抓帧根本抓不到。Unity 在 `UnityEditorInternal` 命名空间下，提供了 [`RenderDoc.BeginCaptureRenderDoc`](https://github.com/Unity-Technologies/UnityCsReference/blob/d2eb9c0352229c0268d47ca0efa69e14b5d180f8/Editor/Mono/RenderDoc/RenderDoc.bindings.cs#L32) 和 [`RenderDoc.EndCaptureRenderDoc`](https://github.com/Unity-Technologies/UnityCsReference/blob/d2eb9c0352229c0268d47ca0efa69e14b5d180f8/Editor/Mono/RenderDoc/RenderDoc.bindings.cs#L34C28-L34C47) 方法。可以用它们对 Game View 持续截帧。
-
-
 
 ## 代码
 
 随便给的快捷键：
 
-- ++alt+shift+b++ 开始截帧
-- ++alt+shift+e++ 结束截帧
+- Alt+Shift+B 开始截帧
+- Alt+Shift+E 结束截帧
 
 为了防止和其他快捷键冲突，所以给得比较反人类。不过用的频率比较低，所以可以接受。
 
