@@ -1,9 +1,5 @@
 # Python 基础
 
-!!! abstract
-
-    都是非常基础的东西。持续更新。
-
 ## @classmethod 和 @staticmethod
 
 ``` python

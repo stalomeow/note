@@ -1,5 +1,6 @@
 body {
     --link-decoration: none !important;
+    --link-external-decoration: none !important;
 }
 
 /* 去掉 "文章属性" 标题 */
@@ -20,4 +21,9 @@ body {
 /* 代码块显示的时候不要自动换行 */
 .markdown-rendered pre code[class*="language-"] {
     text-wrap: nowrap;
+}
+
+/* 引用的内容不透明度降低 */
+.markdown-rendered blockquote {
+    opacity: 0.7;
 }
