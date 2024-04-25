@@ -103,7 +103,7 @@ return EncodeHDR(0.25 * (c1 + c2 + c3 + c4));
 
 ## 高斯模糊
 
-设 $G(x,y)$ 是二维正态分布的概率密度函数，$f(x,y)$ 是坐标为 $(x,y)$ 处像素的值，$h(x,y)$ 是该处模糊后的值。做一个半径为 $r$ 的高斯模糊，即
+设 $G(x,y)$ 是二维[[正态分布]]的概率密度函数，$f(x,y)$ 是坐标为 $(x,y)$ 处像素的值，$h(x,y)$ 是该处模糊后的值。做一个半径为 $r$ 的高斯模糊，即
 
 $$
 h(x,y)=\displaystyle\sum\limits_{i=-r}^{r}\displaystyle\sum\limits_{j=-r}^{r}f(x+i,y+j)G(i,j)
@@ -153,7 +153,7 @@ $$
 
 ### 快速计算卷积核
 
-根据 [[中心极限定理#De Moivre-Laplace CLT]]：若 $X \sim B(n,p)$，当 $n$ 充分大时，可以近似认为 $X \sim N(np, np(1-p))$。我们需要的是一个对称的卷积核，所以取 $p=\dfrac{1}{2}$。这个其实就是一些文章中提到用杨辉三角近似的原理。
+根据 [[中心极限定理#De Moivre-Laplace CLT|De Moivre-Laplace CLT]]：若 $X \sim B(n,p)$，当 $n$ 充分大时，可以近似认为 $X \sim N(np, np(1-p))$。我们需要的是一个对称的卷积核，所以取 $p=\dfrac{1}{2}$。这个其实就是一些文章中提到用杨辉三角近似的原理。
 
 ![杨辉三角](../attachments/pascal-triangle.png)
 
@@ -218,7 +218,7 @@ return EncodeHDR(color);
 
 ### 卷积核长度选择
 
-根据正态分布的 $3\sigma$ 法则，大致推测出高斯模糊的模糊范围和 $\sigma$ 正相关。因为长度为 $n$ 的卷积核取的是杨辉三角的第 $n+3$ 行，所以
+根据[[正态分布#3 sigma 规则]]，大致推测出高斯模糊的模糊范围和 $\sigma$ 正相关。因为长度为 $n$ 的卷积核取的是杨辉三角的第 $n+3$ 行，所以
 
 $$
 \sigma \approx \dfrac{\sqrt{n+3}}{2}

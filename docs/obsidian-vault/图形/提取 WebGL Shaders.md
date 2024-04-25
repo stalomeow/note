@@ -1,17 +1,12 @@
 ---
-date: 2023-06-18
-draft: false
-authors:
-  - stalomeow
-categories:
-  - Rendering
-  - Reverse
+slug: "240425135617"
+date: 2024-04-25
 ---
 
 # 提取 WebGL Shaders
 
-一键提取 WebGL Shaders 的代码。[^1]
 
+一键提取 WebGL Shaders 的代码，来自 [https://github.com/greggman/dump-all-the-shaders/tree/master](https://github.com/greggman/dump-all-the-shaders/tree/master)。
 
 
 ``` js
@@ -40,5 +35,3 @@ categories:
 ```
 
 在控制台里执行这个代码。当有 Shader 被编译时，就会在控制台输出 Shader 的源代码。
-
-[^1]: [https://github.com/greggman/dump-all-the-shaders/tree/master](https://github.com/greggman/dump-all-the-shaders/tree/master)

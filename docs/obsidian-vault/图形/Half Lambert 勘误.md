@@ -1,8 +1,6 @@
 # Half Lambert 勘误
 
-!!! abstract
-
-    半兰伯特光照模型的勘误。感谢 b 站 UP 主 [给你柠檬椰果养乐多你会跟我玩吗](https://space.bilibili.com/32704665)。
+半兰伯特光照模型的勘误。感谢 b 站 UP 主 [给你柠檬椰果养乐多你会跟我玩吗](https://space.bilibili.com/32704665)。
 
 Half Lambert 是 Valve 在开发《半条命》时提出的，所以他们的官方文档肯定是最权威的。
 

@@ -1,18 +1,14 @@
 ---
-date: 2024-03-15
-draft: false
-authors:
-  - stalomeow
-categories:
-  - Unity
-  - Rendering
+slug: "240425140028"
+date: 2024-04-25
 ---
 
 # 实现 Main Light Per-Object Shadow
 
+
 Per-Object Shadow 就是给物体单独生成一张 Shadow Map，解决物体在默认的 Cascaded Shadow Map 上占比较小，阴影精度低的问题。一般都给角色用，顺便还能把场景阴影和角色阴影分开。
 
-![Per-Object Shadow Map，角色尽可能撑满整张图](../../../assets/images/per-object-shadow-map.png)
+![Per-Object Shadow Map，角色尽可能撑满整张图](../attachments/per-object-shadow-map.png)
 
 
 
@@ -323,7 +319,7 @@ private static void DrawShadow(CommandBuffer cmd, Vector2Int tilePos, in ShadowC
 
 Shadow Caster 的 Shader 直接拿 URP 的，改个 LightMode 就行。
 
-![4x4 Per-Object Shadow Map Atlas](../../../assets/images/per-object-shadow-map-atlas.png)
+![4x4 Per-Object Shadow Map Atlas](../attachments/per-object-shadow-map-atlas.png)
 
 ## Shadow Matrix
 
