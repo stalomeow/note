@@ -1,5 +1,5 @@
 SHELL := cmd
-PYTHON_ENV := .\env\Scripts\activate
+PYTHON_ENV := call .\env\Scripts\activate.bat
 .ONESHELL:
 
 help h:
@@ -14,7 +14,7 @@ serve s:
 	$(PYTHON_ENV) && mkdocs --color serve
 .PHONY: serve s
 
-MSG := Update
+MSG := Upload via Makefile
 
 deploy d:
 	git add . && git commit -m "$(MSG)" && git push
