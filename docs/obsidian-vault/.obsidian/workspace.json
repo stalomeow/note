@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "85a65813e7529351",
+        "id": "5674a83767b18870",
         "type": "tabs",
         "children": [
           {
-            "id": "01f5003d530e9436",
+            "id": "7d024f4aed80d198",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "命令行/Aria2.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -78,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "命令行/Aria2.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +89,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "命令行/Aria2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -106,9 +99,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "命令行/Aria2.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -128,10 +119,14 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "01f5003d530e9436",
+  "active": "e675d2bee4ff9cc5",
   "lastOpenFiles": [
-    "命令行/Vim.md",
+    "未命名",
+    "算法/字符串/KMP 算法.md",
+    "算法/字符串/字符串的前后缀.md",
+    "算法/字符串/KMP算法.md",
     "命令行/Aria2.md",
+    "命令行/Vim.md",
     "杂项/百度网盘直链下载.md",
     "Unity/复刻星穹铁道 2.0 梦境迷钟.md",
     "Unity/技术分析/Full Generic Sharing 原理.md",
@@ -145,8 +140,6 @@
     "算法/两个整数的平均值.md",
     "算法/misc.md",
     "算法/递归三要素.md",
-    "算法/字符串/KMP 算法.md",
-    "算法/字符串/字符串的前后缀.md",
     "算法/搜索/回溯法.md",
     "算法/树/construct-binary-tree-from-traversal.md",
     "算法/树/disjoint-set.md",
@@ -154,8 +147,6 @@
     "算法/树/complete-binary-tree.md",
     "算法/树/binary-tree-traversal.md",
     "算法/树/二叉搜索树.md",
-    "算法/排序/compare.md",
-    "算法/排序/insert/shell-sort.md",
     "计算机基础/编码",
     "attachments/files/DirectionStar.ms14",
     "attachments/files",

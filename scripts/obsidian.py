@@ -1,4 +1,5 @@
 import posixpath
+import pypinyin
 import re
 
 from mkdocs.config.defaults import MkDocsConfig
@@ -34,23 +35,19 @@ def on_files(files: Files, config: MkDocsConfig):
     wiki_path_map.clear()
 
     for f in files:
-        if not f.is_documentation_page():
-            continue
-
         if f.src_uri.startswith(SRC_URI_BLACKLIST):
             invalid_files.append(f)
             continue
 
-        print('====', 'process  ', f.src_uri)
+        if not f.is_documentation_page():
+            continue
 
-        with open(f.abs_src_path, encoding='utf-8-sig', errors='strict') as fp:
-            source = fp.read()
-        _, frontmatter = meta.get_data(source)
+        _, frontmatter = meta.get_data(f.content_string)
 
+        # 有 slug 的话就用 slug 作为文件名
         if "slug" in frontmatter:
             slug = transform_slug(str(frontmatter["slug"]))
-
-            if not config.use_directory_urls:
+            if not f.use_directory_urls:
                 f.dest_uri = posixpath.join(DST_URI_DIR_NAME, slug + '.html')
             else:
                 f.dest_uri = posixpath.join(DST_URI_DIR_NAME, slug, 'index.html')
@@ -70,18 +67,23 @@ def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
     if obsidian_root is None:
         return
 
-    # TODO: vercel 那边不支持 zh-CN locale，没法做本地化排序
-    # locale.setlocale(locale.LC_ALL, locale='zh-CN')
-
     def get_entry_key(entry):
         # obsidian 目录下面只有 Page 和 Section
         if isinstance(entry, Page):
             # Page 对应 markdown 文件
             # 此时 markdown 还没解析，title 是 None，使用文件名代替
-            return entry.file.name
+            key = entry.file.name
         else:
             # Section 对应文件夹，直接用 title 即可
-            return entry.title
+            key = entry.title
+
+        start_with_english = key[0] in ascii_letters
+
+        # 把中文变成拼音（无音调），不是中文的部分保留
+        pinyin = pypinyin.lazy_pinyin(key, style=pypinyin.Style.NORMAL, errors='default', v_to_u=False)
+
+        # 按照 obsidian 的风格，以英文开头的内容排在中文开头的后面，不区分大小写
+        return (start_with_english, ''.join(pinyin).lower())
 
     def dfs(entry):
         children = getattr(entry, 'children', None)
@@ -133,14 +135,8 @@ def transform_wiki_links(markdown: str, page: Page) -> str:
             else:
                 md_link = abs_path
 
-        if title == 'Aria2':
-            print('=====', title, heading, alias, wiki_name_map.keys(), page.file.src_uri)
-
         # 改成 .md 文件的相对路径，这样要是链接找不到了 MkDocs 会在控制台警告
         md_link = get_relative_url(md_link, page.file.src_uri)
-
-        if title == 'Aria2':
-            print('=====', title, heading, alias, md_link, page.file.src_uri)
 
         if heading:
             # TODO: MkDocs 生成的锚点名字没有中文，是 _1、_2 这种形式，需要转换
