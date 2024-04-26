@@ -1,3 +1,4 @@
+import logging
 import posixpath
 import pypinyin
 import re
@@ -11,14 +12,12 @@ from mkdocs.structure.pages import Page
 from mkdocs.utils import meta, get_relative_url
 from string import ascii_letters, digits
 
-DST_URI_DIR_NAME = 'obsidian-vault'
-SRC_URI_BLACKLIST = (
-    'obsidian-vault/.obsidian',
-    'obsidian-vault/templates',
-)
+OBSIDIAN_VAULT_DIR = 'obsidian-vault'
+OBSIDIAN_VAULT_BLACKLIST = ('.obsidian', 'templates')
 
 wiki_name_map: dict[str, File] = {}
 wiki_path_map: dict[str, File] = {}
+log = logging.getLogger('mkdocs.plugins')
 
 def transform_slug(slug: str) -> str:
     # slug 目前用的是日期数字，这里把数字转换成字母
@@ -35,7 +34,12 @@ def on_files(files: Files, config: MkDocsConfig):
     wiki_path_map.clear()
 
     for f in files:
-        if f.src_uri.startswith(SRC_URI_BLACKLIST):
+        # 忽略 Obsidian Vault 之外的文件
+        if not f.src_uri.startswith(posixpath.join(OBSIDIAN_VAULT_DIR, '')):
+            continue
+
+        # 删掉黑名单里的文件
+        if f.src_uri.startswith(tuple(posixpath.join(OBSIDIAN_VAULT_DIR, b, '') for b in OBSIDIAN_VAULT_BLACKLIST)):
             invalid_files.append(f)
             continue
 
@@ -48,14 +52,19 @@ def on_files(files: Files, config: MkDocsConfig):
         if "slug" in frontmatter:
             slug = transform_slug(str(frontmatter["slug"]))
             if not f.use_directory_urls:
-                f.dest_uri = posixpath.join(DST_URI_DIR_NAME, slug + '.html')
+                f.dest_uri = posixpath.join(OBSIDIAN_VAULT_DIR, slug + '.html')
             else:
-                f.dest_uri = posixpath.join(DST_URI_DIR_NAME, slug, 'index.html')
+                f.dest_uri = posixpath.join(OBSIDIAN_VAULT_DIR, slug, 'index.html')
+        else:
+            log.warning('Obsidian document \'%s\' does not have a slug.', f.src_uri)
 
         wiki_name_map[f.name] = f
         wiki_path_map[posixpath.splitext(f.src_uri)[0]] = f # key 无扩展名
 
+    log.info('Obsidian documents: %s.', str(list(wiki_name_map.keys())))
+
     for f in invalid_files:
+        log.info('Removing obsidian vault file: \'%s\'.', f.src_uri)
         files.remove(f)
     return files
 

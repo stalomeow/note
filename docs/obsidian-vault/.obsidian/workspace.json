@@ -11,8 +11,13 @@
             "id": "7d024f4aed80d198",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "编程语言/CSharp/gc-keep-alive.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -73,6 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "编程语言/CSharp/gc-keep-alive.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "编程语言/CSharp/gc-keep-alive.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -99,7 +106,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "编程语言/CSharp/gc-keep-alive.md"
+              }
             }
           }
         ],
@@ -119,8 +128,12 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "e675d2bee4ff9cc5",
+  "active": "7d024f4aed80d198",
   "lastOpenFiles": [
+    "编程语言/CSharp/pattern-matching.md",
+    "编程语言/CSharp/weak-references.md",
+    "编程语言/C 和 C++/C++ STL.md",
+    "编程语言/CSharp/coding-convention.md",
     "未命名",
     "算法/字符串/KMP 算法.md",
     "算法/字符串/字符串的前后缀.md",
@@ -144,9 +157,6 @@
     "算法/树/construct-binary-tree-from-traversal.md",
     "算法/树/disjoint-set.md",
     "算法/树/huffman-tree.md",
-    "算法/树/complete-binary-tree.md",
-    "算法/树/binary-tree-traversal.md",
-    "算法/树/二叉搜索树.md",
     "计算机基础/编码",
     "attachments/files/DirectionStar.ms14",
     "attachments/files",
@@ -156,7 +166,6 @@
     "求职",
     "数学/概率论与数理统计/连续分布",
     "数学/概率论与数理统计/离散分布",
-    "数学/概率论与数理统计/数字特征",
     "attachments/pascal-triangle.png",
     "未命名.canvas",
     "attachments/analysis-of-signals-and-linear-systems/step-function.png",
