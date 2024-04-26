@@ -1,4 +1,3 @@
-import os
 import posixpath
 import re
 
@@ -52,11 +51,8 @@ def on_files(files: Files, config: MkDocsConfig):
             else:
                 f.dest_uri = posixpath.join(DST_URI_DIR_NAME, slug, 'index.html')
 
-            f.url = f._get_url(config.use_directory_urls)
-            f.abs_dest_path = os.path.normpath(os.path.join(config.site_dir, f.dest_uri))
-
         wiki_name_map[f.name] = f
-        wiki_path_map[f.src_uri.rsplit('.', maxsplit=1)[0]] = f # key 无扩展名
+        wiki_path_map[posixpath.splitext(f.src_uri)[0]] = f # key 无扩展名
 
     for f in invalid_files:
         files.remove(f)
@@ -126,7 +122,7 @@ def transform_wiki_links(markdown: str, page: Page) -> str:
         else:
             # title 是一个文件路径（无扩展名），先展开为绝对路径
             abs_path = posixpath.normpath(posixpath.join(posixpath.dirname(page.file.src_uri), title))
-            title = posixpath.basename(abs_path) # 改成文件名
+            title = posixpath.splitext(posixpath.basename(abs_path))[0] # 改成文件名（无扩展名）
 
             if abs_path in wiki_path_map:
                 md_link = wiki_path_map[abs_path].src_uri
@@ -138,6 +134,9 @@ def transform_wiki_links(markdown: str, page: Page) -> str:
 
         # 改成 .md 文件的相对路径，这样要是链接找不到了 MkDocs 会在控制台警告
         md_link = get_relative_url(md_link, page.file.src_uri)
+
+        if title == 'Aria2':
+            print('=====', title, heading, alias, md_link, page.file.src_uri)
 
         if heading:
             # TODO: MkDocs 生成的锚点名字没有中文，是 _1、_2 这种形式，需要转换
