@@ -2,6 +2,7 @@ import posixpath
 import re
 
 from mkdocs.config.defaults import MkDocsConfig
+from mkdocs.plugins import event_priority
 from mkdocs.structure.files import File, Files
 from mkdocs.structure.nav import Navigation
 from mkdocs.structure.nav import Section
@@ -26,6 +27,7 @@ def transform_slug(slug: str) -> str:
     # 重排一下并分组，让原本相似的数字看起来不太一样
     return '-'.join([slug[1::3], slug[2::3], slug[0::3]])
 
+@event_priority(100) # 放在最前面执行，不要处理其他插件生成的文件
 def on_files(files: Files, config: MkDocsConfig):
     invalid_files = []
     wiki_name_map.clear()
@@ -38,6 +40,8 @@ def on_files(files: Files, config: MkDocsConfig):
         if f.src_uri.startswith(SRC_URI_BLACKLIST):
             invalid_files.append(f)
             continue
+
+        print('====', 'process  ', f.src_uri)
 
         with open(f.abs_src_path, encoding='utf-8-sig', errors='strict') as fp:
             source = fp.read()
