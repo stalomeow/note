@@ -11,8 +11,13 @@
             "id": "01f5003d530e9436",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "命令行/Aria2.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -73,6 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "命令行/Aria2.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "命令行/Aria2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -99,7 +106,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "命令行/Aria2.md"
+              }
             }
           }
         ],
@@ -121,6 +130,7 @@
   },
   "active": "01f5003d530e9436",
   "lastOpenFiles": [
+    "命令行/Vim.md",
     "命令行/Aria2.md",
     "杂项/百度网盘直链下载.md",
     "Unity/复刻星穹铁道 2.0 梦境迷钟.md",
@@ -146,7 +156,6 @@
     "算法/树/二叉搜索树.md",
     "算法/排序/compare.md",
     "算法/排序/insert/shell-sort.md",
-    "游戏后端/游戏注册、登录和鉴权.md",
     "计算机基础/编码",
     "attachments/files/DirectionStar.ms14",
     "attachments/files",
