@@ -109,7 +109,7 @@ def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
     dfs(obsidian_root)
     return nav
 
-def transform_wiki_links(markdown: str, page: Page) -> str:
+def transform_wiki_links(markdown: str, page: Page, config: MkDocsConfig) -> str:
     def repl(m: re.Match[str]):
         # [[title#heading|alias]]
         m2 = re.match(r'^(.+?)(#(.*?))?(\|(.*))?$', m.group(1), flags=re.U)
@@ -139,8 +139,11 @@ def transform_wiki_links(markdown: str, page: Page) -> str:
         md_link = get_relative_url(md_link, page.file.src_uri)
 
         if heading:
-            # TODO: MkDocs 生成的锚点名字没有中文，是 _1、_2 这种形式，需要转换
-            md_link += f'#{heading}'
+            # 根据 toc 配置，生成 heading 的 id
+            # https://python-markdown.github.io/extensions/toc/
+            toc_config = config.mdx_configs['toc']
+            heading_id = toc_config['slugify'](heading, toc_config.get('separator', '-'))
+            md_link += f'#{heading_id}'
 
         if alias:
             display_name = alias
@@ -156,7 +159,7 @@ def transform_wiki_links(markdown: str, page: Page) -> str:
     # 匹配链接内容时必须用惰性匹配，否则会把多个链接内容合并在一起
     return re.sub(r'\[\[(.*?)\]\]', repl, markdown, flags=re.M | re.U)
 
-def transform_callouts(markdown: str, page: Page) -> str:
+def transform_callouts(markdown: str, page: Page, config: MkDocsConfig) -> str:
     # 把 Obsidian 的 Callouts 转换为 Python Markdown Callouts 拓展的格式
     # https://help.obsidian.md/Editing+and+formatting/Callouts
     # https://oprypin.github.io/markdown-callouts/index.html
@@ -175,6 +178,6 @@ def transform_callouts(markdown: str, page: Page) -> str:
     return re.sub(r'^[^\S\r\n]*>[^\S\r\n]*\[!(.+?)\]([+-])?(.*)$', repl, markdown, flags=re.M | re.U)
 
 def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Files):
-    markdown = transform_wiki_links(markdown, page)
-    markdown = transform_callouts(markdown, page)
+    markdown = transform_wiki_links(markdown, page, config)
+    markdown = transform_callouts(markdown, page, config)
     return markdown

@@ -133,7 +133,12 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true 
   - toc:
+      # https://python-markdown.github.io/extensions/toc/
       permalink: true
+      separator: "-"
+      # 生成可读的 unicode slug
+      # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#+toc.slugify
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {}
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.emoji:
@@ -188,5 +193,5 @@ watch:
 # https://www.mkdocs.org/user-guide/configuration/#validation
 validation:
   links:
-    anchors: ignore
+    anchors: warn
     unrecognized_links: warn
