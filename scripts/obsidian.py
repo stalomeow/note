@@ -130,7 +130,7 @@ def transform_wiki_links(markdown: str, page: Page) -> str:
                 md_link = abs_path
 
         if title == 'Aria2':
-            print('=====', title, heading, alias, md_link, page.file.src_uri)
+            print('=====', title, heading, alias, wiki_name_map[title], page.file.src_uri)
 
         # 改成 .md 文件的相对路径，这样要是链接找不到了 MkDocs 会在控制台警告
         md_link = get_relative_url(md_link, page.file.src_uri)
