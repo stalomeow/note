@@ -8,8 +8,6 @@ import yaml
 
 from datetime import datetime, timedelta, timezone
 from paginate import Page as Pagination
-from shutil import rmtree
-from tempfile import mkdtemp
 from typing import Iterable, Union
 
 from mkdocs.config import Config
@@ -52,20 +50,10 @@ class NewsConfig(Config):
 # region Structs
 
 class MultiPagePostsInfo(object):
-    GENERATED_FILE_TAG = 'stalomeow/news'
-
     def __init__(self, slug: str) -> None:
         self.slug: str = slug
         self.posts: list[PostInfo] = []
         self.files: list[File] = []
-
-    def __del__(self):
-        for file in self.files:
-            if getattr(file, 'generated_by', None) != self.GENERATED_FILE_TAG:
-                continue
-            # 只删除自动生成的文件
-            os.remove(file.abs_src_path)
-        self.files.clear()
 
     @property
     def firstPageCanonicalUrl(self):
@@ -73,13 +61,13 @@ class MultiPagePostsInfo(object):
             return None
         return self.files[0].page.canonical_url
 
-    def _getFileDir(self, pageNum: int):
+    def _getFileDir(self, pageNum: int) -> str:
         """ 文件的相对目录 """
-        pass
+        raise NotImplementedError()
 
-    def _getFileContent(self, pageNum: int):
+    def _getFileContent(self, pageNum: int) -> str:
         """ 文件的内容 """
-        pass
+        raise NotImplementedError()
 
     def _getPageFilePath(self, pageNum: int):
         """ 分页文件的路径 """
@@ -87,9 +75,7 @@ class MultiPagePostsInfo(object):
             return os.path.join(self._getFileDir(pageNum), self.slug + '.md')
         return os.path.join(self._getFileDir(pageNum), self.slug, 'page', f'{pageNum}.md')
 
-    def generateFiles(self, srcDir: str, files: Files, config: MkDocsConfig, *, sortPosts=False):
-        """ 在 `srcDir` 里生成文件 """
-
+    def generateFiles(self, files: Files, config: MkDocsConfig, *, sortPosts=False):
         # 按时间倒序排序
         if sortPosts:
             self.posts.sort(key=lambda p: p.publish, reverse=True)
@@ -106,34 +92,17 @@ class MultiPagePostsInfo(object):
 
             # 不存在则生成文件
             if not file:
-                file = File(
+                file = File.generated(
+                    config,
                     path,
-                    srcDir,
-                    config.site_dir,
-                    config.use_directory_urls
+                    content=self._getFileContent(pageNum),
+                    inclusion=InclusionLevel.NOT_IN_NAV
                 )
-                file.inclusion = InclusionLevel.NOT_IN_NAV
                 files.append(file)
-
-                # Hack: mark file as generated, so other plugins don't think it's part
-                # of the file system. This is more or less a new quasi-standard that
-                # still needs to be adopted by MkDocs, and was introduced by the
-                # git-revision-date-localized-plugin - see https://bit.ly/3ZUmdBx
-                file.generated_by = self.GENERATED_FILE_TAG
-
-                # Create file in temporary directory and temporarily remove
-                # from navigation, as we'll add it at a specific location
-                self._saveFile(file.abs_src_path, self._getFileContent(pageNum))
 
             self.files.append(file)
             file.parent_info__ = self
             file.posts_range__ = (lowInclusive, highExclusive)
-
-    # Create a file with the given content on disk
-    def _saveFile(self, path: str, content: str):
-        os.makedirs(os.path.dirname(path), exist_ok = True)
-        with open(path, "w", encoding = "utf-8") as f:
-            f.write(content)
 
 class RSSInfo(MultiPagePostsInfo):
     def __init__(self, feed, slug, config: RSSConfig) -> None:
@@ -193,10 +162,10 @@ class CategoryInfo(MultiPagePostsInfo):
             content += f'\n\n{self.description}'
         return content
 
-    def generateFiles(self, srcDir: str, files: Files, config: MkDocsConfig, *, sortPosts=False):
+    def generateFiles(self, files: Files, config: MkDocsConfig, *, sortPosts=False):
         self.posts.clear()
         self.posts.extend(itertools.chain(*map(lambda r: r.posts, self.rssList)))
-        return super().generateFiles(srcDir, files, config, sortPosts=sortPosts)
+        return super().generateFiles(files, config, sortPosts=sortPosts)
 
 class HomeInfo(MultiPagePostsInfo):
     def __init__(self) -> None:
@@ -216,7 +185,6 @@ class HomeInfo(MultiPagePostsInfo):
 # endregion
 
 
-temp_dir: str = None
 newsConfig: NewsConfig = None
 categoryList: list[CategoryInfo] = []
 homeInfo: HomeInfo = None
@@ -233,16 +201,6 @@ def build_only(func):
 def on_startup(command: str, dirty: bool):
     global isServeMode
     isServeMode = (command == 'serve')
-    _on_startup_impl(command, dirty)
-
-@build_only
-def _on_startup_impl(command: str, dirty: bool):
-    global temp_dir
-    temp_dir = mkdtemp()
-
-@build_only
-def on_shutdown():
-    rmtree(temp_dir)
 
 def loadNewsConfig(config: MkDocsConfig):
     configDir = os.path.dirname(config.config_file_path)
@@ -290,7 +248,7 @@ def on_files(files: Files, config: MkDocsConfig):
             for entry in data.entries:
                 post = PostInfo(entry, rssInfo, tags=rssConfig.posts_tags)
                 rssInfo.posts.append(post)
-            rssInfo.generateFiles(temp_dir, files, config, sortPosts=True)
+            rssInfo.generateFiles(files, config, sortPosts=True)
 
             # 添加 RSS 中的文章到首页
             if rssConfig.posts_show_in_home:
@@ -306,10 +264,10 @@ def on_files(files: Files, config: MkDocsConfig):
                 if newPostCount == 0 and len(rssInfo.posts) > 0:
                     homeInfo.posts.append(rssInfo.posts[0])
 
-        catInfo.generateFiles(temp_dir, files, config, sortPosts=True)
+        catInfo.generateFiles(files, config, sortPosts=True)
 
     categoryList.sort(key=lambda c: c.title)
-    homeInfo.generateFiles(temp_dir, files, config, sortPosts=True)
+    homeInfo.generateFiles(files, config, sortPosts=True)
 
 @build_only
 def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
