@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "ef063b4b60219d58",
+        "id": "76bad4108c2fdbb1",
         "type": "tabs",
         "children": [
           {
-            "id": "8a8a39004fe2d5c7",
+            "id": "61371a1786945159",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Unity/在 UI 上实现目标追踪.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -78,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Unity/在 UI 上实现目标追踪.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +89,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Unity/在 UI 上实现目标追踪.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -106,9 +99,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Unity/在 UI 上实现目标追踪.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -128,35 +119,36 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "8a8a39004fe2d5c7",
+  "active": "61371a1786945159",
   "lastOpenFiles": [
-    "Unity/复刻星穹铁道 2.0 梦境迷钟.md",
+    "Unity/将 GIF 直接导入为 AnimationClip.md",
+    "Unity/Unity 中使用 KCP 协议.md",
+    "Unity/平滑模型法线.md",
+    "Unity/实现 IJobParallelForAppend.md",
+    "Unity/IL Post-Process.md",
+    "Unity/Allocate RT 时记得指定 filterMode 和 wrapMode.md",
+    "Unity/在 UI 上实现目标追踪.md",
     "Unity/用 RenderDoc 持续截帧 Unity Editor Game View.md",
-    "Unity/get-component-in-parent-on-prefab-asset-returns-null.md",
-    "Unity/Shader/common-render-state-props-ui.md",
-    "Unity/优化/优化迭代和协程的 GC.md",
-    "Unity/技术分析/Full Generic Sharing 原理.md",
-    "编程语言/CSharp/GCHandle 与 IntPtr.md",
-    "编程语言/CSharp/GC.KeepAlive.md",
-    "编程语言/CSharp/Delegate Marshalling.md",
-    "编程语言/CSharp/CSharp 字符串 switch-case 原理.md",
-    "编程语言/CSharp/CSharp 弱引用.md",
-    "编程语言/CSharp/CSharp 代码规范.md",
-    "编程语言/CSharp/pattern-matching.md",
-    "编程语言/Python/基础/Python 中的各种转换.md",
-    "编程语言/Python/用 Python 直接执行一个模块.md",
-    "编程语言/Python/基础/Python 装饰器.md",
-    "编程语言/Python/基础/Python 在文件前面添加内容.md",
-    "编程语言/Python/基础/Python 守护线程.md",
-    "编程语言/Python/基础/Python 实例方法、类方法、静态方法.md",
-    "编程语言/Python/基础/Python 时间操作.md",
-    "编程语言/Python/基础/Python 对象拷贝.md",
-    "编程语言/Python/基础/Python 遍历文件夹.md",
-    "计算机基础/Epoch.md",
-    "计算机基础/Unix 时间.md",
-    "编程语言/C 和 C++/STL/priority_queue.md",
+    "Unity/让 SRP Batch 支持 Multipass Shader.md",
+    "Unity/解决 GetComponentInParent on PrefabAsset returns null.md",
+    "Unity/复刻星穹铁道 2.0 梦境迷钟.md",
+    "Unity/unity-play-vmd-on-humanoid-avatar.md",
+    "Unity/Shader/Material Property Drawer.md",
+    "Unity/Shader/Unity 常用 Render State 属性 UI.md",
+    "Unity/Shader/Unity Shader 平台差异.md",
+    "算法/树/二叉树遍历.md",
+    "算法/图论/关键路径.md",
+    "算法/排序/排序算法比较.md",
+    "算法/排序/插入/直接插入排序.md",
+    "算法/排序/插入/希尔排序.md",
+    "算法/排序/交换/快速排序.md",
+    "算法/排序/交换/冒泡排序.md",
+    "算法/排序/选择/堆排序.md",
+    "算法/树/完全二叉树.md",
+    "算法/树/并查集.md",
+    "算法/树/从遍历序列构建二叉树.md",
+    "attachments/morris-post-order.svg",
     "编程语言/Python/基础",
-    "编程语言/Python/Windows 下干净地卸载 Python.md",
     "编程语言/C 和 C++/STL",
     "未命名",
     "计算机基础/编码",
@@ -175,7 +167,6 @@
     "attachments/2023-07-26/0.png",
     "attachments/unity_hsr_dream_ticker_explain6.png",
     "attachments/unity_hsr_dream_ticker_explain5.png",
-    "attachments/unity_hsr_dream_ticker_explain4.png",
-    "attachments/unity_hsr_dream_ticker_explain3.png"
+    "attachments/unity_hsr_dream_ticker_explain4.png"
   ]
 }

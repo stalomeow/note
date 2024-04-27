@@ -1,14 +1,10 @@
 ---
-date: 2024-04-04T01:57:26
-draft: false
-authors:
-  - stalomeow
-categories:
-  - Unity
-  - Rendering
+slug: "240427202019"
+date: 2024-04-27
 ---
 
-# Allocate RT 时记得指定 `filterMode` 和 `wrapMode`
+# Allocate RT 时记得指定 filterMode 和 wrapMode
+
 
 最近在 URP 里遇到的坑：C# 里申请了一张 RT
 
@@ -23,8 +19,6 @@ float3 color = SAMPLE_TEXTURE2D_X(_BlitTexture, sampler_LinearClamp, uv).rgb;
 ```
 
 打包测试发现 OpenGL ES 上效果不对。
-
-
 
 ## 原因
 
@@ -44,33 +38,31 @@ float3 color = SAMPLE_TEXTURE2D_X(_BlitTexture, sampler_LinearClamp, uv).rgb;
 
 一查文档发现
 
-!!! quote "Using sampler states"
-
-    **Coupled textures and samplers**
-
-    Most of the time when sampling textures in shaders, the texture sampling state should come from [texture settings](https://docs.unity3d.com/Manual/class-TextureImporter.html) – essentially, textures and samplers are coupled together. This is default behavior when using DX9-style shader syntax:
-
-    ``` hlsl
-    sampler2D _MainTex;
-    // ...
-    half4 color = tex2D(_MainTex, uv);
-    ```
-
-    Using sampler2D, sampler3D, samplerCUBE HLSL keywords declares both texture and sampler.
-
-    Most of the time this is what you want, and is ==the only supported option on older graphics APIs (OpenGL ES)==. 
-
-    ...
-
-    **Separate textures and samplers**
-
-    ...
-
-    **Inline sampler states**
-
-    ...
-
-    ==Just like separate texture + sampler syntax, inline sampler states are not supported on some platforms. Currently they are implemented on Direct3D 11/12 and Metal.== [^1]
+> **Coupled textures and samplers**
+> 
+> Most of the time when sampling textures in shaders, the texture sampling state should come from [texture settings](https://docs.unity3d.com/Manual/class-TextureImporter.html) – essentially, textures and samplers are coupled together. This is default behavior when using DX9-style shader syntax:
+> 
+> ``` hlsl
+> sampler2D _MainTex;
+> // ...
+> half4 color = tex2D(_MainTex, uv);
+> ```
+> 
+> Using sampler2D, sampler3D, samplerCUBE HLSL keywords declares both texture and sampler.
+> 
+> Most of the time this is what you want, and is ==the only supported option on older graphics APIs (OpenGL ES)==. 
+> 
+> ...
+> 
+> **Separate textures and samplers**
+> 
+> ...
+> 
+> **Inline sampler states**
+> 
+> ...
+>
+> ==Just like separate texture + sampler syntax, inline sampler states are not supported on some platforms. Currently they are implemented on Direct3D 11/12 and Metal.== [^1]
 
 我试下来 Vulkan 似乎也没问题，至少最后的效果没问题。
 

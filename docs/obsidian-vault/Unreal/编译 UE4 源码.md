@@ -33,9 +33,9 @@ date: 2024-04-25
 
 把 Epic Games 账号和 GitHub 账号关联，然后会收到加入他们 GitHub 组织的邀请。加入组织后就能访问到 UE 的源码。
 
-推荐自己 Fork 一下，然后 Clone 到本地。这样方便修改源码。
+推荐自己 Fork 一下，然后 Clone 到本地。这样方便修改源码。Git 命令：
 
-``` bash title="Git 命令"
+``` bash
 git clone -b 4.27 https://github.com/stalomeow/UnrealEngine.git "文件夹名称"
 ```
 

@@ -165,7 +165,7 @@ Object.assign(Array.prototype, {
 
 不同于 jQuery，我规定 `$()` 只能用来选择元素并且**只选择一个**，如果元素不存在那么会返回 `null`。
 
-``` ts title="$()"
+``` ts
 const a = $('a');
 // 上一行等价于 document.querySelector<Element>('a');
 
@@ -175,7 +175,7 @@ const b = $<HTMLElement>('b', a);
 
 考虑到 `$()` 在元素不存在时会返回 `null`，但有时我就是希望这个元素存在，并且我也不想在后面对 `null` 的情况做处理，那么可以考虑使用 `$.assert()`。正如函数名所言，这个函数除了选择一个元素外还有断言功能。如果元素不存在，那么会直接抛出异常。
 
-``` ts title="$.assert()"
+``` ts
 const a = $.assert('a'); // 假装这个元素存在
 // a 为一个 <a> 元素
 
@@ -185,7 +185,7 @@ const b = $.assert<HTMLElement>('b', a); // 假装这个元素不存在
 
 剩下的 API 都比较简单，就不在这里解释了，代码实现里有注释。
 
-``` ts title="Implementation of $.ts"
+``` ts
 /**
  * 选择一个符合条件的元素
  * @param selectors 选择器

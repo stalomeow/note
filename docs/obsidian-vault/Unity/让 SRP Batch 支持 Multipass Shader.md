@@ -1,16 +1,12 @@
 ---
-date: 2023-07-09
-draft: false
-authors:
-  - stalomeow
-categories:
-  - Unity
+slug: "240427201955"
+date: 2024-04-27
 ---
 
 # 让 SRP Batch 支持 Multipass Shader
 
-强行让 SRP Batch 支持 Multipass Shader，但不一定适用于所有情况。
 
+强行让 SRP Batch 支持 Multipass Shader，但不一定适用于所有情况。
 
 
 ``` csharp

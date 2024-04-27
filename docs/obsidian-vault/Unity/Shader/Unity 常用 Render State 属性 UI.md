@@ -1,10 +1,13 @@
-# 常用 Render State 属性 UI
+---
+slug: "240427201535"
+date: 2024-04-27
+---
 
-!!! abstract
+# Unity 常用 Render State 属性 UI
 
-    有时候想把 `ZTest`、`Cull` 等属性暴露到面板中配置，避免重复写相似的 Shader。这里直接把常用的都整理出来。
+有时候想把 `ZTest`、`Cull` 等属性暴露到面板中配置，避免重复写相似的 Shader。这里直接把常用的都整理出来。
 
-    参考：[Shader面板上常用的一些内置枚举UI - 知乎](https://zhuanlan.zhihu.com/p/93194054)。
+参考：[Shader面板上常用的一些内置枚举UI - 知乎](https://zhuanlan.zhihu.com/p/93194054)。
 
 ## Properties
 

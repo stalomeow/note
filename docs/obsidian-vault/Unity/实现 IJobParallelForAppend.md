@@ -1,13 +1,10 @@
 ---
-date: 2024-03-16T22:36:06
-draft: false
-authors:
-  - stalomeow
-categories:
-  - Unity
+slug: "240427202528"
+date: 2024-04-27
 ---
 
-# 实现 `IJobParallelForAppend`
+# 实现 IJobParallelForAppend
+
 
 Unity 的 [Collections package](https://docs.unity3d.com/Packages/com.unity.collections@2.4/manual/index.html) 里有个 [`IJobParallelForFilter`](https://docs.unity3d.com/Packages/com.unity.collections@2.4/api/Unity.Jobs.IJobParallelForFilter.html)。我翻了相关的源码，发现虽然它名字带个 Parallel，但根本不是并行的。它的全部逻辑都是在一个线程里做的。后来，Unity 就把它名字里的 Parallel 去掉了，改成 [`IJobFilter`](https://docs.unity3d.com/Packages/com.unity.collections@2.4/api/Unity.Jobs.IJobFilter.html)。理由是
 
@@ -24,8 +21,6 @@ public interface IJobParallelForAppend<TValue> where TValue : unmanaged
 ```
 
 它可以并行 Append 任意的 unmanaged 数据，不再局限于 `index`。有点像 Compute Shader 那套东西。
-
-
 
 - `index` 是 for 循环当前的索引。
 - `buf` 是一个临时缓冲区。
@@ -238,7 +233,9 @@ public static class IJobParallelForAppendExtensions
 
 > When the Collections package is included in the project, Unity generates code to call EarlyJobInit at startup. This allows Burst compiled code to schedule jobs because the reflection part of initialization, which is not compatible with burst compiler constraints, has already happened in EarlyJobInit. [^2]
 
-``` csharp title="生成的代码" hl_lines="8"
+生成的代码：
+
+``` csharp
 [Unity.Jobs.DOTSCompilerGenerated]
 internal class __JobReflectionRegistrationOutput__2275960884
 {

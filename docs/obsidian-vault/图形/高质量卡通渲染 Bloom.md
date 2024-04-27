@@ -197,7 +197,9 @@ Shader 里用一个 for 循环采样周围像素。
 - 卷积核长度为偶数时，为了给中心的像素足够的权重，就都采样在两个像素之间了，`i - halfKernelSize` 为 $-1.5,-0.5,0.5,1.5$ 这样的值。
 - 卷积核长度为奇数时，`i - halfKernelSize` 为 $-1,0,1$ 这样的值。
 
-``` hlsl title="纵向模糊"
+纵向模糊：
+
+``` hlsl
 float texelSize = _BlitTexture_TexelSize.y;
 float halfKernelSize = (_BloomKernelSize - 1) * 0.5;
 float2 uv = UnityStereoTransformScreenSpaceTex(input.texcoord);

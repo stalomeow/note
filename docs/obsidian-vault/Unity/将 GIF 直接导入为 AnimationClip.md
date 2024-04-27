@@ -1,16 +1,12 @@
 ---
-date: 2023-11-19
-draft: false
-authors:
-  - stalomeow
-categories:
-  - Unity
+slug: "240427202749"
+date: 2024-04-27
 ---
 
 # 将 GIF 直接导入为 AnimationClip
 
-写一个 `ScriptedImporter`，让 Unity 把 GIF 动图直接导入为 `AnimationClip`。这个 `AnimationClip` 通过控制 `SpriteRenderer.m_Sprite` 来实现帧动画。
 
+写一个 `ScriptedImporter`，让 Unity 把 GIF 动图直接导入为 `AnimationClip`。这个 `AnimationClip` 通过控制 `SpriteRenderer.m_Sprite` 来实现帧动画。
 
 
 ## 导出 GIF 的关键帧图片
@@ -39,7 +35,9 @@ categories:
 
 因为 Unity 默认支持 `.gif` 扩展名（但图片不能动），所以需要在 Inspector 上手动切换到自己的 Importer，有点麻烦。为了方便，可以把扩展名改成 `.ugif`。
 
-``` cs title="GIFImporter.cs"
+### `GIFImporter.cs`
+
+``` cs
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -117,7 +115,9 @@ public class GIFImporter : ScriptedImporter
 }
 ```
 
-``` cs title="GIFImporterEditor.cs"
+### `GIFImporterEditor.cs`
+
+``` cs
 using UnityEditor;
 using UnityEditor.AssetImporters;
 

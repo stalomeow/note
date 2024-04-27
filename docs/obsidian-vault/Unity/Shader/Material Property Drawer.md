@@ -1,13 +1,16 @@
+---
+slug: "240427201614"
+date: 2024-04-27
+---
+
 # Material Property Drawer
 
-!!! abstract
+列举内置的 `MaterialPropertyDrawer` 和自定义实现的方法。
 
-    列举内置的 `MaterialPropertyDrawer` 和自定义实现的方法。
+参考：
 
-    参考：
-
-    - [Unity - Scripting API: MaterialPropertyDrawer](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyDrawer.html)
-    - [Shader笔记——自定义Material面板 - 简书](https://www.jianshu.com/p/a1f5ecb7706d)
+- [Unity - Scripting API: MaterialPropertyDrawer](https://docs.unity3d.com/2022.3/Documentation/ScriptReference/MaterialPropertyDrawer.html)
+- [Shader笔记——自定义Material面板 - 简书](https://www.jianshu.com/p/a1f5ecb7706d)
 
 ## 内置 Drawer & Decorator
 

@@ -29,7 +29,8 @@ def transform_slug(slug: str) -> str:
 
 @event_priority(100) # 放在最前面执行，不要处理其他插件生成的文件
 def on_files(files: Files, config: MkDocsConfig):
-    invalid_files = []
+    invalid_doc_count = 0
+    invalid_files: list[File] = []
     wiki_name_map.clear()
     wiki_path_map.clear()
 
@@ -40,6 +41,8 @@ def on_files(files: Files, config: MkDocsConfig):
 
         # 删掉黑名单里的文件
         if f.src_uri.startswith(tuple(posixpath.join(OBSIDIAN_VAULT_DIR, b, '') for b in OBSIDIAN_VAULT_BLACKLIST)):
+            if f.is_documentation_page():
+                invalid_doc_count += 1
             invalid_files.append(f)
             continue
 
@@ -61,10 +64,10 @@ def on_files(files: Files, config: MkDocsConfig):
         wiki_name_map[f.name] = f
         wiki_path_map[posixpath.splitext(f.src_uri)[0]] = f # key 无扩展名
 
-    log.info('Obsidian documents: %s.', str(list(wiki_name_map.keys())))
+    total_doc_count = len(wiki_name_map.keys()) + invalid_doc_count
+    log.info('Found %d obsidian documents (%d ignored).', total_doc_count, invalid_doc_count)
 
     for f in invalid_files:
-        log.info('Removing obsidian vault file: \'%s\'.', f.src_uri)
         files.remove(f)
     return files
 
