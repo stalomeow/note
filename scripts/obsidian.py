@@ -13,10 +13,9 @@ from mkdocs.utils import meta, get_relative_url
 from string import ascii_letters, digits
 
 OBSIDIAN_VAULT_DIR = 'obsidian-vault'
-OBSIDIAN_VAULT_BLACKLIST = ('.obsidian', 'templates')
 
-wiki_name_map: dict[str, File] = {}
-wiki_path_map: dict[str, File] = {}
+wiki_link_name_map: dict[str, File] = {}
+wiki_link_path_map: dict[str, File] = {}
 log = logging.getLogger('mkdocs.plugins')
 
 def transform_slug(slug: str) -> str:
@@ -27,44 +26,56 @@ def transform_slug(slug: str) -> str:
     # 重排一下并分组，让原本相似的数字看起来不太一样
     return '-'.join([slug[1::3], slug[2::3], slug[0::3]])
 
+def should_ignore_obsidian_file(f: File) -> bool:
+    top_folder = f.src_uri.split('/')[1] # [0] 是 obsidian vault
+
+    # 配置文件和模板文件
+    if top_folder in ('.obsidian', 'templates'):
+        return True
+
+    # Excalidraw 原始文件
+    if f.src_uri.endswith('.excalidraw.md'):
+        return True
+
+    return False
+
 @event_priority(100) # 放在最前面执行，不要处理其他插件生成的文件
 def on_files(files: Files, config: MkDocsConfig):
     invalid_doc_count = 0
+    valid_doc_count = 0
     invalid_files: list[File] = []
-    wiki_name_map.clear()
-    wiki_path_map.clear()
+    wiki_link_name_map.clear()
+    wiki_link_path_map.clear()
 
     for f in files:
         # 忽略 Obsidian Vault 之外的文件
         if not f.src_uri.startswith(posixpath.join(OBSIDIAN_VAULT_DIR, '')):
             continue
 
-        # 删掉黑名单里的文件
-        if f.src_uri.startswith(tuple(posixpath.join(OBSIDIAN_VAULT_DIR, b, '') for b in OBSIDIAN_VAULT_BLACKLIST)):
+        if should_ignore_obsidian_file(f):
             if f.is_documentation_page():
                 invalid_doc_count += 1
             invalid_files.append(f)
             continue
 
-        if not f.is_documentation_page():
-            continue
+        if f.is_documentation_page():
+            valid_doc_count += 1
+            _, frontmatter = meta.get_data(f.content_string)
 
-        _, frontmatter = meta.get_data(f.content_string)
-
-        # 有 slug 的话就用 slug 作为文件名
-        if "slug" in frontmatter:
-            slug = transform_slug(str(frontmatter["slug"]))
-            if not f.use_directory_urls:
-                f.dest_uri = posixpath.join(OBSIDIAN_VAULT_DIR, slug + '.html')
+            # 有 slug 的话就用 slug 作为文件名
+            if "slug" in frontmatter:
+                slug = transform_slug(str(frontmatter["slug"]))
+                if not f.use_directory_urls:
+                    f.dest_uri = posixpath.join(OBSIDIAN_VAULT_DIR, slug + '.html')
+                else:
+                    f.dest_uri = posixpath.join(OBSIDIAN_VAULT_DIR, slug, 'index.html')
             else:
-                f.dest_uri = posixpath.join(OBSIDIAN_VAULT_DIR, slug, 'index.html')
-        else:
-            log.warning('Obsidian document \'%s\' does not have a slug.', f.src_uri)
+                log.warning('Obsidian document \'%s\' does not have a slug.', f.src_uri)
 
-        wiki_name_map[f.name] = f
-        wiki_path_map[posixpath.splitext(f.src_uri)[0]] = f # key 无扩展名
+        wiki_link_name_map[posixpath.basename(f.src_uri)] = f
+        wiki_link_path_map[f.src_uri] = f
 
-    total_doc_count = len(wiki_name_map.keys()) + invalid_doc_count
+    total_doc_count = invalid_doc_count + valid_doc_count
     log.info('Found %d obsidian documents (%d ignored).', total_doc_count, invalid_doc_count)
 
     for f in invalid_files:
@@ -123,32 +134,34 @@ def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
 
 def transform_wiki_links(markdown: str, page: Page, config: MkDocsConfig) -> str:
     def repl(m: re.Match[str]):
-        # [[title#heading|alias]]
+        # [[name#heading|alias]]
         m2 = re.match(r'^(.+?)(#(.*?))?(\|(.*))?$', m.group(1), flags=re.U)
-        title = m2.group(1).strip()
+        name = m2.group(1).strip()
         heading = m2.group(3)
         alias = m2.group(5)
 
+        if posixpath.splitext(name)[1] == '':
+            name += '.md' # 默认后缀是 md
         if heading:
             heading = heading.strip()
         if alias:
             alias = alias.strip()
 
-        if title.count('/') == 0 and title.count('\\') == 0 and title in wiki_name_map:
-            # title 是一个文件名（无扩展名）
-            md_link = wiki_name_map[title].src_uri
+        if name.count('/') == 0 and name in wiki_link_name_map:
+            # name 是一个文件名
+            md_link = wiki_link_name_map[name].src_uri
         else:
-            # title 是一个文件路径（无扩展名），先展开为绝对路径
-            abs_path = posixpath.normpath(posixpath.join(posixpath.dirname(page.file.src_uri), title))
-            title = posixpath.splitext(posixpath.basename(abs_path))[0] # 改成文件名（无扩展名）
+            # name 是一个文件路径，先展开为绝对路径
+            abs_path = posixpath.normpath(posixpath.join(posixpath.dirname(page.file.src_uri), name))
 
-            if abs_path in wiki_path_map:
-                md_link = wiki_path_map[abs_path].src_uri
+            if abs_path in wiki_link_path_map:
+                md_link = wiki_link_path_map[abs_path].src_uri
             else:
                 md_link = abs_path
 
-        # 改成 .md 文件的相对路径，这样要是链接找不到了 MkDocs 会在控制台警告
+        # 改成文件的相对路径，这样要是链接找不到了 MkDocs 会在控制台警告
         md_link = get_relative_url(md_link, page.file.src_uri)
+        title = posixpath.splitext(posixpath.basename(name))[0] # 标题不要后缀名
 
         if heading:
             # 根据 toc 配置，生成 heading 的 id
