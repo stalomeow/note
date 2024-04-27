@@ -1,17 +1,14 @@
 ---
-date: 2024-02-10T13:45:00
-draft: false
-authors:
-  - stalomeow
-categories:
-  - Unity
+slug: "240427184047"
+date: 2024-04-27
 ---
 
 # 在 UI 上实现目标追踪
 
+
 实现目标任务追踪功能。在 UI 上的椭圆区域内，显示目标的方向和距离。
 
-![演示](../../../assets/images/track_indicator_demo.png)
+![演示](../attachments/track_indicator_demo.png)
 
 
 
@@ -39,7 +36,7 @@ private void GetEllipseParam(RectTransform panelRect, out float a, out float b)
 
 在编辑器中绘制辅助线，帮助我们直观地看到椭圆范围。
 
-![辅助线](../../../assets/images/track_indicator_gizmo.png)
+![辅助线](../attachments/track_indicator_gizmo.png)
 
 Unity 没有提供绘制椭圆的方法。只能在椭圆上多采一些离散的点，然后用 [`Gizmos.DrawLineStrip(points, true)`](https://docs.unity3d.com/ScriptReference/Gizmos.DrawLineStrip.html) 绘制，第二个参数为 `true` 表示绘制为首尾闭合的多边形。
 
@@ -87,10 +84,8 @@ $$
 \frac{ab}{\sqrt{a^2v^2+b^2u^2}} (u,v)
 $$
 
-!!! tips
-
-    - 使用这个公式时，没必要对 $(u,v)$ 归一化。
-    - 不能用屏幕坐标代替 `posVS.xy`！！！屏幕坐标在超出屏幕范围后容易跳变，显示出来效果不够丝滑。
+- 使用这个公式时，没必要对 $(u,v)$ 归一化。
+- 不能用屏幕坐标代替 `posVS.xy`！！！屏幕坐标在超出屏幕范围后容易跳变，显示出来效果不够丝滑。
 
 ``` csharp
 private Vector2 GetLocalPos(Transform target, RectTransform panelRect, Camera mainCamera, Camera uiCamera, out bool isOutsideView)
@@ -106,7 +101,7 @@ private Vector2 GetLocalPos(Transform target, RectTransform panelRect, Camera ma
     }
     else
     {
-        Vector3 posNDC/* (1)! */ = mainCamera.projectionMatrix.MultiplyPoint(posVS);
+        Vector3 posNDC = mainCamera.projectionMatrix.MultiplyPoint(posVS);
         Vector2 posScreen = new Vector2((posNDC.x + 1) * 0.5f * Screen.width, (posNDC.y + 1) * 0.5f * Screen.height);
         RectTransformUtility.ScreenPointToLocalPointInRectangle(panelRect, posScreen, uiCamera, out localPos);
         isOutsideView = (localPos.x * localPos.x) / (a * a) + (localPos.y * localPos.y) / (b * b) > 1;
@@ -122,6 +117,6 @@ private Vector2 GetLocalPos(Transform target, RectTransform panelRect, Camera ma
 }
 ```
 
-1. [`MultiplyPoint`](https://docs.unity3d.com/ScriptReference/Matrix4x4.MultiplyPoint.html) 相比 [`MultiplyPoint3x4`](https://docs.unity3d.com/ScriptReference/Matrix4x4.MultiplyPoint3x4.html) 多了透视除法，所以乘出来直接是 NDC 坐标。具体可以看 `MultiplyPoint` 的源码。
+[`MultiplyPoint`](https://docs.unity3d.com/ScriptReference/Matrix4x4.MultiplyPoint.html) 相比 [`MultiplyPoint3x4`](https://docs.unity3d.com/ScriptReference/Matrix4x4.MultiplyPoint3x4.html) 多了透视除法，所以乘出来直接是 NDC 坐标。具体可以看 `MultiplyPoint` 的源码。
 
 把结果赋值给 Panel 里一个图标的 `localPosition` 即可。箭头方向、距离之类的功能比较简单，不写了。

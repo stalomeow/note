@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "5674a83767b18870",
+        "id": "ef063b4b60219d58",
         "type": "tabs",
         "children": [
           {
-            "id": "7d024f4aed80d198",
+            "id": "8a8a39004fe2d5c7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "编程语言/CSharp/gc-keep-alive.md",
-                "mode": "source",
+                "file": "Unity/在 UI 上实现目标追踪.md",
+                "mode": "preview",
                 "backlinks": true,
                 "source": false
               }
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "编程语言/CSharp/gc-keep-alive.md",
+                "file": "Unity/在 UI 上实现目标追踪.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "编程语言/CSharp/gc-keep-alive.md",
+                "file": "Unity/在 UI 上实现目标追踪.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -107,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "编程语言/CSharp/gc-keep-alive.md"
+                "file": "Unity/在 UI 上实现目标追踪.md"
               }
             }
           }
@@ -128,35 +128,37 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "7d024f4aed80d198",
+  "active": "8a8a39004fe2d5c7",
   "lastOpenFiles": [
-    "编程语言/CSharp/pattern-matching.md",
-    "编程语言/CSharp/weak-references.md",
-    "编程语言/C 和 C++/C++ STL.md",
-    "编程语言/CSharp/coding-convention.md",
-    "未命名",
-    "算法/字符串/KMP 算法.md",
-    "算法/字符串/字符串的前后缀.md",
-    "算法/字符串/KMP算法.md",
-    "命令行/Aria2.md",
-    "命令行/Vim.md",
-    "杂项/百度网盘直链下载.md",
     "Unity/复刻星穹铁道 2.0 梦境迷钟.md",
+    "Unity/用 RenderDoc 持续截帧 Unity Editor Game View.md",
+    "Unity/get-component-in-parent-on-prefab-asset-returns-null.md",
+    "Unity/Shader/common-render-state-props-ui.md",
+    "Unity/优化/优化迭代和协程的 GC.md",
     "Unity/技术分析/Full Generic Sharing 原理.md",
-    "算法/图论/最小生成树.md",
-    "算法/图论/关键路径.md",
-    "算法/图论/连通分量个数.md",
-    "算法/图论/拓扑排序.md",
-    "算法/图论/判断图中是否有环.md",
-    "算法/算法学习资料.md",
-    "算法/单调栈.md",
-    "算法/两个整数的平均值.md",
-    "算法/misc.md",
-    "算法/递归三要素.md",
-    "算法/搜索/回溯法.md",
-    "算法/树/construct-binary-tree-from-traversal.md",
-    "算法/树/disjoint-set.md",
-    "算法/树/huffman-tree.md",
+    "编程语言/CSharp/GCHandle 与 IntPtr.md",
+    "编程语言/CSharp/GC.KeepAlive.md",
+    "编程语言/CSharp/Delegate Marshalling.md",
+    "编程语言/CSharp/CSharp 字符串 switch-case 原理.md",
+    "编程语言/CSharp/CSharp 弱引用.md",
+    "编程语言/CSharp/CSharp 代码规范.md",
+    "编程语言/CSharp/pattern-matching.md",
+    "编程语言/Python/基础/Python 中的各种转换.md",
+    "编程语言/Python/用 Python 直接执行一个模块.md",
+    "编程语言/Python/基础/Python 装饰器.md",
+    "编程语言/Python/基础/Python 在文件前面添加内容.md",
+    "编程语言/Python/基础/Python 守护线程.md",
+    "编程语言/Python/基础/Python 实例方法、类方法、静态方法.md",
+    "编程语言/Python/基础/Python 时间操作.md",
+    "编程语言/Python/基础/Python 对象拷贝.md",
+    "编程语言/Python/基础/Python 遍历文件夹.md",
+    "计算机基础/Epoch.md",
+    "计算机基础/Unix 时间.md",
+    "编程语言/C 和 C++/STL/priority_queue.md",
+    "编程语言/Python/基础",
+    "编程语言/Python/Windows 下干净地卸载 Python.md",
+    "编程语言/C 和 C++/STL",
+    "未命名",
     "计算机基础/编码",
     "attachments/files/DirectionStar.ms14",
     "attachments/files",
@@ -164,8 +166,6 @@
     "分布式",
     "Windows",
     "求职",
-    "数学/概率论与数理统计/连续分布",
-    "数学/概率论与数理统计/离散分布",
     "attachments/pascal-triangle.png",
     "未命名.canvas",
     "attachments/analysis-of-signals-and-linear-systems/step-function.png",

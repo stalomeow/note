@@ -1,37 +1,27 @@
 ---
-date: 2023-10-16
-draft: false
-authors:
-  - stalomeow
-categories:
-  - Python
+slug: "240427165117"
+date: 2024-04-27
 ---
 
-# Python 生成 requirements.txt
+# Python 生成 requirements 的方法
 
-记录下 Python 生成 requirements.txt 的几种方法。
+## `pip freeze`
 
-
-
-## pip freeze
-
-最简单的方法，会把当前环境里**所有的包**都列出来，需要配合虚拟环境使用。
+最简单的方法，会把当前环境里**所有的包**都列出来，需要配合 [[Python 虚拟环境|虚拟环境]] 使用。
 
 ``` bash
 pip freeze > requirements.txt
 ```
 
-这个方法会把非直接依赖的包（二级依赖、三级依赖、...）也列出来。
+==这个方法会把非直接依赖的包（二级依赖、三级依赖、...）也列出来。==
 
-## pipreqs
+## `pipreqs`
 
-通过检查代码中的 `#!python import` 语句来生成 requirements.txt，只列出项目的直接依赖。即使没有真的安装依赖包，它也能列出来。
+通过检查代码中的 `import` 语句来生成 requirements.txt，只列出项目的直接依赖。即使没有真的安装依赖包，它也能列出来。
 
 - [GitHub 仓库](https://github.com/bndr/pipreqs)
 
-!!! warning "在生成完以后最好检查一下"
-
-    如果用 `importlib` 或者其他阴间方法导入包，它认不出来，就不会把包列进依赖里。
+==在生成完以后最好检查一下。== 如果用 `importlib` 或者其他阴间方法导入包，它认不出来，就不会把包列进依赖里。
 
 ### 安装
 
@@ -71,7 +61,7 @@ Options:
                           <no-pin> | e.g. Flask
 ```
 
-### 样例
+### 例子
 
 ``` bash
 pipreqs ./proj --encoding=utf8 --force
@@ -81,3 +71,4 @@ pipreqs ./proj --encoding=utf8 --force
 - 加上 `--force` 参数，覆盖之前的 requirements.txt。
 
 执行完，就会生成 `./proj/requirements.txt`。
+

@@ -1,12 +1,15 @@
-# 代码规范
+---
+slug: "240427180748"
+date: 2024-04-27
+---
 
-!!! abstract
+# CSharp 代码规范
 
-    自己用的 C# 编码规范。参考：
+参考：
 
-    - [C# identifier names - rules and conventions - C# | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names)
-    - [C# Coding Style](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/coding-style.md)
-    - [The .editorconfig of dotnet/runtime](https://github.com/dotnet/runtime/blob/main/.editorconfig)
+- [C# identifier names - rules and conventions - C# | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names)
+- [C# Coding Style](https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/coding-style.md)
+- [The .editorconfig of dotnet/runtime](https://github.com/dotnet/runtime/blob/main/.editorconfig)
 
 ## 命名规范
 

@@ -1,18 +1,18 @@
+---
+slug: "240427180510"
+date: 2024-04-27
+---
+
 # Delegate Marshalling
 
-!!! abstract
 
-    向非托管代码封送委托的原理。
+向非托管代码封送委托的原理。下面这些也类似：
 
-    下面这些也类似：
+- 使用 xLua 在 C# 中创建一个 Lua 函数的委托。
+- 使用 HybridCLR 在 AOT 代码中创建一个热更方法的委托。
+- ...
 
-    - 使用 xLua 在 C# 中创建一个 Lua 函数的委托。
-    - 使用 HybridCLR 在 AOT 代码中创建一个热更方法的委托。
-    - ...
-
-    反过来封送的原理也都类似。
-
-TODO
+反过来封送的原理也都类似。
 
 ## Unmanaged Callers Only
 
