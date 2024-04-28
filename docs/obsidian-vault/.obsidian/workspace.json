@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "d46b76224d9f63ef",
+        "id": "dc2a1457cd4ed969",
         "type": "tabs",
         "children": [
           {
-            "id": "f25bf87bcc196c66",
+            "id": "e76d2bd87b5a32ac",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Windows/PowerShell.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -73,6 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Windows/PowerShell.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Windows/PowerShell.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -99,7 +106,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Windows/PowerShell.md"
+              }
             }
           }
         ],
@@ -107,7 +116,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 271.5
+    "width": 269.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -119,13 +128,29 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "f25bf87bcc196c66",
+  "active": "e76d2bd87b5a32ac",
   "lastOpenFiles": [
+    "Windows/小狼毫输入法.md",
+    "Windows/Windows 下使用 Makefile.md",
+    "Windows/Windows 快捷键.md",
+    "Windows/Windows PowerToys.md",
+    "Windows/Windows 包管理器.md",
+    "Windows/Windows 开发环境.md",
+    "Windows/Windows Sudo.md",
+    "Windows/PowerShell.md",
+    "attachments/oh-my-posh-theme.png",
+    "attachments/Snipaste_2024-04-28_23-12-55.png",
+    "attachments/Snipaste_2024-04-28_23-07-08.png",
+    "图形/仿星穹铁道渲染资料.md",
+    "attachments/unity_hsr_dream_ticker_explain6.png",
+    "attachments/unity_hsr_dream_ticker_explain5.png",
+    "attachments/unity_hsr_dream_ticker_explain3.png",
+    "attachments/unity_hsr_dream_ticker_explain.png",
+    "attachments/per-object-shadow-map-atlas.png",
+    "attachments/per-object-shadow-map.png",
+    "attachments/pascal-triangle.png",
     "attachments/excalidraw/convolution-of-two-door-func.excalidraw.md",
-    "Untitled Diagram.svg",
-    "attachments/excalidraw/convolution-of-two-door-func.excalidraw.svg",
     "数学/信号与系统/卷积积分.md",
-    "attachments/excalidraw/Drawing 2024-04-27 23.03.51.excalidraw.svg",
     "Excalidraw/Drawing 2024-04-27 23.02.58.excalidraw.md",
     "attachments/excalidraw",
     "Excalidraw/Drawing 2024-04-27 23.02.32.excalidraw.md",
@@ -149,23 +174,8 @@
     "Unity/URP",
     "Unity/踩坑",
     "Unity/编辑器/IL Post-Process.md",
-    "Unity/踩坑/Allocate RT 时记得指定 filterMode 和 wrapMode.md",
-    "Unity/unity-play-vmd-on-humanoid-avatar.md",
-    "Unity/Shader/Material Property Drawer.md",
-    "Unity/Shader/Unity Shader 平台差异.md",
-    "算法/树/二叉树遍历.md",
-    "算法/图论/关键路径.md",
-    "算法/排序/排序算法比较.md",
-    "算法/排序/插入/直接插入排序.md",
-    "attachments/morris-post-order.svg",
     "编程语言/Python/基础",
     "编程语言/C 和 C++/STL",
-    "未命名",
-    "attachments/pascal-triangle.png",
-    "attachments/analysis-of-signals-and-linear-systems/step-function.png",
-    "attachments/analysis-of-signals-and-linear-systems/dirac-delta-function.png",
-    "attachments/2023-07-26/2.png",
-    "attachments/2023-07-26/1.png",
-    "attachments/2023-07-26/0.png"
+    "未命名"
   ]
 }

@@ -5,9 +5,13 @@ date: 2024-04-25
 
 # Windows 开发环境
 
+改善 Windows 开发体验。参考微软的官方文档：[Setup a development environment on Windows | Microsoft Learn](https://learn.microsoft.com/en-us/windows/dev-environment/)。
+
 - [[Windows 包管理器]]
-- [[自定义 PowerShell]]
+- [[PowerShell]]
+- [[Windows Sudo]]
 - [[Windows 下使用 Makefile]]
+- [[小狼毫输入法]]
 - [[Windows PowerToys]]
 - [[Windows 快捷键]]
 
