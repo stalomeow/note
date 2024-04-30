@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "dc2a1457cd4ed969",
+        "id": "f06d34cd3101f53b",
         "type": "tabs",
         "children": [
           {
-            "id": "e76d2bd87b5a32ac",
+            "id": "6395061bd0000b21",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows/PowerShell.md",
-                "mode": "preview",
+                "file": "Windows/Windows 上用 CapsLock 切换中英文.md",
+                "mode": "source",
                 "backlinks": true,
                 "source": false
               }
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Windows/PowerShell.md",
+                "file": "Windows/Windows 上用 CapsLock 切换中英文.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Windows/PowerShell.md",
+                "file": "Windows/Windows 上用 CapsLock 切换中英文.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -107,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Windows/PowerShell.md"
+                "file": "Windows/Windows 上用 CapsLock 切换中英文.md"
               }
             }
           }
@@ -120,24 +120,43 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "hide-folders:Hide hidden folders again": false,
+      "hide-folders:Show hidden folders": false,
       "command-palette:打开命令面板": false,
       "switcher:打开快速切换": false,
       "templates:插入模板": false,
       "graph:查看关系图谱": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "random-note:开始漫游笔记": false
     }
   },
-  "active": "e76d2bd87b5a32ac",
+  "active": "6395061bd0000b21",
   "lastOpenFiles": [
+    "Windows/Windows 上用 CapsLock 切换中英文.md",
+    "Windows/Windows 开发环境.md",
     "Windows/小狼毫输入法.md",
     "Windows/Windows 下使用 Makefile.md",
-    "Windows/Windows 快捷键.md",
-    "Windows/Windows PowerToys.md",
-    "Windows/Windows 包管理器.md",
-    "Windows/Windows 开发环境.md",
-    "Windows/Windows Sudo.md",
+    "网站资源.md",
+    "Windows/开发/Windows 全局钩子.md",
+    "Web 前端/Nuxt 3 开发避坑.md",
+    "Windows/开发/查看 Windows 错误码对应的描述.md",
     "Windows/PowerShell.md",
+    "Windows/Windows 包管理器.md",
+    "Windows/Windows 快捷键.md",
+    "Windows/开发",
+    "Windows/Windows PowerToys.md",
+    "Windows/Windows Sudo.md",
+    "算法/排序/交换/快速排序.md",
+    "数学/概率论与数理统计/数字特征/方差.md",
+    "Unity/Shader/Material Property Drawer.md",
+    "算法/算法学习资料.md",
+    "数学/信号与系统/冲激响应.md",
+    "Unity/复刻星穹铁道 2.0 梦境迷钟.md",
+    "编程语言/Python/基础/Python 时间操作.md",
+    "编程语言/Python/基础/Python 中的各种转换.md",
+    "编程语言/Python/基础/Python 在文件前面添加内容.md",
+    "编程语言/Python/基础/Python 守护线程.md",
+    "编程语言/Python/基础/Python 遍历文件夹.md",
+    "杂项/百度网盘直链下载.md",
     "attachments/oh-my-posh-theme.png",
     "attachments/Snipaste_2024-04-28_23-12-55.png",
     "attachments/Snipaste_2024-04-28_23-07-08.png",
@@ -149,33 +168,15 @@
     "attachments/per-object-shadow-map-atlas.png",
     "attachments/per-object-shadow-map.png",
     "attachments/pascal-triangle.png",
-    "attachments/excalidraw/convolution-of-two-door-func.excalidraw.md",
-    "数学/信号与系统/卷积积分.md",
-    "Excalidraw/Drawing 2024-04-27 23.02.58.excalidraw.md",
     "attachments/excalidraw",
-    "Excalidraw/Drawing 2024-04-27 23.02.32.excalidraw.md",
     "Excalidraw",
     "未命名.canvas",
-    "Unity/踩坑/后处理 Shader 的 Render State 设置.md",
-    "Unity/踩坑/解决 GetComponentInParent on PrefabAsset returns null.md",
-    "Unity/实现 IJobParallelForAppend.md",
-    "Unity/在 UI 上实现目标追踪.md",
-    "Unity/Unity 中使用 KCP 协议.md",
-    "Unity/复刻星穹铁道 2.0 梦境迷钟.md",
-    "Unity/URP/让 SRP Batch 支持 Multipass Shader.md",
     "Unity/踩坑",
-    "Unity/Shader/Unity 常用 Render State 属性 UI.md",
-    "Unity/Shader/未命名.md",
-    "Unity/编辑器/平滑模型法线.md",
     "Unity/URP/踩坑",
-    "Unity/编辑器/用 RenderDoc 持续截帧 Unity Editor Game View.md",
-    "Unity/编辑器/将 GIF 直接导入为 AnimationClip.md",
     "Unity/编辑器",
     "Unity/URP",
     "Unity/踩坑",
-    "Unity/编辑器/IL Post-Process.md",
     "编程语言/Python/基础",
-    "编程语言/C 和 C++/STL",
-    "未命名"
+    "编程语言/C 和 C++/STL"
   ]
 }

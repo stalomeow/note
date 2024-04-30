@@ -13,5 +13,6 @@
   ],
   "newLinkFormat": "shortest",
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "attachments"
+  "attachmentFolderPath": "attachments",
+  "rightToLeft": false
 }

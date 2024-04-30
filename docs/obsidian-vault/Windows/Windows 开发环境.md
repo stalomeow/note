@@ -14,4 +14,5 @@ date: 2024-04-25
 - [[小狼毫输入法]]
 - [[Windows PowerToys]]
 - [[Windows 快捷键]]
+- [[Windows 上用 CapsLock 切换中英文]]
 
