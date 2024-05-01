@@ -11,16 +11,16 @@ date: 2024-05-01
 
 ## 按键映射
 
-使用 [[Windows PowerToys]] 的键盘管理器重映射 CapsLock 到 Win+Space。
+使用 [[Windows PowerToys]] 的键盘管理器映射 CapsLock 到 Win+Space。
 
 
 ## 同步指示灯
 
 按键都重映射了，指示灯放着不用也怪可惜的。我笔记本键盘上 CapsLock 指示灯就在这个按键右上角，改成中英文指示灯刚好。灯亮时就是中文模式，灯暗时就是英文模式。
 
-代码开源在 GitHub 上：[stalomeow/CapsLockLed-IME](https://github.com/stalomeow/CapsLockLed-IME)。依靠 [[Windows 全局钩子]] 实现。特地用纯 C 写的，几乎没有什么开销。
+代码开源在 GitHub 上：[stalomeow/CapsLockLed-IME](https://github.com/stalomeow/CapsLockLed-IME)。特地用纯 C 写的，几乎没有什么开销。大体思路：依靠 [[Windows 全局钩子]] 监听键盘布局变化（`HSHELL_LANGUAGE`）事件，然后根据当前布局设置指示灯状态。
 
-### 获取当前键盘布局
+### 检查是否为中文键盘布局
 
 ``` c
 BOOL IsChineseKeyboardLayout()
@@ -39,3 +39,9 @@ BOOL IsChineseKeyboardLayout()
     return FALSE;
 }
 ```
+
+KeyboardLayoutName 就是 [Keyboard identifier](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/windows-language-pack-default-values?view=windows-11#keyboard-identifiers)，简体中文对应的是 `"00000804"`。
+
+### 设置指示灯
+
+具体的思路参考 [windows - Is it possible to control capslock light without actual capslocking? - Stack Overflow](https://stackoverflow.com/questions/72679665/is-it-possible-to-control-capslock-light-without-actual-capslocking)。
