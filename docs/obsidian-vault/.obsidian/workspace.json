@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "1a47bc89515684cb",
+        "id": "352de4de3952a08f",
         "type": "tabs",
         "children": [
           {
-            "id": "a0c5ad859c211775",
+            "id": "ec5e850e7ebea198",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "命令行/GNU Make.md",
-                "mode": "preview",
+                "file": "Windows/开发效率/Windows 下使用 Makefile.md",
+                "mode": "source",
                 "backlinks": true,
                 "source": false
               }
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "命令行/GNU Make.md",
+                "file": "Windows/开发效率/Windows 下使用 Makefile.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "命令行/GNU Make.md",
+                "file": "Windows/开发效率/Windows 下使用 Makefile.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -107,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "命令行/GNU Make.md"
+                "file": "Windows/开发效率/Windows 下使用 Makefile.md"
               }
             }
           }
@@ -129,7 +129,7 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "a0c5ad859c211775",
+  "active": "ec5e850e7ebea198",
   "lastOpenFiles": [
     "Windows/开发效率/Windows 下使用 Makefile.md",
     "命令行/GNU Make.md",
