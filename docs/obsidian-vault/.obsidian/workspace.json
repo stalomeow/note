@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "6f07758664d027bb",
+        "id": "a32582e73fb4a871",
         "type": "tabs",
         "children": [
           {
-            "id": "4c44c7d0edbd6772",
+            "id": "34714c341a4b4af6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows/开发/Windows 全局钩子.md",
+                "file": "Windows/Windows 全局钩子.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": false
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Windows/开发/Windows 全局钩子.md",
+                "file": "Windows/Windows 全局钩子.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Windows/开发/Windows 全局钩子.md",
+                "file": "Windows/Windows 全局钩子.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -107,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Windows/开发/Windows 全局钩子.md"
+                "file": "Windows/Windows 全局钩子.md"
               }
             }
           }
@@ -129,23 +129,28 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "4c44c7d0edbd6772",
+  "active": "34714c341a4b4af6",
   "lastOpenFiles": [
-    "Windows/开发/DLL 进程间共享数据.md",
-    "Windows/开发/Windows 程序防多开.md",
-    "Windows/开发/Windows 全局钩子.md",
-    "Windows/开发/查看 Win32 错误码对应的描述.md",
-    "Windows/小狼毫输入法.md",
-    "Windows/PowerShell.md",
-    "Windows/Windows 包管理器.md",
-    "Windows/Windows 开发环境.md",
-    "Windows/Windows 快捷键.md",
-    "Windows/Windows 上用 CapsLock 切换中英文.md",
-    "Windows/Windows 下使用 Makefile.md",
-    "Windows/Windows PowerToys.md",
-    "Windows/Windows Sudo.md",
-    "网站资源.md",
+    "Windows/开发效率/Windows 上用 CapsLock 切换中英文.md",
+    "Windows/Windows 全局钩子.md",
+    "Windows/Windows 程序防多开.md",
+    "Windows/DLL 进程间共享数据.md",
+    "Windows/查看 Win32 错误码对应的描述.md",
+    "Windows/开发效率/Windows 开发环境.md",
+    "Windows/开发效率/小狼毫输入法.md",
+    "Windows/开发效率/PowerShell.md",
+    "Windows/开发效率/Windows 包管理器.md",
+    "Windows/开发效率/Windows 快捷键.md",
+    "Windows/开发效率/Windows 下使用 Makefile.md",
+    "Windows/开发效率/Windows PowerToys.md",
+    "Windows/开发效率/Windows Sudo.md",
+    "Windows/开发效率",
+    "Web 前端/将内存中数据下载为文件.md",
+    "求职/面试.md",
+    "求职/简历.md",
     "Web 前端/Nuxt 3 开发避坑.md",
+    "Web 前端/网页中嵌入 b 站视频.md",
+    "网站资源.md",
     "Windows/开发",
     "算法/排序/交换/快速排序.md",
     "数学/概率论与数理统计/数字特征/方差.md",
@@ -153,11 +158,6 @@
     "算法/算法学习资料.md",
     "数学/信号与系统/冲激响应.md",
     "Unity/复刻星穹铁道 2.0 梦境迷钟.md",
-    "编程语言/Python/基础/Python 时间操作.md",
-    "编程语言/Python/基础/Python 中的各种转换.md",
-    "编程语言/Python/基础/Python 在文件前面添加内容.md",
-    "编程语言/Python/基础/Python 守护线程.md",
-    "编程语言/Python/基础/Python 遍历文件夹.md",
     "attachments/oh-my-posh-theme.png",
     "attachments/Snipaste_2024-04-28_23-12-55.png",
     "attachments/Snipaste_2024-04-28_23-07-08.png",
@@ -176,7 +176,6 @@
     "Unity/编辑器",
     "Unity/URP",
     "Unity/踩坑",
-    "编程语言/Python/基础",
-    "编程语言/C 和 C++/STL"
+    "编程语言/Python/基础"
   ]
 }
