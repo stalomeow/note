@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "07a58d6a51a2519b",
+        "id": "6f07758664d027bb",
         "type": "tabs",
         "children": [
           {
-            "id": "748ea7f3022ddea2",
+            "id": "4c44c7d0edbd6772",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows/Windows Sudo.md",
-                "mode": "source",
+                "file": "Windows/开发/Windows 全局钩子.md",
+                "mode": "preview",
                 "backlinks": true,
                 "source": false
               }
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Windows/Windows Sudo.md",
+                "file": "Windows/开发/Windows 全局钩子.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Windows/Windows Sudo.md",
+                "file": "Windows/开发/Windows 全局钩子.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -107,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Windows/Windows Sudo.md"
+                "file": "Windows/开发/Windows 全局钩子.md"
               }
             }
           }
@@ -129,19 +129,21 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "748ea7f3022ddea2",
+  "active": "4c44c7d0edbd6772",
   "lastOpenFiles": [
-    "Windows/开发/查看 Windows 错误码对应的描述.md",
-    "Windows/Windows 包管理器.md",
-    "Windows/Windows PowerToys.md",
-    "Windows/Windows 下使用 Makefile.md",
+    "Windows/开发/DLL 进程间共享数据.md",
+    "Windows/开发/Windows 程序防多开.md",
     "Windows/开发/Windows 全局钩子.md",
-    "Windows/Windows 上用 CapsLock 切换中英文.md",
-    "Windows/Windows 开发环境.md",
-    "Windows/Windows Sudo.md",
-    "Windows/Windows 快捷键.md",
+    "Windows/开发/查看 Win32 错误码对应的描述.md",
     "Windows/小狼毫输入法.md",
     "Windows/PowerShell.md",
+    "Windows/Windows 包管理器.md",
+    "Windows/Windows 开发环境.md",
+    "Windows/Windows 快捷键.md",
+    "Windows/Windows 上用 CapsLock 切换中英文.md",
+    "Windows/Windows 下使用 Makefile.md",
+    "Windows/Windows PowerToys.md",
+    "Windows/Windows Sudo.md",
     "网站资源.md",
     "Web 前端/Nuxt 3 开发避坑.md",
     "Windows/开发",
@@ -156,11 +158,9 @@
     "编程语言/Python/基础/Python 在文件前面添加内容.md",
     "编程语言/Python/基础/Python 守护线程.md",
     "编程语言/Python/基础/Python 遍历文件夹.md",
-    "杂项/百度网盘直链下载.md",
     "attachments/oh-my-posh-theme.png",
     "attachments/Snipaste_2024-04-28_23-12-55.png",
     "attachments/Snipaste_2024-04-28_23-07-08.png",
-    "图形/仿星穹铁道渲染资料.md",
     "attachments/unity_hsr_dream_ticker_explain6.png",
     "attachments/unity_hsr_dream_ticker_explain5.png",
     "attachments/unity_hsr_dream_ticker_explain3.png",

@@ -3,7 +3,7 @@ slug: "240501010426"
 date: 2024-05-01
 ---
 
-# 查看 Windows 错误码对应的描述
+# 查看 Win32 错误码对应的描述
 
 Win32 的错误码，即 [GetLastError()](https://learn.microsoft.com/en-us/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) 的返回值。在代码里可以用 [FormatMessage](https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-formatmessage) 函数获取对应的描述，但有些 app 在打日志的时候只打印了错误码，所以需要一种更方便的方式来获取描述。
 

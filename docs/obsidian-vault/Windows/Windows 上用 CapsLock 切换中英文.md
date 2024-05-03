@@ -44,4 +44,7 @@ KeyboardLayoutName 就是 [Keyboard identifier](https://learn.microsoft.com/en-u
 
 ### 设置指示灯
 
+需要引入头文件  [ntddkbd.h](https://learn.microsoft.com/en-us/windows/win32/api/ntddkbd/)。
+
 具体的思路参考 [windows - Is it possible to control capslock light without actual capslocking? - Stack Overflow](https://stackoverflow.com/questions/72679665/is-it-possible-to-control-capslock-light-without-actual-capslocking)。
+
