@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "352de4de3952a08f",
+        "id": "1ab267ea9627c7ca",
         "type": "tabs",
         "children": [
           {
-            "id": "ec5e850e7ebea198",
+            "id": "a2eee6a319546cff",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows/开发效率/Windows 下使用 Makefile.md",
-                "mode": "source",
+                "file": "命令行/Scoop.md",
+                "mode": "preview",
                 "backlinks": true,
                 "source": false
               }
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Windows/开发效率/Windows 下使用 Makefile.md",
+                "file": "命令行/Scoop.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Windows/开发效率/Windows 下使用 Makefile.md",
+                "file": "命令行/Scoop.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -107,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Windows/开发效率/Windows 下使用 Makefile.md"
+                "file": "命令行/Scoop.md"
               }
             }
           }
@@ -129,17 +129,22 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "ec5e850e7ebea198",
+  "active": "a2eee6a319546cff",
   "lastOpenFiles": [
-    "Windows/开发效率/Windows 下使用 Makefile.md",
+    "命令行/Scoop.md",
+    "Windows/开发效率/Windows 开发环境.md",
+    "杂项/Clash 的 Tun 模式.md",
+    "命令行/PowerShell.md",
     "命令行/GNU Make.md",
-    "Windows/开发效率/Windows 包管理器.md",
-    "Windows/开发效率/Windows PowerToys.md",
+    "命令行/Git LFS.md",
+    "命令行/Git.md",
+    "命令行/FFmpeg.md",
+    "命令行/Aria2.md",
     "Windows/开发效率/Windows Sudo.md",
     "Windows/开发效率/Windows 上用 CapsLock 切换中英文.md",
     "Windows/开发效率/Windows 快捷键.md",
-    "Windows/开发效率/Windows 开发环境.md",
-    "Windows/开发效率/PowerShell.md",
+    "Windows/开发效率/Windows 下使用 Makefile.md",
+    "Windows/开发效率/Windows PowerToys.md",
     "Windows/开发效率/小狼毫输入法.md",
     "attachments/Pasted image 20240504004716.png",
     "网站资源.md",
@@ -155,11 +160,6 @@
     "Web 前端/网页中嵌入 b 站视频.md",
     "Windows/开发",
     "算法/排序/交换/快速排序.md",
-    "数学/概率论与数理统计/数字特征/方差.md",
-    "Unity/Shader/Material Property Drawer.md",
-    "算法/算法学习资料.md",
-    "数学/信号与系统/冲激响应.md",
-    "Unity/复刻星穹铁道 2.0 梦境迷钟.md",
     "attachments/oh-my-posh-theme.png",
     "attachments/Snipaste_2024-04-28_23-12-55.png",
     "attachments/Snipaste_2024-04-28_23-07-08.png",

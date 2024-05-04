@@ -11,7 +11,7 @@ date: 2024-04-25
 
 文档：[在 Windows 上安装 PowerShell - PowerShell | Microsoft Learn](https://learn.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-windows)
 
-推荐用 [[Windows 包管理器|包管理器]] 安装，例如 WinGet，但是不推荐 Scoop。
+推荐用包管理器安装，例如 WinGet，但是不推荐 [[Scoop]]。
 
 > Since Scoop uses pwsh.exe internally, to update PowerShell Core itself, run `scoop update pwsh` from Windows PowerShell, i.e. powershell.exe. [^1]
 

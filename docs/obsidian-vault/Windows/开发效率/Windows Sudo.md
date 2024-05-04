@@ -14,4 +14,4 @@ date: 2024-04-28
 
 ## 第三方实现
 
-GitHub：[gerardog/gsudo](https://github.com/gerardog/gsudo)。用 [[Windows 包管理器#Scoop|Scoop]] 安装就好。
+GitHub：[gerardog/gsudo](https://github.com/gerardog/gsudo)。用 [[Scoop]] 安装就好。
