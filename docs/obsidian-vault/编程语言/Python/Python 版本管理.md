@@ -10,8 +10,9 @@ date: 2024-04-27
 - [pyenv](https://github.com/pyenv/pyenv)：通过在环境变量 `Path` 的前面加一个 Shim Path，截获命令行中 python 相关的调用，实现多版本管理。**不支持 Windows。**
 - [pyenv-win](https://github.com/pyenv-win/pyenv-win)：Pyenv 的 Windows 版。
 - [Python Launcher](https://docs.python.org/3/using/windows.html#python-launcher-for-windows)：官方为 Windows 系统提供的工具，直接被安装到系统目录。从 Python 3.3 开始，可以在安装 Python 时勾选安装。
+- 用包管理器管理，例如 [[Scoop]]。
 
-## Python Launcher
+## 使用 Python Launcher
 
 我是 Windows 系统，直接用 Python Launcher 了。
 
@@ -70,6 +71,7 @@ py -3.10 -m pip install -r requirements.txt
 ``` bash
 py script.py
 ```
+
 
 ## 参考
 
