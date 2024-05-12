@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "3f72e73983e9d555",
+        "id": "e3b78d6fa5de5c9f",
         "type": "tabs",
         "children": [
           {
-            "id": "dfdeb967611734dd",
+            "id": "d82439e8f7e6fcba",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "游戏后端/微服务架构.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -73,6 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "游戏后端/微服务架构.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "游戏后端/微服务架构.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -99,7 +106,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "游戏后端/微服务架构.md"
+              }
             }
           }
         ],
@@ -120,8 +129,15 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "7a6ffab70c306f4e",
+  "active": "d82439e8f7e6fcba",
   "lastOpenFiles": [
+    "游戏后端/微服务架构.md",
+    "编程语言/Go/事件系统.md",
+    "编程语言/Go/检查两个切片的底层数组是否相同.md",
+    "编程语言/Go",
+    "命令行/Git.md",
+    "杂项/不同系统的文件路径规则.md",
+    "命令行/GNU Make.md",
     "Web 前端/Nuxt 3 开发避坑.md",
     "Web 前端/写一个简易 jQuery.md",
     "Web 前端/网页中嵌入 b 站视频.md",
@@ -145,12 +161,6 @@
     "数学/函数空间.md",
     "数学/青雀进暗杠的抽牌数期望.md",
     "Manim",
-    "Windows/开发效率/提高 Windows 上的开发效率.md",
-    "Windows/开发效率/Windows PowerToys.md",
-    "Windows/Windows 全局钩子.md",
-    "Windows/Windows 程序防多开.md",
-    "Windows/DLL 进程间共享数据.md",
-    "Windows/开发效率/Windows Sudo.md",
     "attachments/Pasted image 20240504004716.png",
     "Windows/开发效率",
     "Windows/开发",
@@ -167,7 +177,6 @@
     "Unity/踩坑",
     "Unity/URP/踩坑",
     "Unity/编辑器",
-    "Unity/URP",
-    "Unity/踩坑"
+    "Unity/URP"
   ]
 }

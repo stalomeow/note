@@ -163,6 +163,29 @@ HEAD 文件通常是一个符号引用（symbolic reference），指向目前所
 
 要想让 git 正确识别 `HEAD^`，需要输入 `HEAD^^` 或者用双引号包裹 `"HEAD^"`。换 powershell、git bash 也行。
 
+
+## 路径大小写不敏感
+
+> [解决 Git 不区分大小写导致的文件冲突问题 - 千古壹号 - 博客园 (cnblogs.com)](https://www.cnblogs.com/qianguyihao/p/15906060.html)
+
+Git 默认不区分路径大小写，[[不同系统的文件路径规则|类似 Windows]]。比如把 `Test` 改名为 `test` 是没用的，Git 认为没有发生变化。
+
+可以设置
+
+``` bash
+git config core.ignorecase false
+```
+
+让 Git 区分大小写，但是不推荐，我遇到过问题：执行这条命令后，把 `Test` 改名为 `test` 再提交，远程仓库里同时存在 `Test` 和 `test`，但是本地仓库里只有 `test`。
+
+上面的问题只能用最朴素的办法来解决：
+
+1. 把 `Test` 改名为 `Test1`
+2. 提交
+3. 把 `Test1` 改名为 `test`
+4. 提交
+
+
 ## Sync Fork
 
 > [How to sync your fork with the original repository](https://ljvmiranda921.github.io/notebook/2021/11/12/sync-your-fork/)
