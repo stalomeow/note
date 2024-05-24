@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "e3b78d6fa5de5c9f",
+        "id": "9fca0379561713dd",
         "type": "tabs",
         "children": [
           {
-            "id": "d82439e8f7e6fcba",
+            "id": "cc16c236ae11012c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "游戏后端/微服务架构.md",
-                "mode": "source",
+                "mode": "preview",
                 "backlinks": true,
                 "source": false
               }
@@ -129,10 +129,19 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "d82439e8f7e6fcba",
+  "active": "cc16c236ae11012c",
   "lastOpenFiles": [
-    "计算机基础/序号回绕问题.md",
+    "Windows/开发效率/提高 Windows 上的开发效率.md",
+    "Windows/开发效率/Windows PowerToys.md",
+    "Windows/开发效率/Windows 任务栏改成状态栏.md",
+    "Windows/开发效率/小狼毫输入法.md",
+    "Windows/开发效率/Windows 快捷键.md",
+    "Web 前端/网页中嵌入 b 站视频.md",
+    "Windows/Windows 全局钩子.md",
+    "Windows/Windows 程序防多开.md",
+    "Windows/DLL 进程间共享数据.md",
     "游戏后端/微服务架构.md",
+    "计算机基础/序号回绕问题.md",
     "编程语言/Go/事件系统.md",
     "编程语言/Go/检查两个切片的底层数组是否相同.md",
     "编程语言/Go",
@@ -141,7 +150,6 @@
     "命令行/GNU Make.md",
     "Web 前端/Nuxt 3 开发避坑.md",
     "Web 前端/写一个简易 jQuery.md",
-    "Web 前端/网页中嵌入 b 站视频.md",
     "Web 前端/解决 patch-package 不生效的问题.md",
     "Web 前端/将内存中数据下载为文件.md",
     "Web 前端/个人常用的 MathJax Macro.md",
@@ -152,14 +160,6 @@
     "命令行/FFmpeg.md",
     "attachments/fourier-rice-dumpling.png",
     "attachments/output.png",
-    "编程语言/Python/Python 版本管理.md",
-    "编程语言/Python/Python 虚拟环境.md",
-    "命令行/Scoop.md",
-    "杂项/下载微信视频号的视频.md",
-    "杂项/百度网盘直链下载.md",
-    "数学/泛函.md",
-    "数学/广义函数.md",
-    "数学/函数空间.md",
     "Manim",
     "attachments/Pasted image 20240504004716.png",
     "Windows/开发效率",
