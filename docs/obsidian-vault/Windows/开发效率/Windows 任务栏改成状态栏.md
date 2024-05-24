@@ -15,6 +15,7 @@ PC 上需要修改注册表才能实现
 
 1. 在 `计算机\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer` 里新建一个 `TabletPostureTaskbar`，类型是 `DWORD`，值为 `1`
 2. 在 `计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl` 里修改 `ConvertibleSlateMode`，类型是 `DWORD`，值为 `1`
+3. 可以顺便去设置里开一下「自动隐藏任务栏」
 
 切换 app 直接用 Alt+Tab，期间按方向键或者 Tab 键可以切换选择的窗口，按 delete/Ctrl+W 键可以关闭选择的窗口。Ctrl+Alt+Tab 可以永久打开切换 app 的界面。
 
