@@ -29,8 +29,4 @@ date: 2024-04-25
 - 学习一些 [[Windows 快捷键]]，减少键盘鼠标切换次数
 - 用 [[小狼毫输入法]] 代替内置输入法，再[[Windows 上用 CapsLock 切换中英文|用 CapsLock 切换中英文]]，避免快捷键冲突
 - 用 [[Windows PowerToys|PowerToys]] 的键盘管理器把 NumLock 映射到 Disable，禁用它的切换功能，避免误触
-- [[Windows 任务栏改成状态栏|将任务栏改成状态栏]]，增加屏幕的有效显示区域
-
-
-
 

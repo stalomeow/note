@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "9fca0379561713dd",
+        "id": "3a83ebfdc70e8fb1",
         "type": "tabs",
         "children": [
           {
-            "id": "cc16c236ae11012c",
+            "id": "423fe25924fc9cce",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/开发效率/Windows 任务栏改成状态栏.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -78,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Windows/开发效率/Windows 任务栏改成状态栏.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +89,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Windows/开发效率/Windows 任务栏改成状态栏.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -106,9 +99,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Windows/开发效率/Windows 任务栏改成状态栏.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -129,18 +120,29 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "cc16c236ae11012c",
+  "active": "423fe25924fc9cce",
   "lastOpenFiles": [
-    "游戏后端/微服务架构.md",
-    "Windows/开发效率/提高 Windows 上的开发效率.md",
-    "Windows/开发效率/Windows PowerToys.md",
+    "命令行/OpenSSL.md",
     "Windows/开发效率/Windows 任务栏改成状态栏.md",
-    "Windows/开发效率/小狼毫输入法.md",
-    "Windows/开发效率/Windows 快捷键.md",
-    "Web 前端/网页中嵌入 b 站视频.md",
+    "Windows/开发效率/提高 Windows 上的开发效率.md",
+    "命令行/Aria2.md",
+    "数学/概率论与数理统计/数字特征/数学期望.md",
+    "Unity/踩坑/解决 GetComponentInParent on PrefabAsset returns null.md",
+    "数学/概率论与数理统计/离散分布/两点分布.md",
     "Windows/Windows 全局钩子.md",
+    "未命名.md",
+    "密码学",
     "Windows/Windows 程序防多开.md",
     "Windows/DLL 进程间共享数据.md",
+    "Windows/查看 Win32 错误码对应的描述.md",
+    "Windows/开发效率/Windows Sudo.md",
+    "Windows/开发效率/Windows 上用 CapsLock 切换中英文.md",
+    "Windows/开发效率/Windows 快捷键.md",
+    "Windows/开发效率/小狼毫输入法.md",
+    "游戏后端/游戏注册、登录和鉴权.md",
+    "游戏后端/微服务架构.md",
+    "Windows/开发效率/Windows PowerToys.md",
+    "Web 前端/网页中嵌入 b 站视频.md",
     "计算机基础/序号回绕问题.md",
     "编程语言/Go/事件系统.md",
     "编程语言/Go/检查两个切片的底层数组是否相同.md",
@@ -148,16 +150,6 @@
     "命令行/Git.md",
     "杂项/不同系统的文件路径规则.md",
     "命令行/GNU Make.md",
-    "Web 前端/Nuxt 3 开发避坑.md",
-    "Web 前端/写一个简易 jQuery.md",
-    "Web 前端/解决 patch-package 不生效的问题.md",
-    "Web 前端/将内存中数据下载为文件.md",
-    "Web 前端/个人常用的 MathJax Macro.md",
-    "杂项/Clash 的 TUN 模式.md",
-    "杂项/Clash 的 Tun 模式.md",
-    "命令行/CMake.md",
-    "Manim/傅里叶级数实现本轮画图.md",
-    "命令行/FFmpeg.md",
     "attachments/fourier-rice-dumpling.png",
     "attachments/output.png",
     "Manim",
@@ -176,7 +168,6 @@
     "未命名.canvas",
     "Unity/踩坑",
     "Unity/URP/踩坑",
-    "Unity/编辑器",
-    "Unity/URP"
+    "Unity/编辑器"
   ]
 }
