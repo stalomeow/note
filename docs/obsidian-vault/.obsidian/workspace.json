@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "3a83ebfdc70e8fb1",
+        "id": "c6c4c6a809334bd0",
         "type": "tabs",
         "children": [
           {
-            "id": "423fe25924fc9cce",
+            "id": "b3145174063afe35",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "算法/数学/扩展欧几里得算法.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -57,7 +62,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 297.5
+    "width": 291.5
   },
   "right": {
     "id": "029f8289abc95648",
@@ -73,6 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "算法/数学/扩展欧几里得算法.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "算法/数学/扩展欧几里得算法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -99,7 +106,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "算法/数学/扩展欧几里得算法.md"
+              }
             }
           }
         ],
@@ -120,10 +129,20 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "423fe25924fc9cce",
+  "active": "b3145174063afe35",
   "lastOpenFiles": [
-    "命令行/OpenSSL.md",
+    "算法/数学/欧几里得算法.md",
+    "算法/数学/扩展欧几里得算法.md",
+    "数学/数论/裴蜀定理.md",
+    "数学/数论/中国剩余定理.md",
+    "数学/数论/整除.md",
+    "算法/数学",
+    "数学/数论",
+    "命令行/GNU Make.md",
+    "密码学/RSA  算法.md",
     "Windows/开发效率/Windows 任务栏改成状态栏.md",
+    "命令行/OpenSSL.md",
+    "网站资源.md",
     "Windows/开发效率/提高 Windows 上的开发效率.md",
     "命令行/Aria2.md",
     "数学/概率论与数理统计/数字特征/数学期望.md",
@@ -141,15 +160,7 @@
     "Windows/开发效率/小狼毫输入法.md",
     "游戏后端/游戏注册、登录和鉴权.md",
     "游戏后端/微服务架构.md",
-    "Windows/开发效率/Windows PowerToys.md",
-    "Web 前端/网页中嵌入 b 站视频.md",
-    "计算机基础/序号回绕问题.md",
-    "编程语言/Go/事件系统.md",
-    "编程语言/Go/检查两个切片的底层数组是否相同.md",
     "编程语言/Go",
-    "命令行/Git.md",
-    "杂项/不同系统的文件路径规则.md",
-    "命令行/GNU Make.md",
     "attachments/fourier-rice-dumpling.png",
     "attachments/output.png",
     "Manim",
@@ -166,8 +177,6 @@
     "attachments/excalidraw",
     "Excalidraw",
     "未命名.canvas",
-    "Unity/踩坑",
-    "Unity/URP/踩坑",
-    "Unity/编辑器"
+    "Unity/踩坑"
   ]
 }
