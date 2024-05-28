@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "5edc0b1592d2e94a",
+        "id": "bd1db8fdbf8dea6a",
         "type": "tabs",
         "children": [
           {
-            "id": "7e4d8838f1d8bed3",
+            "id": "0837b61cbe4e96a3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "数学/数论/欧拉定理（数论）.md",
-                "mode": "source",
+                "file": "数学/数论/欧拉函数（数论）.md",
+                "mode": "preview",
                 "backlinks": true,
                 "source": false
               }
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "数学/数论/欧拉定理（数论）.md",
+                "file": "数学/数论/欧拉函数（数论）.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "数学/数论/欧拉定理（数论）.md",
+                "file": "数学/数论/欧拉函数（数论）.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -107,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "数学/数论/欧拉定理（数论）.md"
+                "file": "数学/数论/欧拉函数（数论）.md"
               }
             }
           }
@@ -129,12 +129,16 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "7e4d8838f1d8bed3",
+  "active": "0837b61cbe4e96a3",
   "lastOpenFiles": [
     "数学/数论/欧拉定理（数论）.md",
-    "算法/数学/扩展欧几里得算法.md",
-    "算法/数学/欧几里得算法.md",
     "数学/数论/裴蜀定理.md",
+    "数学/数论/欧拉函数（数论）.md",
+    "数学/数论/中国剩余定理.md",
+    "数学/数论/模逆元.md",
+    "算法/数学/欧几里得算法.md",
+    "算法/数学/扩展欧几里得算法.md",
+    "数学/数论/整除.md",
     "数学/信号与系统/差分方程.md",
     "数学/信号与系统/差分.md",
     "数学/青雀进暗杠的抽牌数期望.md",
@@ -153,10 +157,6 @@
     "数学/信号与系统/移位序列.md",
     "数学/概率论与数理统计/随机变量.md",
     "数学/概率论与数理统计/随机变量函数.md",
-    "数学/概率论与数理统计/依概率收敛.md",
-    "数学/概率论与数理统计/中心极限定理.md",
-    "数学/高等数学/Wallis 公式.md",
-    "数学/高等数学/旋度.md",
     "算法/数学",
     "数学/数论",
     "密码学",
