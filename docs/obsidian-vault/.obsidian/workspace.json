@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a663fc5c6c08286d",
+        "id": "5edc0b1592d2e94a",
         "type": "tabs",
         "children": [
           {
-            "id": "6cba1017c77ebc9d",
+            "id": "7e4d8838f1d8bed3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "算法/数学/扩展欧几里得算法.md",
+                "file": "数学/数论/欧拉定理（数论）.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "算法/数学/扩展欧几里得算法.md",
+                "file": "数学/数论/欧拉定理（数论）.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "算法/数学/扩展欧几里得算法.md",
+                "file": "数学/数论/欧拉定理（数论）.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -107,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "算法/数学/扩展欧几里得算法.md"
+                "file": "数学/数论/欧拉定理（数论）.md"
               }
             }
           }
@@ -129,12 +129,14 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "6cba1017c77ebc9d",
+  "active": "7e4d8838f1d8bed3",
   "lastOpenFiles": [
-    "数学/信号与系统/差分方程.md",
+    "数学/数论/欧拉定理（数论）.md",
     "算法/数学/扩展欧几里得算法.md",
-    "数学/信号与系统/差分.md",
     "算法/数学/欧几里得算法.md",
+    "数学/数论/裴蜀定理.md",
+    "数学/信号与系统/差分方程.md",
+    "数学/信号与系统/差分.md",
     "数学/青雀进暗杠的抽牌数期望.md",
     "数学/函数空间.md",
     "数学/广义函数.md",
@@ -155,8 +157,6 @@
     "数学/概率论与数理统计/中心极限定理.md",
     "数学/高等数学/Wallis 公式.md",
     "数学/高等数学/旋度.md",
-    "数学/高等数学/Nabla 算子.md",
-    "数学/高等数学/Laplace 算子.md",
     "算法/数学",
     "数学/数论",
     "密码学",
