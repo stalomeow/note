@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "79fb97aa1c86edb5",
+        "id": "622ab581716c440c",
         "type": "tabs",
         "children": [
           {
-            "id": "fa3ecee49b3cab12",
+            "id": "37c63fe121578f97",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "数学/数论/欧拉函数（数论）.md",
+                "file": "数学/数论/威尔逊定理.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "数学/数论/欧拉函数（数论）.md",
+                "file": "数学/数论/威尔逊定理.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "数学/数论/欧拉函数（数论）.md",
+                "file": "数学/数论/威尔逊定理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -107,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "数学/数论/欧拉函数（数论）.md"
+                "file": "数学/数论/威尔逊定理.md"
               }
             }
           }
@@ -129,17 +129,20 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "fa3ecee49b3cab12",
+  "active": "37c63fe121578f97",
   "lastOpenFiles": [
-    "数学/数论/中国剩余定理.md",
+    "数学/数论/数论四大定理.md",
+    "数学/数论/模逆元.md",
+    "数学/数论/费马小定理.md",
     "数学/数论/欧拉定理（数论）.md",
     "数学/数论/欧拉函数（数论）.md",
     "数学/数论/整除.md",
     "算法/数学/欧几里得算法.md",
-    "数学/数论/威尔逊定理.md",
     "算法/数学/扩展欧几里得算法.md",
+    "数学/数论/算术基本定理.md",
+    "数学/数论/中国剩余定理.md",
     "数学/数论/裴蜀定理.md",
-    "数学/数论/模逆元.md",
+    "数学/数论/威尔逊定理.md",
     "数学/信号与系统/差分方程.md",
     "数学/信号与系统/差分.md",
     "数学/青雀进暗杠的抽牌数期望.md",
@@ -154,9 +157,6 @@
     "数学/信号与系统/阶跃函数.md",
     "数学/信号与系统/阶跃响应.md",
     "数学/信号与系统/卷积积分.md",
-    "数学/信号与系统/序列求和.md",
-    "数学/信号与系统/移位序列.md",
-    "数学/概率论与数理统计/随机变量.md",
     "算法/数学",
     "数学/数论",
     "密码学",
