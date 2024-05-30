@@ -9,9 +9,6 @@
   "templates",
   "note-composer",
   "command-palette",
-  "editor-status",
   "random-note",
-  "outline",
-  "word-count",
-  "file-recovery"
+  "outline"
 ]

@@ -168,7 +168,7 @@ HEAD 文件通常是一个符号引用（symbolic reference），指向目前所
 
 > [解决 Git 不区分大小写导致的文件冲突问题 - 千古壹号 - 博客园 (cnblogs.com)](https://www.cnblogs.com/qianguyihao/p/15906060.html)
 
-Git 默认不区分路径大小写，[[不同系统的文件路径规则|类似 Windows]]。比如把 `Test` 改名为 `test` 是没用的，Git 认为没有发生变化。
+Git 默认不区分路径大小写，[[不同操作系统的文件路径规则|类似 Windows]]。比如把 `Test` 改名为 `test` 是没用的，Git 认为没有发生变化。
 
 可以设置
 

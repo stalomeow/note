@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "dbd314d7f1788e86",
+        "id": "89c8b894b09eda4a",
         "type": "tabs",
         "children": [
           {
-            "id": "f5dba6048d368568",
+            "id": "6dbff27c004ce27c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "密码学/RSA  加密算法.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -34,7 +29,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7a6ffab70c306f4e",
+            "id": "a86edf9e473aa4d9",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -71,22 +66,14 @@
       {
         "id": "ea7207339e4a6038",
         "type": "tabs",
+        "dimension": 65.31862745098039,
         "children": [
           {
-            "id": "dd902de61c686e30",
+            "id": "607d846bf698b61f",
             "type": "leaf",
             "state": {
-              "type": "backlink",
-              "state": {
-                "file": "密码学/RSA  加密算法.md",
-                "collapseAll": true,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
+              "type": "outline",
+              "state": {}
             }
           },
           {
@@ -95,24 +82,69 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "密码学/RSA  加密算法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "607d846bf698b61f",
+            "id": "e50b3c0a024079d3",
             "type": "leaf",
             "state": {
-              "type": "outline",
+              "type": "backlink",
               "state": {
-                "file": "密码学/RSA  加密算法.md"
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
+      },
+      {
+        "id": "4dd615e2e93a9957",
+        "type": "tabs",
+        "dimension": 34.681372549019606,
+        "children": [
+          {
+            "id": "4d1d504a9681f102",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": true,
+                  "textFadeMultiplier": -3,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.5,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.5087618855792626,
+                  "close": true
+                }
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
@@ -120,53 +152,56 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "hide-folders:Show hidden folders": false,
       "command-palette:打开命令面板": false,
       "switcher:打开快速切换": false,
       "templates:插入模板": false,
       "graph:查看关系图谱": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "random-note:开始漫游笔记": false
+      "random-note:开始漫游笔记": false,
+      "hide-folders:Show hidden folders": false
     }
   },
-  "active": "f5dba6048d368568",
+  "active": "6dbff27c004ce27c",
   "lastOpenFiles": [
-    "数学/数论/整除.md",
-    "密码学/RSA  加密算法.md",
-    "数学/数论/欧拉定理（数论）.md",
+    "Misc/LeetCode 题目描述转 Markdown.md",
+    "开发/Web 前端/Nuxt 3 开发避坑.md",
+    "开发/Web 前端/网页中嵌入 b 站视频.md",
+    "开发/Web 前端/解决 patch-package 不生效的问题.md",
+    "开发/Web 前端/将内存中数据下载为文件.md",
+    "开发/Web 前端/个人常用的 MathJax Macro.md",
     "数学/数论/中国剩余定理.md",
+    "数学/数论/整除.md",
     "数学/数论/威尔逊定理.md",
     "数学/数论/算术基本定理.md",
     "数学/数论/数论四大定理.md",
     "数学/数论/裴蜀定理.md",
     "数学/数论/欧拉函数（数论）.md",
+    "数学/数论/欧拉定理（数论）.md",
     "数学/数论/模逆元.md",
     "数学/数论/费马小定理.md",
-    "算法/数学/欧几里得算法.md",
-    "算法/数学/扩展欧几里得算法.md",
-    "数学/信号与系统/差分方程.md",
-    "数学/信号与系统/差分.md",
-    "数学/青雀进暗杠的抽牌数期望.md",
-    "数学/函数空间.md",
-    "数学/广义函数.md",
-    "数学/泛函.md",
-    "数学/线性代数/伴随矩阵.md",
-    "数学/信号与系统/冲激函数.md",
-    "数学/信号与系统/冲激响应.md",
-    "数学/信号与系统/单位阶跃序列.md",
-    "数学/信号与系统/单位样值序列.md",
-    "数学/信号与系统/阶跃函数.md",
-    "数学/信号与系统/阶跃响应.md",
-    "算法/数学",
+    "数学/数论/四大定理",
+    "图形学/Terrain Rendering.md",
+    "图形学/Half Lambert 勘误.md",
+    "图形学/Fog.md",
+    "图形学/Anti-aliasing.md",
+    "图形学/Ambient Occlusion.md",
+    "图形学/用 RenderDoc 和模拟器抓帧安卓手游.md",
+    "图形学/渲染方程.md",
+    "图形学/图形学黑话.md",
+    "图形学/提取 WebGL Shaders.md",
+    "图形学/实现 Main Light Per-Object Shadow.md",
+    "开发",
+    "游戏设计",
+    "计算机语言",
+    "计算机语言/接口描述语言",
+    "数据结构与算法/数学",
     "数学/数论",
     "密码学",
-    "编程语言/Go",
+    "计算机语言/编程语言/Go",
     "attachments/fourier-rice-dumpling.png",
     "attachments/output.png",
-    "Manim",
+    "数学/Manim",
     "attachments/Pasted image 20240504004716.png",
-    "Windows/开发效率",
-    "Windows/开发",
     "attachments/oh-my-posh-theme.png",
     "attachments/Snipaste_2024-04-28_23-12-55.png",
     "attachments/Snipaste_2024-04-28_23-07-08.png",
@@ -174,9 +209,6 @@
     "attachments/unity_hsr_dream_ticker_explain5.png",
     "attachments/unity_hsr_dream_ticker_explain3.png",
     "attachments/unity_hsr_dream_ticker_explain.png",
-    "attachments/excalidraw",
-    "Excalidraw",
-    "未命名.canvas",
-    "Unity/踩坑"
+    "未命名.canvas"
   ]
 }

@@ -8,7 +8,7 @@ date: 2024-04-27
 
 实现目标任务追踪功能。在 UI 上的椭圆区域内，显示目标的方向和距离。
 
-![演示](../attachments/track_indicator_demo.png)
+![演示](track_indicator_demo.png)
 
 
 
@@ -36,7 +36,7 @@ private void GetEllipseParam(RectTransform panelRect, out float a, out float b)
 
 在编辑器中绘制辅助线，帮助我们直观地看到椭圆范围。
 
-![辅助线](../attachments/track_indicator_gizmo.png)
+![辅助线](track_indicator_gizmo.png)
 
 Unity 没有提供绘制椭圆的方法。只能在椭圆上多采一些离散的点，然后用 [`Gizmos.DrawLineStrip(points, true)`](https://docs.unity3d.com/ScriptReference/Gizmos.DrawLineStrip.html) 绘制，第二个参数为 `true` 表示绘制为首尾闭合的多边形。
 
