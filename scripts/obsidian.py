@@ -134,14 +134,18 @@ def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
 
 def transform_wiki_links(markdown: str, page: Page, config: MkDocsConfig) -> str:
     def repl(m: re.Match[str]):
+        is_media = m.group(1) is not None
+
         # [[name#heading|alias]]
-        m2 = re.match(r'^(.+?)(#(.*?))?(\|(.*))?$', m.group(1), flags=re.U)
+        m2 = re.match(r'^(.+?)(#(.*?))?(\|(.*))?$', m.group(2), flags=re.U)
         name = m2.group(1).strip()
         heading = m2.group(3)
         alias = m2.group(5)
 
-        if posixpath.splitext(name)[1] == '':
-            name += '.md' # 默认后缀是 md
+        # 文档的后缀名是 md
+        if not is_media and posixpath.splitext(name)[1] != 'md':
+            name += '.md'
+
         if heading:
             heading = heading.strip()
         if alias:
@@ -177,12 +181,10 @@ def transform_wiki_links(markdown: str, page: Page, config: MkDocsConfig) -> str
         else:
             display_name = title
 
-        return f'[{display_name}]({md_link})'
+        return ('!' if is_media else '') + f'[{display_name}]({md_link})'
 
-    # [[]] 和 ![[]] 可以统一处理
-    # 把 [[]] 转换成 []()，那么 ![[]] 自然就变成了 ![]()
     # 匹配链接内容时必须用惰性匹配，否则会把多个链接内容合并在一起
-    return re.sub(r'\[\[(.*?)\]\]', repl, markdown, flags=re.M | re.U)
+    return re.sub(r'(!)?\[\[(.*?)\]\]', repl, markdown, flags=re.M | re.U)
 
 def transform_callouts(markdown: str, page: Page, config: MkDocsConfig) -> str:
     # 把 Obsidian 的 Callouts 转换为 Python Markdown Callouts 拓展的格式

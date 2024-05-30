@@ -178,7 +178,7 @@ plugins:
         - assets/stylesheets/temp-patch.css
   - redirects:
       redirect_maps:
-        'blog/posts/unity-hsr-dream-ticker-2024-02-18.md': 'obsidian-vault/Unity/复刻星穹铁道 2.0 梦境迷钟.md'
+        'blog/posts/unity-hsr-dream-ticker-2024-02-18.md': 'obsidian-vault/开发/Unity/复刻星穹铁道 2.0 梦境迷钟.md'
 
 
 hooks:

@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "89c8b894b09eda4a",
+        "id": "0a62220776443eb3",
         "type": "tabs",
         "children": [
           {
-            "id": "6dbff27c004ce27c",
+            "id": "a687b585d3e5ee50",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "开发/Unity/复刻星穹铁道 2.0 梦境迷钟.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -73,7 +78,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "开发/Unity/复刻星穹铁道 2.0 梦境迷钟.md"
+              }
             }
           },
           {
@@ -82,6 +89,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "开发/Unity/复刻星穹铁道 2.0 梦境迷钟.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -93,6 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "开发/Unity/复刻星穹铁道 2.0 梦境迷钟.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,6 +125,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "开发/Unity/复刻星穹铁道 2.0 梦境迷钟.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -138,7 +148,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.5087618855792626,
+                  "scale": 0.5087618855792632,
                   "close": true
                 }
               }
@@ -161,8 +171,17 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "6dbff27c004ce27c",
+  "active": "a687b585d3e5ee50",
   "lastOpenFiles": [
+    "开发/Unity/在 UI 上实现目标追踪.md",
+    "开发/Unity/Unity 中使用 KCP 协议.md",
+    "开发/Unity/复刻星穹铁道 2.0 梦境迷钟.md",
+    "密码学/X.509.md",
+    "密码学/PEM 格式.md",
+    "计算机语言/接口描述语言/ASN.1.md",
+    "密码学/PKCS.md",
+    "密码学/RSA  加密算法.md",
+    "计算机语言/计算机语言分类.md",
     "Misc/LeetCode 题目描述转 Markdown.md",
     "开发/Web 前端/Nuxt 3 开发避坑.md",
     "开发/Web 前端/网页中嵌入 b 站视频.md",
@@ -181,15 +200,6 @@
     "数学/数论/费马小定理.md",
     "数学/数论/四大定理",
     "图形学/Terrain Rendering.md",
-    "图形学/Half Lambert 勘误.md",
-    "图形学/Fog.md",
-    "图形学/Anti-aliasing.md",
-    "图形学/Ambient Occlusion.md",
-    "图形学/用 RenderDoc 和模拟器抓帧安卓手游.md",
-    "图形学/渲染方程.md",
-    "图形学/图形学黑话.md",
-    "图形学/提取 WebGL Shaders.md",
-    "图形学/实现 Main Light Per-Object Shadow.md",
     "开发",
     "游戏设计",
     "计算机语言",
