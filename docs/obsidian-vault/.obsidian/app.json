@@ -14,5 +14,6 @@
   "newLinkFormat": "shortest",
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "attachments",
-  "rightToLeft": false
+  "rightToLeft": false,
+  "defaultViewMode": "preview"
 }
