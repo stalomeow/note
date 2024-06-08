@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "f2519c6ec89fd474",
+        "id": "22fcac02c0adee8e",
         "type": "tabs",
         "children": [
           {
-            "id": "d73691c07fe9a0a7",
+            "id": "cab31c1db7965f50",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "网站资源.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -73,7 +78,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "网站资源.md"
+              }
             }
           },
           {
@@ -82,6 +89,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "网站资源.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -93,6 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "网站资源.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,6 +125,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "网站资源.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -161,9 +171,14 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "d73691c07fe9a0a7",
+  "active": "cab31c1db7965f50",
   "lastOpenFiles": [
+    "数学/广义函数.md",
+    "数学/高等数学/区间再现公式.md",
+    "数学/信号与系统/卷积积分.md",
+    "数学/复变函数",
     "数学/数论/模运算.md",
+    "数学/数论/模逆元.md",
     "数学/数论/欧几里得除法.md",
     "数学/数论/扩展欧拉定理（数论）.md",
     "数学/数论/裴蜀定理.md",
@@ -178,7 +193,6 @@
     "数学/数论/数论四大定理.md",
     "数学/数论/欧拉函数（数论）.md",
     "数学/数论/欧拉定理（数论）.md",
-    "数学/数论/模逆元.md",
     "数学/数论/积性函数.md",
     "数学/数论/费马小定理.md",
     "数学/数论/二元一次不定方程.md",
@@ -186,9 +200,6 @@
     "数据结构与算法/树/二叉搜索树.md",
     "密码学/RSA  加密算法.md",
     "CLI 工具/OpenSSL.md",
-    "密码学/PEM 格式.md",
-    "密码学/PKCS.md",
-    "开发/Web 前端/写一个简易 jQuery.md",
     "数学/数论/四大定理",
     "开发",
     "游戏设计",
@@ -200,7 +211,6 @@
     "计算机语言/编程语言/Go",
     "attachments/fourier-rice-dumpling.png",
     "attachments/output.png",
-    "数学/Manim",
     "attachments/Pasted image 20240504004716.png",
     "attachments/oh-my-posh-theme.png",
     "attachments/Snipaste_2024-04-28_23-12-55.png",
