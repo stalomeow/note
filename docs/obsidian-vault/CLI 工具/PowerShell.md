@@ -202,6 +202,25 @@ gcm xxx -All
 
 PowerShell 里的 `where` 指的是 [Where-Object](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/where-object)。如果要调用 cmd 的 where，需要用 `where.exe`。[^2]
 
+
+## 环境变量
+
+临时设置环境变量，语法和 cmd 的不一样。做 golang 交叉编译时常用。
+
+``` powershell
+$env:GOOS="linux"
+$env:GOARCH="amd64"
+```
+
+读取环境变量
+
+``` powershell
+$env:GOOS
+```
+
+
+
+
 [^1]: [https://github.com/ScoopInstaller/Main/blob/2b4e2caea453c0ce0d5a6ccb7a05f3146e4c5131/bucket/pwsh.json#L7](https://github.com/ScoopInstaller/Main/blob/2b4e2caea453c0ce0d5a6ccb7a05f3146e4c5131/bucket/pwsh.json#L7)
 [^2]: [在PowerShell中使用where命令查找文件-CSDN博客](https://blog.csdn.net/mighty13/article/details/119880762)
 

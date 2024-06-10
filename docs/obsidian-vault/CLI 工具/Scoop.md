@@ -32,6 +32,11 @@ Bucket 相当于一类软件的集合，负责管理它们的版号和安装方�
 scoop install aria2
 ```
 
+如果下载速度反而慢了，用下面的命令关闭多线程下载。
+
+``` bash
+scoop config aria2-enabled false
+```
 
 ## 常用命令
 
