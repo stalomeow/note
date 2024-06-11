@@ -3,7 +3,7 @@ slug: "240512160330"
 date: 2024-05-12
 ---
 
-# 事件系统
+# Go 事件系统
 
 基于反射实现的事件系统，参考：[grafana/pkg/bus/bus.go at main · grafana/grafana (github.com)](https://github.com/grafana/grafana/blob/main/pkg/bus/bus.go)。
 

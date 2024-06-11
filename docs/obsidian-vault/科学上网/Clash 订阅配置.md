@@ -18,7 +18,7 @@ Clash Meta 的文档：[虚空终端 Docs (metacubex.one)](https://wiki.metacube
 
 在不同设备间拷贝配置文件是很麻烦的，Clash 客户端可以从 URL 导入配置文件。所以可以自己搭一个服务器，再进阶一点可以顺便实现 [[Clash 客户端支持的 URL Scheme]]。
 
-还有一个懒人方法，就是把配置文件放到 [GitHub Secret Gist](https://gist.github.com/) 里。[^1] Secret Gist 无法被搜索到，只能通过 URL 访问。URL 后面有非常长的随机数，几乎不可能被猜到。在 Clash 客户端导入配置文件时，给出源文件的 URL 即可。
+还有一个懒人方法，就是把配置文件放到 [GitHub Secret Gist](https://gist.github.com/) 里。[^1] Secret Gist 无法被搜索到，只能通过 URL 访问。URL 后面有非常长的随机字符串，几乎不可能被猜到。在 Clash 客户端导入配置文件时，给出源文件的 URL 即可。
 
 
 
