@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a95c891876813a94",
+        "id": "18a0deba8c0d2289",
         "type": "tabs",
         "children": [
           {
-            "id": "1f6e583592d0a528",
+            "id": "918eb6dbc19a5230",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -161,8 +161,23 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "a86edf9e473aa4d9",
+  "active": "918eb6dbc19a5230",
   "lastOpenFiles": [
+    "数学/信号与系统/实信号与复信号的频谱实验.md",
+    "计算机基础/数字电路/Multisim 仿真「方向之星」控制器.md",
+    "attachments/files/SignalSpectrum.ipynb",
+    "attachments/files/sig.ipynb",
+    "计算机基础/网络/Wireshark 抓包 HTTP 实验.md",
+    "attachments/Pasted image 20240617170316.png",
+    "attachments/Pasted image 20240617170240.png",
+    "attachments/Pasted image 20240617170137.png",
+    "计算机基础/网络/Wireshark 解密 HTTPS.md",
+    "attachments/wireshark-exp-tcp-close.png",
+    "attachments/wireshark-exp-tcp-conn.png",
+    "attachments/wireshark-exp-ethernet-data.png",
+    "attachments/wireshark-exp-ip-data.png",
+    "attachments/wireshark-exp-tcp-data.png",
+    "attachments/wireshark-exp-http-data.png",
     "计算机语言/编程语言/Go/Go ldflags.md",
     "计算机语言/编程语言/Go/Go 事件系统.md",
     "计算机语言/编程语言/Go/检查两个切片的底层数组是否相同.md",
@@ -186,29 +201,14 @@
     "开发/Linux",
     "资源/GitHub 工具.md",
     "资源/网络工具.md",
-    "CLI 工具/PowerShell.md",
     "计算机基础/网络",
-    "资源/网站资源.md",
-    "科学上网/IP 检测.md",
     "资源",
-    "CLI 工具/OpenSSH.md",
     "资源",
     "科学上网",
     "数学/复变函数",
     "数学/数论/四大定理",
     "开发",
-    "游戏设计",
-    "计算机语言",
     "attachments/fourier-rice-dumpling.png",
-    "attachments/output.png",
-    "attachments/Pasted image 20240504004716.png",
-    "attachments/oh-my-posh-theme.png",
-    "attachments/Snipaste_2024-04-28_23-12-55.png",
-    "attachments/Snipaste_2024-04-28_23-07-08.png",
-    "attachments/unity_hsr_dream_ticker_explain6.png",
-    "attachments/unity_hsr_dream_ticker_explain5.png",
-    "attachments/unity_hsr_dream_ticker_explain3.png",
-    "attachments/unity_hsr_dream_ticker_explain.png",
     "未命名.canvas"
   ]
 }

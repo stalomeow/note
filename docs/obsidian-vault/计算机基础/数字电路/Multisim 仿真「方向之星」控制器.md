@@ -6,7 +6,7 @@ date: 2024-04-25
 # Multisim 仿真「方向之星」控制器
 
 
-数电仿真大作业。感觉运气挺好，抽到的题不太难（。
+数电仿真作业。
 
 > 说明：「方向之星」是装在小汽车后窗上一组灯饰，由左右两排十余个小灯及中间一个大灯组成，起美观、提示作用。
 >
@@ -23,7 +23,7 @@ date: 2024-04-25
 
 ![S1 打到上面时，表示正在转弯；打到下面，表示转弯结束。S2 同理](../../attachments/DirectionStar_Screenshot.png)
 
-[下载仿真源文件](../../attachments/files/DirectionStar.ms14)
+[[files/DirectionStar.ms14|打开仿真源文件]]。
 
 ## 排灯及中间大灯
 
