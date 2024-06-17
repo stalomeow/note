@@ -23,7 +23,7 @@ date: 2024-04-25
 
 ![S1 打到上面时，表示正在转弯；打到下面，表示转弯结束。S2 同理](../../attachments/DirectionStar_Screenshot.png)
 
-[[files/DirectionStar.ms14|打开仿真源文件]]。
+[[DirectionStar.ms14|打开仿真源文件]]。
 
 ## 排灯及中间大灯
 

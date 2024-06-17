@@ -142,8 +142,8 @@ def transform_wiki_links(markdown: str, page: Page, config: MkDocsConfig) -> str
         heading = m2.group(3)
         alias = m2.group(5)
 
-        # 文档的后缀名是 md
-        if not is_media and posixpath.splitext(name)[1] != 'md':
+        # 自动给文档加 .md 后缀名
+        if not is_media and (name + '.md') in wiki_link_name_map:
             name += '.md'
 
         if heading:

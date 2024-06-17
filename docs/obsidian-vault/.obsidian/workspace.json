@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "18a0deba8c0d2289",
+        "id": "c5ec12611f467325",
         "type": "tabs",
         "children": [
           {
-            "id": "918eb6dbc19a5230",
+            "id": "2be00e50cf2f5b91",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -161,10 +161,11 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "918eb6dbc19a5230",
+  "active": "a86edf9e473aa4d9",
   "lastOpenFiles": [
     "数学/信号与系统/实信号与复信号的频谱实验.md",
     "计算机基础/数字电路/Multisim 仿真「方向之星」控制器.md",
+    "计算机基础/数字电路/数制与编码.md",
     "attachments/files/SignalSpectrum.ipynb",
     "attachments/files/sig.ipynb",
     "计算机基础/网络/Wireshark 抓包 HTTP 实验.md",
@@ -200,7 +201,6 @@
     "计算机基础/分布式/分布式哈希表.md",
     "开发/Linux",
     "资源/GitHub 工具.md",
-    "资源/网络工具.md",
     "计算机基础/网络",
     "资源",
     "资源",
