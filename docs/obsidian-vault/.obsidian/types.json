@@ -6,7 +6,7 @@
     "dg-publish": "checkbox",
     "authors": "multitext",
     "slug": "text",
-    "date": "date",
+    "date": "datetime",
     "excalidraw-plugin": "text",
     "excalidraw-export-transparent": "checkbox",
     "excalidraw-mask": "checkbox",
@@ -27,6 +27,9 @@
     "excalidraw-autoexport": "text",
     "excalidraw-iframe-theme": "text",
     "excalidraw-open-md": "checkbox",
-    "excalidraw-embeddable-theme": "text"
+    "excalidraw-embeddable-theme": "text",
+    "categories": "multitext",
+    "draft": "checkbox",
+    "comments": "checkbox"
   }
 }

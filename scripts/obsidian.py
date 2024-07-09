@@ -63,12 +63,12 @@ def on_files(files: Files, config: MkDocsConfig):
             _, frontmatter = meta.get_data(f.content_string)
 
             # 有 slug 的话就用 slug 作为文件名
-            if "slug" in frontmatter:
-                slug = transform_slug(str(frontmatter["slug"]))
+            if 'slug' in frontmatter:
+                slug = transform_slug(str(frontmatter['slug']))
                 if not f.use_directory_urls:
-                    f.dest_uri = posixpath.join(OBSIDIAN_VAULT_DIR, slug + '.html')
+                    f.dest_uri = posixpath.join('notes', slug + '.html')
                 else:
-                    f.dest_uri = posixpath.join(OBSIDIAN_VAULT_DIR, slug, 'index.html')
+                    f.dest_uri = posixpath.join('notes', slug, 'index.html')
             else:
                 log.warning('Obsidian document \'%s\' does not have a slug.', f.src_uri)
 
@@ -82,14 +82,23 @@ def on_files(files: Files, config: MkDocsConfig):
         files.remove(f)
     return files
 
-def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
-    obsidian_root = None
-    for it in nav.items:
-        if isinstance(it, Section) and it.title.lower().count('obsidian') > 0:
-            obsidian_root = it
-    if obsidian_root is None:
-        return
+def update_obsidian_root(nav: Navigation):
+    # 找到 obsidian-vault
+    for i, item in enumerate(nav.items):
+        if isinstance(item, Section) and item.title.lower().count('obsidian') > 0:
+            break
+    else:
+        return None
 
+    # 将 obsidian-vault 下的 notes 作为 root，其他丢弃
+    for child in item.children:
+        if child.title.lower() == 'notes':
+            child.parent = None
+            nav.items[i] = child
+            return child
+    return None
+
+def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
     def get_entry_key(entry):
         # obsidian 目录下面只有 Page 和 Section
         if isinstance(entry, Page):
@@ -128,8 +137,9 @@ def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
         folders.sort(key=get_entry_key)
         entry.children = folders + files # 文件夹放在文件前面
 
-    # 重新排序
-    dfs(obsidian_root)
+    obsidian_root = update_obsidian_root(nav)
+    if obsidian_root is not None:
+        dfs(obsidian_root) # 重新排序
     return nav
 
 def transform_wiki_links(markdown: str, page: Page, config: MkDocsConfig) -> str:

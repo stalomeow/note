@@ -89,6 +89,9 @@ extra:
     - name: Mail
       icon: fontawesome/solid/envelope
       link: mailto:stalowork@163.com
+    - name: RSS
+      icon: fontawesome/solid/square-rss
+      link: /rss.xml
   tags: { "": default } # https://github.com/squidfunk/mkdocs-material/blob/0b38323a310d9ab9ac7fd60ad0bdae5871e42d73/src/plugins/tags/plugin.py#L146
 
 
@@ -178,7 +181,44 @@ plugins:
         - assets/stylesheets/temp-patch.css
   - redirects:
       redirect_maps:
-        'blog/posts/unity-hsr-dream-ticker-2024-02-18.md': 'obsidian-vault/开发/Unity/复刻星穹铁道 2.0 梦境迷钟.md'
+        'blog/posts/unity-hsr-dream-ticker-2024-02-18.md': 'obsidian-vault/posts/Unity/复刻星穹铁道 2.0 梦境迷钟.md'
+  - blog:
+      enabled: true
+      blog_toc: true
+      post_dir: obsidian-vault/posts
+      post_date_format: yyyy-MM-dd
+      post_url_format: "posts/{slug}"
+      post_excerpt: required
+      post_excerpt_max_authors: 0
+      post_readtime: true
+      post_readtime_words_per_minute: 180
+      archive: true
+      archive_date_format: yyyy 年 MM 月
+      archive_url_date_format: yyyy/MM
+      archive_toc: true
+      categories: true
+      categories_url_format: "categories/{slug}"
+      categories_toc: true
+      authors: false
+      pagination: true
+      pagination_per_page: 10
+      pagination_format: "~2~"
+      pagination_if_single_page: true
+      pagination_keep_content: true
+  - rss:
+      enabled: !ENV [CI, false]
+      json_feed_enabled: false
+      abstract_chars_count: -1
+      comments_path: "#__comments"
+      match_path: "obsidian-vault(/|\\\\)posts(/|\\\\).*"
+      date_from_meta:
+        as_creation: date
+        as_update: git
+        datetime_format: "%Y-%m-%dT%H:%M:%S" # 和 post 的 front matter 里的格式一致
+        default_timezone: Asia/Shanghai
+      feeds_filenames:
+        rss_created: rss.xml
+        rss_updated: rss-updated.xml
 
 
 hooks:

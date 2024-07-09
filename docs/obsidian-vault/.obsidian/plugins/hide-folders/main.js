@@ -67,38 +67,42 @@ var DEFAULT_SETTINGS = {
   areFoldersHidden: true,
   matchCaseInsensitive: true,
   addHiddenFoldersToObsidianIgnoreList: false,
+  hideBottomStatusBarIndicatorText: false,
   enableCompatQuickExplorer: false,
   attachmentFolderNames: ["attachments"]
 };
 var HideFoldersPlugin = class extends import_obsidian.Plugin {
-  async processFolders(recheckPreviouslyHiddenFolders) {
-    if (this.settings.attachmentFolderNames.length === 0)
-      return;
-    if (recheckPreviouslyHiddenFolders) {
-      document.querySelectorAll(".obsidian-hide-folders--hidden").forEach((folder) => {
-        folder.style.height = "";
-        folder.style.overflow = "";
-        folder.removeClass("obsidian-hide-folders--hidden");
-      });
-    }
-    this.settings.attachmentFolderNames.forEach((folderName) => {
-      var _a, _b;
-      if (getFolderNameWithoutPrefix(folderName) === "")
+  constructor() {
+    super(...arguments);
+    this.processFolders = (0, import_obsidian.debounce)(async (recheckPreviouslyHiddenFolders) => {
+      if (this.settings.attachmentFolderNames.length === 0)
         return;
-      const folderElements = document.querySelectorAll([
-        this.getQuerySelectorStringForFolderName(folderName),
-        this.settings.enableCompatQuickExplorer ? (_b = (_a = CompatQuickExplorer).getAdditionalDocumentSelectorStringForFolder) == null ? void 0 : _b.call(_a, folderName, this.settings) : null
-      ].filter((o) => o != null).join(", "));
-      folderElements.forEach((folder) => {
-        if (!folder) {
+      if (recheckPreviouslyHiddenFolders) {
+        document.querySelectorAll(".obsidian-hide-folders--hidden").forEach((folder) => {
+          folder.style.height = "";
+          folder.style.overflow = "";
+          folder.removeClass("obsidian-hide-folders--hidden");
+        });
+      }
+      this.settings.attachmentFolderNames.forEach((folderName) => {
+        var _a, _b;
+        if (getFolderNameWithoutPrefix(folderName) === "")
           return;
-        }
-        folder.addClass("obsidian-hide-folders--hidden");
-        folder.style.height = this.settings.areFoldersHidden ? "0" : "";
-        folder.style.display = this.settings.areFoldersHidden ? "none" : "";
-        folder.style.overflow = this.settings.areFoldersHidden ? "hidden" : "";
+        const folderElements = document.querySelectorAll([
+          this.getQuerySelectorStringForFolderName(folderName),
+          this.settings.enableCompatQuickExplorer ? (_b = (_a = CompatQuickExplorer).getAdditionalDocumentSelectorStringForFolder) == null ? void 0 : _b.call(_a, folderName, this.settings) : null
+        ].filter((o) => o != null).join(", "));
+        folderElements.forEach((folder) => {
+          if (!folder) {
+            return;
+          }
+          folder.addClass("obsidian-hide-folders--hidden");
+          folder.style.height = this.settings.areFoldersHidden ? "0" : "";
+          folder.style.display = this.settings.areFoldersHidden ? "none" : "";
+          folder.style.overflow = this.settings.areFoldersHidden ? "hidden" : "";
+        });
       });
-    });
+    }, 10, false);
   }
   getQuerySelectorStringForFolderName(folderName) {
     if (folderName.toLowerCase().startsWith("endswith::")) {
@@ -113,7 +117,9 @@ var HideFoldersPlugin = class extends import_obsidian.Plugin {
     this.settings.areFoldersHidden = !this.settings.areFoldersHidden;
     this.ribbonIconButton.ariaLabel = this.settings.areFoldersHidden ? "Show hidden folders" : "Hide hidden folders again";
     (0, import_obsidian.setIcon)(this.ribbonIconButton, this.settings.areFoldersHidden ? "eye" : "eye-off");
-    this.statusBarItem.innerHTML = this.settings.areFoldersHidden ? "Configured folders are hidden" : "";
+    if (this.statusBarItem) {
+      this.statusBarItem.innerHTML = this.settings.areFoldersHidden ? "Configured folders are hidden" : "";
+    }
     await this.processFolders();
     await this.saveSettings();
     await this.updateObsidianIgnoreList();
@@ -154,14 +160,21 @@ var HideFoldersPlugin = class extends import_obsidian.Plugin {
       this.app.vault.trigger("config-changed");
     });
   }
+  createBottomStatusBarIndicatorTextItem() {
+    if (this.statusBarItem)
+      return;
+    this.statusBarItem = this.addStatusBarItem();
+    this.statusBarItem.setText(this.settings.areFoldersHidden ? "Configured folders are hidden" : "");
+  }
   async onload() {
     console.log("loading plugin hide-folders");
     await this.loadSettings();
     this.ribbonIconButton = this.addRibbonIcon(this.settings.areFoldersHidden ? "eye" : "eye-off", this.settings.areFoldersHidden ? "Show hidden folders" : "Hide hidden folders again", (evt) => {
       this.toggleFunctionality();
     });
-    this.statusBarItem = this.addStatusBarItem();
-    this.statusBarItem.setText(this.settings.areFoldersHidden ? "Attachment folders are hidden" : "");
+    if (!this.settings.hideBottomStatusBarIndicatorText) {
+      this.createBottomStatusBarIndicatorTextItem();
+    }
     this.addCommand({
       id: "toggle-attachment-folders",
       name: "Toggle visibility of hidden folders",
@@ -171,18 +184,24 @@ var HideFoldersPlugin = class extends import_obsidian.Plugin {
     });
     this.addSettingTab(new HideFoldersPluginSettingTab(this.app, this));
     this.mutationObserver = new MutationObserver((mutationRecord) => {
-      mutationRecord.forEach((record) => {
-        var _a, _b, _c, _d;
-        if ((_b = (_a = record.target) == null ? void 0 : _a.parentElement) == null ? void 0 : _b.classList.contains("nav-folder")) {
-          this.processFolders();
-          return;
-        }
-        if (this.settings.enableCompatQuickExplorer) {
-          if ((_d = (_c = CompatQuickExplorer).shouldMutationRecordTriggerFolderReProcessing) == null ? void 0 : _d.call(_c, record)) {
-            this.processFolders();
-          }
-        }
+      const feClasses = [
+        "nav-folder",
+        "nav-files-container"
+      ];
+      const shouldTriggerProcessFolders = mutationRecord.some((record) => {
+        var _a, _b;
+        if (feClasses.some((c) => {
+          var _a2, _b2;
+          return (_b2 = (_a2 = record.target) == null ? void 0 : _a2.parentElement) == null ? void 0 : _b2.classList.contains(c);
+        }))
+          return true;
+        if (this.settings.enableCompatQuickExplorer && ((_b = (_a = CompatQuickExplorer).shouldMutationRecordTriggerFolderReProcessing) == null ? void 0 : _b.call(_a, record)))
+          return true;
+        return false;
       });
+      if (!shouldTriggerProcessFolders)
+        return;
+      this.processFolders();
     });
     this.mutationObserver.observe(window.document, { childList: true, subtree: true });
     this.registerEvent(this.app.vault.on("rename", () => {
@@ -193,7 +212,9 @@ var HideFoldersPlugin = class extends import_obsidian.Plugin {
     this.app.workspace.onLayoutReady(() => {
       if (!this.settings.areFoldersHidden)
         return;
-      this.processFolders();
+      window.setTimeout(() => {
+        this.processFolders();
+      }, 1e3);
     });
   }
   onunload() {
@@ -241,6 +262,17 @@ var HideFoldersPluginSettingTab = class extends import_obsidian.PluginSettingTab
       this.plugin.settings.addHiddenFoldersToObsidianIgnoreList = value;
       await this.plugin.saveSettings();
       await this.plugin.updateObsidianIgnoreList(!value);
+    }));
+    new import_obsidian.Setting(containerEl).setName('Hide bottom status-bar "Folders are Hidden" indicator').setDesc("If enable there will be no bottom-bar indicator-text telling you if this plugin is active.").addToggle((toggle) => toggle.setValue(this.plugin.settings.hideBottomStatusBarIndicatorText).onChange(async (value) => {
+      var _a;
+      this.plugin.settings.hideBottomStatusBarIndicatorText = value;
+      if (value) {
+        (_a = this.plugin.statusBarItem) == null ? void 0 : _a.remove();
+        this.plugin.statusBarItem = void 0;
+      } else {
+        this.plugin.createBottomStatusBarIndicatorTextItem();
+      }
+      await this.plugin.saveSettings();
     }));
     new import_obsidian.Setting(experimentalSettingsContainerEl).setName("[EXPERIMENTAL] Compatibility: quick-explorer by pjeby").setDesc("[WARNING: UNSTABLE] Also hide hidden folders in the https://github.com/pjeby/quick-explorer plugin. Not affiliated with quick-explorer's author.").addToggle((toggle) => toggle.setValue(this.plugin.settings.enableCompatQuickExplorer).onChange(async (value) => {
       this.plugin.settings.enableCompatQuickExplorer = value;

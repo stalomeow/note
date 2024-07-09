@@ -1,12 +1,16 @@
-<!-- Post excerpt -->
 <article class="md-post md-post--excerpt">
+  <div class="md-post__content md-typeset">
+    {{ post.content }}
+  </div>
   <header class="md-post__header">
-
-    <!-- Post metadata -->
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
-
-        <!-- Post Source RSS -->
+        <li class="md-meta__item">
+          <time datetime="{{ post.publish }}">
+            {{- post.publish -}}
+          </time>
+          {#- Collapse whitespace -#}
+        </li>
         {% if post.srcRSS %}
           <li class="md-meta__item">
             <a
@@ -19,16 +23,6 @@
             {#- Collapse whitespace -#}
           </li>
         {% endif %}
-
-        <!-- Post date -->
-        <li class="md-meta__item">
-          <time datetime="{{ post.publish }}">
-            {{- post.publish -}}
-          </time>
-          {#- Collapse whitespace -#}
-        </li>
-
-        <!-- Post tags -->
         {% if post.tags %}
           <li class="md-meta__item">
             {{ lang.t("blog.categories.in") }}
@@ -38,20 +32,7 @@
             {% endfor -%}
           </li>
         {% endif %}
-
       </ul>
     </div>
   </header>
-
-  <!-- Post content -->
-  <div class="md-post__content md-typeset">
-    {{ post.content }}
-
-    <!-- Continue reading link -->
-    <nav class="md-post__action">
-      <a href="{{ post.url }}" target="_blank">
-        {{ lang.t("blog.continue") }}
-      </a>
-    </nav>
-  </div>
 </article>

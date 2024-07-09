@@ -139,11 +139,12 @@ class PostInfo(object):
 
         self.content = f'<h2 id="_1"><a class="toclink" href="{entry.link}" target="_blank">{entry.title}</a></h2>'
 
-        if hasattr(entry, 'summary_detail'):
-            if entry.summary_detail.type == 'text/plain':
-                self.content += f'<p>{entry.summary_detail.value}</p>'
-            else:
-                self.content += entry.summary_detail.value
+        # 现在只留一个标题，不要内容了
+        # if hasattr(entry, 'summary_detail'):
+        #     if entry.summary_detail.type == 'text/plain':
+        #         self.content += f'<p>{entry.summary_detail.value}</p>'
+        #     else:
+        #         self.content += entry.summary_detail.value
 
 class CategoryInfo(MultiPagePostsInfo):
     def __init__(self, slug: str, title: str, description: Union[str, None]) -> None:
