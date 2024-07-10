@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "77da110a8c7ca139",
+        "id": "938bfc6e41729c27",
         "type": "tabs",
         "children": [
           {
-            "id": "74356650d8b2cfb2",
+            "id": "6e862bf53cedd0e3",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -161,8 +161,17 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "74356650d8b2cfb2",
+  "active": "a86edf9e473aa4d9",
   "lastOpenFiles": [
+    "posts/Misc/指数函数与其反函数的交点个数.md",
+    "attachments/step-function.png",
+    "attachments/dirac-delta-function.png",
+    "attachments/exp-func-and-its-inverse-func-intersections-1.png",
+    "attachments/exp-func-and-its-inverse-func-intersections-0.png",
+    "attachments/exp-func-and-its-inverse-func-intersections-2.png",
+    "attachments/2023-07-26/exp-func-and-its-inverse-func-intersections-2.png",
+    "attachments/2023-07-26/exp-func-and-its-inverse-func-intersections-1.png",
+    "attachments/2023-07-26/exp-func-and-its-inverse-func-intersections-0.png",
     "posts/Web/Nuxt 3 开发避坑.md",
     "posts/大学作业/实信号与复信号的频谱实验.md",
     "posts/Unity/复刻星穹铁道 2.0 梦境迷钟.md",
@@ -183,12 +192,10 @@
     "posts/Unity/优化迭代和协程的 GC.md",
     "notes/开发/Unity/Unity 中使用 KCP 协议.md",
     "posts/Unity/编辑器/平滑模型法线.md",
-    "posts/Misc/指数函数与其反函数的交点个数.md",
     "posts/Misc/LeetCode 题目描述转 Markdown.md",
     "posts/Misc/下载微信视频号的视频.md",
     "posts/Misc/青雀进暗杠的抽牌数期望.md",
     "posts/Misc/百度网盘直链下载.md",
-    "notes/开发/Web 前端/个人常用的 MathJax Macro.md",
     "posts/后端",
     "posts/Web",
     "posts/Unity/编辑器",
@@ -201,14 +208,6 @@
     "博客/posts",
     "attachments/Pasted image 20240617170316.png",
     "attachments/Pasted image 20240617170240.png",
-    "attachments/Pasted image 20240617170137.png",
-    "attachments/wireshark-exp-tcp-close.png",
-    "attachments/wireshark-exp-tcp-conn.png",
-    "attachments/wireshark-exp-ethernet-data.png",
-    "attachments/wireshark-exp-ip-data.png",
-    "attachments/wireshark-exp-tcp-data.png",
-    "attachments/wireshark-exp-http-data.png",
-    "attachments/fourier-rice-dumpling.png",
     "未命名.canvas"
   ]
 }
