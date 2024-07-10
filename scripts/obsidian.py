@@ -39,6 +39,11 @@ def should_ignore_obsidian_file(f: File) -> bool:
 
     return False
 
+def is_obsidian_note_file(f: File) -> bool:
+    if not f.is_documentation_page():
+        return False
+    return f.src_uri.startswith(posixpath.join(OBSIDIAN_VAULT_DIR, 'notes'))
+
 @event_priority(100) # 放在最前面执行，不要处理其他插件生成的文件
 def on_files(files: Files, config: MkDocsConfig):
     invalid_doc_count = 0
@@ -60,17 +65,20 @@ def on_files(files: Files, config: MkDocsConfig):
 
         if f.is_documentation_page():
             valid_doc_count += 1
-            _, frontmatter = meta.get_data(f.content_string)
 
-            # 有 slug 的话就用 slug 作为文件名
-            if 'slug' in frontmatter:
-                slug = transform_slug(str(frontmatter['slug']))
-                if not f.use_directory_urls:
-                    f.dest_uri = posixpath.join('notes', slug + '.html')
+            # notes 里的文档需要处理 slug
+            if is_obsidian_note_file(f):
+                _, frontmatter = meta.get_data(f.content_string)
+
+                # 有 slug 的话就用 slug 作为文件名
+                if 'slug' in frontmatter:
+                    slug = transform_slug(str(frontmatter['slug']))
+                    if not f.use_directory_urls:
+                        f.dest_uri = posixpath.join('', slug + '.html')
+                    else:
+                        f.dest_uri = posixpath.join('', slug, 'index.html')
                 else:
-                    f.dest_uri = posixpath.join('notes', slug, 'index.html')
-            else:
-                log.warning('Obsidian document \'%s\' does not have a slug.', f.src_uri)
+                    log.warning('Obsidian document \'%s\' does not have a slug.', f.src_uri)
 
         wiki_link_name_map[posixpath.basename(f.src_uri)] = f
         wiki_link_path_map[f.src_uri] = f
@@ -82,13 +90,13 @@ def on_files(files: Files, config: MkDocsConfig):
         files.remove(f)
     return files
 
-def update_obsidian_root(nav: Navigation):
+def find_and_update_obsidian_root(nav: Navigation) -> Section:
     # 找到 obsidian-vault
     for i, item in enumerate(nav.items):
         if isinstance(item, Section) and item.title.lower().count('obsidian') > 0:
             break
     else:
-        return None
+        raise Exception('Obsidian vault not found in navigation.')
 
     # 将 obsidian-vault 下的 notes 作为 root，其他丢弃
     for child in item.children:
@@ -96,7 +104,25 @@ def update_obsidian_root(nav: Navigation):
             child.parent = None
             nav.items[i] = child
             return child
-    return None
+    else:
+        raise Exception('Obsidian notes not found in navigation.')
+
+def move_index_page_and_obsidian_root(nav: Navigation, obsidian_root: Section):
+    # 找到网站的 index
+    for i, item in enumerate(nav.items):
+        if isinstance(item, Page) and item.is_index:
+            break
+    else:
+        raise Exception('Index page not found in navigation.')
+
+    # 将网站的 index 放到 obsidian root 下的最前面
+    nav.items.pop(i)
+    item.parent = obsidian_root
+    obsidian_root.children.insert(0, item)
+
+    # 将 obsidian root 移到最前面
+    nav.items.remove(obsidian_root)
+    nav.items.insert(0, obsidian_root)
 
 def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
     def get_entry_key(entry):
@@ -137,9 +163,9 @@ def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
         folders.sort(key=get_entry_key)
         entry.children = folders + files # 文件夹放在文件前面
 
-    obsidian_root = update_obsidian_root(nav)
-    if obsidian_root is not None:
-        dfs(obsidian_root) # 重新排序
+    obsidian_root = find_and_update_obsidian_root(nav)
+    dfs(obsidian_root) # 将下面的文章重新排序
+    move_index_page_and_obsidian_root(nav, obsidian_root)
     return nav
 
 def transform_wiki_links(markdown: str, page: Page, config: MkDocsConfig) -> str:
