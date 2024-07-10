@@ -1,58 +1,45 @@
 {% if page.meta.comments == true and config.site_url != "http://127.0.0.1:8000/" %}
   <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
-
-  <!-- Insert generated snippet here -->
-  <script 
-    src="https://giscus.app/client.js"
-    data-repo="stalomeow/note"
-    data-repo-id="R_kgDOIiy-JQ"
-    data-category="General"
-    data-category-id="DIC_kwDOIiy-Jc4CS79f"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="top"
-    data-theme="light"
-    data-lang="zh-CN"
-    data-loading="lazy"
-    crossorigin="anonymous"
-    async="">
-  </script>
-
-  <!-- Synchronize Giscus theme with palette -->
   <script>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    // Set palette on initial load
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-      var theme = palette.color.scheme === "slate"
-        ? "transparent_dark"
-        : "light"
-
-      // Instruct Giscus to set theme
-      giscus.setAttribute("data-theme", theme) 
-    }
-
-    // Register event handlers after documented loaded
-    document.addEventListener("DOMContentLoaded", function() {
-      var ref = document.querySelector("[data-md-component=palette]")
-      ref.addEventListener("change", function() {
-        var palette = __md_get("__palette")
+    !function() {
+      function getTheme(action) {
+        let palette = __md_get("__palette");
         if (palette && typeof palette.color === "object") {
-          var theme = palette.color.scheme === "slate"
-            ? "transparent_dark"
-            : "light"
-
-          // Instruct Giscus to change theme
-          var frame = document.querySelector(".giscus-frame")
-          frame.contentWindow.postMessage(
-            { giscus: { setConfig: { theme } } },
-            "https://giscus.app"
-          )
+          return palette.color.scheme === "slate" ? "transparent_dark" : "light";
         }
-      })
-    })
+        return "light";
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // Support instant loading
+        document$.subscribe(() => {
+          let s = document.createElement("script");
+          s.setAttribute("src", "https://giscus.app/client.js");
+          s.setAttribute("data-repo", "stalomeow/note");
+          s.setAttribute("data-repo-id", "R_kgDOIiy-JQ");
+          s.setAttribute("data-category", "General");
+          s.setAttribute("data-category-id", "DIC_kwDOIiy-Jc4CS79f");
+          s.setAttribute("data-mapping", "pathname");
+          s.setAttribute("data-strict", "0");
+          s.setAttribute("data-reactions-enabled", "1");
+          s.setAttribute("data-emit-metadata", "0");
+          s.setAttribute("data-input-position", "top");
+          s.setAttribute("data-theme", getTheme());
+          s.setAttribute("data-lang", "zh-CN");
+          s.setAttribute("data-loading", "lazy");
+          s.setAttribute("crossorigin", "anonymous");
+          s.setAttribute("async", "");
+          document.querySelector("#__comments").insertAdjacentElement("afterend", s);
+        });
+
+        // Instruct Giscus to change theme
+        document.querySelector("[data-md-component=palette]").addEventListener("change", () => {
+          document.querySelector(".giscus-frame").contentWindow.postMessage(
+            { giscus: { setConfig: { theme: getTheme() } } },
+            "https://giscus.app"
+          );
+        });
+      });
+    }();
   </script>
 {% endif %}

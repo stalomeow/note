@@ -48,6 +48,7 @@ npx nuxi@latest init <project-name>
     ``` bash
     npx nuxi-nightly@latest init <project-name>
     ```
+
 4. 使用 [[Clash 的 TUN 模式]]，不用系统代理。
 
 

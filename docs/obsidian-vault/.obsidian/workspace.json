@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "27b7c3f022bc150f",
+        "id": "77da110a8c7ca139",
         "type": "tabs",
         "children": [
           {
-            "id": "7ad39c972b470e8e",
+            "id": "74356650d8b2cfb2",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -161,8 +161,9 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "7ad39c972b470e8e",
+  "active": "74356650d8b2cfb2",
   "lastOpenFiles": [
+    "posts/Web/Nuxt 3 开发避坑.md",
     "posts/大学作业/实信号与复信号的频谱实验.md",
     "posts/Unity/复刻星穹铁道 2.0 梦境迷钟.md",
     "posts/Unity/解决 GetComponentInParent on PrefabAsset returns null.md",
@@ -188,7 +189,6 @@
     "posts/Misc/青雀进暗杠的抽牌数期望.md",
     "posts/Misc/百度网盘直链下载.md",
     "notes/开发/Web 前端/个人常用的 MathJax Macro.md",
-    "posts/后端/游戏注册、登录和鉴权.md",
     "posts/后端",
     "posts/Web",
     "posts/Unity/编辑器",
