@@ -174,8 +174,8 @@
   "active": "c24d0bc341e26caa",
   "lastOpenFiles": [
     "posts/仿星铁渲染/仿星铁渲染：Bloom.md",
-    "posts/仿星铁渲染/仿星铁渲染：逐物体场景阴影和自阴影.md",
     "posts/仿星铁渲染/仿星铁渲染：平滑模型法线.md",
+    "posts/仿星铁渲染/仿星铁渲染：逐物体场景阴影和自阴影.md",
     "posts/图形/深度重建世界坐标.md",
     "posts/Unity/Allocate RT 时记得指定 filterMode 和 wrapMode.md",
     "posts/Unity/在 UI 上实现目标追踪.md",
