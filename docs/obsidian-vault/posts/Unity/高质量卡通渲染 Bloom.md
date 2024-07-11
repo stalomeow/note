@@ -4,6 +4,7 @@ slug: high-quality-toon-bloom
 categories:
   - Unity
   - 图形渲染
+  - Universal RP
 draft: false
 comments: true
 ---

@@ -4,6 +4,7 @@ slug: srp-batch-multipass-shader
 categories:
   - Unity
   - 图形渲染
+  - Universal RP
 draft: false
 comments: true
 ---

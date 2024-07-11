@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "938bfc6e41729c27",
+        "id": "8ca347adc8f7c3f8",
         "type": "tabs",
         "children": [
           {
-            "id": "6e862bf53cedd0e3",
+            "id": "fa7c7949a1d2b9b2",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -73,7 +73,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "posts/Unity/Unity Shader 平台差异.md"
+              }
             }
           },
           {
@@ -82,6 +84,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "posts/Unity/Unity Shader 平台差异.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -93,6 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "posts/Unity/Unity Shader 平台差异.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,6 +120,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "posts/Unity/Unity Shader 平台差异.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -163,6 +168,24 @@
   },
   "active": "a86edf9e473aa4d9",
   "lastOpenFiles": [
+    "posts/Unity/Unity 常用 Render State 属性 UI.md",
+    "posts/Unity/Material Property Drawer.md",
+    "posts/Unity/Full Generic Sharing 原理.md",
+    "posts/Unity/Allocate RT 时记得指定 filterMode 和 wrapMode.md",
+    "posts/Unity/在 UI 上实现目标追踪.md",
+    "posts/Unity/实现 Main Light Per-Object Shadow.md",
+    "posts/Unity/优化迭代和协程的 GC.md",
+    "posts/Unity/实现 IJobParallelForAppend.md",
+    "posts/Unity/让 SRP Batch 支持 Multipass Shader.md",
+    "posts/Unity/解决 GetComponentInParent on PrefabAsset returns null.md",
+    "posts/Unity/后处理 Shader 的 Render State 设置.md",
+    "posts/Unity/高质量卡通渲染 Bloom.md",
+    "posts/Unity/复刻星穹铁道 2.0 梦境迷钟.md",
+    "posts/图形/用 RenderDoc 和模拟器抓帧安卓手游.md",
+    "posts/图形/提取 WebGL Shader.md",
+    "posts/图形/深度重建世界坐标.md",
+    "posts/图形/法线贴图压缩.md",
+    "attachments/Pasted image 20240711142202.png",
     "posts/Misc/指数函数与其反函数的交点个数.md",
     "attachments/step-function.png",
     "attachments/dirac-delta-function.png",
@@ -174,28 +197,12 @@
     "attachments/2023-07-26/exp-func-and-its-inverse-func-intersections-0.png",
     "posts/Web/Nuxt 3 开发避坑.md",
     "posts/大学作业/实信号与复信号的频谱实验.md",
-    "posts/Unity/复刻星穹铁道 2.0 梦境迷钟.md",
-    "posts/Unity/解决 GetComponentInParent on PrefabAsset returns null.md",
     "notes/开发/Windows/Windows 程序防多开.md",
     "notes/开发/Windows/Windows 全局钩子.md",
     "notes/开发/Windows/DLL 进程间共享数据.md",
     "notes/开发/Windows/查看 Win32 错误码对应的描述.md",
     "notes/开发/Windows/开发效率/提高 Windows 上的开发效率.md",
     "notes/开发/Windows/开发效率/Windows Sudo.md",
-    "notes/开发/Windows/开发效率/Windows PowerToys.md",
-    "notes/开发/Windows/开发效率/Windows 上用 CapsLock 切换中英文.md",
-    "notes/开发/Windows/开发效率/Windows 任务栏改成状态栏.md",
-    "notes/开发/Windows/开发效率/Windows 快捷键.md",
-    "notes/开发/Windows/开发效率/小狼毫输入法.md",
-    "posts/Unity/Full Generic Sharing 原理.md",
-    "posts/Unity/Material Property Drawer.md",
-    "posts/Unity/优化迭代和协程的 GC.md",
-    "notes/开发/Unity/Unity 中使用 KCP 协议.md",
-    "posts/Unity/编辑器/平滑模型法线.md",
-    "posts/Misc/LeetCode 题目描述转 Markdown.md",
-    "posts/Misc/下载微信视频号的视频.md",
-    "posts/Misc/青雀进暗杠的抽牌数期望.md",
-    "posts/Misc/百度网盘直链下载.md",
     "posts/后端",
     "posts/Web",
     "posts/Unity/编辑器",
@@ -207,7 +214,6 @@
     "博客",
     "博客/posts",
     "attachments/Pasted image 20240617170316.png",
-    "attachments/Pasted image 20240617170240.png",
     "未命名.canvas"
   ]
 }

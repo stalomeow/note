@@ -4,6 +4,7 @@ slug: main-light-per-object-shadow
 categories:
   - Unity
   - 图形渲染
+  - Universal RP
 draft: false
 comments: true
 ---
