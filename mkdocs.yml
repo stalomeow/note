@@ -1,6 +1,6 @@
 site_name: Stalo's Note
 site_url: https://note.stalomeow.com/
-site_description: Stalo's online notebook.
+site_description: Stalo's notebook.
 repo_name: stalomeow/note
 repo_url: https://github.com/stalomeow/note
 edit_uri: blob/main/docs/ # do not use "edit/main/docs/"
@@ -212,8 +212,11 @@ plugins:
       enabled: !ENV [CI, false]
       json_feed_enabled: false
       abstract_chars_count: -1
+      categories:
+        - categories # will also look into page.meta.categories
       comments_path: "#__comments"
       match_path: "obsidian-vault(/|\\\\)posts(/|\\\\).*"
+      length: 20
       date_from_meta:
         as_creation: date
         as_update: git
