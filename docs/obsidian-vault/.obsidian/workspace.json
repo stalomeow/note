@@ -11,8 +11,13 @@
             "id": "fa7c7949a1d2b9b2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "posts/图形/深度重建世界坐标.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -74,7 +79,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/Unity/Unity Shader 平台差异.md"
+                "file": "posts/图形/深度重建世界坐标.md"
               }
             }
           },
@@ -84,7 +89,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/Unity/Unity Shader 平台差异.md",
+                "file": "posts/图形/深度重建世界坐标.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -96,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/Unity/Unity Shader 平台差异.md",
+                "file": "posts/图形/深度重建世界坐标.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +125,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "posts/Unity/Unity Shader 平台差异.md",
+                "file": "posts/图形/深度重建世界坐标.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -166,7 +171,7 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "a86edf9e473aa4d9",
+  "active": "fa7c7949a1d2b9b2",
   "lastOpenFiles": [
     "posts/Unity/Unity 常用 Render State 属性 UI.md",
     "posts/Unity/Material Property Drawer.md",
