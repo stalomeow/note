@@ -1,16 +1,19 @@
 ---
-slug: "240425200700"
-date: 2024-04-25
+date: 2023-12-23T20:28:41
+slug: patch-package-cache-problem
+categories:
+  - Web
+draft: false
+comments: true
 ---
 
 # 解决 patch-package 不生效的问题
 
+<!-- more -->
 
-`patch-package` 是一个 npm 包，用来快速修复其他包中的 bug， 不需要等原作者更新。
+`patch-package` 是一个 npm 包，用来快速修复其他包中的 bug， 不需要等原作者更新。GitHub: [https://github.com/ds300/patch-package](https://github.com/ds300/patch-package)。
 
-- GitHub: [https://github.com/ds300/patch-package](https://github.com/ds300/patch-package)。
-
-有新的 Patch 时，记得把之前的 Cache 清除掉，否则新 Patch 可能生效不了。
+==有新的 Patch 时，记得把之前的 Cache 清除掉，否则新 Patch 可能生效不了。==
 
 ##  Vercel
 

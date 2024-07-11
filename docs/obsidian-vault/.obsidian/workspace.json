@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "8ca347adc8f7c3f8",
+        "id": "2e71c2eda7e3cd26",
         "type": "tabs",
         "children": [
           {
-            "id": "fa7c7949a1d2b9b2",
+            "id": "c24d0bc341e26caa",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/图形/深度重建世界坐标.md",
+                "file": "posts/仿星铁渲染/仿星铁渲染：逐物体场景阴影和自阴影.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": false
@@ -79,7 +79,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/图形/深度重建世界坐标.md"
+                "file": "posts/仿星铁渲染/仿星铁渲染：逐物体场景阴影和自阴影.md"
               }
             }
           },
@@ -89,7 +89,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/图形/深度重建世界坐标.md",
+                "file": "posts/仿星铁渲染/仿星铁渲染：逐物体场景阴影和自阴影.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/图形/深度重建世界坐标.md",
+                "file": "posts/仿星铁渲染/仿星铁渲染：逐物体场景阴影和自阴影.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "posts/图形/深度重建世界坐标.md",
+                "file": "posts/仿星铁渲染/仿星铁渲染：逐物体场景阴影和自阴影.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -171,27 +171,36 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "fa7c7949a1d2b9b2",
+  "active": "c24d0bc341e26caa",
   "lastOpenFiles": [
-    "posts/Unity/Unity 常用 Render State 属性 UI.md",
-    "posts/Unity/Material Property Drawer.md",
-    "posts/Unity/Full Generic Sharing 原理.md",
+    "posts/仿星铁渲染/仿星铁渲染：Bloom.md",
+    "posts/仿星铁渲染/仿星铁渲染：逐物体场景阴影和自阴影.md",
+    "posts/仿星铁渲染/仿星铁渲染：平滑模型法线.md",
+    "posts/图形/深度重建世界坐标.md",
     "posts/Unity/Allocate RT 时记得指定 filterMode 和 wrapMode.md",
     "posts/Unity/在 UI 上实现目标追踪.md",
-    "posts/Unity/实现 Main Light Per-Object Shadow.md",
-    "posts/Unity/优化迭代和协程的 GC.md",
-    "posts/Unity/实现 IJobParallelForAppend.md",
-    "posts/Unity/让 SRP Batch 支持 Multipass Shader.md",
-    "posts/Unity/解决 GetComponentInParent on PrefabAsset returns null.md",
-    "posts/Unity/后处理 Shader 的 Render State 设置.md",
-    "posts/Unity/高质量卡通渲染 Bloom.md",
-    "posts/Unity/复刻星穹铁道 2.0 梦境迷钟.md",
     "posts/图形/用 RenderDoc 和模拟器抓帧安卓手游.md",
     "posts/图形/提取 WebGL Shader.md",
-    "posts/图形/深度重建世界坐标.md",
     "posts/图形/法线贴图压缩.md",
-    "attachments/Pasted image 20240711142202.png",
+    "posts/Unity/后处理 Shader 的 Render State 设置.md",
+    "posts/Unity/编辑器/IL Post-Process.md",
+    "posts/Unity/编辑器/用 RenderDoc 持续截帧 Unity Editor Game View.md",
+    "posts/Unity/编辑器/将 GIF 直接导入为 AnimationClip.md",
+    "posts/Web/解决 patch-package 不生效的问题.md",
+    "posts/Web/Nuxt 3 开发避坑.md",
+    "posts/Web/原生 js 将内存中数据下载为文件.md",
+    "posts/Web/网页中嵌入 b 站视频.md",
+    "posts/Misc/百度网盘直链下载.md",
+    "posts/Misc/青雀进暗杠的抽牌数期望.md",
+    "posts/Misc/下载微信视频号的视频.md",
     "posts/Misc/指数函数与其反函数的交点个数.md",
+    "posts/Misc/LeetCode 题目描述转 Markdown.md",
+    "posts/Misc/Windows 上用 CapsLock 切换中英文.md",
+    "notes/开发/Windows/Windows 全局钩子.md",
+    "notes/开发/Windows/Windows 程序防多开.md",
+    "notes/开发/Windows/DLL 进程间共享数据.md",
+    "posts/仿星铁渲染",
+    "attachments/Pasted image 20240711142202.png",
     "attachments/step-function.png",
     "attachments/dirac-delta-function.png",
     "attachments/exp-func-and-its-inverse-func-intersections-1.png",
@@ -200,14 +209,6 @@
     "attachments/2023-07-26/exp-func-and-its-inverse-func-intersections-2.png",
     "attachments/2023-07-26/exp-func-and-its-inverse-func-intersections-1.png",
     "attachments/2023-07-26/exp-func-and-its-inverse-func-intersections-0.png",
-    "posts/Web/Nuxt 3 开发避坑.md",
-    "posts/大学作业/实信号与复信号的频谱实验.md",
-    "notes/开发/Windows/Windows 程序防多开.md",
-    "notes/开发/Windows/Windows 全局钩子.md",
-    "notes/开发/Windows/DLL 进程间共享数据.md",
-    "notes/开发/Windows/查看 Win32 错误码对应的描述.md",
-    "notes/开发/Windows/开发效率/提高 Windows 上的开发效率.md",
-    "notes/开发/Windows/开发效率/Windows Sudo.md",
     "posts/后端",
     "posts/Web",
     "posts/Unity/编辑器",
@@ -217,7 +218,6 @@
     "posts/大学作业",
     "posts/Unity",
     "博客",
-    "博客/posts",
     "attachments/Pasted image 20240617170316.png",
     "未命名.canvas"
   ]

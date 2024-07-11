@@ -1,9 +1,15 @@
 ---
-slug: "240501013644"
-date: 2024-05-01
+date: 2024-05-01T21:09:28
+slug: windows-capslock-ime
+categories:
+  - Misc
+draft: false
+comments: true
 ---
 
 # Windows 上用 CapsLock 切换中英文
+
+<!-- more -->
 
 微软输入法切换中英文的按键选择有 Ctrl、Shift、Ctrl+Space，但它们都是其他软件常用的修饰符/快捷键，肯定没法用。后来，我用一个纯英文键盘布局和一个纯中文键盘布局，靠 Win+Space 切换，但这个快捷键按着也挺麻烦。
 

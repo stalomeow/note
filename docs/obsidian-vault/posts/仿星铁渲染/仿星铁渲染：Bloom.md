@@ -1,6 +1,6 @@
 ---
 date: 2024-03-05T18:19:01
-slug: high-quality-toon-bloom
+slug: toon-bloom
 categories:
   - Unity
   - 图形渲染
@@ -9,7 +9,7 @@ draft: false
 comments: true
 ---
 
-# 高质量卡通渲染 Bloom
+# 仿星铁渲染：Bloom
 
 <!-- more -->
 

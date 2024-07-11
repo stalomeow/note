@@ -182,8 +182,8 @@ plugins:
   - redirects:
       redirect_maps:
         'blog/posts/unity-hsr-dream-ticker-2024-02-18.md': 'obsidian-vault/posts/Unity/复刻星穹铁道 2.0 梦境迷钟.md'
-        'blog/posts/high-quality-toon-bloom-2024-03-05.md': 'obsidian-vault/posts/Unity/高质量卡通渲染 Bloom.md'
-        'blog/posts/main-light-per-object-shadow-2024-03-15.md': 'obsidian-vault/posts/Unity/实现 Main Light Per-Object Shadow.md'
+        'blog/posts/high-quality-toon-bloom-2024-03-05.md': 'obsidian-vault/posts/仿星铁渲染/仿星铁渲染：Bloom.md'
+        'blog/posts/main-light-per-object-shadow-2024-03-15.md': 'obsidian-vault/posts/仿星铁渲染/仿星铁渲染：逐物体场景阴影和自阴影.md'
         'basic/advanced-math/fourier-epicycles.md': 'obsidian-vault/posts/大学作业/傅里叶级数实现本轮画图.md'
   - blog:
       enabled: true

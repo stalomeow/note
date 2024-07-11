@@ -1,9 +1,15 @@
 ---
-slug: "240425200331"
-date: 2024-04-25
+date: 2023-03-03T15:29:57
+slug: bilibili-iframe
+categories:
+  - Web
+draft: false
+comments: true
 ---
 
 # 网页中嵌入 b 站视频
+
+<!-- more -->
 
 ## 常用的播放器参数
 
@@ -46,7 +52,7 @@ date: 2024-04-25
 }
 ```
 
-### Html
+### HTML
 
 ``` html
 <div class="responsive-video-container">

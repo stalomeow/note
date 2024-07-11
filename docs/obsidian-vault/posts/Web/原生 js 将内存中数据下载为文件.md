@@ -1,12 +1,15 @@
 ---
-slug: "240425200629"
-date: 2024-04-25
+date: 2023-12-23T17:19:26
+slug: download-data-in-memory-as-file
+categories:
+  - Web
+draft: false
+comments: true
 ---
 
-# 将内存中数据下载为文件
+# 原生 js 将内存中数据下载为文件
 
-
-原生 js 实现：将内存中数据下载为文件。
+<!-- more -->
 
 ## 实现
 
