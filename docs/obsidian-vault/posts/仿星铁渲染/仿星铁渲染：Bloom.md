@@ -13,23 +13,9 @@ comments: true
 
 <!-- more -->
 
-我个人认为卡通渲染里 Bloom 还是挺重要的，它能对画面起到润色作用，比简单地后期调高饱和度要好看很多。
+卡通渲染里 Bloom 还是挺重要的，它能对画面起到润色作用，比简单地后期调高饱和度要好看很多。
 
 ![[bloom-toon.png|Bloom 效果图]]
-
-参考了几篇文章：
-
-- [米哈游技术总监首次分享：移动端高品质卡通渲染的实现与优化方案 -腾讯游戏学堂](https://gwb.tencent.com/community/detail/124756)
-- [高质量泛光（bloom）从理论到实战 - 知乎](https://zhuanlan.zhihu.com/p/525500877)
-- [高质量泛光Bloom改进以及高斯核采样的优化 - 知乎](https://zhuanlan.zhihu.com/p/630726865)
-
-## 什么是高质量 Bloom
-
-借上面几篇知乎文章里说的：
-
-1. 发光物边缘向外「扩张」得足够大。
-2. 发光物中心足够亮（甚至超过 1.0 而被 clamp 成白色）。
-3. 该亮的地方（灯芯、火把）要亮，不该亮的地方（白色墙壁、皮肤）不亮。
 
 ## 大致流程图
 
@@ -75,7 +61,7 @@ color = max(0, color - _BloomThreshold.rrr);
 
 降采样是为了之后用较小的卷积核模糊更大的范围，就是 Mipmap 的思路。一般用 bilinear 每次长和宽都减少一半。
 
-### 抗闪烁
+### 避免闪烁
 
 常见的方法是 COD 用的 Karis Average：在第一次降采样时，给颜色乘上一个 `weight`，避免出现超级亮的像素。
 
@@ -281,6 +267,16 @@ return EncodeHDR(color);
 ### 防漏光
 
 刚才叠加时是用 bilinear 采样的，在某张图边缘采样时可能采样到图集里的另一张图。解决方法是，在图和图之间加几个像素的 padding，一般 1 个像素就差不多了。
+
+## 完整代码
+
+[GitHub: stalomeow/StarRailNPRShader](https://github.com/stalomeow/StarRailNPRShader)
+
+## 参考文章
+
+- [米哈游技术总监首次分享：移动端高品质卡通渲染的实现与优化方案 -腾讯游戏学堂](https://gwb.tencent.com/community/detail/124756)
+- [高质量泛光（bloom）从理论到实战 - 知乎](https://zhuanlan.zhihu.com/p/525500877)
+- [高质量泛光Bloom改进以及高斯核采样的优化 - 知乎](https://zhuanlan.zhihu.com/p/630726865)
 
 ## 进一步阅读
 
