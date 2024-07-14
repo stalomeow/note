@@ -54,7 +54,7 @@ theme:
 
     - content.tooltips
     - content.code.copy
-    - content.code.annotate
+    # - content.code.annotate
     - content.action.edit
 
     - navigation.instant
@@ -124,15 +124,19 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
-  - pymdownx.snippets
   - pymdownx.highlight:
       # auto_title: true
-      linenums: true
-      anchor_linenums: true
+      # linenums: true
+      # anchor_linenums: true
       use_pygments: true
-      line_spans: __span # When this option is set, each line of a code block is wrapped in a span, which is essential for features like line highlighting to work correctly
+      # line_spans: __span # When this option is set, each line of a code block is wrapped in a span, which is essential for features like line highlighting to work correctly
   - pymdownx.inlinehilite
-  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true 
   - toc:
@@ -147,11 +151,6 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
 
 
 plugins:
