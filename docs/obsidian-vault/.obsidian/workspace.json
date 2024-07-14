@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/仿星铁渲染/仿星铁渲染：主光源逐物体阴影.md",
+                "file": "posts/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": false
@@ -79,7 +79,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/仿星铁渲染/仿星铁渲染：主光源逐物体阴影.md"
+                "file": "posts/仿星铁渲染/仿星铁渲染：主光源角色阴影.md"
               }
             }
           },
@@ -89,7 +89,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/仿星铁渲染/仿星铁渲染：主光源逐物体阴影.md",
+                "file": "posts/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/仿星铁渲染/仿星铁渲染：主光源逐物体阴影.md",
+                "file": "posts/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "posts/仿星铁渲染/仿星铁渲染：主光源逐物体阴影.md",
+                "file": "posts/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -173,9 +173,11 @@
   },
   "active": "0f320e9ce3245055",
   "lastOpenFiles": [
-    "notes/求职/米哈游 2025 校招技术提前批 JD.md",
-    "posts/仿星铁渲染/仿星铁渲染：主光源逐物体阴影.md",
+    "attachments/Pasted image 20240714171941.png",
+    "attachments/Pasted image 20240714171505.png",
     "posts/仿星铁渲染/仿星铁渲染：Bloom.md",
+    "posts/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
+    "notes/求职/米哈游 2025 校招技术提前批 JD.md",
     "posts/仿星铁渲染/仿星铁渲染：平滑模型法线.md",
     "posts/图形/深度重建世界坐标.md",
     "posts/Unity/Allocate RT 时记得指定 filterMode 和 wrapMode.md",
@@ -198,7 +200,6 @@
     "posts/Misc/LeetCode 题目描述转 Markdown.md",
     "posts/Misc/Windows 上用 CapsLock 切换中英文.md",
     "notes/开发/Windows/Windows 全局钩子.md",
-    "notes/开发/Windows/Windows 程序防多开.md",
     "posts/仿星铁渲染",
     "attachments/Pasted image 20240711142202.png",
     "attachments/step-function.png",
@@ -218,7 +219,6 @@
     "posts/大学作业",
     "posts/Unity",
     "博客",
-    "attachments/Pasted image 20240617170316.png",
     "未命名.canvas"
   ]
 }
