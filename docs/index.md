@@ -8,7 +8,7 @@ comments: true
 
 我是西电 2022 级本科生，计科专业。
 
-## 本站内容
+## 导航
 
 <div class="grid cards" markdown>
 
@@ -38,8 +38,12 @@ comments: true
 
 </div>
 
-## 技术相关
+## 开发本站使用的工具
 
-网站使用 [MkDocs 框架](https://www.mkdocs.org/){target="_blank"} + [Material 主题](https://squidfunk.github.io/mkdocs-material/){target="_blank"}制作，云端构建，部署在 [Vercel](https://vercel.com/){target="_blank"} 上。版本管理工具是 [Git](https://git-scm.com/){target="_blank"}。写作工具是 [Obsidian](https://obsidian.md/){target="_blank"}，使用自己写的工具发布到本站。
+- 框架：[MkDocs](https://www.mkdocs.org/){target="_blank"}
+- 主题：[Material](https://squidfunk.github.io/mkdocs-material/){target="_blank"}
+- 托管平台：[Vercel](https://vercel.com/){target="_blank"}
+- 版本管理：[Git](https://git-scm.com/){target="_blank"}
+- 本地写作：[Obsidian](https://obsidian.md/){target="_blank"}
 
-虽然 [Hexo](https://hexo.io/zh-cn/){target="_blank"}、[Hugo](https://gohugo.io/){target="_blank"} 等博客框架的速度比 MkDocs 快，但它们主题的搜索功能基本都是玩具，排版也不行，完全比不过我目前这个主题。我改用了上面这套流程后，就不再受限于 MkDocs 的速度了，而且写作时所见即所得。
+整套流程不受限于 MkDocs 的速度，而且写作时所见即所得。
