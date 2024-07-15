@@ -8,6 +8,10 @@ PLUGIN_BLACKLIST = [
     'minify',
 ]
 
+SCRIPTS_BLACKLIST = [
+    'assets/javascripts/comments.js',
+]
+
 def pop_plugin(plugins: PluginCollection, name: str):
     value = plugins.pop(name, None)
 
@@ -39,5 +43,10 @@ def on_config(config: MkDocsConfig):
     for pluginName in PLUGIN_BLACKLIST:
         pop_plugin(config.plugins, pluginName)
         log.warning('Disable plugin \'%s\' in serve mode.', pluginName)
+
+    # 禁用一些 javascript
+    for script in SCRIPTS_BLACKLIST:
+        config.extra_javascript.remove(script)
+        log.warning('Disable script \'%s\' in serve mode.', script)
 
     return config
