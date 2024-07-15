@@ -205,6 +205,7 @@ plugins:
       pagination_keep_content: true
   - rss:
       enabled: !ENV [CI, false]
+      pretty_print: true # TODO 不开 pretty_print 的话，所有换行都没了，包括 <pre> 里的
       json_feed_enabled: false
       abstract_chars_count: -1
       categories:
