@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "22771aacf574ae93",
+        "id": "d3f768ed7963f595",
         "type": "tabs",
         "children": [
           {
-            "id": "2b715c10878b3b7d",
+            "id": "335754421b15f8d6",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "posts/DX12/ImGui 适配高 DPI 显示器.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -73,7 +78,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "posts/DX12/ImGui 适配高 DPI 显示器.md"
+              }
             }
           },
           {
@@ -82,6 +89,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "posts/DX12/ImGui 适配高 DPI 显示器.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -93,6 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "posts/DX12/ImGui 适配高 DPI 显示器.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,6 +125,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "posts/DX12/ImGui 适配高 DPI 显示器.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -161,15 +171,19 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "a86edf9e473aa4d9",
+  "active": "335754421b15f8d6",
   "lastOpenFiles": [
+    "attachments/Pasted image 20240722000504.png",
+    "posts/DX12/ImGui 适配高 DPI 显示器.md",
+    "posts/DX12",
+    "posts/图形/深度重建世界坐标.md",
+    "notes/CLI 工具/Scoop.md",
     "posts/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
     "attachments/Pasted image 20240714171941.png",
     "attachments/Pasted image 20240714171505.png",
     "posts/仿星铁渲染/仿星铁渲染：Bloom.md",
     "notes/求职/米哈游 2025 校招技术提前批 JD.md",
     "posts/仿星铁渲染/仿星铁渲染：平滑模型法线.md",
-    "posts/图形/深度重建世界坐标.md",
     "posts/Unity/Allocate RT 时记得指定 filterMode 和 wrapMode.md",
     "posts/Unity/在 UI 上实现目标追踪.md",
     "posts/图形/用 RenderDoc 和模拟器抓帧安卓手游.md",
@@ -188,8 +202,6 @@
     "posts/Misc/下载微信视频号的视频.md",
     "posts/Misc/指数函数与其反函数的交点个数.md",
     "posts/Misc/LeetCode 题目描述转 Markdown.md",
-    "posts/Misc/Windows 上用 CapsLock 切换中英文.md",
-    "notes/开发/Windows/Windows 全局钩子.md",
     "posts/仿星铁渲染",
     "attachments/Pasted image 20240711142202.png",
     "attachments/step-function.png",
@@ -207,7 +219,6 @@
     "posts/Misc",
     "posts/大学作业",
     "posts/Unity",
-    "博客",
     "未命名.canvas"
   ]
 }
