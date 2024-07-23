@@ -12,6 +12,8 @@ comments: true
 
 <!-- more -->
 
+解决高 DPI 显示器下 ImGui 字体模糊的问题。
+
 ## DPI
 
 DPI 全称 Dots per inch，即每英寸的点数，对于显示器来说就是每英寸的像素数量。
@@ -74,8 +76,17 @@ case WM_DPICHANGED:
 }
 ```
 
-在运行时，修改字体以后，先调用 `io.Fonts->Build()` 在 CPU 上重新构建字体图集，然后调用 `ImGui_ImplDX12_InvalidateDeviceObjects()` 强制重新创建 GPU 上的资源。一开始初始化时不需要调用这两个函数，因为那时候什么缓存都没有，必须重新创建。
+在运行时，修改字体以后，先调用 `io.Fonts->Build()` 在 CPU 上重新构建字体图集，然后调用 `ImGui_ImplDX12_InvalidateDeviceObjects()` 强制重新创建 GPU 上的资源。一开始初始化时不需要调用这两个函数，因为那时候什么缓存都没有，ImGui 会自动构建。
 
+---
+
+理论上，应该再加上
+
+``` cpp
+ImGui::GetStyle().ScaleAllSizes(dpiScale);
+```
+
+但实际上，Style 里不少参数都是整数，每次 Scale 之后都会进行取整，多次 Scale 就会积累很多误差，因此我个人不推荐。
 
 ## 参考
 
