@@ -230,6 +230,7 @@ hooks:
   - scripts/fetch_news.py
   - scripts/obsidian.py
   - scripts/fancybox.py
+  - scripts/travelling.py
 
 
 watch:
