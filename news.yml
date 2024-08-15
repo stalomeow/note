@@ -63,6 +63,15 @@ categories:
         url: https://www.cnblogs.com/KillerAery/
         title: KillerAery
 
+      nvidia:
+        feed: https://feeds.feedburner.com/nvidiablog
+
+      simonstechblog:
+        feed: https://simonstechblog.blogspot.com/feeds/posts/default
+
+      leonwei:
+        feed: https://rss.csdn.net/leonwei/rss/map
+
   games:
     title: 游戏
     rss:
