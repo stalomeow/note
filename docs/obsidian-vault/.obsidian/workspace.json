@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d3f768ed7963f595",
+        "id": "045807c6570d0db5",
         "type": "tabs",
         "children": [
           {
-            "id": "335754421b15f8d6",
+            "id": "a4c73a78d8b12a8d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/DX12/ImGui 适配高 DPI 显示器.md",
+                "file": "notes/求职/米哈游 2024 社招引擎岗 JD.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": false
@@ -79,7 +79,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/DX12/ImGui 适配高 DPI 显示器.md"
+                "file": "notes/求职/米哈游 2024 社招引擎岗 JD.md"
               }
             }
           },
@@ -89,7 +89,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/DX12/ImGui 适配高 DPI 显示器.md",
+                "file": "notes/求职/米哈游 2024 社招引擎岗 JD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/DX12/ImGui 适配高 DPI 显示器.md",
+                "file": "notes/求职/米哈游 2024 社招引擎岗 JD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "posts/DX12/ImGui 适配高 DPI 显示器.md",
+                "file": "notes/求职/米哈游 2024 社招引擎岗 JD.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -171,10 +171,12 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "335754421b15f8d6",
+  "active": "a4c73a78d8b12a8d",
   "lastOpenFiles": [
-    "attachments/Pasted image 20240722000504.png",
+    "notes/求职/米哈游 2025 校招技术提前批 JD.md",
+    "notes/求职/米哈游 2024 社招引擎岗 JD.md",
     "posts/DX12/ImGui 适配高 DPI 显示器.md",
+    "attachments/Pasted image 20240722000504.png",
     "posts/DX12",
     "posts/图形/深度重建世界坐标.md",
     "notes/CLI 工具/Scoop.md",
@@ -182,7 +184,6 @@
     "attachments/Pasted image 20240714171941.png",
     "attachments/Pasted image 20240714171505.png",
     "posts/仿星铁渲染/仿星铁渲染：Bloom.md",
-    "notes/求职/米哈游 2025 校招技术提前批 JD.md",
     "posts/仿星铁渲染/仿星铁渲染：平滑模型法线.md",
     "posts/Unity/Allocate RT 时记得指定 filterMode 和 wrapMode.md",
     "posts/Unity/在 UI 上实现目标追踪.md",
@@ -210,7 +211,6 @@
     "attachments/exp-func-and-its-inverse-func-intersections-0.png",
     "attachments/exp-func-and-its-inverse-func-intersections-2.png",
     "attachments/2023-07-26/exp-func-and-its-inverse-func-intersections-2.png",
-    "attachments/2023-07-26/exp-func-and-its-inverse-func-intersections-1.png",
     "posts/后端",
     "posts/Web",
     "posts/Unity/编辑器",
