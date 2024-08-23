@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "045807c6570d0db5",
+        "id": "9268a43c3f585f0b",
         "type": "tabs",
         "children": [
           {
-            "id": "a4c73a78d8b12a8d",
+            "id": "fcf1277eebd90407",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/求职/米哈游 2024 社招引擎岗 JD.md",
-                "mode": "preview",
+                "file": "posts/图形/集成 RenderDoc.md",
+                "mode": "source",
                 "backlinks": true,
                 "source": false
               }
@@ -79,7 +79,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/求职/米哈游 2024 社招引擎岗 JD.md"
+                "file": "posts/图形/集成 RenderDoc.md"
               }
             }
           },
@@ -89,7 +89,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/求职/米哈游 2024 社招引擎岗 JD.md",
+                "file": "posts/图形/集成 RenderDoc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/求职/米哈游 2024 社招引擎岗 JD.md",
+                "file": "posts/图形/集成 RenderDoc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "notes/求职/米哈游 2024 社招引擎岗 JD.md",
+                "file": "posts/图形/集成 RenderDoc.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -171,11 +171,15 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "a4c73a78d8b12a8d",
+  "active": "fcf1277eebd90407",
   "lastOpenFiles": [
-    "notes/求职/米哈游 2025 校招技术提前批 JD.md",
-    "notes/求职/米哈游 2024 社招引擎岗 JD.md",
+    "posts/图形/法线贴图压缩.md",
+    "posts/图形/集成 RenderDoc.md",
     "posts/DX12/ImGui 适配高 DPI 显示器.md",
+    "posts/Unreal/编译 UE4 源码.md",
+    "posts/后端/游戏注册、登录和鉴权.md",
+    "notes/求职/米哈游 2024 社招引擎岗 JD.md",
+    "notes/求职/米哈游 2025 校招技术提前批 JD.md",
     "attachments/Pasted image 20240722000504.png",
     "posts/DX12",
     "posts/图形/深度重建世界坐标.md",
@@ -189,7 +193,6 @@
     "posts/Unity/在 UI 上实现目标追踪.md",
     "posts/图形/用 RenderDoc 和模拟器抓帧安卓手游.md",
     "posts/图形/提取 WebGL Shader.md",
-    "posts/图形/法线贴图压缩.md",
     "posts/Unity/后处理 Shader 的 Render State 设置.md",
     "posts/Unity/编辑器/IL Post-Process.md",
     "posts/Unity/编辑器/用 RenderDoc 持续截帧 Unity Editor Game View.md",
@@ -200,9 +203,6 @@
     "posts/Web/网页中嵌入 b 站视频.md",
     "posts/Misc/百度网盘直链下载.md",
     "posts/Misc/青雀进暗杠的抽牌数期望.md",
-    "posts/Misc/下载微信视频号的视频.md",
-    "posts/Misc/指数函数与其反函数的交点个数.md",
-    "posts/Misc/LeetCode 题目描述转 Markdown.md",
     "posts/仿星铁渲染",
     "attachments/Pasted image 20240711142202.png",
     "attachments/step-function.png",
