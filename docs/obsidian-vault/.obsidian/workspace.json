@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "01f7a463ee7bd149",
+        "id": "9cb12a5019a04783",
         "type": "tabs",
         "children": [
           {
-            "id": "64058d8f5f220ce2",
+            "id": "e656d5e244c0005c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "posts/DX12/DX12 资源管理.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -73,7 +78,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "posts/DX12/DX12 资源管理.md"
+              }
             }
           },
           {
@@ -82,6 +89,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "posts/DX12/DX12 资源管理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -93,6 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "posts/DX12/DX12 资源管理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,6 +125,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "posts/DX12/DX12 资源管理.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -161,8 +171,11 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "64058d8f5f220ce2",
+  "active": "e656d5e244c0005c",
   "lastOpenFiles": [
+    "posts/DX12/DX12 资源管理.md",
+    "notes/CLI 工具/Scoop.md",
+    "notes/开发/Windows/开发效率/Windows Sudo.md",
     "posts/图形/集成 RenderDoc.md",
     "attachments/Pasted image 20240824233322.png",
     "attachments/Pasted image 20240824233100.png",
@@ -175,7 +188,6 @@
     "attachments/Pasted image 20240722000504.png",
     "posts/DX12",
     "posts/图形/深度重建世界坐标.md",
-    "notes/CLI 工具/Scoop.md",
     "posts/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
     "attachments/Pasted image 20240714171941.png",
     "attachments/Pasted image 20240714171505.png",
@@ -193,7 +205,6 @@
     "posts/Web/Nuxt 3 开发避坑.md",
     "posts/Web/原生 js 将内存中数据下载为文件.md",
     "posts/Web/网页中嵌入 b 站视频.md",
-    "posts/Misc/百度网盘直链下载.md",
     "posts/仿星铁渲染",
     "attachments/Pasted image 20240711142202.png",
     "attachments/step-function.png",
