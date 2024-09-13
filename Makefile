@@ -20,11 +20,9 @@ deploy d:
 	git add . && git commit -m "$(MSG)" && git push
 .PHONY: deploy d
 
-# https://github.com/urllib3/urllib3/issues/2168
 upgrade:
 	$(PYTHON_ENV)
 	python -m pip install --upgrade pip
 	pip install --upgrade --force-reinstall mkdocs-material
-	pip install urllib3==1.26.18
 	pip freeze > requirements.txt
 .PHONY: upgrade

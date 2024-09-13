@@ -1,27 +1,36 @@
-name: Vercel Deployment
-env:
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+name: Vercel Redeployment
 on:
   workflow_dispatch:
   schedule:
     - cron: '0 22 * * *'
 jobs:
-  Deploy-Preview:
+  Redeploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          # Number of commits to fetch. 0 indicates all history for all branches and tags.
-          fetch-depth: 0
       - name: Install Vercel CLI
+        shell: bash
         run: npm install --global vercel@latest
 
-      - name: Pull Vercel Environment Information
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Get Project Name
+        shell: bash
+        run: |-
+          project_name=$(echo "${{ github.repository }}" | awk -F'/' '{print $2}')
+          echo "project_name=$project_name" >> $GITHUB_ENV
+          echo "- Project Name: \`$project_name\`" >> $GITHUB_STEP_SUMMARY
 
-      - name: Build
-        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Get Last Deployment
+        shell: bash
+        run: |-
+          deployments=$(vercel list $project_name --token=${{ secrets.VERCEL_TOKEN }} 2>/dev/null)
+          last_deployment=$(echo "$deployments" | grep 'https://' | head -n 1 | awk '{print $1}')
+          echo "last_deployment=$last_deployment" >> $GITHUB_ENV
+          echo "- Last Deployment: \`$last_deployment\`" >> $GITHUB_STEP_SUMMARY
 
-      - name: Deploy
-        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Redeploy
+        shell: bash
+        run: |-
+          new_deployment=$(vercel redeploy "$last_deployment" \
+            --token=${{ secrets.VERCEL_TOKEN }}               \
+            --scope ${{ secrets.VERCEL_SCOPE }}               \
+            --no-wait 2>/dev/null)
+          echo "- New Deployment: \`$new_deployment\`" >> $GITHUB_STEP_SUMMARY
