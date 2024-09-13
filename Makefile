@@ -8,6 +8,7 @@ help h:
 	@echo   serve    s     Start local server
 	@echo   deploy   d     Push to remote repository
 	@echo   upgrade        Upgrade mkdocs-material
+	@echo   install        Install dependencies
 .PHONY: help h
 
 serve s:
@@ -26,3 +27,9 @@ upgrade:
 	pip install --upgrade --force-reinstall mkdocs-material
 	pip freeze > requirements.txt
 .PHONY: upgrade
+
+install:
+	py -3.12 -m venv env
+	$(PYTHON_ENV)
+	pip install -r requirements.txt
+.PHONY: install
