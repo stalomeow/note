@@ -8,7 +8,7 @@ categories:
     title: 技术博客
     rss:
       unity-technology-blog:
-        feed: https://blog.unity.com/feed
+        feed: https://unity.com/blog/feed
         title: Unity Blog
 
       unreal-blog:
