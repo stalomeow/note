@@ -75,11 +75,16 @@ class MultiPagePostsInfo(object):
             return os.path.join(self._getFileDir(pageNum), self.slug + '.md')
         return os.path.join(self._getFileDir(pageNum), self.slug, 'page', f'{pageNum}.md')
 
-    def generateFiles(self, files: Files, config: MkDocsConfig, *, sortPosts=False):
+    def validatePosts(self, sortPosts=True, maxPostCount=20):
         # 按时间倒序排序
         if sortPosts:
             self.posts.sort(key=lambda p: p.publish, reverse=True)
 
+        # 限制文章数量，Unity Blog 有 600 多篇，不能全部显示
+        if maxPostCount >= 0:
+            self.posts = self.posts[:maxPostCount]
+
+    def generateFiles(self, files: Files, config: MkDocsConfig):
         i = 0
         while i < len(self.posts):
             lowInclusive = i
@@ -163,10 +168,10 @@ class CategoryInfo(MultiPagePostsInfo):
             content += f'\n\n{self.description}'
         return content
 
-    def generateFiles(self, files: Files, config: MkDocsConfig, *, sortPosts=False):
+    def validatePosts(self, sortPosts=True, maxPostCount=20):
         self.posts.clear()
         self.posts.extend(itertools.chain(*map(lambda r: r.posts, self.rssList)))
-        return super().generateFiles(files, config, sortPosts=sortPosts)
+        return super().validatePosts(sortPosts, maxPostCount)
 
 class HomeInfo(MultiPagePostsInfo):
     def __init__(self) -> None:
@@ -241,6 +246,7 @@ def on_files(files: Files, config: MkDocsConfig):
             try:
                 rssInfo = RSSInfo(data.feed, rssSlug, rssConfig)
                 catInfo.rssList.append(rssInfo)
+                log.info(f'Fetched RSS: {rssSlug} ({len(data.entries)} posts).')
             except Exception as e:
                 log.warning(f'Failed to parse {rssConfig.feed}; {e}')
                 continue
@@ -249,7 +255,8 @@ def on_files(files: Files, config: MkDocsConfig):
             for entry in data.entries:
                 post = PostInfo(entry, rssInfo, tags=rssConfig.posts_tags)
                 rssInfo.posts.append(post)
-            rssInfo.generateFiles(files, config, sortPosts=True)
+            rssInfo.validatePosts()
+            rssInfo.generateFiles(files, config)
 
             # 添加 RSS 中的文章到首页
             if rssConfig.posts_show_in_home:
@@ -264,11 +271,12 @@ def on_files(files: Files, config: MkDocsConfig):
                 # 如果没有新文章，则添加最新的一篇
                 if newPostCount == 0 and len(rssInfo.posts) > 0:
                     homeInfo.posts.append(rssInfo.posts[0])
-
-        catInfo.generateFiles(files, config, sortPosts=True)
+        catInfo.validatePosts()
+        catInfo.generateFiles(files, config)
 
     categoryList.sort(key=lambda c: c.title)
-    homeInfo.generateFiles(files, config, sortPosts=True)
+    homeInfo.validatePosts()
+    homeInfo.generateFiles(files, config)
 
 @build_only
 def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):

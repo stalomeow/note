@@ -9,6 +9,7 @@ categories:
     rss:
       unity-technology-blog:
         feed: https://blog.unity.com/feed
+        title: Unity Blog
 
       unreal-blog:
         feed: https://www.unrealengine.com/zh-CN/rss
@@ -31,6 +32,7 @@ categories:
 
       gamedeveloper:
         feed: https://www.gamedeveloper.com/rss.xml
+        posts_show_in_home: false
 
       red-blob-games:
         feed: https://simblob.blogspot.com/feeds/posts/default
@@ -72,9 +74,9 @@ categories:
       leonwei:
         feed: https://rss.csdn.net/leonwei/rss/map
 
-  games:
-    title: 游戏
-    rss:
-      itch-games:
-        feed: https://rsshub.app/itch/games/new-and-popular/featured
-        posts_show_in_home: false
+  # games:
+  #   title: 游戏
+  #   rss:
+  #     itch-games:
+  #       feed: https://rsshub.app/itch/games/new-and-popular/featured
+  #       posts_show_in_home: false
