@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/DX12/DX12 资源管理.md",
+                "file": "posts/图形/集成 RenderDoc.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": false
@@ -79,7 +79,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/DX12/DX12 资源管理.md"
+                "file": "posts/图形/集成 RenderDoc.md"
               }
             }
           },
@@ -89,7 +89,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/DX12/DX12 资源管理.md",
+                "file": "posts/图形/集成 RenderDoc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/DX12/DX12 资源管理.md",
+                "file": "posts/图形/集成 RenderDoc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "posts/DX12/DX12 资源管理.md",
+                "file": "posts/图形/集成 RenderDoc.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -173,14 +173,16 @@
   },
   "active": "e656d5e244c0005c",
   "lastOpenFiles": [
+    "posts/DX12/ImGui 适配高 DPI 显示器.md",
     "posts/DX12/DX12 资源管理.md",
+    "posts/DX12/基于 DX12 实现简化版 ShaderLab.md",
+    "posts/图形/提取 WebGL Shader.md",
     "notes/CLI 工具/Scoop.md",
     "notes/开发/Windows/开发效率/Windows Sudo.md",
     "posts/图形/集成 RenderDoc.md",
     "attachments/Pasted image 20240824233322.png",
     "attachments/Pasted image 20240824233100.png",
     "posts/图形/法线贴图压缩.md",
-    "posts/DX12/ImGui 适配高 DPI 显示器.md",
     "posts/Unreal/编译 UE4 源码.md",
     "posts/后端/游戏注册、登录和鉴权.md",
     "notes/求职/米哈游 2024 社招引擎岗 JD.md",
@@ -196,7 +198,6 @@
     "posts/Unity/Allocate RT 时记得指定 filterMode 和 wrapMode.md",
     "posts/Unity/在 UI 上实现目标追踪.md",
     "posts/图形/用 RenderDoc 和模拟器抓帧安卓手游.md",
-    "posts/图形/提取 WebGL Shader.md",
     "posts/Unity/后处理 Shader 的 Render State 设置.md",
     "posts/Unity/编辑器/IL Post-Process.md",
     "posts/Unity/编辑器/用 RenderDoc 持续截帧 Unity Editor Game View.md",
@@ -204,7 +205,6 @@
     "posts/Web/解决 patch-package 不生效的问题.md",
     "posts/Web/Nuxt 3 开发避坑.md",
     "posts/Web/原生 js 将内存中数据下载为文件.md",
-    "posts/Web/网页中嵌入 b 站视频.md",
     "posts/仿星铁渲染",
     "attachments/Pasted image 20240711142202.png",
     "attachments/step-function.png",

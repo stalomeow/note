@@ -92,6 +92,33 @@ void RenderDoc::Load()
 
 在最后，调用 `MaskOverlayBits` 把 RenderDoc 左上角黑色的 Overlay 信息隐藏掉；调用 `SetCaptureKeys` 把默认的快捷键取消掉。
 
+## D3D12 调试层
+
+在做 D3D12 开发时，我们通常会开启 D3D12 的调试层，但 RenderDoc 默认情况下禁用了 API Validation 和 Debug Output，使得 D3D12 的调试层失去作用。
+
+在加载 RenderDoc 后，调用下面的方法可以解决。[^1]
+
+``` cpp
+m_Api->SetCaptureOptionU32(eRENDERDOC_Option_APIValidation, 1);
+m_Api->SetCaptureOptionU32(eRENDERDOC_Option_DebugOutputMute, 0);
+```
+
+另外，RenderDoc 会使 `ID3D12InfoQueue1` 失去作用，因为它只提供了一个 dummy 的实现。[^2]
+
+``` cpp
+// give every impression of working but do nothing.
+// Just allow the user to call functions so that they don't
+// have to check for E_NOINTERFACE when they expect an infoqueue to be there
+struct DummyID3D12InfoQueue : public ID3D12InfoQueue1
+{
+    // ...
+}
+```
+
+RenderDoc 会使 D3D12 的调试层变得不完整，它本身又有一些额外的开销，所以不建议每次启动应用时都加载 RenderDoc。
+
+可以像 Unity 一样，提供一个加载按钮，但是加载 RenderDoc 后需要重新创建图形设备，整个过程是比较麻烦的。也可以提供一个命令行参数 `-load-renderdoc`，仅在有该参数的情况下加载 RenderDoc，修改 VisualStudio 调试器的启动参数就行。
+
 ## 截帧
 
 ``` cpp
@@ -195,3 +222,8 @@ if (ImGui::BeginMainMenuBar())
     ImGui::EndMainMenuBar();
 }
 ```
+
+
+[^1]: [d3d debug runtime doesn't work with RenderDoc? · Issue #418 · baldurk/renderdoc (github.com)](https://github.com/baldurk/renderdoc/issues/418)
+[^2]: [renderdoc/renderdoc/driver/d3d12/d3d12_device.h at v1.x · baldurk/renderdoc (github.com)](https://github.com/baldurk/renderdoc/blob/v1.x/renderdoc/driver/d3d12/d3d12_device.h)
+
