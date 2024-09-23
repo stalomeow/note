@@ -4,15 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "cade4de52b1e3e06",
+        "id": "13aab7b2d07fcfc3",
         "type": "tabs",
         "children": [
           {
-            "id": "a7c63f83aabd3c0f",
+            "id": "e4db454691544045",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "posts/图形/对逐物体阴影的一些改进.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f9970b32a1c4b0a5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -73,7 +91,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "posts/图形/对逐物体阴影的一些改进.md"
+              }
             }
           },
           {
@@ -82,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "posts/图形/对逐物体阴影的一些改进.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -93,6 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "posts/图形/对逐物体阴影的一些改进.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,6 +138,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "posts/图形/对逐物体阴影的一些改进.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -138,7 +161,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.508761885579267,
+                  "scale": 0.3628873693012176,
                   "close": true
                 }
               }
@@ -161,8 +184,19 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "a7c63f83aabd3c0f",
+  "active": "e4db454691544045",
   "lastOpenFiles": [
+    "attachments/Pasted image 20240924000446.png",
+    "posts/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
+    "posts/图形/对逐物体阴影的一些改进.md",
+    "attachments/Pasted image 20240923211259.png",
+    "attachments/Pasted image 20240923204753.png",
+    "attachments/Pasted image 20240923204544.png",
+    "attachments/Pasted image 20240923204427.png",
+    "attachments/Pasted image 20240923204302.png",
+    "attachments/per-object-shadow-debugger.gif",
+    "notes/CLI 工具/FFmpeg.md",
+    "posts/仿星铁渲染/仿星铁渲染：平滑模型法线.md",
     "notes/数学/概率论与数理统计/切比雪夫不等式.md",
     "notes/数学/概率论与数理统计/弱大数定律.md",
     "notes/数学/概率论与数理统计/随机变量.md",
@@ -178,8 +212,6 @@
     "posts/DX12/ImGui 适配高 DPI 显示器.md",
     "posts/DX12/基于 DX12 实现简化版 ShaderLab.md",
     "posts/DX12/DX12 资源管理.md",
-    "posts/仿星铁渲染/仿星铁渲染：平滑模型法线.md",
-    "posts/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
     "posts/图形/集成 RenderDoc.md",
     "posts/图形/提取 WebGL Shader.md",
     "notes/CLI 工具/Scoop.md",
@@ -188,19 +220,10 @@
     "attachments/Pasted image 20240824233100.png",
     "posts/图形/法线贴图压缩.md",
     "posts/Unreal/编译 UE4 源码.md",
-    "posts/后端/游戏注册、登录和鉴权.md",
-    "notes/求职/米哈游 2024 社招引擎岗 JD.md",
-    "notes/求职/米哈游 2025 校招技术提前批 JD.md",
     "attachments/Pasted image 20240722000504.png",
     "posts/DX12",
     "attachments/Pasted image 20240714171941.png",
-    "attachments/Pasted image 20240714171505.png",
     "posts/仿星铁渲染",
-    "attachments/Pasted image 20240711142202.png",
-    "attachments/step-function.png",
-    "attachments/dirac-delta-function.png",
-    "attachments/exp-func-and-its-inverse-func-intersections-1.png",
-    "attachments/exp-func-and-its-inverse-func-intersections-0.png",
     "posts/后端",
     "posts/Web",
     "posts/Unity/编辑器",
