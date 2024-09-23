@@ -229,10 +229,11 @@ def transform_wiki_links(markdown: str, page: Page, config: MkDocsConfig) -> str
         is_media = m.group(1) is not None
 
         # [[name#heading|alias]]
-        m2 = re.match(r'^(.+?)(#(.*?))?(\|(.*))?$', m.group(2), flags=re.U)
-        name = m2.group(1).strip().rstrip('\\') # 在表格中使用 wiki link 时，需要用 '\\|' 代替 '|'，这里去掉末尾的 '\\'
-        heading = m2.group(3).rstrip('\\')
-        alias = m2.group(5).rstrip('\\')
+        # 在表格中使用 wiki link 时，需要用 '\\|' 代替 '|'，这里去掉 '\\'
+        m2 = re.match(r'^(.+?)(#(.*?))?(\|(.*))?$', m.group(2).replace('\\', ''), flags=re.U)
+        name = m2.group(1).strip()
+        heading = m2.group(3)
+        alias = m2.group(5)
 
         # 自动给文档加 .md 后缀名
         if not is_media and (name + '.md') in wiki_link_name_map:
