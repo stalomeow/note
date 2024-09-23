@@ -30,13 +30,13 @@ base64 编码的二进制数据
 
 PEM 中常见的 `TYPE` 和对应的数据类型如下
 
-| `TYPE`                  | 数据类型                                    |
-| :---------------------- | --------------------------------------- |
-| `RSA PRIVATE KEY`       | [[PKCS\|PKCS #1]] [[RSA  加密算法\|RSA]] 私钥 |
-| `RSA PUBLIC KEY`        | [[PKCS\|PKCS #1]] [[RSA  加密算法\|RSA]] 公钥 |
-| `PRIVATE KEY`           | [[PKCS\|PKCS #8]] 私钥                    |
-| `ENCRYPTED PRIVATE KEY` | [[PKCS\|PKCS #8]] 私钥（被加密过）              |
-| `CERTIFICATE`           | [[X.509]] 证书                            |
-| `PUBLIC KEY`            | [[X.509]] 主题公钥信息                        |
+| `TYPE`                  | 数据类型                                   |
+| :---------------------- | -------------------------------------- |
+| `RSA PRIVATE KEY`       | [[PKCS\|PKCS #1]] [[RSA 加密算法]] 私钥      |
+| `RSA PUBLIC KEY`        | [[PKCS\|PKCS #1]] [[RSA 加密算法\|RSA]] 公钥 |
+| `PRIVATE KEY`           | [[PKCS\|PKCS #8]] 私钥                   |
+| `ENCRYPTED PRIVATE KEY` | [[PKCS\|PKCS #8]] 私钥（被加密过）             |
+| `CERTIFICATE`           | [[X.509]] 证书                           |
+| `PUBLIC KEY`            | [[X.509]] 主题公钥信息                       |
 
 

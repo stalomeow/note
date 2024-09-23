@@ -11,7 +11,7 @@ date: 2024-05-26
 
 文档：[/docs/man3.3/man1/genrsa.html (openssl.org)](https://www.openssl.org/docs/man3.3/man1/genrsa.html)
 
-3.0 及以上版本的 OpenSSL 生成的 [[RSA  加密算法|RSA]] 私钥默认使用 [[PKCS|PKCS #8]] 和 [[PEM 格式]]。如果需要 [[PKCS|PKCS #1]] 的话，必须加上 `-traditional` 参数。
+3.0 及以上版本的 OpenSSL 生成的 [[RSA 加密算法|RSA]] 私钥默认使用 [[PKCS|PKCS #8]] 和 [[PEM 格式]]。如果需要 [[PKCS|PKCS #1]] 的话，必须加上 `-traditional` 参数。
 
 ``` powershell
 openssl genrsa -out priv1.pem 4096

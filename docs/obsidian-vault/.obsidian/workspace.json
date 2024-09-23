@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "9cb12a5019a04783",
+        "id": "cade4de52b1e3e06",
         "type": "tabs",
         "children": [
           {
-            "id": "e656d5e244c0005c",
+            "id": "a7c63f83aabd3c0f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/图形/集成 RenderDoc.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -78,9 +73,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "posts/图形/集成 RenderDoc.md"
-              }
+              "state": {}
             }
           },
           {
@@ -89,7 +82,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/图形/集成 RenderDoc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -101,7 +93,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/图形/集成 RenderDoc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +116,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "posts/图形/集成 RenderDoc.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -171,15 +161,29 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "e656d5e244c0005c",
+  "active": "a7c63f83aabd3c0f",
   "lastOpenFiles": [
+    "notes/数学/概率论与数理统计/切比雪夫不等式.md",
+    "notes/数学/概率论与数理统计/弱大数定律.md",
+    "notes/数学/概率论与数理统计/随机变量.md",
+    "notes/数学/概率论与数理统计/随机变量函数.md",
+    "notes/数学/概率论与数理统计/依概率收敛.md",
+    "notes/数学/概率论与数理统计/中心极限定理.md",
+    "notes/数学/概率论与数理统计/Poisson 定理.md",
+    "notes/密码学/PEM 格式.md",
+    "notes/密码学/RSA 加密算法.md",
+    "notes/数学/数论/欧拉函数（数论）.md",
+    "posts/Misc/LeetCode 题目描述转 Markdown.md",
+    "posts/Misc/下载微信视频号的视频.md",
     "posts/DX12/ImGui 适配高 DPI 显示器.md",
-    "posts/DX12/DX12 资源管理.md",
     "posts/DX12/基于 DX12 实现简化版 ShaderLab.md",
+    "posts/DX12/DX12 资源管理.md",
+    "posts/仿星铁渲染/仿星铁渲染：平滑模型法线.md",
+    "posts/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
+    "posts/图形/集成 RenderDoc.md",
     "posts/图形/提取 WebGL Shader.md",
     "notes/CLI 工具/Scoop.md",
     "notes/开发/Windows/开发效率/Windows Sudo.md",
-    "posts/图形/集成 RenderDoc.md",
     "attachments/Pasted image 20240824233322.png",
     "attachments/Pasted image 20240824233100.png",
     "posts/图形/法线贴图压缩.md",
@@ -189,22 +193,8 @@
     "notes/求职/米哈游 2025 校招技术提前批 JD.md",
     "attachments/Pasted image 20240722000504.png",
     "posts/DX12",
-    "posts/图形/深度重建世界坐标.md",
-    "posts/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
     "attachments/Pasted image 20240714171941.png",
     "attachments/Pasted image 20240714171505.png",
-    "posts/仿星铁渲染/仿星铁渲染：Bloom.md",
-    "posts/仿星铁渲染/仿星铁渲染：平滑模型法线.md",
-    "posts/Unity/Allocate RT 时记得指定 filterMode 和 wrapMode.md",
-    "posts/Unity/在 UI 上实现目标追踪.md",
-    "posts/图形/用 RenderDoc 和模拟器抓帧安卓手游.md",
-    "posts/Unity/后处理 Shader 的 Render State 设置.md",
-    "posts/Unity/编辑器/IL Post-Process.md",
-    "posts/Unity/编辑器/用 RenderDoc 持续截帧 Unity Editor Game View.md",
-    "posts/Unity/编辑器/将 GIF 直接导入为 AnimationClip.md",
-    "posts/Web/解决 patch-package 不生效的问题.md",
-    "posts/Web/Nuxt 3 开发避坑.md",
-    "posts/Web/原生 js 将内存中数据下载为文件.md",
     "posts/仿星铁渲染",
     "attachments/Pasted image 20240711142202.png",
     "attachments/step-function.png",
