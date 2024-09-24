@@ -19,19 +19,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "f9970b32a1c4b0a5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              }
-            }
           }
         ]
       }
@@ -186,9 +173,9 @@
   },
   "active": "e4db454691544045",
   "lastOpenFiles": [
-    "attachments/Pasted image 20240924000446.png",
     "posts/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
     "posts/图形/对逐物体阴影的一些改进.md",
+    "attachments/Pasted image 20240924000446.png",
     "attachments/Pasted image 20240923211259.png",
     "attachments/Pasted image 20240923204753.png",
     "attachments/Pasted image 20240923204544.png",
@@ -222,7 +209,6 @@
     "posts/Unreal/编译 UE4 源码.md",
     "attachments/Pasted image 20240722000504.png",
     "posts/DX12",
-    "attachments/Pasted image 20240714171941.png",
     "posts/仿星铁渲染",
     "posts/后端",
     "posts/Web",
