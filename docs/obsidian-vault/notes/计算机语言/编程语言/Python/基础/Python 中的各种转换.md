@@ -12,7 +12,6 @@ date: 2024-04-27
     - `byteorder`: 字节序（`'little'` 或 `'big'`）。
     - `signed`: 是否为有符号整数。
     - 返回 `bytes`。
-
 - `@classmethod int.from_bytes(cls, bytes, byteorder, *, signed=False)`。
     - `bytes`: 字节。
     - `byteorder`: 字节序（`'little'` 或 `'big'`）。

@@ -19,7 +19,6 @@ comments: true
 读取 GIF 用 `System.Drawing.Image` 实现。
 
 - 获取 GIF 的帧数：`Image.GetFrameCount(FrameDimension.Time)`。
-
 - 导出第 $i$ 帧的图片：
 
     1. `Image.SelectActiveFrame(FrameDimension.Time, i)` 激活第 $i$ 帧。

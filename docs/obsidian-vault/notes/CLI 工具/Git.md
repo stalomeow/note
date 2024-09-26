@@ -118,7 +118,6 @@ HEAD 文件通常是一个符号引用（symbolic reference），指向目前所
 > [git HEAD / HEAD^ / HEAD~ 的含义 - 个人文章 - SegmentFault 思否](https://segmentfault.com/a/1190000022506884)
 
 - HEAD 指向当前所在分支提交至仓库的最新一次的 commit。
-
 - `~` 是用来在当前提交路径上回溯的修饰符。
 
     HEAD~{n} 表示当前所在的提交路径上的前 n 个提交（n >= 0）：
@@ -126,7 +125,6 @@ HEAD 文件通常是一个符号引用（symbolic reference），指向目前所
     - `HEAD = HEAD~0`
     - `HEAD~ = HEAD~1`
     - `HEAD~~ = HEAD~2`
-
 - `^` 是用来切换**父级**提交路径的修饰符。
 
     当我们始终在一个分支比如 dev 开发/提交代码时，每个 commit 都只会有一个父级提交，就是上一次提交，但当并行多个分支开发，feat1, feat2, feat3，完成后 merge feat1 feat2 feat3 回 dev 分支后，此次的 merge commit 就会有多个父级提交。

@@ -93,9 +93,7 @@ if (weakRef.IsAlive)
 处于状态 2 的对象，在终结器被执行完成后，会进入状态 3。等到下一次 GC 发生时，会尝试回收处于状态 3 的对象，如果成功，使之进入状态 4，否则回到状态 1。
 
 - 当一个对象处于状态 2 时，它处于一种假死的状态。这时对象中的数据是无法预测的，因为它可能引用了已经处于状态 3 的对象（在本次 GC 中也是垃圾，并且终结器较早执行）。
-
 - 在调用终结器前的那一刻，对象会复活（Resurrection），允许（终结器里的）程序访问。
-
 - 一个对象的终结器默认只执行一次。换言之，复活的对象相当于没有终结器（除非程序里强制重新执行）。
 
 关于终结器和复活，会另外写一篇文章，此处不继续展开。
@@ -216,9 +214,7 @@ static uint32_t alloc_weak_handle(Il2CppObject *obj, bool track_resurrection)
 `GarbageCollector` 里的方法大多依赖于 GC 的实现。下面以 Unity 使用的 BoehmGC 为例。
 
 - `GarbageCollector::AddWeakLink` 会在内部的 `GC_dl_hashtbl`（GC disappearing-link hashtable）中添加一个新的 `disappearing_link`，把 `&(handles->entries[slot])` 与 `obj` 关联起来。当 `obj` 被回收以后，`handles->entries[slot]` 保存的地址也会被 GC 修改为非法值。
-
 - 尝试访问弱引用指向的对象时，会调用 `GarbageCollector::GetWeakLink` 来拿到 `handles->entries[slot]` 里保存的地址。如果这个地址是非法值，那么会返回 `NULL`。
-
 - 删除弱引用时，会调用 `GarbageCollector::RemoveWeakLink` 删除 GC 内部保存的 `disappearing_link`，然后回收 `GCHandle` 在 `gc_handles` 里占用的那个 `entry`（但不释放）。
 
 ## 参考
