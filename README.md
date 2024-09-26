@@ -38,12 +38,3 @@ git clone https://github.com/stalomeow/note.git
 |:-|:-|:-|
 |`CI`|`true`|启用一些 mkdocs 插件|
 |`VERCEL_DEEP_CLONE`|`true`|rss 插件建议使用者关闭 git shallow clone，这样能获取到更准确的信息|
-
-## GitHub Actions
-
-定时调用 `vercel redeploy` 来重新构建项目，更新网页上的 RSS 订阅内容。不用的话，可以关闭。
-
-|Repository secrets|说明|
-|:-|:-|
-|`VERCEL_TOKEN`|Vercel 登录 token|
-|`VERCEL_SCOPE`|Vercel 项目所属的 team 名称|

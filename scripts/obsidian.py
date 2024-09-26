@@ -50,6 +50,8 @@ class FileLinkList(object):
         self.links.clear()
 
 OBSIDIAN_VAULT_DIR = 'obsidian-vault'
+NOTE_FOLDER_NAME = '笔记'
+BLOG_FOLDER_NAME = '博客'
 
 wiki_link_name_map: dict[str, File] = {}         # key 是文件名，无扩展名
 wiki_link_path_map: dict[str, FileLinkList] = {} # key 是 src_uri
@@ -82,7 +84,7 @@ def should_ignore_obsidian_file(f: File) -> bool:
 def is_obsidian_note_file(f: File) -> bool:
     if not f.is_documentation_page():
         return False
-    return f.src_uri.startswith(posixpath.join(OBSIDIAN_VAULT_DIR, 'notes'))
+    return f.src_uri.startswith(posixpath.join(OBSIDIAN_VAULT_DIR, NOTE_FOLDER_NAME))
 
 @event_priority(100) # 放在最前面执行，不要处理其他插件生成的文件
 def on_files(files: Files, config: MkDocsConfig):
@@ -106,7 +108,7 @@ def on_files(files: Files, config: MkDocsConfig):
         if f.is_documentation_page():
             valid_doc_count += 1
 
-            # notes 里的文档需要处理 slug
+            # 笔记需要处理 slug
             if is_obsidian_note_file(f):
                 _, frontmatter = meta.get_data(f.content_string)
 
@@ -138,9 +140,10 @@ def find_and_update_obsidian_root(nav: Navigation) -> Section:
     else:
         raise Exception('Obsidian vault not found in navigation.')
 
-    # 将 obsidian-vault 下的 notes 作为 root，其他丢弃
+    # 将 obsidian-vault 下的笔记作为 root，其他丢弃
     for child in item.children:
-        if child.title.lower() == 'notes':
+        if child.title == NOTE_FOLDER_NAME:
+            child.title = 'Note'
             child.parent = None
             nav.items[i] = child
             return child
