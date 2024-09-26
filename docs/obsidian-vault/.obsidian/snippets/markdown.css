@@ -1,36 +1,19 @@
-body {
-    --link-decoration: none !important;
-    --link-external-decoration: none !important;
-}
-
 /* 去掉 "文章属性" 标题 */
 .metadata-properties-heading {
     display: none;
 }
 
-/* 编辑模式下 table 的 wrapper */
-.markdown-source-view.mod-cm6 .cm-table-widget .table-wrapper {
-    width: 100% !important;
+/* 代码块不换行 */
+/* https://github.com/mgmeyers/obsidian-style-settings/issues/138 */
+
+/* un-wrap code */
+.HyperMD-codeblock {
+    white-space: nowrap;
 }
 
-/* table 的宽度 100% */
-.markdown-rendered table {
-    width: 100% !important;
-}
-
-/* 代码块显示的时候不要自动换行 */
-.markdown-rendered pre code[class*="language-"] {
-    text-wrap: nowrap;
-}
-
-/* 引用的内容不透明度降低 */
-.markdown-rendered blockquote {
-    opacity: 0.7;
-}
-
-/* h2 标题下划线 */
-h2, .markdown-rendered h2,
-.HyperMD-header-2, .inline-title[data-level='2'], .HyperMD-list-line .cm-header-2 {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
-    padding-bottom: 0.25em !important;
+/* scroll codeblock in read mode */
+.markdown-reading-view code[class*="language-"] {
+    overflow-x: scroll;
+    white-space: pre;
+    padding: 15px 0px;
 }

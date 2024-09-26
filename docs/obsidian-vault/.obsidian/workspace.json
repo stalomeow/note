@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "13aab7b2d07fcfc3",
+        "id": "388f2f3e611cccab",
         "type": "tabs",
         "children": [
           {
-            "id": "e4db454691544045",
+            "id": "03338afd88090a2e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/图形/对逐物体阴影的一些改进.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -62,7 +57,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 291.5
+    "width": 295.5
   },
   "right": {
     "id": "029f8289abc95648",
@@ -78,9 +73,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "posts/图形/对逐物体阴影的一些改进.md"
-              }
+              "state": {}
             }
           },
           {
@@ -89,19 +82,17 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/图形/对逐物体阴影的一些改进.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "e50b3c0a024079d3",
+            "id": "03cdbf5dcdbc3d3a",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/图形/对逐物体阴影的一些改进.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +116,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "posts/图形/对逐物体阴影的一些改进.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -148,7 +138,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.3628873693012176,
+                  "scale": 0.7132754626224546,
                   "close": true
                 }
               }
@@ -171,10 +161,32 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "e4db454691544045",
+  "active": "03338afd88090a2e",
   "lastOpenFiles": [
-    "posts/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
+    "posts/Misc/青雀进暗杠的抽牌数期望.md",
+    "posts/仿星铁渲染/仿星铁渲染：Bloom.md",
     "posts/图形/对逐物体阴影的一些改进.md",
+    "posts/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
+    "posts/图形/用 RenderDoc 和模拟器抓帧安卓手游.md",
+    "posts/Misc/下载微信视频号的视频.md",
+    "posts/图形/集成 RenderDoc.md",
+    "posts/图形/提取 WebGL Shader.md",
+    "notes/CLI 工具/FFmpeg.md",
+    "notes/计算机基础/Tracker 服务器.md",
+    "notes/计算机基础/分布式/DHT 网络.md",
+    "notes/CLI 工具/Aria2.md",
+    "notes/CLI 工具/Git.md",
+    "notes/CLI 工具/PowerShell.md",
+    "notes/CLI 工具/OpenSSL.md",
+    "notes/CLI 工具/OpenSSH.md",
+    "notes/CLI 工具/GNU Make.md",
+    "notes/CLI 工具/Git LFS.md",
+    "notes/CLI 工具/CMake.md",
+    "posts/仿星铁渲染/仿星铁渲染：平滑模型法线.md",
+    "posts/图形/法线贴图压缩.md",
+    "notes/数据结构与算法/递归三要素.md",
+    "posts/Misc/指数函数与其反函数的交点个数.md",
+    "posts/图形/深度重建世界坐标.md",
     "attachments/Pasted image 20240924000446.png",
     "attachments/Pasted image 20240923211259.png",
     "attachments/Pasted image 20240923204753.png",
@@ -182,31 +194,10 @@
     "attachments/Pasted image 20240923204427.png",
     "attachments/Pasted image 20240923204302.png",
     "attachments/per-object-shadow-debugger.gif",
-    "notes/CLI 工具/FFmpeg.md",
-    "posts/仿星铁渲染/仿星铁渲染：平滑模型法线.md",
     "notes/数学/概率论与数理统计/切比雪夫不等式.md",
     "notes/数学/概率论与数理统计/弱大数定律.md",
-    "notes/数学/概率论与数理统计/随机变量.md",
-    "notes/数学/概率论与数理统计/随机变量函数.md",
-    "notes/数学/概率论与数理统计/依概率收敛.md",
-    "notes/数学/概率论与数理统计/中心极限定理.md",
-    "notes/数学/概率论与数理统计/Poisson 定理.md",
-    "notes/密码学/PEM 格式.md",
-    "notes/密码学/RSA 加密算法.md",
-    "notes/数学/数论/欧拉函数（数论）.md",
-    "posts/Misc/LeetCode 题目描述转 Markdown.md",
-    "posts/Misc/下载微信视频号的视频.md",
-    "posts/DX12/ImGui 适配高 DPI 显示器.md",
-    "posts/DX12/基于 DX12 实现简化版 ShaderLab.md",
-    "posts/DX12/DX12 资源管理.md",
-    "posts/图形/集成 RenderDoc.md",
-    "posts/图形/提取 WebGL Shader.md",
-    "notes/CLI 工具/Scoop.md",
-    "notes/开发/Windows/开发效率/Windows Sudo.md",
     "attachments/Pasted image 20240824233322.png",
     "attachments/Pasted image 20240824233100.png",
-    "posts/图形/法线贴图压缩.md",
-    "posts/Unreal/编译 UE4 源码.md",
     "attachments/Pasted image 20240722000504.png",
     "posts/DX12",
     "posts/仿星铁渲染",

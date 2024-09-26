@@ -20,7 +20,7 @@
   "zk-prefixer": false,
   "random-note": true,
   "outline": true,
-  "word-count": false,
+  "word-count": true,
   "slides": false,
   "audio-recorder": false,
   "workspaces": false,

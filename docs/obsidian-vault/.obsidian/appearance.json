@@ -1,16 +1,17 @@
 {
   "accentColor": "",
-  "cssTheme": "",
+  "cssTheme": "Border",
   "textFontFamily": "Noto Sans SC",
-  "monospaceFontFamily": "JetBrains Mono NL",
+  "monospaceFontFamily": "JetBrains Mono NL,Noto Sans SC",
   "baseFontSizeAction": false,
   "enabledCssSnippets": [
     "markdown",
     "math",
-    "media",
-    "mermaid"
+    "mermaid",
+    "media"
   ],
   "showViewHeader": true,
   "nativeMenus": false,
-  "baseFontSize": 16
+  "baseFontSize": 16,
+  "theme": "obsidian"
 }

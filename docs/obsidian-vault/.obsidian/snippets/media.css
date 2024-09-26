@@ -1,18 +1,30 @@
-/* 图片居中显示 */
-.media-embed {
-    display: flex !important;
-    justify-content: center  !important;
+/* 图片 caption */
+/* https://github.com/Akifyss/obsidian-border/issues/134 */
+
+body .image-embed[alt] {
+    padding: var(--size-4-1) 0;
 }
 
-.image-captions-figure,
-.image-captions-caption {
-    background: none !important;
+body .image-embed[alt]::after {
+    display: block;
+    text-align: center;
 }
 
-.image-captions-caption {
-    font-size: 0.8rem;
-    opacity: 0.8;
+body .image-embed[alt]:not([alt$=".png"], [alt$=".jpg"], [alt$=".jpeg"], [alt$=".tiff"], [alt$=".webp"], [alt$=".bmp"])::after {
+    content: attr(alt);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: var(--font-smaller);
+    color: var(--text-faint);
 }
+
+body .view-content img:not(.emoji) {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* 自适应视频大小 */
 
 .responsive-video-container {
     position: relative;

@@ -10,5 +10,6 @@
   "note-composer",
   "command-palette",
   "random-note",
-  "outline"
+  "outline",
+  "word-count"
 ]

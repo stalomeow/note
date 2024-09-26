@@ -1,8 +1,8 @@
 {
-  "showAllNumbers": false,
+  "showAllNumbers": true,
   "filterList": [
     "md"
   ],
   "blacklist": false,
-  "addRootFolder": true
+  "addRootFolder": false
 }

@@ -1,7 +1,8 @@
 [
   "easy-typing-obsidian",
-  "image-captions",
-  "file-explorer-note-count",
   "obsidian-excalidraw-plugin",
-  "hide-folders"
+  "hide-folders",
+  "file-explorer-note-count",
+  "obsidian-linter",
+  "obsidian-style-settings"
 ]
