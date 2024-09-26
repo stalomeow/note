@@ -8,7 +8,7 @@
 git clone https://github.com/stalomeow/note.git
 ```
 
-然后，使用 [Obsidian](https://obsidian.md/) 打开 [docs/obsidian-vault](docs/obsidian-vault) 文件夹。
+使用 [Obsidian](https://obsidian.md/) 打开 [docs/obsidian-vault](docs/obsidian-vault) 文件夹。
 
 ## 命令行工具 (Windows)
 
