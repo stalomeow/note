@@ -115,7 +115,7 @@
       "extra-auto-correct-files": []
     },
     "blockquote-style": {
-      "enabled": false,
+      "enabled": true,
       "style": "space"
     },
     "convert-bullet-list-markers": {
@@ -126,15 +126,15 @@
       "default-language": ""
     },
     "emphasis-style": {
-      "enabled": false,
-      "style": "consistent"
+      "enabled": true,
+      "style": "asterisk"
     },
     "no-bare-urls": {
       "enabled": false,
       "no-bare-uris": false
     },
     "ordered-list-style": {
-      "enabled": false,
+      "enabled": true,
       "number-style": "ascending",
       "list-end-style": "."
     },
@@ -143,16 +143,16 @@
     },
     "quote-style": {
       "enabled": false,
-      "single-quote-enabled": true,
+      "single-quote-enabled": false,
       "single-quote-style": "''",
-      "double-quote-enabled": true,
+      "double-quote-enabled": false,
       "double-quote-style": "\"\""
     },
     "remove-consecutive-list-markers": {
       "enabled": false
     },
     "remove-empty-list-markers": {
-      "enabled": false
+      "enabled": true
     },
     "remove-hyphenated-line-breaks": {
       "enabled": false
@@ -161,20 +161,20 @@
       "enabled": true
     },
     "strong-style": {
-      "enabled": false,
-      "style": "consistent"
+      "enabled": true,
+      "style": "asterisk"
     },
     "two-spaces-between-lines-with-content": {
       "enabled": false,
       "line-break-indicator": "  "
     },
     "unordered-list-style": {
-      "enabled": false,
-      "list-style": "consistent"
+      "enabled": true,
+      "list-style": "-"
     },
     "compact-yaml": {
       "enabled": false,
-      "inner-new-lines": false
+      "inner-new-lines": true
     },
     "consecutive-blank-lines": {
       "enabled": true
@@ -213,7 +213,7 @@
       "enabled": false
     },
     "remove-link-spacing": {
-      "enabled": false
+      "enabled": true
     },
     "remove-space-around-characters": {
       "enabled": false,
@@ -228,10 +228,10 @@
       "characters-to-remove-space-after": "¿¡‘“(["
     },
     "space-after-list-markers": {
-      "enabled": false
+      "enabled": true
     },
     "space-between-chinese-japanese-or-korean-and-english-or-numbers": {
-      "enabled": false,
+      "enabled": true,
       "english-symbols-punctuation-before": "-+;:'\"°%$)]",
       "english-symbols-punctuation-after": "-+'\"([¥$"
     },
