@@ -127,7 +127,7 @@ export default defineNuxtConfig({
 })
 ```
 
-> If you're curious, like I was, about _why_ we need to transpile @fortawesome/vue-fontawesome in order to avoid this SSR hydration mismatch, it's because the module field in the package.json file from @fortawesome/vue-fontawesome specifies index.es.js as the entry point ([link](https://github.com/FortAwesome/vue-fontawesome/blob/3.x/package.json#L20)) but package.json doesn't specify `"type": "module"` so Node treats this file as a CommonJS module. But index.es.js actually uses ESM syntax, so Node fails to load it and thus the `<FontAwesomeIcon>` component fails to render on the server since it's not defined.
+> If you're curious, like I was, about *why* we need to transpile @fortawesome/vue-fontawesome in order to avoid this SSR hydration mismatch, it's because the module field in the package.json file from @fortawesome/vue-fontawesome specifies index.es.js as the entry point ([link](https://github.com/FortAwesome/vue-fontawesome/blob/3.x/package.json#L20)) but package.json doesn't specify `"type": "module"` so Node treats this file as a CommonJS module. But index.es.js actually uses ESM syntax, so Node fails to load it and thus the `<FontAwesomeIcon>` component fails to render on the server since it's not defined.
 >
 > The Nuxt documentation does an excellent job documenting this problem:
 >

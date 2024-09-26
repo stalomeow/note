@@ -9,7 +9,7 @@ date: 2024-05-04
 
 - 官网（可以下到源码）：[Make - GNU Project - Free Software Foundation](https://www.gnu.org/software/make/)
 - 官方手册：[GNU Make Manual - GNU Project - Free Software Foundation](https://www.gnu.org/software/make/manual/)
-- 中文教程（网页+PDF）：[跟我一起写Makefile — 跟我一起写Makefile 1.0 文档 (seisman.github.io)](https://seisman.github.io/how-to-write-makefile/index.html)
+- 中文教程（网页 +PDF）：[跟我一起写Makefile — 跟我一起写Makefile 1.0 文档 (seisman.github.io)](https://seisman.github.io/how-to-write-makefile/index.html)
 
 ## 打印调试信息
 

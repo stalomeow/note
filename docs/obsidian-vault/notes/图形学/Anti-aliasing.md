@@ -9,9 +9,9 @@ date: 2024-04-22
 
 高频信号 vs 受限于渲染分辨率的不充足的采样。
 
-* Edge Sampling
-* Texture Sampling
-* Specular Sampling
+- Edge Sampling
+- Texture Sampling
+- Specular Sampling
 
 ## 方法
 
@@ -30,6 +30,5 @@ date: 2024-04-22
 基于 1 倍大小的图形进行 AA。
 
 1. 找到处于图形边缘的像素。
-2.
 
 ### Temporal Anti-aliasing (TAA)

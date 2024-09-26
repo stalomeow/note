@@ -18,7 +18,7 @@ trojan-go 的文档里写得很详细：[Trojan基本原理 - Trojan-Go Docs (p4
 
 用我 fork 的 [stalomeow/trojan](https://github.com/stalomeow/trojan) 一键部署，支持 C++ 和 Go 两种 trojan。原版有一些小 bug，我给修了。
 
-先[[VPS 与机场选购指南|买 VPS]] 和域名，解析域名，然后用 [[OpenSSH]] 连接，执行下面的命令
+先 [[VPS 与机场选购指南|买 VPS]] 和域名，解析域名，然后用 [[OpenSSH]] 连接，执行下面的命令
 
 ``` bash
 source <(curl -sL https://raw.githubusercontent.com/stalomeow/trojan/master/install.sh)
@@ -32,7 +32,7 @@ source <(curl -sL https://raw.githubusercontent.com/stalomeow/trojan/master/inst
 
 ## BBR 加速
 
-把 TCP 拥塞控制算法[[TCP 拥塞控制#BBR 算法|改成 BBR]] 来加速。
+把 TCP 拥塞控制算法 [[TCP 拥塞控制#BBR 算法|改成 BBR]] 来加速。
 
 ## 防火墙
 

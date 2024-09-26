@@ -7,19 +7,19 @@ date: 2024-04-22
 
 ## Depth Fog
 
-* Linear Fog
+- Linear Fog
 
     $$
     factor = \frac{end - z}{end - start}
     $$
 
-* Exp Fog
+- Exp Fog
 
     $$
     factor = e^{-density\,\cdot\,z}
     $$
 
-* Exp Squared Fog
+- Exp Squared Fog
 
     $$
     factor = e^{-(density\,\cdot\,z)^2}

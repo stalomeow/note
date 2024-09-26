@@ -11,7 +11,7 @@ PKCS 目前包含 15 个标准，PKCS #2 和 PKCS #4 已经被弃用。
 
 ## PKCS #1
 
-PKCS #1 是 [[RSA 加密算法|RSA 密码]]编译标准（RSA Cryptography Standard），定义了 RSA 的数理基础、公/私钥格式，以及加/解密、签/验章的流程。
+PKCS #1 是 [[RSA 加密算法|RSA 密码]] 编译标准（RSA Cryptography Standard），定义了 RSA 的数理基础、公/私钥格式，以及加/解密、签/验章的流程。
 
 ## PKCS #8
 

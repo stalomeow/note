@@ -11,8 +11,13 @@
             "id": "03338afd88090a2e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "notes/求职/简历.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -73,7 +78,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "notes/求职/简历.md"
+              }
             }
           },
           {
@@ -82,6 +89,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "notes/求职/简历.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -93,6 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "notes/求职/简历.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,6 +125,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "notes/求职/简历.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -163,6 +173,8 @@
   },
   "active": "03338afd88090a2e",
   "lastOpenFiles": [
+    "notes/求职/米哈游 2025 校招技术提前批 JD.md",
+    "notes/求职/面试.md",
     "posts/Misc/青雀进暗杠的抽牌数期望.md",
     "posts/仿星铁渲染/仿星铁渲染：Bloom.md",
     "posts/图形/对逐物体阴影的一些改进.md",
@@ -194,8 +206,6 @@
     "attachments/Pasted image 20240923204427.png",
     "attachments/Pasted image 20240923204302.png",
     "attachments/per-object-shadow-debugger.gif",
-    "notes/数学/概率论与数理统计/切比雪夫不等式.md",
-    "notes/数学/概率论与数理统计/弱大数定律.md",
     "attachments/Pasted image 20240824233322.png",
     "attachments/Pasted image 20240824233100.png",
     "attachments/Pasted image 20240722000504.png",

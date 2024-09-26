@@ -48,8 +48,8 @@ $$
 
 ## Ground Truth-based Ambient Occlusion (GTAO)
 
-* 引入了 cosine 项（类似算光照时那个 cosine）。
-* 给出了一个三次多项式，可以根据 single bounce 的 AO 值直接近似计算 multi bounce 以后的最终结果。
+- 引入了 cosine 项（类似算光照时那个 cosine）。
+- 给出了一个三次多项式，可以根据 single bounce 的 AO 值直接近似计算 multi bounce 以后的最终结果。
 
 ## Ray-Tracing Ambient Occlusion
 

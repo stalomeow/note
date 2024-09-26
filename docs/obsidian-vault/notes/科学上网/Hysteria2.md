@@ -11,7 +11,7 @@ Hysteria2 基于魔改的 QUIC 协议，旨在伪装成标准的 HTTP/3 流量�
 
 ## 部署
 
-先[[VPS 与机场选购指南|买 VPS]] 和域名，解析域名，然后用 [[OpenSSH]] 连接，使用官方的安装脚本
+先 [[VPS 与机场选购指南|买 VPS]] 和域名，解析域名，然后用 [[OpenSSH]] 连接，使用官方的安装脚本
 
 ``` bash
 bash <(curl -fsSL https://get.hy2.sh/)
