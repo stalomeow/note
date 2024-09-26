@@ -16,7 +16,6 @@ comments: true
 
 修改 IL 使用 Mono.Cecil。Package Manager 里安装 `com.unity.nuget.mono-cecil`。
 
-
 ## 法一：CompilationPipeline API
 
 这个方法偶尔会有 AccessViolation 错误，但总体用下来还是可以的。推荐同时提供自动和手动两种模式。
@@ -26,6 +25,5 @@ CompilationPipeline API 是有文档的，使用起来不难。它的编译完�
 ## 法二：ILPostProcessor
 
 这个方法 Unity 在 ECS 和 Burst Compiler 中有使用。截至 2023 年 9 月，这依然是一个 ==未公开== 的 feature，没有文档。Unity 可能会在未来修改它的 API 和功能。[^1]
-
 
 [^1]: [How does Unity do CodeGen and why can't I do it myself? - Unity Forum](https://forum.unity.com/threads/how-does-unity-do-codegen-and-why-cant-i-do-it-myself.853867/#post-5646937)

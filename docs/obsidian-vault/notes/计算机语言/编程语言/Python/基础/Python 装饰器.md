@@ -97,4 +97,3 @@ def example():
 - `example.__doc__`: `''`。
 
 这篇文章深入地介绍了原理：[Python functools.wraps 深入理解 - 知乎](https://zhuanlan.zhihu.com/p/45535784)。
-

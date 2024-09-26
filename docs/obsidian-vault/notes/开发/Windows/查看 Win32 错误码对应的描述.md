@@ -22,6 +22,7 @@ net helpmsg 1603
 ```
 安装时发生严重错误
 ```
+
 ## Win32Exception
 
 这个方法只能在 [[PowerShell]] 里用。错误码可以是任意进制的。
@@ -44,5 +45,3 @@ Source          :
 HResult         : -2147467259
 StackTrace      :
 ```
-
-

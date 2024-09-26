@@ -16,5 +16,3 @@ private static bool IsPinned(IntPtr handle)
     return ((nint)handle & 1) != 0;
 }
 ```
-
-

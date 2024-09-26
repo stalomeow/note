@@ -24,7 +24,6 @@ comments: true
 >
 > 拓展要求：以最简的电路实现功能。
 
-
 ## 仿真图
 
 ![[DirectionStar_Screenshot.png|S1 打到上面时，表示正在转弯；打到下面，表示转弯结束。S2 同理]]

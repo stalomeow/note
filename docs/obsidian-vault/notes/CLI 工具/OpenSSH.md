@@ -27,9 +27,7 @@ The authenticity of host 'servername (10.00.00.001)' can't be established. ECDSA
 
 ### 服务端
 
-
 参考：[保持 ssh 连接 | Notes (monsoir.github.io)](https://monsoir.github.io/Notes/Linux/keep-ssh-session-alive.html)。
-
 
 ### 客户端
 
@@ -51,7 +49,6 @@ ServerAliveCountMax 3
 echo "TCPKeepAlive yes" "ServerAliveInterval 300" "ServerAliveCountMax 3" >> ~/.ssh/config
 ```
 
-
 ## 断开连接
 
 有多种方法：
@@ -59,5 +56,3 @@ echo "TCPKeepAlive yes" "ServerAliveInterval 300" "ServerAliveCountMax 3" >> ~/.
 1. 直接关闭命令行
 2. 使用 `logout` 或 `exit` 命令
 3. 快捷键 Ctrl+D
-
-

@@ -13,7 +13,6 @@ Windows 上一款开源的软件安装器，类似 macOS 的 Homebrew。用它�
 
 ## Bucket
 
-
 Bucket 相当于一类软件的集合，负责管理它们的版号和安装方式。Scoop 官方提供了很多个 Bucket，都在 GitHub 上和社区一起维护
 
 - [ScoopInstaller/Main: 📦 The default bucket for Scoop. (github.com)](https://github.com/ScoopInstaller/Main)
@@ -22,7 +21,6 @@ Bucket 相当于一类软件的集合，负责管理它们的版号和安装方�
 - 等等
 
 官方提供了一个模板：[ScoopInstaller/BucketTemplate: Template Bucket for Scoop Installer (github.com)](https://github.com/ScoopInstaller/BucketTemplate)，我们可以用它创建自己的 Bucket。
-
 
 ## 多线程下载
 
@@ -39,7 +37,6 @@ scoop config aria2-enabled false
 ```
 
 ## 常用命令
-
 
 参考：
 
@@ -103,7 +100,6 @@ scoop cleanup -k <app>
 scoop cleanup -k *
 ```
 
-
 ### 切换软件版本
 
 ``` bash
@@ -112,9 +108,7 @@ scoop reset [app]@[version]
 
 不写 `@[version]` 的话就切换到最新版。
 
-
 ### 查看软件信息
-
 
 ``` bash
 # 列出已安装的 app
@@ -128,7 +122,6 @@ scoop home <app>
 ```
 
 ## 软件避坑
-
 
 ### MongoDB
 
@@ -149,14 +142,8 @@ Scoop 现在使用 MIT 的镜像下载这个软件，国内速度非常慢，经
 
 解决方法是自己去官网下载对应版本，然后替换 Scoop 的 cache 目录里的安装包。或者自己做一个 Bucket，用 SJTU 的镜像下载。
 
-
 ### Snipaste
 
 必须装 `versions/snipaste-beta`。另外一个 `extras/snipaste` 很久没更新了，Win 11 上运行不了。
 
-
 [^1]: [https://github.com/ScoopInstaller/Main/blob/5947087876e7d49221ad0b3293e56bf8402e64d6/bucket/mongodb.json#L14-L16](https://github.com/ScoopInstaller/Main/blob/5947087876e7d49221ad0b3293e56bf8402e64d6/bucket/mongodb.json#L14-L16)
-
-
-
-

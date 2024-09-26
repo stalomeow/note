@@ -51,4 +51,3 @@ VSCode 可以自动识别 `venv`，不需要额外配置。其他的还没试过
 - [Installing packages using pip and virtual environments — Python Packaging User Guide](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment)
 - [venv --- 创建虚拟环境 — Python 3.11.4 文档](https://docs.python.org/zh-cn/3/library/venv.html)
 - [python多环境管理（venv与virtualenv） - doublexi - 博客园](https://www.cnblogs.com/doublexi/p/15783355.html)
-

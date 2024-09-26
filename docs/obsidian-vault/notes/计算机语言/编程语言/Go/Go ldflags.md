@@ -19,4 +19,3 @@ go build -ldflags "-w -s \
 -X 'github.com/pubgo/xxx/version.GoVersion=${GoVersion}' \
 -X 'github.com/pubgo/xxx/version.BuildTime=${BuildTime}'"
 ```
-

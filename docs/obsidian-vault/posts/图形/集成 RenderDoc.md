@@ -223,7 +223,5 @@ if (ImGui::BeginMainMenuBar())
 }
 ```
 
-
 [^1]: [d3d debug runtime doesn't work with RenderDoc? · Issue #418 · baldurk/renderdoc (github.com)](https://github.com/baldurk/renderdoc/issues/418)
 [^2]: [renderdoc/renderdoc/driver/d3d12/d3d12_device.h at v1.x · baldurk/renderdoc (github.com)](https://github.com/baldurk/renderdoc/blob/v1.x/renderdoc/driver/d3d12/d3d12_device.h)
-

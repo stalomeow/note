@@ -48,8 +48,6 @@ protected UIPage FindUIPage(SerializedProperty property)
 
 `GameObject` 上的 `GetComponentInParent` 从 2020.1.X 开始有 `includeInactive` 参数，但当时 Unity 忘记在 `Component` 上定义这个重载了，所以 2021.2.X 开始 `Component` 上才有。[^3]
 
-
 [^1]: [GetComponentInParent is returning null when the GameObject is a prefab - Unity Issue Tracker](https://issuetracker.unity3d.com/issues/getcomponentinparent-is-returning-null-when-the-gameobject-is-a-prefab)
 [^2]: [GetComponentInParent has no override for getting inactive objects - Unity Issue Tracker](https://issuetracker.unity3d.com/issues/getcomponentinparent-has-no-override-for-inactive-objects)
 [^3]: [Component.GetComponentInParent doesn't have an overload for getting components of inactive objects - Unity Issue Tracker](https://issuetracker.unity3d.com/issues/component-dot-getcomponentinparent-doesnt-have-an-overload-for-getting-components-of-inactive-objects)
-

@@ -7,15 +7,11 @@ date: 2024-06-10
 
 在搭建自己的订阅服务器时，这些 URL Scheme 非常有用。规范参考 [Clash for Windows 的文档（Wayback Machine）](https://web.archive.org/web/20230930062020/https://docs.cfw.lbyczf.com/contents/urlscheme.html#%E4%B8%8B%E8%BD%BD%E9%85%8D%E7%BD%AE)，大多数 Clash 客户端都支持。
 
-
 ## 快速导入
-
 
 ``` txt
 clash://install-config?url=<encoded URI>
 ```
-
-
 
 ## 响应头
 
@@ -31,7 +27,6 @@ content-disposition: attachment; filename="abc.yaml"
 
 否则使用 URL 最后一部分作为配置文件名。
 
-
 ### 配置文件自动更新间隔
 
 如果响应头中存在 `profile-update-interval` 字段，则配置文件自动更新间隔设置为对应的值，以小时为单位。
@@ -39,7 +34,6 @@ content-disposition: attachment; filename="abc.yaml"
 ``` yaml
 profile-update-interval: 12
 ```
-
 
 ### 用户订阅信息
 
@@ -65,6 +59,3 @@ subscription-userinfo: upload=455727941; download=6174315083; total=107374182400
 ``` yaml
 profile-web-page-url: https://example.com
 ```
-
-
-

@@ -43,15 +43,13 @@ npx nuxi@latest init <project-name>
 
     之后再初始化就可以了。
 
-3. 官方目前提供了一个支持代理的版本，但是 nightly 版，还不是正式版。 
+3. 官方目前提供了一个支持代理的版本，但是 nightly 版，还不是正式版。
 
     ``` bash
     npx nuxi-nightly@latest init <project-name>
     ```
 
 4. 使用 [[Clash 的 TUN 模式]]，不用系统代理。
-
-
 
 ## Font Awesome
 
@@ -130,13 +128,13 @@ export default defineNuxtConfig({
 ```
 
 > If you're curious, like I was, about _why_ we need to transpile @fortawesome/vue-fontawesome in order to avoid this SSR hydration mismatch, it's because the module field in the package.json file from @fortawesome/vue-fontawesome specifies index.es.js as the entry point ([link](https://github.com/FortAwesome/vue-fontawesome/blob/3.x/package.json#L20)) but package.json doesn't specify `"type": "module"` so Node treats this file as a CommonJS module. But index.es.js actually uses ESM syntax, so Node fails to load it and thus the `<FontAwesomeIcon>` component fails to render on the server since it's not defined.
-> 
+>
 > The Nuxt documentation does an excellent job documenting this problem:
-> 
+>
 > https://nuxt.com/docs/guide/concepts/esm#what-kinds-of-problems-can-there-be
-> 
+>
 > So until @fortawesome/vue-fontawesome is updated to correct this issue, simply configure Nuxt to transpile @fortawesome/vue-fontawesome:
-> 
+>
 > ``` js
 > build: {
 >   transpile: [
@@ -145,7 +143,6 @@ export default defineNuxtConfig({
 > },
 > ```
 > [^1]
-
 
 ## 设置页面 head 信息
 
@@ -183,7 +180,4 @@ export default defineNuxtConfig({
 
 2. 在 Vercel 上去项目 Settings 面板重写 `Build Command` 为 `npm run generate`（或 `nuxt generate`）
 
-
-
 [^1]: [https://github.com/FortAwesome/vue-fontawesome/issues/394#issuecomment-2092933896](https://github.com/FortAwesome/vue-fontawesome/issues/394#issuecomment-2092933896)
-

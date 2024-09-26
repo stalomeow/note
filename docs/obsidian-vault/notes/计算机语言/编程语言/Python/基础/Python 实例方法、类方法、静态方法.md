@@ -5,7 +5,6 @@ date: 2024-04-27
 
 # Python 实例方法、类方法、静态方法
 
-
 ``` python
 class A(object):
     # 实例方法，第一个参数 self 的值为当前的对象

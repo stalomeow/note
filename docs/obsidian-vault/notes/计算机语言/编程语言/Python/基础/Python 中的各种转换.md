@@ -5,7 +5,6 @@ date: 2024-04-27
 
 # Python 中的各种转换
 
-
 ## int 和 bytes 相互转换
 
 - `int.to_bytes(self, length, byteorder, *, signed=False)`。
@@ -24,4 +23,3 @@ date: 2024-04-27
 
 - 字符转 Unicode：`ord('a')`。
 - Unicode 转字符：`chr(97)`。
-

@@ -39,4 +39,3 @@ CloseHandle(hMutex);
 `CreateMutex` 返回内核对象的句柄，用完以后要调用 `CloseHandle` 释放它，减少内核对象的引用计数。
 
 `ReleaseMutex` 是释放 Mutex 的所有权。这里只判断 Mutex 是否存在，不管所有权，所以不需要用这个函数。
-

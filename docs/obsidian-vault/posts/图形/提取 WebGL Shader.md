@@ -14,7 +14,6 @@ comments: true
 
 一键提取 WebGL Shader 的代码，来自 [https://github.com/greggman/dump-all-the-shaders/tree/master](https://github.com/greggman/dump-all-the-shaders/tree/master)。
 
-
 ``` js
 (function(global) {
   'use strict';

@@ -51,7 +51,6 @@ journalctl --no-pager -e -u hysteria-server.service
 systemctl restart hysteria-server.service
 ```
 
-
 ## 流量统计
 
 个人使用的话，我认为没必要开这个功能。功能开太多，可能反而容易被 GFW 怀疑。
@@ -74,5 +73,3 @@ sudo ufw reload
 ## 客户端
 
 客户端可以用 Clash。根据 Clash 文档里 Hysteria2 的部分写 [[Clash 订阅配置]]。
-
-

@@ -20,7 +20,6 @@ openssl genrsa -traditional -out priv2.pem 4096
 
 上面两条命令都会生成 4096 位的 RSA 私钥，前者使用 PKCS #8 后者使用 PKCS #1 。
 
-
 ## 导出 RSA 公钥
 
 文档：[/docs/man3.3/man1/openssl-rsa.html](https://www.openssl.org/docs/man3.3/man1/openssl-rsa.html)
@@ -34,5 +33,3 @@ openssl genrsa -traditional -out priv2.pem 4096
 openssl rsa -in priv.pem -pubout -out pub1.pem
 openssl rsa -in priv.pem -RSAPublicKey_out -out pub2.pem
 ```
-
-

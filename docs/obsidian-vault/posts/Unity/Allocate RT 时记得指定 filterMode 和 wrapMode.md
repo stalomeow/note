@@ -46,27 +46,27 @@ float3 color = SAMPLE_TEXTURE2D_X(_BlitTexture, sampler_LinearClamp, uv).rgb;
 一查文档发现
 
 > **Coupled textures and samplers**
-> 
+>
 > Most of the time when sampling textures in shaders, the texture sampling state should come from [texture settings](https://docs.unity3d.com/Manual/class-TextureImporter.html) – essentially, textures and samplers are coupled together. This is default behavior when using DX9-style shader syntax:
-> 
+>
 > ``` hlsl
 > sampler2D _MainTex;
 > // ...
 > half4 color = tex2D(_MainTex, uv);
 > ```
-> 
+>
 > Using sampler2D, sampler3D, samplerCUBE HLSL keywords declares both texture and sampler.
-> 
-> Most of the time this is what you want, and is ==the only supported option on older graphics APIs (OpenGL ES)==. 
-> 
+>
+> Most of the time this is what you want, and is ==the only supported option on older graphics APIs (OpenGL ES)==.
+>
 > ...
-> 
+>
 > **Separate textures and samplers**
-> 
+>
 > ...
-> 
+>
 > **Inline sampler states**
-> 
+>
 > ...
 >
 > ==Just like separate texture + sampler syntax, inline sampler states are not supported on some platforms. Currently they are implemented on Direct3D 11/12 and Metal.== [^1]

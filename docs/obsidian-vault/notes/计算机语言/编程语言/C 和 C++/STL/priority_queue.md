@@ -13,7 +13,7 @@ date: 2024-04-27
 自定义比较的方法，除了重载 `T` 的大小于号，还有：
 
 - 函数指针
-    
+
     ``` cpp
     bool cmp(ListNode* x, ListNode* y) {
         return x->val > y->val;
@@ -53,4 +53,3 @@ date: 2024-04-27
         // ...
     }
     ```
-

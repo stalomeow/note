@@ -30,6 +30,6 @@ date: 2024-04-22
 基于 1 倍大小的图形进行 AA。
 
 1. 找到处于图形边缘的像素。
-2. 
+2.
 
 ### Temporal Anti-aliasing (TAA)

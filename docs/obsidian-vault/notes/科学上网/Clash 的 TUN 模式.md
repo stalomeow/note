@@ -10,6 +10,4 @@ date: 2024-05-05
 - [理解Linux虚拟网卡设备tun/tap的一切 | 骏马金龙 (junmajinlong.com)](https://www.junmajinlong.com/virtual/network/all_about_tun_tap/index.html)
 - [虚拟设备之TUN和TAP - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/260405786)
 
-
 开了 TUN 模式就不用再开系统代理了。
-

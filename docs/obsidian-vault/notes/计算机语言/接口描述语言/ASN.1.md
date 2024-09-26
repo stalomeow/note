@@ -9,7 +9,6 @@ Abstract Syntax Notation One (ASN.1) 是一个标准的接口描述语言（IDL�
 
 用 ASN.1 定义的数据结构与具体的硬件或编程语言是无关的，换句话说就是跨平台、跨语言。有需要时，ASN.1 编译器可以帮你生成具体编程语言实现的代码。
 
-
 ## 语法示例
 
 下面的代码定义了一个 `FooProtocol` [^1]
@@ -29,7 +28,6 @@ FooProtocol DEFINITIONS ::= BEGIN
 
 END
 ```
-
 
 ## 编码
 
@@ -69,11 +67,6 @@ myQuestion FooQuestion ::= {
 
 > DER 使用 `type length value` 的模式将数据编码为字节序列。
 
-
 `FooProtocol` 的制定者应该提前明确好具体的编码规则，不然其他人不知道该用哪个。
 
-
-
 [^1]: [ASN.1 - 维基百科，自由的百科全书 (wikipedia.org)](https://zh.wikipedia.org/wiki/ASN.1)
-
-

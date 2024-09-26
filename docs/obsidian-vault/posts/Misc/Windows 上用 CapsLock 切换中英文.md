@@ -19,7 +19,6 @@ comments: true
 
 使用 [[Windows PowerToys]] 的键盘管理器映射 CapsLock 到 Win+Space。
 
-
 ## 同步指示灯
 
 按键都重映射了，指示灯放着不用也怪可惜的。我笔记本键盘上 CapsLock 指示灯就在这个按键右上角，改成中英文指示灯刚好。灯亮时就是中文模式，灯暗时就是英文模式。
@@ -50,7 +49,6 @@ KeyboardLayoutName 就是 [Keyboard identifier](https://learn.microsoft.com/en-u
 
 ### 设置指示灯
 
-需要引入头文件  [ntddkbd.h](https://learn.microsoft.com/en-us/windows/win32/api/ntddkbd/)。
+需要引入头文件 [ntddkbd.h](https://learn.microsoft.com/en-us/windows/win32/api/ntddkbd/)。
 
 具体的思路参考 [windows - Is it possible to control capslock light without actual capslocking? - Stack Overflow](https://stackoverflow.com/questions/72679665/is-it-possible-to-control-capslock-light-without-actual-capslocking)。
-

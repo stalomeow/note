@@ -27,4 +27,3 @@ time2 = datetime.now()
 # 打印时间差（毫秒）
 print((time2 - time1).total_seconds() * 1000)
 ```
-

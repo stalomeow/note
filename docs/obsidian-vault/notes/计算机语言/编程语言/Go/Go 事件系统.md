@@ -24,7 +24,6 @@ if err := api.Dispatch(&playerUidQuery); err != nil {
 playerUid := playerUidQuery.Result
 ```
 
-
 ## 注册事件
 
 刚才的 api 的处理函数如下：

@@ -72,7 +72,6 @@ py -3.10 -m pip install -r requirements.txt
 py script.py
 ```
 
-
 ## 参考
 
 [讲讲 Python Launcher 是什么鬼东西？ - 知乎](https://zhuanlan.zhihu.com/p/387109071)

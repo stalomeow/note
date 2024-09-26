@@ -15,7 +15,7 @@ comments: true
 
 ==有新的 Patch 时，记得把之前的 Cache 清除掉，否则新 Patch 可能生效不了。==
 
-##  Vercel
+## Vercel
 
 清 Build Cache 的方法：
 
@@ -26,4 +26,3 @@ comments: true
 ## Next .js
 
 把 `.next` 文件夹删掉就好。
-

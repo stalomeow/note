@@ -5,7 +5,6 @@ date: 2024-04-27
 
 # Delegate Marshalling
 
-
 向非托管代码封送委托的原理。下面这些也类似：
 
 - 使用 xLua 在 C# 中创建一个 Lua 函数的委托。

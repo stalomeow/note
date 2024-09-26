@@ -5,8 +5,6 @@ date: 2024-06-12
 
 # TCP 拥塞控制
 
-
-
 ## BBR 算法
 
 这个视频简单提到了 BBR 的原理。
@@ -28,5 +26,3 @@ echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
 sysctl -p
 ```
-
-

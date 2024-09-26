@@ -5,7 +5,6 @@ date: 2024-04-27
 
 # CSharp 弱引用
 
-
 当程序可以访问一个对象时，如果 GC 不能回收该对象，那么可以认为程序持有该对象的**强引用**。C# 中默认的引用方式就是强引用。下面的代码先创建了一个对象，然后建立了对它的强引用并记为 `obj`。
 
 ``` csharp
@@ -212,7 +211,7 @@ static uint32_t alloc_weak_handle(Il2CppObject *obj, bool track_resurrection)
 }
 ```
 
-最后的返回值 [[GCHandle 与 IntPtr|把信息编码进一个整数中]]。另外，为了保证 `IntPtr.Zero` 是一个无效的 `GCHandle`，`(slot << 3) | (handles->type + 1)` 表达式中才对 `type` 加一。 
+最后的返回值 [[GCHandle 与 IntPtr|把信息编码进一个整数中]]。另外，为了保证 `IntPtr.Zero` 是一个无效的 `GCHandle`，`(slot << 3) | (handles->type + 1)` 表达式中才对 `type` 加一。
 
 `GarbageCollector` 里的方法大多依赖于 GC 的实现。下面以 Unity 使用的 BoehmGC 为例。
 

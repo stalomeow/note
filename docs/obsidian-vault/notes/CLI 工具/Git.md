@@ -5,7 +5,6 @@ date: 2024-04-25
 
 # Git
 
-
 ## 配置
 
 设置 Commit 时的用户名：
@@ -91,6 +90,7 @@ git branch -D branch_name
 ``` bash
 git push origin -d branch_name
 ```
+
 推送空分支到远程，也能删除远程分支：
 
 ``` bash
@@ -163,7 +163,6 @@ HEAD 文件通常是一个符号引用（symbolic reference），指向目前所
 
 要想让 git 正确识别 `HEAD^`，需要输入 `HEAD^^` 或者用双引号包裹 `"HEAD^"`。换 powershell、git bash 也行。
 
-
 ## 路径大小写不敏感
 
 > [解决 Git 不区分大小写导致的文件冲突问题 - 千古壹号 - 博客园 (cnblogs.com)](https://www.cnblogs.com/qianguyihao/p/15906060.html)
@@ -184,7 +183,6 @@ git config core.ignorecase false
 2. 提交
 3. 把 `Test1` 改名为 `test`
 4. 提交
-
 
 ## Sync Fork
 
@@ -257,4 +255,3 @@ git rebase -i <commit-hash>
 <div class="responsive-video-container">
     <iframe src="https://player.bilibili.com/player.html?aid=561005338&bvid=BV19e4y1q7JJ&cid=846391446&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
-

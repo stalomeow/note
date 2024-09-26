@@ -25,18 +25,14 @@ date: 2024-06-11
 
 ## VPN 商家
 
-
 - [Gatern](https://shuttle.gt-all.com/)，这家 IP 非常干净，速度也不错
 - [大哥云](https://2024la.com/)
 
-
 ## VPS 线路选择
-
 
 <div class="responsive-video-container">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/x6B5JEwXSEg?si=3RbF_rTjo1hTmvcr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-
 
 ## VPS IP 选择
 
@@ -81,9 +77,4 @@ IP 初始被分配到哪个国家，就是谁的原生 IP。之后，IP 可能�
 
 网上有不少流媒体检测脚本，也可以用它们检测一下。
 
-
-
-
 [^1]: [具体什么是原生IP节点？我们该如何识别 原生节点 ？ - TikTok, Netflix, ChatGPT... (tiktokrobinhood.com)](https://tiktokrobinhood.com/%e5%85%b7%e4%bd%93%e4%bb%80%e4%b9%88%e6%98%af%e5%8e%9f%e7%94%9fip%e8%8a%82%e7%82%b9%ef%bc%9f%e6%88%91%e4%bb%ac%e8%af%a5%e5%a6%82%e4%bd%95%e8%af%86%e5%88%ab%ef%bc%9f/)
-
-

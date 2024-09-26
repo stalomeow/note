@@ -14,7 +14,6 @@ comments: true
 
 写一个 `ScriptedImporter`，让 Unity 把 GIF 动图直接导入为 `AnimationClip`。这个 `AnimationClip` 通过控制 `SpriteRenderer.m_Sprite` 来实现帧动画。
 
-
 ## 导出 GIF 的关键帧图片
 
 读取 GIF 用 `System.Drawing.Image` 实现。

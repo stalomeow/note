@@ -34,4 +34,3 @@ pip uninstall -r python_modules.txt -y
 
 - [如何快速卸载所有python包？ - 知乎](https://zhuanlan.zhihu.com/p/162698236)
 - [python最详细的安装与完全卸载_python怎么卸载干净重新安装_无尽的沉默的博客-CSDN博客](https://blog.csdn.net/hgnuxc_1993/article/details/114675594)
-

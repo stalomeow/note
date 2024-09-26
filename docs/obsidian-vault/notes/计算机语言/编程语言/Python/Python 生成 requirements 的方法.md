@@ -71,4 +71,3 @@ pipreqs ./proj --encoding=utf8 --force
 - 加上 `--force` 参数，覆盖之前的 requirements.txt。
 
 执行完，就会生成 `./proj/requirements.txt`。
-
