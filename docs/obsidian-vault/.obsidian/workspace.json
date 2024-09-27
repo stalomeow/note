@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1e86daf825742d56",
+        "id": "ef690b73425e5e60",
         "type": "tabs",
         "children": [
           {
-            "id": "f052b3c6e5e42ec8",
+            "id": "ccdb13360e3cf46c",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -29,7 +29,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a86edf9e473aa4d9",
+            "id": "c87ab82d610a5a66",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -51,6 +51,14 @@
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
+            }
+          },
+          {
+            "id": "61ff6cd9e9ee46b0",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
             }
           }
         ]
@@ -157,12 +165,32 @@
       "templates:插入模板": false,
       "graph:查看关系图谱": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "canvas:新建白板": false,
       "random-note:开始漫游笔记": false,
-      "hide-folders:Show hidden folders": false
+      "hide-folders:Show hidden folders": false,
+      "obsidian-shellcommands:Shell commands: Custom variables": true
     }
   },
-  "active": "a86edf9e473aa4d9",
+  "active": "ccdb13360e3cf46c",
   "lastOpenFiles": [
+    "笔记/求职/米哈游 2024 社招引擎岗 JD.md",
+    "笔记/求职/米哈游 2025 校招技术提前批 JD.md",
+    "笔记/数据结构与算法/算法学习资料.md",
+    "笔记/求职/Drawing 2024-09-27 10.54.14.excalidraw.md",
+    "笔记/求职/Drawing 2024-09-27 10.54.14.excalidraw.svg",
+    "笔记/求职/未命名.canvas",
+    "笔记/数据结构与算法/树/二叉树遍历.md",
+    "笔记/数据结构与算法/树/并查集.md",
+    "笔记/数据结构与算法/数学/扩展欧几里得算法.md",
+    "笔记/数据结构与算法/搜索/回溯法.md",
+    "笔记/数据结构与算法/图论/关键路径.md",
+    "笔记/数据结构与算法/图论/连通分量个数.md",
+    "笔记/数据结构与算法/图论/判断图中是否有环.md",
+    "笔记/数学/高等数学/散度.md",
+    "笔记/数学/数论/扩展欧拉定理（数论）.md",
+    "笔记/数学/线性代数/伴随矩阵.md",
+    "笔记/数学/信号与系统/卷积积分.md",
+    "笔记/求职/简历.md",
     "博客/仿星铁渲染/仿星铁渲染：Bloom.md",
     "博客/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
     "博客/仿星铁渲染/仿星铁渲染：平滑模型法线.md",
@@ -173,22 +201,6 @@
     "笔记/资源/GitHub 工具.md",
     "笔记/资源/网站资源.md",
     "笔记/资源/网络工具.md",
-    "笔记/英语/高中英语作文框架.md",
-    "笔记/图形学/Terrain Rendering.md",
-    "笔记/图形学/Half Lambert 勘误.md",
-    "笔记/图形学/Fog.md",
-    "笔记/图形学/Anti-aliasing.md",
-    "笔记/图形学/Ambient Occlusion.md",
-    "笔记/图形学/图形学黑话.md",
-    "笔记/图形学/仿星穹铁道渲染资料.md",
-    "笔记/数据结构与算法/算法学习资料.md",
-    "笔记/数据结构与算法/两个整数的平均值.md",
-    "笔记/数据结构与算法/单调栈.md",
-    "笔记/数据结构与算法/字符串/KMP 算法.md",
-    "笔记/数据结构与算法/字符串/字符串的前后缀.md",
-    "笔记/数据结构与算法/图论/拓扑排序.md",
-    "笔记/数据结构与算法/图论/判断图中是否有环.md",
-    "笔记/数据结构与算法/图论/连通分量个数.md",
     "attachments/Pasted image 20240924000446.png",
     "attachments/Pasted image 20240923211259.png",
     "attachments/Pasted image 20240923204753.png",
@@ -198,7 +210,6 @@
     "attachments/per-object-shadow-debugger.gif",
     "attachments/Pasted image 20240824233322.png",
     "attachments/Pasted image 20240824233100.png",
-    "attachments/Pasted image 20240722000504.png",
     "博客/DX12",
     "博客/仿星铁渲染",
     "博客/后端",

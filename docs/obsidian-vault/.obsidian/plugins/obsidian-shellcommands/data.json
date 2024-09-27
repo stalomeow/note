@@ -26,11 +26,53 @@
     {
       "id": "80xb359a49",
       "platform_specific_commands": {
-        "default": "git add . && git commit -m \"Obsidian Sync\" && git push"
+        "default": "git add . && git commit -m \"{{_commit_message}}\" && git push"
       },
       "shells": {},
-      "alias": "Sync",
-      "icon": null,
+      "alias": "Git Commit and Push",
+      "icon": "upload-cloud",
+      "confirm_execution": false,
+      "ignore_error_codes": [],
+      "input_contents": {
+        "stdin": null
+      },
+      "output_handlers": {
+        "stdout": {
+          "handler": "ignore",
+          "convert_ansi_code": true
+        },
+        "stderr": {
+          "handler": "notification",
+          "convert_ansi_code": true
+        }
+      },
+      "output_wrappers": {
+        "stdout": null,
+        "stderr": null
+      },
+      "output_channel_order": "stdout-first",
+      "output_handling_mode": "buffered",
+      "execution_notification_mode": "permanent",
+      "events": {},
+      "debounce": null,
+      "command_palette_availability": "enabled",
+      "preactions": [
+        {
+          "type": "prompt",
+          "enabled": true,
+          "prompt_id": "dkhash4j48"
+        }
+      ],
+      "variable_default_values": {}
+    },
+    {
+      "id": "53vaeflkn5",
+      "platform_specific_commands": {
+        "default": "git status -s"
+      },
+      "shells": {},
+      "alias": "Git Status",
+      "icon": "info",
       "confirm_execution": false,
       "ignore_error_codes": [],
       "input_contents": {
@@ -58,37 +100,76 @@
       "command_palette_availability": "enabled",
       "preactions": [],
       "variable_default_values": {}
+    },
+    {
+      "id": "bhv27hizzx",
+      "platform_specific_commands": {
+        "default": "explorer ."
+      },
+      "shells": {},
+      "alias": "Open in Explorer",
+      "icon": "folder",
+      "confirm_execution": false,
+      "ignore_error_codes": [],
+      "input_contents": {
+        "stdin": null
+      },
+      "output_handlers": {
+        "stdout": {
+          "handler": "ignore",
+          "convert_ansi_code": true
+        },
+        "stderr": {
+          "handler": "notification",
+          "convert_ansi_code": true
+        }
+      },
+      "output_wrappers": {
+        "stdout": null,
+        "stderr": null
+      },
+      "output_channel_order": "stdout-first",
+      "output_handling_mode": "buffered",
+      "execution_notification_mode": null,
+      "events": {},
+      "debounce": null,
+      "command_palette_availability": "enabled",
+      "preactions": [],
+      "variable_default_values": {}
     }
   ],
-  "prompts": [],
+  "prompts": [
+    {
+      "id": "dkhash4j48",
+      "title": "Git Commit and Push",
+      "description": "",
+      "preview_shell_command": true,
+      "fields": [
+        {
+          "type": "single-line-text",
+          "label": "Message",
+          "description": "",
+          "default_value": "Upload via Obsidian",
+          "target_variable_id": "nim0h3481k",
+          "required": true
+        }
+      ],
+      "execute_button_text": "Execute"
+    }
+  ],
   "builtin_variables": {},
-  "custom_variables": [],
+  "custom_variables": [
+    {
+      "id": "nim0h3481k",
+      "name": "commit_message",
+      "description": "",
+      "default_value": null
+    }
+  ],
   "custom_variables_notify_changes_via": {
     "obsidian_uri": true,
     "output_assignment": true
   },
-  "custom_shells": [
-    {
-      "id": "iqxugq9yif",
-      "name": "",
-      "description": "",
-      "binary_path": "",
-      "shell_arguments": [
-        "-c",
-        "{{!shell_command_content}}"
-      ],
-      "host_platform": "win32",
-      "host_platform_configurations": {
-        "win32": {
-          "quote_shell_arguments": true
-        }
-      },
-      "shell_platform": null,
-      "escaper": "PowerShell",
-      "path_translator": null,
-      "shell_command_wrapper": null,
-      "shell_command_test": null
-    }
-  ],
+  "custom_shells": [],
   "output_wrappers": []
 }
