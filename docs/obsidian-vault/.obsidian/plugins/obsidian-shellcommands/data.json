@@ -149,7 +149,7 @@
           "type": "single-line-text",
           "label": "Message",
           "description": "",
-          "default_value": "Upload via Obsidian",
+          "default_value": "Upload via Obsidian Shell Commands",
           "target_variable_id": "nim0h3481k",
           "required": true
         }

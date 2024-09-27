@@ -8,7 +8,8 @@
     "markdown",
     "math",
     "mermaid",
-    "media"
+    "media",
+    "shell-commands"
   ],
   "showViewHeader": true,
   "nativeMenus": false,

@@ -10,6 +10,12 @@ git clone https://github.com/stalomeow/note.git
 
 使用 [Obsidian](https://obsidian.md/) 打开 [docs/obsidian-vault](docs/obsidian-vault) 文件夹。
 
+|Obsidian 快捷命令|功能|
+|:-|:-|
+|`Shell commands: Execute: Git Status`|查看文件更改情况|
+|`Shell commands: Execute: Git Commit and Push`|推送到 GitHub|
+|`Shell commands: Execute: Open in Explorer`|在文件管理器中打开项目目录|
+
 ## 命令行工具 (Windows)
 
 要求有 GNU Make、Python launcher 和 Python 3.12。
