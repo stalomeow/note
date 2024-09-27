@@ -12,8 +12,8 @@ git clone https://github.com/stalomeow/note.git
 
 |Obsidian 快捷命令|功能|
 |:-|:-|
-|`Shell commands: Execute: Git Status`|查看文件更改情况|
-|`Shell commands: Execute: Git Commit and Push`|推送到 GitHub|
+|`Shell commands: Execute: Git Status`|查看文件变更|
+|`Shell commands: Execute: Git Commit and Push`|提交到远程仓库|
 |`Shell commands: Execute: Open in Explorer`|在文件管理器中打开项目目录|
 
 ## 命令行工具 (Windows)
