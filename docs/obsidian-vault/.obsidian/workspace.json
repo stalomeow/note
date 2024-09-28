@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ef690b73425e5e60",
+        "id": "4d5c5259b283922a",
         "type": "tabs",
         "children": [
           {
-            "id": "ccdb13360e3cf46c",
+            "id": "df74ae3e5d870f32",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -65,7 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 295.5
+    "width": 293.5
   },
   "right": {
     "id": "029f8289abc95648",
@@ -171,36 +171,38 @@
       "obsidian-shellcommands:Shell commands: Custom variables": true
     }
   },
-  "active": "ccdb13360e3cf46c",
+  "active": "c87ab82d610a5a66",
   "lastOpenFiles": [
+    "博客/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
+    "笔记/密码学/PEM 格式.md",
+    "博客/DX12/ImGui 适配高 DPI 显示器.md",
+    "笔记/计算机基础/Unix 时间.md",
+    "笔记/计算机基础/Epoch.md",
+    "笔记/计算机基础/数字电路/数制与编码.md",
+    "笔记/计算机基础/操作系统/进程.md",
+    "笔记/计算机基础/操作系统/不同操作系统的文件路径规则.md",
+    "笔记/计算机基础/分布式/DHT 网络.md",
+    "笔记/计算机基础/分布式/分布式哈希表.md",
+    "笔记/计算机基础/Tracker 服务器.md",
+    "笔记/计算机基础/序号回绕问题.md",
+    "笔记/开发/Windows/Windows 全局钩子.md",
+    "笔记/开发/Windows/Windows 程序防多开.md",
+    "笔记/开发/Windows/DLL 进程间共享数据.md",
+    "笔记/开发/Windows/查看 Win32 错误码对应的描述.md",
+    "笔记/开发/Linux/UFW 防火墙.md",
+    "笔记/科学上网/Clash 客户端支持的 URL Scheme.md",
+    "笔记/科学上网/Clash 订阅配置.md",
+    "笔记/科学上网/Clash 的 TUN 模式.md",
+    "笔记/科学上网/自建机场节点.md",
+    "笔记/密码学/X.509.md",
+    "笔记/密码学/RSA 加密算法.md",
+    "笔记/密码学/PKCS.md",
+    "笔记/求职/面试.md",
     "笔记/求职/米哈游 2024 社招引擎岗 JD.md",
-    "笔记/求职/米哈游 2025 校招技术提前批 JD.md",
-    "笔记/数据结构与算法/算法学习资料.md",
-    "笔记/求职/Drawing 2024-09-27 10.54.14.excalidraw.md",
+    "attachments/exp-func-and-its-inverse-func-intersections-0.png",
+    "速记",
     "笔记/求职/Drawing 2024-09-27 10.54.14.excalidraw.svg",
     "笔记/求职/未命名.canvas",
-    "笔记/数据结构与算法/树/二叉树遍历.md",
-    "笔记/数据结构与算法/树/并查集.md",
-    "笔记/数据结构与算法/数学/扩展欧几里得算法.md",
-    "笔记/数据结构与算法/搜索/回溯法.md",
-    "笔记/数据结构与算法/图论/关键路径.md",
-    "笔记/数据结构与算法/图论/连通分量个数.md",
-    "笔记/数据结构与算法/图论/判断图中是否有环.md",
-    "笔记/数学/高等数学/散度.md",
-    "笔记/数学/数论/扩展欧拉定理（数论）.md",
-    "笔记/数学/线性代数/伴随矩阵.md",
-    "笔记/数学/信号与系统/卷积积分.md",
-    "笔记/求职/简历.md",
-    "博客/仿星铁渲染/仿星铁渲染：Bloom.md",
-    "博客/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
-    "博客/仿星铁渲染/仿星铁渲染：平滑模型法线.md",
-    "笔记/CLI 工具/PowerShell.md",
-    "笔记/CLI 工具/OpenSSL.md",
-    "笔记/CLI 工具/GNU Make.md",
-    "笔记/CLI 工具/Aria2.md",
-    "笔记/资源/GitHub 工具.md",
-    "笔记/资源/网站资源.md",
-    "笔记/资源/网络工具.md",
     "attachments/Pasted image 20240924000446.png",
     "attachments/Pasted image 20240923211259.png",
     "attachments/Pasted image 20240923204753.png",
@@ -209,7 +211,6 @@
     "attachments/Pasted image 20240923204302.png",
     "attachments/per-object-shadow-debugger.gif",
     "attachments/Pasted image 20240824233322.png",
-    "attachments/Pasted image 20240824233100.png",
     "博客/DX12",
     "博客/仿星铁渲染",
     "博客/后端",
@@ -219,7 +220,6 @@
     "博客/图形",
     "博客/Misc",
     "博客/大学作业",
-    "博客/Unity",
     "未命名.canvas"
   ]
 }

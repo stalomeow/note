@@ -14,5 +14,6 @@
   "showViewHeader": true,
   "nativeMenus": false,
   "baseFontSize": 16,
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "interfaceFontFamily": "Noto Sans SC"
 }

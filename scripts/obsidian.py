@@ -71,8 +71,8 @@ def transform_slug(slug: str, file: File) -> str:
 def should_ignore_obsidian_file(f: File) -> bool:
     top_folder = f.src_uri.split('/')[1] # [0] 是 obsidian vault
 
-    # 配置文件和模板文件
-    if top_folder in ('.obsidian', 'templates'):
+    # 配置文件、模板文件、临时速记文件
+    if top_folder in ('.obsidian', 'templates', '速记'):
         return True
 
     # Excalidraw 原始文件
