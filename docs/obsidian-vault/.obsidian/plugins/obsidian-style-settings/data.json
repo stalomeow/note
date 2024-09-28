@@ -18,7 +18,7 @@
   "Appearance-dark@@card-layout-open-dark": false,
   "Appearance-dark@@theme-dark-style-select": "theme-dark-background-black",
   "Editor@@border-focus-mode": false,
-  "Editor@@line-hover-indicator": true,
+  "Editor@@line-hover-indicator": false,
   "Plugin@@colorful-checkbox": false,
   "Editor@@codeblock-style-select": "codeblock-style-customize",
   "Editor@@img-darken": true,

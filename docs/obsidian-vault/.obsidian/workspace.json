@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "4d5c5259b283922a",
+        "id": "68774ec1aace46e5",
         "type": "tabs",
         "children": [
           {
-            "id": "df74ae3e5d870f32",
+            "id": "50c50de2358fce6e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "速记/MSBuild cpp csharp.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -81,7 +86,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "速记/MSBuild cpp csharp.md"
+              }
             }
           },
           {
@@ -90,6 +97,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "速记/MSBuild cpp csharp.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -101,6 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "速记/MSBuild cpp csharp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,6 +133,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "速记/MSBuild cpp csharp.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -171,8 +181,10 @@
       "obsidian-shellcommands:Shell commands: Custom variables": true
     }
   },
-  "active": "c87ab82d610a5a66",
+  "active": "50c50de2358fce6e",
   "lastOpenFiles": [
+    "速记/MSBuild cpp csharp.md",
+    "笔记/数据结构与算法/双指针.md",
     "博客/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
     "笔记/密码学/PEM 格式.md",
     "博客/DX12/ImGui 适配高 DPI 显示器.md",
@@ -197,8 +209,6 @@
     "笔记/密码学/X.509.md",
     "笔记/密码学/RSA 加密算法.md",
     "笔记/密码学/PKCS.md",
-    "笔记/求职/面试.md",
-    "笔记/求职/米哈游 2024 社招引擎岗 JD.md",
     "attachments/exp-func-and-its-inverse-func-intersections-0.png",
     "速记",
     "笔记/求职/Drawing 2024-09-27 10.54.14.excalidraw.svg",
