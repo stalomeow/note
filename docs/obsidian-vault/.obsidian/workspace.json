@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f6f6b8d0733446ff",
+        "id": "1ed90ba0d1530347",
         "type": "tabs",
         "children": [
           {
-            "id": "28cd5d22e2249f84",
+            "id": "9903aaf54b137a0c",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -173,6 +173,7 @@
   },
   "active": "c87ab82d610a5a66",
   "lastOpenFiles": [
+    "博客/Misc/Windows 上用 CapsLock 切换中英文.md",
     "速记/MSBuild cpp csharp.md",
     "速记/实现 ShaderLab.md",
     "速记/DX12 封装.md",
@@ -198,7 +199,6 @@
     "笔记/Windows/ANSI 字符集.md",
     "笔记/数据结构与算法/双指针.md",
     "博客/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
-    "笔记/密码学/PEM 格式.md",
     "attachments/exp-func-and-its-inverse-func-intersections-0.png",
     "速记",
     "笔记/求职/Drawing 2024-09-27 10.54.14.excalidraw.svg",

@@ -17,7 +17,7 @@ comments: true
 
 ## 按键映射
 
-使用 [[Windows PowerToys]] 的键盘管理器映射 CapsLock 到 Win+Space。
+使用 PowerToys 的键盘管理器映射 CapsLock 到 Win+Space。
 
 ## 同步指示灯
 
