@@ -26,7 +26,7 @@ date: 2024-06-11
 ## VPN 商家
 
 - [Gatern](https://shuttle.gt-all.com/)，这家 IP 非常干净，速度也不错
-- [大哥云](https://2024la.com/)
+- [大哥云](https://www.dageyun.net/)
 
 ## VPS 线路选择
 
