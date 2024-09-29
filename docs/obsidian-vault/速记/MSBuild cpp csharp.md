@@ -57,8 +57,11 @@ CLR 默认不支持 mono 那种 internal call。
 
 - [c++ - Can I export functions of a static library when building a dynamic library linking against that static library? - Stack Overflow](https://stackoverflow.com/questions/47791319/can-i-export-functions-of-a-static-library-when-building-a-dynamic-library-linki)
 - [c++ - How do you identify exported functions in a Windows static library? - Stack Overflow](https://stackoverflow.com/questions/50978611/how-do-you-identify-exported-functions-in-a-windows-static-library)
+- `NativeLibrary.GetEntryPointModuleHandle`：[Support for Mono's DllImport(@"__Internal") ? · Issue #7267 · dotnet/runtime (github.com)](https://github.com/dotnet/runtime/issues/7267)
 
 链接静态库时，需要加上 `/WHOLEARCHIVE` 参数。
+
+另一种方案：[swig/swig: SWIG is a software development tool that connects programs written in C and C++ with a variety of high-level programming languages. (github.com)](https://github.com/swig/swig)
 
 ### hostfxr 意义
 

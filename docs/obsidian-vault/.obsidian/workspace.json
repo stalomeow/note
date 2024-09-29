@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "1ed90ba0d1530347",
+        "id": "ab873912c584bd63",
         "type": "tabs",
         "children": [
           {
-            "id": "9903aaf54b137a0c",
+            "id": "566c89e527a4eec0",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "速记/TODO.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -81,7 +86,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "速记/TODO.md"
+              }
             }
           },
           {
@@ -90,6 +97,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "速记/TODO.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -101,6 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "速记/TODO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,6 +133,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "速记/TODO.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -171,12 +181,14 @@
       "obsidian-shellcommands:Shell commands: Custom variables": true
     }
   },
-  "active": "c87ab82d610a5a66",
+  "active": "566c89e527a4eec0",
   "lastOpenFiles": [
-    "博客/Misc/Windows 上用 CapsLock 切换中英文.md",
     "速记/MSBuild cpp csharp.md",
-    "速记/实现 ShaderLab.md",
     "速记/DX12 封装.md",
+    "速记/知识管理.md",
+    "速记/实现 ShaderLab.md",
+    "速记/TODO.md",
+    "博客/Misc/Windows 上用 CapsLock 切换中英文.md",
     "笔记/计算机基础/Unix 时间.md",
     "笔记/计算机基础/Tracker 服务器.md",
     "笔记/计算机基础/TCP 拥塞控制.md",
@@ -197,8 +209,6 @@
     "笔记/Windows 开发/开发效率/Windows 任务栏改成状态栏.md",
     "笔记/Windows/查看 Win32 错误码对应的描述.md",
     "笔记/Windows/ANSI 字符集.md",
-    "笔记/数据结构与算法/双指针.md",
-    "博客/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
     "attachments/exp-func-and-its-inverse-func-intersections-0.png",
     "速记",
     "笔记/求职/Drawing 2024-09-27 10.54.14.excalidraw.svg",

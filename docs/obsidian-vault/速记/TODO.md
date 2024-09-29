@@ -1,0 +1,28 @@
+# TODO
+
+- [ ] 指令乱序
+    - [volatile keyword - C# reference | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/volatile)
+    - [理解 Memory barrier（内存屏障）_memory barrier 无锁化读写-CSDN博客](https://blog.csdn.net/zhangxiao93/article/details/42966279)
+    - [编译乱序 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/102370222)
+    - [c++ - Instruction reordering with lock - Stack Overflow](https://stackoverflow.com/questions/39762802/instruction-reordering-with-lock)
+- [ ] 字节对齐
+    - [StructLayoutAttribute.Pack Field (System.Runtime.InteropServices) | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.structlayoutattribute.pack?view=net-8.0)
+    - [浅谈内存对齐 | 拾荒志 (murphypei.github.io)](https://murphypei.github.io/blog/2020/04/memory-align)
+    - [Data structure alignment - Wikipedia](https://en.wikipedia.org/wiki/Data_structure_alignment)
+- [ ] Shader 平台差异
+    - [Unity - Manual: Writing shaders for different graphics APIs (unity3d.com)](https://docs.unity3d.com/Manual/SL-PlatformDifferences.html)
+    - [Confused on NDC space - Unity Forum](https://forum.unity.com/threads/confused-on-ndc-space.1024414/)
+    - [what does the function ComputeScreenPos ( in unitycg.cginc) do ? - Unity Forum](https://discussions.unity.com/t/what-does-the-function-computescreenpos-in-unitycg-cginc-do/565450)
+    - [Per-Component数学运算 - Win32 apps | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows/win32/direct3dhlsl/dx-graphics-hlsl-per-component-math#the-matrix-type)
+    - [Unity - Manual: Built-in shader variables (unity3d.com)](https://docs.unity3d.com/Manual/SL-UnityShaderVariables.html)
+- [ ] [Foveated rendering - Wikipedia](https://en.wikipedia.org/wiki/Foveated_rendering)
+- [ ] [c# - What is the purpose of newslot attribute? - Stack Overflow](https://stackoverflow.com/questions/55532508/what-is-the-purpose-of-newslot-attribute)
+- [ ] 四元数转欧拉角，Zotero 里有 pdf。.NET 的数学库中，矩阵向量都是行为主序的。
+- [ ] dx12 enhanced resource barrier
+- [ ] On modern Windows you don't need to worry about endianess at all. It is always little endian： [LARGE_INTEGER and endiannes | Handmade Network](https://hero.handmade.network/forums/code-discussion/t/354-large_integer_and_endiannes)
+- [ ] 虚拟地址：[虚拟地址与物理地址之间的关系 - DavidWei0504 - 博客园 (cnblogs.com)](https://www.cnblogs.com/david-wei0810/p/5845546.html)
+- [ ] pch：[vs2017/2019中pch.h和pch.cpp是个什么东西（附加，如何删除）-CSDN博客](https://blog.csdn.net/qq_41375318/article/details/111790303)
+- [ ] 虚析构：[虚析构函数(√)、纯虚析构函数(√)、虚构造函数(X) - 中土 - 博客园 (cnblogs.com)](https://www.cnblogs.com/chio/archive/2007/09/10/888260.html)
+- [ ] 返回右值引用：[C++11函数返回右值引用 - P.wang - 博客园 (cnblogs.com)](https://www.cnblogs.com/wangpei0522/p/4472548.html)
+- [ ] [c - Difference between inline and header guards - Stack Overflow](https://stackoverflow.com/questions/65127721/difference-between-inline-and-header-guards)
+- [ ] [Unity - Scripting API: FilterAttribute (unity3d.com)](https://docs.unity3d.com/ScriptReference/ShaderKeywordFilter.FilterAttribute.html)
