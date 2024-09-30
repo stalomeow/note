@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "5332317f058a1a61",
+        "id": "301c53cd0cbed359",
         "type": "tabs",
         "children": [
           {
-            "id": "0cf91542fe1ed688",
+            "id": "a92cbcf367f2e88a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "速记/TODO.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -81,7 +86,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "速记/TODO.md"
+              }
             }
           },
           {
@@ -90,6 +97,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "速记/TODO.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -101,6 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "速记/TODO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,6 +133,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "速记/TODO.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -171,8 +181,17 @@
       "obsidian-shellcommands:Shell commands: Custom variables": true
     }
   },
-  "active": "0cf91542fe1ed688",
+  "active": "a92cbcf367f2e88a",
   "lastOpenFiles": [
+    "笔记/图形学/DX12 龙书.md",
+    "笔记/图形学/Terrain Rendering.md",
+    "笔记/图形学/Half Lambert 勘误.md",
+    "笔记/图形学/Fog.md",
+    "笔记/图形学/Anti-aliasing.md",
+    "笔记/图形学/Ambient Occlusion.md",
+    "笔记/图形学/渲染方程.md",
+    "笔记/图形学/图形学黑话.md",
+    "笔记/图形学/仿星穹铁道渲染资料.md",
     "笔记/资源/网站资源.md",
     "笔记/资源/网络工具.md",
     "笔记/科学上网/VPS 与机场选购指南.md",
@@ -190,15 +209,6 @@
     "笔记/计算机基础/Shebang.md",
     "笔记/计算机基础/Epoch.md",
     "笔记/计算机基础/DHT 网络.md",
-    "笔记/计算机基础/序号回绕问题.md",
-    "笔记/计算机基础/数制与编码.md",
-    "笔记/计算机基础/进程.md",
-    "笔记/计算机基础/分布式哈希表.md",
-    "笔记/计算机基础/不同操作系统的文件路径规则.md",
-    "笔记/科学上网/UFW 防火墙.md",
-    "笔记/Windows/小狼毫输入法.md",
-    "笔记/Windows 开发/开发效率/Windows Sudo.md",
-    "笔记/Windows 开发/开发效率/Windows 快捷键.md",
     "attachments/exp-func-and-its-inverse-func-intersections-0.png",
     "速记",
     "笔记/求职/Drawing 2024-09-27 10.54.14.excalidraw.svg",

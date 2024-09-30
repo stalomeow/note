@@ -26,3 +26,6 @@
 - [ ] 返回右值引用：[C++11函数返回右值引用 - P.wang - 博客园 (cnblogs.com)](https://www.cnblogs.com/wangpei0522/p/4472548.html)
 - [ ] [c - Difference between inline and header guards - Stack Overflow](https://stackoverflow.com/questions/65127721/difference-between-inline-and-header-guards)
 - [ ] [Unity - Scripting API: FilterAttribute (unity3d.com)](https://docs.unity3d.com/ScriptReference/ShaderKeywordFilter.FilterAttribute.html)
+- [ ] [509. 斐波那契数 - 力扣（LeetCode）](https://leetcode.cn/problems/fibonacci-number/solutions/545049/fei-bo-na-qi-shu-by-leetcode-solution-o4ze/?source=vscode)
+- [ ] 差分方程：[70. 爬楼梯 - 力扣（LeetCode）](https://leetcode.cn/problems/climbing-stairs/solutions/286022/pa-lou-ti-by-leetcode-solution/?source=vscode)
+- [ ] 滚动数组优化：[62. 不同路径 - 力扣（LeetCode）](https://leetcode.cn/problems/unique-paths/solutions/514311/bu-tong-lu-jing-by-leetcode-solution-hzjf/?source=vscode)
