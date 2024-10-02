@@ -24,6 +24,7 @@ MSVC 是通过文件前面的 BOM 来识别 Unicode 编码的，如果没有 BOM
 
 - [Copying Visual Studio project file(s) to output directory during build - Stack Overflow](https://stackoverflow.com/questions/10827024/copying-visual-studio-project-files-to-output-directory-during-build)
 - WinSDK 路径：[Visual Studio 2019 Windows SDK executable path macro has multiple paths - Stack Overflow](https://stackoverflow.com/questions/68350812/visual-studio-2019-windows-sdk-executable-path-macro-has-multiple-paths)
+- post-build-event 在 project up-to-date 时不会执行，就算 dependency 变了也不执行。可以把命令放到 custom build event 里，然后指定 additional inputs 和 outputs，如果 msbuild 发现文件变了就会自动执行。如果希望它始终执行，可以不指定输入，然后给一个永远不会出现的 `$(TargetDir)dummy_output` 作为输出。
 
 ## CLR 寄宿
 

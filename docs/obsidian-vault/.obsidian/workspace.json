@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "速记/TODO.md",
+                "file": "速记/MSBuild cpp csharp.md",
                 "mode": "preview",
                 "backlinks": false,
                 "source": false
@@ -87,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "速记/TODO.md"
+                "file": "速记/MSBuild cpp csharp.md"
               }
             }
           },
@@ -97,7 +97,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "速记/TODO.md",
+                "file": "速记/MSBuild cpp csharp.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "速记/TODO.md",
+                "file": "速记/MSBuild cpp csharp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "速记/TODO.md",
+                "file": "速记/MSBuild cpp csharp.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -183,6 +183,7 @@
   },
   "active": "a92cbcf367f2e88a",
   "lastOpenFiles": [
+    "速记/TODO.md",
     "笔记/图形学/DX12 龙书.md",
     "笔记/图形学/Terrain Rendering.md",
     "笔记/图形学/Half Lambert 勘误.md",
@@ -197,7 +198,6 @@
     "笔记/科学上网/VPS 与机场选购指南.md",
     "笔记/科学上网/自建机场节点.md",
     "笔记/资源/GitHub 工具.md",
-    "速记/TODO.md",
     "速记/MSBuild cpp csharp.md",
     "速记/DX12 封装.md",
     "速记/知识管理.md",
