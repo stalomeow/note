@@ -2,7 +2,7 @@
   "accentColor": "",
   "cssTheme": "Border",
   "textFontFamily": "Noto Sans SC",
-  "monospaceFontFamily": "JetBrains Mono NL,Noto Sans SC",
+  "monospaceFontFamily": "Cascadia Mono,Noto Sans SC",
   "baseFontSizeAction": false,
   "enabledCssSnippets": [
     "markdown",

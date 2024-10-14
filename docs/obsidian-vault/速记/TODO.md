@@ -29,3 +29,5 @@
 - [ ] [509. 斐波那契数 - 力扣（LeetCode）](https://leetcode.cn/problems/fibonacci-number/solutions/545049/fei-bo-na-qi-shu-by-leetcode-solution-o4ze/?source=vscode)
 - [ ] 差分方程：[70. 爬楼梯 - 力扣（LeetCode）](https://leetcode.cn/problems/climbing-stairs/solutions/286022/pa-lou-ti-by-leetcode-solution/?source=vscode)
 - [ ] 滚动数组优化：[62. 不同路径 - 力扣（LeetCode）](https://leetcode.cn/problems/unique-paths/solutions/514311/bu-tong-lu-jing-by-leetcode-solution-hzjf/?source=vscode)
+- [ ] [Visual Studio检查内存泄露方法 - 剑痴乎 (jianchihu.net)](https://blog.jianchihu.net/visual-studio-memory-leak.html)
+- [ ] [Find memory leaks with the CRT library | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/c-runtime-library/find-memory-leaks-using-the-crt-library?view=msvc-170)

@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "301c53cd0cbed359",
+        "id": "075598b40bd111ae",
         "type": "tabs",
         "children": [
           {
-            "id": "a92cbcf367f2e88a",
+            "id": "b1c2c516ac8b82a2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "速记/MSBuild cpp csharp.md",
-                "mode": "preview",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -86,9 +81,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "速记/MSBuild cpp csharp.md"
-              }
+              "state": {}
             }
           },
           {
@@ -97,7 +90,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "速记/MSBuild cpp csharp.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -109,7 +101,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "速记/MSBuild cpp csharp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +124,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "速记/MSBuild cpp csharp.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -156,7 +146,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.5087618855792676,
+                  "scale": 0.5087618855792677,
                   "close": true
                 }
               }
@@ -181,46 +171,45 @@
       "obsidian-shellcommands:Shell commands: Custom variables": true
     }
   },
-  "active": "a92cbcf367f2e88a",
+  "active": "b1c2c516ac8b82a2",
   "lastOpenFiles": [
+    "博客/图形/Scene View 无限网格.md",
+    "博客/Unity/Unity SRP 全屏 Blit 原理.md",
+    "attachments/Pasted image 20241014155845.png",
+    "attachments/Pasted image 20241014155543.png",
+    "attachments/Pasted image 20241014155217.png",
+    "attachments/Pasted image 20241014155124.png",
+    "attachments/Pasted image 20241014150052.png",
+    "笔记/数学/信号与系统/差分.md",
+    "attachments/Pasted image 20241014144145.png",
+    "attachments/Pasted image 20241014143013.png",
+    "attachments/Pasted image 20241014141906.png",
+    "attachments/Pasted image 20241014141659.png",
+    "attachments/Pasted image 20241014134120.png",
+    "博客/Unity/Unity Shader 平台差异.md",
+    "博客/图形/用 RenderDoc 和模拟器抓帧安卓手游.md",
+    "博客/图形/集成 RenderDoc.md",
+    "博客/图形/对逐物体阴影的一些改进.md",
+    "博客/DX12/基于 DX12 实现简化版 ShaderLab.md",
+    "博客/DX12/ImGui 适配高 DPI 显示器.md",
+    "博客/DX12/DX12 资源管理.md",
+    "速记/实现 ShaderLab.md",
     "速记/TODO.md",
-    "笔记/图形学/DX12 龙书.md",
-    "笔记/图形学/Terrain Rendering.md",
-    "笔记/图形学/Half Lambert 勘误.md",
+    "速记/MSBuild cpp csharp.md",
+    "速记/DX12 封装.md",
+    "速记/知识管理.md",
+    "笔记/Windows/DLL 进程间共享数据.md",
+    "笔记/Windows/小狼毫输入法.md",
     "笔记/图形学/Fog.md",
     "笔记/图形学/Anti-aliasing.md",
     "笔记/图形学/Ambient Occlusion.md",
     "笔记/图形学/渲染方程.md",
-    "笔记/图形学/图形学黑话.md",
     "笔记/图形学/仿星穹铁道渲染资料.md",
-    "笔记/资源/网站资源.md",
-    "笔记/资源/网络工具.md",
-    "笔记/科学上网/VPS 与机场选购指南.md",
-    "笔记/科学上网/自建机场节点.md",
-    "笔记/资源/GitHub 工具.md",
-    "速记/MSBuild cpp csharp.md",
-    "速记/DX12 封装.md",
-    "速记/知识管理.md",
-    "速记/实现 ShaderLab.md",
-    "博客/Misc/Windows 上用 CapsLock 切换中英文.md",
-    "笔记/计算机基础/Unix 时间.md",
-    "笔记/计算机基础/Tracker 服务器.md",
-    "笔记/计算机基础/TCP 拥塞控制.md",
-    "笔记/计算机基础/Shebang.md",
-    "笔记/计算机基础/Epoch.md",
-    "笔记/计算机基础/DHT 网络.md",
-    "attachments/exp-func-and-its-inverse-func-intersections-0.png",
+    "笔记/图形学/DX12 龙书.md",
+    "笔记/图形学/Terrain Rendering.md",
+    "笔记/图形学/Half Lambert 勘误.md",
     "速记",
-    "笔记/求职/Drawing 2024-09-27 10.54.14.excalidraw.svg",
     "笔记/求职/未命名.canvas",
-    "attachments/Pasted image 20240924000446.png",
-    "attachments/Pasted image 20240923211259.png",
-    "attachments/Pasted image 20240923204753.png",
-    "attachments/Pasted image 20240923204544.png",
-    "attachments/Pasted image 20240923204427.png",
-    "attachments/Pasted image 20240923204302.png",
-    "attachments/per-object-shadow-debugger.gif",
-    "attachments/Pasted image 20240824233322.png",
     "博客/DX12",
     "博客/仿星铁渲染",
     "博客/后端",
