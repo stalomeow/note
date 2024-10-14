@@ -17,7 +17,7 @@ theme:
 
   font:
     text: "'LXGW WenKai Screen', 'Noto Sans SC', 'Microsoft YaHei', sans-serif"
-    code: "'JetBrains Mono', 'LXGW WenKai Screen', 'Noto Sans SC', 'Microsoft YaHei', sans-serif"
+    code: "'Cascadia Mono', 'LXGW WenKai Screen', 'Noto Sans SC', 'Microsoft YaHei', sans-serif"
 
   icon:
     repo: fontawesome/brands/github
@@ -96,7 +96,7 @@ extra:
 
 
 extra_css:
-  - assets/webfonts/JetBrains Mono/font.css
+  - assets/webfonts/Cascadia Mono/font.css
   - assets/webfonts/LXGW WenKai Screen/font.css
   - assets/stylesheets/theme.css
   - assets/stylesheets/feature.css
@@ -171,7 +171,7 @@ plugins:
         - assets/javascripts/mathjax.js
         - assets/javascripts/comments.js
       css_files:
-        - assets/webfonts/JetBrains Mono/font.css
+        - assets/webfonts/Cascadia Mono/font.css
         - assets/webfonts/LXGW WenKai Screen/font.css
         - assets/stylesheets/theme.css
         - assets/stylesheets/feature.css

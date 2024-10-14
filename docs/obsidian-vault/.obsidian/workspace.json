@@ -11,8 +11,13 @@
             "id": "b1c2c516ac8b82a2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "博客/Unity/Unity SRP 全屏 Blit 原理.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -81,7 +86,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "博客/Unity/Unity SRP 全屏 Blit 原理.md"
+              }
             }
           },
           {
@@ -90,6 +97,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "博客/Unity/Unity SRP 全屏 Blit 原理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -101,6 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "博客/Unity/Unity SRP 全屏 Blit 原理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,6 +133,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "博客/Unity/Unity SRP 全屏 Blit 原理.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
