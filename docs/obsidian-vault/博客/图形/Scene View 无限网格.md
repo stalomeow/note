@@ -111,19 +111,6 @@ float2 diff = fwidth(positionWS.xz);
 
 可以像网上的文章一样，计算 `LinearEyeDepth` 或者 `Linear01Depth` 然后将远处的 `alpha` 变小。也可以直接用 $\mathrm{d} x$ 来调整 `alpha`。根据前面的公式，线越密的地方 $\mathrm{d} x$ 越大，反之亦然。
 
-## 高亮坐标轴
-
-以 Z 轴为例，如果像素对应的 `positionWS.x` 与 Z 轴的距离小于一个阈值，那么这个像素位置就被认为是 Z 轴。可以将 $\mathrm{d} x$ 作为阈值，离得越远，阈值就越大。
-
-![[Pasted image 20241014155845.png|阈值]]
-
-``` hlsl
-if (abs(positionWS.x) < diff.x)
-{
-    color = _ZAxisColor;
-}
-```
-
 ## 分层
 
 根据相机离 XOZ 平面的距离，选择不同的格子大小绘制网格线。如果两条线之间的距离是 `gridWidth`，则
@@ -252,11 +239,11 @@ Shader "SceneViewGrid"
 
             float4 color;
 
-            if (abs(scaledPos.x) < diff.x)
+            if (abs(scaledPos.x) < halfLineWidth.x)
             {
                 color = _ZAxisColor;
             }
-            else if (abs(scaledPos.y) < diff.y)
+            else if (abs(scaledPos.y) < halfLineWidth.y)
             {
                 color = _XAxisColor;
             }

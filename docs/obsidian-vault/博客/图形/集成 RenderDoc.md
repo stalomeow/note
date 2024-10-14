@@ -23,20 +23,19 @@ comments: true
 class RenderDoc final
 {
 public:
-    RenderDoc() = default;
-    ~RenderDoc() = default;
-
-    void Load();
-    void CaptureSingleFrame() const;
-    uint32_t GetNumCaptures() const;
-    std::tuple<int, int, int> GetVersion() const;
-    std::string GetLibraryPath() const;
-
-    bool IsLoaded() const { return m_Api != nullptr; }
-
-private:
-    RENDERDOC_API_1_5_0* m_Api = nullptr;
+    static bool IsLoaded();
+    static void Load();
+    static void CaptureSingleFrame();
+    static uint32_t GetNumCaptures();
+    static std::tuple<int32_t, int32_t, int32_t> GetVersion();
+    static std::string GetLibraryPath();
 };
+```
+
+cpp 文件里
+
+``` cpp
+static RENDERDOC_API_1_5_0* g_Api = nullptr;
 ```
 
 ## 加载
@@ -54,6 +53,11 @@ std::string RenderDoc::GetLibraryPath() const
 如果 `LoadLibrary` 前，`renderdoc.dll` 已经被加载，说明用户是用 RenderDoc 启动 App 的，就不需要再手动 load 了。
 
 ``` cpp
+bool RenderDoc::IsLoaded()
+{
+    return g_Api != nullptr;
+}
+
 void RenderDoc::Load()
 {
     if (IsLoaded())
@@ -76,17 +80,17 @@ void RenderDoc::Load()
     }
 
     auto RENDERDOC_GetAPI = reinterpret_cast<pRENDERDOC_GetAPI>(GetProcAddress(hModule, "RENDERDOC_GetAPI"));
-    int ret = RENDERDOC_GetAPI(eRENDERDOC_API_Version_1_5_0, reinterpret_cast<void**>(&m_Api));
+    int ret = RENDERDOC_GetAPI(eRENDERDOC_API_Version_1_5_0, reinterpret_cast<void**>(&g_Api));
 
     if (ret != 1)
     {
-        m_Api = nullptr;
+        g_Api = nullptr;
         DEBUG_LOG_ERROR("Failed to get RenderDoc API. Return Code: %d", ret);
         return;
     }
 
-    m_Api->MaskOverlayBits(eRENDERDOC_Overlay_None, eRENDERDOC_Overlay_None); // 不显示 overlay
-    m_Api->SetCaptureKeys(nullptr, 0);
+    g_Api->MaskOverlayBits(eRENDERDOC_Overlay_None, eRENDERDOC_Overlay_None); // 不显示 overlay
+    g_Api->SetCaptureKeys(nullptr, 0);
 }
 ```
 
@@ -99,8 +103,8 @@ void RenderDoc::Load()
 在加载 RenderDoc 后，调用下面的方法可以解决。[^1]
 
 ``` cpp
-m_Api->SetCaptureOptionU32(eRENDERDOC_Option_APIValidation, 1);
-m_Api->SetCaptureOptionU32(eRENDERDOC_Option_DebugOutputMute, 0);
+g_Api->SetCaptureOptionU32(eRENDERDOC_Option_APIValidation, 1);
+g_Api->SetCaptureOptionU32(eRENDERDOC_Option_DebugOutputMute, 0);
 ```
 
 另外，RenderDoc 会使 `ID3D12InfoQueue1` 失去作用，因为它只提供了一个 dummy 的实现。[^2]
@@ -122,22 +126,22 @@ RenderDoc 会使 D3D12 的调试层变得不完整，它本身又有一些额外
 ## 截帧
 
 ``` cpp
-void RenderDoc::CaptureSingleFrame() const
+void RenderDoc::CaptureSingleFrame()
 {
     if (!IsLoaded())
     {
         return;
     }
 
-    m_Api->TriggerCapture();
+    g_Api->TriggerCapture();
 
-    if (m_Api->IsTargetControlConnected())
+    if (g_Api->IsTargetControlConnected())
     {
-        m_Api->ShowReplayUI();
+        g_Api->ShowReplayUI();
     }
     else
     {
-        m_Api->LaunchReplayUI(1, nullptr);
+        g_Api->LaunchReplayUI(1, nullptr);
     }
 }
 ```
@@ -149,17 +153,17 @@ void RenderDoc::CaptureSingleFrame() const
 获取截帧和版号信息。
 
 ``` cpp
-uint32_t RenderDoc::GetNumCaptures() const
+uint32_t RenderDoc::GetNumCaptures()
 {
     if (!IsLoaded())
     {
         return 0;
     }
 
-    return m_Api->GetNumCaptures();
+    return g_Api->GetNumCaptures();
 }
 
-std::tuple<int, int, int> RenderDoc::GetVersion() const
+std::tuple<int32_t, int32_t, int32_t> RenderDoc::GetVersion()
 {
     if (!IsLoaded())
     {
@@ -169,8 +173,8 @@ std::tuple<int, int, int> RenderDoc::GetVersion() const
     int verMajor = 0;
     int verMinor = 0;
     int verPatch = 0;
-    m_Api->GetAPIVersion(&verMajor, &verMinor, &verPatch);
-    return std::make_tuple(verMajor, verMinor, verPatch);
+    g_Api->GetAPIVersion(&verMajor, &verMinor, &verPatch);
+    return std::make_tuple(static_cast<int32_t>(verMajor), static_cast<int32_t>(verMinor), static_cast<int32_t>(verPatch));
 }
 ```
 
@@ -185,34 +189,34 @@ if (ImGui::BeginMainMenuBar())
 {
     if (ImGui::Shortcut(ImGuiMod_Alt | ImGuiKey_C, ImGuiInputFlags_RouteAlways))
     {
-        m_RenderDoc.CaptureSingleFrame();
+        RenderDoc::CaptureSingleFrame();
     }
 
     if (ImGui::BeginMenu("RenderDoc"))
     {
-        if (ImGui::MenuItem("Capture", "Alt+C", nullptr, m_RenderDoc.IsLoaded()))
+        if (ImGui::MenuItem("Capture", "Alt+C", nullptr, RenderDoc::IsLoaded()))
         {
-            m_RenderDoc.CaptureSingleFrame();
+            RenderDoc::CaptureSingleFrame();
         }
 
         ImGui::SeparatorText("Information");
 
         if (ImGui::BeginMenu("Library"))
         {
-            ImGui::TextUnformatted(m_RenderDoc.GetLibraryPath().c_str());
+            ImGui::TextUnformatted(RenderDoc::GetLibraryPath().c_str());
             ImGui::EndMenu();
         }
 
         if (ImGui::BeginMenu("API Version"))
         {
-            auto [major, minor, patch] = m_RenderDoc.GetVersion();
+            auto [major, minor, patch] = RenderDoc::GetVersion();
             ImGui::Text("%d.%d.%d", major, minor, patch);
             ImGui::EndMenu();
         }
 
         if (ImGui::BeginMenu("Num Captures"))
         {
-            ImGui::Text("%d", m_RenderDoc.GetNumCaptures());
+            ImGui::Text("%d", RenderDoc::GetNumCaptures());
             ImGui::EndMenu();
         }
 

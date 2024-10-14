@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "075598b40bd111ae",
+        "id": "503749009b9f3618",
         "type": "tabs",
         "children": [
           {
-            "id": "b1c2c516ac8b82a2",
+            "id": "ed59f137c96672bd",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "博客/Unity/Unity SRP 全屏 Blit 原理.md",
-                "mode": "preview",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -86,9 +81,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "博客/Unity/Unity SRP 全屏 Blit 原理.md"
-              }
+              "state": {}
             }
           },
           {
@@ -97,7 +90,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "博客/Unity/Unity SRP 全屏 Blit 原理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -109,7 +101,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "博客/Unity/Unity SRP 全屏 Blit 原理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +124,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "博客/Unity/Unity SRP 全屏 Blit 原理.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -181,10 +171,17 @@
       "obsidian-shellcommands:Shell commands: Custom variables": true
     }
   },
-  "active": "b1c2c516ac8b82a2",
+  "active": "ed59f137c96672bd",
   "lastOpenFiles": [
     "博客/图形/Scene View 无限网格.md",
     "博客/Unity/Unity SRP 全屏 Blit 原理.md",
+    "博客/图形/集成 RenderDoc.md",
+    "博客/图形/用 RenderDoc 和模拟器抓帧安卓手游.md",
+    "速记/TODO.md",
+    "速记/MSBuild cpp csharp.md",
+    "速记/DX12 封装.md",
+    "速记/实现 ShaderLab.md",
+    "速记/知识管理.md",
     "attachments/Pasted image 20241014155845.png",
     "attachments/Pasted image 20241014155543.png",
     "attachments/Pasted image 20241014155217.png",
@@ -197,17 +194,10 @@
     "attachments/Pasted image 20241014141659.png",
     "attachments/Pasted image 20241014134120.png",
     "博客/Unity/Unity Shader 平台差异.md",
-    "博客/图形/用 RenderDoc 和模拟器抓帧安卓手游.md",
-    "博客/图形/集成 RenderDoc.md",
     "博客/图形/对逐物体阴影的一些改进.md",
     "博客/DX12/基于 DX12 实现简化版 ShaderLab.md",
     "博客/DX12/ImGui 适配高 DPI 显示器.md",
     "博客/DX12/DX12 资源管理.md",
-    "速记/实现 ShaderLab.md",
-    "速记/TODO.md",
-    "速记/MSBuild cpp csharp.md",
-    "速记/DX12 封装.md",
-    "速记/知识管理.md",
     "笔记/Windows/DLL 进程间共享数据.md",
     "笔记/Windows/小狼毫输入法.md",
     "笔记/图形学/Fog.md",
