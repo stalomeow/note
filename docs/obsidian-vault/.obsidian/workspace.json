@@ -4,15 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "1672f042aed4108c",
+        "id": "062c6308abe930b1",
         "type": "tabs",
         "children": [
           {
-            "id": "761b85c1932b2bb1",
+            "id": "5a75769aed14b6c3",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "博客/DX12/DX12 颜色空间.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "DX12 颜色空间"
             }
           }
         ]
@@ -35,7 +42,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
             }
           },
           {
@@ -50,7 +59,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
             }
           },
           {
@@ -58,7 +69,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
             }
           }
         ]
@@ -81,7 +94,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "博客/DX12/DX12 颜色空间.md"
+              },
+              "icon": "lucide-list",
+              "title": "DX12 颜色空间 的大纲"
             }
           },
           {
@@ -90,9 +107,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "博客/图形/Scene View 无限网格.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Scene View 无限网格 的出链列表"
             }
           },
           {
@@ -101,6 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "博客/图形/Scene View 无限网格.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,7 +129,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Scene View 无限网格 的反向链接列表"
             }
           }
         ]
@@ -124,6 +147,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "博客/DX12/DX12 颜色空间.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -149,7 +173,9 @@
                   "scale": 0.5087618855792677,
                   "close": true
                 }
-              }
+              },
+              "icon": "lucide-git-fork",
+              "title": "DX12 颜色空间 的关系图"
             }
           }
         ]
@@ -171,43 +197,44 @@
       "obsidian-shellcommands:Shell commands: Custom variables": true
     }
   },
-  "active": "761b85c1932b2bb1",
+  "active": "5a75769aed14b6c3",
   "lastOpenFiles": [
-    "博客/图形/Scene View 无限网格.md",
+    "博客/Unity/后处理 Shader 的 Render State 设置.md",
+    "博客/Unity/Material Property Drawer.md",
+    "博客/Unity/实现 IJobParallelForAppend.md",
+    "博客/Unity/Full Generic Sharing 原理.md",
     "博客/Unity/Unity SRP 全屏 Blit 原理.md",
-    "博客/图形/集成 RenderDoc.md",
-    "博客/图形/用 RenderDoc 和模拟器抓帧安卓手游.md",
-    "速记/TODO.md",
-    "速记/MSBuild cpp csharp.md",
-    "速记/DX12 封装.md",
     "速记/实现 ShaderLab.md",
     "速记/知识管理.md",
+    "速记/DX12 封装.md",
+    "速记/MSBuild cpp csharp.md",
+    "速记/TODO.md",
+    "博客/DX12/DX12 颜色空间.md",
+    "博客/DX12/DX12 资源管理.md",
+    "博客/图形/深度重建世界坐标.md",
+    "博客/图形/对逐物体阴影的一些改进.md",
+    "博客/图形/集成 RenderDoc.md",
+    "博客/DX12/基于 DX12 实现简化版 ShaderLab.md",
+    "博客/DX12/ImGui 适配高 DPI 显示器.md",
+    "笔记/图形学/Fog.md",
+    "笔记/图形学/DX12 龙书.md",
+    "笔记/图形学/Anti-aliasing.md",
+    "笔记/图形学/Ambient Occlusion.md",
+    "笔记/图形学/渲染方程.md",
+    "笔记/图形学/仿星穹铁道渲染资料.md",
+    "笔记/图形学/Half Lambert 勘误.md",
+    "笔记/图形学/Terrain Rendering.md",
+    "博客/图形/Scene View 无限网格.md",
     "attachments/Pasted image 20241014155845.png",
     "attachments/Pasted image 20241014155543.png",
     "attachments/Pasted image 20241014155217.png",
     "attachments/Pasted image 20241014155124.png",
     "attachments/Pasted image 20241014150052.png",
-    "笔记/数学/信号与系统/差分.md",
     "attachments/Pasted image 20241014144145.png",
     "attachments/Pasted image 20241014143013.png",
     "attachments/Pasted image 20241014141906.png",
     "attachments/Pasted image 20241014141659.png",
     "attachments/Pasted image 20241014134120.png",
-    "博客/Unity/Unity Shader 平台差异.md",
-    "博客/图形/对逐物体阴影的一些改进.md",
-    "博客/DX12/基于 DX12 实现简化版 ShaderLab.md",
-    "博客/DX12/ImGui 适配高 DPI 显示器.md",
-    "博客/DX12/DX12 资源管理.md",
-    "笔记/Windows/DLL 进程间共享数据.md",
-    "笔记/Windows/小狼毫输入法.md",
-    "笔记/图形学/Fog.md",
-    "笔记/图形学/Anti-aliasing.md",
-    "笔记/图形学/Ambient Occlusion.md",
-    "笔记/图形学/渲染方程.md",
-    "笔记/图形学/仿星穹铁道渲染资料.md",
-    "笔记/图形学/DX12 龙书.md",
-    "笔记/图形学/Terrain Rendering.md",
-    "笔记/图形学/Half Lambert 勘误.md",
     "速记",
     "笔记/求职/未命名.canvas",
     "博客/DX12",

@@ -126,7 +126,7 @@ float2 gridEdge = abs(frac(scaledPos) - 0.5);
 ## 实现
 
 - 代码是用我自制的 DX12 ShaderLab 编写的，和 Unity 的稍有不同。
-- 因为是屏幕空间效果，所以需要做全屏 Blit。Vertex Shader 参考了 [[Unity SRP 全屏 Blit 原理]] 。
+- Vertex Shader 参考 [[Unity SRP 全屏 Blit 原理]] 。
 
 ``` hlsl
 Shader "SceneViewGrid"
