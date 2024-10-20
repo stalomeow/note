@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "博客/DX12/DX12 颜色空间.md",
+                "file": "博客/DX12/DX12 色彩空间.md",
                 "mode": "preview",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DX12 颜色空间"
+              "title": "DX12 色彩空间"
             }
           }
         ]
@@ -95,10 +95,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "博客/DX12/DX12 颜色空间.md"
+                "file": "博客/DX12/DX12 色彩空间.md"
               },
               "icon": "lucide-list",
-              "title": "DX12 颜色空间 的大纲"
+              "title": "DX12 色彩空间 的大纲"
             }
           },
           {
@@ -147,7 +147,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "博客/DX12/DX12 颜色空间.md",
+                "file": "博客/DX12/DX12 色彩空间.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -175,7 +175,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "DX12 颜色空间 的关系图"
+              "title": "DX12 色彩空间 的关系图"
             }
           }
         ]
@@ -209,7 +209,7 @@
     "速记/DX12 封装.md",
     "速记/MSBuild cpp csharp.md",
     "速记/TODO.md",
-    "博客/DX12/DX12 颜色空间.md",
+    "博客/DX12/DX12 色彩空间.md",
     "博客/DX12/DX12 资源管理.md",
     "博客/图形/深度重建世界坐标.md",
     "博客/图形/对逐物体阴影的一些改进.md",
