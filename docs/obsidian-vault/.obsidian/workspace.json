@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "062c6308abe930b1",
+        "id": "ce4e0fbe516bdd94",
         "type": "tabs",
         "children": [
           {
-            "id": "5a75769aed14b6c3",
+            "id": "e07fa76a867675f3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "博客/DX12/DX12 色彩空间.md",
-                "mode": "preview",
-                "backlinks": false,
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "DX12 色彩空间"
+              "title": "新标签页"
             }
           }
         ]
@@ -94,11 +89,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "博客/DX12/DX12 色彩空间.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "DX12 色彩空间 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -147,7 +140,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "博客/DX12/DX12 色彩空间.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -175,7 +167,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "DX12 色彩空间 的关系图"
+              "title": "关系图谱"
             }
           }
         ]
@@ -190,41 +182,41 @@
       "switcher:打开快速切换": false,
       "templates:插入模板": false,
       "graph:查看关系图谱": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
       "canvas:新建白板": false,
       "random-note:开始漫游笔记": false,
       "hide-folders:Show hidden folders": false,
-      "obsidian-shellcommands:Shell commands: Custom variables": true
+      "obsidian-shellcommands:Shell commands: Custom variables": true,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "5a75769aed14b6c3",
+  "active": "c87ab82d610a5a66",
   "lastOpenFiles": [
+    "博客/仿星铁渲染/仿星铁渲染：平滑模型法线.md",
+    "笔记/Windows/Windows 全局钩子.md",
+    "笔记/Windows/DLL 进程间共享数据.md",
+    "笔记/Windows/查看 Win32 错误码对应的描述.md",
+    "笔记/Windows/Windows 程序防多开.md",
+    "笔记/Windows/ANSI 字符集.md",
+    "笔记/Windows/小狼毫输入法.md",
+    "笔记/数据结构与算法/图论/最小生成树.md",
+    "笔记/求职/米哈游 2025 校招技术提前批 JD.md",
+    "笔记/求职/米哈游 2024 社招引擎岗 JD.md",
+    "速记/知识管理.md",
+    "速记/MSBuild cpp csharp.md",
+    "速记/TODO.md",
+    "博客/Unity/Unity SRP 全屏 Blit 原理.md",
+    "博客/DX12/DX12 色彩空间.md",
+    "速记/DX12 封装.md",
     "博客/Unity/后处理 Shader 的 Render State 设置.md",
     "博客/Unity/Material Property Drawer.md",
     "博客/Unity/实现 IJobParallelForAppend.md",
     "博客/Unity/Full Generic Sharing 原理.md",
-    "博客/Unity/Unity SRP 全屏 Blit 原理.md",
     "速记/实现 ShaderLab.md",
-    "速记/知识管理.md",
-    "速记/DX12 封装.md",
-    "速记/MSBuild cpp csharp.md",
-    "速记/TODO.md",
-    "博客/DX12/DX12 色彩空间.md",
     "博客/DX12/DX12 资源管理.md",
     "博客/图形/深度重建世界坐标.md",
     "博客/图形/对逐物体阴影的一些改进.md",
     "博客/图形/集成 RenderDoc.md",
     "博客/DX12/基于 DX12 实现简化版 ShaderLab.md",
-    "博客/DX12/ImGui 适配高 DPI 显示器.md",
-    "笔记/图形学/Fog.md",
-    "笔记/图形学/DX12 龙书.md",
-    "笔记/图形学/Anti-aliasing.md",
-    "笔记/图形学/Ambient Occlusion.md",
-    "笔记/图形学/渲染方程.md",
-    "笔记/图形学/仿星穹铁道渲染资料.md",
-    "笔记/图形学/Half Lambert 勘误.md",
-    "笔记/图形学/Terrain Rendering.md",
-    "博客/图形/Scene View 无限网格.md",
     "attachments/Pasted image 20241014155845.png",
     "attachments/Pasted image 20241014155543.png",
     "attachments/Pasted image 20241014155217.png",

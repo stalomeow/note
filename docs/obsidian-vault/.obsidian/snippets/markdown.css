@@ -13,7 +13,11 @@
 
 /* scroll codeblock in read mode */
 .markdown-reading-view code[class*="language-"] {
-    overflow-x: scroll;
+    overflow-x: auto;
     white-space: pre;
-    padding: 15px 0px;
+}
+
+/* Cascadia Mono Light */
+.markdown-rendered code, .HyperMD-codeblock {
+    font-weight: 300;
 }

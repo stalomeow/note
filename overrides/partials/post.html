@@ -23,7 +23,7 @@
           </time>
           {#- Collapse whitespace -#}
         </li>
-        {% if post.categories %}
+        <!-- {% if post.categories %}
           <li class="md-meta__item">
             {{ lang.t("blog.categories.in") }}
             {% for category in post.categories %}
@@ -33,7 +33,7 @@
               {%- if loop.revindex > 1 %}, {% endif -%}
             {% endfor -%}
           </li>
-        {% endif %}
+        {% endif %} -->
         {% if post.config.readtime %}
           {% set time = post.config.readtime %}
           <li class="md-meta__item">
