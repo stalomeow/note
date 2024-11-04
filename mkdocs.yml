@@ -202,7 +202,7 @@ plugins:
       pagination_per_page: 10
       pagination_format: "~2~"
       pagination_if_single_page: true
-      pagination_keep_content: true
+      pagination_keep_content: false
   - rss:
       enabled: !ENV [CI, false]
       pretty_print: true # TODO 不开 pretty_print 的话，所有换行都没了，包括 <pre> 里的
