@@ -18,6 +18,6 @@
 }
 
 /* Cascadia Mono Light */
-.markdown-rendered code, .HyperMD-codeblock {
+.markdown-rendered code, .HyperMD-codeblock, .cm-inline-code {
     font-weight: 300;
 }

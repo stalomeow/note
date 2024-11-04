@@ -1,19 +1,17 @@
 ---
 date: 2024-05-01T21:09:28
 slug: windows-capslock-ime
-categories:
-  - Misc
 draft: false
 comments: true
 ---
 
 # Windows 上用 CapsLock 切换中英文
 
-<!-- more -->
-
 微软输入法切换中英文的按键选择有 Ctrl、Shift、Ctrl+Space，但它们都是其他软件常用的修饰符/快捷键，肯定没法用。后来，我用一个纯英文键盘布局和一个纯中文键盘布局，靠 Win+Space 切换，但这个快捷键按着也挺麻烦。
 
 受 MacOS 的启发，我决定改用 CapsLock 切换中英文。恰好，我平时切换大小写用的都是 Shift。CapsLock 放在那么好的位置却不用，很可惜。
+
+<!-- more -->
 
 ## 按键映射
 
@@ -49,6 +47,4 @@ KeyboardLayoutName 就是 [Keyboard identifier](https://learn.microsoft.com/en-u
 
 ### 设置指示灯
 
-需要引入头文件 [ntddkbd.h](https://learn.microsoft.com/en-us/windows/win32/api/ntddkbd/)。
-
-具体的思路参考 [windows - Is it possible to control capslock light without actual capslocking? - Stack Overflow](https://stackoverflow.com/questions/72679665/is-it-possible-to-control-capslock-light-without-actual-capslocking)。
+需要引入头文件 [ntddkbd.h](https://learn.microsoft.com/en-us/windows/win32/api/ntddkbd/)。具体的思路参考 [windows - Is it possible to control capslock light without actual capslocking? - Stack Overflow](https://stackoverflow.com/questions/72679665/is-it-possible-to-control-capslock-light-without-actual-capslocking)。

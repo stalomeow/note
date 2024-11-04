@@ -1,17 +1,15 @@
 ---
 date: 2024-02-10T13:45:46
 slug: unity-target-tracking-ui
-categories:
-  - Unity
 draft: false
 comments: true
 ---
 
 # 在 UI 上实现目标追踪
 
-<!-- more -->
-
 实现目标任务追踪功能。在 UI 上的椭圆区域内，显示目标的方向和距离。
+
+<!-- more -->
 
 ![[track_indicator_demo.png|演示]]
 

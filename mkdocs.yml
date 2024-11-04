@@ -196,9 +196,7 @@ plugins:
       archive_date_format: yyyy 年 MM 月
       archive_url_date_format: yyyy/MM
       archive_toc: true
-      categories: true
-      categories_url_format: "categories/{slug}"
-      categories_toc: true
+      categories: false
       authors: false
       pagination: true
       pagination_per_page: 10
@@ -210,8 +208,6 @@ plugins:
       pretty_print: true # TODO 不开 pretty_print 的话，所有换行都没了，包括 <pre> 里的
       json_feed_enabled: false
       abstract_chars_count: -1
-      categories:
-        - categories # will also look into page.meta.categories
       comments_path: "#__comments"
       match_path: "obsidian-vault(/|\\\\)博客(/|\\\\).*"
       length: 20

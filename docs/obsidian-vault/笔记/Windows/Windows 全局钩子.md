@@ -106,8 +106,6 @@ FreeLibrary(hinstDLL);
 
 ### 消息循环
 
-避免 exe 挂后台一直占用 CPU。
-
 ``` c
 MSG msg;
 BOOL bRet;

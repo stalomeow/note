@@ -15,5 +15,7 @@
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "attachments",
   "rightToLeft": false,
-  "defaultViewMode": "preview"
+  "defaultViewMode": "preview",
+  "focusNewTab": true,
+  "vimMode": false
 }

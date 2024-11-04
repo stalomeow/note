@@ -17,9 +17,7 @@ public static void KeepAlive(object? obj)
 }
 ```
 
-## 适用场景 1
-
-## 适用场景 2
+## 适用场景
 
 This method DOES NOT DO ANYTHING in and of itself. It's used to prevent a finalizable object from losing any outstanding references a touch too early. The JIT is very aggressive about keeping an object's lifetime to as small a window as possible, to the point where a 'this' pointer isn't considered live in an instance method unless you read a value from the instance. So for finalizable objects that store a handle or pointer and provide a finalizer that cleans them up, this can cause subtle race conditions with the finalizer thread. This isn't just about handles - it can happen with just about any finalizable resource.
 

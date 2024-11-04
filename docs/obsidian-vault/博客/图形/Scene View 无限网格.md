@@ -1,19 +1,15 @@
 ---
 date: 2024-10-13T22:47:30
 slug: scene-view-infinite-grid
-categories:
-  - DirectX
-  - 引擎开发
-  - 图形渲染
 draft: false
 comments: true
 ---
 
 # Scene View 无限网格
 
-<!-- more -->
-
 大部分 DCC 都有无限网格，帮助我们确定物体所处的空间位置。我也给自己的引擎加上了这个功能。
+
+<!-- more -->
 
 ![[Pasted image 20241014094522.png|红色是 X 轴，蓝色是 Z 轴]]
 
@@ -126,16 +122,16 @@ float2 gridEdge = abs(frac(scaledPos) - 0.5);
 ## 实现
 
 - 代码是用我自制的 DX12 ShaderLab 编写的，和 Unity 的稍有不同。
-- Vertex Shader 参考 [[Unity SRP 全屏 Blit 原理]] 。
+- Vertex Shader 参考我之前写的 [[Blit]] 。
 
 ``` hlsl
 Shader "SceneViewGrid"
 {
     Properties
     {
-        _XAxisColor("X Axis Color", Color) = (1, 0, 0, 0.5)
-        _ZAxisColor("Z Axis Color", Color) = (0, 0, 1, 0.5)
-        _LineColor("Line Color", Color) = (0.5, 0.5, 0.5, 0.5)
+        _XAxisColor("X Axis Color", Color) = (0.5, 0.0, 0.0, 0.5)
+        _ZAxisColor("Z Axis Color", Color) = (0.0, 0.0, 0.5, 0.5)
+        _LineColor("Line Color", Color) = (0.3, 0.3, 0.3, 0.4)
         [Range(0, 1)] _Antialiasing("Anti-aliasing", Float) = 0.5
         [Range(0, 1)] _FadeOut("Fade Out", Float) = 0.8
     }
@@ -148,15 +144,14 @@ Shader "SceneViewGrid"
         ZTest Less
         ZWrite Off
 
-        Blend 0 SrcAlpha OneMinusSrcAlpha, Zero One
+        Blend SrcAlpha OneMinusSrcAlpha, Zero One
 
         HLSLPROGRAM
         #pragma target 6.0
         #pragma vs vert
         #pragma ps frag
 
-        #include "Common.hlsl"
-        #include "Lighting.hlsl"
+        #include "Includes/Common.hlsl"
 
         cbuffer cbMaterial
         {
@@ -165,21 +160,6 @@ Shader "SceneViewGrid"
             float4 _LineColor;
             float _Antialiasing;
             float _FadeOut;
-        };
-
-        cbuffer cbPass
-        {
-            float4x4 _MatrixView;
-            float4x4 _MatrixProjection;
-            float4x4 _MatrixViewProjection;
-            float4x4 _MatrixInvView;
-            float4x4 _MatrixInvProjection;
-            float4x4 _MatrixInvViewProjection;
-            float4 _Time;
-            float4 _CameraPositionWS;
-
-            LightData _LightData[MAX_LIGHT_COUNT];
-            int _LightCount;
         };
 
         struct Varyings

@@ -1,21 +1,19 @@
 ---
 date: 2023-10-02T15:29:03
 slug: compile-ue4-source-code
-categories:
-  - UE4
 draft: false
 comments: true
 ---
 
 # 编译 UE4 源码
 
-<!-- more -->
-
 记录一下编译 UE4 源码的流程和遇到的坑。
 
 - UE 源码版本：4.27.2。
 - IDE：Visual Studio 2022。
 - 操作系统：Windows 11。
+
+<!-- more -->
 
 ## IDE 和必要负载
 

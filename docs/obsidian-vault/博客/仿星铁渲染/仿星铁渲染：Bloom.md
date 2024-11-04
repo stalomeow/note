@@ -1,19 +1,15 @@
 ---
 date: 2024-03-05T18:19:01
 slug: toon-bloom
-categories:
-  - Unity
-  - 图形渲染
-  - Universal RP
 draft: false
 comments: true
 ---
 
 # 仿星铁渲染：Bloom
 
-<!-- more -->
-
 卡通渲染里 Bloom 还是挺重要的，它能对画面起到润色作用，比简单地后期调高饱和度要好看很多。
+
+<!-- more -->
 
 ![[bloom-toon.png|Bloom 效果图]]
 

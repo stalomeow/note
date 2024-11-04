@@ -1,19 +1,15 @@
 ---
 date: 2024-08-20T23:53:05
 slug: renderdoc-integration
-categories:
-  - 图形渲染
-  - 逆向
-  - RenderDoc
 draft: false
 comments: true
 ---
 
 # 集成 RenderDoc
 
-<!-- more -->
-
 实现像 Unity 一样，直接从自己程序里调起 RenderDoc 截帧的功能。参考文档：[In-application API — RenderDoc documentation](https://renderdoc.org/docs/in_application_api.html)。
+
+<!-- more -->
 
 ## 引入头文件
 

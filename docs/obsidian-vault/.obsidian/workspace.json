@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ce4e0fbe516bdd94",
+        "id": "f043a3c8478ebe4a",
         "type": "tabs",
         "children": [
           {
-            "id": "e07fa76a867675f3",
+            "id": "1c1cb5536905efbc",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -58,22 +58,12 @@
               "icon": "lucide-search",
               "title": "搜索"
             }
-          },
-          {
-            "id": "61ff6cd9e9ee46b0",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {},
-              "icon": "lucide-bookmark",
-              "title": "书签"
-            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 293.5
+    "width": 304.5
   },
   "right": {
     "id": "029f8289abc95648",
@@ -114,7 +104,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "博客/图形/Scene View 无限网格.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +113,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Scene View 无限网格 的反向链接列表"
+              "title": "反向链接"
             }
           }
         ]
@@ -178,45 +167,46 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "command-palette:打开命令面板": false,
       "switcher:打开快速切换": false,
-      "templates:插入模板": false,
       "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
       "random-note:开始漫游笔记": false,
       "hide-folders:Show hidden folders": false,
-      "obsidian-shellcommands:Shell commands: Custom variables": true,
-      "obsidian-excalidraw-plugin:新建绘图文件": false
+      "obsidian-shellcommands:Shell commands: Custom variables": true
     }
   },
-  "active": "c87ab82d610a5a66",
+  "active": "1c1cb5536905efbc",
   "lastOpenFiles": [
-    "博客/仿星铁渲染/仿星铁渲染：平滑模型法线.md",
-    "笔记/Windows/Windows 全局钩子.md",
-    "笔记/Windows/DLL 进程间共享数据.md",
-    "笔记/Windows/查看 Win32 错误码对应的描述.md",
-    "笔记/Windows/Windows 程序防多开.md",
-    "笔记/Windows/ANSI 字符集.md",
-    "笔记/Windows/小狼毫输入法.md",
-    "笔记/数据结构与算法/图论/最小生成树.md",
-    "笔记/求职/米哈游 2025 校招技术提前批 JD.md",
-    "笔记/求职/米哈游 2024 社招引擎岗 JD.md",
-    "速记/知识管理.md",
-    "速记/MSBuild cpp csharp.md",
-    "速记/TODO.md",
-    "博客/Unity/Unity SRP 全屏 Blit 原理.md",
-    "博客/DX12/DX12 色彩空间.md",
-    "速记/DX12 封装.md",
-    "博客/Unity/后处理 Shader 的 Render State 设置.md",
-    "博客/Unity/Material Property Drawer.md",
+    "博客/Unreal/编译 UE4 源码.md",
+    "博客/Unity/在 UI 上实现目标追踪.md",
+    "博客/Unity/用 RenderDoc 持续截帧 Unity Editor Game View.md",
     "博客/Unity/实现 IJobParallelForAppend.md",
-    "博客/Unity/Full Generic Sharing 原理.md",
-    "速记/实现 ShaderLab.md",
-    "博客/DX12/DX12 资源管理.md",
-    "博客/图形/深度重建世界坐标.md",
-    "博客/图形/对逐物体阴影的一些改进.md",
+    "博客/Unity/将 GIF 直接导入为 AnimationClip.md",
+    "博客/Unity/复刻星穹铁道 2.0 梦境迷钟.md",
+    "博客/Misc/Windows 上用 CapsLock 切换中英文.md",
+    "博客/Misc/Nuxt 3 开发避坑.md",
+    "博客/Misc/LeetCode 题目描述转 Markdown.md",
+    "博客/Misc/游戏注册、登录和鉴权.md",
+    "博客/Misc/小狼毫输入法主题.md",
+    "博客/Misc/青雀进暗杠的抽牌数期望.md",
+    "博客/图形/Scene View 无限网格.md",
+    "博客/图形/ImGui 适配高 DPI 显示器.md",
+    "博客/图形/在 Linear Color Space 中渲染.md",
     "博客/图形/集成 RenderDoc.md",
-    "博客/DX12/基于 DX12 实现简化版 ShaderLab.md",
+    "博客/图形/对逐物体阴影的一些改进.md",
+    "博客/仿星铁渲染/仿星铁渲染：Bloom.md",
+    "博客/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
+    "博客/大学作业/Wireshark 抓包 HTTP 实验.md",
+    "博客/大学作业/Multisim 仿真「方向之星」控制器.md",
+    "博客/大学作业/实信号与复信号的频谱实验.md",
+    "templates/Post Header.md",
+    "博客/大学作业/傅里叶级数实现本轮画图.md",
+    "速记/未命名.md",
+    "templates/Note Header.md",
+    "博客/未命名.canvas",
+    "笔记/图形与视觉/逆向",
+    "笔记/Unity",
     "attachments/Pasted image 20241014155845.png",
     "attachments/Pasted image 20241014155543.png",
     "attachments/Pasted image 20241014155217.png",
@@ -236,8 +226,6 @@
     "博客/Unity/编辑器",
     "博客/Unreal",
     "博客/图形",
-    "博客/Misc",
-    "博客/大学作业",
     "未命名.canvas"
   ]
 }

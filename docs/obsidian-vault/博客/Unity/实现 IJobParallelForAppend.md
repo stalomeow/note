@@ -1,21 +1,19 @@
 ---
 date: 2024-03-16T22:36:06
 slug: unity-job-parallel-for-append
-categories:
-  - Unity
 draft: false
 comments: true
 ---
 
 # 实现 IJobParallelForAppend
 
-<!-- more -->
-
 Unity 的 [Collections package](https://docs.unity3d.com/Packages/com.unity.collections@2.4/manual/index.html) 里有个 [`IJobParallelForFilter`](https://docs.unity3d.com/Packages/com.unity.collections@2.4/api/Unity.Jobs.IJobParallelForFilter.html)。我翻了相关的源码，发现虽然它名字带个 Parallel，但根本不是并行的。它的全部逻辑都是在一个线程里做的。后来，Unity 就把它名字里的 Parallel 去掉了，改成 [`IJobFilter`](https://docs.unity3d.com/Packages/com.unity.collections@2.4/api/Unity.Jobs.IJobFilter.html)。理由是
 
 > `IJobParallelForFilter` renamed to `IJobFilter` to better reflect functionality. [^1]
 
 我有并行的需求，自己实现了一个超级加强版。
+
+<!-- more -->
 
 ``` csharp
 [JobProducerType(typeof(IJobParallelForAppendExtensions.ParallelForAppendProducer<,>))]

@@ -1,18 +1,15 @@
 ---
 date: 2024-01-13T03:48:38
 slug: multisim-direction-star-controller
-categories:
-  - 大学作业
-  - 数字电路
 draft: false
 comments: true
 ---
 
 # Multisim 仿真「方向之星」控制器
 
-<!-- more -->
-
 大二上，数电仿真作业。
+
+<!-- more -->
 
 > 说明：「方向之星」是装在小汽车后窗上一组灯饰，由左右两排十余个小灯及中间一个大灯组成，起美观、提示作用。
 >

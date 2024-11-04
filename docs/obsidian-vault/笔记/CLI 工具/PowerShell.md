@@ -31,11 +31,11 @@ New-Item -Path $PROFILE -Type File -Force
 
 ### 编辑配置文件
 
-建议用 VSCode 打开，别用什么 `notepad` 了。
-
 ``` powershell
 code $PROFILE
 ```
+
+可以在配置文件最后加一个 `cls` 命令，清掉没用的信息。
 
 ### 重新加载配置
 
@@ -46,10 +46,6 @@ code $PROFILE
 ```
 
 不要用 [Call operator `&`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_operators?view=powershell-7.4#call-operator-)！它是在一个子作用域里执行脚本，脚本里的赋值不会影响全局。
-
-### 小技巧
-
-可以在配置文件最后加一个 `cls` 命令，清掉没用的信息。
 
 ## 增强编辑体验
 
@@ -73,123 +69,7 @@ Set-PSReadLineKeyHandler -Key Tab -Function ForwardWord
 
 ## 主题美化
 
-使用 [oh-my-posh](https://github.com/JanDeDobbeleer/oh-my-posh) 实现。文档：[Introduction | Oh My Posh](https://ohmyposh.dev/docs/)。
-
-注意：它会使 PowerShell 启动变慢，但它好看。
-
-### 个人主题
-
-直接拿其他主题改的。可以显示当前 [[Git#分支|Git 分支]] 还有 [[Python 虚拟环境]]。右边还有上条命令的执行时间与结果。
-
-![[oh-my-posh-theme.png]]
-
-``` json
-{  
-  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",  
-  "palette": {  
-    "os": "#ACB0BE",  
-    "closer": "p:os",  
-    "pink": "#F4B8E4",  
-    "lavender": "#BABBF1",  
-    "blue":  "#8CAAEE"  
-  },  
-  "blocks": [  
-    {  
-      "alignment": "left",  
-      "newline": true,  
-      "segments": [  
-        {  
-          "foreground": "p:blue",  
-          "style": "plain",  
-          "template": "{{ .UserName }}@{{ .HostName }} ",  
-          "type": "session"  
-        },  
-        {  
-          "foreground": "p:pink",  
-          "properties": {  
-            "folder_separator_icon": "/",  
-            "home_icon": "~",  
-            "style": "full"  
-          },  
-          "style": "plain",  
-          "template": "{{ .Path }} ",  
-          "type": "path"  
-        },  
-        {  
-          "foreground": "p:lavender",  
-          "properties": {  
-            "branch_icon": "\uf126 "  
-          },  
-          "template": "{{ .HEAD }} ",  
-          "style": "plain",  
-          "type": "git"  
-        },  
-        {  
-          "type": "python",  
-          "style": "powerline",  
-          "foreground": "p:lavender",  
-          "template": "\ue73c {{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }} "  
-        }  
-      ],  
-      "type": "prompt"  
-    },  
-    {  
-      "alignment": "right",  
-      "segments": [  
-        {  
-          "foreground": "p:closer",  
-          "alias": "Time",  
-          "properties": {  
-            "always_enabled": true,  
-            "style": "round"  
-          },  
-          "style": "plain",  
-          "template": " {{ .FormattedMs }}",  
-          "type": "executiontime"  
-        },  
-        {  
-          "foreground": "green",  
-          "foreground_templates": [  
-            "{{ if gt .Code 0 }}red{{ end }}"  
-          ],  
-          "properties": {  
-            "always_enabled": true  
-          },  
-          "style": "plain",  
-          "template": " {{ if gt .Code 0 }}\uf00d{{ else }}\uf00c{{ end }}",  
-          "type": "status"  
-        }  
-      ],  
-      "type": "prompt"  
-    },  
-    {  
-      "alignment": "left",  
-      "newline": true,  
-      "segments": [  
-        {  
-          "style": "plain",  
-          "foreground": "p:closer",  
-          "template": "~>",  
-          "type": "text"  
-        }  
-      ],  
-      "type": "prompt"  
-    }  
-  ],  
-  "final_space": true,  
-  "version": 2  
-}
-```
-
-保存到 `my-theme.omp.json`，然后在配置文件里加上命令：
-
-``` powershell
-oh-my-posh init pwsh --config "/path/to/my-theme.omp.json" | Invoke-Expression
-
-$Env:VIRTUAL_ENV_DISABLE_PROMPT = $false
-```
-
-最后一行是关闭 [[Python 虚拟环境]] 前面的 `(env)` 提示。
+使用 [oh-my-posh](https://github.com/JanDeDobbeleer/oh-my-posh) 实现，但会使 PowerShell 启动变慢。文档：[Introduction | Oh My Posh](https://ohmyposh.dev/docs/)。
 
 ## gcm 命令
 

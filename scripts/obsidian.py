@@ -75,10 +75,6 @@ def should_ignore_obsidian_file(f: File) -> bool:
     if top_folder in ('.obsidian', 'templates', '速记'):
         return True
 
-    # Excalidraw 原始文件
-    if f.src_uri.endswith('.excalidraw.md'):
-        return True
-
     return False
 
 def is_obsidian_note_file(f: File) -> bool:

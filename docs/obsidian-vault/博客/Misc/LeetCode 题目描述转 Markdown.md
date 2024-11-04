@@ -1,17 +1,15 @@
 ---
 date: 2024-03-21T23:04:02
 slug: leetcode-problem-desc-to-markdown
-categories:
-  - Misc
 draft: false
 comments: true
 ---
 
 # LeetCode 题目描述转 Markdown
 
-<!-- more -->
-
 油猴脚本。代码改自 [https://github.com/tonngw/leetcode-helper](https://github.com/tonngw/leetcode-helper)，适配了最新的 UI，并且删掉了没用的功能，主打一个能用就行。
+
+<!-- more -->
 
 ``` js
 // ==UserScript==

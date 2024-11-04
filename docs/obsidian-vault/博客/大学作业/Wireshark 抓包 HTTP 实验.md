@@ -1,20 +1,15 @@
 ---
 date: 2024-06-17T16:36:10
 slug: wireshark-capture-http-experiment
-categories:
-  - 大学作业
-  - 逆向
-  - Wireshark
-  - 计算机网络
 draft: false
 comments: true
 ---
 
 # Wireshark 抓包 HTTP 实验
 
-<!-- more -->
-
 大二下，计网作业。
+
+<!-- more -->
 
 ## 解密 HTTPS
 
