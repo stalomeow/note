@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6a4c7353b15d90cf",
+        "id": "63b9370941d4a648",
         "type": "tabs",
         "children": [
           {
-            "id": "ec5073c4ba5b3669",
+            "id": "1ad882f0888adc05",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -184,10 +184,13 @@
       "obsidian-shellcommands:Shell commands: Custom variables": true
     }
   },
-  "active": "ec5073c4ba5b3669",
+  "active": "1ad882f0888adc05",
   "lastOpenFiles": [
-    "速记/TODO.md",
+    "笔记/数据结构与算法/数学/欧几里得算法.md",
+    "笔记/数据结构与算法/搜索/回溯法.md",
     "笔记/数据结构与算法/动态规划/01 背包.md",
+    "笔记/数据结构与算法/双指针.md",
+    "速记/TODO.md",
     "笔记/数据结构与算法/动态规划",
     "笔记/数据结构与算法/排序/选择/堆排序.md",
     "笔记/数据结构与算法/排序/交换/快速排序.md",
@@ -210,9 +213,6 @@
     "博客/杂项/LeetCode 题目描述转 Markdown.md",
     "博客/杂项/游戏注册、登录和鉴权.md",
     "博客/杂项/小狼毫输入法主题.md",
-    "博客/杂项/青雀进暗杠的抽牌数期望.md",
-    "博客/图形/Scene View 无限网格.md",
-    "博客/图形/在 Linear Color Space 中渲染.md",
     "博客/未命名.canvas",
     "笔记/图形与视觉/逆向",
     "笔记/Unity",
