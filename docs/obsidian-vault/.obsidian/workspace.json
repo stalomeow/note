@@ -4,17 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "e77124e85c5ed590",
+        "id": "6a4c7353b15d90cf",
         "type": "tabs",
         "children": [
           {
-            "id": "efd390acc917ebb6",
+            "id": "ec5073c4ba5b3669",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "笔记/数据结构与算法/动态规划/01 背包.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "01 背包"
             }
           }
         ]
@@ -79,9 +84,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "笔记/数据结构与算法/动态规划/01 背包.md"
+              },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "01 背包 的大纲"
             }
           },
           {
@@ -129,6 +136,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "笔记/数据结构与算法/动态规划/01 背包.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -156,7 +164,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "title": "01 背包 的关系图"
             }
           }
         ]
@@ -176,14 +184,19 @@
       "obsidian-shellcommands:Shell commands: Custom variables": true
     }
   },
-  "active": "efd390acc917ebb6",
+  "active": "ec5073c4ba5b3669",
   "lastOpenFiles": [
+    "速记/TODO.md",
+    "笔记/数据结构与算法/动态规划/01 背包.md",
+    "笔记/数据结构与算法/动态规划",
+    "笔记/数据结构与算法/排序/选择/堆排序.md",
+    "笔记/数据结构与算法/排序/交换/快速排序.md",
+    "笔记/数据结构与算法/排序/插入/直接插入排序.md",
     "博客/杂项/决定将更多内容移动到笔记中.md",
     "速记/实现 ShaderLab.md",
     "速记/知识管理.md",
     "速记/DX12 封装.md",
     "速记/MSBuild cpp csharp.md",
-    "速记/TODO.md",
     "博客/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
     "博客/图形/ImGui 适配高 DPI 显示器.md",
     "博客/Unreal/编译 UE4 源码.md",
@@ -200,10 +213,6 @@
     "博客/杂项/青雀进暗杠的抽牌数期望.md",
     "博客/图形/Scene View 无限网格.md",
     "博客/图形/在 Linear Color Space 中渲染.md",
-    "博客/图形/集成 RenderDoc.md",
-    "博客/图形/对逐物体阴影的一些改进.md",
-    "博客/仿星铁渲染/仿星铁渲染：Bloom.md",
-    "博客/大学作业/Wireshark 抓包 HTTP 实验.md",
     "博客/未命名.canvas",
     "笔记/图形与视觉/逆向",
     "笔记/Unity",
@@ -225,7 +234,6 @@
     "博客/Web",
     "博客/Unity/编辑器",
     "博客/Unreal",
-    "博客/图形",
     "未命名.canvas"
   ]
 }
