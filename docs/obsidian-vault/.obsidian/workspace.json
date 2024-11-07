@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "63b9370941d4a648",
+        "id": "902209a54fa64890",
         "type": "tabs",
         "children": [
           {
-            "id": "1ad882f0888adc05",
+            "id": "bde3bf57c29912b9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记/数据结构与算法/动态规划/01 背包.md",
-                "mode": "preview",
-                "backlinks": false,
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "01 背包"
+              "title": "新标签页"
             }
           }
         ]
@@ -84,11 +79,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "笔记/数据结构与算法/动态规划/01 背包.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "01 背包 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -136,7 +129,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/数据结构与算法/动态规划/01 背包.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -159,12 +151,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.5087618855792677,
+                  "scale": 0.5087618855792678,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "01 背包 的关系图"
+              "title": "关系图谱"
             }
           }
         ]
@@ -184,11 +176,13 @@
       "obsidian-shellcommands:Shell commands: Custom variables": true
     }
   },
-  "active": "1ad882f0888adc05",
+  "active": "bde3bf57c29912b9",
   "lastOpenFiles": [
-    "笔记/数据结构与算法/数学/欧几里得算法.md",
-    "笔记/数据结构与算法/搜索/回溯法.md",
+    "笔记/数据结构与算法/单调栈.md",
     "笔记/数据结构与算法/动态规划/01 背包.md",
+    "笔记/数据结构与算法/搜索/回溯法.md",
+    "笔记/数据结构与算法/动态规划/完全背包.md",
+    "笔记/数据结构与算法/数学/欧几里得算法.md",
     "笔记/数据结构与算法/双指针.md",
     "速记/TODO.md",
     "笔记/数据结构与算法/动态规划",
@@ -211,8 +205,6 @@
     "博客/杂项/Windows 上用 CapsLock 切换中英文.md",
     "博客/杂项/Nuxt 3 开发避坑.md",
     "博客/杂项/LeetCode 题目描述转 Markdown.md",
-    "博客/杂项/游戏注册、登录和鉴权.md",
-    "博客/杂项/小狼毫输入法主题.md",
     "博客/未命名.canvas",
     "笔记/图形与视觉/逆向",
     "笔记/Unity",
