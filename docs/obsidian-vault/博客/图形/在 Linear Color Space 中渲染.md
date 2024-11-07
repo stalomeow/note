@@ -50,7 +50,7 @@ GFX_HR(CreateTextureEx(device, m_MetaData, D3D12_RESOURCE_FLAG_NONE, createFlags
 
 ImGui 目前所有操作都是在 sRGB 空间进行的，不支持 Linear Color Space。[^1] 考虑到透明混合的问题，不能直接把 ImGui 传入 Shader 的颜色转到 Linear 空间，否则在不同 Color Space 下 ImGui 看上去不一致，尤其是它的 Color Picker。
 
-注意到 ImGui 只有一张 Texture，在不使用 [Colorful Glyphs/Emojis](https://github.com/ocornut/imgui/blob/master/docs/FONTS.md#using-colorful-glyphsemojis) 时，这张 Texture 的 RGB 全是 1，这意味着把它当成 Linear 颜色变换到 sRGB 或者反过来结果都一样。我引擎的 Texture 在被 Shader 采样后得到的都是 Linear 颜色，所以不妨把 ImGui 的 Texture 当成 Linear Texture。
+注意到 ImGui 只有一张 Texture，在不使用 [Colorful Glyphs/Emojis](https://github.com/ocornut/imgui/blob/master/docs/FONTS.md#using-colorful-glyphsemojis) 时，这张 Texture 的 RGB 全是 1，这意味着我们既可以把它当作 Linear 颜色，也可以把它当作 sRGB 颜色。我引擎的 Texture 在被 Shader 采样后得到的都是 Linear 颜色，所以不妨把 ImGui 的 Texture 当成 Linear 的。
 
 修改 ImGui 的 Pixel Shader，把 Texture 的采样结果变换到 sRGB 空间，使得 ImGui 依旧在 sRGB 空间渲染。
 

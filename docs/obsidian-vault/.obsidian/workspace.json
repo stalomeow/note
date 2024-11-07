@@ -4,17 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "902209a54fa64890",
+        "id": "83a0385942f568f1",
         "type": "tabs",
         "children": [
           {
-            "id": "bde3bf57c29912b9",
+            "id": "6dd126fe5cd39970",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "笔记/数据结构与算法/动态规划/完全背包.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "完全背包"
             }
           }
         ]
@@ -79,9 +84,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "笔记/数据结构与算法/动态规划/完全背包.md"
+              },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "完全背包 的大纲"
             }
           },
           {
@@ -129,6 +136,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "笔记/数据结构与算法/动态规划/完全背包.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -156,7 +164,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "title": "完全背包 的关系图"
             }
           }
         ]
@@ -176,12 +184,23 @@
       "obsidian-shellcommands:Shell commands: Custom variables": true
     }
   },
-  "active": "bde3bf57c29912b9",
+  "active": "6dd126fe5cd39970",
   "lastOpenFiles": [
+    "笔记/数据结构与算法/算法学习资料.md",
+    "笔记/数据结构与算法/动态规划/完全背包.md",
+    "笔记/数据结构与算法/两个整数的平均值.md",
+    "笔记/数据结构与算法/字符串/字符串的前后缀.md",
+    "笔记/数据结构与算法/图论/最小生成树.md",
+    "笔记/数据结构与算法/图论/拓扑排序.md",
+    "笔记/数据结构与算法/图论/连通分量个数.md",
+    "笔记/数据结构与算法/图论/关键路径.md",
+    "笔记/数据结构与算法/树/并查集.md",
+    "博客/图形/在 Linear Color Space 中渲染.md",
+    "笔记/图形与视觉/色彩空间.md",
+    "笔记/图形与视觉/法线贴图.md",
     "笔记/数据结构与算法/单调栈.md",
     "笔记/数据结构与算法/动态规划/01 背包.md",
     "笔记/数据结构与算法/搜索/回溯法.md",
-    "笔记/数据结构与算法/动态规划/完全背包.md",
     "笔记/数据结构与算法/数学/欧几里得算法.md",
     "笔记/数据结构与算法/双指针.md",
     "速记/TODO.md",
@@ -194,17 +213,6 @@
     "速记/知识管理.md",
     "速记/DX12 封装.md",
     "速记/MSBuild cpp csharp.md",
-    "博客/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
-    "博客/图形/ImGui 适配高 DPI 显示器.md",
-    "博客/Unreal/编译 UE4 源码.md",
-    "博客/Unity/在 UI 上实现目标追踪.md",
-    "博客/Unity/用 RenderDoc 持续截帧 Unity Editor Game View.md",
-    "博客/Unity/实现 IJobParallelForAppend.md",
-    "博客/Unity/将 GIF 直接导入为 AnimationClip.md",
-    "博客/Unity/复刻星穹铁道 2.0 梦境迷钟.md",
-    "博客/杂项/Windows 上用 CapsLock 切换中英文.md",
-    "博客/杂项/Nuxt 3 开发避坑.md",
-    "博客/杂项/LeetCode 题目描述转 Markdown.md",
     "博客/未命名.canvas",
     "笔记/图形与视觉/逆向",
     "笔记/Unity",
