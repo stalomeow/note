@@ -1,6 +1,5 @@
 ---
-date: 2024-11-04
-slug: "241104181047"
+date: 2024-11-04T18:10:47
 ---
 
 # Unity 常用 Render State 属性 UI

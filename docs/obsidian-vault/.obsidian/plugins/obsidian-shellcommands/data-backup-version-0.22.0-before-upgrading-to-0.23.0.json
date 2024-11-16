@@ -1,5 +1,5 @@
 {
-  "settings_version": "0.23.0",
+  "settings_version": "0.22.0",
   "debug": false,
   "obsidian_command_palette_prefix": "Execute: ",
   "preview_variables_in_command_palette": true,
@@ -30,7 +30,7 @@
       },
       "shells": {},
       "alias": "Git Commit and Push",
-      "icon": "lucide-upload-cloud",
+      "icon": "upload-cloud",
       "confirm_execution": false,
       "ignore_error_codes": [],
       "input_contents": {
@@ -72,7 +72,7 @@
       },
       "shells": {},
       "alias": "Git Status",
-      "icon": "lucide-info",
+      "icon": "info",
       "confirm_execution": false,
       "ignore_error_codes": [],
       "input_contents": {
@@ -108,7 +108,7 @@
       },
       "shells": {},
       "alias": "Open in Explorer",
-      "icon": "lucide-folder-open",
+      "icon": "folder",
       "confirm_execution": false,
       "ignore_error_codes": [],
       "input_contents": {

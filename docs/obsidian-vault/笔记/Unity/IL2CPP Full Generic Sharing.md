@@ -1,6 +1,5 @@
 ---
-date: 2024-11-04
-slug: "241104180843"
+date: 2024-11-04T18:08:43
 ---
 
 # IL2CPP Full Generic Sharing

@@ -1,6 +1,5 @@
 ---
 date: 2024-11-04T20:01:20
-slug: "241104200120"
 ---
 
 # Unity 后处理 Shader 的 Render State 设置

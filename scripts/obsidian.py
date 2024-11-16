@@ -1,3 +1,4 @@
+import datetime
 import logging
 import posixpath
 import pypinyin
@@ -51,22 +52,10 @@ class FileLinkList(object):
 
 OBSIDIAN_VAULT_DIR = 'obsidian-vault'
 NOTE_FOLDER_NAME = '笔记'
-BLOG_FOLDER_NAME = '博客'
 
 wiki_link_name_map: dict[str, File] = {}         # key 是文件名，无扩展名
 wiki_link_path_map: dict[str, FileLinkList] = {} # key 是 src_uri
 log = logging.getLogger('mkdocs.plugins')
-
-def transform_slug(slug: str, file: File) -> str:
-    if len(slug) != 12:
-        log.warning('Obsidian document \'%s\' has a non-uniform slug.', file.src_uri)
-
-    # slug 目前用的是日期数字，这里把数字转换成字母
-    table = str.maketrans(digits, ''.join(ascii_letters[int(i)] for i in digits), '-')
-    slug = slug.translate(table).lower()
-
-    # 重排一下并分组，让原本相似的数字看起来不太一样
-    return '-'.join([slug[1::3], slug[2::3], slug[0::3]])
 
 def should_ignore_obsidian_file(f: File) -> bool:
     top_folder = f.src_uri.split('/')[1] # [0] 是 obsidian vault
@@ -82,6 +71,38 @@ def is_obsidian_note_file(f: File) -> bool:
         return False
     return f.src_uri.startswith(posixpath.join(OBSIDIAN_VAULT_DIR, NOTE_FOLDER_NAME))
 
+def process_obsidian_file_slug(f: File) -> bool:
+    # 只有笔记需要处理 slug
+    if not is_obsidian_note_file(f):
+        return True
+
+    _, frontmatter = meta.get_data(f.content_string)
+
+    if 'date' not in frontmatter:
+        log.error('Obsidian document \'%s\' does not have a date.', f.src_uri)
+        return False
+
+    date = frontmatter['date']
+
+    if not isinstance(date, datetime.datetime):
+        log.error('Obsidian document \'%s\' has an invalid date.', f.src_uri)
+        return False
+
+    slug = date.strftime('%y%m%d%H%M%S')
+
+    # slug 目前用的是日期数字，这里把数字转换成字母
+    table = str.maketrans(digits, ''.join(ascii_letters[int(i)] for i in digits), '-')
+    slug = slug.translate(table).lower()
+
+    # 重排一下并分组，让原本相似的数字看起来不太一样
+    slug = '-'.join([slug[1::3], slug[2::3], slug[0::3]])
+
+    if not f.use_directory_urls:
+        f.dest_uri = posixpath.join('', slug + '.html')
+    else:
+        f.dest_uri = posixpath.join('', slug, 'index.html')
+    return True
+
 @event_priority(100) # 放在最前面执行，不要处理其他插件生成的文件
 def on_files(files: Files, config: MkDocsConfig):
     invalid_doc_count = 0
@@ -90,33 +111,27 @@ def on_files(files: Files, config: MkDocsConfig):
     wiki_link_name_map.clear()
     wiki_link_path_map.clear()
 
+    def mark_file_invalid(f: File):
+        if f.is_documentation_page():
+            nonlocal invalid_doc_count
+            invalid_doc_count += 1
+        invalid_files.append(f)
+
     for f in files:
         # 忽略 Obsidian Vault 之外的文件
         if not f.src_uri.startswith(posixpath.join(OBSIDIAN_VAULT_DIR, '')):
             continue
 
         if should_ignore_obsidian_file(f):
-            if f.is_documentation_page():
-                invalid_doc_count += 1
-            invalid_files.append(f)
+            mark_file_invalid(f)
             continue
 
         if f.is_documentation_page():
-            valid_doc_count += 1
-
-            # 笔记需要处理 slug
-            if is_obsidian_note_file(f):
-                _, frontmatter = meta.get_data(f.content_string)
-
-                # 有 slug 的话就用 slug 作为文件名
-                if 'slug' in frontmatter:
-                    slug = transform_slug(str(frontmatter['slug']), f)
-                    if not f.use_directory_urls:
-                        f.dest_uri = posixpath.join('', slug + '.html')
-                    else:
-                        f.dest_uri = posixpath.join('', slug, 'index.html')
-                else:
-                    log.warning('Obsidian document \'%s\' does not have a slug.', f.src_uri)
+            if process_obsidian_file_slug(f):
+                valid_doc_count += 1
+            else:
+                mark_file_invalid(f)
+                continue
 
         wiki_link_name_map[posixpath.basename(f.src_uri)] = f
         wiki_link_path_map[f.src_uri] = FileLinkList(f)

@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "e4cd6cbb013f0c6f",
+        "id": "dbd4aa8ec0cb507b",
         "type": "tabs",
         "children": [
           {
-            "id": "debb7c1269f51fb4",
+            "id": "4d18f25bf2c61a96",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记/图形与视觉/法线编码.md",
-                "mode": "preview",
-                "backlinks": false,
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "法线编码"
+              "title": "新标签页"
             }
           }
         ]
@@ -84,11 +79,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "笔记/图形与视觉/法线编码.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "法线编码 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -136,7 +129,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/图形与视觉/法线编码.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -159,12 +151,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.5087618855792678,
+                  "scale": 0.3628873693012185,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "法线编码 的关系图"
+              "title": "关系图谱"
             }
           }
         ]
@@ -184,34 +176,35 @@
       "obsidian-shellcommands:Shell commands: Custom variables": true
     }
   },
-  "active": "debb7c1269f51fb4",
+  "active": "4d18f25bf2c61a96",
   "lastOpenFiles": [
-    "笔记/图形与视觉/法线贴图.md",
-    "笔记/图形与视觉/法线编码.md",
-    "笔记/数据结构与算法/单调栈.md",
-    "笔记/数据结构与算法/动态规划/完全背包.md",
-    "笔记/数据结构与算法/动态规划/01 背包.md",
-    "笔记/数据结构与算法/算法学习资料.md",
-    "笔记/数据结构与算法/两个整数的平均值.md",
-    "笔记/数据结构与算法/字符串/字符串的前后缀.md",
-    "笔记/数据结构与算法/图论/最小生成树.md",
-    "笔记/数据结构与算法/图论/拓扑排序.md",
-    "笔记/数据结构与算法/图论/连通分量个数.md",
-    "笔记/数据结构与算法/图论/关键路径.md",
-    "笔记/数据结构与算法/树/并查集.md",
-    "博客/图形/在 Linear Color Space 中渲染.md",
-    "笔记/图形与视觉/色彩空间.md",
-    "笔记/数据结构与算法/搜索/回溯法.md",
-    "笔记/数据结构与算法/数学/欧几里得算法.md",
-    "笔记/数据结构与算法/双指针.md",
-    "速记/TODO.md",
+    "笔记/CLI 工具/Aria2.md",
+    "templates/Note Header.md",
+    "笔记/Windows/Windows 全局钩子.md",
+    "笔记/Windows/Windows 程序防多开.md",
+    "笔记/Windows/DLL 进程间共享数据.md",
+    "笔记/Windows/ANSI 字符集.md",
+    "笔记/Windows/查看 Win32 错误码对应的描述.md",
+    "笔记/Unity/Unity Shader 平台差异.md",
+    "笔记/Unity/Unity Inline Sampler State.md",
+    "笔记/Unity/Unity 后处理 Shader 的 Render State 设置.md",
+    "笔记/Unity/Unity 常用 Render State 属性 UI.md",
+    "笔记/Unity/IL2CPP Full Generic Sharing.md",
+    "笔记/CLI 工具/Scoop.md",
+    "笔记/CLI 工具/PowerShell.md",
+    "笔记/CLI 工具/OpenSSL.md",
+    "笔记/CLI 工具/OpenSSH.md",
+    "笔记/CLI 工具/GNU Make.md",
+    "笔记/CLI 工具/Git.md",
+    "笔记/CLI 工具/FFmpeg.md",
+    "笔记/资源/GitHub 工具.md",
+    "笔记/资源/网站资源.md",
+    "笔记/资源/网络工具.md",
+    "笔记/杂项/Unix 时间.md",
+    "笔记/杂项/UFW 防火墙.md",
+    "笔记/杂项/Tracker 服务器.md",
+    "笔记/杂项/TCP 拥塞控制.md",
     "笔记/数据结构与算法/动态规划",
-    "笔记/数据结构与算法/排序/选择/堆排序.md",
-    "笔记/数据结构与算法/排序/交换/快速排序.md",
-    "笔记/数据结构与算法/排序/插入/直接插入排序.md",
-    "博客/杂项/决定将更多内容移动到笔记中.md",
-    "速记/实现 ShaderLab.md",
-    "速记/知识管理.md",
     "博客/未命名.canvas",
     "笔记/图形与视觉/逆向",
     "笔记/Unity",

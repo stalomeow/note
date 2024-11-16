@@ -1,6 +1,5 @@
 ---
 date: 2024-11-04T20:07:03
-slug: "241104200703"
 ---
 
 # Unity Inline Sampler State

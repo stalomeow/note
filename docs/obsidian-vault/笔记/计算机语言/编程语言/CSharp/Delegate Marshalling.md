@@ -1,6 +1,5 @@
 ---
-slug: "240427180510"
-date: 2024-04-27
+date: 2024-04-27T18:05:10
 ---
 
 # Delegate Marshalling
