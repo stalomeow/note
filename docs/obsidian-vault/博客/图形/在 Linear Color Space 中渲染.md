@@ -7,46 +7,7 @@ comments: true
 
 # 在 Linear Color Space 中渲染
 
-为了计算更准确，现在都在 Linear [[色彩空间]] 做渲染。自己写引擎时，要相应地做一些处理。
-
 <!-- more -->
-
-## RTV
-
-建议所有中间的临时 RTV 都不带 `_SRGB` 后缀，最后的 Back Buffer RTV 使用 `DXGI_FORMAT_*_SRGB`。这样中间所有内容都在 Linear 空间，只在 Present 前进行一次 Gamma 校正。
-
-## Texture
-
-像 Unity 一样提供一个 `sRGB` 选项，然后使用 DirectXTex 提供的 `CREATETEX_FLAGS` 进行 sRGB 配置。
-
-``` cpp
-// https://github.com/microsoft/DirectXTex/wiki/CreateTexture
-// The CREATETEX_SRGB flag provides an option for working around gamma issues with content
-// that is in the sRGB or similar color space but is not encoded explicitly as an SRGB format.
-// This will force the resource format be one of the of DXGI_FORMAT_*_SRGB formats if it exist.
-// Note that no pixel data conversion takes place.
-// The CREATETEX_IGNORE_SRGB flag does the opposite;
-// it will force the resource format to not have the _*_SRGB version.
-CREATETEX_FLAGS createFlags;
-
-if constexpr (GfxSettings::GetColorSpace() == GfxColorSpace::Linear)
-{
-    createFlags = m_IsSRGB ? CREATETEX_FORCE_SRGB : CREATETEX_IGNORE_SRGB;
-}
-else
-{
-    // shader 中采样时不进行任何转换
-    createFlags = CREATETEX_IGNORE_SRGB;
-}
-
-GFX_HR(CreateTextureEx(device, m_MetaData, D3D12_RESOURCE_FLAG_NONE, createFlags, &m_Resource));
-```
-
-## Color
-
-我们平时说的颜色值、Editor 里配置的颜色都是 sRGB 空间的。从外部向 Shader 传入颜色时（例如 Material Constant Buffer），需要将颜色从 sRGB 空间转到 Linear 空间。
-
-## ImGui
 
 ImGui 目前所有操作都是在 sRGB 空间进行的，不支持 Linear Color Space。[^1] 考虑到透明混合的问题，不能直接把 ImGui 传入 Shader 的颜色转到 Linear 空间，否则在不同 Color Space 下 ImGui 看上去不一致，尤其是它的 Color Picker。
 

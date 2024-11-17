@@ -52,19 +52,12 @@ class FileLinkList(object):
 
 OBSIDIAN_VAULT_DIR = 'obsidian-vault'
 NOTE_FOLDER_NAME = '笔记'
+BLOG_FOLDER_NAME = '博客'
+ATTACHMENT_FOLDER_NAME = 'attachments'
 
 wiki_link_name_map: dict[str, File] = {}         # key 是文件名，无扩展名
 wiki_link_path_map: dict[str, FileLinkList] = {} # key 是 src_uri
 log = logging.getLogger('mkdocs.plugins')
-
-def should_ignore_obsidian_file(f: File) -> bool:
-    top_folder = f.src_uri.split('/')[1] # [0] 是 obsidian vault
-
-    # 配置文件、模板文件、临时速记文件
-    if top_folder in ('.obsidian', 'templates', '速记'):
-        return True
-
-    return False
 
 def is_obsidian_note_file(f: File) -> bool:
     if not f.is_documentation_page():
@@ -122,7 +115,8 @@ def on_files(files: Files, config: MkDocsConfig):
         if not f.src_uri.startswith(posixpath.join(OBSIDIAN_VAULT_DIR, '')):
             continue
 
-        if should_ignore_obsidian_file(f):
+        top_folder = f.src_uri.split('/')[1] # [0] 是 obsidian vault
+        if top_folder not in (NOTE_FOLDER_NAME, BLOG_FOLDER_NAME, ATTACHMENT_FOLDER_NAME):
             mark_file_invalid(f)
             continue
 
