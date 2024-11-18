@@ -18,7 +18,7 @@
     s.setAttribute("src", "https://giscus.app/client.js");
     s.setAttribute("data-repo", "stalomeow/note");
     s.setAttribute("data-repo-id", "R_kgDOIiy-JQ");
-    s.setAttribute("data-category", "General");
+    s.setAttribute("data-category", "Comments");
     s.setAttribute("data-category-id", "DIC_kwDOIiy-Jc4CS79f");
     s.setAttribute("data-mapping", "pathname");
     s.setAttribute("data-strict", "0");
