@@ -59,6 +59,7 @@ theme:
 
     - navigation.instant
     - navigation.instant.progress
+    - navigation.instant.preview
     - navigation.tabs
     - navigation.top
     - navigation.path
@@ -184,7 +185,8 @@ plugins:
         'basic/advanced-math/fourier-epicycles.md': 'obsidian-vault/博客/大学作业/傅里叶级数实现本轮画图.md'
   - blog:
       enabled: true
-      blog_toc: true
+      blog_toc: false
+      blog_dir: blog
       post_dir: obsidian-vault/博客
       post_date_format: yyyy-MM-dd
       post_url_format: "posts/{slug}"
@@ -195,7 +197,7 @@ plugins:
       archive: true
       archive_date_format: yyyy 年 MM 月
       archive_url_date_format: yyyy/MM
-      archive_toc: true
+      archive_toc: false
       categories: false
       authors: false
       pagination: true

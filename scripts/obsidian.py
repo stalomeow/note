@@ -50,25 +50,16 @@ class FileLinkList(object):
             l.remove()
         self.links.clear()
 
-OBSIDIAN_VAULT_DIR = 'obsidian-vault'
-NOTE_FOLDER_NAME = '笔记'
-BLOG_FOLDER_NAME = '博客'
-ATTACHMENT_FOLDER_NAME = 'attachments'
+FOLDER_OBSIDIAN_VAULT = 'obsidian-vault'
+FOLDER_NOTE = '笔记'
+FOLDER_BLOG = '博客'
+FOLDER_ATTACHMENT = 'attachments'
 
 wiki_link_name_map: dict[str, File] = {}         # key 是文件名，无扩展名
 wiki_link_path_map: dict[str, FileLinkList] = {} # key 是 src_uri
 log = logging.getLogger('mkdocs.plugins')
 
-def is_obsidian_note_file(f: File) -> bool:
-    if not f.is_documentation_page():
-        return False
-    return f.src_uri.startswith(posixpath.join(OBSIDIAN_VAULT_DIR, NOTE_FOLDER_NAME))
-
-def process_obsidian_file_slug(f: File) -> bool:
-    # 只有笔记需要处理 slug
-    if not is_obsidian_note_file(f):
-        return True
-
+def process_obsidian_note_slug(f: File) -> bool:
     _, frontmatter = meta.get_data(f.content_string)
 
     if 'date' not in frontmatter:
@@ -111,21 +102,24 @@ def on_files(files: Files, config: MkDocsConfig):
         invalid_files.append(f)
 
     for f in files:
-        # 忽略 Obsidian Vault 之外的文件
-        if not f.src_uri.startswith(posixpath.join(OBSIDIAN_VAULT_DIR, '')):
+        path_names = f.src_uri.split('/')
+
+        # 忽略 obsidian-vault 文件夹以外的文件
+        # 路径中至少有一个斜杠，所以长度至少为 2
+        if len(path_names) < 2 or path_names[0] != FOLDER_OBSIDIAN_VAULT:
             continue
 
-        top_folder = f.src_uri.split('/')[1] # [0] 是 obsidian vault
-        if top_folder not in (NOTE_FOLDER_NAME, BLOG_FOLDER_NAME, ATTACHMENT_FOLDER_NAME):
+        # 删除特定目录之外的文件
+        # 路径中至少有两个斜杠，所以长度至少为 3
+        if len(path_names) < 3 or path_names[1] not in (FOLDER_NOTE, FOLDER_BLOG, FOLDER_ATTACHMENT):
             mark_file_invalid(f)
             continue
 
         if f.is_documentation_page():
-            if process_obsidian_file_slug(f):
-                valid_doc_count += 1
-            else:
+            if path_names[1] == FOLDER_NOTE and not process_obsidian_note_slug(f):
                 mark_file_invalid(f)
                 continue
+            valid_doc_count += 1
 
         wiki_link_name_map[posixpath.basename(f.src_uri)] = f
         wiki_link_path_map[f.src_uri] = FileLinkList(f)
@@ -147,7 +141,7 @@ def find_and_update_obsidian_root(nav: Navigation) -> Section:
 
     # 将 obsidian-vault 下的笔记作为 root，其他丢弃
     for child in item.children:
-        if child.title == NOTE_FOLDER_NAME:
+        if child.title == FOLDER_NOTE:
             child.title = 'Note'
             child.parent = None
             nav.items[i] = child
