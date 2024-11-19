@@ -4,17 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "5324c02c0acedd1b",
+        "id": "2d960c8206dd44b9",
         "type": "tabs",
         "children": [
           {
-            "id": "41577d1e73e64f37",
+            "id": "025e7fba73797f24",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "笔记/CLI 工具/FFmpeg.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "FFmpeg"
             }
           }
         ]
@@ -79,9 +84,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "笔记/CLI 工具/FFmpeg.md"
+              },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "FFmpeg 的大纲"
             }
           },
           {
@@ -129,6 +136,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "笔记/CLI 工具/FFmpeg.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -156,7 +164,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "title": "FFmpeg 的关系图"
             }
           }
         ]
@@ -176,8 +184,10 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "41577d1e73e64f37",
+  "active": "025e7fba73797f24",
   "lastOpenFiles": [
+    "博客/杂项/Nuxt 3 开发避坑.md",
+    "笔记/CLI 工具/FFmpeg.md",
     "TODO.md",
     "速记/DX12 封装.md",
     "速记/MSBuild cpp csharp.md",
@@ -213,8 +223,6 @@
     "笔记/Unity/Unity 后处理 Shader 的 Render State 设置.md",
     "笔记/Unity/Unity 常用 Render State 属性 UI.md",
     "笔记/Unity/IL2CPP Full Generic Sharing.md",
-    "笔记/CLI 工具/Scoop.md",
-    "笔记/CLI 工具/PowerShell.md",
     "笔记/数据结构与算法/动态规划",
     "博客/未命名.canvas",
     "笔记/图形与视觉/逆向",
