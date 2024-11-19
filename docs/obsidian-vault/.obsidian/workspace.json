@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e3459068205f2c6f",
+        "id": "5324c02c0acedd1b",
         "type": "tabs",
         "children": [
           {
-            "id": "3004120150c3272f",
+            "id": "41577d1e73e64f37",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -176,16 +176,18 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "3004120150c3272f",
+  "active": "41577d1e73e64f37",
   "lastOpenFiles": [
+    "TODO.md",
+    "速记/DX12 封装.md",
+    "速记/MSBuild cpp csharp.md",
+    "速记/知识管理.md",
+    "速记/实现 ShaderLab.md",
     "笔记/图形与视觉/色彩管理/颜色准确性.md",
     "博客/图形/在线性色彩空间使用 ImGui.md",
     "笔记/图形与视觉/色彩管理/颜色基础.md",
     "笔记/图形与视觉/法线贴图.md",
     "笔记/图形与视觉/色彩管理/色彩空间.md",
-    "速记/实现 ShaderLab.md",
-    "速记/MSBuild cpp csharp.md",
-    "速记/TODO.md",
     "attachments/Pasted image 20241117175121.png",
     "attachments/Pasted image 20241117174259.png",
     "笔记/图形与视觉/色彩管理",
@@ -213,8 +215,6 @@
     "笔记/Unity/IL2CPP Full Generic Sharing.md",
     "笔记/CLI 工具/Scoop.md",
     "笔记/CLI 工具/PowerShell.md",
-    "笔记/CLI 工具/OpenSSL.md",
-    "笔记/CLI 工具/OpenSSH.md",
     "笔记/数据结构与算法/动态规划",
     "博客/未命名.canvas",
     "笔记/图形与视觉/逆向",

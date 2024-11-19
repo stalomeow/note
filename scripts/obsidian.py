@@ -12,6 +12,7 @@ from mkdocs.structure.nav import Section
 from mkdocs.structure.pages import Page
 from mkdocs.utils import meta, get_relative_url
 from string import ascii_letters, digits
+from typing import Callable, Union
 
 class FileLinkNode(object):
     def __init__(self, file: File):
@@ -59,7 +60,21 @@ wiki_link_name_map: dict[str, File] = {}         # key 是文件名，无扩展�
 wiki_link_path_map: dict[str, FileLinkList] = {} # key 是 src_uri
 log = logging.getLogger('mkdocs.plugins')
 
-def process_obsidian_note_slug(f: File) -> bool:
+def set_file_dest_uri(f: File, value: Union[str, Callable[[str], str]]):
+    f.dest_uri = value if isinstance(value, str) else value(f.dest_uri)
+
+    def delattr_if_exists(obj, attr):
+        if hasattr(obj, attr):
+            delattr(obj, attr)
+
+    # 删掉 cached_property 的缓存
+    delattr_if_exists(f, 'url')
+    delattr_if_exists(f, 'abs_dest_path')
+
+def process_obsidian_attachment(f: File):
+    set_file_dest_uri(f, lambda uri: uri[uri.index(FOLDER_ATTACHMENT + '/'):]) # 去掉 obsidian-vault
+
+def process_obsidian_note(f: File) -> bool:
     _, frontmatter = meta.get_data(f.content_string)
 
     if 'date' not in frontmatter:
@@ -82,10 +97,29 @@ def process_obsidian_note_slug(f: File) -> bool:
     slug = '-'.join([slug[1::3], slug[2::3], slug[0::3]])
 
     if not f.use_directory_urls:
-        f.dest_uri = posixpath.join('', slug + '.html')
+        set_file_dest_uri(f, posixpath.join('n', slug + '.html'))
     else:
-        f.dest_uri = posixpath.join('', slug, 'index.html')
+        set_file_dest_uri(f, posixpath.join('n', slug, 'index.html'))
     return True
+
+def process_obsidian_blog_post(f: File):
+    setattr(f, 'obsidian_blog_post', True)
+
+def post_process_obsidian_blog_posts(config: MkDocsConfig, files: Files):
+    # 我们的 on_files 在 blog 插件之前运行，blog 插件也会修改 dest_uri
+    # 所以只能把修改 dest_uri 的操作放在这里，在 on_nav 时执行，避免被 blog 插件覆盖
+
+    for f in files:
+        if not getattr(f, 'obsidian_blog_post', False):
+            continue
+
+        if not f.use_directory_urls:
+            set_file_dest_uri(f, posixpath.join('p', f.page.config.slug + '.html'))
+        else:
+            set_file_dest_uri(f, posixpath.join('p', f.page.config.slug, 'index.html'))
+
+        # https://github.com/squidfunk/mkdocs-material/blob/51c9f9acb013836910f8e190ca5041f16f09e643/src/plugins/blog/plugin.py#L403
+        f.page._set_canonical_url(config.site_url)
 
 @event_priority(100) # 放在最前面执行，不要处理其他插件生成的文件
 def on_files(files: Files, config: MkDocsConfig):
@@ -115,10 +149,15 @@ def on_files(files: Files, config: MkDocsConfig):
             mark_file_invalid(f)
             continue
 
-        if f.is_documentation_page():
-            if path_names[1] == FOLDER_NOTE and not process_obsidian_note_slug(f):
-                mark_file_invalid(f)
-                continue
+        if path_names[1] == FOLDER_ATTACHMENT:
+            process_obsidian_attachment(f)
+        elif f.is_documentation_page():
+            if path_names[1] == FOLDER_NOTE:
+                if not process_obsidian_note(f):
+                    mark_file_invalid(f)
+                    continue
+            elif path_names[1] == FOLDER_BLOG:
+                process_obsidian_blog_post(f)
             valid_doc_count += 1
 
         wiki_link_name_map[posixpath.basename(f.src_uri)] = f
@@ -207,6 +246,7 @@ def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
         folders.sort(key=get_entry_key)
         entry.children = folders + files # 文件夹放在文件前面
 
+    post_process_obsidian_blog_posts(config, files)
     obsidian_root = find_and_update_obsidian_root(nav)
     dfs(obsidian_root) # 将下面的文章重新排序
     move_index_page_and_obsidian_root(nav, obsidian_root)
