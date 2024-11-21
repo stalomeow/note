@@ -27,7 +27,7 @@ npx nuxi@latest init <project-name>
 
 > The main issue is native fetch API provided by newer Node.js versions (18+), does not support HTTP agents for proxy support.
 
-简单概括就是它不走代理。目前有 3 种解决方法：
+简单概括就是它不走代理。目前有 4 种解决方法：
 
 1. 改 hosts 文件。这个我不喜欢，跳过。
 2. 换源。有人把相关的文件 clone 到了 gitee 上，设置环境变量
@@ -44,7 +44,7 @@ npx nuxi@latest init <project-name>
     npx nuxi-nightly@latest init <project-name>
     ```
 
-4. 使用 [[Clash 的 TUN 模式]]，不用系统代理。
+4. 使用 Clash 的 TUN 模式，不用系统代理。
 
 ## Font Awesome
 

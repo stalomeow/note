@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "ba888dcb5e22ed0a",
+        "id": "8b8607db01c9fe99",
         "type": "tabs",
         "children": [
           {
-            "id": "308f8816c282c061",
+            "id": "20e1a4a1ac6f8248",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记/资源/网站资源.md",
-                "mode": "preview",
-                "backlinks": false,
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "网站资源"
+              "title": "新标签页"
             }
           }
         ]
@@ -84,11 +79,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "笔记/资源/网站资源.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "网站资源 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -136,7 +129,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/资源/网站资源.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -159,12 +151,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.713275462622456,
+                  "scale": 0.5087618855792686,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "网站资源 的关系图"
+              "title": "关系图谱"
             }
           }
         ]
@@ -186,18 +178,32 @@
   },
   "active": "c87ab82d610a5a66",
   "lastOpenFiles": [
-    "TODO.md",
-    "笔记/CLI 工具/FFmpeg.md",
+    "笔记/资源/网站收藏.md",
+    "笔记/资源/网络工具.md",
+    "笔记/科学上网/VPS 与机场选购指南.md",
+    "笔记/科学上网/Trojan.md",
+    "笔记/科学上网/Hysteria2.md",
+    "笔记/科学上网/Clash 客户端支持的 URL Scheme.md",
+    "笔记/科学上网/Clash 订阅配置.md",
+    "笔记/科学上网/Clash 的 TUN 模式.md",
     "博客/杂项/Nuxt 3 开发避坑.md",
-    "速记/DX12 封装.md",
-    "速记/MSBuild cpp csharp.md",
-    "速记/知识管理.md",
-    "速记/实现 ShaderLab.md",
-    "笔记/图形与视觉/色彩管理/颜色准确性.md",
-    "博客/图形/在线性色彩空间使用 ImGui.md",
-    "笔记/图形与视觉/色彩管理/颜色基础.md",
+    "笔记/科学上网/自建机场节点.md",
+    "笔记/数据结构与算法/双指针.md",
+    "笔记/数据结构与算法/两个整数的平均值.md",
+    "笔记/数据结构与算法/递归三要素.md",
+    "笔记/数据结构与算法/单调栈.md",
+    "笔记/数据结构与算法/算法学习资料.md",
+    "笔记/图形与视觉/Terrain Rendering.md",
+    "笔记/图形与视觉/Half Lambert 勘误.md",
+    "笔记/图形与视觉/Fog.md",
+    "笔记/图形与视觉/Early Z-Test.md",
+    "笔记/图形与视觉/DPI.md",
+    "笔记/图形与视觉/Blit.md",
+    "笔记/图形与视觉/Anti-aliasing.md",
+    "笔记/图形与视觉/Ambient Occlusion.md",
+    "笔记/图形与视觉/渲染方程.md",
+    "笔记/图形与视觉/深度重建世界坐标.md",
     "笔记/图形与视觉/法线贴图.md",
-    "笔记/图形与视觉/色彩管理/色彩空间.md",
     "attachments/Pasted image 20241117175121.png",
     "attachments/Pasted image 20241117174259.png",
     "笔记/图形与视觉/色彩管理",
@@ -209,20 +215,6 @@
     "attachments/Pasted image 20241116201154.png",
     "attachments/Pasted image 20241116182232.png",
     "attachments/Pasted image 20241116182129.png",
-    "笔记/图形与视觉/仿星穹铁道渲染资料.md",
-    "博客/大学作业/傅里叶级数实现本轮画图.md",
-    "笔记/CLI 工具/Aria2.md",
-    "templates/Note Header.md",
-    "笔记/Windows/Windows 全局钩子.md",
-    "笔记/Windows/Windows 程序防多开.md",
-    "笔记/Windows/DLL 进程间共享数据.md",
-    "笔记/Windows/ANSI 字符集.md",
-    "笔记/Windows/查看 Win32 错误码对应的描述.md",
-    "笔记/Unity/Unity Shader 平台差异.md",
-    "笔记/Unity/Unity Inline Sampler State.md",
-    "笔记/Unity/Unity 后处理 Shader 的 Render State 设置.md",
-    "笔记/Unity/Unity 常用 Render State 属性 UI.md",
-    "笔记/Unity/IL2CPP Full Generic Sharing.md",
     "笔记/数据结构与算法/动态规划",
     "博客/未命名.canvas",
     "笔记/图形与视觉/逆向",
