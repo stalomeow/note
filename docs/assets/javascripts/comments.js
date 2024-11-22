@@ -27,7 +27,7 @@
     s.setAttribute("data-input-position", "top");
     s.setAttribute("data-theme", getTheme());
     s.setAttribute("data-lang", "zh-CN");
-    // s.setAttribute("data-loading", "lazy"); // 开启后，图片会频繁重新加载
+    s.setAttribute("data-loading", "lazy");
     s.setAttribute("crossorigin", "anonymous");
     s.setAttribute("async", "");
     comments.insertAdjacentElement("afterend", s);
