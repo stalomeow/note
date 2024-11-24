@@ -11,10 +11,15 @@
             "id": "6fb0d4a0b06b5bbf",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "笔记/图形与视觉/优化/FP16 Shaders.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "FP16 Shaders"
             }
           }
         ]
@@ -79,9 +84,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "笔记/图形与视觉/优化/FP16 Shaders.md"
+              },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "FP16 Shaders 的大纲"
             }
           },
           {
@@ -129,6 +136,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "笔记/图形与视觉/优化/FP16 Shaders.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -156,7 +164,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "title": "FP16 Shaders 的关系图"
             }
           }
         ]
@@ -178,6 +186,8 @@
   },
   "active": "6fb0d4a0b06b5bbf",
   "lastOpenFiles": [
+    "笔记/图形与视觉/优化/FP16 Shaders.md",
+    "笔记/图形与视觉/优化",
     "笔记/图形与视觉/法线编码.md",
     "笔记/数学/三角形重心坐标.md",
     "笔记/数学/三角形面积.md",
@@ -206,7 +216,6 @@
     "笔记/数据结构与算法/单调栈.md",
     "笔记/数据结构与算法/算法学习资料.md",
     "笔记/图形与视觉/Terrain Rendering.md",
-    "笔记/图形与视觉/Half Lambert 勘误.md",
     "attachments/Pasted image 20241117175121.png",
     "attachments/Pasted image 20241117174259.png",
     "笔记/图形与视觉/色彩管理",
@@ -225,7 +234,6 @@
     "博客/仿星铁渲染",
     "博客/后端",
     "博客/Web",
-    "博客/Unity/编辑器",
     "未命名.canvas"
   ]
 }
