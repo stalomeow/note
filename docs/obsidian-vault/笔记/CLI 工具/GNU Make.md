@@ -47,6 +47,12 @@ make -d
 | `$^` |    所有依赖文件     |
 | `$?` | 所有内容发生变化的依赖文件 |
 
+## 并行
+
+使用 `-j` 可以指定并行数量。
+
+> If the `-j` option is followed by an integer, this is the number of recipes to execute at once; this is called the number of job slots. If there is **nothing looking like an integer** after the `-j` option, there is **no limit on the number of job slots**. The default number of job slots is one, which means serial execution (one thing at a time).[^1]
+
 ## Windows Shell
 
 在 Windows 上，make 默认还是会先找 sh 作为默认的 Shell。由于装 [[Git|git]] 的时候，会附带一个 sh，所以 make 会拿 git 安装目录里的 sh 作为默认的 Shell。
@@ -69,3 +75,5 @@ SHELL := pwsh.exe
 2. 把 `$(SHELL)` 拼到环境变量 `Path` 后面，然后逐个检查对应文件是否存在
 
 不存在的话就用默认的 sh。`cmd` 是被特殊对待的，不用加扩展名，但 `pwsh.exe` 不加 `.exe` 的话就找不到了。
+
+[^1]: [www.gnu.org](https://www.gnu.org/software/make/manual/make.html#Parallel)

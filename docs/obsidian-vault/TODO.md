@@ -32,3 +32,4 @@
 - [ ] [Visual Studio检查内存泄露方法 - 剑痴乎 (jianchihu.net)](https://blog.jianchihu.net/visual-studio-memory-leak.html)
 - [ ] [Find memory leaks with the CRT library | Microsoft Learn](https://learn.microsoft.com/en-us/cpp/c-runtime-library/find-memory-leaks-using-the-crt-library?view=msvc-170)
 - [ ] NDC Y 向上，但屏幕和纹理坐标 Y 向下：[Coordinate Systems (Direct3D 10) - Win32 apps | Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/direct3d10/d3d10-graphics-programming-guide-resources-coordinates)
+- [ ] [adam-maj/tiny-gpu: A minimal GPU design in Verilog to learn how GPUs work from the ground up](https://github.com/adam-maj/tiny-gpu)
