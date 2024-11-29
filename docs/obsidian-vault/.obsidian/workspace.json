@@ -4,22 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "788eac1f55ffb611",
+        "id": "9454d5f261ee3770",
         "type": "tabs",
         "children": [
           {
-            "id": "e463ba0e03127162",
+            "id": "d7928147696dc6da",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/图形与视觉/形态学操作.md",
+                "file": "博客/杂项/四位数字验证码识别.md",
                 "mode": "preview",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "形态学操作"
+              "title": "四位数字验证码识别"
             }
           }
         ]
@@ -85,10 +85,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/图形与视觉/形态学操作.md"
+                "file": "博客/杂项/四位数字验证码识别.md"
               },
               "icon": "lucide-list",
-              "title": "形态学操作 的大纲"
+              "title": "四位数字验证码识别 的大纲"
             }
           },
           {
@@ -136,7 +136,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/图形与视觉/形态学操作.md",
+                "file": "博客/杂项/四位数字验证码识别.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -164,7 +164,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "形态学操作 的关系图"
+              "title": "四位数字验证码识别 的关系图"
             }
           }
         ]
@@ -184,17 +184,22 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "e463ba0e03127162",
+  "active": "d7928147696dc6da",
   "lastOpenFiles": [
-    "attachments/Pasted image 20241128223347.png",
-    "attachments/Pasted image 20241128223111.png",
-    "attachments/Pasted image 20241128222828.png",
-    "attachments/Pasted image 20241128222600.png",
-    "attachments/Pasted image 20241128222215.png",
-    "attachments/Pasted image 20241128221332.png",
-    "attachments/Pasted image 20241128220428.png",
-    "笔记/图形与视觉/G-buffer 法线编码.md",
+    "attachments/Pasted image 20241129133619.png",
+    "attachments/zfw-captcha-processed.jpg",
+    "attachments/zfw-captcha-binary.jpg",
+    "attachments/2.jpg",
+    "attachments/1.jpg",
+    "attachments/zfw-captcha-fuck.jpg",
+    "attachments/bb.jpg",
+    "attachments/Pasted image 20241129125947.png",
+    "attachments/zfw-captcha-original.jpg",
+    "attachments/0.jpg",
+    "attachments/Pasted image 20241129124840.png",
+    "博客/杂项/四位数字验证码识别.md",
     "笔记/图形与视觉/形态学操作.md",
+    "笔记/图形与视觉/G-buffer 法线编码.md",
     "笔记/图形与视觉/法线贴图.md",
     "笔记/资源/网站收藏.md",
     "笔记/图形与视觉/优化/FP16 Shaders.md",
@@ -207,9 +212,6 @@
     "笔记/图形与视觉/优化",
     "笔记/数学/三角形重心坐标.md",
     "笔记/数学/三角形面积.md",
-    "attachments/barycentric-coordinate.svg",
-    "attachments/s.svg",
-    "attachments/未命名绘图.drawio.svg",
     "笔记/杂项/LaTeX.md",
     "笔记/图形与视觉/色彩管理/颜色基础.md",
     "笔记/图形与视觉/Anti-aliasing.md",
@@ -222,8 +224,6 @@
     "笔记/科学上网/Hysteria2.md",
     "笔记/科学上网/Clash 客户端支持的 URL Scheme.md",
     "笔记/科学上网/Clash 订阅配置.md",
-    "笔记/科学上网/Clash 的 TUN 模式.md",
-    "attachments/Pasted image 20241117175121.png",
     "笔记/图形与视觉/色彩管理",
     "笔记/数据结构与算法/动态规划",
     "博客/未命名.canvas",
