@@ -12,14 +12,14 @@ Windows 上一款开源的软件安装器，类似 macOS 的 Homebrew。用它�
 
 ## Bucket
 
-Bucket 相当于一类软件的集合，负责管理它们的版号和安装方式。Scoop 官方提供了很多个 Bucket，都在 GitHub 上和社区一起维护
+Bucket 相当于一类软件的集合，负责管理它们的版号和安装方式。
 
-- [ScoopInstaller/Main: 📦 The default bucket for Scoop. (github.com)](https://github.com/ScoopInstaller/Main)
-- [ScoopInstaller/Extras: 📦 The Extras bucket for Scoop. (github.com)](https://github.com/ScoopInstaller/Extras)
-- [ScoopInstaller/Versions: 📦 A Scoop bucket for alternative versions of apps. (github.com)](https://github.com/ScoopInstaller/Versions)
-- 等等
-
-官方提供了一个模板：[ScoopInstaller/BucketTemplate: Template Bucket for Scoop Installer (github.com)](https://github.com/ScoopInstaller/BucketTemplate)，我们可以用它创建自己的 Bucket。
+- 官方
+    - [ScoopInstaller/Main](https://github.com/ScoopInstaller/Main)
+    - [ScoopInstaller/Extras](https://github.com/ScoopInstaller/Extras)
+    - [ScoopInstaller/Versions](https://github.com/ScoopInstaller/Versions)
+- 模板：[ScoopInstaller/BucketTemplate](https://github.com/ScoopInstaller/BucketTemplate)
+- 文档：[App Manifests · ScoopInstaller/Scoop Wiki](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifests)
 
 ## 多线程下载
 
