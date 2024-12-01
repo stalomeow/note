@@ -14,7 +14,7 @@ date: 2024-05-01T01:33:47
 
 全局钩子的句柄需要放在 [[DLL 进程间共享数据|dll 的共享数据段]] 里，保证所有进程加载的 dll 共享一个全局钩子句柄。
 
-``` c
+``` cpp
 #pragma data_seg(".shared")
     HHOOK hHook = NULL;
 #pragma data_seg()
@@ -26,7 +26,7 @@ date: 2024-05-01T01:33:47
 
 看文档根据具体的情况实现，这里以 `ShellProc` 为例。
 
-``` c
+``` cpp
 LRESULT CALLBACK ShellProc(int nCode, WPARAM wParam, LPARAM lParam)
 {
     if (nCode == HSHELL_LANGUAGE)
@@ -40,14 +40,14 @@ LRESULT CALLBACK ShellProc(int nCode, WPARAM wParam, LPARAM lParam)
 }
 ```
 
-最后要调用 ` CallNextHookEx `！
+最后要调用 `CallNextHookEx`！
 
 ### 安装和卸载函数
 
 这两个方法要导出给 exe 用。同样要根据文档和需求指定不同的参数。
 
-``` c
-void __declspec(dllexport) Install(HINSTANCE hinstDLL)
+``` cpp
+extern "C" void __declspec(dllexport) Install(HINSTANCE hinstDLL)
 {
     if ((hHook = SetWindowsHookEx(WH_SHELL, ShellProc, hinstDLL, 0)))
     {
@@ -55,7 +55,7 @@ void __declspec(dllexport) Install(HINSTANCE hinstDLL)
     }
 }
 
-void __declspec(dllexport) Uninstall(HINSTANCE hinstDLL)
+extern "C" void __declspec(dllexport) Uninstall(HINSTANCE hinstDLL)
 {
     if (hHook && UnhookWindowsHookEx(hHook))
     {
@@ -72,7 +72,7 @@ void __declspec(dllexport) Uninstall(HINSTANCE hinstDLL)
 
 加载 dll 后，调用 dll 里导出的安装函数。
 
-``` c
+``` cpp
 // 加载 dll
 if (!(hinstDLL = LoadLibrary(TEXT("my-dll.dll"))))
 {
@@ -92,32 +92,26 @@ InstallHook(hinstDLL);
 
 上面 `InstallerFunc` 的定义
 
-``` c
+``` cpp
 typedef void (*InstallerFunc)(HINSTANCE hinstDLL);
 ```
 
 程序结束后，调用卸载函数。
 
-``` c
+``` cpp
 UninstallHook(hinstDLL);
 FreeLibrary(hinstDLL);
 ```
 
 ### 消息循环
 
-``` c
+``` cpp
 MSG msg;
-BOOL bRet;
-while ((bRet = GetMessage(&msg, NULL, 0, 0)) != 0)
-{
-    // GetMessage() 返回 -1 表示出错，返回 0 表示 WM_QUIT 消息
-    if (bRet == -1)
-    {
-        return Dispose(4);
-    }
 
+while (GetMessageW(&msg, NULL, 0, 0))
+{
     TranslateMessage(&msg);
-    DispatchMessage(&msg);
+    DispatchMessageW(&msg);
 }
 ```
 

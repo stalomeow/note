@@ -4,7 +4,9 @@ date: 2024-05-03T18:45:42
 
 # DLL 进程间共享数据
 
-==这个方法仅限 MSVC。== 参考：[How do I share data in my DLL with an application or with other DLLs? | Microsoft Learn](https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/h90dkhs0(v=vs.90)?redirectedfrom=MSDN)
+> [How do I share data in my DLL with an application or with other DLLs? | Microsoft Learn](https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/h90dkhs0(v=vs.90)?redirectedfrom=MSDN)
+
+**这个方法仅限 MSVC。**
 
 多个进程加载同一个 dll，dll 中的全局变量是不共享的。进程 A 对 dll 中全局变量的修改与进程 B 的修改是互不影响的。
 

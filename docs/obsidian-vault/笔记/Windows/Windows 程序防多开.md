@@ -21,7 +21,10 @@ if (hMutex == NULL)
     return;
 }
 
-// 如果已经有一个实例在运行，则退出
+// https://learn.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-createmutexw#return-value
+// If the mutex is a named mutex and the object existed before this function call,
+// the return value is a handle to the existing object,
+// and the GetLastError function returns ERROR_ALREADY_EXISTS.
 if (GetLastError() == ERROR_ALREADY_EXISTS)
 {
     // 释放 Mutex
