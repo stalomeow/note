@@ -1,0 +1,17 @@
+.app-container {
+    /* 图片在 OneDrive 上 */
+    background: url(https://1drv.ms/i/c/2cf575980a7da01d/IQRqyeuqcvbzTYYER4-c3JcEAbtFz1yPAN_G4bXOK1_GVv4?width=1024);
+    background-size: cover;
+}
+
+.horizontal-main-container {
+    backdrop-filter: brightness(0.2) blur(4px);
+}
+
+.workspace-tabs { 
+    --background-primary: transparent !important;
+    --background-secondary: transparent !important;
+    --background-mod-root-split: transparent !important;
+    --background-mod-right-split: transparent !important;
+    --background-mod-left-split: transparent !important;
+}

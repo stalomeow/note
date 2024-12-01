@@ -9,7 +9,8 @@
     "math",
     "mermaid",
     "media",
-    "shell-commands"
+    "shell-commands",
+    "background"
   ],
   "showViewHeader": true,
   "nativeMenus": false,
