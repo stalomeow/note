@@ -117,8 +117,13 @@ markdown_extensions:
       # auto_title: true
       # linenums: true
       # anchor_linenums: true
-      use_pygments: true
       # line_spans: __span # When this option is set, each line of a code block is wrapped in a span, which is essential for features like line highlighting to work correctly
+      use_pygments: true
+
+      # https://facelessuser.github.io/pymdown-extensions/extensions/highlight/#extended-pygments-lexer-options
+      extend_pygments_lang:
+        - name: antlr4
+          lang: antlr
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences:

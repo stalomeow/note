@@ -23,6 +23,26 @@ protected override void OnImportAssets(ref AssetImportContext context)
 
 <!-- more -->
 
+大体设计如下，成员就不写了。
+
+``` mermaid
+classDiagram
+    Shader --> ShaderKeywordSpace
+    Shader --> "many" ShaderProperty : Contains
+    Shader --> "many" ShaderPass : Contains
+    ShaderPass --> ShaderPassRenderState
+    ShaderPass --> "many" ShaderProgram : Contains
+    ShaderProgram --> ShaderKeywordSet
+
+    class Shader
+    class ShaderProperty
+    class ShaderPass
+    class ShaderPassRenderState
+    class ShaderProgram
+    class ShaderKeywordSpace
+    class ShaderKeywordSet
+```
+
 ## 编译器
 
 引擎的上层逻辑使用 C#，所以语法分析用 `antlr4` 实现，其他的方案有 `yacc` 和 `lex`。`antlr4` 可以从我的 [[Scoop]] 快速安装，然后直接用 `antlr4` 或 `antlr4-parse` 命令，前者是生成代码的工具，后者是解释器。
