@@ -67,7 +67,8 @@
               "title": "实现 ShaderLab"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -130,10 +131,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/科学上网/Hysteria2.md"
+                "file": "博客/图形/基于 DX12 实现 ShaderLab.md"
               },
               "icon": "lucide-list",
-              "title": "Hysteria2 的大纲"
+              "title": "基于 DX12 实现 ShaderLab 的大纲"
             }
           },
           {
@@ -181,7 +182,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/科学上网/Hysteria2.md",
+                "file": "博客/图形/基于 DX12 实现 ShaderLab.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -209,7 +210,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Hysteria2 的关系图"
+              "title": "基于 DX12 实现 ShaderLab 的关系图"
             }
           }
         ]
@@ -229,11 +230,11 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "f81992c283c448ab",
+  "active": "08af728d5fc7341f",
   "lastOpenFiles": [
-    "笔记/CLI 工具/Scoop.md",
-    "笔记/科学上网/Hysteria2.md",
     "速记/实现 ShaderLab.md",
+    "笔记/科学上网/Hysteria2.md",
+    "笔记/CLI 工具/Scoop.md",
     "博客/图形/基于 DX12 实现 ShaderLab.md",
     "速记/MSBuild cpp csharp.md",
     "笔记/Windows/Windows 全局钩子.md",
