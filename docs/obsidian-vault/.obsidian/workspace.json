@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "bdd62c4700329efb",
+        "id": "e02371e10fccf63f",
         "type": "tabs",
         "children": [
           {
-            "id": "9bb4beee38c023eb",
+            "id": "9410e8f6c71212a2",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -175,16 +175,20 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "9bb4beee38c023eb",
+  "active": "9410e8f6c71212a2",
   "lastOpenFiles": [
-    "笔记/数学/函数空间.md",
-    "博客/图形/基于 DX12 实现 ShaderLab.md",
+    "博客/图形/对逐物体阴影的一些改进.md",
+    "博客/图形/集成 RenderDoc.md",
+    "博客/图形/ImGui 适配高 DPI 显示器.md",
     "博客/图形/Scene View 无限网格.md",
     "博客/图形/在线性色彩空间使用 ImGui.md",
+    "速记/DX12 封装.md",
+    "笔记/图形与视觉/G-buffer 法线编码.md",
+    "笔记/图形与视觉/Early Z-Test.md",
+    "博客/图形/基于 DX12 实现 ShaderLab.md",
+    "笔记/数学/函数空间.md",
     "attachments/mt04pju5.png",
-    "博客/图形/ImGui 适配高 DPI 显示器.md",
     "笔记/数学/泛函.md",
-    "博客/图形/集成 RenderDoc.md",
     "速记/实现 ShaderLab.md",
     "速记/MSBuild cpp csharp.md",
     "笔记/计算机语言/Python/Windows 下干净地卸载 Python.md",
@@ -200,10 +204,6 @@
     "笔记/计算机语言/计算机语言分类.md",
     "博客/杂项/Windows 上自定义按键映射.md",
     "笔记/Windows/查看 Win32 错误码对应的描述.md",
-    "笔记/Windows/Windows 全局钩子.md",
-    "笔记/Windows/ANSI 字符集.md",
-    "笔记/Windows/DLL 进程间共享数据.md",
-    "笔记/Windows/Windows 程序防多开.md",
     "attachments/Pasted image 20241129133619.png",
     "attachments/zfw-captcha-processed.jpg",
     "attachments/zfw-captcha-binary.jpg",

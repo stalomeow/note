@@ -571,7 +571,7 @@ if (pReflectionData != nullptr)
     {
         // ...
     
-        std::unordered_map<size_t, Microsoft::WRL::ComPtr<ID3D12RootSignature>> m_RootSignatures
+        std::unordered_map<size_t, Microsoft::WRL::ComPtr<ID3D12RootSignature>> m_RootSignatures;
     };
     ```
 
@@ -944,4 +944,4 @@ ID3D12PipelineState* GfxPipelineState::GetGraphicsPSO(Material* material, int32_
 ```
 
 [^1]: [Unity - Manual: Shader keyword fundamentals](https://docs.unity3d.com/6000.0/Documentation/Manual/shader-keywords.html)
-[^2]: https://github.com/microsoft/DirectX-Graphics-Samples/issues/82#issuecomment-173370923
+[^2]: [Collision handling of PSO hash value · Issue #82 · microsoft/DirectX-Graphics-Samples](https://github.com/microsoft/DirectX-Graphics-Samples/issues/82#issuecomment-173370923)
