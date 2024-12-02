@@ -22,10 +22,10 @@ comments: true
 使用 [[Scoop]] 从 [stalomeow/ScoopBucket](https://github.com/stalomeow/ScoopBucket) 安装。
 
 ``` bash
-sudo scoop install stalo/keyboard-remapper
+sudo scoop install stalo/kbdremap
 ```
 
-开机会自动启动。
+开机会自动启动。如果进程意外终止，可以使用命令 `kbdremap` 重启。
 
 ## 按键映射
 

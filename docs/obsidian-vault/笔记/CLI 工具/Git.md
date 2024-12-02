@@ -24,6 +24,48 @@ git config --global user.email "[email address]"
 git config --global color.ui auto
 ```
 
+## gitattribute
+
+> 模板：[gitattributes/gitattributes](https://github.com/gitattributes/gitattributes)
+
+修改 `.gitattribute` 和 `.gitignore` 后，记得取消跟踪所有文件，再重新 `git add .` 应用新配置。方法在后文有提到。
+
+### Line endings
+
+- [cross platform - What's the strategy for handling CRLF (carriage return, line feed) with Git?](https://stackoverflow.com/questions/170961/whats-the-strategy-for-handling-crlf-carriage-return-line-feed-with-git)
+- [Configuring Git to handle line endings](https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings)
+
+使用 `git` 的 `autocrlf` 功能处理 line endings，但最好不要依赖全局的 `core.autocrlf` 配置，而是在 `.gitattribute` 里指定。
+
+``` bash
+# Set the default behavior, in case people don't have core.autocrlf set.
+# Auto detect text files and perform LF normalization
+*        text=auto
+```
+
+不同用户的全局配置不同，而 `.gitattribute` 中的配置会覆盖全局的 `core.autocrlf`，避免意外的错误。
+
+还可以对一些特殊文件使用固定的 line endings。
+
+``` bash
+# Declare files that will always have CRLF line endings on checkout.
+*.sln text eol=crlf
+```
+
+### Linguist
+
+> 文档：[linguist/docs/overrides.md](https://github.com/github-linguist/linguist/blob/main/docs/overrides.md)
+
+在 `.gitattributes` 文件中配置仓库的语言统计，例如显式指定文件使用的编程语言、将文件标记为 `generated` 等。
+
+``` bash
+# Example of a `.gitattributes` file which reclassifies `.rb` files as Java:
+*.rb linguist-language=Java
+
+# Use the `linguist-generated` attribute to mark or unmark paths as generated.
+Api.elm linguist-generated
+```
+
 ## 分支
 
 ### 创建
@@ -236,6 +278,14 @@ git rebase -i <commit-hash>
 ```
 
 这行命令会先在编辑器中打开一个文件，在文件中可以给不想要的 Commit 标记上 drop，然后保存关闭文件。之后 git 会执行 Rebase，删掉标记了 drop 的 Commit。
+
+## 取消跟踪所有文件
+
+在不删除文件的条件下，取消跟踪所有文件。之后可以重新 `git add .`。
+
+``` bash
+git rm -r --cached .
+```
 
 ## Pull
 
