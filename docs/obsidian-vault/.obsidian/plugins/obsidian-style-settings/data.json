@@ -1,9 +1,9 @@
 {
   "Components@@tab-autohide": false,
-  "Components@@Ribbon-autohide": true,
-  "Components@@vault-profile-autohide": true,
+  "Components@@Ribbon-autohide": false,
+  "Components@@vault-profile-autohide": false,
   "Components@@tab-title-bar-autohide": false,
-  "Components@@nav-header-autohide": true,
+  "Components@@nav-header-autohide": false,
   "Components@@status-bar-autohide": false,
   "Components@@CTA-BTN-enable": false,
   "Components@@file-names-untrim": false,
@@ -21,11 +21,11 @@
   "Editor@@line-hover-indicator": false,
   "Plugin@@colorful-checkbox": false,
   "Editor@@codeblock-style-select": "codeblock-style-customize",
-  "Editor@@img-darken": true,
+  "Editor@@img-darken": false,
   "Editor@@img-center-align": true,
   "Editor@@zoom-off": true,
   "Editor@@collapse-icon-restore": false,
-  "Editor@@heading-indicator-off": false,
+  "Editor@@heading-indicator-off": true,
   "Editor@@h1-divider-on": false,
   "Editor@@h2-divider-on": false,
   "Editor@@h2-color-select": "h2-color-default",
@@ -48,5 +48,7 @@
   "Editor@@code-value@@dark": "#E6695B",
   "Editor@@code-string@@dark": "#2FB170",
   "Editor@@code-operator@@dark": "#9E9E9E",
-  "Editor@@ul-marker-restore": false
+  "Editor@@ul-marker-restore": false,
+  "Editor@@inline-title-divider-remove": false,
+  "Editor@@callout-style-select": "callout-style-customize"
 }

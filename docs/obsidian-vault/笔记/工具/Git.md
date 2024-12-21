@@ -35,15 +35,13 @@ git config --global color.ui auto
 - [cross platform - What's the strategy for handling CRLF (carriage return, line feed) with Git?](https://stackoverflow.com/questions/170961/whats-the-strategy-for-handling-crlf-carriage-return-line-feed-with-git)
 - [Configuring Git to handle line endings](https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings)
 
-使用 `git` 的 `autocrlf` 功能处理 line endings，但最好不要依赖全局的 `core.autocrlf` 配置，而是在 `.gitattribute` 里指定。
+使用 `git` 的 `autocrlf` 功能处理 line endings，但最好不要依赖全局的 `core.autocrlf` 配置，而是在 `.gitattribute` 里指定。不同用户的全局配置不同，而 `.gitattribute` 中的配置会覆盖全局的 `core.autocrlf`，避免意外的错误。
 
 ``` bash
 # Set the default behavior, in case people don't have core.autocrlf set.
 # Auto detect text files and perform LF normalization
 *        text=auto
 ```
-
-不同用户的全局配置不同，而 `.gitattribute` 中的配置会覆盖全局的 `core.autocrlf`，避免意外的错误。
 
 还可以对一些特殊文件使用固定的 line endings。
 
