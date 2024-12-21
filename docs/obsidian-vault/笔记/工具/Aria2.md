@@ -179,7 +179,7 @@ aria2c --enable-rpc=true --rpc-allow-origin-all=true --rpc-listen-all=true
 
 ### 更新 Tracker 服务器
 
-每天自动更新的 [[Tracker 服务器]] 列表：
+每天自动更新的 [[Tracker 服务器|Tracker 服务器]] 列表：
 
 - [https://github.com/ngosang/trackerslist](https://github.com/ngosang/trackerslist)
 - [https://github.com/XIU2/TrackersListCollection](https://github.com/XIU2/TrackersListCollection)
@@ -188,7 +188,7 @@ aria2c --enable-rpc=true --rpc-allow-origin-all=true --rpc-listen-all=true
 
 ### 记录 DHT 网络节点
 
-Aria2 用 `dht.dat` 来记录之前遇到过的 [[DHT 网络]] 节点。加上参数 `--enable-dht=true` 就能打开。IPv6 的话，用的文件是 `dht6.dat`，参数是 `--enable-dht6=true`。[^1] [^2]
+Aria2 用 `dht.dat` 来记录之前遇到过的 [[DHT 网络|DHT 网络]] 节点。加上参数 `--enable-dht=true` 就能打开。IPv6 的话，用的文件是 `dht6.dat`，参数是 `--enable-dht6=true`。[^1] [^2]
 
 [^1]: [解决Aria2 BT下载速度慢没速度的问题 | Senraの小窝](http://www.senra.me/solutions-to-aria2-bt-metalink-download-slowly/)
 [^2]: [Aria2 无法下载磁力链接、BT种子和速度慢的解决方案 - P3TERX ZONE](https://p3terx.com/archives/solved-aria2-cant-download-magnetic-link-bt-seed-and-slow-speed.html)

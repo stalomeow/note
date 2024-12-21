@@ -24,7 +24,7 @@ net helpmsg 1603
 
 ## Win32Exception
 
-这个方法只能在 [[PowerShell]] 里用。错误码可以是任意进制的。
+这个方法只能在 [[PowerShell|PowerShell]] 里用。错误码可以是任意进制的。
 
 ``` powershell
 [ComponentModel.Win32Exception] 1603

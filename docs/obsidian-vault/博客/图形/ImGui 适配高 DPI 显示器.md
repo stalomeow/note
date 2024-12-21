@@ -7,7 +7,7 @@ comments: true
 
 # ImGui 适配高 DPI 显示器
 
-为了解决高 [[DPI]] 显示器下 ImGui 字体模糊的问题，ImGui 提供了 `ImGui_ImplWin32_EnableDpiAwareness()`，但是我这里调用它以后显示有问题，所以我只能用 `SetProcessDpiAwarenessContext(DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2)` 自己处理。
+为了解决高 [[DPI|DPI]] 显示器下 ImGui 字体模糊的问题，ImGui 提供了 `ImGui_ImplWin32_EnableDpiAwareness()`，但是我这里调用它以后显示有问题，所以我只能用 `SetProcessDpiAwarenessContext(DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2)` 自己处理。
 
 <!-- more -->
 

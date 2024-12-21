@@ -19,7 +19,7 @@ comments: true
 
 ## 安装
 
-使用 [[Scoop]] 从 [stalomeow/ScoopBucket](https://github.com/stalomeow/ScoopBucket) 安装。
+使用 [[Scoop|Scoop]] 从 [stalomeow/ScoopBucket](https://github.com/stalomeow/ScoopBucket) 安装。
 
 ``` bash
 sudo scoop install stalo/kbdremap
@@ -33,7 +33,7 @@ sudo scoop install stalo/kbdremap
 
 ## 同步指示灯
 
-使用 [[Windows 全局钩子]] 监听键盘布局变化（`HSHELL_LANGUAGE`）事件，然后根据当前布局设置指示灯状态。
+使用 [[Windows 全局钩子|全局钩子]] 监听键盘布局变化（`HSHELL_LANGUAGE`）事件，然后根据当前布局设置指示灯状态。
 
 ### 检查是否为中文键盘布局
 

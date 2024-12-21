@@ -25,9 +25,7 @@ Unity 的实现感觉有点麻烦，我还是用屏幕空间了。
 
 ## 重建世界坐标
 
-之前我写过 [[深度重建世界坐标]] 的方法，但这次深度是未知的，不能直接用。我看网上的文章都是近平面算一个点，远平面算一个点，计算连线和 XOZ 平面的交点。
-
-其实深度可以直接算出来。因为 XOZ 平面上的点 `positionWS.y == 0`，带入 [[深度重建世界坐标]] 逆矩阵法的推导中，由公式
+之前我写过 [[深度重建世界坐标|深度重建世界坐标]] 的方法，但这次深度是未知的，不能直接用。我看网上的文章都是近平面算一个点，远平面算一个点，计算连线和 XOZ 平面的交点。其实深度可以直接算出来。因为 XOZ 平面上的点 `positionWS.y == 0`，带入逆矩阵法的推导中，由公式
 
 ``` hlsl
 positionWS.y = dot(MatrixInvVP[1], positionCS.w * positionNDC);
@@ -91,7 +89,7 @@ $$
 
 ![[Pasted image 20241014144145.png|dx 的意义]]
 
-采样间隔越大，就越不准，越可能漏掉网格线，导致锯齿。所以应该根据 $\mathrm{d} x$ 动态调整阈值，$\mathrm{d} x$ 越大，阈值就越小（网格线越粗）。对相邻像素的 `positionWS` 做 [[差分]] 就能估计出 $\mathrm{d} x$，因为要同时考虑屏幕的 X 方向和 Y 方向，所以使用 `fwidth` 函数，即 `abs(ddx(x)) + abs(ddy(x))`。
+采样间隔越大，就越不准，越可能漏掉网格线，导致锯齿。所以应该根据 $\mathrm{d} x$ 动态调整阈值，$\mathrm{d} x$ 越大，阈值就越小（网格线越粗）。对相邻像素的 `positionWS` 做 [[差分|差分]] 就能估计出 $\mathrm{d} x$，因为要同时考虑屏幕的 X 方向和 Y 方向，所以使用 `fwidth` 函数，即 `abs(ddx(x)) + abs(ddy(x))`。
 
 ``` hlsl
 float2 diff = fwidth(positionWS.xz);
@@ -122,7 +120,7 @@ float2 gridEdge = abs(frac(scaledPos) - 0.5);
 ## 实现
 
 - 代码是用我自制的 DX12 ShaderLab 编写的，和 Unity 的稍有不同。
-- Vertex Shader 参考我之前写的 [[Blit]] 。
+- Vertex Shader 参考我之前写的 [[Blit|Blit]] 。
 
 ``` hlsl
 Shader "SceneViewGrid"

@@ -45,7 +45,7 @@ classDiagram
 
 ## 编译器
 
-引擎的上层逻辑使用 C#，所以语法分析用 `antlr4` 实现，其他的方案有 `yacc` 和 `lex`。`antlr4` 可以从我的 [[Scoop]] 快速安装，然后直接用 `antlr4` 或 `antlr4-parse` 命令，前者是生成代码的工具，后者是解释器。
+引擎的上层逻辑使用 C#，所以语法分析用 `antlr4` 实现，其他的方案有 `yacc` 和 `lex`。`antlr4` 可以从我的 [[Scoop|Scoop]] Bucket 快速安装，然后直接用 `antlr4` 或 `antlr4-parse` 命令，前者是生成代码的工具，后者是解释器。
 
 ``` bash
 scoop install java/openjdk11

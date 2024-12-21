@@ -4,7 +4,7 @@
 }
 
 .horizontal-main-container {
-    backdrop-filter: brightness(0.1) blur(4px);
+    backdrop-filter: brightness(0.1) blur(1px);
 }
 
 .workspace-tabs { 
