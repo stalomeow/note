@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "7b7a4580857ee025",
+        "id": "a346c8b502968157",
         "type": "tabs",
         "children": [
           {
-            "id": "607c5f0609a4b59f",
+            "id": "d0a337c4d2b22292",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -175,13 +175,16 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "c87ab82d610a5a66",
+  "active": "d0a337c4d2b22292",
   "lastOpenFiles": [
+    "笔记/图形与视觉/法线.md",
+    "笔记/图形与视觉/切线计算.md",
+    "attachments/Pasted image 20241221232426.png",
+    "attachments/Pasted image 20241221232008.png",
     "笔记/工具/PowerShell.md",
     "笔记/工具/GNU Make.md",
     "笔记/工具/Aria2.md",
     "笔记/图形与视觉/色彩管理/颜色准确性.md",
-    "笔记/图形与视觉/法线.md",
     "笔记/Windows/查看 Win32 错误码对应的描述.md",
     "博客/Misc/青雀进暗杠的抽牌数期望.md",
     "博客/Misc/Windows 上自定义按键映射.md",
@@ -202,7 +205,6 @@
     "笔记/图形与视觉/DPI.md",
     "笔记/图形与视觉/渲染方程.md",
     "笔记/图形与视觉/资源管理/Resource Residency.md",
-    "笔记/图形与视觉/Early Z-Test.md",
     "attachments/Pasted image 20241221191812.png",
     "笔记/图形与视觉/资源管理",
     "attachments/mt04pju5.png",
@@ -212,8 +214,6 @@
     "attachments/2.jpg",
     "attachments/1.jpg",
     "attachments/zfw-captcha-fuck.jpg",
-    "attachments/bb.jpg",
-    "attachments/Pasted image 20241129125947.png",
     "笔记/Linux",
     "笔记/图形与视觉/优化",
     "笔记/图形与视觉/色彩管理",
