@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a346c8b502968157",
+        "id": "122a066041a6326e",
         "type": "tabs",
         "children": [
           {
-            "id": "d0a337c4d2b22292",
+            "id": "e448b1e8c9c6d05b",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -72,7 +72,7 @@
       {
         "id": "ea7207339e4a6038",
         "type": "tabs",
-        "dimension": 65.31862745098039,
+        "dimension": 66.79292929292929,
         "children": [
           {
             "id": "607d846bf698b61f",
@@ -83,44 +83,13 @@
               "icon": "lucide-list",
               "title": "大纲"
             }
-          },
-          {
-            "id": "9716f47fa6ade86b",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "出链"
-            }
-          },
-          {
-            "id": "03cdbf5dcdbc3d3a",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "反向链接"
-            }
           }
         ]
       },
       {
         "id": "4dd615e2e93a9957",
         "type": "tabs",
-        "dimension": 34.681372549019606,
+        "dimension": 33.207070707070706,
         "children": [
           {
             "id": "4d1d504a9681f102",
@@ -150,7 +119,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.50876188557927,
+                  "scale": 0.7132754626224583,
                   "close": true
                 }
               },
@@ -172,13 +141,29 @@
       "graph:查看关系图谱": false,
       "templates:插入模板": false,
       "hide-folders:Show hidden folders": false,
-      "random-note:开始漫游笔记": false
+      "random-note:开始漫游笔记": false,
+      "workspaces:管理工作区布局": false
     }
   },
-  "active": "d0a337c4d2b22292",
+  "active": "c87ab82d610a5a66",
   "lastOpenFiles": [
+    "笔记/图形与视觉/深度重建世界坐标.md",
+    "笔记/图形与视觉/渲染方程.md",
+    "笔记/图形与视觉/Anti-aliasing.md",
+    "笔记/图形与视觉/Fog.md",
+    "博客/Unity/在 UI 上实现目标追踪.md",
+    "博客/Unity/实现 IJobParallelForAppend.md",
+    "博客/Unity/复刻星穹铁道 2.0 梦境迷钟.md",
     "笔记/图形与视觉/法线.md",
+    "博客/Unity/用 RenderDoc 持续截帧 Unity Editor Game View.md",
+    "博客/Unity/将 GIF 直接导入为 AnimationClip.md",
+    "笔记/图形与视觉/形态学操作.md",
+    "笔记/图形与视觉/Ambient Occlusion.md",
+    "笔记/图形与视觉/Half Lambert 勘误.md",
     "笔记/图形与视觉/切线计算.md",
+    "笔记/图形与视觉/Blit.md",
+    "笔记/图形与视觉/DPI.md",
+    "笔记/图形与视觉/Terrain Rendering.md",
     "attachments/Pasted image 20241221232426.png",
     "attachments/Pasted image 20241221232008.png",
     "笔记/工具/PowerShell.md",
@@ -190,21 +175,6 @@
     "博客/Misc/Windows 上自定义按键映射.md",
     "博客/图形/对逐物体阴影的一些改进.md",
     "博客/图形/Scene View 无限网格.md",
-    "博客/图形/基于 DX12 实现 ShaderLab.md",
-    "博客/图形/ImGui 适配高 DPI 显示器.md",
-    "博客/仿星铁渲染/仿星铁渲染：Bloom.md",
-    "笔记/图形与视觉/色彩管理/颜色基础.md",
-    "笔记/图形与视觉/Ambient Occlusion.md",
-    "博客/图形/集成 RenderDoc.md",
-    "笔记/图形与视觉/深度重建世界坐标.md",
-    "笔记/图形与视觉/形态学操作.md",
-    "笔记/图形与视觉/Anti-aliasing.md",
-    "笔记/图形与视觉/Half Lambert 勘误.md",
-    "笔记/图形与视觉/Terrain Rendering.md",
-    "笔记/图形与视觉/Fog.md",
-    "笔记/图形与视觉/DPI.md",
-    "笔记/图形与视觉/渲染方程.md",
-    "笔记/图形与视觉/资源管理/Resource Residency.md",
     "attachments/Pasted image 20241221191812.png",
     "笔记/图形与视觉/资源管理",
     "attachments/mt04pju5.png",

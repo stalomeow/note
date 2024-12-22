@@ -17,5 +17,8 @@
   "rightToLeft": false,
   "defaultViewMode": "preview",
   "focusNewTab": true,
-  "vimMode": false
+  "vimMode": false,
+  "propertiesInDocument": "visible",
+  "foldHeading": true,
+  "showRibbon": true
 }
