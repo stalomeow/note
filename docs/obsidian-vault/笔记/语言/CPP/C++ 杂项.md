@@ -226,7 +226,7 @@ int main() {
 }
 ```
 
-每个派生类（直接和间接）都要调用虚基类的构造，但是最后实际只会被调用一次，使用最底层的派生类（最终派生类）给的参数。
+每个派生类（直接和间接）都要调用虚基类的构造，但是最后**实际只会被调用一次，使用最底层的派生类（最终派生类）给的参数**。
 
 ``` cpp
 #include <iostream>
@@ -234,8 +234,8 @@ int main() {
 class A {
 public:
     int x;
-    
-    // 虚基类的构造函数带有参数
+
+    // 虚基类的构造函数，接受一个参数
     A(int val) : x(val) {
         std::cout << "A constructor called with x = " << x << std::endl;
     }
@@ -243,7 +243,7 @@ public:
 
 class B : virtual public A {
 public:
-    // B 的构造函数，需要调用 A 的构造函数并传递参数
+    // B 的构造函数，接受一个参数
     B(int val) : A(val) {
         std::cout << "B constructor called" << std::endl;
     }
@@ -251,7 +251,7 @@ public:
 
 class C : virtual public A {
 public:
-    // C 的构造函数，需要调用 A 的构造函数并传递参数
+    // C 的构造函数，接受一个参数
     C(int val) : A(val) {
         std::cout << "C constructor called" << std::endl;
     }
@@ -259,14 +259,15 @@ public:
 
 class D : public B, public C {
 public:
-    // D 的构造函数，需要调用 A 的构造函数并传递参数
-    D(int val) : A(val), B(val), C(val) {
+    // D 的构造函数，传递不同的参数给 A, B 和 C
+    D(int valA, int valB, int valC) 
+        : A(valA), B(valB), C(valC) {
         std::cout << "D constructor called" << std::endl;
     }
 };
 
 int main() {
-    D d(10);  // 创建 D 类型对象，并传递参数给 A 的构造函数
+    D d(10, 20, 30);  // 不同的参数值传递给 A, B 和 C
     return 0;
 }
 ```
@@ -279,11 +280,5 @@ B constructor called
 C constructor called
 D constructor called
 ```
-
-调用顺序
-
-1. 虚基类 `A` 的构造函数：在 `D` 类的构造过程中，虚基类 `A` 的构造函数首先被调用。`D` 类的构造函数显式地通过初始化列表将参数 `10` 传递给了 `A` 的构造函数，因此 `A` 会使用这个参数来初始化 `x`。
-2. 派生类 `B` 和 `C` 的构造函数：因为 `B` 和 `C` 都是虚继承自 `A`，它们不会负责初始化 `A`。虚继承确保了 `A` 只有一个副本，并且 `A` 的初始化由最底层派生类 `D` 负责。因此，`B` 和 `C` 的构造函数会按照顺序依次调用。
-3. 最终派生类 `D` 的构造函数：最后，`D` 类的构造函数会被调用。
 
 [^1]: [C++ Operator Precedence - cppreference.com](https://en.cppreference.com/w/cpp/language/operator_precedence)
