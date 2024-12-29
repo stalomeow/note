@@ -14,8 +14,6 @@ comments: true
 
 - [:fontawesome-solid-blog: Blog](blog/index.md)
 
-- [:fontawesome-solid-compass: Discover](discover/moments.md)
-
 - [:fontawesome-solid-heart: Sponsor](https://stalomeow.com/#coffee){target="_blank"}
 
 </div>
