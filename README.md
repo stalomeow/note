@@ -16,6 +16,12 @@ git clone https://github.com/stalomeow/note.git
 |`Shell commands: Execute: Git Commit and Push`|提交到远程仓库|
 |`Shell commands: Execute: Open in Explorer`|在文件管理器中打开项目目录|
 
+需要字体：
+
+- [LXGW WenKai / 霞鹜文楷](https://github.com/lxgw/LxgwWenKai)
+- [Cascadia Mono](https://github.com/microsoft/cascadia-code)
+- [Noto Sans SC](https://fonts.google.com/noto/specimen/Noto+Sans+SC)
+
 ## 命令行工具 (Windows)
 
 要求有 GNU Make、Python launcher 和 Python 3.12。

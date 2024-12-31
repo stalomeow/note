@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/图形与视觉/真实感渲染/光线追踪.md",
+                "file": "笔记/图形与视觉/真实感渲染/渲染方程.md",
                 "mode": "preview",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "光线追踪"
+              "title": "渲染方程"
             }
           }
         ]
@@ -85,10 +85,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/图形与视觉/真实感渲染/光线追踪.md"
+                "file": "笔记/图形与视觉/真实感渲染/渲染方程.md"
               },
               "icon": "lucide-list",
-              "title": "光线追踪 的大纲"
+              "title": "渲染方程 的大纲"
             }
           }
         ]
@@ -104,7 +104,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/图形与视觉/真实感渲染/光线追踪.md",
+                "file": "笔记/图形与视觉/真实感渲染/渲染方程.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -132,7 +132,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "光线追踪 的关系图"
+              "title": "渲染方程 的关系图"
             }
           }
         ]
@@ -154,20 +154,19 @@
   },
   "active": "1e06a904493b2943",
   "lastOpenFiles": [
+    "笔记/图形与视觉/真实感渲染/辐射度量学.md",
+    "笔记/图形与视觉/真实感渲染/光线追踪.md",
     "attachments/Pasted image 20241231164508.png",
     "attachments/Pasted image 20241231164439.png",
     "attachments/Pasted image 20241231163834.png",
     "attachments/Pasted image 20241231163244.png",
     "attachments/Pasted image 20241231163240.png",
     "attachments/Pasted image 20241231163222.png",
-    "笔记/图形与视觉/真实感渲染/辐射度量学.md",
     "笔记/图形与视觉/真实感渲染/渲染方程.md",
-    "笔记/图形与视觉/真实感渲染/光线追踪.md",
     "attachments/Pasted image 20241231161250.png",
     "attachments/Pasted image 20241231160248.png",
     "attachments/Pasted image 20241231160156.png",
     "attachments/Pasted image 20241231153631.png",
-    "attachments/Pasted image 20241231152539.png",
     "笔记/数据结构与算法/递归三要素.md",
     "笔记/数学/概率论与数理统计/Monte Carlo 积分.md",
     "笔记/数学/概率论与数理统计/连续分布/指数分布.md",
