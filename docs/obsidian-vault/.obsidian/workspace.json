@@ -4,20 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "0f39e1a344c1ef5a",
+        "id": "71bec4caa4296fe5",
         "type": "tabs",
         "children": [
           {
-            "id": "922aa59352bc13c9",
+            "id": "39ab534930253531",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "笔记/图形与视觉/真实感渲染/体渲染.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "体渲染"
+            }
+          },
+          {
+            "id": "86649edadfe7c67e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "笔记/图形与视觉/重建/NeRF.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "NeRF"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -79,9 +100,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "笔记/图形与视觉/重建/NeRF.md"
+              },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "NeRF 的大纲"
             }
           }
         ]
@@ -97,6 +120,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "笔记/图形与视觉/重建/NeRF.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +148,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "title": "NeRF 的关系图"
             }
           }
         ]
@@ -144,23 +168,27 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "922aa59352bc13c9",
+  "active": "86649edadfe7c67e",
   "lastOpenFiles": [
-    "笔记/图形与视觉/真实感渲染/光线与表面求交.md",
-    "笔记/图形与视觉/真实感渲染/光线追踪.md",
     "笔记/图形与视觉/真实感渲染/体渲染.md",
+    "笔记/图形与视觉/重建/NeRF.md",
+    "笔记/图形与视觉/重建",
+    "笔记/数学/高等数学/线性微分方程.md",
+    "attachments/Pasted image 20250101002358.png",
+    "attachments/Pasted image 20250101002201.png",
+    "attachments/Pasted image 20250101001411.png",
+    "笔记/数学/高等数学/微分方程.md",
+    "笔记/图形与视觉/真实感渲染/光线追踪.md",
+    "笔记/图形与视觉/真实感渲染/光线与表面求交.md",
+    "笔记/图形与视觉/真实感渲染/辐射度量学.md",
+    "attachments/Pasted image 20241231230050.png",
+    "attachments/Pasted image 20241231230016.png",
+    "attachments/Pasted image 20241231225035.png",
     "attachments/Pasted image 20241231195518.png",
     "attachments/Pasted image 20241231195142.png",
     "attachments/Pasted image 20241231194151.png",
     "attachments/Pasted image 20241231193438.png",
-    "attachments/Pasted image 20241231193404.png",
-    "attachments/Pasted image 20241231193324.png",
-    "attachments/Pasted image 20241231193222.png",
-    "attachments/Pasted image 20241231192251.png",
-    "attachments/Pasted image 20241231192117.png",
-    "attachments/Pasted image 20241231191746.png",
     "笔记/图形与视觉/真实感渲染/渲染方程.md",
-    "笔记/图形与视觉/真实感渲染/辐射度量学.md",
     "笔记/数学/线性代数/行列式.md",
     "笔记/数学/三角形重心坐标.md",
     "笔记/数据结构与算法/递归三要素.md",
@@ -177,11 +205,9 @@
     "笔记/图形与视觉/Half Lambert 勘误.md",
     "笔记/图形与视觉/Terrain Rendering.md",
     "笔记/图形与视觉/切线计算.md",
-    "笔记/图形与视觉/深度重建世界坐标.md",
+    "笔记/图形与视觉/重建/深度重建世界坐标.md",
     "笔记/图形与视觉/形态学操作.md",
     "笔记/图形与视觉/Ambient Occlusion.md",
-    "笔记/微机原理/8086 和 8088 CPU.md",
-    "笔记/微机原理/总线.md",
     "笔记/微机原理",
     "笔记/图形与视觉/资源管理",
     "笔记/Linux",
@@ -191,7 +217,6 @@
     "博客/未命名.canvas",
     "笔记/图形与视觉/逆向",
     "笔记/Unity",
-    "速记",
     "笔记/求职/未命名.canvas",
     "未命名.canvas"
   ]
