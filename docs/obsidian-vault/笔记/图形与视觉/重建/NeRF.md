@@ -72,7 +72,7 @@ C(\mathbf{r})&\approx \sum_{i=1}^N \sigma_i \mathbf{c}_i(\mathbf{d}) \int_{t_n +
 \end{align}
 $$
 
-推导过程中 $\delta_i=t_i-t_{i-1}=\Delta t$，这样就得到了 NeRF 论文里的离散方程了。
+推导过程中 $\delta_i=t_{i+1}-t_i=\Delta t$，这样就得到 NeRF 论文里的离散方程了。
 
 ## Positional Encoding
 
