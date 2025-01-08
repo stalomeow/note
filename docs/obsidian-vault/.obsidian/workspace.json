@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "124cd2b2917a899e",
+        "id": "b7529fd9b31c4fee",
         "type": "tabs",
         "children": [
           {
-            "id": "6b9023cd62b72c11",
+            "id": "3805ddcd3660f243",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记/图形与视觉/视觉期末整理.md",
-                "mode": "preview",
-                "backlinks": false,
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "视觉期末整理"
+              "title": "新标签页"
             }
           }
         ]
@@ -84,11 +79,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "笔记/图形与视觉/视觉期末整理.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "视觉期末整理 的大纲"
+              "title": "大纲"
             }
           }
         ]
@@ -104,7 +97,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/图形与视觉/视觉期末整理.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -132,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "视觉期末整理 的关系图"
+              "title": "关系图谱"
             }
           }
         ]
@@ -152,8 +144,12 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "6b9023cd62b72c11",
+  "active": "3805ddcd3660f243",
   "lastOpenFiles": [
+    "速记/DX12 封装.md",
+    "TODO.md",
+    "笔记/资源/网站收藏.md",
+    "笔记/图形与视觉/视觉期末整理.md",
     "attachments/Pasted image 20250106160015.png",
     "attachments/Pasted image 20250106155130.png",
     "attachments/Pasted image 20250106154118.png",
@@ -164,10 +160,8 @@
     "attachments/Pasted image 20250106145518.png",
     "attachments/Pasted image 20250106144535.png",
     "attachments/Pasted image 20250106142651.png",
-    "attachments/Pasted image 20250106142417.png",
     "笔记/图形与视觉/色彩管理/颜色准确性.md",
     "笔记/图形与视觉/色彩管理/颜色基础.md",
-    "笔记/图形与视觉/视觉期末整理.md",
     "笔记/微机原理/8086 和 8088 CPU.md",
     "笔记/数据结构与算法/算法考试.md",
     "笔记/图形与视觉/图形学考试.md",
@@ -188,8 +182,6 @@
     "笔记/数据结构与算法/图论/关键路径.md",
     "笔记/数据结构与算法/图论/判断图中是否有环.md",
     "笔记/数据结构与算法/图论/连通分量个数.md",
-    "笔记/数据结构与算法/IndexMinPQ.md",
-    "笔记/图形与视觉/重建/NeRF.md",
     "笔记/图形与视觉/重建",
     "笔记/图形与视觉/真实感渲染",
     "笔记/微机原理",
