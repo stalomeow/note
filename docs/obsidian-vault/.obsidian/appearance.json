@@ -1,16 +1,15 @@
 {
   "accentColor": "",
-  "cssTheme": "Border",
+  "cssTheme": "",
   "textFontFamily": "霞鹜文楷",
   "monospaceFontFamily": "Cascadia Mono,Noto Sans SC",
   "baseFontSizeAction": false,
   "enabledCssSnippets": [
     "markdown",
     "math",
-    "mermaid",
     "media",
     "shell-commands",
-    "background"
+    "mermaid"
   ],
   "showViewHeader": true,
   "nativeMenus": false,

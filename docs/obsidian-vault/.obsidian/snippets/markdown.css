@@ -1,10 +1,12 @@
-/* 去掉 "笔记属性" 标题 */
+/* #region 去掉 "笔记属性" 标题 */
+
 .metadata-properties-heading {
     display: none;
 }
 
-/* 代码块不换行 */
-/* https://github.com/mgmeyers/obsidian-style-settings/issues/138 */
+/* #endregion */
+
+/* #region 代码块不换行 https://github.com/mgmeyers/obsidian-style-settings/issues/138 */
 
 /* un-wrap code */
 .HyperMD-codeblock {
@@ -17,7 +19,29 @@
     white-space: pre;
 }
 
-/* Cascadia Mono Light */
+/* #endregion */
+
+/* #region Cascadia Mono Light */
+
 .markdown-rendered code, .HyperMD-codeblock, .cm-inline-code {
     font-weight: 300;
 }
+
+/* #endregion */
+
+/* #region 表格居中 https://forum.obsidian.md/t/css-to-center-table-is-broken/80624 */
+
+table, .table-wrapper {
+    margin-inline: auto;
+}
+
+/* #endregion */
+
+/* #region 去掉链接的下划线 */
+
+body {
+    --link-decoration: none; 
+    --link-external-decoration: none; 
+}
+
+/* #endregion */

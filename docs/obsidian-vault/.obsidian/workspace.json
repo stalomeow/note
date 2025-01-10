@@ -4,17 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "b7529fd9b31c4fee",
+        "id": "1ab76bfe2e587533",
         "type": "tabs",
         "children": [
           {
-            "id": "3805ddcd3660f243",
+            "id": "fc38a7c75e4c8da1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "临时/Todo List 微信小程序.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "Todo List 微信小程序"
             }
           }
         ]
@@ -79,9 +84,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "临时/Todo List 微信小程序.md"
+              },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "Todo List 微信小程序 的大纲"
             }
           }
         ]
@@ -97,6 +104,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "临时/Todo List 微信小程序.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -124,7 +132,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "title": "Todo List 微信小程序 的关系图"
             }
           }
         ]
@@ -144,12 +152,37 @@
       "random-note:开始漫游笔记": false
     }
   },
-  "active": "3805ddcd3660f243",
+  "active": "fc38a7c75e4c8da1",
   "lastOpenFiles": [
-    "速记/DX12 封装.md",
+    "attachments/backend.png",
+    "临时/Todo List 微信小程序.md",
+    "attachments/login.png",
+    "attachments/screenshot.jpg",
+    "临时",
     "TODO.md",
-    "笔记/资源/网站收藏.md",
+    "博客/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
+    "博客/图形/对逐物体阴影的一些改进.md",
+    "博客/图形/集成 RenderDoc.md",
+    "博客/图形/基于 DX12 实现 ShaderLab.md",
+    "博客/图形/在线性色彩空间使用 ImGui.md",
+    "速记/DX12 封装.md",
+    "速记/MSBuild cpp csharp.md",
     "笔记/图形与视觉/视觉期末整理.md",
+    "笔记/图形与视觉/逆向/提取 WebGL Shader.md",
+    "笔记/图形与视觉/法线.md",
+    "笔记/图形与视觉/色彩管理/颜色准确性.md",
+    "笔记/微机原理/8086 和 8088 CPU.md",
+    "速记/知识管理.md",
+    "笔记/图形与视觉/形态学操作.md",
+    "笔记/图形与视觉/真实感渲染/辐射度量学.md",
+    "笔记/图形与视觉/资源管理/Resource Residency.md",
+    "笔记/图形与视觉/切线计算.md",
+    "笔记/图形与视觉/Anti-aliasing.md",
+    "笔记/图形与视觉/DPI.md",
+    "笔记/图形与视觉/Early Z-Test.md",
+    "笔记/图形与视觉/Terrain Rendering.md",
+    "笔记/图形与视觉/Half Lambert 勘误.md",
+    "笔记/微机原理/输入输出技术.md",
     "attachments/Pasted image 20250106160015.png",
     "attachments/Pasted image 20250106155130.png",
     "attachments/Pasted image 20250106154118.png",
@@ -158,30 +191,6 @@
     "attachments/Pasted image 20250106152107.png",
     "attachments/Pasted image 20250106145544.png",
     "attachments/Pasted image 20250106145518.png",
-    "attachments/Pasted image 20250106144535.png",
-    "attachments/Pasted image 20250106142651.png",
-    "笔记/图形与视觉/色彩管理/颜色准确性.md",
-    "笔记/图形与视觉/色彩管理/颜色基础.md",
-    "笔记/微机原理/8086 和 8088 CPU.md",
-    "笔记/数据结构与算法/算法考试.md",
-    "笔记/图形与视觉/图形学考试.md",
-    "笔记/数据结构与算法/排序.md",
-    "笔记/数据结构与算法/树/堆.md",
-    "笔记/数据结构与算法/树/并查集.md",
-    "笔记/数据结构与算法/排序/选择/堆排序.md",
-    "笔记/数据结构与算法/树/二叉搜索树.md",
-    "笔记/数据结构与算法/排序/插入/直接插入排序.md",
-    "笔记/数据结构与算法/排序/交换/冒泡排序.md",
-    "笔记/数据结构与算法/排序/交换/快速排序.md",
-    "笔记/数据结构与算法/排序/插入/希尔排序.md",
-    "笔记/数据结构与算法/图论/最小生成树.md",
-    "笔记/数据结构与算法/树/完全二叉树.md",
-    "笔记/数据结构与算法/字符串/字符串排序.md",
-    "笔记/数据结构与算法/图论/最短路径.md",
-    "笔记/数据结构与算法/图论/拓扑排序.md",
-    "笔记/数据结构与算法/图论/关键路径.md",
-    "笔记/数据结构与算法/图论/判断图中是否有环.md",
-    "笔记/数据结构与算法/图论/连通分量个数.md",
     "笔记/图形与视觉/重建",
     "笔记/图形与视觉/真实感渲染",
     "笔记/微机原理",
@@ -192,7 +201,6 @@
     "笔记/数据结构与算法/动态规划",
     "博客/未命名.canvas",
     "笔记/图形与视觉/逆向",
-    "笔记/Unity",
     "笔记/求职/未命名.canvas",
     "未命名.canvas"
   ]

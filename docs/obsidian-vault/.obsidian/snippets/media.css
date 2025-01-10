@@ -1,5 +1,4 @@
-/* 图片 caption */
-/* https://github.com/Akifyss/obsidian-border/issues/134 */
+/* #region 图片 caption https://github.com/Akifyss/obsidian-border/issues/134 */
 
 body .image-embed[alt] {
     padding: var(--size-4-1) 0;
@@ -12,8 +11,8 @@ body .image-embed[alt]::after {
 
 body .image-embed[alt]:not([alt$=".png"], [alt$=".jpg"], [alt$=".jpeg"], [alt$=".tiff"], [alt$=".webp"], [alt$=".bmp"])::after {
     content: attr(alt);
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     font-size: var(--font-smaller);
     color: var(--text-faint);
 }
@@ -24,7 +23,9 @@ body .view-content img:not(.emoji) {
     margin-left: auto;
 }
 
-/* 自适应视频大小 */
+/* #endregion */
+
+/* #region 自适应视频大小 */
 
 .responsive-video-container {
     position: relative;
@@ -44,3 +45,5 @@ body .view-content img:not(.emoji) {
     width: 100%;
     height: 100%;
 }
+
+/* #endregion */

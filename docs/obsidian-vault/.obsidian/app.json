@@ -20,5 +20,6 @@
   "vimMode": false,
   "propertiesInDocument": "visible",
   "foldHeading": true,
-  "showRibbon": true
+  "showRibbon": true,
+  "showIndentGuide": true
 }
