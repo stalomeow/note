@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "1ab76bfe2e587533",
+        "id": "5d402548e974d4a9",
         "type": "tabs",
         "children": [
           {
-            "id": "fc38a7c75e4c8da1",
+            "id": "ad4a029a9e20b3f0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "临时/Todo List 微信小程序.md",
-                "mode": "preview",
-                "backlinks": false,
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Todo List 微信小程序"
+              "title": "新标签页"
             }
           }
         ]
@@ -68,7 +63,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 304.5
+    "width": 277.5
   },
   "right": {
     "id": "029f8289abc95648",
@@ -84,11 +79,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "临时/Todo List 微信小程序.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "Todo List 微信小程序 的大纲"
+              "title": "大纲"
             }
           }
         ]
@@ -104,7 +97,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "临时/Todo List 微信小程序.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -132,7 +124,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Todo List 微信小程序 的关系图"
+              "title": "关系图谱"
             }
           }
         ]
@@ -148,23 +140,28 @@
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "templates:插入模板": false,
-      "hide-folders:Show hidden folders": false,
-      "random-note:开始漫游笔记": false
+      "hide-folders:Show hidden folders": false
     }
   },
-  "active": "fc38a7c75e4c8da1",
+  "active": "ad4a029a9e20b3f0",
   "lastOpenFiles": [
-    "attachments/backend.png",
+    "博客/Unreal/编译 UE4 源码.md",
+    "博客/Unity/复刻星穹铁道 2.0 梦境迷钟.md",
+    "博客/仿星铁渲染/仿星铁渲染：Bloom.md",
+    "博客/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
+    "博客/图形/Scene View 无限网格.md",
+    "博客/图形/ImGui 适配高 DPI 显示器.md",
+    "博客/图形/在线性色彩空间使用 ImGui.md",
+    "博客/图形/基于 DX12 实现 ShaderLab.md",
+    "博客/图形/集成 RenderDoc.md",
+    "博客/图形/对逐物体阴影的一些改进.md",
+    "TODO.md",
+    "博客/大学作业/实信号与复信号的频谱实验.md",
     "临时/Todo List 微信小程序.md",
+    "attachments/backend.png",
     "attachments/login.png",
     "attachments/screenshot.jpg",
     "临时",
-    "TODO.md",
-    "博客/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
-    "博客/图形/对逐物体阴影的一些改进.md",
-    "博客/图形/集成 RenderDoc.md",
-    "博客/图形/基于 DX12 实现 ShaderLab.md",
-    "博客/图形/在线性色彩空间使用 ImGui.md",
     "速记/DX12 封装.md",
     "速记/MSBuild cpp csharp.md",
     "笔记/图形与视觉/视觉期末整理.md",
@@ -178,11 +175,6 @@
     "笔记/图形与视觉/资源管理/Resource Residency.md",
     "笔记/图形与视觉/切线计算.md",
     "笔记/图形与视觉/Anti-aliasing.md",
-    "笔记/图形与视觉/DPI.md",
-    "笔记/图形与视觉/Early Z-Test.md",
-    "笔记/图形与视觉/Terrain Rendering.md",
-    "笔记/图形与视觉/Half Lambert 勘误.md",
-    "笔记/微机原理/输入输出技术.md",
     "attachments/Pasted image 20250106160015.png",
     "attachments/Pasted image 20250106155130.png",
     "attachments/Pasted image 20250106154118.png",
@@ -190,7 +182,6 @@
     "attachments/Pasted image 20250106152201.png",
     "attachments/Pasted image 20250106152107.png",
     "attachments/Pasted image 20250106145544.png",
-    "attachments/Pasted image 20250106145518.png",
     "笔记/图形与视觉/重建",
     "笔记/图形与视觉/真实感渲染",
     "笔记/微机原理",

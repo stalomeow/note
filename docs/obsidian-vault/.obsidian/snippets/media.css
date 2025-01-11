@@ -11,8 +11,8 @@ body .image-embed[alt]::after {
 
 body .image-embed[alt]:not([alt$=".png"], [alt$=".jpg"], [alt$=".jpeg"], [alt$=".tiff"], [alt$=".webp"], [alt$=".bmp"])::after {
     content: attr(alt);
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
     font-size: var(--font-smaller);
     color: var(--text-faint);
 }
