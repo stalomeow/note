@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "5d402548e974d4a9",
+        "id": "b03235f8b2600ec8",
         "type": "tabs",
         "children": [
           {
-            "id": "ad4a029a9e20b3f0",
+            "id": "ab849cdc0db60253",
             "type": "leaf",
             "state": {
               "type": "empty",
               "state": {},
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "New tab"
             }
           }
         ]
@@ -39,7 +39,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-folder-closed",
-              "title": "文件列表"
+              "title": "Files"
             }
           },
           {
@@ -56,7 +56,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "搜索"
+              "title": "Search"
             }
           }
         ]
@@ -81,7 +81,7 @@
               "type": "outline",
               "state": {},
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "Outline"
             }
           }
         ]
@@ -119,12 +119,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.5087618855792703,
+                  "scale": 0.7132754626224584,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "title": "Graph view"
             }
           }
         ]
@@ -135,16 +135,35 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "command-palette:Open command palette": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "templates:Insert template": false,
       "obsidian-shellcommands:Shell commands: Custom variables": true,
-      "command-palette:打开命令面板": false,
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "templates:插入模板": false,
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "ad4a029a9e20b3f0",
+  "active": "ab849cdc0db60253",
   "lastOpenFiles": [
+    "博客/大学作业/实信号与复信号的频谱实验.md",
+    "博客/大学作业/傅里叶级数实现本轮画图.md",
+    "博客/大学作业/Multisim 仿真「方向之星」控制器.md",
+    "博客/大学作业/Wireshark 抓包 HTTP 实验.md",
+    "笔记/图形与视觉/切线计算.md",
+    "笔记/图形与视觉/重建/NeRF.md",
+    "笔记/图形与视觉/法线.md",
+    "笔记/图形与视觉/Terrain Rendering.md",
+    "笔记/图形与视觉/Fog.md",
+    "笔记/图形与视觉/Blit.md",
+    "笔记/图形与视觉/Ambient Occlusion.md",
+    "笔记/图形与视觉/视觉期末整理.md",
+    "笔记/数学/广义函数.md",
+    "TODO.md",
+    "笔记/图形与视觉/重建/深度重建世界坐标.md",
+    "速记/DX12 封装.md",
+    "速记/知识管理.md",
+    "笔记/图形与视觉/Half Lambert 勘误.md",
+    "笔记/图形与视觉/Early Z-Test.md",
     "博客/Unreal/编译 UE4 源码.md",
     "博客/Unity/复刻星穹铁道 2.0 梦境迷钟.md",
     "博客/仿星铁渲染/仿星铁渲染：Bloom.md",
@@ -152,29 +171,10 @@
     "博客/图形/Scene View 无限网格.md",
     "博客/图形/ImGui 适配高 DPI 显示器.md",
     "博客/图形/在线性色彩空间使用 ImGui.md",
-    "博客/图形/基于 DX12 实现 ShaderLab.md",
-    "博客/图形/集成 RenderDoc.md",
-    "博客/图形/对逐物体阴影的一些改进.md",
-    "TODO.md",
-    "博客/大学作业/实信号与复信号的频谱实验.md",
-    "临时/Todo List 微信小程序.md",
     "attachments/backend.png",
     "attachments/login.png",
     "attachments/screenshot.jpg",
     "临时",
-    "速记/DX12 封装.md",
-    "速记/MSBuild cpp csharp.md",
-    "笔记/图形与视觉/视觉期末整理.md",
-    "笔记/图形与视觉/逆向/提取 WebGL Shader.md",
-    "笔记/图形与视觉/法线.md",
-    "笔记/图形与视觉/色彩管理/颜色准确性.md",
-    "笔记/微机原理/8086 和 8088 CPU.md",
-    "速记/知识管理.md",
-    "笔记/图形与视觉/形态学操作.md",
-    "笔记/图形与视觉/真实感渲染/辐射度量学.md",
-    "笔记/图形与视觉/资源管理/Resource Residency.md",
-    "笔记/图形与视觉/切线计算.md",
-    "笔记/图形与视觉/Anti-aliasing.md",
     "attachments/Pasted image 20250106160015.png",
     "attachments/Pasted image 20250106155130.png",
     "attachments/Pasted image 20250106154118.png",

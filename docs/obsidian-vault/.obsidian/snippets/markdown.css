@@ -1,7 +1,9 @@
-/* #region 去掉 "笔记属性" 标题 */
+/* #region Metadata Properties Title */
 
-.metadata-properties-heading {
-    display: none;
+.metadata-properties-title {
+    color: var(--text-muted);
+    font-size: var(--metadata-label-font-size);
+    font-weight: bold;
 }
 
 /* #endregion */
