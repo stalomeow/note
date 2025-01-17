@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "342d9b3870f8b801",
+        "id": "1f1d2c4b8c68aac7",
         "type": "tabs",
         "children": [
           {
-            "id": "a36169212448117f",
+            "id": "5e47458288922efd",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -79,11 +79,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "笔记/图形与视觉/自动微分.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "Outline of 自动微分"
+              "title": "Outline"
             }
           }
         ]
@@ -99,7 +97,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/图形与视觉/自动微分.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -122,12 +119,12 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 1.0000000000000002,
+                  "scale": 0.5087618855792595,
                   "close": true
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of 自动微分"
+              "title": "Graph view"
             }
           }
         ]
@@ -146,74 +143,35 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "floating": {
-    "id": "3ba6403159318fe3",
-    "type": "floating",
-    "children": [
-      {
-        "id": "b69918a177ea439a",
-        "type": "window",
-        "children": [
-          {
-            "id": "6100a79197eee229",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "5330cdc351fa5d8e",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "笔记/图形与视觉/自动微分.md",
-                    "mode": "source",
-                    "backlinks": false,
-                    "source": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "自动微分"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 392,
-        "y": 128,
-        "width": 604,
-        "height": 597,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "5330cdc351fa5d8e",
+  "active": "5e47458288922efd",
   "lastOpenFiles": [
-    "attachments/Pasted image 20250116180819.png",
-    "笔记/Unity/Unity Shader 平台差异.md",
-    "笔记/Unity/Unity 常用 Render State 属性 UI.md",
-    "笔记/Unity/IL2CPP Full Generic Sharing.md",
-    "笔记/图形与视觉/自动微分.md",
-    "笔记/图形与视觉/真实感渲染/光线追踪.md",
-    "笔记/图形与视觉/真实感渲染/光线与表面求交.md",
-    "笔记/图形与视觉/真实感渲染/辐射度量学.md",
-    "笔记/图形与视觉/法线.md",
-    "笔记/图形与视觉/切线计算.md",
-    "笔记/图形与视觉/Blit.md",
-    "笔记/图形与视觉/Anti-aliasing.md",
-    "笔记/图形与视觉/Half Lambert 勘误.md",
-    "博客/Unity/复刻星穹铁道 2.0 梦境迷钟.md",
-    "博客/Unity/将 GIF 直接导入为 AnimationClip.md",
-    "博客/Unity/实现 IJobParallelForAppend.md",
-    "博客/Unity/在 UI 上实现目标追踪.md",
-    "TODO.md",
-    "笔记/工具/Aria2.md",
-    "笔记/Linux/Linux 交叉编译 macOS.md",
+    "速记/MSBuild cpp csharp.md",
     "博客/大学作业/实信号与复信号的频谱实验.md",
     "博客/大学作业/傅里叶级数实现本轮画图.md",
-    "博客/大学作业/Multisim 仿真「方向之星」控制器.md",
-    "博客/大学作业/Wireshark 抓包 HTTP 实验.md",
-    "笔记/图形与视觉/重建/NeRF.md",
-    "笔记/图形与视觉/Terrain Rendering.md",
+    "博客/图形/Scene View 无限网格.md",
+    "博客/图形/ImGui 适配高 DPI 显示器.md",
+    "博客/图形/在线性色彩空间使用 ImGui.md",
+    "博客/图形/集成 RenderDoc.md",
+    "博客/图形/对逐物体阴影的一些改进.md",
+    "博客/Misc/Nuxt 3 开发避坑.md",
+    "博客/Misc/LeetCode 题目描述转 Markdown.md",
+    "博客/Misc/青雀进暗杠的抽牌数期望.md",
+    "博客/Unity/在 UI 上实现目标追踪.md",
+    "博客/Unity/用 RenderDoc 持续截帧 Unity Editor Game View.md",
+    "博客/Unity/实现 IJobParallelForAppend.md",
+    "博客/Unity/将 GIF 直接导入为 AnimationClip.md",
+    "博客/Unity/复刻星穹铁道 2.0 梦境迷钟.md",
+    "博客/Unreal/编译 UE4 源码.md",
+    "笔记/Unity/Unity Inline Sampler State.md",
+    "笔记/Linux/Linux 交叉编译 macOS.md",
+    "笔记/Misc/分布式哈希表.md",
+    "笔记/Misc/不同操作系统的文件路径规则.md",
+    "笔记/Misc/进程.md",
+    "笔记/Misc/数制与编码.md",
+    "笔记/Misc/网页中嵌入 b 站视频.md",
+    "笔记/Misc/序号回绕问题.md",
+    "笔记/Misc/DHT 网络.md",
+    "attachments/Pasted image 20250116180819.png",
     "attachments/backend.png",
     "attachments/login.png",
     "attachments/screenshot.jpg",
@@ -224,7 +182,6 @@
     "attachments/Pasted image 20250106152247.png",
     "attachments/Pasted image 20250106152201.png",
     "attachments/Pasted image 20250106152107.png",
-    "attachments/Pasted image 20250106145544.png",
     "笔记/图形与视觉/重建",
     "笔记/图形与视觉/真实感渲染",
     "笔记/微机原理",
