@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1f1d2c4b8c68aac7",
+        "id": "504831d866cbbc0e",
         "type": "tabs",
         "children": [
           {
-            "id": "5e47458288922efd",
+            "id": "ec9dfe3592c800c2",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -119,7 +119,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.5087618855792595,
+                  "scale": 0.7132754626224432,
                   "close": true
                 }
               },
@@ -143,8 +143,15 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "5e47458288922efd",
+  "active": "ec9dfe3592c800c2",
   "lastOpenFiles": [
+    "笔记/资源/网站收藏.md",
+    "笔记/资源/网络工具.md",
+    "笔记/科学上网/Trojan.md",
+    "笔记/科学上网/Hysteria2.md",
+    "笔记/科学上网/Clash.md",
+    "笔记/科学上网/VPS 与机场选购.md",
+    "笔记/图形与视觉/自动微分.md",
     "速记/MSBuild cpp csharp.md",
     "博客/大学作业/实信号与复信号的频谱实验.md",
     "博客/大学作业/傅里叶级数实现本轮画图.md",
@@ -164,13 +171,6 @@
     "博客/Unreal/编译 UE4 源码.md",
     "笔记/Unity/Unity Inline Sampler State.md",
     "笔记/Linux/Linux 交叉编译 macOS.md",
-    "笔记/Misc/分布式哈希表.md",
-    "笔记/Misc/不同操作系统的文件路径规则.md",
-    "笔记/Misc/进程.md",
-    "笔记/Misc/数制与编码.md",
-    "笔记/Misc/网页中嵌入 b 站视频.md",
-    "笔记/Misc/序号回绕问题.md",
-    "笔记/Misc/DHT 网络.md",
     "attachments/Pasted image 20250116180819.png",
     "attachments/backend.png",
     "attachments/login.png",
