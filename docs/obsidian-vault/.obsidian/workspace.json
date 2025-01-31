@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3ee02a572bf59f20",
+        "id": "16841543091ea937",
         "type": "tabs",
         "children": [
           {
-            "id": "92b4c4e18f76c956",
+            "id": "f8d21e441c04534c",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -143,8 +143,9 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "92b4c4e18f76c956",
+  "active": "c87ab82d610a5a66",
   "lastOpenFiles": [
+    "笔记/语言/CPP/C++ 杂项.md",
     "笔记/资源/网站收藏.md",
     "笔记/资源/网络工具.md",
     "笔记/科学上网/Trojan.md",
@@ -170,7 +171,6 @@
     "博客/Unity/复刻星穹铁道 2.0 梦境迷钟.md",
     "博客/Unreal/编译 UE4 源码.md",
     "笔记/Unity/Unity Inline Sampler State.md",
-    "笔记/Linux/Linux 交叉编译 macOS.md",
     "attachments/Pasted image 20250116180819.png",
     "attachments/backend.png",
     "attachments/login.png",
