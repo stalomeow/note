@@ -370,9 +370,9 @@ def on_post_page(output: str, page: Page, config: MkDocsConfig):
         return
     inverse_link_files.sort(key=lambda f: get_str_sort_key(f.page.title))
 
-    links_html = r'<hr><blockquote><p style="font-size:1.1rem;">相关文章</p><ul>'
+    links_html = r'<details class="info"><summary>相关文章</summary><ul>'
     for link_file in inverse_link_files:
         href = get_relative_url(link_file.page.abs_url, page.abs_url)
         links_html += rf'<li><a href="{href}">{link_file.page.title}</a></li>'
-    links_html += r'</ul></blockquote>'
+    links_html += r'</ul></details>'
     return re.sub(r'(<h2 id=\"__comments\">.*?<\/h2>)?\s*?<\/article>', rf'{links_html}\g<0>', output, count=1)
