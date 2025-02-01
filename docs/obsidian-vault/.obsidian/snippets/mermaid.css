@@ -7,8 +7,3 @@
     max-width: 100% !important;
     height: auto !important;
 }
-
-/* 箭头颜色 case-insensitive */
-marker[id$="-arrowhead" i] path {
-    fill: var(--text-normal) !important;
-}

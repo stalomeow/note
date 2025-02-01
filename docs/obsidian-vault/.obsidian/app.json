@@ -8,8 +8,8 @@
   "newFileLocation": "root",
   "newFileFolderPath": "",
   "userIgnoreFilters": [
-    "attachments/",
-    "templates/"
+    "/[aA][tT][tT][aA][cC][hH][mM][eE][nN][tT][sS]/",
+    "/[tT][eE][mM][pP][lL][aA][tT][eE][sS]/"
   ],
   "newLinkFormat": "shortest",
   "alwaysUpdateLinks": true,
@@ -20,7 +20,6 @@
   "vimMode": false,
   "propertiesInDocument": "visible",
   "foldHeading": true,
-  "showRibbon": true,
   "showIndentGuide": true,
   "pdfExportSettings": {
     "includeName": false,

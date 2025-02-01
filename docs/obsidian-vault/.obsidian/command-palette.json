@@ -1,6 +1,7 @@
 {
   "pinned": [
     "editor:insert-table",
+    "editor:insert-footnote",
     "editor:insert-mathblock",
     "obsidian-linter:lint-file",
     "insert-template",
