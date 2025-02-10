@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "834f0009ea551960",
+        "id": "e6d74d9ae3f9ef3b",
         "type": "tabs",
         "children": [
           {
-            "id": "0ce8f9e9d415f36e",
+            "id": "a23e1a7a3b4040d1",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -155,13 +155,19 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "0ce8f9e9d415f36e",
+  "active": "a23e1a7a3b4040d1",
   "lastOpenFiles": [
+    "Untitled.md",
+    "templates/Video Container.md",
+    "templates/Post Header.md",
+    "templates/Note Header.md",
+    "TODO.md",
+    "笔记/图形与视觉/真实感渲染/基于物理的着色.md",
     "笔记/数学/立体角.md",
     "笔记/图形与视觉/真实感渲染/辐射度量学.md",
+    "笔记/图形与视觉/真实感渲染/光线追踪.md",
     "笔记/图形与视觉/真实感渲染/体渲染.md",
     "笔记/图形与视觉/真实感渲染/渲染方程.md",
-    "笔记/图形与视觉/真实感渲染/基于物理的着色.md",
     "attachments/Pasted image 20250210220921.png",
     "attachments/Pasted image 20250210220503.png",
     "attachments/Pasted image 20250210214719.png",
@@ -187,12 +193,6 @@
     "笔记/科学上网/Clash.md",
     "笔记/图形与视觉/视觉期末整理.md",
     "博客/图形/在线性色彩空间使用 ImGui.md",
-    "博客/图形/集成 RenderDoc.md",
-    "博客/图形/基于 DX12 实现 ShaderLab.md",
-    "笔记/科学上网/Hysteria2.md",
-    "笔记/科学上网/VPS 与机场选购.md",
-    "博客/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
-    "笔记/数学/广义函数.md",
     "临时",
     "笔记/图形与视觉/重建",
     "笔记/图形与视觉/真实感渲染",
