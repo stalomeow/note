@@ -4,17 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "f1c52e3e652c77e8",
+        "id": "834f0009ea551960",
         "type": "tabs",
         "children": [
           {
-            "id": "a708077427e52b42",
+            "id": "0ce8f9e9d415f36e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "笔记/图形与视觉/真实感渲染/基于物理的着色.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "基于物理的着色"
             }
           }
         ]
@@ -27,7 +32,7 @@
     "type": "split",
     "children": [
       {
-        "id": "b7bcee6a0d1b513d",
+        "id": "35396a34d9f8c5e1",
         "type": "tabs",
         "children": [
           {
@@ -71,9 +76,9 @@
     "type": "split",
     "children": [
       {
-        "id": "ea7207339e4a6038",
+        "id": "24df0484c2ec6c4b",
         "type": "tabs",
-        "dimension": 64.82843137254902,
+        "dimension": 66.7892156862745,
         "children": [
           {
             "id": "607d846bf698b61f",
@@ -81,20 +86,21 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "笔记/图形与视觉/真实感渲染/基于物理的着色.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 基于物理的着色"
             }
           }
         ]
       },
       {
-        "id": "82649a19687ea285",
+        "id": "0f623b3e84806286",
         "type": "tabs",
-        "dimension": 35.17156862745098,
+        "dimension": 33.21078431372549,
         "children": [
           {
             "id": "edb781074f23e162",
@@ -102,6 +108,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "笔记/图形与视觉/真实感渲染/基于物理的着色.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -129,7 +136,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "title": "Graph of 基于物理的着色"
             }
           }
         ]
@@ -148,45 +155,45 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "c87ab82d610a5a66",
+  "active": "0ce8f9e9d415f36e",
   "lastOpenFiles": [
-    "笔记/资源/网站收藏.md",
-    "TODO.md",
-    "笔记/数据结构与算法/图论/关键路径.md",
-    "博客/仿星铁渲染/仿星铁渲染：Bloom.md",
-    "博客/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
+    "笔记/数学/立体角.md",
+    "笔记/图形与视觉/真实感渲染/辐射度量学.md",
+    "笔记/图形与视觉/真实感渲染/体渲染.md",
+    "笔记/图形与视觉/真实感渲染/渲染方程.md",
+    "笔记/图形与视觉/真实感渲染/基于物理的着色.md",
+    "attachments/Pasted image 20250210220921.png",
+    "attachments/Pasted image 20250210220503.png",
+    "attachments/Pasted image 20250210214719.png",
+    "attachments/Pasted image 20250210214518.png",
+    "attachments/Pasted image 20250210212240.png",
+    "attachments/Pasted image 20250210210626.png",
+    "attachments/Pasted image 20250210210052.png",
+    "attachments/Pasted image 20250210210003.png",
+    "attachments/Pasted image 20250210205307.png",
+    "attachments/Pasted image 20250210204454.png",
+    "笔记/数学/三角恒等式.md",
+    "笔记/图形与视觉/资源管理/Resource Residency.md",
+    "笔记/图形与视觉/重建/深度重建世界坐标.md",
+    "笔记/图形与视觉/优化/FP16 Shaders.md",
+    "笔记/图形与视觉/逆向/用 RenderDoc 和模拟器抓帧安卓手游.md",
+    "笔记/图形与视觉/逆向/提取 WebGL Shader.md",
+    "笔记/图形与视觉/法线.md",
+    "笔记/工具/Scoop.md",
+    "笔记/工具/PowerShell.md",
+    "笔记/工具/Git.md",
+    "笔记/工具/FFmpeg.md",
     "笔记/工具/Aria2.md",
-    "笔记/工具/OpenSSH.md",
-    "笔记/科学上网/Trojan.md",
-    "笔记/Misc/UFW 防火墙.md",
-    "笔记/Misc/TCP 拥塞控制.md",
-    "笔记/科学上网/VPS 与机场选购.md",
-    "笔记/资源/网络工具.md",
-    "笔记/Linux/Linux 交叉编译 macOS.md",
-    "速记/DX12 封装.md",
-    "速记/知识管理.md",
-    "笔记/语言/CPP/C++ 杂项.md",
-    "笔记/科学上网/Hysteria2.md",
     "笔记/科学上网/Clash.md",
-    "笔记/图形与视觉/自动微分.md",
-    "速记/MSBuild cpp csharp.md",
-    "博客/大学作业/实信号与复信号的频谱实验.md",
-    "博客/大学作业/傅里叶级数实现本轮画图.md",
-    "博客/图形/Scene View 无限网格.md",
-    "博客/图形/ImGui 适配高 DPI 显示器.md",
+    "笔记/图形与视觉/视觉期末整理.md",
     "博客/图形/在线性色彩空间使用 ImGui.md",
     "博客/图形/集成 RenderDoc.md",
-    "attachments/Pasted image 20250116180819.png",
-    "attachments/backend.png",
-    "attachments/login.png",
-    "attachments/screenshot.jpg",
+    "博客/图形/基于 DX12 实现 ShaderLab.md",
+    "笔记/科学上网/Hysteria2.md",
+    "笔记/科学上网/VPS 与机场选购.md",
+    "博客/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
+    "笔记/数学/广义函数.md",
     "临时",
-    "attachments/Pasted image 20250106160015.png",
-    "attachments/Pasted image 20250106155130.png",
-    "attachments/Pasted image 20250106154118.png",
-    "attachments/Pasted image 20250106152247.png",
-    "attachments/Pasted image 20250106152201.png",
-    "attachments/Pasted image 20250106152107.png",
     "笔记/图形与视觉/重建",
     "笔记/图形与视觉/真实感渲染",
     "笔记/微机原理",
