@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "0dba6d58e9abbde3",
+        "id": "0df613ba09b9ee47",
         "type": "tabs",
         "children": [
           {
-            "id": "3ff839372b51f672",
+            "id": "7f4993d66890aca8",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -155,11 +155,14 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "3ff839372b51f672",
+  "active": "7f4993d66890aca8",
   "lastOpenFiles": [
-    "笔记/图形与视觉/真实感渲染/渲染方程.md",
     "笔记/图形与视觉/真实感渲染/基于物理的着色.md",
+    "笔记/数学/立体角.md",
     "笔记/图形与视觉/真实感渲染/辐射度量学.md",
+    "attachments/Pasted image 20250212160956.png",
+    "笔记/图形与视觉/真实感渲染/渲染方程.md",
+    "笔记/图形与视觉/真实感渲染/光线与表面求交.md",
     "attachments/Pasted image 20250211211322.png",
     "笔记/图形与视觉/真实感渲染/体渲染.md",
     "attachments/Pasted image 20250211185657.png",
@@ -169,11 +172,8 @@
     "attachments/Pasted image 20250211142350.png",
     "attachments/Pasted image 20250211142252.png",
     "attachments/Pasted image 20250211135758.png",
-    "笔记/数学/立体角.md",
     "笔记/图形与视觉/真实感渲染/光线追踪.md",
-    "笔记/图形与视觉/真实感渲染/光线与表面求交.md",
     "attachments/Pasted image 20250211122948.png",
-    "attachments/Pasted image 20250211110728.png",
     "Untitled.md",
     "templates/Video Container.md",
     "templates/Post Header.md",
