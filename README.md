@@ -32,9 +32,11 @@ git clone https://github.com/stalomeow/note.git
 |启动本地服务|`make serve`|`make s`|
 |提交到远程仓库|`make deploy`|`make d`|
 |更新 `mkdocs-material` 的版本|`make upgrade`||
+|压缩图片|`make tiny`||
 |安装依赖|`make install`||
 
-第一次使用时，需要用 `make install` 安装依赖。
+- 第一次使用时，需要用 `make install` 安装依赖。
+- 使用 [TinyPNG](https://tinypng.com) 压缩图片，API key 需要设置在环境变量 `TINYPNG_API_KEY`。
 
 ## Vercel
 

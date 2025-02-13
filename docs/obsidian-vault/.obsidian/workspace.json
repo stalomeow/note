@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "0df613ba09b9ee47",
+        "id": "98510565b03ccb3d",
         "type": "tabs",
         "children": [
           {
-            "id": "7f4993d66890aca8",
+            "id": "37b77702a090de3e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记/图形与视觉/真实感渲染/基于物理的着色.md",
-                "mode": "preview",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "基于物理的着色"
+              "title": "New tab"
             }
           }
         ]
@@ -86,13 +81,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/图形与视觉/真实感渲染/基于物理的着色.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 基于物理的着色"
+              "title": "Outline"
             }
           }
         ]
@@ -108,7 +102,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/图形与视觉/真实感渲染/基于物理的着色.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -136,7 +129,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of 基于物理的着色"
+              "title": "Graph view"
             }
           }
         ]
@@ -155,16 +148,21 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "7f4993d66890aca8",
+  "active": "37b77702a090de3e",
   "lastOpenFiles": [
     "笔记/图形与视觉/真实感渲染/基于物理的着色.md",
-    "笔记/数学/立体角.md",
-    "笔记/图形与视觉/真实感渲染/辐射度量学.md",
-    "attachments/Pasted image 20250212160956.png",
-    "笔记/图形与视觉/真实感渲染/渲染方程.md",
-    "笔记/图形与视觉/真实感渲染/光线与表面求交.md",
-    "attachments/Pasted image 20250211211322.png",
     "笔记/图形与视觉/真实感渲染/体渲染.md",
+    "笔记/图形与视觉/真实感渲染/渲染方程.md",
+    "笔记/图形与视觉/真实感渲染/光线追踪.md",
+    "笔记/图形与视觉/真实感渲染/光线与表面求交.md",
+    "笔记/图形与视觉/真实感渲染/辐射度量学.md",
+    "笔记/图形与视觉/切线计算.md",
+    "attachments/Pasted image 20250213164844.png",
+    "笔记/图形与视觉/自动微分.md",
+    "笔记/图形与视觉/Anti-aliasing.md",
+    "笔记/数学/立体角.md",
+    "attachments/Pasted image 20250212160956.png",
+    "attachments/Pasted image 20250211211322.png",
     "attachments/Pasted image 20250211185657.png",
     "attachments/Pasted image 20250211162034.png",
     "attachments/Pasted image 20250211161908.png",
@@ -172,8 +170,6 @@
     "attachments/Pasted image 20250211142350.png",
     "attachments/Pasted image 20250211142252.png",
     "attachments/Pasted image 20250211135758.png",
-    "笔记/图形与视觉/真实感渲染/光线追踪.md",
-    "attachments/Pasted image 20250211122948.png",
     "Untitled.md",
     "templates/Video Container.md",
     "templates/Post Header.md",
@@ -189,9 +185,6 @@
     "笔记/工具/Scoop.md",
     "笔记/工具/PowerShell.md",
     "笔记/工具/Git.md",
-    "笔记/工具/FFmpeg.md",
-    "笔记/工具/Aria2.md",
-    "笔记/科学上网/Clash.md",
     "临时",
     "笔记/图形与视觉/重建",
     "笔记/图形与视觉/真实感渲染",

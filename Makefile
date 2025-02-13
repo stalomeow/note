@@ -8,6 +8,7 @@ help h:
 	@echo   serve    s     Start local server
 	@echo   deploy   d     Push to remote repository
 	@echo   upgrade        Upgrade mkdocs-material
+	@echo   tiny           Compress images
 	@echo   install        Install dependencies
 .PHONY: help h
 
@@ -33,3 +34,8 @@ install:
 	$(PYTHON_ENV)
 	pip install -r requirements.txt
 .PHONY: install
+
+tiny:
+	$(PYTHON_ENV)
+	python .\scripts\tinify_image.py
+.PHONY: tiny
