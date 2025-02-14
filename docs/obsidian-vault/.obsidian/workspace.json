@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "98510565b03ccb3d",
+        "id": "5ac0162352906bbc",
         "type": "tabs",
         "children": [
           {
-            "id": "37b77702a090de3e",
+            "id": "e4f3740935499587",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -148,18 +148,24 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "37b77702a090de3e",
+  "active": "e4f3740935499587",
   "lastOpenFiles": [
+    "笔记/图形与视觉/法线和切线.md",
+    "笔记/图形与视觉/切线计算.md",
+    "笔记/图形与视觉/色彩管理/颜色准确性.md",
+    "笔记/图形与视觉/Anti-aliasing.md",
+    "笔记/图形与视觉/Fog.md",
+    "笔记/图形与视觉/Half Lambert 勘误.md",
+    "笔记/图形与视觉/Terrain Rendering.md",
+    "attachments/Pasted image 20250213205110.png",
     "笔记/图形与视觉/真实感渲染/基于物理的着色.md",
     "笔记/图形与视觉/真实感渲染/体渲染.md",
     "笔记/图形与视觉/真实感渲染/渲染方程.md",
     "笔记/图形与视觉/真实感渲染/光线追踪.md",
     "笔记/图形与视觉/真实感渲染/光线与表面求交.md",
     "笔记/图形与视觉/真实感渲染/辐射度量学.md",
-    "笔记/图形与视觉/切线计算.md",
     "attachments/Pasted image 20250213164844.png",
     "笔记/图形与视觉/自动微分.md",
-    "笔记/图形与视觉/Anti-aliasing.md",
     "笔记/数学/立体角.md",
     "attachments/Pasted image 20250212160956.png",
     "attachments/Pasted image 20250211211322.png",
@@ -169,7 +175,6 @@
     "attachments/Pasted image 20250211143609.png",
     "attachments/Pasted image 20250211142350.png",
     "attachments/Pasted image 20250211142252.png",
-    "attachments/Pasted image 20250211135758.png",
     "Untitled.md",
     "templates/Video Container.md",
     "templates/Post Header.md",
@@ -181,10 +186,6 @@
     "笔记/图形与视觉/优化/FP16 Shaders.md",
     "笔记/图形与视觉/逆向/用 RenderDoc 和模拟器抓帧安卓手游.md",
     "笔记/图形与视觉/逆向/提取 WebGL Shader.md",
-    "笔记/图形与视觉/法线.md",
-    "笔记/工具/Scoop.md",
-    "笔记/工具/PowerShell.md",
-    "笔记/工具/Git.md",
     "临时",
     "笔记/图形与视觉/重建",
     "笔记/图形与视觉/真实感渲染",
