@@ -8,14 +8,22 @@ date: 2024-06-11T21:46:30
 
 ## 规则集
 
-- [Loyalsoldier/clash-rules](https://github.com/Loyalsoldier/clash-rules)
+直接使用 [Loyalsoldier/clash-rules](https://github.com/Loyalsoldier/clash-rules)。
+
+> [!QUESTION]- Windows 11 手机连接提示「无法连接到你的 Android 设备，因为你正在尝试访问中国以外的应用程序，目前我们不支持漫游区域」
+> 将 `dcg.microsoft.com` 设置为直连。[^1]
+>
+> ``` yaml
+> rules:
+>   - DOMAIN,dcg.microsoft.com,DIRECT
+> ```
 
 ## 托管配置文件
 
 两种方法，推荐第二个。
 
 1. Clash 客户端可以从 URL 导入配置文件，所以可以自己搭一个服务器。
-2. 把配置文件放到 [GitHub Secret Gist](https://gist.github.com/) 里。[^1] Secret Gist 无法被搜索到，只能通过 URL 访问。URL 后面有非常长的随机字符串，几乎不可能被猜到。在 Clash 客户端导入配置文件时，给出源文件的 URL 即可。
+2. 把配置文件放到 [GitHub Secret Gist](https://gist.github.com/) 里。[^2] Secret Gist 无法被搜索到，只能通过 URL 访问。URL 后面有非常长的随机字符串，几乎不可能被猜到。在 Clash 客户端导入配置文件时，给出源文件的 URL 即可。
 
 ## 客户端支持的 URL Scheme
 
@@ -74,4 +82,5 @@ subscription-userinfo: upload=455727941; download=6174315083; total=107374182400
 profile-web-page-url: https://example.com
 ```
 
-[^1]: [打造自己的 Clash 配置并提供订阅 - 一只萌新 (yizhimengxin.me)](https://yizhimengxin.me/2022/10/27/%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84Clash%E9%85%8D%E7%BD%AE%E5%B9%B6%E6%8F%90%E4%BE%9B%E8%AE%A2%E9%98%85/)
+[^1]: [Windows的“手机连接”显示无法连接你的设备，你正尝试访问中国以外的应用，不支持漫游区域怎么解决？ - 知乎](https://www.zhihu.com/question/570222831)
+[^2]: [打造自己的 Clash 配置并提供订阅 - 一只萌新 (yizhimengxin.me)](https://yizhimengxin.me/2022/10/27/%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84Clash%E9%85%8D%E7%BD%AE%E5%B9%B6%E6%8F%90%E4%BE%9B%E8%AE%A2%E9%98%85/)
