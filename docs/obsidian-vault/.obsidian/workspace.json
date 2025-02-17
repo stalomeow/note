@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "1f5055dfac432c4d",
+        "id": "956e8bfeefab7a39",
         "type": "tabs",
         "children": [
           {
-            "id": "e2a1b20188696a61",
+            "id": "cd3d9c5d1092d958",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记/图形与视觉/D3D12.md",
-                "mode": "preview",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "D3D12"
+              "title": "New tab"
             }
           }
         ]
@@ -86,13 +81,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/图形与视觉/D3D12.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of D3D12"
+              "title": "Outline"
             }
           }
         ]
@@ -108,7 +102,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/图形与视觉/D3D12.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -136,7 +129,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of D3D12"
+              "title": "Graph view"
             }
           }
         ]
@@ -155,29 +148,36 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "e2a1b20188696a61",
+  "active": "cd3d9c5d1092d958",
   "lastOpenFiles": [
-    "笔记/Unity/Unity Shader 平台差异.md",
-    "笔记/图形与视觉/D3D12.md",
-    "笔记/图形与视觉/法线和切线.md",
-    "笔记/科学上网/Clash.md",
-    "笔记/图形与视觉/Early Z-Test.md",
-    "笔记/图形与视觉/切线计算.md",
-    "笔记/图形与视觉/色彩管理/颜色准确性.md",
-    "笔记/图形与视觉/Anti-aliasing.md",
-    "笔记/图形与视觉/Fog.md",
-    "笔记/图形与视觉/Half Lambert 勘误.md",
-    "笔记/图形与视觉/Terrain Rendering.md",
-    "attachments/Pasted image 20250213205110.png",
-    "笔记/图形与视觉/真实感渲染/基于物理的着色.md",
-    "笔记/图形与视觉/真实感渲染/体渲染.md",
+    "博客/Misc/傅里叶级数实现本轮画图.md",
+    "博客/Misc/四位数字验证码识别.md",
+    "博客/大学作业/实信号与复信号的频谱实验.md",
+    "博客/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
+    "博客/仿星铁渲染/仿星铁渲染：Bloom.md",
+    "博客/图形/对逐物体阴影的一些改进.md",
+    "博客/图形/基于 DX12 实现 ShaderLab.md",
+    "博客/图形/在线性色彩空间使用 ImGui.md",
+    "博客/图形/ImGui 适配高 DPI 显示器.md",
+    "博客/图形/Scene View 无限网格.md",
+    "博客/Misc/小狼毫输入法主题.md",
+    "博客/Misc/游戏注册、登录和鉴权.md",
+    "博客/Misc/Nuxt 3 开发避坑.md",
+    "博客/Misc/Windows 上自定义按键映射.md",
+    "博客/Unity/复刻星穹铁道 2.0 梦境迷钟.md",
+    "博客/Unity/将 GIF 直接导入为 AnimationClip.md",
+    "博客/Unity/实现 IJobParallelForAppend.md",
+    "博客/Unity/用 RenderDoc 持续截帧 Unity Editor Game View.md",
+    "博客/Unreal/编译 UE4 源码.md",
+    "博客/Unity/在 UI 上实现目标追踪.md",
+    "博客/Misc/LeetCode 题目描述转 Markdown.md",
+    "博客/Misc/青雀进暗杠的抽牌数期望.md",
+    "博客/图形/集成 RenderDoc.md",
     "笔记/图形与视觉/真实感渲染/渲染方程.md",
-    "笔记/图形与视觉/真实感渲染/光线追踪.md",
-    "笔记/图形与视觉/真实感渲染/光线与表面求交.md",
-    "笔记/图形与视觉/真实感渲染/辐射度量学.md",
+    "笔记/语言/CSharp/GCHandle 与 IntPtr.md",
+    "笔记/图形与视觉/D3D12.md",
+    "attachments/Pasted image 20250213205110.png",
     "attachments/Pasted image 20250213164844.png",
-    "笔记/图形与视觉/自动微分.md",
-    "笔记/数学/立体角.md",
     "attachments/Pasted image 20250212160956.png",
     "attachments/Pasted image 20250211211322.png",
     "attachments/Pasted image 20250211185657.png",
@@ -186,13 +186,6 @@
     "attachments/Pasted image 20250211143609.png",
     "attachments/Pasted image 20250211142350.png",
     "attachments/Pasted image 20250211142252.png",
-    "Untitled.md",
-    "templates/Video Container.md",
-    "templates/Post Header.md",
-    "templates/Note Header.md",
-    "TODO.md",
-    "笔记/数学/三角恒等式.md",
-    "笔记/图形与视觉/资源管理/Resource Residency.md",
     "临时",
     "笔记/图形与视觉/重建",
     "笔记/图形与视觉/真实感渲染",
