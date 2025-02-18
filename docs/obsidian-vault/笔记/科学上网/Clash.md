@@ -8,22 +8,29 @@ date: 2024-06-11T21:46:30
 
 ## 规则集
 
-直接使用 [Loyalsoldier/clash-rules](https://github.com/Loyalsoldier/clash-rules)。
+在 [Loyalsoldier/clash-rules](https://github.com/Loyalsoldier/clash-rules) 的基础上，按需添加下面的规则
 
-> [!QUESTION]- Windows 11 手机连接提示「无法连接到你的 Android 设备，因为你正在尝试访问中国以外的应用程序，目前我们不支持漫游区域」
-> 将 `dcg.microsoft.com` 设置为直连。[^1]
->
-> ``` yaml
-> rules:
->   - DOMAIN,dcg.microsoft.com,DIRECT
-> ```
+- 将 `dcg.microsoft.com` 设置为直连，避免 Windows 11 的手机连接提示「无法连接到你的 Android 设备，因为你正在尝试访问中国以外的应用程序，目前我们不支持漫游区域」[^1]
+
+    ``` yaml
+    rules:
+      - DOMAIN,dcg.microsoft.com,DIRECT
+    ```
+
+- Google Analytics 的 API 必须直连
+
+    ``` yaml
+    rules:
+      - DOMAIN,www.googletagmanager.com,DIRECT
+      - DOMAIN,www.google-analytics.com,DIRECT
+    ```
 
 ## 托管配置文件
 
 两种方法，推荐第二个。
 
 1. Clash 客户端可以从 URL 导入配置文件，所以可以自己搭一个服务器。
-2. 把配置文件放到 [GitHub Secret Gist](https://gist.github.com/) 里。[^2] Secret Gist 无法被搜索到，只能通过 URL 访问。URL 后面有非常长的随机字符串，几乎不可能被猜到。在 Clash 客户端导入配置文件时，给出源文件的 URL 即可。
+2. 把配置文件放到 [GitHub Secret Gist](https://gist.github.com/) 里。[^2] Secret Gist 无法被搜索到，只能通过 URL 访问。URL 后面有非常长的随机字符串，几乎不可能被猜到。在 Clash 客户端导入配置文件时，给出源文件的 URL 即可。修改 Gist 的文件后，需要在 Clash 客户端更新 URL。
 
 ## 客户端支持的 URL Scheme
 
