@@ -81,6 +81,9 @@ extra:
       icon: fontawesome/solid/square-rss
       link: /rss.xml
   tags: { "": default } # https://github.com/squidfunk/mkdocs-material/blob/0b38323a310d9ab9ac7fd60ad0bdae5871e42d73/src/plugins/tags/plugin.py#L146
+  analytics:
+    provider: google
+    property: G-RQ5JMJBFBP
 
 
 extra_css:
