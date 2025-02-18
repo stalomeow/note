@@ -1,32 +1,17 @@
 window.MathJax = {
   loader: {
-    load: ['[tex]/boldsymbol', 'ui/lazy']
+    load: ['ui/lazy']
   },
   tex: {
     inlineMath: [['\\(', '\\)']],
     displayMath: [['\\[', '\\]']],
     processEscapes: true,
     processEnvironments: true,
-    packages: {
-      '[+]': ['boldsymbol']
-    },
-    macros: {
-      abs: [String.raw`\left | #1 \right |`, 1],
-      coloneq: String.raw`\mathrel{\vcenter{:}}=`,
-      ddx: [String.raw`\frac{\mathrm{d}#2}{\mathrm{d}#1}`, 2, 'x'],
-      dddx: [String.raw`\dfrac{\mathrm{d}#2}{\mathrm{d}#1}`, 2, 'x']
-    }
   },
   options: {
     enableMenu: false,
     ignoreHtmlClass: '.*|',
     processHtmlClass: 'arithmatex',
-
-    // assistive-mml 通常是隐藏的，但它的大小比显示的 math 块大
-    enableAssistiveMml: false,
-    renderActions: {
-      assistiveMml: []
-    }
   }
 };
 
