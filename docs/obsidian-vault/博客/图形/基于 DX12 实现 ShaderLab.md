@@ -9,18 +9,6 @@ comments: true
 
 ShaderLab 是对 `ID3D12RootSignature` 和 `ID3D12PipelineState` 的封装。每次写完 Shader 就会自动生成 `RootSignature` 和 `PipelineState`，不用再人工填写那一坨参数。
 
-另外，得益于引擎的资产管线，很轻松就实现了 Shader 热重载。
-
-``` csharp
-protected override void OnImportAssets(ref AssetImportContext context)
-{
-    // ...
-
-    Shader shader = context.AddMainAsset<Shader>(normalIcon: FontAwesome6Brands.StripeS);
-    CompileShader(ref context, shader, File.ReadAllText(Location.AssetFullPath, Encoding.UTF8));
-}
-```
-
 <!-- more -->
 
 大体设计如下，成员就不写了。

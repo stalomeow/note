@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "956e8bfeefab7a39",
+        "id": "848e745de2ea83c7",
         "type": "tabs",
         "children": [
           {
-            "id": "cd3d9c5d1092d958",
+            "id": "d37340ff3a083178",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -148,18 +148,22 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "cd3d9c5d1092d958",
+  "active": "d37340ff3a083178",
   "lastOpenFiles": [
+    "博客/图形/基于 DX12 实现 ShaderLab.md",
+    "博客/图形/Scene View 无限网格.md",
+    "速记/DX12 封装.md",
+    "速记/MSBuild cpp csharp.md",
+    "速记/知识管理.md",
+    "TODO.md",
     "博客/Misc/傅里叶级数实现本轮画图.md",
     "博客/Misc/四位数字验证码识别.md",
     "博客/大学作业/实信号与复信号的频谱实验.md",
     "博客/仿星铁渲染/仿星铁渲染：主光源角色阴影.md",
     "博客/仿星铁渲染/仿星铁渲染：Bloom.md",
     "博客/图形/对逐物体阴影的一些改进.md",
-    "博客/图形/基于 DX12 实现 ShaderLab.md",
     "博客/图形/在线性色彩空间使用 ImGui.md",
     "博客/图形/ImGui 适配高 DPI 显示器.md",
-    "博客/图形/Scene View 无限网格.md",
     "博客/Misc/小狼毫输入法主题.md",
     "博客/Misc/游戏注册、登录和鉴权.md",
     "博客/Misc/Nuxt 3 开发避坑.md",
@@ -172,10 +176,6 @@
     "博客/Unity/在 UI 上实现目标追踪.md",
     "博客/Misc/LeetCode 题目描述转 Markdown.md",
     "博客/Misc/青雀进暗杠的抽牌数期望.md",
-    "博客/图形/集成 RenderDoc.md",
-    "笔记/图形与视觉/真实感渲染/渲染方程.md",
-    "笔记/语言/CSharp/GCHandle 与 IntPtr.md",
-    "笔记/图形与视觉/D3D12.md",
     "attachments/Pasted image 20250213205110.png",
     "attachments/Pasted image 20250213164844.png",
     "attachments/Pasted image 20250212160956.png",

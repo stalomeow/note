@@ -187,8 +187,8 @@ plugins:
       post_readtime: true
       post_readtime_words_per_minute: 180
       archive: true
-      archive_date_format: yyyy 年 MM 月
-      archive_url_date_format: yyyy/MM
+      archive_date_format: yyyy 年
+      archive_url_date_format: yyyy
       archive_toc: false
       categories: false
       authors: false
