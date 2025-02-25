@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "d547a7c3976a1f83",
+        "id": "142f35335c99a443",
         "type": "tabs",
         "children": [
           {
-            "id": "29028979572d4341",
+            "id": "f6821b7e03c5378d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记/图形与视觉/真实感渲染/基于物理的着色实践.md",
-                "mode": "preview",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "基于物理的着色实践"
+              "title": "New tab"
             }
           }
         ]
@@ -86,13 +81,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/图形与视觉/真实感渲染/基于物理的着色实践.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 基于物理的着色实践"
+              "title": "Outline"
             }
           }
         ]
@@ -108,7 +102,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/图形与视觉/真实感渲染/基于物理的着色实践.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -136,7 +129,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of 基于物理的着色实践"
+              "title": "Graph view"
             }
           }
         ]
@@ -155,10 +148,13 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "29028979572d4341",
+  "active": "c87ab82d610a5a66",
   "lastOpenFiles": [
-    "笔记/图形与视觉/真实感渲染/基于物理的着色理论.md",
+    "笔记/Job/部分 JD.md",
+    "笔记/Job/米哈游 2024 社招引擎岗 JD.md",
+    "笔记/Job/米哈游 2025 校招技术提前批 JD.md",
     "笔记/图形与视觉/真实感渲染/基于物理的着色实践.md",
+    "笔记/图形与视觉/真实感渲染/基于物理的着色理论.md",
     "attachments/Pasted image 20250225213639.png",
     "笔记/图形与视觉/真实感渲染/渲染方程.md",
     "attachments/Pasted image 20250225203401.png",
@@ -191,8 +187,6 @@
     "博客/Misc/小狼毫输入法主题.md",
     "博客/Misc/傅里叶级数实现本轮画图.md",
     "博客/Misc/四位数字验证码识别.md",
-    "TODO.md",
-    "速记/MSBuild cpp csharp.md",
     "临时",
     "笔记/图形与视觉/重建",
     "笔记/图形与视觉/真实感渲染",
