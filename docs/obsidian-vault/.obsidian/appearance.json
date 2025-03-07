@@ -16,5 +16,5 @@
   "baseFontSize": 16,
   "theme": "obsidian",
   "interfaceFontFamily": "Noto Sans SC",
-  "showRibbon": true
+  "showRibbon": false
 }

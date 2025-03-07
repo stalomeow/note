@@ -4,26 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c65b951eb9f95d6b",
+        "id": "c29152f44e34aea6",
         "type": "tabs",
         "children": [
           {
-            "id": "28ed894576995127",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记/数学/概率论与数理统计/概率密度函数的坐标系变换.md",
-                "mode": "preview",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "概率密度函数的坐标系变换"
-            }
-          },
-          {
-            "id": "248b5b54320a74be",
+            "id": "7ab190cc9d49b734",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -38,7 +23,22 @@
             }
           },
           {
-            "id": "c76983ecc78ff8a2",
+            "id": "fa73fa3c41f41dd2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "笔记/图形与视觉/随机/根据指定分布采样.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "根据指定分布采样"
+            }
+          },
+          {
+            "id": "a70a090a5d3f7a70",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -53,7 +53,7 @@
             }
           },
           {
-            "id": "218e56e276111add",
+            "id": "496bc0abe2c353f0",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -68,7 +68,8 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3,
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -115,7 +116,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 277.5
+    "width": 294.5
   },
   "right": {
     "id": "029f8289abc95648",
@@ -124,7 +125,6 @@
       {
         "id": "24df0484c2ec6c4b",
         "type": "tabs",
-        "dimension": 66.7892156862745,
         "children": [
           {
             "id": "607d846bf698b61f",
@@ -132,81 +132,59 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/图形与视觉/随机/根据指定分布采样.md",
+                "file": "笔记/图形与视觉/真实感渲染/基于物理的着色理论.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 根据指定分布采样"
+              "title": "Outline of 基于物理的着色理论"
             }
-          }
-        ]
-      },
-      {
-        "id": "0f623b3e84806286",
-        "type": "tabs",
-        "dimension": 33.21078431372549,
-        "children": [
+          },
           {
-            "id": "edb781074f23e162",
+            "id": "6585b0b1e6eb6410",
             "type": "leaf",
             "state": {
-              "type": "localgraph",
+              "type": "backlink",
               "state": {
-                "file": "笔记/图形与视觉/随机/根据指定分布采样.md",
-                "options": {
-                  "collapse-filter": true,
-                  "search": "",
-                  "localJumps": 1,
-                  "localBacklinks": true,
-                  "localForelinks": true,
-                  "localInterlinks": false,
-                  "showTags": false,
-                  "showAttachments": false,
-                  "hideUnresolved": false,
-                  "collapse-color-groups": true,
-                  "colorGroups": [],
-                  "collapse-display": true,
-                  "showArrow": true,
-                  "textFadeMultiplier": 0,
-                  "nodeSizeMultiplier": 1,
-                  "lineSizeMultiplier": 1,
-                  "collapse-forces": true,
-                  "centerStrength": 0.518713248970312,
-                  "repelStrength": 10,
-                  "linkStrength": 1,
-                  "linkDistance": 250,
-                  "scale": 0.7132754626224455,
-                  "close": true
-                }
+                "file": "笔记/图形与视觉/真实感渲染/基于物理的着色理论.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
               },
-              "icon": "lucide-git-fork",
-              "title": "Graph of 根据指定分布采样"
+              "icon": "links-coming-in",
+              "title": "Backlinks for 基于物理的着色理论"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 304.5
+    "width": 317.5
   },
   "left-ribbon": {
     "hiddenItems": {
       "command-palette:Open command palette": false,
       "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
       "templates:Insert template": false,
       "obsidian-shellcommands:Shell commands: Custom variables": true,
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "248b5b54320a74be",
+  "active": "607d846bf698b61f",
   "lastOpenFiles": [
-    "笔记/图形与视觉/真实感渲染/基于物理的着色理论.md",
-    "笔记/图形与视觉/随机/根据指定分布采样.md",
     "笔记/图形与视觉/随机/蒙特卡罗方法.md",
+    "笔记/图形与视觉/随机/根据指定分布采样.md",
     "笔记/数学/概率论与数理统计/概率密度函数的坐标系变换.md",
+    "笔记/图形与视觉/真实感渲染/基于物理的着色理论.md",
+    "笔记/图形与视觉/真实感渲染/体渲染.md",
+    "笔记/图形与视觉/真实感渲染/光线追踪.md",
+    "笔记/图形与视觉/真实感渲染/光线与表面求交.md",
+    "笔记/图形与视觉/真实感渲染/渲染方程.md",
     "笔记/图形与视觉/法线和切线.md",
     "attachments/Pasted image 20250305122801.png",
     "attachments/Pasted image 20250305120742.png",
@@ -221,7 +199,6 @@
     "笔记/数学/概率论与数理统计/连续分布/均匀分布.md",
     "笔记/数学/概率论与数理统计/参数估计/估计量的评选标准.md",
     "笔记/数学/概率论与数理统计/Monte Carlo 积分.md",
-    "笔记/图形与视觉/真实感渲染/光线追踪.md",
     "笔记/图形与视觉/随机",
     "笔记/图形与视觉/Clustered Shading.md",
     "笔记/科学上网/Clash.md",
@@ -233,13 +210,10 @@
     "笔记/Job/米哈游 2024 社招引擎岗 JD.md",
     "笔记/Job/米哈游 2025 校招技术提前批 JD.md",
     "attachments/Pasted image 20250225213639.png",
-    "笔记/图形与视觉/真实感渲染/渲染方程.md",
     "笔记/数学/信号与系统/冲激函数.md",
     "笔记/图形与视觉/色彩管理/颜色基础.md",
-    "笔记/图形与视觉/真实感渲染/体渲染.md",
     "笔记/图形与视觉/真实感渲染/辐射度量学与光度学.md",
     "笔记/图形与视觉/色彩管理/颜色准确性.md",
-    "笔记/图形与视觉/真实感渲染/光线与表面求交.md",
     "笔记/语言/C++",
     "临时",
     "笔记/图形与视觉/重建",
