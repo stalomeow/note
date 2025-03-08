@@ -17,7 +17,7 @@ body .image-embed[alt]:not([alt$=".png"], [alt$=".jpg"], [alt$=".jpeg"], [alt$="
     color: var(--text-muted);
 }
 
-body .view-content img:not(.emoji) {
+body .image-embed img:not(.emoji) {
     display: block;
     margin-right: auto;
     margin-left: auto;
