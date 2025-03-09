@@ -68,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 3,
+        "currentTab": 2,
         "stacked": true
       }
     ],
@@ -133,13 +133,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/图形与视觉/真实感渲染/基于物理的着色理论.md",
+                "file": "笔记/图形与视觉/随机/蒙特卡罗方法.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 基于物理的着色理论"
+              "title": "Outline of 蒙特卡罗方法"
             }
           }
         ]
@@ -155,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/图形与视觉/真实感渲染/基于物理的着色理论.md",
+                "file": "笔记/图形与视觉/随机/蒙特卡罗方法.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +165,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 基于物理的着色理论"
+              "title": "Backlinks for 蒙特卡罗方法"
             }
           }
         ]
@@ -183,13 +183,18 @@
       "hide-folders:Show hidden folders": false
     }
   },
-  "active": "496bc0abe2c353f0",
+  "active": "a70a090a5d3f7a70",
   "lastOpenFiles": [
+    "笔记/数学/概率论与数理统计/概率密度函数的坐标系变换.md",
     "笔记/图形与视觉/随机/蒙特卡罗方法.md",
+    "attachments/Pasted image 20250309203003.png",
+    "attachments/Pasted image 20250309201744.png",
+    "attachments/Pasted image 20250309201655.png",
+    "笔记/图形与视觉/随机/根据指定分布采样.md",
+    "attachments/Pasted image 20250309174800.png",
+    "attachments/Pasted image 20250309133618.png",
     "笔记/图形与视觉/真实感渲染/基于物理的着色理论.md",
     "笔记/图形与视觉/真实感渲染/辐射度量学与光度学.md",
-    "笔记/图形与视觉/随机/根据指定分布采样.md",
-    "笔记/数学/概率论与数理统计/概率密度函数的坐标系变换.md",
     "attachments/Pasted image 20250309004318.png",
     "attachments/Pasted image 20250308231046.png",
     "attachments/Pasted image 20250308230918.png",
@@ -211,17 +216,11 @@
     "笔记/图形与视觉/法线和切线.md",
     "attachments/Pasted image 20250305122801.png",
     "attachments/Pasted image 20250305120742.png",
-    "attachments/Pasted image 20250305001151.png",
-    "attachments/Pasted image 20250304234041.png",
-    "attachments/Pasted image 20250304234000.png",
     "笔记/数学/立体角.md",
-    "attachments/Pasted image 20250303220931.png",
-    "attachments/Pasted image 20250303220817.png",
     "笔记/数学/概率论与数理统计/随机变量.md",
     "笔记/数学/概率论与数理统计/参数估计/估计量的评选标准.md",
     "笔记/数学/概率论与数理统计/Monte Carlo 积分.md",
     "笔记/图形与视觉/随机",
-    "笔记/图形与视觉/Clustered Shading.md",
     "笔记/语言/C++",
     "临时",
     "笔记/图形与视觉/重建",
