@@ -1,2 +1,4 @@
-* text=auto
+*    text=auto
 *.md linguist-documentation=false linguist-detectable=true linguist-language=Markdown
+
+docs/obsidian-vault/.obsidian/** linguist-generated=true
