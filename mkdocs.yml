@@ -9,7 +9,7 @@ theme:
   name: material
   language: zh
   custom_dir: overrides
-  favicon: assets/favicon.ico
+  favicon: https://stalomeow.com/favicon.ico
 
   font:
     text: "'LXGW WenKai Screen', 'Noto Sans SC', 'Microsoft YaHei', sans-serif"
