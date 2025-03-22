@@ -267,6 +267,41 @@ git merge --squash another_branch
 git commit -m "message here"
 ```
 
+## 合并冲突
+
+首先，把 VS Code 设置成 Merge 和 Diff 的工具，方便我们使用。在 pwsh 中输入下面的命令。[^1] 在 pwsh 中 `$` 是变量的前缀，需要使用单引号避免字符串中 `$REMOTE` 等被解析成变量。
+
+``` powershell
+git config --global merge.tool vscode
+git config --global mergetool.vscode.cmd 'code --wait --merge $REMOTE $LOCAL $BASE $MERGED'
+git config --global diff.tool vscode
+git config --global difftool.vscode.cmd 'code --wait --diff $LOCAL $REMOTE'
+```
+
+当合并发生冲突时，输入下面的命令启动 VS Code 解决冲突
+
+``` powershell
+git mergetool
+```
+
+解决冲突后，默认会把带有冲突标记的原始文件保存到扩展名为 `.orig` 的文件中。可以通过设置关闭这个功能 [^2]
+
+``` powershell
+git config --global mergetool.keepBackup false
+```
+
+然后，继续完成合并
+
+``` powershell
+git merge --continue
+```
+
+如果要取消合并，可以输入
+
+``` powershell
+git merge --abort
+```
+
 ## 删除中间几个 Commit
 
 使用交互式 Rebase 来删除中间的 Commit：
@@ -336,3 +371,6 @@ git add file.psd
 git commit -m "Add design file"
 git push origin main
 ```
+
+[^1]: [How to use Visual Studio Code as the default editor for Git MergeTool including for 3-way merge - Stack Overflow](https://stackoverflow.com/questions/44549733/how-to-use-visual-studio-code-as-the-default-editor-for-git-mergetool-including)
+[^2]: [version control - Git mergetool generates unwanted .orig files - Stack Overflow](https://stackoverflow.com/questions/1251681/git-mergetool-generates-unwanted-orig-files)
