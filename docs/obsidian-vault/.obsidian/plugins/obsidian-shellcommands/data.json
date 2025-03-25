@@ -13,7 +13,7 @@
   "execution_notification_mode": "disabled",
   "output_channel_clipboard_also_outputs_to_notification": true,
   "output_channel_notification_decorates_output": true,
-  "enable_events": true,
+  "enable_events": false,
   "approve_modals_by_pressing_enter_key": true,
   "command_palette": {
     "re_execute_last_shell_command": {
@@ -50,7 +50,7 @@
         "stdout": null,
         "stderr": null
       },
-      "output_channel_order": "stdout-first",
+      "output_channel_order": "stderr-first",
       "output_handling_mode": "buffered",
       "execution_notification_mode": "permanent",
       "events": {},
@@ -66,13 +66,13 @@
       "variable_default_values": {}
     },
     {
-      "id": "53vaeflkn5",
+      "id": "5oe9p8cj60",
       "platform_specific_commands": {
-        "default": "git status -s"
+        "default": "make {{_makefile_recipe}} MSG=\"{{_commit_message}}\""
       },
       "shells": {},
-      "alias": "Git Status",
-      "icon": "lucide-info",
+      "alias": "Make",
+      "icon": "lucide-code-xml",
       "confirm_execution": false,
       "ignore_error_codes": [],
       "input_contents": {
@@ -92,49 +92,19 @@
         "stdout": null,
         "stderr": null
       },
-      "output_channel_order": "stdout-first",
+      "output_channel_order": "stderr-first",
       "output_handling_mode": "buffered",
-      "execution_notification_mode": null,
+      "execution_notification_mode": "permanent",
       "events": {},
       "debounce": null,
       "command_palette_availability": "enabled",
-      "preactions": [],
-      "variable_default_values": {}
-    },
-    {
-      "id": "bhv27hizzx",
-      "platform_specific_commands": {
-        "default": "explorer ."
-      },
-      "shells": {},
-      "alias": "Open in Explorer",
-      "icon": "lucide-folder-open",
-      "confirm_execution": false,
-      "ignore_error_codes": [],
-      "input_contents": {
-        "stdin": null
-      },
-      "output_handlers": {
-        "stdout": {
-          "handler": "ignore",
-          "convert_ansi_code": true
-        },
-        "stderr": {
-          "handler": "notification",
-          "convert_ansi_code": true
+      "preactions": [
+        {
+          "type": "prompt",
+          "enabled": true,
+          "prompt_id": "38l39jd3ud"
         }
-      },
-      "output_wrappers": {
-        "stdout": null,
-        "stderr": null
-      },
-      "output_channel_order": "stdout-first",
-      "output_handling_mode": "buffered",
-      "execution_notification_mode": null,
-      "events": {},
-      "debounce": null,
-      "command_palette_availability": "enabled",
-      "preactions": [],
+      ],
       "variable_default_values": {}
     }
   ],
@@ -155,6 +125,37 @@
         }
       ],
       "execute_button_text": "Execute"
+    },
+    {
+      "id": "38l39jd3ud",
+      "title": "Make",
+      "description": "",
+      "preview_shell_command": false,
+      "fields": [
+        {
+          "type": "single-choice",
+          "label": "Recipe",
+          "description": "",
+          "default_value": "",
+          "target_variable_id": "uh0nycpfj9",
+          "required": true,
+          "choices": [
+            "deploy",
+            "tiny",
+            "upgrade",
+            "install"
+          ]
+        },
+        {
+          "type": "single-line-text",
+          "label": "Deploy Message",
+          "description": "",
+          "default_value": "Upload via Obsidian Shell Commands",
+          "target_variable_id": "nim0h3481k",
+          "required": true
+        }
+      ],
+      "execute_button_text": "Execute"
     }
   ],
   "builtin_variables": {},
@@ -162,6 +163,12 @@
     {
       "id": "nim0h3481k",
       "name": "commit_message",
+      "description": "",
+      "default_value": null
+    },
+    {
+      "id": "uh0nycpfj9",
+      "name": "makefile_recipe",
       "description": "",
       "default_value": null
     }
