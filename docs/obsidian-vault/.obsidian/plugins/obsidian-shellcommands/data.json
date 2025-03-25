@@ -24,48 +24,6 @@
   "max_visible_lines_in_shell_command_fields": false,
   "shell_commands": [
     {
-      "id": "80xb359a49",
-      "platform_specific_commands": {
-        "default": "git add . && git commit -m \"{{_commit_message}}\" && git push --porcelain"
-      },
-      "shells": {},
-      "alias": "Git Commit and Push",
-      "icon": "lucide-upload-cloud",
-      "confirm_execution": false,
-      "ignore_error_codes": [],
-      "input_contents": {
-        "stdin": null
-      },
-      "output_handlers": {
-        "stdout": {
-          "handler": "notification",
-          "convert_ansi_code": true
-        },
-        "stderr": {
-          "handler": "notification",
-          "convert_ansi_code": true
-        }
-      },
-      "output_wrappers": {
-        "stdout": null,
-        "stderr": null
-      },
-      "output_channel_order": "stderr-first",
-      "output_handling_mode": "buffered",
-      "execution_notification_mode": "permanent",
-      "events": {},
-      "debounce": null,
-      "command_palette_availability": "enabled",
-      "preactions": [
-        {
-          "type": "prompt",
-          "enabled": true,
-          "prompt_id": "dkhash4j48"
-        }
-      ],
-      "variable_default_values": {}
-    },
-    {
       "id": "5oe9p8cj60",
       "platform_specific_commands": {
         "default": "make {{_makefile_recipe}} MSG=\"{{_commit_message}}\""
@@ -110,23 +68,6 @@
   ],
   "prompts": [
     {
-      "id": "dkhash4j48",
-      "title": "Git Commit and Push",
-      "description": "",
-      "preview_shell_command": false,
-      "fields": [
-        {
-          "type": "single-line-text",
-          "label": "Message",
-          "description": "",
-          "default_value": "Upload via Obsidian Shell Commands",
-          "target_variable_id": "nim0h3481k",
-          "required": true
-        }
-      ],
-      "execute_button_text": "Execute"
-    },
-    {
       "id": "38l39jd3ud",
       "title": "Make",
       "description": "",
@@ -140,17 +81,37 @@
           "target_variable_id": "uh0nycpfj9",
           "required": true,
           "choices": [
-            "deploy",
-            "tiny",
-            "upgrade",
-            "install"
+            [
+              "deploy",
+              "Push to remote repository"
+            ],
+            [
+              "tiny",
+              "Compress images"
+            ],
+            [
+              "code",
+              "Open Visual Studio Code"
+            ],
+            [
+              "explorer",
+              "Open File Explorer"
+            ],
+            [
+              "upgrade",
+              "Upgrade mkdocs-material"
+            ],
+            [
+              "install",
+              "Install dependencies"
+            ]
           ]
         },
         {
           "type": "single-line-text",
-          "label": "Deploy Message",
+          "label": "Commit Message",
           "description": "",
-          "default_value": "Upload via Obsidian Shell Commands",
+          "default_value": "Upload via Obsidian",
           "target_variable_id": "nim0h3481k",
           "required": true
         }

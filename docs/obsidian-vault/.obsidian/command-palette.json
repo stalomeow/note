@@ -2,8 +2,8 @@
   "pinned": [
     "editor:insert-table",
     "editor:insert-mathblock",
-    "obsidian-linter:lint-file",
     "insert-template",
-    "obsidian-shellcommands:shell-command-80xb359a49"
+    "obsidian-linter:lint-file",
+    "obsidian-shellcommands:shell-command-5oe9p8cj60"
   ]
 }

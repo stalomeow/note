@@ -9,6 +9,8 @@ help h:
 	@echo   deploy   d     Push to remote repository
 	@echo   upgrade        Upgrade mkdocs-material
 	@echo   tiny           Compress images
+	@echo   code           Open Visual Studio Code
+	@echo   explorer       Open File Explorer
 	@echo   install        Install dependencies
 .PHONY: help h
 
@@ -19,7 +21,7 @@ serve s:
 MSG := Upload via Makefile
 
 deploy d:
-	git add . && git commit -m "$(MSG)" && git push
+	git add . && git commit -m "$(MSG)" && git push --porcelain
 .PHONY: deploy d
 
 upgrade:
@@ -39,3 +41,11 @@ tiny:
 	$(PYTHON_ENV)
 	python .\scripts\tinify_image.py
 .PHONY: tiny
+
+code:
+	code .
+.PHONY: code
+
+explorer:
+	cmd /c start .
+.PHONY: explorer
