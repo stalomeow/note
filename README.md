@@ -2,6 +2,18 @@
 
 基于 [Obsidian](https://obsidian.md/)，使用 [MkDocs](https://github.com/mkdocs/mkdocs) 和 [Material](https://github.com/squidfunk/mkdocs-material) 主题构建的个人笔记本 & 博客。
 
+## 本地阅读 & 编辑
+
+``` bash
+git clone https://github.com/stalomeow/note.git
+```
+
+使用 Obsidian 打开 [docs/obsidian-vault](docs/obsidian-vault) 文件夹。需要字体：
+
+- [LXGW WenKai / 霞鹜文楷](https://github.com/lxgw/LxgwWenKai)
+- [Cascadia Mono](https://github.com/microsoft/cascadia-code)
+- [Noto Sans SC](https://fonts.google.com/noto/specimen/Noto+Sans+SC)
+
 ## 命令行工具 (Windows)
 
 要求有 GNU Make、Python launcher 和 Python 3.12。
@@ -19,20 +31,7 @@
 
 - 第一次使用时，需要用 `make install` 安装依赖。
 - 使用 [TinyPNG](https://tinypng.com) 压缩图片，API Key 需要设置在环境变量 `TINYPNG_API_KEY`。
-
-## 本地阅读 & 编辑
-
-``` bash
-git clone https://github.com/stalomeow/note.git
-```
-
-使用 Obsidian 打开 [docs/obsidian-vault](docs/obsidian-vault) 文件夹。需要字体：
-
-- [LXGW WenKai / 霞鹜文楷](https://github.com/lxgw/LxgwWenKai)
-- [Cascadia Mono](https://github.com/microsoft/cascadia-code)
-- [Noto Sans SC](https://fonts.google.com/noto/specimen/Noto+Sans+SC)
-
-在 Obsidian 中，使用 `Shell commands: Execute: Make` 快捷命令来执行 Makefile。
+- 在 Obsidian 中，使用 `Shell commands: Execute: Make` 快捷命令即可。
 
 ## Vercel
 
