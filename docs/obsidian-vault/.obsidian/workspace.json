@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d80a9fecc9c58d4a",
+        "id": "0798826fb3b9e6dc",
         "type": "tabs",
         "children": [
           {
-            "id": "b013b785502cf795",
+            "id": "6e9e183906e2bf13",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -78,7 +78,7 @@
       {
         "id": "1c38ea12a2d1c264",
         "type": "tabs",
-        "dimension": 64.33823529411765,
+        "dimension": 60.78431372549019,
         "children": [
           {
             "id": "607d846bf698b61f",
@@ -98,12 +98,12 @@
         ]
       },
       {
-        "id": "571e771393ba25a2",
+        "id": "130cf7d46f6a0c36",
         "type": "tabs",
-        "dimension": 35.661764705882355,
+        "dimension": 39.21568627450981,
         "children": [
           {
-            "id": "4f20ce4ef9952af2",
+            "id": "42a7467133b8f64c",
             "type": "leaf",
             "state": {
               "type": "localgraph",
@@ -118,7 +118,7 @@
                   "localInterlinks": false,
                   "showTags": false,
                   "showAttachments": false,
-                  "hideUnresolved": false,
+                  "hideUnresolved": true,
                   "collapse-color-groups": true,
                   "colorGroups": [],
                   "collapse-display": true,
@@ -131,7 +131,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.8854989543150428,
+                  "scale": 1.0000000000000004,
                   "close": true
                 }
               },
@@ -155,35 +155,37 @@
       "graph:Open graph view": false
     }
   },
-  "active": "b013b785502cf795",
+  "active": "6e9e183906e2bf13",
   "lastOpenFiles": [
-    "attachments/Pasted image 20250331235725.png",
-    "笔记/数据结构与算法/输入输出和格式化.md",
+    "笔记/图形与视觉/数学工具/自动微分.md",
+    "笔记/数学/概率论与数理统计/概率密度函数的坐标系变换.md",
+    "笔记/数据结构与算法/图论/最短路径.md",
+    "笔记/数据结构与算法/树/从遍历序列构建二叉树.md",
+    "笔记/数据结构与算法/排序/交换/冒泡排序.md",
+    "笔记/图形与视觉/数学工具/球谐函数.md",
+    "笔记/图形与视觉/法线和切线.md",
     "笔记/语言/HLSL/HLSL Gather 和 Bilinear.md",
+    "TODO.md",
+    "笔记/Job/简历.md",
+    "笔记/Job/面试.md",
+    "笔记/图形与视觉/数学工具/根据指定分布采样.md",
+    "笔记/图形与视觉/数学工具/蒙特卡罗方法.md",
+    "笔记/数据结构与算法/图论/关键路径.md",
+    "笔记/数据结构与算法/图论/最小生成树.md",
+    "笔记/数据结构与算法/树/二叉搜索树.md",
+    "笔记/数据结构与算法/排序/交换/快速排序.md",
+    "笔记/数学/数论/二元一次不定方程.md",
+    "笔记/数学/数论/算术基本定理.md",
+    "笔记/数学/数论/整除.md",
+    "笔记/数学/数论/欧拉函数（数论）.md",
+    "笔记/数学/立体角.md",
+    "笔记/图形与视觉/视觉期末整理.md",
+    "临时/Untitled.canvas",
+    "笔记/数据结构与算法/输入输出和格式化.md",
+    "Untitled.md",
+    "attachments/Pasted image 20250331235725.png",
     "笔记/语言/HLSL",
     "笔记/数据结构与算法/双指针.md",
-    "笔记/图形与视觉/数学工具/根据指定分布采样.md",
-    "templates/Note Header.md",
-    "templates/Post Header.md",
-    "笔记/数学/数论/模运算.md",
-    "笔记/数据结构与算法/排序.md",
-    "笔记/数据结构与算法/priority_queue.md",
-    "笔记/数据结构与算法/排序/选择/堆排序.md",
-    "笔记/Job/简历.md",
-    "笔记/数据结构与算法/排序/交换/快速排序.md",
-    "笔记/数学/信号与系统/差分方程.md",
-    "笔记/数据结构与算法/树/并查集.md",
-    "笔记/数据结构与算法/图论/最短路径.md",
-    "笔记/数据结构与算法/树/堆.md",
-    "笔记/数据结构与算法/图论/最小生成树.md",
-    "笔记/数据结构与算法/图论/关键路径.md",
-    "笔记/数据结构与算法/图论/连通分量个数.md",
-    "笔记/数据结构与算法/图论/判断图中是否有环.md",
-    "笔记/数据结构与算法/图论/拓扑排序.md",
-    "笔记/图形与视觉/数学工具/蒙特卡罗方法.md",
-    "笔记/数据结构与算法/两个整数的平均值.md",
-    "笔记/数据结构与算法/递归三要素.md",
-    "笔记/图形与视觉/数学工具/自动微分.md",
     "资源",
     "attachments/Pasted image 20250324202957.png",
     "attachments/Pasted image 20250323205656.png",
@@ -194,7 +196,6 @@
     "attachments/Pasted image 20250309201744.png",
     "attachments/Pasted image 20250309201655.png",
     "attachments/Pasted image 20250309174800.png",
-    "attachments/Pasted image 20250309133618.png",
     "笔记/图形与视觉/数学工具",
     "笔记/语言/C++",
     "临时",
