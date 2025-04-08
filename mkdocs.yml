@@ -98,6 +98,7 @@ extra_css:
 extra_javascript:
   - assets/javascripts/mathjax.js
   - assets/javascripts/comments.js
+  - assets/javascripts/links.js
   - https://cdn.jsdelivr.net/npm/mathjax@4.0.0-beta.7/tex-chtml.js
 
 
@@ -168,6 +169,7 @@ plugins:
       js_files:
         - assets/javascripts/mathjax.js
         - assets/javascripts/comments.js
+        - assets/javascripts/links.js
       css_files:
         - assets/webfonts/Cascadia Mono/font.css
         - assets/webfonts/LXGW WenKai Screen/font.css
