@@ -20,7 +20,7 @@ def on_config(config: MkDocsConfig):
     return config
 
 def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
-    link = Link(title='Sponsor', url=URL)
+    link = Link(title=TITLE, url=URL)
     link.meta = {
         'icon': 'material/heart',
         'subtitle': 'Buy Me a Coffee',

@@ -26,7 +26,7 @@
     s.setAttribute("data-emit-metadata", "0");
     s.setAttribute("data-input-position", "top");
     s.setAttribute("data-theme", getTheme());
-    s.setAttribute("data-lang", "zh-CN");
+    s.setAttribute("data-lang", "en");
     s.setAttribute("data-loading", "lazy");
     s.setAttribute("crossorigin", "anonymous");
     s.setAttribute("async", "");
