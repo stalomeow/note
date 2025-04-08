@@ -1,23 +1,35 @@
 ---
+icon: material/information-outline
+subtitle: Undergraduate Student & Game Engine Programmer
 search:
   exclude: true
 comments: true
 ---
 
-# 欢迎~♪
+# About Me
 
-<div class="grid cards" markdown>
+## Brief Intro
 
-- :fontawesome-solid-note-sticky: Note
+=== "English"
 
-- [:fontawesome-solid-blog: Blog](blog/index.md)
+    - An undergraduate student at Xidian University, majoring in Computer Science and Technology, with a focus on Software and Theory. Expected to graduate in 2026.
+    - Currently exploring technologies related to game engine development.
 
-</div>
+=== "中文"
 
-我本科就读于西安电子科技大学，计科专业，软件方向，预计 2026 年毕业。目前正在学习游戏引擎相关技术。
+    - 西安电子科技大学本科生，计算机科学与技术（软件与理论方向）专业，预计 2026 年毕业。
+    - 正在学习游戏引擎相关技术。
 
-- 这是我的个人笔记本，记得比较随意。
-- 如果本站对你有帮助，[欢迎赞助](https://stalomeow.com/#coffee){target="_blank"}。
-- 如果对构建本站用到的技术感兴趣，可以看 [GitHub 仓库](https://github.com/stalomeow/note){target="_blank"}。
+## Recent Projects
 
-![可爱捏](assets/castorice.jpg){ width="300" }
+- [MarchEngine](https://github.com/stalomeow/MarchEngine){target="_blank"}: A game engine based on Direct3D 12, C++17, and .NET 9 for learning purposes.
+
+    ![](https://raw.githubusercontent.com/stalomeow/MarchEngine/refs/heads/main/Documentation/Attachments/overview.png)
+
+- [StarRailNPRShader](https://github.com/stalomeow/StarRailNPRShader){target="_blank"}: Fan-made shaders for Unity URP attempting to replicate the shading of Honkai: Star Rail.
+
+    ![](https://raw.githubusercontent.com/stalomeow/StarRailNPRShaderDocs/main/docs/assets/banners/en-thumbnail.png)
+
+<!-- ## Wife
+
+![](assets/castorice.jpg){ width="300" } -->

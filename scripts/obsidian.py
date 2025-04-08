@@ -189,21 +189,23 @@ def find_and_update_obsidian_root(nav: Navigation) -> Section:
         raise Exception('Obsidian notes not found in navigation.')
 
 def move_index_page_and_obsidian_root(nav: Navigation, obsidian_root: Section):
-    # 找到网站的 index
-    for i, item in enumerate(nav.items):
-        if isinstance(item, Page) and item.is_index:
-            break
-    else:
-        raise Exception('Index page not found in navigation.')
+    sections = []
+    others = []
 
-    # 将网站的 index 放到 obsidian root 下的最前面
-    nav.items.pop(i)
-    item.parent = obsidian_root
-    obsidian_root.children.insert(0, item)
+    for item in nav.items:
+        if isinstance(item, Section):
+            sections.append(item)
+        else:
+            others.append(item)
 
-    # 将 obsidian root 移到最前面
-    nav.items.remove(obsidian_root)
-    nav.items.insert(0, obsidian_root)
+    # 将 obsidian root 移到 sections 最前面
+    sections.remove(obsidian_root)
+    sections.insert(0, obsidian_root)
+
+    # 将 sections 放在后面
+    nav.items.clear()
+    nav.items.extend(others)
+    nav.items.extend(sections)
 
 def get_str_sort_key(s: str):
     start_with_english = s[0] in ascii_letters
@@ -214,6 +216,7 @@ def get_str_sort_key(s: str):
     # 按照 obsidian 的风格，以英文开头的内容排在中文开头的后面，不区分大小写
     return (start_with_english, ''.join(pinyin).lower())
 
+@event_priority(-100) # 放在最后执行
 def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
     def get_entry_key(entry):
         # obsidian 目录下面只有 Page 和 Section

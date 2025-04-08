@@ -52,17 +52,18 @@ theme:
     - content.code.copy
     # - content.code.annotate
     - content.action.edit
+    - content.tabs.link
 
     - navigation.instant
     - navigation.instant.progress
     - navigation.instant.preview
-    - navigation.tabs
+    # - navigation.tabs
     - navigation.top
     - navigation.path
     # - navigation.indexes
     # - navigation.tracking
     # - navigation.footer
-    # - navigation.sections
+    - navigation.sections
 
     - toc.follow
     # - toc.integrate
@@ -133,7 +134,10 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
+      # 生成可读的 unicode slug
+      # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#+toc.slugify
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {}
   - toc:
       # https://python-markdown.github.io/extensions/toc/
       permalink: true
@@ -221,6 +225,7 @@ hooks:
   - scripts/obsidian.py
   - scripts/fancybox.py
   - scripts/copyright.py
+  - scripts/sponsor.py
   - scripts/travelling.py
 
 
