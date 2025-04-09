@@ -14,11 +14,13 @@ comments: true
 
     - An undergraduate student at Xidian University, majoring in Computer Science and Technology, with a focus on Software and Theory, expected to graduate in 2026.
     - Currently exploring technologies related to game engine development.
+    - Contact information is available on my [homepage](https://stalomeow.com){target="_blank"}.
 
 === "中文"
 
     - 西安电子科技大学本科生，计算机科学与技术（软件与理论方向）专业，预计 2026 年毕业。
     - 正在学习游戏引擎相关技术。
+    - 可在我的[主页](https://stalomeow.com){target="_blank"}查看联系方式。
 
 ## Recent Works
 
@@ -54,15 +56,15 @@ comments: true
 
 === "English"
 
-    - [Quick Play Mode](https://github.com/stalomeow/QuickPlayMode){target="_blank"}: When entering play mode, automatically resetting static members of dirty types, instead of reloading the domain.
-    - [Resume Template](https://github.com/stalomeow/resume-template){target="_blank"}: My resume template written in Typst.
+    - [Quick Play Mode](https://github.com/stalomeow/QuickPlayMode){target="_blank"}: Reduce the wait time caused by Unity Domain Reloading and enter Play Mode faster.
+    - [Resume Template](https://github.com/stalomeow/resume-template){target="_blank"}: A résumé template written in Typst.
     - [Traintime PDA](https://github.com/BenderBlog/traintime_pda){target="_blank"}: An open-source personal data assistant for XDU students, with several features contributed by me.
     - You can find more projects on my [GitHub](https://github.com/stalomeow){target="_blank"}.
 
 === "中文"
 
-    - [Quick Play Mode](https://github.com/stalomeow/QuickPlayMode){target="_blank"}：进入播放模式时，自动按需重置类型的静态成员，不使用 Domain Reloading。
-    - [Resume Template](https://github.com/stalomeow/resume-template){target="_blank"}：个人使用的简历模板，使用 Typst 编写。
+    - [Quick Play Mode](https://github.com/stalomeow/QuickPlayMode){target="_blank"}：减少 Unity Domain Reloading 导致的等待时间，快速进入播放模式。
+    - [Resume Template](https://github.com/stalomeow/resume-template){target="_blank"}：使用 Typst 编写的简历模板。
     - [Traintime PDA](https://github.com/BenderBlog/traintime_pda){target="_blank"}：为西电学生设计的开源信息查询软件。我贡献了一些功能。
     - 可以访问我的 [GitHub](https://github.com/stalomeow){target="_blank"} 查看更多项目。
 
@@ -70,7 +72,7 @@ comments: true
 
 === "English"
 
-    This is my notebook and blog. You're welcome to leave a comment.
+    This is my notebook and blog written in Chinese. You're welcome to leave a comment.
 
 === "中文"
 
