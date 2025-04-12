@@ -78,4 +78,48 @@ comments: true
 
     这是我的笔记本和博客。欢迎在评论区留言。
 
-![](assets/castorice.jpg){ width="300" }
+<style>
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.character-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.0rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.character-container img {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 150px;
+  animation: shake 0.5s linear infinite;
+  user-select: none;
+}
+
+.vs-text {
+  flex: 0 0 auto;
+  font-size: 1.0rem;
+  font-style: italic;
+  text-align: center;
+  user-select: none;
+}
+</style>
+
+<div class="character-container">
+  <img src="assets/castorice.jpg" class="no-fancybox" alt="castorice">
+  <div class="vs-text">vs.</div>
+  <img src="assets/firefly.jpg" class="no-fancybox" alt="firefly">
+</div>

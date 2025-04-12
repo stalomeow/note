@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "f290d4d93e5e6e61",
+        "id": "185e9cd3fc11d17f",
         "type": "tabs",
         "children": [
           {
-            "id": "5f1447b6f961838e",
+            "id": "119bb922f0760974",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记/工具/Git.md",
-                "mode": "preview",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Git"
+              "title": "New tab"
             }
           }
         ]
@@ -86,13 +81,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/工具/Git.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Git"
+              "title": "Outline"
             }
           }
         ]
@@ -108,7 +102,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/工具/Git.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -136,7 +129,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Git"
+              "title": "Graph view"
             }
           }
         ]
@@ -155,11 +148,12 @@
       "graph:Open graph view": false
     }
   },
-  "active": "5f1447b6f961838e",
+  "active": "119bb922f0760974",
   "lastOpenFiles": [
-    "笔记/资源/网站收藏.md",
     "笔记/工具/Git.md",
     "笔记/语言/CPP/C++ 杂项.md",
+    "笔记/工具/Scoop.md",
+    "笔记/资源/网站收藏.md",
     "笔记/数据结构与算法/链表.md",
     "笔记/科学上网/Trojan.md",
     "笔记/科学上网/Hysteria2.md",
@@ -182,7 +176,6 @@
     "笔记/数据结构与算法/图论/关键路径.md",
     "笔记/数据结构与算法/图论/最小生成树.md",
     "笔记/数据结构与算法/树/二叉搜索树.md",
-    "笔记/数据结构与算法/排序/交换/快速排序.md",
     "临时/Untitled.canvas",
     "attachments/Pasted image 20250331235725.png",
     "笔记/语言/HLSL",
