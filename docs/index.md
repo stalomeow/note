@@ -96,7 +96,7 @@ comments: true
 .character-container {
   display: flex;
   flex-wrap: nowrap;
-  gap: 1.0rem;
+  gap: 0.75rem;
   justify-content: center;
   align-items: center;
 }
