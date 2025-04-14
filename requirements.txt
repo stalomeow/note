@@ -15,13 +15,13 @@ idna==3.10
 jieba==0.42.1
 Jinja2==3.1.6
 jsmin==3.0.1
-Markdown==3.7
+Markdown==3.8
 markdown-callouts==0.4.0
 MarkupSafe==3.0.2
 mergedeep==1.3.4
 mkdocs==1.6.1
 mkdocs-get-deps==0.2.0
-mkdocs-material==9.6.10
+mkdocs-material==9.6.11
 mkdocs-material-extensions==1.3.1
 mkdocs-minify-plugin==0.7.1
 mkdocs-redirects==1.2.1
@@ -44,5 +44,5 @@ six==1.17.0
 smmap==5.0.0
 tinify==1.6.0
 tzdata==2024.1
-urllib3==2.3.0
+urllib3==2.4.0
 watchdog==6.0.0

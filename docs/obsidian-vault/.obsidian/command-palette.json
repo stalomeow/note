@@ -2,7 +2,6 @@
   "pinned": [
     "editor:insert-table",
     "editor:insert-mathblock",
-    "insert-template",
-    "obsidian-shellcommands:shell-command-5oe9p8cj60"
+    "insert-template"
   ]
 }

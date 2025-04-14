@@ -1,41 +1,44 @@
 # Stalo's Note
 
-基于 [Obsidian](https://obsidian.md/)，使用 [MkDocs](https://github.com/mkdocs/mkdocs) 和 [Material](https://github.com/squidfunk/mkdocs-material) 主题构建的个人笔记本 & 博客。
+个人笔记本 / 博客。
 
-## 本地阅读 & 编辑
+## 本地阅读
 
-``` bash
-git clone https://github.com/stalomeow/note.git
-```
-
-使用 Obsidian 打开 [docs/obsidian-vault](docs/obsidian-vault) 文件夹。需要字体：
+使用 [Obsidian](https://obsidian.md/) 打开 [docs/obsidian-vault](docs/obsidian-vault) 文件夹。需要字体：
 
 - [LXGW WenKai / 霞鹜文楷](https://github.com/lxgw/LxgwWenKai)
 - [Cascadia Mono](https://github.com/microsoft/cascadia-code)
 - [Noto Sans SC](https://fonts.google.com/noto/specimen/Noto+Sans+SC)
 
-## 命令行工具 (Windows)
+## 本地构建
 
-要求有 GNU Make、Python launcher 和 Python 3.12。
+使用 [MkDocs](https://github.com/mkdocs/mkdocs) 和 [Material](https://github.com/squidfunk/mkdocs-material) 构建网页。
 
-|功能|命令|简写|
-|:-|:-|:-|
-|显示帮助信息|`make help`|`make h`|
-|启动本地服务|`make serve`|`make s`|
-|提交到远程仓库|`make deploy`|`make d`|
-|更新 `mkdocs-material` 的版本|`make upgrade`||
-|压缩图片|`make tiny`||
-|打开 Visual Studio Code|`make code`||
-|打开 File Explorer|`make explorer`||
-|安装依赖|`make install`||
+- 创建 Python 虚拟环境并安装依赖
 
-- 第一次使用时，需要用 `make install` 安装依赖。
-- 使用 [TinyPNG](https://tinypng.com) 压缩图片，API Key 需要设置在环境变量 `TINYPNG_API_KEY`。
-- 在 Obsidian 中，使用 `Shell commands: Execute: Make` 快捷命令即可。
+    ``` powershell
+    py -3.12 -m venv env
+    ./env/Scripts/activate
+    pip install -r requirements.txt
+    ```
 
-## Vercel
+- 更新依赖
 
-部署前端网页。
+    ``` powershell
+    cmd/upgrade.ps1
+    ```
+
+- 使用 [TinyPNG](https://tinypng.com) 压缩图片，API Key 需要设置在环境变量 `TINYPNG_API_KEY`
+
+    ``` powershell
+    cmd/tiny.ps1
+    ```
+
+- MkDocs 的命令请看 [官方文档](https://www.mkdocs.org/user-guide/cli/)
+
+## 部署
+
+使用 [Vercel](https://vercel.com/) 部署网页。
 
 |构建设置|值|
 |:-|:-|
@@ -45,5 +48,5 @@ git clone https://github.com/stalomeow/note.git
 
 |环境变量|值|说明|
 |:-|:-|:-|
-|`CI`|`true`|启用一些 mkdocs 插件|
-|`VERCEL_DEEP_CLONE`|`true`|RSS 插件建议使用者关闭 git shallow clone，这样能获取到更准确的信息|
+|`CI`|`true`|启用一些 MkDocs 插件|
+|`VERCEL_DEEP_CLONE`|`true`|RSS 插件建议使用者关闭 Git Shallow Clone，这样能获取到更准确的信息|
