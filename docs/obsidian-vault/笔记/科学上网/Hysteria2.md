@@ -19,7 +19,7 @@ bash <(curl -fsSL https://get.hy2.sh/)
 修改配置文件
 
 ``` bash
-nano /etc/hysteria/config.yaml
+vim /etc/hysteria/config.yaml
 ```
 
 配置里指定用 acme 自动申请 HTTPS 证书。另外，建议把 HTTP/HTTPS 伪装都打开，即在配置文件里加上
