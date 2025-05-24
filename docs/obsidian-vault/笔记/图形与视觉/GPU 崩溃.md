@@ -1,6 +1,7 @@
 ---
 date: 2025-04-25T22:05:42
-aliases:
+aliases: 
+draft: true
 ---
 
 # GPU 崩溃

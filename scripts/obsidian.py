@@ -56,9 +56,14 @@ FOLDER_NOTE = '笔记'
 FOLDER_BLOG = '博客'
 FOLDER_ATTACHMENT = 'attachments'
 
+is_serve_mode = False
 wiki_link_name_map: dict[str, File] = {}         # key 是文件名，无扩展名
 wiki_link_path_map: dict[str, FileLinkList] = {} # key 是 src_uri
 log = logging.getLogger('mkdocs.plugins')
+
+def on_startup(command: str, dirty: bool):
+    global is_serve_mode
+    is_serve_mode = (command == 'serve')
 
 def set_file_dest_uri(f: File, value: Union[str, Callable[[str], str]]):
     f.dest_uri = value if isinstance(value, str) else value(f.dest_uri)
@@ -86,6 +91,13 @@ def process_obsidian_note(f: File) -> bool:
     if not isinstance(date, datetime.datetime):
         log.error('Obsidian document \'%s\' has an invalid date.', f.src_uri)
         return False
+
+    if frontmatter.get('draft', False):
+        log.info('Obsidian document \'%s\' is a draft.', f.src_uri)
+
+        # 在正式发布时不显示草稿
+        if not is_serve_mode:
+            return False
 
     slug = date.strftime('%y%m%d%H%M%S')
 
