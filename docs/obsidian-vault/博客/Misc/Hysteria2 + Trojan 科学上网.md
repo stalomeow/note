@@ -36,7 +36,7 @@ vim /etc/hysteria/config.yaml
 
 - 把 443 端口留给 Trojan，让 Hysteria2 监听其他端口，我使用 27015
 - 用 ACME 自动申请 TLS 证书
-- 在 80 和 27015 启动 HTTP/HTTPS 服务
+- 在 80 和 27015 启动 HTTP/HTTPS 服务，不要开启 `forceHTTPS`，后面 Trojan 要反向代理 80 端口的 HTTP 服务，如果开启 `forceHTTPS` 则每次都会重定向到 27015 端口
 
 ``` yaml
 listen: :27015
@@ -58,7 +58,7 @@ masquerade:
     rewriteHost: true
   listenHTTP: :80
   listenHTTPS: :27015
-  forceHTTPS: true
+  forceHTTPS: false
 ```
 
 设置开机自启，并立即启动服务
