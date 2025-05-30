@@ -1,28 +1,28 @@
 ---
 icon: material/information-outline
-subtitle: Undergraduate Student & Game Engine Programmer
+subtitle: Undergraduate Student / Game Engine Programmer
 search:
   exclude: true
 comments: true
 ---
 
-# About Me
+# About
 
-## Brief Intro
+## Intro
 
 === "English"
 
-    - An undergraduate student at Xidian University, majoring in Computer Science and Technology, with a focus on Software and Theory, expected to graduate in 2026.
+    - An undergraduate student at Xidian University, majoring in Computer Science and Technology, expected to graduate in 2026.
     - Currently exploring technologies related to game engine development.
     - Contact information is available on my [homepage](https://stalomeow.com){target="_blank"}.
 
 === "中文"
 
-    - 西安电子科技大学本科生，计算机科学与技术（软件与理论方向）专业，预计 2026 年毕业。
+    - 西安电子科技大学本科生，计算机科学与技术专业，预计 2026 年毕业。
     - 正在学习游戏引擎相关技术。
     - 可在我的[主页](https://stalomeow.com){target="_blank"}查看联系方式。
 
-## Recent Works
+## Projects
 
 === "English"
 
@@ -38,6 +38,11 @@ comments: true
 
         ![](assets/projects/sr-shader-en-thumbnail.png){.fancybox-thumbnail}
 
+    - [Quick Play Mode](https://github.com/stalomeow/QuickPlayMode){target="_blank"}: Reduce the wait time caused by Unity Domain Reloading and enter Play Mode faster.
+    - [Resume Template](https://github.com/stalomeow/resume-template){target="_blank"}: A résumé template written in Typst.
+    - [Traintime PDA](https://github.com/BenderBlog/traintime_pda){target="_blank"}: An open-source personal data assistant for XDU students, with several features contributed by me.
+    - You can find more projects on my [GitHub](https://github.com/stalomeow){target="_blank"}.
+
 === "中文"
 
     - [March Engine](https://github.com/stalomeow/MarchEngine){target="_blank"}：基于 Direct3D 12、C++17 和 .NET 9 的游戏引擎，用于学习目的。
@@ -52,74 +57,7 @@ comments: true
 
         ![](assets/projects/sr-shader-cn-thumbnail.png){.fancybox-thumbnail}
 
-## Other Projects
-
-=== "English"
-
-    - [Quick Play Mode](https://github.com/stalomeow/QuickPlayMode){target="_blank"}: Reduce the wait time caused by Unity Domain Reloading and enter Play Mode faster.
-    - [Resume Template](https://github.com/stalomeow/resume-template){target="_blank"}: A résumé template written in Typst.
-    - [Traintime PDA](https://github.com/BenderBlog/traintime_pda){target="_blank"}: An open-source personal data assistant for XDU students, with several features contributed by me.
-    - You can find more projects on my [GitHub](https://github.com/stalomeow){target="_blank"}.
-
-=== "中文"
-
     - [Quick Play Mode](https://github.com/stalomeow/QuickPlayMode){target="_blank"}：减少 Unity Domain Reloading 导致的等待时间，快速进入播放模式。
     - [Resume Template](https://github.com/stalomeow/resume-template){target="_blank"}：使用 Typst 编写的简历模板。
     - [Traintime PDA](https://github.com/BenderBlog/traintime_pda){target="_blank"}：为西电学生设计的开源信息查询软件。我贡献了一些功能。
     - 可以访问我的 [GitHub](https://github.com/stalomeow){target="_blank"} 查看更多项目。
-
-## About This Site
-
-=== "English"
-
-    This is my notebook and blog written in Chinese. You're welcome to leave a comment.
-
-=== "中文"
-
-    这是我的笔记本和博客。欢迎在评论区留言。
-
-<style>
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
-}
-
-.character-container {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 0.75rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.character-container img {
-  flex: 1 1 0;
-  min-width: 0;
-  max-width: 150px;
-  animation: shake 0.5s linear infinite;
-  user-select: none;
-}
-
-.vs-text {
-  flex: 0 0 auto;
-  font-size: 1.0rem;
-  font-style: italic;
-  text-align: center;
-  user-select: none;
-}
-</style>
-
-<div class="character-container">
-  <img src="assets/castorice.jpg" class="no-fancybox" alt="castorice">
-  <div class="vs-text">vs.</div>
-  <img src="assets/firefly.jpg" class="no-fancybox" alt="firefly">
-</div>
