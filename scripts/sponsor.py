@@ -23,7 +23,6 @@ def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
     link = Link(title=TITLE, url=URL)
     link.meta = {
         'icon': 'material/heart',
-        'subtitle': 'Buy Me a Coffee',
     }
     nav.items.append(link)
     return nav

@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "c9554cefd5db8efd",
+        "id": "86994342ccd233bc",
         "type": "tabs",
         "children": [
           {
-            "id": "dc62b40a6e29eb21",
+            "id": "d76a2788f240c765",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "笔记/Job/部分 JD.md",
-                "mode": "preview",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "部分 JD"
+              "title": "New tab"
             }
           }
         ]
@@ -86,13 +81,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/Job/部分 JD.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 部分 JD"
+              "title": "Outline"
             }
           }
         ]
@@ -108,7 +102,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/Job/部分 JD.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -136,7 +129,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of 部分 JD"
+              "title": "Graph view"
             }
           }
         ]
@@ -147,48 +140,49 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "hide-folders:Hide hidden folders again": false,
       "command-palette:Open command palette": false,
       "switcher:Open quick switcher": false,
       "templates:Insert template": false,
       "obsidian-shellcommands:Shell commands: Custom variables": true,
-      "hide-folders:Show hidden folders": false,
       "graph:Open graph view": false
     }
   },
-  "active": "dc62b40a6e29eb21",
+  "active": "c87ab82d610a5a66",
   "lastOpenFiles": [
-    "笔记/微机原理/8086 和 8088 CPU.md",
-    "笔记/微机原理/输入输出技术.md",
-    "笔记/微机原理/汇编语言.md",
-    "笔记/图形与视觉/GPU 崩溃.md",
-    "博客/Misc/Hysteria2 + Trojan 科学上网.md",
-    "笔记/Misc/快捷键.md",
-    "笔记/Misc/VPS 与机场选购.md",
-    "笔记/资源/网络工具.md",
-    "笔记/科学上网/Clash.md",
-    "笔记/科学上网/Trojan.md",
-    "笔记/科学上网/Hysteria2.md",
-    "笔记/Misc/UFW 防火墙.md",
-    "笔记/Misc/TCP 拥塞控制.md",
-    "笔记/图形与视觉/DPI.md",
-    "templates/Note Header.md",
-    "templates/Post Header.md",
+    "数学/立体角.md",
+    "Job/部分 JD.md",
+    "语言/CPP/C++ Primer.md",
+    "数据结构与算法/链表.md",
+    "数据结构与算法/利用数据范围估计时间复杂度.md",
+    "数据结构与算法/输入输出和格式化.md",
+    "Misc/小狼毫输入法主题.md",
+    "Misc/傅里叶级数实现本轮画图.md",
+    "ImGui",
+    "Windows/ANSI 字符集.md",
+    "Windows/查看 Win32 错误码对应的描述.md",
+    "Windows/Windows 全局钩子.md",
+    "Windows/Windows 程序防多开.md",
+    "Windows/DLL 进程间共享数据.md",
+    "Unity/Unity Shader 平台差异.md",
+    "Unity/Unity 后处理 Shader 的 Render State 设置.md",
+    "Unity/Unity 常用 Render State 属性 UI.md",
     "templates/Video Container.md",
-    "笔记/Job/简历.md",
-    "笔记/数学/三角形面积.md",
-    "笔记/数学/三角形重心坐标.md",
-    "博客/Unreal/编译 UE4 源码.md",
-    "临时/MSBuild cpp csharp.md",
-    "笔记/数学/立体角.md",
-    "笔记/图形与视觉/真实感渲染/辐射度量学与光度学.md",
-    "笔记/图形与视觉/真实感渲染/基于物理的着色理论.md",
-    "笔记/图形与视觉/真实感渲染/体渲染.md",
+    "templates/Note Header.md",
+    "Misc/VPS 与机场选购.md",
+    "Misc/Unix 时间.md",
+    "Misc/Tracker 服务器.md",
+    "Misc/Shebang.md",
+    "Misc/LaTeX.md",
+    "Misc/Epoch.md",
+    "Misc/DHT 网络.md",
+    "Misc/序号回绕问题.md",
     "attachments/Pasted image 20250426002624.png",
-    "笔记/数据结构与算法/刷题",
+    "数据结构与算法/刷题",
     "misc",
     "临时/Untitled.canvas",
     "attachments/Pasted image 20250331235725.png",
-    "笔记/语言/HLSL",
+    "语言/HLSL",
     "资源",
     "attachments/Pasted image 20250324202957.png",
     "attachments/Pasted image 20250323205656.png",
@@ -198,12 +192,11 @@
     "attachments/Pasted image 20250309203003.png",
     "attachments/Pasted image 20250309201744.png",
     "attachments/Pasted image 20250309201655.png",
-    "笔记/图形与视觉/数学工具",
+    "图形与视觉/数学工具",
     "笔记/语言/C++",
     "临时",
-    "笔记/图形与视觉/重建",
-    "笔记/图形与视觉/真实感渲染",
-    "笔记/微机原理",
+    "图形与视觉/重建",
+    "图形与视觉/真实感渲染",
     "笔记/求职/未命名.canvas"
   ]
 }

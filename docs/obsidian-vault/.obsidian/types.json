@@ -3,9 +3,7 @@
     "aliases": "aliases",
     "cssclasses": "multitext",
     "tags": "tags",
-    "slug": "text",
     "date": "datetime",
-    "draft": "checkbox",
     "comments": "checkbox"
   }
 }

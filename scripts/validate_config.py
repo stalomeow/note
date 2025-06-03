@@ -45,11 +45,11 @@ def on_config(config: MkDocsConfig):
     # 禁用一些插件，提高页面生成速度
     for plugin_name in PLUGIN_BLACKLIST:
         pop_plugin(config.plugins, plugin_name)
-        log.warning('Disable plugin \'%s\' in serve mode.', plugin_name)
+        log.warning('Disable plugin \'%s\' in serve mode', plugin_name)
 
     # 禁用一些 javascript
     for script in SCRIPTS_BLACKLIST:
         config.extra_javascript.remove(script)
-        log.warning('Disable script \'%s\' in serve mode.', script)
+        log.warning('Disable script \'%s\' in serve mode', script)
 
     return config

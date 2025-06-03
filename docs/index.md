@@ -1,6 +1,5 @@
 ---
 icon: material/information-outline
-subtitle: Undergraduate Student / Game Engine Programmer
 search:
   exclude: true
 comments: true
@@ -21,6 +20,14 @@ comments: true
     - 西安电子科技大学本科生，计算机科学与技术专业，预计 2026 年毕业。
     - 正在学习游戏引擎相关技术。
     - 可在我的[主页](https://stalomeow.com){target="_blank"}查看联系方式。
+
+## Notes
+
+=== "English"
+
+=== "中文"
+
+<!-- RECENT NOTES -->
 
 ## Projects
 

@@ -11,7 +11,7 @@ from mkdocs.structure.nav import Navigation
 from mkdocs.structure.nav import Section
 from mkdocs.structure.pages import Page
 from mkdocs.utils import meta, get_relative_url
-from string import ascii_letters, digits
+from string import ascii_letters
 from typing import Callable, Union
 
 class FileLinkNode(object):
@@ -52,18 +52,16 @@ class FileLinkList(object):
         self.links.clear()
 
 FOLDER_OBSIDIAN_VAULT = 'obsidian-vault'
-FOLDER_NOTE = '笔记'
-FOLDER_BLOG = '博客'
 FOLDER_ATTACHMENT = 'attachments'
+FOLDER_BLACKLIST = {
+    '临时',
+    'templates'
+}
 
-is_serve_mode = False
 wiki_link_name_map: dict[str, File] = {}         # key 是文件名，无扩展名
 wiki_link_path_map: dict[str, FileLinkList] = {} # key 是 src_uri
+recent_notes: list[File] = []                    # 最新的文章列表，根据时间倒序保存
 log = logging.getLogger('mkdocs.plugins')
-
-def on_startup(command: str, dirty: bool):
-    global is_serve_mode
-    is_serve_mode = (command == 'serve')
 
 def set_file_dest_uri(f: File, value: Union[str, Callable[[str], str]]):
     f.dest_uri = value if isinstance(value, str) else value(f.dest_uri)
@@ -82,142 +80,86 @@ def process_obsidian_attachment(f: File):
 def process_obsidian_note(f: File) -> bool:
     _, frontmatter = meta.get_data(f.content_string)
 
+    # 如果不发布的话，不进行后面的检查
+    if not frontmatter.get('publish', False):
+        log.info('Obsidian document \'%s\' is not published, skipping', f.src_uri)
+        return False
+
     if 'date' not in frontmatter:
-        log.error('Obsidian document \'%s\' does not have a date.', f.src_uri)
+        log.error('Obsidian document \'%s\' does not have a date', f.src_uri)
         return False
 
     date = frontmatter['date']
 
     if not isinstance(date, datetime.datetime):
-        log.error('Obsidian document \'%s\' has an invalid date.', f.src_uri)
+        log.error('Obsidian document \'%s\' has an invalid date', f.src_uri)
         return False
 
-    if frontmatter.get('draft', False):
-        log.info('Obsidian document \'%s\' is a draft.', f.src_uri)
+    if 'permalink' not in frontmatter:
+        log.error('Obsidian document \'%s\' does not have a permalink', f.src_uri)
+        return False
 
-        # 在正式发布时不显示草稿
-        if not is_serve_mode:
-            return False
+    permalink = frontmatter['permalink']
 
-    slug = date.strftime('%y%m%d%H%M%S')
+    if not isinstance(permalink, str):
+        log.error('Obsidian document \'%s\' has an invalid permalink', f.src_uri)
+        return False
 
-    # slug 目前用的是日期数字，这里把数字转换成字母
-    table = str.maketrans(digits, ''.join(ascii_letters[int(i)] for i in digits), '-')
-    slug = slug.translate(table).lower()
-
-    # 重排一下并分组，让原本相似的数字看起来不太一样
-    slug = '-'.join([slug[1::3], slug[2::3], slug[0::3]])
+    setattr(f, 'note_date', date)
 
     if not f.use_directory_urls:
-        set_file_dest_uri(f, posixpath.join('n', slug + '.html'))
+        set_file_dest_uri(f, posixpath.join('p', permalink + '.html'))
     else:
-        set_file_dest_uri(f, posixpath.join('n', slug, 'index.html'))
+        set_file_dest_uri(f, posixpath.join('p', permalink, 'index.html'))
+
     return True
-
-def process_obsidian_blog_post(f: File):
-    setattr(f, 'obsidian_blog_post', True)
-
-def post_process_obsidian_blog_posts(config: MkDocsConfig, files: Files):
-    # 我们的 on_files 在 blog 插件之前运行，blog 插件也会修改 dest_uri
-    # 所以只能把修改 dest_uri 的操作放在这里，在 on_nav 时执行，避免被 blog 插件覆盖
-
-    for f in files:
-        if not getattr(f, 'obsidian_blog_post', False):
-            continue
-
-        if not f.use_directory_urls:
-            set_file_dest_uri(f, posixpath.join('p', f.page.config.slug + '.html'))
-        else:
-            set_file_dest_uri(f, posixpath.join('p', f.page.config.slug, 'index.html'))
-
-        # https://github.com/squidfunk/mkdocs-material/blob/51c9f9acb013836910f8e190ca5041f16f09e643/src/plugins/blog/plugin.py#L403
-        f.page._set_canonical_url(config.site_url)
 
 @event_priority(100) # 放在最前面执行，不要处理其他插件生成的文件
 def on_files(files: Files, config: MkDocsConfig):
-    invalid_doc_count = 0
-    valid_doc_count = 0
-    invalid_files: list[File] = []
     wiki_link_name_map.clear()
     wiki_link_path_map.clear()
+    recent_notes.clear()
 
-    def mark_file_invalid(f: File):
-        if f.is_documentation_page():
-            nonlocal invalid_doc_count
-            invalid_doc_count += 1
-        invalid_files.append(f)
+    valid_docs: list[File] = []
+    invalid_files: list[File] = []
 
     for f in files:
         path_names = f.src_uri.split('/')
 
-        # 忽略 obsidian-vault 文件夹以外的文件
-        # 路径中至少有一个斜杠，所以长度至少为 2
+        # 忽略 obsidian-vault 文件夹以外的文件；路径中至少有一个斜杠，所以长度至少为 2
         if len(path_names) < 2 or path_names[0] != FOLDER_OBSIDIAN_VAULT:
             continue
 
-        # 删除特定目录之外的文件
-        # 路径中至少有两个斜杠，所以长度至少为 3
-        if len(path_names) < 3 or path_names[1] not in (FOLDER_NOTE, FOLDER_BLOG, FOLDER_ATTACHMENT):
-            mark_file_invalid(f)
+        # 删除特定目录之外的文件；路径中至少有两个斜杠，所以长度至少为 3
+        if len(path_names) < 3 or path_names[1] in FOLDER_BLACKLIST:
+            invalid_files.append(f)
             continue
 
         if path_names[1] == FOLDER_ATTACHMENT:
             process_obsidian_attachment(f)
-        elif f.is_documentation_page():
-            if path_names[1] == FOLDER_NOTE:
-                if not process_obsidian_note(f):
-                    mark_file_invalid(f)
-                    continue
-            elif path_names[1] == FOLDER_BLOG:
-                process_obsidian_blog_post(f)
-            valid_doc_count += 1
+        elif f.is_documentation_page() and process_obsidian_note(f):
+            valid_docs.append(f)
+        else:
+            invalid_files.append(f)
+            continue
 
         wiki_link_name_map[posixpath.basename(f.src_uri)] = f
         wiki_link_path_map[f.src_uri] = FileLinkList(f)
 
-    total_doc_count = invalid_doc_count + valid_doc_count
-    log.info('Found %d obsidian documents (%d ignored).', total_doc_count, invalid_doc_count)
+    recent_notes.extend(sorted(valid_docs, key=lambda f: f.note_date, reverse=True)[:10])
 
     for f in invalid_files:
         files.remove(f)
+
+    log.info('Found %d valid Obsidian documents', len(valid_docs))
+
     return files
 
-def find_and_update_obsidian_root(nav: Navigation) -> Section:
-    # 找到 obsidian-vault
-    for i, item in enumerate(nav.items):
-        if isinstance(item, Section) and item.title.lower().count('obsidian') > 0:
-            break
-    else:
-        raise Exception('Obsidian vault not found in navigation.')
-
-    # 将 obsidian-vault 下的笔记作为 root，其他丢弃
-    for child in item.children:
-        if child.title == FOLDER_NOTE:
-            child.title = 'Note'
-            child.parent = None
-            nav.items[i] = child
-            return child
-    else:
-        raise Exception('Obsidian notes not found in navigation.')
-
-def move_index_page_and_obsidian_root(nav: Navigation, obsidian_root: Section):
-    sections = []
-    others = []
-
+def find_obsidian_root(nav: Navigation) -> Section:
     for item in nav.items:
-        if isinstance(item, Section):
-            sections.append(item)
-        else:
-            others.append(item)
-
-    # 将 obsidian root 移到 sections 最前面
-    sections.remove(obsidian_root)
-    sections.insert(0, obsidian_root)
-
-    # 将 sections 放在后面
-    nav.items.clear()
-    nav.items.extend(others)
-    nav.items.extend(sections)
+        if isinstance(item, Section) and item.title.lower().count('obsidian') > 0:
+            return item
+    raise Exception('Obsidian vault not found in navigation')
 
 def get_str_sort_key(s: str):
     start_with_english = s[0] in ascii_letters
@@ -242,8 +184,7 @@ def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
         return get_str_sort_key(key)
 
     def dfs(entry):
-        children = getattr(entry, 'children', None)
-        if children is None:
+        if getattr(entry, 'children', None) is None:
             return
 
         files = []
@@ -261,10 +202,24 @@ def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
         folders.sort(key=get_entry_key)
         entry.children = folders + files # 文件夹放在文件前面
 
-    post_process_obsidian_blog_posts(config, files)
-    obsidian_root = find_and_update_obsidian_root(nav)
+    obsidian_root = find_obsidian_root(nav)
+    obsidian_root.title = 'Notes'
+
     dfs(obsidian_root) # 将下面的文章重新排序
-    move_index_page_and_obsidian_root(nav, obsidian_root)
+
+    sections = []
+    others = []
+
+    for item in nav.items:
+        if isinstance(item, Section):
+            sections.append(item)
+        else:
+            others.append(item)
+
+    # 将 sections 放在后面
+    nav.items.clear()
+    nav.items.extend(others)
+    nav.items.extend(sections)
     return nav
 
 def transform_wiki_links(markdown: str, page: Page, config: MkDocsConfig) -> str:
@@ -318,7 +273,7 @@ def transform_wiki_links(markdown: str, page: Page, config: MkDocsConfig) -> str
             if md_link in wiki_link_path_map:
                 recordLink(wiki_link_path_map[md_link].file)
             else:
-                log.warning('Failed to resolve link \'%s\' in \'%s\'.', md_link, page.file.src_uri)
+                log.warning('Failed to resolve link \'%s\' in \'%s\'', md_link, page.file.src_uri)
 
         # 改成文件的相对路径，这样要是链接找不到了 MkDocs 会在控制台警告
         md_link = get_relative_url(md_link, page.file.src_uri)
@@ -361,9 +316,20 @@ def transform_callouts(markdown: str, page: Page, config: MkDocsConfig) -> str:
     # \s 会匹配换行符，所以改用 [^\S\r\n]
     return re.sub(r'^[^\S\r\n]*>[^\S\r\n]*\[!(.+?)\]([+-])?(.*)$', repl, markdown, flags=re.M|re.U)
 
+def insert_recent_note_links(markdown: str, page: Page) -> str:
+    content = ''
+    for f in recent_notes:
+        title = posixpath.splitext(posixpath.basename(f.src_uri))[0] # 标题不要后缀名
+        date = f.note_date.strftime('%Y-%m-%d')
+        content += f'- [{title}]({get_relative_url(f.src_uri, page.file.src_uri)}) <small style="float:right">{date}</small>\n'
+    return markdown.replace('<!-- RECENT NOTES -->', content)
+
 def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Files):
     markdown = transform_wiki_links(markdown, page, config)
     markdown = transform_callouts(markdown, page, config)
+    if page.is_homepage:
+        # 最新文章的链接不计入反向链接
+        markdown = insert_recent_note_links(markdown, page)
     return markdown
 
 # 在 minify 之前执行

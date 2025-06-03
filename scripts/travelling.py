@@ -26,7 +26,6 @@ def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
     link = Link(title=TITLE, url=URL)
     link.meta = {
         'icon': 'material/train',
-        'subtitle': 'Teleport to Another Blog',
     }
     nav.items.append(link)
     return nav

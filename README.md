@@ -1,6 +1,6 @@
-# Stalo's Note
+# Stalo's Wiki
 
-个人笔记本 / 博客。
+个人笔记本。
 
 ## 本地阅读
 
@@ -49,4 +49,3 @@
 |环境变量|值|说明|
 |:-|:-|:-|
 |`CI`|`true`|启用一些 MkDocs 插件|
-|`VERCEL_DEEP_CLONE`|`true`|RSS 插件建议使用者关闭 Git Shallow Clone，这样能获取到更准确的信息|

@@ -115,19 +115,6 @@
 
 /* #endregion */
 
-/* #region 博客首页文章 */
-
-.md-post--excerpt {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem !important;
-}
-
-.md-post--excerpt .md-post__content>:first-child {
-    margin-bottom: 0 !important;
-}
-
-/* #endregion */
-
 /* #region PC 端导航栏和 TOC 的对齐线 */
 
 @media screen and (min-width: 76.25em) {

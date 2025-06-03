@@ -9,12 +9,6 @@
     overflow: hidden;
 } */
 
-
-/* 让博客文章部分撑满剩余空间，避免内容较少时中间区域变窄 */
-.md-content.md-content--post>article.md-content__inner.md-typeset {
-    flex-grow: 1;
-}
-
 /* 让 emoji 看起来居中 */
 .md-typeset .emojione, .md-typeset .gemoji, .md-typeset .twemoji {
     vertical-align: text-bottom !important;
