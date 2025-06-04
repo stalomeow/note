@@ -10,8 +10,6 @@ aliases:
 
 某些渲染 bug 只会持续很短的时间，手动抓帧根本抓不到。Unity 在 `UnityEditorInternal` 命名空间下，提供了 [`RenderDoc.BeginCaptureRenderDoc`](https://github.com/Unity-Technologies/UnityCsReference/blob/d2eb9c0352229c0268d47ca0efa69e14b5d180f8/Editor/Mono/RenderDoc/RenderDoc.bindings.cs#L32) 和 [`RenderDoc.EndCaptureRenderDoc`](https://github.com/Unity-Technologies/UnityCsReference/blob/d2eb9c0352229c0268d47ca0efa69e14b5d180f8/Editor/Mono/RenderDoc/RenderDoc.bindings.cs#L34C28-L34C47) 方法。可以用它们对 Game View 持续截帧。
 
-<!-- more -->
-
 ## 代码
 
 随便给的快捷键：

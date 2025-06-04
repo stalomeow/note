@@ -146,9 +146,9 @@ plugins:
         - assets/stylesheets/temp-patch.css
   - redirects:
       redirect_maps:
-        'blog/posts/unity-hsr-dream-ticker-2024-02-18.md': 'obsidian-vault/Unity/复刻星穹铁道 2.0 梦境迷钟.md'
-        'blog/posts/high-quality-toon-bloom-2024-03-05.md': 'obsidian-vault/图形与视觉/仿星铁渲染/仿星铁渲染：Bloom.md'
-        'blog/posts/main-light-per-object-shadow-2024-03-15.md': 'obsidian-vault/图形与视觉/仿星铁渲染/仿星铁渲染：主光源角色阴影.md'
+        'blog/posts/unity-hsr-dream-ticker-2024-02-18.md': 'obsidian-vault/星穹铁道/复刻星穹铁道 2.0 梦境迷钟.md'
+        'blog/posts/high-quality-toon-bloom-2024-03-05.md': 'obsidian-vault/星穹铁道/仿星铁渲染：Bloom.md'
+        'blog/posts/main-light-per-object-shadow-2024-03-15.md': 'obsidian-vault/星穹铁道/仿星铁渲染：主光源角色阴影.md'
         'basic/advanced-math/fourier-epicycles.md': 'obsidian-vault/Misc/傅里叶级数实现本轮画图.md'
 
 

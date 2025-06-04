@@ -16,8 +16,6 @@ aliases:
 
 代码开源在 [stalomeow/KeyboardRemapper](https://github.com/stalomeow/KeyboardRemapper)。
 
-<!-- more -->
-
 ## 安装
 
 使用 [[Scoop|Scoop]] 从 [stalomeow/ScoopBucket](https://github.com/stalomeow/ScoopBucket) 安装。

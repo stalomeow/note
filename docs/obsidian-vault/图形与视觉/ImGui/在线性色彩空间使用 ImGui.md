@@ -10,8 +10,6 @@ aliases:
 
 ImGui 目前所有操作都是用非线性颜色做的，不支持线性色彩空间。[^1] 考虑到透明混合的问题，不能直接对 ImGui 传入 Shader 的颜色去 Gamma 校正，否则 ImGui 显示的颜色和原来不一致，尤其是它的 Color Picker。
 
-<!-- more -->
-
 为了显示效果一致，只能让 ImGui 继续使用非线性颜色。
 
 注意到 ImGui 只有一张 Texture，在不使用 [Colorful Glyphs/Emojis](https://github.com/ocornut/imgui/blob/master/docs/FONTS.md#using-colorful-glyphsemojis) 时，这张 Texture 的 RGB 全是 1，这意味着我们既可以把它当作线性颜色，也可以把它当作非线性颜色。我引擎的 Texture 在被 Shader 采样后得到的都是线性颜色，所以直接修改 ImGui 的 Pixel Shader，在 Texture 采样后加一个 Gamma 校正。这样，我引擎的 Texture 的颜色就成非线性颜色了，ImGui 的 Texture 颜色不变。

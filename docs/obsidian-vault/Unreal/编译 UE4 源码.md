@@ -14,8 +14,6 @@ aliases:
 - IDE：Visual Studio 2022。
 - 操作系统：Windows 11。
 
-<!-- more -->
-
 ## IDE 和必要负载
 
 只装一个 VS2022 会有一些问题：
