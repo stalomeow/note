@@ -167,3 +167,19 @@ code, kbd, pre {
 }
 
 /* #endregion */
+
+/* #region 首页最新文章 */
+
+.recent-notes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.recent-notes small {
+    white-space: nowrap;
+}
+
+/* #endregion */

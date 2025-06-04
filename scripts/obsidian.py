@@ -1,4 +1,5 @@
 import datetime
+import html
 import logging
 import posixpath
 import pypinyin
@@ -321,9 +322,9 @@ def transform_callouts(markdown: str, page: Page, config: MkDocsConfig) -> str:
 def insert_recent_note_links(markdown: str, page: Page) -> str:
     content = ''
     for f in recent_notes:
-        title = posixpath.splitext(posixpath.basename(f.src_uri))[0] # 标题不要后缀名
-        date = f.note_date.strftime('%Y-%m-%d')
-        content += f'- [{title}]({get_relative_url(f.src_uri, page.file.src_uri)}) <small style="float:right">{date}</small>\n'
+        title = html.escape(posixpath.splitext(posixpath.basename(f.src_uri))[0]) # 标题不要后缀名
+        date = html.escape(f.note_date.strftime('%Y-%m-%d'))
+        content += f'- <div class="recent-notes"><a href="{f.page.abs_url}">{title}</a><small>{date}</small></div>\n'
     return markdown.replace('<!-- RECENT NOTES -->', content)
 
 def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Files):
@@ -355,6 +356,6 @@ def on_post_page(output: str, page: Page, config: MkDocsConfig):
     links_html = r'<details class="tip" style="margin-top:0"><summary>反向链接</summary><ul>'
     for link_file in inverse_link_files:
         href = get_relative_url(link_file.page.abs_url, page.abs_url)
-        links_html += rf'<li><a href="{href}">{link_file.page.title}</a></li>'
+        links_html += rf'<li><a href="{href}">{html.escape(link_file.page.title)}</a></li>'
     links_html += r'</ul></details><br>'
     return re.sub(r'<article class=".*?">', rf'\g<0>{links_html}', output, count=1)
