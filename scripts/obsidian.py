@@ -58,7 +58,7 @@ FOLDER_BLACKLIST = {
     'templates'
 }
 
-wiki_link_name_map: dict[str, File] = {}         # key 是文件名，无扩展名
+wiki_link_name_map: dict[str, File] = {}         # key 是文件名，有扩展名
 wiki_link_path_map: dict[str, FileLinkList] = {} # key 是 src_uri
 recent_notes: list[File] = []                    # 最新的文章列表，根据时间倒序保存
 log = logging.getLogger('mkdocs.plugins')
@@ -75,7 +75,8 @@ def set_file_dest_uri(f: File, value: Union[str, Callable[[str], str]]):
     delattr_if_exists(f, 'abs_dest_path')
 
 def process_obsidian_attachment(f: File):
-    set_file_dest_uri(f, lambda uri: uri[uri.index(FOLDER_ATTACHMENT + '/'):]) # 去掉 obsidian-vault
+    # 去掉 obsidian-vault
+    set_file_dest_uri(f, lambda uri: uri[uri.index(FOLDER_ATTACHMENT + '/'):])
 
 def process_obsidian_note(f: File) -> bool:
     _, frontmatter = meta.get_data(f.content_string)
@@ -130,7 +131,7 @@ def on_files(files: Files, config: MkDocsConfig):
         if len(path_names) < 2 or path_names[0] != FOLDER_OBSIDIAN_VAULT:
             continue
 
-        # 删除特定目录之外的文件；路径中至少有两个斜杠，所以长度至少为 3
+        # 删除特定目录的文件；路径中至少有两个斜杠，所以长度至少为 3
         if len(path_names) < 3 or path_names[1] in FOLDER_BLACKLIST:
             invalid_files.append(f)
             continue
@@ -183,7 +184,7 @@ def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
             key = entry.title
         return get_str_sort_key(key)
 
-    def dfs(entry):
+    def dfs_sort(entry):
         if getattr(entry, 'children', None) is None:
             return
 
@@ -191,7 +192,7 @@ def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
         folders = []
 
         for child in entry.children:
-            dfs(child)
+            dfs_sort(child)
 
             if isinstance(child, Page):
                 files.append(child)
@@ -205,7 +206,8 @@ def on_nav(nav: Navigation, config: MkDocsConfig, files: Files):
     obsidian_root = find_obsidian_root(nav)
     obsidian_root.title = 'Notes'
 
-    dfs(obsidian_root) # 将下面的文章重新排序
+    # 将下面的文章重新排序
+    dfs_sort(obsidian_root)
 
     sections = []
     others = []
@@ -328,8 +330,7 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Fil
     markdown = transform_wiki_links(markdown, page, config)
     markdown = transform_callouts(markdown, page, config)
     if page.is_homepage:
-        # 最新文章的链接不计入反向链接
-        markdown = insert_recent_note_links(markdown, page)
+        markdown = insert_recent_note_links(markdown, page) # 最新文章的链接不计入反向链接
     return markdown
 
 # 在 minify 之前执行

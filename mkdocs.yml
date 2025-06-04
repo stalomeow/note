@@ -19,8 +19,6 @@ theme:
     repo: fontawesome/brands/github
     logo: octicons/stack-24
     edit: material/pencil
-    tag:
-      default: fontawesome/solid/hashtag
 
   palette:
     # Palette toggle for automatic mode
@@ -74,11 +72,6 @@ theme:
 
 
 extra:
-  social:
-    - name: Home
-      icon: fontawesome/solid/house
-      link: https://stalomeow.com
-  tags: { "": default } # https://github.com/squidfunk/mkdocs-material/blob/0b38323a310d9ab9ac7fd60ad0bdae5871e42d73/src/plugins/tags/plugin.py#L146
   analytics:
     provider: google
     property: G-RQ5JMJBFBP
@@ -152,9 +145,6 @@ markdown_extensions:
 
 plugins:
   - search:
-      # TODO 禁用以后，运行时代码会报错，然后颜色模式切换会炸掉
-      # 临时在 validate_config.py 里禁用
-      # enabled: !ENV [CI, false]
       lang: zh
   - minify:
       minify_html: true
@@ -180,14 +170,14 @@ plugins:
         'blog/posts/main-light-per-object-shadow-2024-03-15.md': 'obsidian-vault/图形与视觉/仿星铁渲染/仿星铁渲染：主光源角色阴影.md'
         'basic/advanced-math/fourier-epicycles.md': 'obsidian-vault/Misc/傅里叶级数实现本轮画图.md'
 
+
 hooks:
-  - scripts/validate_config.py
+  - scripts/dev.py
   - scripts/obsidian.py
   - scripts/fancybox.py
   - scripts/copyright.py
-  - scripts/sponsor.py
-  - scripts/travelling.py
-  - scripts/dummy_rss.py
+  - scripts/links.py
+  - scripts/rss.py
 
 
 watch:

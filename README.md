@@ -45,7 +45,3 @@
 |Framework Preset|`Other`|
 |Build Command|`sh ./scripts/vercel-build.sh`|
 |Install Command|`sh ./scripts/vercel-install.sh`|
-
-|环境变量|值|说明|
-|:-|:-|:-|
-|`CI`|`true`|启用一些 MkDocs 插件|

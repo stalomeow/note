@@ -28,7 +28,7 @@ def get_content(config: MkDocsConfig) -> str:
             <pubDate>{build_datetime}</pubDate>
             <lastBuildDate>{build_datetime}</lastBuildDate>
             <ttl>1440</ttl>
-            <generator>This site no longer provides RSS, this file is only for backward compatibility</generator>
+            <generator>This site no longer provides RSS and the file is only for backward compatibility</generator>
         </channel>
         </rss>
         ''')
