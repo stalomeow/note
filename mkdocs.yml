@@ -21,27 +21,8 @@ theme:
     edit: material/pencil
 
   palette:
-    # Palette toggle for automatic mode
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/circle-slice-4
-        name: Auto Mode
-
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: white
-      toggle:
-        icon: material/circle-slice-8
-        name: Light Mode
-
-    # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: black
-      toggle:
-        icon: material/circle-outline
-        name: Dark Mode
+    scheme: slate
+    primary: black
 
   features:
     - announce.dismiss
