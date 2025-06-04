@@ -7,6 +7,8 @@ comments: true
 
 # About
 
+Welcome to my Chinese notebook — currently with <!-- NUM NOTES --> notes!
+
 ## Intro
 
 === "English"
@@ -21,7 +23,7 @@ comments: true
     - 正在学习游戏引擎相关技术。
     - 可在我的[主页](https://stalomeow.com){target="_blank"}查看联系方式。
 
-## Notes
+## Recent Notes
 
 === "English"
 

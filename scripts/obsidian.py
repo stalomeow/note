@@ -61,7 +61,7 @@ FOLDER_BLACKLIST = {
 
 wiki_link_name_map: dict[str, File] = {}         # key 是文件名，有扩展名
 wiki_link_path_map: dict[str, FileLinkList] = {} # key 是 src_uri
-recent_notes: list[File] = []                    # 最新的文章列表，根据时间倒序保存
+notes_sorted_by_date: list[File] = []            # 所有笔记，根据时间倒序保存
 log = logging.getLogger('mkdocs.plugins')
 
 def set_file_dest_uri(f: File, value: Union[str, Callable[[str], str]]):
@@ -120,9 +120,8 @@ def process_obsidian_note(f: File) -> bool:
 def on_files(files: Files, config: MkDocsConfig):
     wiki_link_name_map.clear()
     wiki_link_path_map.clear()
-    recent_notes.clear()
+    notes_sorted_by_date.clear()
 
-    valid_docs: list[File] = []
     invalid_files: list[File] = []
 
     for f in files:
@@ -140,7 +139,7 @@ def on_files(files: Files, config: MkDocsConfig):
         if path_names[1] == FOLDER_ATTACHMENT:
             process_obsidian_attachment(f)
         elif f.is_documentation_page() and process_obsidian_note(f):
-            valid_docs.append(f)
+            notes_sorted_by_date.append(f)
         else:
             invalid_files.append(f)
             continue
@@ -148,12 +147,11 @@ def on_files(files: Files, config: MkDocsConfig):
         wiki_link_name_map[posixpath.basename(f.src_uri)] = f
         wiki_link_path_map[f.src_uri] = FileLinkList(f)
 
-    recent_notes.extend(sorted(valid_docs, key=lambda f: f.note_date, reverse=True)[:10])
+    notes_sorted_by_date.sort(key=lambda f: f.note_date, reverse=True)
+    log.info('Found %d valid Obsidian documents', len(notes_sorted_by_date))
 
     for f in invalid_files:
         files.remove(f)
-
-    log.info('Found %d valid Obsidian documents', len(valid_docs))
 
     return files
 
@@ -319,19 +317,24 @@ def transform_callouts(markdown: str, page: Page, config: MkDocsConfig) -> str:
     # \s 会匹配换行符，所以改用 [^\S\r\n]
     return re.sub(r'^[^\S\r\n]*>[^\S\r\n]*\[!(.+?)\]([+-])?(.*)$', repl, markdown, flags=re.M|re.U)
 
-def insert_recent_note_links(markdown: str, page: Page) -> str:
+def insert_recent_note_links(markdown: str) -> str:
     content = ''
-    for f in recent_notes:
+    for f in notes_sorted_by_date[:10]:
         title = html.escape(posixpath.splitext(posixpath.basename(f.src_uri))[0]) # 标题不要后缀名
         date = html.escape(f.note_date.strftime('%Y-%m-%d'))
         content += f'- <div class="recent-notes"><a href="{f.page.abs_url}">{title}</a><small>{date}</small></div>\n'
     return markdown.replace('<!-- RECENT NOTES -->', content)
 
+def insert_num_notes(markdown: str) -> str:
+    num_notes = len(notes_sorted_by_date)
+    return markdown.replace('<!-- NUM NOTES -->', str(num_notes))
+
 def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Files):
     markdown = transform_wiki_links(markdown, page, config)
     markdown = transform_callouts(markdown, page, config)
     if page.is_homepage:
-        markdown = insert_recent_note_links(markdown, page) # 最新文章的链接不计入反向链接
+        markdown = insert_recent_note_links(markdown) # 最新文章的链接不计入反向链接
+        markdown = insert_num_notes(markdown)
     return markdown
 
 # 在 minify 之前执行
