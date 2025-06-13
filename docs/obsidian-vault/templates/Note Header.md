@@ -1,6 +1,5 @@
 ---
-date:
-  "{ date:YYYY-MM-DDTHH:mm:ss }": 
+date: {{date:YYYY-MM-DDTHH:mm:ss}}
 publish: false
 comments: true
 permalink: ""

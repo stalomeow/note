@@ -37,7 +37,7 @@ Welcome to my Chinese notebook — currently with <!-- NUM NOTES --> notes!
 
     - [March Engine](https://github.com/stalomeow/MarchEngine){target="_blank"}: A game engine based on Direct3D 12, C++17, and .NET 9 for learning purposes.
 
-        ![](assets/projects/march-engine.png)
+        ![](assets/projects/march-engine-thumbnail.png){.fancybox-thumbnail}
 
     - [Dream Ticker](https://github.com/stalomeow/DreamTicker){target="_blank"}: A replica of Dream Ticker, an optical illusion-based puzzle game from Honkai: Star Rail 2.0.
 
@@ -56,7 +56,7 @@ Welcome to my Chinese notebook — currently with <!-- NUM NOTES --> notes!
 
     - [March Engine](https://github.com/stalomeow/MarchEngine){target="_blank"}：基于 Direct3D 12、C++17 和 .NET 9 的游戏引擎，用于学习目的。
 
-        ![](assets/projects/march-engine.png)
+        ![](assets/projects/march-engine-thumbnail.png){.fancybox-thumbnail}
 
     - [Dream Ticker](https://github.com/stalomeow/DreamTicker){target="_blank"}：复刻崩坏：星穹铁道 2.0 的视错觉游戏「梦境迷钟」。
 

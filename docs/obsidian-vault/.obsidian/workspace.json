@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "41c9577f569c7e7b",
+        "id": "583da22257d69564",
         "type": "tabs",
         "children": [
           {
-            "id": "ce0e1a5c06935ef9",
+            "id": "817c08485bd30d08",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -148,8 +148,15 @@
       "graph:Open graph view": false
     }
   },
-  "active": "ce0e1a5c06935ef9",
+  "active": "817c08485bd30d08",
   "lastOpenFiles": [
+    "图形与视觉/API/D3D12.md",
+    "图形与视觉/API/图形 API 坐标系总结.md",
+    "Unreal/编译 UE4 源码.md",
+    "临时/MSBuild cpp csharp.md",
+    "工具/Git.md",
+    "templates/Note Header.md",
+    "图形与视觉/API",
     "Unity/用 RenderDoc 持续截帧 Unity Editor Game View.md",
     "图形与视觉/基于 DX12 实现 ShaderLab.md",
     "星穹铁道/复刻星穹铁道 2.0 梦境迷钟.md",
@@ -160,7 +167,6 @@
     "图形与视觉/ImGui/ImGui 适配高 DPI 显示器.md",
     "图形与视觉/ImGui/在线性色彩空间使用 ImGui.md",
     "图形与视觉/GPU 崩溃.md",
-    "Unreal/编译 UE4 源码.md",
     "Unity/将 GIF 直接导入为 AnimationClip.md",
     "Misc/四位数字验证码识别.md",
     "Misc/数制与编码.md",
@@ -171,13 +177,8 @@
     "图形与视觉/Blit.md",
     "图形与视觉/形态学操作.md",
     "图形与视觉/视觉期末整理.md",
-    "图形与视觉/渲染/法线和切线.md",
-    "图形与视觉/渲染/光线与表面求交.md",
     "图形与视觉/渲染",
     "星穹铁道",
-    "数学/立体角.md",
-    "Job/部分 JD.md",
-    "语言/CPP/C++ Primer.md",
     "图形与视觉/ImGui",
     "attachments/Pasted image 20250426002624.png",
     "数据结构与算法/刷题",
@@ -196,7 +197,6 @@
     "attachments/Pasted image 20250309201655.png",
     "图形与视觉/数学工具",
     "笔记/语言/C++",
-    "临时",
     "笔记/求职/未命名.canvas"
   ]
 }

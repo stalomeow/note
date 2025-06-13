@@ -82,9 +82,6 @@ def process_obsidian_attachment(f: File):
 def process_obsidian_note(f: File) -> bool:
     _, frontmatter = meta.get_data(f.content_string)
 
-    if '<!-- more -->' in f.content_string:
-        log.warning('Obsidian document \'%s\' contains <!-- more -->, which is not supported', f.src_uri)
-
     # 如果不发布的话，不进行后面的检查
     if not frontmatter.get('publish', False):
         log.info('Obsidian document \'%s\' is not published, skipping', f.src_uri)
