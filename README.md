@@ -10,6 +10,8 @@
 - [Cascadia Mono](https://github.com/microsoft/cascadia-code)
 - [Noto Sans SC](https://fonts.google.com/noto/specimen/Noto+Sans+SC)
 
+可选：将 [TinyPNG](https://tinypng.com) 的 API Key 设置在环境变量 `TINYPNG_API_KEY`。
+
 ## 本地构建
 
 使用 [MkDocs](https://github.com/mkdocs/mkdocs) 和 [Material](https://github.com/squidfunk/mkdocs-material) 构建网页。
@@ -20,18 +22,6 @@
     py -3.12 -m venv env
     ./env/Scripts/activate
     pip install -r requirements.txt
-    ```
-
-- 更新依赖
-
-    ``` powershell
-    cmd/upgrade.ps1
-    ```
-
-- 使用 [TinyPNG](https://tinypng.com) 压缩图片，API Key 需要设置在环境变量 `TINYPNG_API_KEY`
-
-    ``` powershell
-    cmd/tiny.ps1
     ```
 
 - MkDocs 的命令请看 [官方文档](https://www.mkdocs.org/user-guide/cli/)

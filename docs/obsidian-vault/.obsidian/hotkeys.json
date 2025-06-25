@@ -39,21 +39,5 @@
       ],
       "key": "ArrowDown"
     }
-  ],
-  "obsidian-footnotes:insert-autonumbered-footnote": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "0"
-    }
-  ],
-  "obsidian-shellcommands:shell-command-5oe9p8cj60": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "`"
-    }
   ]
 }
