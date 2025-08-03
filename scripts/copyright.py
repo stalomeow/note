@@ -11,7 +11,8 @@ def get_copyright() -> str:
     now = datetime.datetime.now(tz)
     return inspect.cleandoc(f'''
         Copyright &copy; 2022-{now.strftime('%Y')} Stalo. All rights reserved. Built on {now.strftime('%Y-%m-%d (UTC+8)')}.<br>
-        Contents are licensed under the <u><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></u> license, except when otherwise noted.
+        Contents are licensed under the <u><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></u> license, except when otherwise noted.<br>
+        The views expressed on this site are solely my own and do not reflect the views or positions of any company I am or have been affiliated with.
         ''')
 
 def on_config(config: MkDocsConfig):
