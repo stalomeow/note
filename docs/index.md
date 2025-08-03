@@ -9,26 +9,7 @@ comments: true
 
 Welcome to my Chinese notebook — currently with <!-- NUM NOTES --> notes! <small>Only this page is in English, used for self-introduction.</small>
 
-<style>
-@keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  opacity: 1;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: cubic-bezier(0.32, 0, 0.67, 0);
-  animation-duration: 0.4s;
-}
-</style>
-
-![](assets/banner-thumbnail.png){.fancybox-thumbnail .fade-in}
+![](assets/banner-thumbnail.png){.fancybox-thumbnail}
 
 ## Intro
 
