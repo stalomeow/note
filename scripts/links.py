@@ -30,7 +30,7 @@ LINKS = [
         # https://github.com/travellings-link/travellings
         # https://github.com/travellings-link/travellings/blob/master/docs/join.md
         name='Travelling',
-        url='https://www.travellings.cn/go-by-clouds.html',
+        url='https://www.travellings.cn/go.html',
         button_icon='fontawesome/solid/train-subway',
         link_icon='material/train',
     ),
